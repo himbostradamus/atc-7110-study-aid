@@ -25,7 +25,7 @@ const FOCUS_FILTERS = [
 
 const FOCUS_BROWSER_CSS = `
 .focus-browser{background:#30302e!important;color:#f1ead7!important;font-family:'Share Tech Mono',ui-monospace,monospace!important;}
-.focus-browser *{font-family:'Share Tech Mono',ui-monospace,monospace!important;border-radius:2px!important;box-shadow:none!important}
+.focus-browser *{box-sizing:border-box;font-family:'Share Tech Mono',ui-monospace,monospace!important;border-radius:2px!important;box-shadow:none!important}
 .focus-browser-body,.focus-browser-header{max-width:1120px;margin-left:auto;margin-right:auto;background:#11120e;}
 @media (max-width: 520px){
   .focus-browser{overflow-x:hidden}
@@ -35,7 +35,7 @@ const FOCUS_BROWSER_CSS = `
   .focus-browser-body{padding:14px 12px 22px!important}
   .focus-browser input,.focus-browser select{font-size:16px!important;min-height:46px!important}
   .focus-browser-card-actions{display:grid!important;grid-template-columns:1fr!important}
-  .focus-browser-card-actions button,.focus-browser-card-actions a{width:100%;justify-content:center}
+  .focus-browser-card-actions button,.focus-browser-card-actions a{width:100%;min-width:0;justify-content:center}
 }
 `;
 

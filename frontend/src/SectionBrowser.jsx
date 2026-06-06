@@ -26,7 +26,7 @@ const PARAGRAPH_FILTERS = [
 
 const SECTION_BROWSER_CSS = `
 .section-browser{background:#30302e!important;color:#f1ead7!important;font-family:'Share Tech Mono',ui-monospace,monospace!important;}
-.section-browser *{font-family:'Share Tech Mono',ui-monospace,monospace!important;border-radius:2px!important;box-shadow:none!important}
+.section-browser *{box-sizing:border-box;font-family:'Share Tech Mono',ui-monospace,monospace!important;border-radius:2px!important;box-shadow:none!important}
 .section-browser-body,.section-browser-header{max-width:1120px;margin-left:auto;margin-right:auto;background:#11120e;}
 @media (max-width: 520px){
   .section-browser{overflow-x:hidden}
@@ -36,7 +36,7 @@ const SECTION_BROWSER_CSS = `
   .section-browser-body{padding:14px 12px 22px!important}
   .section-browser input,.section-browser select{font-size:16px!important;min-height:46px!important}
   .section-browser-card-actions{display:grid!important;grid-template-columns:1fr!important}
-  .section-browser-card-actions button,.section-browser-card-actions a{width:100%;justify-content:center}
+  .section-browser-card-actions button,.section-browser-card-actions a{width:100%;min-width:0;justify-content:center}
 }
 `;
 

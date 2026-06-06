@@ -31,6 +31,7 @@ button,a{touch-action:manipulation}
   .map-section-actions button{width:100%}
   .map-topbar{flex-direction:column;align-items:flex-start!important}
   .map-actions{justify-content:flex-start!important}
+  .map-tools-menu{left:0!important;right:auto!important;width:min(210px,calc(100vw - 32px))!important;min-width:0!important}
   .map-next-action-orb{display:none!important}
   .map-next-action-row{flex-direction:column;align-items:stretch!important;gap:12px!important}
   .map-next-action-actions{width:100%;justify-content:space-between!important}
@@ -1783,7 +1784,7 @@ function HeaderUtilities({
         Tools{stats?.focusCount || flaggedItemCount ? ` (${(stats?.focusCount || 0) + (flaggedItemCount || 0)})` : ""}
       </button>
       {open && (
-        <div style={{
+        <div className="map-tools-menu" style={{
           position: "absolute",
           right: 0,
           top: 40,
