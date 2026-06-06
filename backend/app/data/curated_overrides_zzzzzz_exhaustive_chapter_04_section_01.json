@@ -1,0 +1,1293 @@
+{
+  "activities": {
+    "4-1-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When do the altitude and distance limitation tables apply?",
+          "choices": [
+            {
+              "text": "When specifying a route other than an established airway or route, for any portion of that route within controlled airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever any IFR route is cleared, including one that stays entirely on established airways.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft is below 10,000 feet MSL.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot requests direct routing outside controlled airspace.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The limitation tables apply when ATC specifies a route other than an established airway or route, and only on portions of that route within controlled airspace."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this application statement match the rule?",
+          "question_text": "This limitation rule applies only to the portion of a nonestablished route that lies within controlled airspace.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph limits only those route portions lying within controlled airspace."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this routing rule correct?",
+          "question_text": "When specifying a route other than an established airway or route, you must not exceed the table limitations on any portion of that route within controlled airspace.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the core rule in 4-1-1."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "For an H-class VOR, VORTAC, or TACAN between 18,000 and FL450, what normal usable radius distance applies?",
+          "choices": [
+            {
+              "text": "130 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "100 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "75 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "40 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For H-class VOR, VORTAC, or TACAN, the normal usable distance between 18,000 and FL450 is 130 miles."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this ILS service-volume statement correct?",
+          "question_text": "For ILS usable height and distance, the localizer is usable to 18 miles and the glideslope to 10 miles, based on a height of 4,500 feet above the transmitter unless current flight-check limitations differ.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The ILS table gives 18 miles for the localizer and 10 miles for the glideslope at 4,500 feet above the transmitter, unless current flight-check limitations are different."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You want to clear an aircraft direct over a portion of route in controlled airspace that relies on a VOR service volume farther than the published table allows. Another controller says the tables are only advisory because the route is outside an established airway.",
+          "para_context": "When specifying a route other than an established airway or route, do not exceed the published altitude and distance limitations on any portion of that route within controlled airspace.",
+          "choices": [
+            {
+              "text": "Do not issue the route as planned unless an exception applies, because the limitation tables still govern that nonestablished route segment within controlled airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue it anyway because service-volume tables apply only to published airways.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue it anyway as long as the aircraft is above 10,000 feet MSL.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the tables whenever the route contains direct segments.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A route outside an established airway is exactly when these limitations matter, unless a listed exception applies."
+        }
+      ]
+    },
+    "4-1-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which is one exception allowing the altitude and distance limitations not to be applied?",
+          "choices": [
+            {
+              "text": "Routing is initiated by ATC or requested by the pilot and radar monitoring is provided.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller prefers a shorter route and no monitoring is available.",
+              "is_correct": false
+            },
+            {
+              "text": "The route uses any convenient unpublished fix, regardless of coverage.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot is willing to accept route uncertainty.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "One listed exception is ATC-initiated or pilot-requested routing with radar monitoring provided."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "GNSS-equipped aircraft with suffix /G, /L, /S, or /V that is not on a random impromptu route may use this exception without applying the normal altitude and distance limitations.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "GNSS-equipped /G, /L, /S, and /V aircraft not on a random impromptu route are a listed exception."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this approval requirement correct?",
+          "question_text": "If operational necessity requires exceeding the limitations, approval must be obtained from the Frequency Management and Flight Inspection Offices.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Operational-necessity relief requires approval from the Frequency Management and Flight Inspection Offices."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Provide aircraft with information and advice related to significant deviations from the expected flight path when clearing beyond a NAVAID's altitude or distance limitations.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When a clearance goes beyond the limitations, the controller remains responsible for significant-deviation information and advice in addition to separation and airspace responsibilities."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which routing is a listed exception?",
+          "question_text": "Which routing belongs in the exception list?",
+          "choices": [
+            {
+              "text": "Requested routing via an MTR.",
+              "is_correct": true
+            },
+            {
+              "text": "Any random impromptu route filed by a non-GNSS aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Any route using a localizer beyond published limits without approval.",
+              "is_correct": false
+            },
+            {
+              "text": "Any pilot shortcut request regardless of monitoring.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Requested routing via an MTR is one of the listed exceptions."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "You need to clear an aircraft beyond normal NAVAID service-volume limits for operational necessity. The route is not via an MTR, no GNSS exception applies, and another controller says radar separation alone is enough even though Frequency Management and Flight Inspection approval has not been obtained. The route would cause a significant expected-track deviation from what the pilot normally anticipates.",
+          "para_context": "Exceeding the limitations for operational necessity requires Frequency Management and Flight Inspection approval. When a clearance is issued beyond the limitations, the controller is responsible for providing aircraft with information and advice related to significant deviations from the expected flight path.",
+          "choices": [
+            {
+              "text": "Do not rely on operational necessity alone without the required approval, and if a beyond-limit clearance is issued under a valid exception, provide information and advice about significant expected-track deviations.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the clearance solely on the basis of radar separation and omit deviation advice because the pilot is expected to understand the route change.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat every non-MTR route as automatically approved if radar monitoring is possible, even without the required office approval.",
+              "is_correct": false
+            },
+            {
+              "text": "Apply the GNSS exception to any aircraft whenever the route is operationally useful.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Operational necessity needs the specific office approval, and beyond-limit clearances still require significant-deviation information and advice."
+        }
+      ]
+    },
+    "4-1-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "What must the altitude reflect when you clear an aircraft to cross or hold at a fix?",
+          "choices": [
+            {
+              "text": "The limitations of the NAVAID or aid serving the fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Any altitude the pilot prefers if the route is direct.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the minimum vectoring altitude, regardless of the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "The highest altitude available in the sector.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Crossing or holding altitude must stay consistent with the limitations of the aid used to define the fix."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this crossing-altitude rule correct?",
+          "question_text": "When clearing an aircraft to cross or hold at a fix, you must use an altitude consistent with the limitations of the aid.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the full directive of paragraph 4-1-3."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this application statement match the rule?",
+          "question_text": "This altitude rule applies when clearing an aircraft either to cross or to hold at a fix.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph applies to both crossing and holding clearances at a fix."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You are about to clear an aircraft to hold at a fix defined by an aid whose service-volume limitations would not support the altitude another controller wants to assign. The other controller says the altitude is acceptable because the aircraft is already established on an IFR clearance.",
+          "para_context": "An altitude used to cross or hold at a fix must remain consistent with the limitations of the aid serving that fix.",
+          "choices": [
+            {
+              "text": "Use an altitude that is consistent with the aid's limitations, even though the aircraft is already on an IFR clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Assign the higher altitude because holding clearances are exempt from aid limitations.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign any altitude as long as the aircraft is above the MVA.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the aid limitations whenever the fix is published.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Being on an IFR clearance does not remove the requirement to keep crossing or holding altitude consistent with the aid's limitations."
+        }
+      ]
+    },
+    "4-1-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may a route that does not meet service-volume limitations be used under the VFR-on-top exception?",
+          "choices": [
+            {
+              "text": "Only if the aircraft requests to operate VFR-on-top on that route.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever weather is VFR and radar services are available.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the controller determines the route is shorter.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the aircraft is TACAN-equipped.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The exception is tied specifically to an aircraft request to operate VFR-on-top on that route."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Use a route not meeting service-volume limitations only if an aircraft requests to operate VFR-on-top on that route.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the full VFR-on-top exception in paragraph 4-1-4."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this TACAN routing expectation correct?",
+          "question_text": "If insufficient TACAN or VORTAC NAVAIDs exist to define the route, an aircraft equipped only with TACAN is expected to submit a VFR-on-top request outside Class A airspace.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Outside Class A, an aircraft equipped only with TACAN is expected to submit a VFR-on-top request where insufficient TACAN or VORTAC NAVAIDs exist to define the route."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this TACAN-route expectation correct?",
+          "question_text": "An aircraft equipped only with TACAN should define route of flight between TACAN or VORTAC NAVAIDs in the same manner as a VOR-equipped aircraft.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the note's first expectation for an aircraft equipped only with TACAN."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A controller wants to clear an aircraft equipped only with TACAN on a route segment that does not meet service-volume limitations, even though the pilot has not requested VFR-on-top. The controller argues that the weather is VFR, so the request is implied.",
+          "para_context": "A route not meeting service-volume limitations may be used only if the aircraft requests to operate VFR-on-top on that route. Outside Class A, an aircraft equipped only with TACAN is expected to submit that request when insufficient TACAN or VORTAC NAVAIDs exist to define the route.",
+          "choices": [
+            {
+              "text": "Do not use the exception unless the aircraft actually requests VFR-on-top on that route.",
+              "is_correct": true
+            },
+            {
+              "text": "Treat VFR weather alone as an automatic VFR-on-top request.",
+              "is_correct": false
+            },
+            {
+              "text": "Apply the exception automatically to every aircraft equipped only with TACAN regardless of the pilot's request.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the exception only if the aircraft first cancels IFR.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The exception depends on the pilot's actual VFR-on-top request, not just good weather or equipment type."
+        }
+      ]
+    },
+    "4-1-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Over what fixes should you request aircraft position reports by default?",
+          "choices": [
+            {
+              "text": "Only over fixes shown on charts used for the altitude being flown, unless a listed exception applies.",
+              "is_correct": true
+            },
+            {
+              "text": "Over any convenient unpublished fix if the controller can describe it quickly.",
+              "is_correct": false
+            },
+            {
+              "text": "Only over fixes printed on low-altitude en route charts.",
+              "is_correct": false
+            },
+            {
+              "text": "Only over fixes the pilot filed in the remarks section.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The default rule is to request reports only over fixes shown on charts used for the altitude being flown, subject to listed exceptions."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this military-fix rule correct?",
+          "question_text": "Unless the pilot requests otherwise, you must use only fixes shown on high altitude en route charts, high altitude instrument approach procedures charts, and SID charts when clearing military turbojet single-piloted aircraft.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That chart-use restriction applies to military turbojet single-piloted aircraft unless the pilot requests otherwise."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which information belongs in an unpublished-fix clearance?",
+          "question_text": "Which information must be given to the pilot as appropriate when an unpublished fix is used?",
+          "choices": [
+            {
+              "text": "The NAVAID name and, if appropriate, the radial, course, azimuth, and frequency or channel.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the local nickname for the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the distance from the destination airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the inbound holding course.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That information must be given to the pilot when an unpublished fix is used."
+        },
+        {
+          "activity_type": "term_definition_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "The term unpublished fix refers to one approved and planned for publication but not yet depicted on charts, or one used under the listed fix-formation and divergence criteria.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That matches the paragraph's definition of an unpublished fix."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this divergence-angle minimum correct?",
+          "question_text": "When both NAVAIDs involved are within 30 NM of an unpublished fix, the minimum divergence angle is 30 degrees.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Within 30 NM of the unpublished fix, the minimum divergence angle is 30 degrees."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "An aircraft equipped only with TACAN lacks the capability to be held overhead the NAVAID, whether it is a TACAN or a VORTAC.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note explicitly says an aircraft equipped only with TACAN can never be held overhead the NAVAID."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A controller wants to assign an unpublished fix to an aircraft equipped only with TACAN and plans to hold it overhead a VORTAC. The fix could be defined either by DME or by an off-route radial, but the controller prefers the off-route radial even though DME is available. The off-route radial would also produce only 25 degrees of divergence with both NAVAIDs within 30 NM of the fix.",
+          "para_context": "When unpublished fixes are used, DME should be used in lieu of off-route radials whenever possible. Within 30 NM of the unpublished fix, the minimum divergence angle is 30 degrees. An aircraft equipped only with TACAN can never be held overhead the NAVAID.",
+          "choices": [
+            {
+              "text": "Do not use that overhead hold or the 25-degree off-route-radial definition; use DME whenever possible and meet the required divergence criteria.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the overhead hold because an aircraft equipped only with TACAN may be held over VORTACs, and 25 degrees is close enough to the divergence minimum.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the off-route radial because DME is optional whenever the aircraft is TACAN-equipped.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the fix as planned because divergence angles do not apply when both NAVAIDs are within 30 NM.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Several restrictions are being violated: DME should be used when available, the divergence angle is too small, and an aircraft equipped only with TACAN cannot be held overhead the NAVAID."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "4-1-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When do the altitude and distance limitation tables apply?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They apply when a route other than an established airway or route is specified, for the portions in controlled airspace.",
+          "choices": [
+            {
+              "text": "When a route other than an established airway or route is specified within controlled airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "On every IFR route regardless of whether it remains on established airways.",
+              "is_correct": false
+            },
+            {
+              "text": "Only below 10,000 feet MSL.",
+              "is_correct": false
+            },
+            {
+              "text": "Only outside controlled airspace.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For an H-class VOR, VORTAC, or TACAN below 14,500 feet, what normal usable radius distance applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "The table gives 40 miles for H-class below 14,500 feet.",
+          "choices": [
+            {
+              "text": "40 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "25 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "100 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "130 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For an H-class VOR, VORTAC, or TACAN between 18,000 and FL450, what normal usable radius distance applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "The table gives 130 miles for H-class between 18,000 and FL450.",
+          "choices": [
+            {
+              "text": "130 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "100 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "75 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "40 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For an HH radio beacon, what usable radius distance applies for all altitudes?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "The table gives 75 miles for an HH radio beacon.",
+          "choices": [
+            {
+              "text": "75 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "50 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "25 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "15 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the normal usable distance for an ILS localizer from the transmitter?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "The ILS table gives 18 miles for the localizer.",
+          "choices": [
+            {
+              "text": "18 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "10 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "25 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "40 miles.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-1-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Which is one listed exception allowing altitude and distance limitations not to be applied?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "One listed exception is routing initiated by ATC or requested by the pilot with radar monitoring provided.",
+          "choices": [
+            {
+              "text": "Routing initiated by ATC or requested by the pilot with radar monitoring provided.",
+              "is_correct": true
+            },
+            {
+              "text": "Any route the controller believes is more efficient.",
+              "is_correct": false
+            },
+            {
+              "text": "Any direct route flown by a non-GNSS aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Any route entirely in Class A airspace.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which GNSS suffix group is listed in the exception note when the aircraft is not on a random impromptu route?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "exception",
+          "generation_source": "curated",
+          "explanation": "The listed GNSS groups are /G, /L, /S, and /V.",
+          "choices": [
+            {
+              "text": "/G, /L, /S, and /V.",
+              "is_correct": true
+            },
+            {
+              "text": "/A, /M, /N, and /P.",
+              "is_correct": false
+            },
+            {
+              "text": "/T and /U only.",
+              "is_correct": false
+            },
+            {
+              "text": "/Q-route equipped aircraft only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What approval is required when operational necessity requires exceeding the limitations?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "Approval must come from the Frequency Management and Flight Inspection Offices.",
+          "choices": [
+            {
+              "text": "Approval from the Frequency Management and Flight Inspection Offices.",
+              "is_correct": true
+            },
+            {
+              "text": "Approval from the pilot in command only.",
+              "is_correct": false
+            },
+            {
+              "text": "Approval from the radar associate only.",
+              "is_correct": false
+            },
+            {
+              "text": "No approval is required if radar separation is available.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What significant-deviation duty remains when a clearance is issued beyond the NAVAID limitations?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The controller remains responsible for providing information and advice related to significant deviations from the expected flight path.",
+          "choices": [
+            {
+              "text": "Provide information and advice related to significant deviations from the expected flight path.",
+              "is_correct": true
+            },
+            {
+              "text": "Advise the pilot that navigation responsibility is entirely transferred and no further route information will be given.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel separation responsibility while the aircraft is beyond service volume.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the pilot to accept visual separation from all traffic.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which requested routing is specifically listed as an exception?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "Requested routing via an MTR is specifically listed.",
+          "choices": [
+            {
+              "text": "Requested routing via an MTR.",
+              "is_correct": true
+            },
+            {
+              "text": "Any random impromptu route.",
+              "is_correct": false
+            },
+            {
+              "text": "Any route beyond localizer limits.",
+              "is_correct": false
+            },
+            {
+              "text": "Any route involving two unpublished fixes.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-1-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When clearing an aircraft to cross or hold at a fix, what must the altitude reflect?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It must be consistent with the limitations of the aid serving that fix.",
+          "choices": [
+            {
+              "text": "The limitations of the aid serving the fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Any altitude above the MVA.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the pilot's requested altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "The highest altitude available in the sector.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Does the rule in 4-1-3 apply to both crossing and holding clearances at a fix?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Yes. The paragraph covers both crossing and holding at a fix.",
+          "choices": [
+            {
+              "text": "Yes.",
+              "is_correct": true
+            },
+            {
+              "text": "No, it applies only to crossing clearances.",
+              "is_correct": false
+            },
+            {
+              "text": "No, it applies only to holding clearances.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the fix is unpublished.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What should you do if the desired holding altitude is inconsistent with the aid's limitations?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Choose an altitude that remains consistent with the aid's limitations.",
+          "choices": [
+            {
+              "text": "Use an altitude that remains consistent with the aid's limitations.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the desired altitude anyway if the aircraft is IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Use any altitude above terrain clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the aid limitations if the fix is on a published procedure.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which statement best summarizes paragraph 4-1-3?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph is short and direct: use an altitude consistent with the limitations of the aid when clearing a crossing or hold at a fix.",
+          "choices": [
+            {
+              "text": "Use an altitude consistent with the aid's limitations when clearing a crossing or hold at a fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Use any altitude consistent with the route MEA only.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only the pilot's highest requested altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Use crossing restrictions only when radar monitoring is available.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-1-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When may a route not meeting service-volume limitations be used under the VFR-on-top exception?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Only when the aircraft requests to operate VFR-on-top on that route.",
+          "choices": [
+            {
+              "text": "Only when the aircraft requests to operate VFR-on-top on that route.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the weather is VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the controller believes the route is efficient.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the aircraft is TACAN-only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How are TACAN-only aircraft expected to define routes between TACAN or VORTAC NAVAIDs?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "They are expected to define them in the same manner as VOR-equipped aircraft.",
+          "choices": [
+            {
+              "text": "In the same manner as VOR-equipped aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Only with pilot-estimated checkpoints.",
+              "is_correct": false
+            },
+            {
+              "text": "Only by requesting vectors.",
+              "is_correct": false
+            },
+            {
+              "text": "Only through VFR-on-top requests in all classes of airspace.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Outside Class A airspace, what is a TACAN-only aircraft expected to request when insufficient TACAN or VORTAC NAVAIDs exist to define the route?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "It is expected to submit a request for VFR-on-top flight.",
+          "choices": [
+            {
+              "text": "VFR-on-top.",
+              "is_correct": true
+            },
+            {
+              "text": "An emergency deviation.",
+              "is_correct": false
+            },
+            {
+              "text": "A cancellation of IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "A random RNAV route automatically.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the controller's key condition for using the VFR-on-top exception?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The aircraft must request to operate VFR-on-top on that route.",
+          "choices": [
+            {
+              "text": "The aircraft requests to operate VFR-on-top on that route.",
+              "is_correct": true
+            },
+            {
+              "text": "The route is shorter than filed.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft is above FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "Radar service is available.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-1-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Over what fixes should aircraft position reports normally be requested?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Normally only over fixes shown on charts used for the altitude being flown.",
+          "choices": [
+            {
+              "text": "Only over fixes shown on charts used for the altitude being flown, unless an exception applies.",
+              "is_correct": true
+            },
+            {
+              "text": "Over any unpublished fix the controller can describe.",
+              "is_correct": false
+            },
+            {
+              "text": "Only over low-altitude chart fixes.",
+              "is_correct": false
+            },
+            {
+              "text": "Only over fixes requested by the pilot.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Unless the pilot requests otherwise, which charts govern the fixes used when clearing military turbojet single-piloted aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Only fixes shown on high altitude en route charts, high altitude instrument approach procedures charts, and SID charts are used.",
+          "choices": [
+            {
+              "text": "High altitude en route charts, high altitude instrument approach procedures charts, and SID charts.",
+              "is_correct": true
+            },
+            {
+              "text": "Any charted fix on either low or high en route charts.",
+              "is_correct": false
+            },
+            {
+              "text": "Only unpublished fixes built from DME distances.",
+              "is_correct": false
+            },
+            {
+              "text": "Only VORTAC intersections on terminal charts.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When an unpublished fix is used, what information must be given to the pilot as appropriate?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The pilot must get the NAVAID name and, if appropriate, the radial, course, azimuth, and frequency or channel.",
+          "choices": [
+            {
+              "text": "The NAVAID name and, if appropriate, the radial, course, azimuth, and frequency or channel.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the fix nickname used locally.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the DME mileage from the destination airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the inbound holding course.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When both NAVAIDs involved are within 30 NM of an unpublished fix, what minimum divergence angle applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "The minimum divergence angle is 30 degrees.",
+          "choices": [
+            {
+              "text": "30 degrees.",
+              "is_correct": true
+            },
+            {
+              "text": "45 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "15 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "1 degree per mile.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Can a TACAN-only aircraft be held overhead a TACAN or VORTAC?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "No. TACAN-only aircraft can never be held overhead the NAVAID.",
+          "choices": [
+            {
+              "text": "No.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only over a VORTAC.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the aircraft is above 18,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the aircraft is being radar monitored.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the preference when an unpublished fix can be formed either by DME or by an off-route radial?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "DME should be used in lieu of off-route radials whenever possible.",
+          "choices": [
+            {
+              "text": "Use DME whenever possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the off-route radial whenever possible.",
+              "is_correct": false
+            },
+            {
+              "text": "Either method is equally preferred.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only holding-template calculations.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

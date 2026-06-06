@@ -1,0 +1,1128 @@
+{
+  "activities": {
+    "2-2-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What should not be used in place of voice coordination to pass control information?",
+          "choices": [
+            {
+              "text": "The remarks section of flight progress strips.",
+              "is_correct": true
+            },
+            {
+              "text": "Computer equipment where appropriate.",
+              "is_correct": false
+            },
+            {
+              "text": "The route field on the strip.",
+              "is_correct": false
+            },
+            {
+              "text": "The receiving facility's coordination log.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule specifically prohibits using strip remarks in place of voice coordination for control information."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Do not use the remarks section of flight progress strips in lieu of voice coordination to pass control information.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Voice coordination is still required for passing control information; the remarks section does not replace it."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Controllers must ensure that flight plan and control information is correct and up to date.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That requirement applies throughout the forwarding and coordination process."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If the aircraft's time over the last reporting point differs by more than 3 minutes from the estimate, controllers must forward the position report over the last reporting point in the transferring facility's area.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A time difference greater than 3 minutes is one of the conditions requiring the position report to be forwarded."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is approaching the receiving facility boundary. The controller wants to pass updated control information by writing it in strip remarks instead of coordinating by voice, even though the aircraft's time over the last reporting point differs by more than 3 minutes from the estimate.",
+          "para_context": "Flight plan and control information must stay correct and current. Controllers do not use strip remarks in place of voice coordination to pass control information, and they forward a position report over the last reporting point when the time differs by more than 3 minutes from estimate.",
+          "choices": [
+            {
+              "text": "Coordinate by voice instead of relying on strip remarks, and forward the position report over the last reporting point because the time difference exceeds 3 minutes.",
+              "is_correct": true
+            },
+            {
+              "text": "Use strip remarks as a substitute for voice coordination because the information is still written down, and ignore the time difference unless the receiving facility asks.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the aircraft crosses the boundary before passing any updated control information.",
+              "is_correct": false
+            },
+            {
+              "text": "Pass only the aircraft identification and omit the delayed position report because the pilot can restate it later.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph treats those as separate requirements: keep the information current, use real coordination for control information, and forward the delayed position report."
+        }
+      ]
+    },
+    "2-2-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When a manually entered flight plan arrives with a computer-assigned beacon code already forwarded, what should be done with that code?",
+          "choices": [
+            {
+              "text": "Insert it in the appropriate field as part of the input message.",
+              "is_correct": true
+            },
+            {
+              "text": "Ignore it and wait for a new local computer assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "Place it only in strip remarks and leave it out of the input message.",
+              "is_correct": false
+            },
+            {
+              "text": "Transmit it by voice only and do not enter it in the computer message.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The forwarded computer-assigned beacon code becomes part of the manual input message."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Use the forwarded computer-assigned beacon code by placing it in the appropriate field as part of the manual input message.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The manual input includes the forwarded computer-assigned beacon code in the appropriate field."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When a flight plan is manually entered into the computer and a computer-assigned beacon code has been forwarded with the flight plan data, controllers must insert that code in the appropriate field.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The forwarded code is not optional in that situation; it belongs in the input message."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If a flight plan is being entered manually and the flight plan data already includes a computer-assigned beacon code, that code must be entered as part of the computer input message.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Manual input does not discard the forwarded code; it carries it into the input message."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A flight plan has to be entered manually into the computer. The flight plan data already includes a computer-assigned beacon code from the upstream system, but another controller says to skip the code field and wait for the local computer to generate a fresh assignment.",
+          "para_context": "When manually entering a flight plan and the flight plan data already includes a computer-assigned beacon code, the code is inserted in the appropriate field as part of the input message.",
+          "choices": [
+            {
+              "text": "Insert the forwarded beacon code in the appropriate input field as part of the manual entry.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave the field blank so the local computer can always reassign a new beacon code.",
+              "is_correct": false
+            },
+            {
+              "text": "Write the code in remarks only and omit it from the computer input message.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the entry until the pilot checks on frequency and restates the beacon code verbally.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The forwarded computer-assigned code is part of the manual input message, not something to omit or reassign by default."
+        }
+      ]
+    },
+    "2-2-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When an aircraft is part of an approved ALTRV, what should be forwarded?",
+          "choices": [
+            {
+              "text": "Only the items necessary to identify the flight, update flight data in the ALTRV approval, or revise previously given information.",
+              "is_correct": true
+            },
+            {
+              "text": "The full standard flight progress data package without exception.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the beacon code and destination.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing unless the military liaison separately requests it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ALTRV forwarding is intentionally limited to the items necessary for identification, update, or revision."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When an aircraft is part of an approved ALTRV, controllers must forward only the items necessary to properly identify the flight, update flight data contained in the ALTRV approval, or revise previously given information.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph explicitly limits the forwarding to those necessary items."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If an aircraft is part of an approved ALTRV, controllers should not forward additional items beyond those needed to identify the flight, update the ALTRV flight data, or revise previously given information.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The ALTRV rule narrows the forwarding content rather than expanding it."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "This limited-forwarding rule applies to en route handling of aircraft that are part of an approved ALTRV.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph is an en route rule and applies only when the aircraft is part of an approved ALTRV."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is operating as part of an approved ALTRV. Another controller wants to forward the entire normal flight progress package to be safe, even though only a small revision to previously given ALTRV information is actually needed.",
+          "para_context": "For an approved ALTRV flight, forward only the items needed to properly identify the flight, update flight data contained in the ALTRV approval, or revise previously given information.",
+          "choices": [
+            {
+              "text": "Forward only the items needed to identify the flight, update the ALTRV data, or revise previously given information.",
+              "is_correct": true
+            },
+            {
+              "text": "Forward the full standard package every time because ALTRV flights are too important for reduced forwarding.",
+              "is_correct": false
+            },
+            {
+              "text": "Forward only the beacon code and leave the rest unchanged, even if the revision affects the ALTRV approval data.",
+              "is_correct": false
+            },
+            {
+              "text": "Hold all forwarding until the next facility calls back with a request for specific data elements.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule is deliberately narrow: only necessary items move forward on an approved ALTRV flight."
+        }
+      ]
+    },
+    "2-2-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When computer-message transfer does not have automatic receipt acknowledgment capability, what must be obtained?",
+          "choices": [
+            {
+              "text": "Service F acknowledgment that the receiving center received the message, plus verification of the required items.",
+              "is_correct": true
+            },
+            {
+              "text": "Only a local strip annotation showing that the message was sent.",
+              "is_correct": false
+            },
+            {
+              "text": "Only a pilot readback of the route and altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Only an interphone callback if the receiving center requests one.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Without automatic acknowledgment capability, Service F acknowledgment and verification are required."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Unless the facility can automatically obtain acknowledgment of receipt of transferred data, controllers must obtain Service F acknowledgment when transferring control information by computer message.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the required backstop when automatic acknowledgment capability is not available."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If transferred control information is sent by computer message and automatic acknowledgment is unavailable, controllers must verify aircraft identification, assigned altitude, and departure or coordination fix time.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those three items are the required verification set in the rule."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "This computer-message verification rule applies when control information is transferred by computer message between centers without automatic receipt acknowledgment capability.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The scope is limited to that specific transfer condition."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Your center transfers control information by computer message to another center, but your facility cannot automatically obtain receipt acknowledgment. Another controller says the sent message alone is enough and there is no need to verify the aircraft identification, altitude, or fix time unless the receiving center complains later.",
+          "para_context": "When automatic receipt acknowledgment is unavailable, use Service F to obtain acknowledgment that the receiving center received the message and verify aircraft identification, assigned altitude, and departure or coordination fix time. Any cancellation of IFR or EAS-generated VFR flight plan must also be verified.",
+          "choices": [
+            {
+              "text": "Obtain Service F acknowledgment and verify the required items instead of relying on the sent message alone.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume the transfer is complete once the message is sent and wait for any problem report from the receiving center.",
+              "is_correct": false
+            },
+            {
+              "text": "Verify only the aircraft identification and skip altitude and fix time unless the aircraft is in radar handoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Use voice coordination only for IFR cancellations and skip Service F acknowledgment for the original transfer.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Without automatic acknowledgment capability, the controller has to close the loop with Service F and the required verification items."
+        }
+      ]
+    },
+    "2-2-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How are proposed flight plans within an ARTCC's PBCT parameter transmitted to adjacent ARTCCs during inter-center computer operation?",
+          "choices": [
+            {
+              "text": "Via the Computer B network.",
+              "is_correct": true
+            },
+            {
+              "text": "Via NADIN only.",
+              "is_correct": false
+            },
+            {
+              "text": "By Service F acknowledgment messages.",
+              "is_correct": false
+            },
+            {
+              "text": "By interphone unless the route exceeds 10 elements.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "PBCT-qualifying proposed flight plans go to adjacent centers through Computer B during inter-center computer operation."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When the route of flight of a proposed flight plan exceeds 20 elements external to the originating ARTCC's area, controllers must use NADIN to forward the data to all affected centers.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That route-length threshold triggers NADIN forwarding to all affected centers."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If nonautomated operation exists and the route external to the originating center's area contains 10 or more elements and enters 3 or more other center areas, the proposed flight plan must be sent via NADIN to the other centers involved.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is one of the nonautomated-operation conditions that requires NADIN transmission."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "This PBCT and NADIN transmission rule applies to en route transmission of proposed flight plans between ARTCCs.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph is an en route rule for transmitting proposed flight plans between centers."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A proposed flight plan is within the ARTCC's PBCT parameter during hours of inter-center computer operation. Another plan has a route exceeding 20 elements external to the originating ARTCC's area. A controller wants to send both by the same simple method rather than treating the long external route differently.",
+          "para_context": "PBCT-qualifying proposed flight plans go to adjacent centers via Computer B during inter-center computer operation. When the route external to the originating ARTCC's area exceeds 20 elements, NADIN is used to forward the data to all affected centers.",
+          "choices": [
+            {
+              "text": "Use Computer B for the PBCT-qualifying adjacent-center plan, and use NADIN for the route that exceeds 20 external elements.",
+              "is_correct": true
+            },
+            {
+              "text": "Send both through Computer B because PBCT status always overrides route-length routing rules.",
+              "is_correct": false
+            },
+            {
+              "text": "Send both only by NADIN because any proposed flight plan can ignore PBCT transmission rules.",
+              "is_correct": false
+            },
+            {
+              "text": "Hold both until nonautomated procedures begin so they can be sent together by interphone.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The PBCT case and the over-20-elements case route differently and need to be handled by their own rule."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "2-2-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What should not be used in lieu of voice coordination to pass control information?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The remarks section of flight progress strips does not replace voice coordination for control information.",
+          "choices": [
+            {
+              "text": "The remarks section of flight progress strips.",
+              "is_correct": true
+            },
+            {
+              "text": "Computer equipment where appropriate.",
+              "is_correct": false
+            },
+            {
+              "text": "A letter of agreement.",
+              "is_correct": false
+            },
+            {
+              "text": "The route-of-flight field.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must controllers ensure about flight plan and control information?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The information must be correct and up to date.",
+          "choices": [
+            {
+              "text": "It is correct and up to date.",
+              "is_correct": true
+            },
+            {
+              "text": "It is reduced to only route and altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "It is rewritten only when the receiving facility asks.",
+              "is_correct": false
+            },
+            {
+              "text": "It is placed in strip remarks instead of voice coordination.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How long before the aircraft is estimated to enter the receiving facility's area is the listed information normally forwarded?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The normal timing is at least 15 minutes before boundary entry, unless modified under the allowed exceptions.",
+          "choices": [
+            {
+              "text": "At least 15 minutes.",
+              "is_correct": true
+            },
+            {
+              "text": "At least 5 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "At least 30 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly 10 minutes.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When must the position report over the last reporting point in the transferring facility's area be forwarded?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "It is forwarded if the time differs more than 3 minutes from estimate, if requested by the receiving facility, or if agreed between facilities.",
+          "choices": [
+            {
+              "text": "When the time differs by more than 3 minutes, when requested by the receiving facility, or when agreed between facilities.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the time differs by exactly 3 minutes and the aircraft is nonradar.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the receiving facility has no automation.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot reports a requested altitude different from the assigned altitude.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If manually forwarded flight plan data includes a computer-assigned beacon code, that code is included as part of the flight plan.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Manual forwarding still includes the computer-assigned beacon code when one was assigned.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "2-2-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When a manually entered flight plan already includes a computer-assigned beacon code, where is that code placed?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The code is inserted in the appropriate field as part of the input message.",
+          "choices": [
+            {
+              "text": "In the appropriate field of the input message.",
+              "is_correct": true
+            },
+            {
+              "text": "In strip remarks only.",
+              "is_correct": false
+            },
+            {
+              "text": "Only in a Service F acknowledgment message.",
+              "is_correct": false
+            },
+            {
+              "text": "Only on a handwritten backup strip.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What type of beacon code is addressed in 2-2-7?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The paragraph deals with a computer-assigned beacon code that has already been forwarded with the flight plan data.",
+          "choices": [
+            {
+              "text": "A computer-assigned beacon code forwarded with the flight plan data.",
+              "is_correct": true
+            },
+            {
+              "text": "A pilot-requested temporary beacon code.",
+              "is_correct": false
+            },
+            {
+              "text": "A tower-generated local visual code.",
+              "is_correct": false
+            },
+            {
+              "text": "A military mission prefix code.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The forwarded computer-assigned beacon code should be ignored during manual input so the local computer can generate a fresh code.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The paragraph says the forwarded code is inserted as part of the input message, not discarded.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "What kind of flight plan entry triggers this beacon-code step?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The step applies when the flight plan is entered manually into the computer.",
+          "choices": [
+            {
+              "text": "A manual entry into the computer.",
+              "is_correct": true
+            },
+            {
+              "text": "Any automated strip printout.",
+              "is_correct": false
+            },
+            {
+              "text": "Any FSS-entered VFR plan.",
+              "is_correct": false
+            },
+            {
+              "text": "Only interphone flight plan coordination.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What should be inserted in the appropriate field when manually entering a flight plan that already has a computer-assigned beacon code?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The inserted item is the forwarded beacon code itself.",
+          "choices": [
+            {
+              "text": "BEACON CODE",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "2-2-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When an aircraft is part of an approved ALTRV, what should be forwarded?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Only the items necessary to identify the flight, update the ALTRV data, or revise previously given information are forwarded.",
+          "choices": [
+            {
+              "text": "Only the items necessary to identify the flight, update the ALTRV data, or revise previously given information.",
+              "is_correct": true
+            },
+            {
+              "text": "The full standard IFR flight progress package.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the destination and clearance limit.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing unless the receiving facility specifically asks.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "This limited-forwarding rule applies to what kind of flight?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The paragraph applies when the aircraft is part of an approved ALTRV.",
+          "choices": [
+            {
+              "text": "An approved ALTRV flight.",
+              "is_correct": true
+            },
+            {
+              "text": "Any flight with a manually assigned beacon code.",
+              "is_correct": false
+            },
+            {
+              "text": "Any VFR flight plan forwarded by BASOPS.",
+              "is_correct": false
+            },
+            {
+              "text": "Any terminal departure on a joint-use field.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "ALTRV forwarding should include only the items needed to identify the flight, update the ALTRV flight data, or revise previously given information.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "That is the paragraph's exact limitation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What kind of previously provided content may still justify forwarding under this rule?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Previously given information may still be forwarded when it needs revision.",
+          "choices": [
+            {
+              "text": "Previously given information that now needs revision.",
+              "is_correct": true
+            },
+            {
+              "text": "Any extra flight plan item that might be interesting to the receiving facility.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the pilot's preferred altitude, regardless of relevance.",
+              "is_correct": false
+            },
+            {
+              "text": "Only remarks that were not part of the original ALTRV approval.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Approved ALTRV forwarding is limited to items necessary to properly identify the flight, update the flight data contained in the ALTRV _____, or revise previously given information.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The source uses the term ALTRV APVL, meaning the ALTRV approval.",
+          "choices": [
+            {
+              "text": "APPROVAL",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "2-2-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When transferred data cannot be acknowledged automatically, what system is used to obtain acknowledgment that the receiving center got the computer message?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The paragraph requires acknowledgment via Service F.",
+          "choices": [
+            {
+              "text": "Service F.",
+              "is_correct": true
+            },
+            {
+              "text": "Computer B.",
+              "is_correct": false
+            },
+            {
+              "text": "NADIN.",
+              "is_correct": false
+            },
+            {
+              "text": "PBCT.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which three items must be verified when transferred control information is sent by computer message without automatic acknowledgment capability?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "The required verification set is aircraft identification, assigned altitude, and departure or coordination fix time.",
+          "choices": [
+            {
+              "text": "Aircraft identification, assigned altitude, and departure or coordination fix time.",
+              "is_correct": true
+            },
+            {
+              "text": "Aircraft type, beacon code, and destination.",
+              "is_correct": false
+            },
+            {
+              "text": "Requested altitude, route, and wake category.",
+              "is_correct": false
+            },
+            {
+              "text": "Ground speed, ETA at destination, and equipment suffix.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Any cancellation of IFR or EAS-generated VFR flight plan must also be verified.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "That verification requirement appears explicitly in subparagraph b.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may the three required verification items be confirmed under 2-2-9a?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "They are verified within LOA time limits, or if no LOA applies, at least 15 minutes before entry, or at radar handoff or coordination for transfer of control.",
+          "choices": [
+            {
+              "text": "Within LOA time limits, or absent LOA at least 15 minutes before entry, or at radar handoff or coordination for transfer of control.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft enters the receiving facility's area.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the receiving center asks by interphone.",
+              "is_correct": false
+            },
+            {
+              "text": "Only during nonautomated operations.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What system is used to obtain acknowledgment of receipt of transferred data when automatic acknowledgment is unavailable?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The paragraph specifies Service F.",
+          "choices": [
+            {
+              "text": "SERVICE F",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "2-2-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "During inter-center computer operation, how are proposed flight plans within an ARTCC's PBCT parameter sent to adjacent ARTCCs?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "PBCT-qualified proposed flight plans go through the Computer B network.",
+          "choices": [
+            {
+              "text": "Via the Computer B network.",
+              "is_correct": true
+            },
+            {
+              "text": "Via NADIN only.",
+              "is_correct": false
+            },
+            {
+              "text": "Via Service F only.",
+              "is_correct": false
+            },
+            {
+              "text": "By interphone relay.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When the route of flight of a proposed flight plan exceeds how many elements external to the originating ARTCC's area, NADIN must be used to forward the data to all affected centers?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The threshold is more than 20 external elements.",
+          "choices": [
+            {
+              "text": "20 elements.",
+              "is_correct": true
+            },
+            {
+              "text": "10 elements.",
+              "is_correct": false
+            },
+            {
+              "text": "15 elements.",
+              "is_correct": false
+            },
+            {
+              "text": "30 elements.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "During nonautomated operation, one NADIN trigger occurs when the route external to the originating center's area consists of 10 or more elements and the flight will enter how many other center areas?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "One trigger is entry into 3 or more other center areas.",
+          "choices": [
+            {
+              "text": "3 or more other center areas.",
+              "is_correct": true
+            },
+            {
+              "text": "2 or more other center areas.",
+              "is_correct": false
+            },
+            {
+              "text": "4 or more other center areas only if the remarks are lengthy.",
+              "is_correct": false
+            },
+            {
+              "text": "Any number of other centers as long as the route has five elements.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A proposed flight plan with remarks too lengthy for interphone transmission is one of the nonautomated-operation conditions requiring NADIN forwarding.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Lengthy remarks are explicitly listed as one of the NADIN triggers during nonautomated operation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Within PBCT, proposed flight plans are sent to adjacent ARTCCs via _____",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The network named in the rule is Computer B.",
+          "choices": [
+            {
+              "text": "COMPUTER B",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

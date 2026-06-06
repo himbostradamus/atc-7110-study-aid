@@ -1,0 +1,755 @@
+{
+  "activities": {
+    "4-8-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "To authorize a pilot to execute a particular instrument approach procedure, what must be specified?",
+          "choices": [
+            {
+              "text": "The name of the approach as published on the approach chart.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the runway number, even if several procedures are published.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the approach aid type, without the published approach name.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the airport name and tower frequency.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A particular instrument approach is authorized by specifying the published approach name."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this glideslope advisory rule correct?",
+          "question_text": "If an aircraft is conducting an ILS or LDA approach, the controller must advise that the glideslope is out of service when the approach clearance is issued, unless the published title already allows for that condition.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The glideslope-out advisory is given at the time of approach clearance unless the procedure title already accounts for it."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this direct-to-FAF rule correct?",
+          "question_text": "Do not clear an aircraft direct to the FAF unless that fix is also an IAF and the aircraft is expected to execute the depicted procedure turn or hold-in-lieu of procedure turn.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Direct-to-FAF clearances are prohibited unless the FAF is also an IAF with the depicted turn or hold available to be flown."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "Is this straight-in rule correct?",
+          "question_text": "If a procedure turn or hold-in-lieu of procedure turn is depicted and the intercept angle is 90 degrees or less, the aircraft must be instructed to conduct a straight-in approach when ATC does not want the pilot to execute the turn or hold.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the intercept angle is 90 degrees or less and ATC does not want the course-reversal maneuver flown, the approach clearance must say straight-in."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "Which direct clearance is prohibited?",
+          "question_text": "For an RNAV instrument approach that contains RF legs, which direct clearance may not be issued?",
+          "choices": [
+            {
+              "text": "Direct to a waypoint beginning or within an RF leg.",
+              "is_correct": true
+            },
+            {
+              "text": "Direct to an IAF via a published transition.",
+              "is_correct": false
+            },
+            {
+              "text": "Direct to an IF when the RNAV intercept, altitude, and radar-monitoring conditions are satisfied.",
+              "is_correct": false
+            },
+            {
+              "text": "Direct to a fix 3 NM or more before the FAF along the final approach course where radar coverage permits.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Aircraft may not be cleared direct to a waypoint that begins or lies within an RF leg."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "The pilot is established for a straight-in ILS Runway 18 approach and you do not want a procedure turn. Build the approach clearance.",
+          "target_phrase": "CLEARED STRAIGHT-IN ILS RUNWAY ONE-EIGHT APPROACH",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"CLEARED STRAIGHT-IN ILS RUNWAY ONE-EIGHT APPROACH.\"",
+          "word_bank": [
+            "APPROACH",
+            "CLEARED",
+            "ILS",
+            "ONE-EIGHT",
+            "RUNWAY",
+            "STRAIGHT-IN"
+          ],
+          "correct_sequence": [
+            1,
+            5,
+            2,
+            4,
+            3,
+            0
+          ]
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A GPS TESTING NOTAM is active, testing is actually occurring, and an aircraft requests an RNAV approach.",
+          "para_context": "When GPS testing is actually occurring, pilots requesting or cleared for an RNAV approach must be informed that GPS may not be available and asked for their intentions. When pilots report GPS anomalies, request intentions or clear them for an alternative approach if one is available and operational.",
+          "choices": [
+            {
+              "text": "Advise that GPS may not be available and request the pilot's intentions.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the RNAV approach normally because the NOTAM alone does not affect approach operations.",
+              "is_correct": false
+            },
+            {
+              "text": "Suspend all approaches to the airport, including non-RNAV approaches.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the issue until the aircraft reaches the final approach fix.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When GPS testing is actually occurring, the pilot is told GPS may not be available and is asked for intentions."
+        }
+      ]
+    },
+    "4-8-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What must be stated when issuing an approach clearance to an airport without an operating control tower or with a closed part-time tower?",
+          "choices": [
+            {
+              "text": "The name of the airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the CTAF frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the runway number.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing extra beyond the approach type.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The airport name must be stated when the location is uncontrolled or the part-time tower is closed."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this uncontrolled-airport rule correct?",
+          "question_text": "When a location has no operating control tower, or a part-time tower is closed, the approach clearance must state the name of the airport.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That extra airport-name element is required for approach clearances at uncontrolled locations."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "The pilot is inbound to Springfield, which has no operating tower, and you are authorizing a specific RNAV Runway 18 approach. Build the clearance.",
+          "target_phrase": "CLEARED RNAV RUNWAY ONE-EIGHT APPROACH TO SPRINGFIELD",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"CLEARED RNAV RUNWAY ONE-EIGHT APPROACH TO SPRINGFIELD.\"",
+          "word_bank": [
+            "APPROACH",
+            "CLEARED",
+            "ONE-EIGHT",
+            "RNAV",
+            "RUNWAY",
+            "SPRINGFIELD",
+            "TO"
+          ],
+          "correct_sequence": [
+            1,
+            3,
+            4,
+            2,
+            0,
+            6,
+            5
+          ]
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "The destination's part-time tower is closed. You are about to clear the aircraft for the VOR Runway 24 approach.",
+          "para_context": "At airports without an operating control tower, or where a part-time tower is closed, the approach clearance must state the name of the airport.",
+          "choices": [
+            {
+              "text": "Include the airport name in the approach clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Omit the airport name because the pilot already knows the destination.",
+              "is_correct": false
+            },
+            {
+              "text": "Replace the approach clearance with taxi instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the approach clearance until the aircraft reports the runway in sight.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "At an uncontrolled airport or with a closed part-time tower, the airport name must be included in the approach clearance."
+        }
+      ]
+    },
+    "4-8-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When a terminal approach clearance is relayed through a communication station other than an air carrier company radio, what must be included if it is required and available?",
+          "choices": [
+            {
+              "text": "The weather report.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the airport diagram.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the assigned gate.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the pilot's requested approach type.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the clearance is relayed through an authorized communication station, the required and available weather report is included."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this relayed-weather rule correct?",
+          "question_text": "If an approach clearance is relayed through a communication station other than an air carrier company radio, the weather report must be included when it is required and available.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the stated requirement for a relayed approach clearance in terminal operations."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which relay method is allowed?",
+          "question_text": "Which method may be used to satisfy the relayed-weather requirement for the approach clearance?",
+          "choices": [
+            {
+              "text": "Tell the station to issue current weather.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume the pilot will get weather later on final.",
+              "is_correct": false
+            },
+            {
+              "text": "Omit the weather any time the pilot requested the approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Use an air carrier company radio and treat it the same as the authorized station.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The controller may satisfy the rule by telling the communication station to issue current weather."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "The approach clearance will be relayed through an authorized communication station, and the weather report is both required and available.",
+          "para_context": "When a terminal approach clearance is relayed through a communication station other than an air carrier company radio, the weather report is included when required and available. This may be accomplished by telling the station to issue current weather.",
+          "choices": [
+            {
+              "text": "Have the station issue current weather as part of the relay.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave weather out because the clearance itself is the only required item.",
+              "is_correct": false
+            },
+            {
+              "text": "Use any relay path, including an air carrier company radio, because all relay methods are equivalent.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay weather until the pilot requests it after landing.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When required and available, the weather is included, and one approved way is to have the station issue current weather."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "4-8-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "If only one instrument approach of a particular type is published, when may the approach be cleared without identifying the runway reference?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "If only one instrument approach of that type is published, the runway reference need not be included.",
+          "choices": [
+            {
+              "text": "When only one instrument approach of that type is published.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot has the chart in view.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when radar vectors are being used.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at uncontrolled airports.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Do not clear an aircraft direct to the FAF unless that fix is also an IAF and the aircraft is expected to execute the depicted procedure turn or hold-in-lieu of procedure turn.",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Direct-to-FAF clearances are prohibited unless the FAF is also an IAF with the depicted maneuver expected.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When an ILS or LDA approach is cleared and the glideslope is reported out of service, what must the controller do unless the procedure title already allows for it?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller must advise that the glideslope is unusable at the time the approach clearance is issued.",
+          "choices": [
+            {
+              "text": "Advise that the glideslope is unusable when the approach clearance is issued.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the aircraft reports the runway in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the approach automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "Say nothing if the localizer remains usable.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Where a STAR or ATS route connects directly to an IAP at an IAF or IF and the connection will be used, when must the aircraft be cleared for the approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The aircraft is cleared for the approach at least 3 NM prior to the IAF or IF, and the connection fix is specified.",
+          "choices": [
+            {
+              "text": "At least 3 NM prior to the IAF or IF, while specifying the connection fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft crosses the FAF.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly at the runway threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot requests the published missed approach.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which direct clearance is prohibited for an RNAV approach containing RF legs?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Aircraft may not be cleared direct to any waypoint that begins or lies within an RF leg.",
+          "choices": [
+            {
+              "text": "Direct to a waypoint beginning or within an RF leg.",
+              "is_correct": true
+            },
+            {
+              "text": "Direct to a published transition leading to the approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Direct to an IF when the subparagraph h conditions are met.",
+              "is_correct": false
+            },
+            {
+              "text": "Direct to a fix 3 NM or more before the FAF when radar coverage allows it.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A pilot advises that cold temperature compensation will be applied to approach segments. Which statement is correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Controllers must not disapprove the request, though they may delay the approach clearance if needed to maintain separation.",
+          "choices": [
+            {
+              "text": "ATC must not disapprove the compensation request, but may delay the approach clearance to maintain separation.",
+              "is_correct": true
+            },
+            {
+              "text": "ATC must deny the approach until the temperature rises.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot may apply compensation to any assigned altitude before the approach clearance without telling ATC.",
+              "is_correct": false
+            },
+            {
+              "text": "ATC must cancel the IFR flight plan and reissue it with new minima.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When GPS testing is actually occurring and a pilot requests or is cleared for an RNAV approach, what should ATC do?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller informs the pilot that GPS may not be available and requests intentions.",
+          "choices": [
+            {
+              "text": "Advise that GPS may not be available and request the pilot's intentions.",
+              "is_correct": true
+            },
+            {
+              "text": "Continue RNAV operations normally until the pilot reports a missed approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Suspend all instrument approaches, including non-RNAV approaches, without informing the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "Advise only after the aircraft is established on final.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What must be stated when issuing an approach clearance to an airport without an operating control tower or with a closed part-time tower?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The approach clearance must state the airport name.",
+          "choices": [
+            {
+              "text": "The name of the airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the CTAF frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the runway heading.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing beyond the approach type.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When a location has no operating control tower, or a part-time tower is closed, the approach clearance must state the name of the airport.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That airport-name element is required in the clearance.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which transmission correctly reflects the required uncontrolled-airport approach phraseology?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The airport name must be stated in the approach clearance when the tower is not operating.",
+          "choices": [
+            {
+              "text": "Cleared RNAV Runway One-Eight Approach to Springfield.",
+              "is_correct": true
+            },
+            {
+              "text": "Cleared RNAV Runway One-Eight Approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Approach approved, tower closed.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared to the airport for further clearance.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may the phraseology \"Cleared Approach to (airport name)\" be used?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "That phraseology authorizes the pilot to execute the pilot's choice of instrument approach to the named airport.",
+          "choices": [
+            {
+              "text": "When authorizing the pilot's choice of instrument approach to that airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the pilot has canceled IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when no published approach exists.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the destination tower is operating normally.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When a terminal approach clearance is relayed through a communication station other than an air carrier company radio, what must be included if it is required and available?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The weather report is included when required and available.",
+          "choices": [
+            {
+              "text": "The weather report.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the runway exit instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the airport diagram.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the pilot's requested missed approach.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If an approach clearance is relayed through a communication station other than an air carrier company radio, the weather report must be included when it is required and available.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is the rule for a relayed terminal approach clearance.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which relay method may be used to satisfy the relayed-weather requirement?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller may tell the station to issue current weather.",
+          "choices": [
+            {
+              "text": "Tell the station to issue current weather.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume the pilot will pick up weather after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "Use any relay path, including an air carrier company radio, because they are equivalent.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave weather out whenever the aircraft is on an IFR flight plan.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the weather is required and available but the only relay path available is an air carrier company radio, which statement is correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The rule specifically addresses relays through a communication station other than an air carrier company radio.",
+          "choices": [
+            {
+              "text": "That relay path does not satisfy this rule by itself; an authorized method must be used.",
+              "is_correct": true
+            },
+            {
+              "text": "The air carrier company radio may always be used as an equivalent relay path.",
+              "is_correct": false
+            },
+            {
+              "text": "Weather may be omitted because the clearance is already being relayed.",
+              "is_correct": false
+            },
+            {
+              "text": "The approach clearance itself must be canceled until tower control resumes.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

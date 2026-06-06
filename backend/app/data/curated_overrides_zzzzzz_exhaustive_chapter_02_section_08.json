@@ -1,0 +1,408 @@
+{
+  "activities": {
+    "2-8-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What controls the requirement to furnish RVR values for the runway in use?",
+          "choices": [
+            {"text": "Whether the RVR equipment for the runway in use is operational.", "is_correct": true},
+            {"text": "Whether all related visual aids remain in service after the first report.", "is_correct": false},
+            {"text": "Whether the runway is being used only for takeoffs rather than landings.", "is_correct": false},
+            {"text": "Whether the pilot specifically requests RVR instead of visibility.", "is_correct": false}
+          ],
+          "explanation": "If RVR equipment is operational for the runway in use, furnish the value regardless of later navigational-aid or visual-aid status."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Controllers must furnish RVR values for the runway in use whenever RVR equipment is operational, even if navigational or visual aids used for RVR minima later become unavailable.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "The requirement follows the status of the RVR equipment itself, not later changes to associated aids."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which later equipment change does not relieve controllers of furnishing RVR values when runway RVR equipment remains operational?",
+          "choices": [
+            {"text": "A later nonoperation of a navigational or visual aid used in applying RVR as takeoff or landing minima.", "is_correct": true},
+            {"text": "A complete loss of the RVR equipment serving the runway in use.", "is_correct": false},
+            {"text": "A runway closure that removes the runway from use.", "is_correct": false},
+            {"text": "The removal of the runway from the ATIS broadcast.", "is_correct": false}
+          ],
+          "explanation": "Subsequent operation or nonoperation of associated aids does not change the obligation while the RVR equipment is operational."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "Runway visual range equipment is working on the runway in use. Later, a related visual aid becomes unavailable, and another controller says you can stop issuing RVR because the approach minima no longer use it the same way.",
+          "para_context": "Where RVR equipment is operational, furnish the values for the runway in use regardless of subsequent operation or nonoperation of navigational or visual aids used in applying RVR as takeoff or landing minima.",
+          "choices": [
+            {"text": "Continue furnishing the RVR values for the runway in use.", "is_correct": true},
+            {"text": "Stop issuing RVR immediately because any related aid outage cancels the RVR requirement.", "is_correct": false},
+            {"text": "Issue only tower visibility instead, because RVR may never be used without all associated aids.", "is_correct": false},
+            {"text": "Wait for a pilot request before giving another RVR value.", "is_correct": false}
+          ],
+          "explanation": "The requirement remains in effect as long as the RVR equipment for the runway in use is operational."
+        }
+      ]
+    },
+    "2-8-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When must current touchdown RVR for the runway in use be issued even if prevailing visibility is more than 1 mile?",
+          "choices": [
+            {"text": "When RVR indicates a reportable value.", "is_correct": true},
+            {"text": "Only when the pilot asks for it before taxi.", "is_correct": false},
+            {"text": "Only when midpoint and rollout are both unavailable.", "is_correct": false},
+            {"text": "Only when touchdown RVR is less than 1,200 feet.", "is_correct": false}
+          ],
+          "explanation": "A reportable RVR value must be issued regardless of prevailing visibility."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If a reliable source determines that the indicated RVR value differs by more than 400 feet from the actual conditions within the transmissometer area, the RVR data must not be reported.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "RVR that differs by more than 400 feet from actual transmissometer-area conditions is not acceptable for reporting."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Under what condition is local control required to issue both midpoint and rollout RVR in addition to touchdown RVR?",
+          "choices": [
+            {"text": "When either midpoint or rollout is less than 2,000 feet and touchdown RVR is greater than that lower value.", "is_correct": true},
+            {"text": "Whenever all three sensors are operating, regardless of the values.", "is_correct": false},
+            {"text": "Only when touchdown RVR is also less than 2,000 feet.", "is_correct": false},
+            {"text": "Only for arriving aircraft and never for departures.", "is_correct": false}
+          ],
+          "explanation": "That is the specific condition requiring issuance of both midpoint and rollout RVR."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What reportable RVR threshold in feet applies under the note in 2-8-2?",
+          "choices": [
+            {"text": "RVR 6,000 feet or less.", "is_correct": true},
+            {"text": "RVR 5,000 feet or less.", "is_correct": false},
+            {"text": "RVR 2,000 feet or less.", "is_correct": false},
+            {"text": "RVR 1 mile or less.", "is_correct": false}
+          ],
+          "explanation": "The note defines reportable values as RVR 6,000 feet or less."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Touchdown RVR is above 2,000 feet, but midpoint RVR has dropped below 2,000 feet for the runway in use. Local control is about to clear an aircraft for departure and plans to issue only touchdown RVR because it is the primary sensor.",
+          "para_context": "Issue both midpoint and rollout RVR when the value of either is less than 2,000 feet and touchdown RVR is greater than that value. Local control must issue the current RVR before each landing or departure as required.",
+          "choices": [
+            {"text": "Issue both the touchdown RVR and the lower midpoint or rollout value as required before the departure.", "is_correct": true},
+            {"text": "Issue only touchdown RVR because midpoint and rollout are advisory unless touchdown is also below 2,000 feet.", "is_correct": false},
+            {"text": "Suppress all RVR because multiple sensors should not be reported together.", "is_correct": false},
+            {"text": "Wait until the aircraft is airborne to pass the lower midpoint value.", "is_correct": false}
+          ],
+          "explanation": "The lower midpoint or rollout value must be included when the threshold condition is met."
+        }
+      ]
+    },
+    "2-8-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How should an RVR value beyond the reportable range of the equipment be stated?",
+          "choices": [
+            {"text": "As more than or less than the appropriate minimum or maximum readable value.", "is_correct": true},
+            {"text": "As approximately the nearest reportable value.", "is_correct": false},
+            {"text": "By omitting the runway number and stating only the limiting value.", "is_correct": false},
+            {"text": "By substituting tower visibility for the RVR value.", "is_correct": false}
+          ],
+          "explanation": "Off-scale values are stated with more than or less than the appropriate readable value."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When two or more RVR systems serve the runway in use, controllers must report the indicated values in terms of touchdown, mid, and rollout as appropriate.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "Multiple RVR systems are reported by position on the runway as appropriate."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "Runway 27 Right RVR is 1,000, mid 800, rollout 600. Build the visibility report.",
+          "target_phrase": "RUNWAY TWO SEVEN RIGHT RVR ONE THOUSAND MID EIGHT HUNDRED ROLLOUT SIX HUNDRED"
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When RVR is issued together with other weather elements, how is the RVR report used within the overall weather transmission?",
+          "choices": [
+            {"text": "It is transmitted in the normal sequence used for weather reporting.", "is_correct": true},
+            {"text": "It is always moved to the start of the report before all other weather elements.", "is_correct": false},
+            {"text": "It is transmitted only after the altimeter setting regardless of the rest of the sequence.", "is_correct": false},
+            {"text": "It is separated from the weather sequence and issued as a stand-alone addendum.", "is_correct": false}
+          ],
+          "explanation": "When combined with other weather elements, RVR stays in the normal weather-reporting sequence."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A runway RVR readout is rapidly varying by more than 1,000 feet. Another controller wants to issue only the current value because adding the range sounds too wordy.",
+          "para_context": "When an RVR readout indicates a rapidly varying visibility condition of 1,000 feet or more, report the current value followed by the range of visibility variance.",
+          "choices": [
+            {"text": "Report the current value followed by the range of visibility variance.", "is_correct": true},
+            {"text": "Issue only the current value and omit the variability range.", "is_correct": false},
+            {"text": "State the average of the variable values instead of the current reading.", "is_correct": false},
+            {"text": "Stop issuing RVR because variable values are not reportable.", "is_correct": false}
+          ],
+          "explanation": "Rapidly varying RVR requires both the current value and the range."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "2-8-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What controls the requirement to furnish RVR values for the runway in use?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The deciding factor is whether the RVR equipment serving the runway in use is operational.",
+          "choices": [
+            {"text": "Whether the RVR equipment for the runway in use is operational.", "is_correct": true},
+            {"text": "Whether all associated visual aids remain operational after the first report.", "is_correct": false},
+            {"text": "Whether the runway is being used only for takeoff.", "is_correct": false},
+            {"text": "Whether the pilot requested touchdown visibility.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Controllers furnish RVR values for the runway in use even if navigational or visual aids used in applying RVR as takeoff or landing minima later become unavailable.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The requirement to furnish the value is independent of later changes to those associated aids.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "According to the note, what is the minimum readout value of older RVR equipment?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note says older equipment has a minimum readout value of 600 feet.",
+          "choices": [
+            {"text": "600 feet.", "is_correct": true},
+            {"text": "100 feet.", "is_correct": false},
+            {"text": "800 feet.", "is_correct": false},
+            {"text": "1,200 feet.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "What minimum readout capability may newer RVR equipment have?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note says newer equipment may read as low as 100 feet.",
+          "choices": [
+            {"text": "As low as 100 feet.", "is_correct": true},
+            {"text": "As low as 300 feet.", "is_correct": false},
+            {"text": "As low as 600 feet.", "is_correct": false},
+            {"text": "As low as 1,000 feet.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-8-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must current touchdown RVR for the runway in use be issued even if prevailing visibility is more than 1 mile?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Reportable RVR values are issued regardless of prevailing visibility.",
+          "choices": [
+            {"text": "When RVR indicates a reportable value.", "is_correct": true},
+            {"text": "Only when prevailing visibility is 1 mile or less.", "is_correct": false},
+            {"text": "Only when local control requests it from tower cab.", "is_correct": false},
+            {"text": "Only when midpoint RVR is unavailable.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "What are reportable RVR values according to the note in 2-8-2?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The note defines reportable values as RVR 6,000 feet or less.",
+          "choices": [
+            {"text": "RVR 6,000 feet or less.", "is_correct": true},
+            {"text": "RVR 5,000 feet or less.", "is_correct": false},
+            {"text": "RVR 2,000 feet or less.", "is_correct": false},
+            {"text": "Any value below prevailing visibility.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "If a reliable source determines that indicated RVR differs by more than 400 feet from the actual conditions within the transmissometer area, the RVR data must not be reported.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "That amount of difference makes the RVR data unacceptable for reporting.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Which of the following is considered a reliable source for determining whether RVR data is not representative?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note lists certified weather observers, AWOS, controllers, FSS specialists, and pilots as reliable sources.",
+          "choices": [
+            {"text": "A certified weather observer.", "is_correct": true},
+            {"text": "Only a maintenance technician assigned to the transmissometer.", "is_correct": false},
+            {"text": "Only the airport manager.", "is_correct": false},
+            {"text": "Only a local law-enforcement vehicle on the runway.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "When must both midpoint and rollout RVR be issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Both are issued when either is less than 2,000 feet and touchdown RVR is greater than that value.",
+          "choices": [
+            {"text": "When either midpoint or rollout is below 2,000 feet and touchdown RVR is greater than that lower value.", "is_correct": true},
+            {"text": "Whenever all three sensors are functioning.", "is_correct": false},
+            {"text": "Only when touchdown RVR is below 2,000 feet.", "is_correct": false},
+            {"text": "Only for arrivals, not departures.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Who must issue the current RVR to each aircraft prior to landing or departure as required?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Local control carries that responsibility.",
+          "choices": [
+            {"text": "Local control.", "is_correct": true},
+            {"text": "Only approach control.", "is_correct": false},
+            {"text": "Only clearance delivery.", "is_correct": false},
+            {"text": "Only the weather observer.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-8-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When RVR is issued along with other weather elements, how should it be transmitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "RVR stays in the normal sequence used for weather reporting.",
+          "choices": [
+            {"text": "In the normal sequence used for weather reporting.", "is_correct": true},
+            {"text": "Separately from the weather report so it stands alone.", "is_correct": false},
+            {"text": "Before all other weather elements without exception.", "is_correct": false},
+            {"text": "Only after the altimeter setting.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Complete the prescribed RVR phraseology: \"_____ ONE FOUR RVR TWO THOUSAND FOUR HUNDRED.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The approved RVR report begins with the word runway.",
+          "choices": [
+            {"text": "RUNWAY", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "How should a value beyond the reportable range of the RVR equipment be stated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Use more than or less than the readable value, as appropriate.",
+          "choices": [
+            {"text": "As more than or less than the appropriate readable value.", "is_correct": true},
+            {"text": "As approximately the nearest reportable value.", "is_correct": false},
+            {"text": "By omitting the runway number and stating only the limit.", "is_correct": false},
+            {"text": "By substituting tower visibility.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "When there is a rapidly varying RVR condition of 1,000 feet or more, what is added after the current value?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The range of visibility variance is added after the current value.",
+          "choices": [
+            {"text": "The range of visibility variance.", "is_correct": true},
+            {"text": "The average of the last three readouts.", "is_correct": false},
+            {"text": "The prevailing tower visibility.", "is_correct": false},
+            {"text": "The runway condition code.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "When two or more RVR systems serve the runway in use, the indicated values are reported in terms of touchdown, mid, and rollout as appropriate.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "That is the reporting format for multiple RVR systems on the runway in use.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        }
+      ]
+    }
+  }
+}

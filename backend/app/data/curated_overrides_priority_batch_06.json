@@ -1,0 +1,1428 @@
+{
+  "activities": {
+    "3-4-2": {
+      "replace_types": ["directive_check", "list_membership", "requirement_check", "situation_action", "table_lookup"],
+      "items": [
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which event is one of the listed times to turn the REIL off?",
+          "question_text": "Under 3-4-2, after operating REIL with separate on-off controls, which event is one of the listed triggers for turning the lights off?",
+          "choices": [
+            {
+              "text": "An arriving aircraft has landed.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft has reached downwind.",
+              "is_correct": false
+            },
+            {
+              "text": "The runway edge lights are set to step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "Visibility improves above 5 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-2a1, one listed trigger for turning REIL off is that an arriving aircraft has landed."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use Table 3-4-1 to answer this question.",
+          "question_text": "Under Table 3-4-1, which REIL intensity setting applies during the day when visibility is less than 2 miles?",
+          "choices": [
+            {
+              "text": "Setting 3.",
+              "is_correct": true
+            },
+            {
+              "text": "Setting 2.",
+              "is_correct": false
+            },
+            {
+              "text": "Setting 1.",
+              "is_correct": false
+            },
+            {
+              "text": "When requested only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-1 shows REIL setting 3 for day visibility less than 2 miles."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A pilot requested the REIL, the associated runway lights are lighted, and a departure has just taken off but remains in the traffic pattern area. Another controller wants the REIL turned off immediately.",
+          "para_context": "Under 3-4-2, when separate on-off controls are provided, REIL are operated with the associated runway lights and may be turned off after a departure has left the traffic pattern area or when the lights are of no further use to the pilot.",
+          "choices": [
+            {
+              "text": "Keep the REIL on until the departure leaves the traffic pattern area or the lights are no longer needed.",
+              "is_correct": true
+            },
+            {
+              "text": "Turn the REIL off as soon as the aircraft lifts off.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the REIL off because pilot requests never affect REIL operation.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave the REIL off unless the runway edge lights are extinguished.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-2a1, one listed trigger for turning REIL off after departure is that the departing aircraft has left the traffic pattern area."
+        }
+      ]
+    },
+    "3-4-7": {
+      "replace_types": ["list_membership", "minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this SFL statement match the paragraph?",
+          "question_text": "Controllers must operate sequenced flashing lights when visibility is less than 3 miles and instrument approaches are being made to the runway served by the associated ALS.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That statement appears in 3-4-7a."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which circumstance is one of the listed SFL operating bases?",
+          "question_text": "Under 3-4-7, which circumstance is explicitly listed as a basis for operating sequenced flashing lights?",
+          "choices": [
+            {
+              "text": "As requested by the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever taxiway lights are on.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the ALS is off.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after a PAR controller approves the change.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-7b, SFL may be operated as requested by the pilot."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "Instrument approaches are being made to the runway served by the ALS, the visibility is 2 miles, and the pilot has not asked for the sequenced flashing lights to be extinguished. Another controller says to leave the SFL off because the ALS is already on.",
+          "para_context": "Under 3-4-7, sequenced flashing lights are operated when visibility is less than 3 miles and instrument approaches are being made, as requested by the pilot, or as you deem necessary if not contrary to the pilot's request.",
+          "choices": [
+            {
+              "text": "Operate the sequenced flashing lights.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave the SFL off because the ALS being on is enough.",
+              "is_correct": false
+            },
+            {
+              "text": "Operate the SFL only if visibility falls below 1 mile.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay using SFL until the aircraft passes the threshold.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-7a, the listed visibility and approach conditions call for operating the SFL."
+        }
+      ]
+    },
+    "3-4-8": {
+      "replace_types": ["conditional_rule_check", "document_control_check", "list_membership", "minima_rule_check", "reference_check", "requirement_check", "scope_check", "situation_action", "table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use Table 3-4-7 to answer this question.",
+          "question_text": "Under the three-step MALS/RAIL/ODALS table, which setting applies during the day when visibility is 2 to 5 miles inclusive?",
+          "choices": [
+            {
+              "text": "Setting 2.",
+              "is_correct": true
+            },
+            {
+              "text": "Setting 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Setting 1.",
+              "is_correct": false
+            },
+            {
+              "text": "Low intensity only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-7 shows setting 2 for day visibility 2 to 5 miles inclusive."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this MALSR/ODALS statement match the paragraph?",
+          "question_text": "For a three-step MALS/RAIL/ODALS system at a part-time tower, if there is no radio air-to-ground control when the tower is not staffed during darkness, the MALSR/ODALS must be set on intensity setting 2.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That requirement appears in the note under Table 3-4-7."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A part-time tower closes for the night. The airport uses the three-step MALSR/ODALS table, duplicate controls are not provided in the FSS, and there is no radio air-to-ground control available after the tower closes.",
+          "para_context": "Under 3-4-8, the three-step MALSR/ODALS note requires intensity setting 2 during darkness when the tower is not staffed if there is no radio air-to-ground control.",
+          "choices": [
+            {
+              "text": "Set the MALSR/ODALS to intensity setting 2 during darkness.",
+              "is_correct": true
+            },
+            {
+              "text": "Set the MALSR/ODALS to the highest setting all night.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the MALSR/ODALS off because the tower is closed.",
+              "is_correct": false
+            },
+            {
+              "text": "Use low intensity only if a pilot calls from the air.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note under Table 3-4-7 requires setting 2 in that situation."
+        }
+      ]
+    },
+    "3-4-9": {
+      "replace_types": ["list_membership", "minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this ALSF-2/SSALR statement match the paragraph?",
+          "question_text": "Controllers must operate the ALSF-2 system as requested by the pilot when prevailing visibility is 3/4 mile or less, or the RVR is 4,000 feet or less.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That statement appears in 3-4-9a1."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which lighting action matches this paragraph?",
+          "question_text": "Under 3-4-9, what action applies when the conditions in subparagraph a are not a factor?",
+          "choices": [
+            {
+              "text": "Operate the SSALR system.",
+              "is_correct": true
+            },
+            {
+              "text": "Operate the ALSF-2 system at maximum intensity.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn all approach lights off.",
+              "is_correct": false
+            },
+            {
+              "text": "Operate REIL only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-9b, SSALR is operated when the conditions in subparagraph a are not a factor."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "Visibility improves above 3/4 mile and RVR rises above 4,000 feet, so the low-visibility conditions in subparagraph a are no longer a factor. Another controller wants to keep operating the ALSF-2 system under the same low-visibility logic.",
+          "para_context": "Under 3-4-9, ALSF-2 is operated under the low-visibility conditions in subparagraph a, and SSALR is operated when those conditions are not a factor.",
+          "choices": [
+            {
+              "text": "Operate the SSALR system.",
+              "is_correct": true
+            },
+            {
+              "text": "Keep using ALSF-2 solely because it was already on.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the approach lighting system off completely.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for the pilot to request a lighting change before doing anything.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-9b, SSALR applies when the subparagraph a conditions are not a factor."
+        }
+      ]
+    },
+    "3-4-11": {
+      "replace_types": ["list_membership", "table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use Table 3-4-8 to answer this question.",
+          "question_text": "Under Table 3-4-8, which HIRL/RCLS/TDZL step applies at night when visibility is 3 to 5 miles inclusive?",
+          "choices": [
+            {
+              "text": "Step 2.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            },
+            {
+              "text": "When requested only, with no assigned step.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-8 shows step 2 for night visibility 3 to 5 miles inclusive."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which item is one of the listed exceptions to Table 3-4-8?",
+          "question_text": "Under 3-4-11, which item is one of the stated exceptions to operating in accordance with Table 3-4-8?",
+          "choices": [
+            {
+              "text": "As requested by the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the approach controller approves the change.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when RVR is unavailable.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the aircraft is within 3 miles of touchdown.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-11b, one listed exception is operation as requested by the pilot."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "Night visibility is 4 miles, but the pilot requests a brighter HIRL/RCLS/TDZL setting than the one shown in Table 3-4-8. Another controller says the table can never be varied.",
+          "para_context": "Under 3-4-11, high intensity runway, runway centerline, and touchdown zone lights are operated in accordance with Table 3-4-8, except where a facility directive specifies other settings, as requested by the pilot, or as you deem necessary if not contrary to pilot request.",
+          "choices": [
+            {
+              "text": "Honor the pilot-requested setting because pilot request is a listed exception.",
+              "is_correct": true
+            },
+            {
+              "text": "Refuse any change because Table 3-4-8 has no exceptions.",
+              "is_correct": false
+            },
+            {
+              "text": "Dim the lights to step 1 regardless of the request.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the associated lights off until visibility drops below 1 mile.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-11b, pilot request is one of the listed exceptions to the table."
+        }
+      ]
+    },
+    "3-4-12": {
+      "replace_types": ["minima_rule_check", "reference_check", "table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use Table 3-4-9 to answer this question.",
+          "question_text": "Under Table 3-4-9, which HIRL-associated-with-MALSR step applies at night when visibility is more than 5 miles?",
+          "choices": [
+            {
+              "text": "Step 1.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-9 shows step 1 for night visibility more than 5 miles."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this brightness-control statement match the note?",
+          "question_text": "When moving from a given HIRL/MALSR brightness setting to a lower setting, controllers must rotate the control below the intended setting and then back to the appropriate step to ensure proper MALSR brightness.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That note appears in 3-4-12."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "You need to lower the HIRL setting that also controls the associated MALSR from a brighter step to a lower step. A trainee proposes rotating the control directly to the target step and stopping there.",
+          "para_context": "The note in 3-4-12 explains that when going from a given brightness step to a lower setting, rotating below the intended step and then back to the correct step ensures the MALSR will operate at the appropriate brightness.",
+          "choices": [
+            {
+              "text": "Rotate below the intended step, then bring the control back to the target step.",
+              "is_correct": true
+            },
+            {
+              "text": "Rotate directly to the target step and stop there.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the MALSR off and back on instead of selecting a lower step.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave the lights at the brighter step because lower settings are not authorized.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note in 3-4-12 gives the required control movement to ensure proper MALSR brightness."
+        }
+      ]
+    },
+    "3-4-13": {
+      "replace_types": ["directive_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this HIRL/RVR directive stated correctly?",
+          "question_text": "Keep the appropriate approach controller or PAR controller informed, in advance if possible, of HIRL changes that affect RVR.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That statement is the full requirement in 3-4-13."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A change to high intensity runway lights will affect RVR. The approach controller has not yet been told, but there is still enough time to coordinate before the change takes effect.",
+          "para_context": "Under 3-4-13, keep the appropriate approach controller or PAR controller informed, in advance if possible, of HIRL changes that affect RVR.",
+          "choices": [
+            {
+              "text": "Inform the appropriate approach controller or PAR controller in advance if possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until after the change takes effect so the coordination reflects the final condition.",
+              "is_correct": false
+            },
+            {
+              "text": "Notify only the center controller because RVR coordination is an en route function.",
+              "is_correct": false
+            },
+            {
+              "text": "Skip the coordination unless the pilot asks about the lighting change.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph requires informing the appropriate approach controller or PAR controller, in advance if possible."
+        }
+      ]
+    },
+    "5-12-1": {
+      "replace_types": ["directive_check", "requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this glidepath-notification directive stated correctly?",
+          "question_text": "Inform the aircraft when it is approaching glidepath, approximately 10 to 30 seconds before final descent.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That statement appears in 5-12-1."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is approximately 10 to 30 seconds from final descent on the PAR. A trainee asks whether to wait until descent actually starts before issuing the glidepath advisory.",
+          "para_context": "Under 5-12-1, the aircraft is informed when it is approaching glidepath, approximately 10 to 30 seconds before final descent.",
+          "choices": [
+            {
+              "text": "Advise the aircraft that it is approaching glidepath.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until final descent begins, then issue the first glidepath advisory.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the advisory until the aircraft reaches decision height.",
+              "is_correct": false
+            },
+            {
+              "text": "Skip the advisory unless the pilot specifically requests it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-12-1, the glidepath notification is given before final descent, not after it begins."
+        }
+      ]
+    },
+    "5-12-3": {
+      "replace_types": ["requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this descent instruction stated correctly?",
+          "question_text": "When an aircraft reaches the point where final descent is to start, instruct it to begin descent.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the full requirement in 5-12-3."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "An aircraft has just reached the point where final descent is to start on the PAR. Another controller suggests waiting a little longer before telling the aircraft to descend so the call will be closer to touchdown.",
+          "para_context": "Under 5-12-3, when the aircraft reaches the point where final descent is to start, it is instructed to begin descent.",
+          "choices": [
+            {
+              "text": "Instruct the aircraft to begin descent now.",
+              "is_correct": true
+            },
+            {
+              "text": "Delay the descent instruction until the aircraft is over the threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until decision height before issuing the descent instruction.",
+              "is_correct": false
+            },
+            {
+              "text": "Omit the descent instruction because PAR aircraft descend on their own.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-12-3, the instruction is issued when the aircraft reaches the point where final descent is to start."
+        }
+      ]
+    },
+    "5-12-7": {
+      "replace_types": ["directive_check", "list_membership", "minima_rule_check", "reference_check", "requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which advisory is explicitly listed in this paragraph?",
+          "question_text": "Under 5-12-7, which advisory is specifically given when the aircraft is passing over the approach lights?",
+          "choices": [
+            {
+              "text": "OVER APPROACH LIGHTS.",
+              "is_correct": true
+            },
+            {
+              "text": "AT DECISION HEIGHT.",
+              "is_correct": false
+            },
+            {
+              "text": "CONTACT TOWER AFTER LANDING.",
+              "is_correct": false
+            },
+            {
+              "text": "BEGIN DESCENT.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That phraseology appears in 5-12-7b."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this position-advisory statement match the paragraph?",
+          "question_text": "Controllers must continue to provide glidepath and course information prescribed in paragraph 5-12-4, subparagraphs a and b, until the aircraft passes over threshold.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That requirement appears in 5-12-7a."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A PAR aircraft is passing over the landing threshold and is slightly right of the final approach course. A trainee thinks the advisories stop once the aircraft reaches the threshold area.",
+          "para_context": "Under 5-12-7, the aircraft is informed when it is passing over the landing threshold and is advised of its position with respect to the final approach course.",
+          "choices": [
+            {
+              "text": "Advise that the aircraft is over the landing threshold and state its position with respect to course.",
+              "is_correct": true
+            },
+            {
+              "text": "Stop all advisories because threshold crossing ends the paragraph's required calls.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue communications transfer instructions instead of a position advisory.",
+              "is_correct": false
+            },
+            {
+              "text": "Repeat the approach-lights advisory because threshold advisories are not authorized.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-12-7c, the aircraft is advised over the landing threshold and told its position with respect to course."
+        }
+      ]
+    },
+    "5-12-9": {
+      "replace_types": ["directive_check", "reference_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this communication-transfer directive stated correctly?",
+          "question_text": "Issue communications transfer instructions.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the body requirement in 5-12-9."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this note match the paragraph?",
+          "question_text": "Communications transfer instructions should be delayed slightly until the aircraft is on the landing roll-out to preclude diversion of the pilot's attention during transition and touchdown.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That note appears in 5-12-9."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A PAR aircraft is transitioning and touching down. You still need to issue the communications transfer instruction, but doing so immediately would pull the pilot's attention away during touchdown.",
+          "para_context": "Under 5-12-9, communications transfer instructions are issued, but the note says they should be delayed slightly until the aircraft is on the landing roll-out to avoid diverting the pilot's attention during transition and touchdown.",
+          "choices": [
+            {
+              "text": "Delay the transfer instruction slightly until the aircraft is on the landing roll-out.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the transfer instruction during transition even if it distracts the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the aircraft is parked before issuing any transfer instruction.",
+              "is_correct": false
+            },
+            {
+              "text": "Omit the transfer instruction entirely because PAR aircraft never receive one.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note in 5-12-9 directs a slight delay until landing roll-out to avoid pilot distraction."
+        }
+      ]
+    },
+    "5-12-11": {
+      "replace_types": ["conditional_rule_check", "requirement_check", "scope_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this surveillance-unusable statement match the paragraph?",
+          "question_text": "PAR approaches may be conducted when the ASR is unusable if a nonradar instrument approach will position the aircraft over a NAVAID or DME fix within precision radar coverage, or if an adjacent radar facility can provide a direct radar handoff to the PAR controller.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That statement appears in the body of 5-12-11."
+        },
+        {
+          "activity_type": "reference_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this note correctly state the referenced identification rule?",
+          "question_text": "This paragraph cites FAA Order JO 7110.65, Para 5-3-2, Primary Radar Identification Methods.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note in 5-12-11 cites paragraph 5-3-2 and explains that display of the NAVAID or DME fix under that paragraph is not required if the fix can be correlated on a PAR scope."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "The ASR is unusable, but an adjacent radar facility can provide a direct radar handoff to the PAR controller. A trainee believes PAR approaches must be suspended anytime the ASR is unavailable.",
+          "para_context": "Under 5-12-11, PAR approaches may still be conducted when the ASR is unusable if one of the listed positioning or handoff conditions is met.",
+          "choices": [
+            {
+              "text": "Continue conducting the PAR approach under the listed exception.",
+              "is_correct": true
+            },
+            {
+              "text": "Suspend all PAR approaches until the ASR is restored because there are no exceptions.",
+              "is_correct": false
+            },
+            {
+              "text": "Continue only if the aircraft has already passed decision height.",
+              "is_correct": false
+            },
+            {
+              "text": "Continue only if the NAVAID fix is displayed exactly as required by paragraph 5-3-2 with no note-based exception.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-12-11, a direct radar handoff from an adjacent radar facility is one of the listed conditions that allows PAR approaches when ASR is unusable."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-4-2": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 3-4-2, when separate on-off controls are provided, which condition is one listed basis for operating REIL?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-4-2a, REIL are operated when the associated runway lights are lighted.",
+          "choices": [
+            {
+              "text": "When the associated runway lights are lighted.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the approach controller requests them.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the departure is already clear of the traffic pattern.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when visibility is less than 1 mile.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-4-2, when separate on-off controls are provided, REIL are turned off after a departing aircraft has left the traffic pattern area.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 3-4-2a2.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-7": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 3-4-7, which is one listed basis for operating sequenced flashing lights?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-4-7c, SFL may be operated as you deem necessary if not contrary to the pilot's request.",
+          "choices": [
+            {
+              "text": "As you deem necessary, if not contrary to the pilot's request.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the ALS is extinguished.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft passes the approach lights.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for VFR traffic.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-4-7, sequenced flashing lights cannot be operated when the ALS is off.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "That explanatory note appears in 3-4-7.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-8": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 3-4-8, what is required for a two-step MALS/ODALS system at a part-time tower if duplicate controls are not provided in the associated FSS during hours of darkness when the tower is not staffed?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The note under Table 3-4-6 requires the MALSR/ODALS to be set to low intensity in that situation.",
+          "choices": [
+            {
+              "text": "Set the MALSR/ODALS to low intensity.",
+              "is_correct": true
+            },
+            {
+              "text": "Set the MALSR/ODALS to high intensity.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the MALSR/ODALS off entirely.",
+              "is_correct": false
+            },
+            {
+              "text": "Use intensity setting 3.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-4-8, facility directives may specify other MALSR/ODALS settings to meet local atmospheric, topographic, and twilight conditions.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That exception appears in 3-4-8a.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-9": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 3-4-9, when is the SSALR system operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-4-9b, SSALR is operated when the conditions in subparagraph a are not a factor.",
+          "choices": [
+            {
+              "text": "When the conditions in subparagraph a are not a factor.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot requests ALSF-2.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when RVR is 4,000 feet or less.",
+              "is_correct": false
+            },
+            {
+              "text": "Only during daylight hours.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-4-9, when the low-visibility conditions in subparagraph a are present, the ALSF-2 system may be operated as you deem necessary if not contrary to the pilot's request.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 3-4-9a2.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-11": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under Table 3-4-8, which HIRL/RCLS/TDZL step applies during the day when visibility is 1 to but not including 2 miles?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-8 shows step 4 for day visibility 1 to but not including 2 miles.",
+          "choices": [
+            {
+              "text": "Step 4.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-4-11, a facility directive may specify other settings to meet local conditions.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That exception appears in 3-4-11a.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-12": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under Table 3-4-9, which HIRL-associated-with-MALSR step applies during the day when visibility is 1 to but not including 2 miles?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-9 shows step 4 for day visibility 1 to but not including 2 miles.",
+          "choices": [
+            {
+              "text": "Step 4.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 1.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under the note in 3-4-12, when lowering the brightness setting, rotate the control below the intended step and then back to the appropriate step to ensure proper MALSR brightness.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "That note appears in 3-4-12.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-13": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 3-4-13, who should be kept informed, in advance if possible, of HIRL changes that affect RVR?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph requires keeping the appropriate approach controller or PAR controller informed.",
+          "choices": [
+            {
+              "text": "The appropriate approach controller or PAR controller.",
+              "is_correct": true
+            },
+            {
+              "text": "The center controller only.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the local controller working ground movement.",
+              "is_correct": false
+            },
+            {
+              "text": "No controller coordination is required.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-4-13, the appropriate center controller should be informed, in advance if possible, of HIRL changes that affect RVR.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph says the appropriate approach controller or PAR controller, not the center controller.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "5-12-1": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-12-1, when should the aircraft be informed that it is approaching glidepath?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph says approximately 10 to 30 seconds before final descent.",
+          "choices": [
+            {
+              "text": "Approximately 10 to 30 seconds before final descent.",
+              "is_correct": true
+            },
+            {
+              "text": "At the moment final descent begins.",
+              "is_correct": false
+            },
+            {
+              "text": "At decision height.",
+              "is_correct": false
+            },
+            {
+              "text": "After touchdown if the pilot requests it.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The phraseology for 5-12-1 is APPROACHING GLIDEPATH.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "That phraseology appears in 5-12-1.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-12-3": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-12-3, what instruction is issued when the aircraft reaches the point where final descent is to start?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The phraseology in 5-12-3 is BEGIN DESCENT.",
+          "choices": [
+            {
+              "text": "BEGIN DESCENT.",
+              "is_correct": true
+            },
+            {
+              "text": "APPROACHING GLIDEPATH.",
+              "is_correct": false
+            },
+            {
+              "text": "AT DECISION HEIGHT.",
+              "is_correct": false
+            },
+            {
+              "text": "OVER APPROACH LIGHTS.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-12-3, the descent instruction is issued when the aircraft reaches the point where final descent is to start.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is the full requirement in 5-12-3.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-12-7": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-12-7, what advisory is given when the aircraft is passing over the approach lights?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The phraseology in 5-12-7b is OVER APPROACH LIGHTS.",
+          "choices": [
+            {
+              "text": "OVER APPROACH LIGHTS.",
+              "is_correct": true
+            },
+            {
+              "text": "BEGIN DESCENT.",
+              "is_correct": false
+            },
+            {
+              "text": "CONTACT TOWER AFTER LANDING.",
+              "is_correct": false
+            },
+            {
+              "text": "AT DECISION HEIGHT.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-12-7, glidepath and course information prescribed in paragraph 5-12-4, subparagraphs a and b, continues until the aircraft passes over threshold.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That requirement appears in 5-12-7a.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-12-9": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "According to the note in 5-12-9, why should communications transfer instructions be delayed slightly until the aircraft is on the landing roll-out?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note says the slight delay is to preclude diversion of the pilot's attention during transition and touchdown.",
+          "choices": [
+            {
+              "text": "To preclude diversion of the pilot's attention during transition and touchdown.",
+              "is_correct": true
+            },
+            {
+              "text": "To wait for the pilot to request a new frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "To ensure the aircraft has cleared the airport movement area first.",
+              "is_correct": false
+            },
+            {
+              "text": "To avoid contacting the terminal control function at all.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-12-9, communications transfer instructions should be delayed slightly until the aircraft is on the landing roll-out to avoid diverting the pilot's attention during transition and touchdown.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "That note appears in 5-12-9.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-12-11": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-12-11, which condition allows a PAR approach to be conducted when the ASR is unusable?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph lists either a nonradar approach that positions the aircraft over a NAVAID or DME fix within precision radar coverage, or a direct radar handoff from an adjacent radar facility.",
+          "choices": [
+            {
+              "text": "An adjacent radar facility can provide a direct radar handoff to the PAR controller.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot reports the runway in sight before the final segment begins.",
+              "is_correct": false
+            },
+            {
+              "text": "The ASR has been unavailable for less than 30 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller elects to waive identification requirements entirely.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under the note in 5-12-11, display of the NAVAID or DME fix in accordance with paragraph 5-3-2 is not required if the fix can be correlated on a PAR scope.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "That note appears in 5-12-11.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "questions": {
+    "13-2-5": {
+      "items": [
+        {
+          "question_text": "Under 13-2-5, the weather deviation tool adds an additional CDI mileage buffer to required separation when what type of separation is being applied?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-5 specifies the CDI buffer is added when RNP distance-based longitudinal separation is being applied. The tool is specific to this separation method.",
+          "choices": [
+            {
+              "text": "Standard radar separation of 5 NM in domestic en route airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Visual separation reported by the pilot at oceanic altitudes.",
+              "is_correct": false
+            },
+            {
+              "text": "RNP distance-based longitudinal separation.",
+              "is_correct": true
+            },
+            {
+              "text": "ADS-C contract-based lateral separation on parallel tracks.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-2-5, CDI stands for what three types of mileage?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "CDI = Converging, Diverging, and Intersecting. The weather deviation tool adds this additional buffer to the required separation calculation.",
+          "choices": [
+            {
+              "text": "converging, diverging, and intersecting",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-2-5 NOTE, the CDI mileage buffer is enforced by what ATOP function?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note explicitly states the CDI mileage buffer is enforced by ATOP conflict probe. This ties the weather deviation tool back to the conflict probe system.",
+          "choices": [
+            {
+              "text": "The weather deviation monitor window independently of other systems.",
+              "is_correct": false
+            },
+            {
+              "text": "ATOP conflict probe.",
+              "is_correct": true
+            },
+            {
+              "text": "The ADS-C contract management system.",
+              "is_correct": false
+            },
+            {
+              "text": "The electronic flight strip system through manual annotation.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-2-5 NOTE, what ADS-C reporting rate does ATOP enforce when the weather deviation tool is active?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note specifies ATOP enforces an increased ADS-C reporting rate of 64 seconds. This is a hard numeric threshold worth precise memorization.",
+          "choices": [
+            {
+              "text": "64 seconds",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "13-2-6": {
+      "items": [
+        {
+          "question_text": "Under 13-2-6, automated coordination constitutes complete coordination between ATOP sectors, except under what two conditions?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-6 lists two exceptions: (a) when the aircraft is in conflict with another in the receiving sector, and (b) when otherwise specified in facility directives or LOA. Both independently require additional coordination.",
+          "choices": [
+            {
+              "text": "When CPDLC is the primary communication means, or when the aircraft is outside radar coverage.",
+              "is_correct": false
+            },
+            {
+              "text": "When the transfer is cross-facility, or when the aircraft has been in the sector less than five minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "When the aircraft is changing altitude, or when the receiving controller is in training.",
+              "is_correct": false
+            },
+            {
+              "text": "When the aircraft is in conflict in the receiving sector, or when facility directives or LOA specify otherwise.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "13-2-7": {
+      "items": [
+        {
+          "question_text": "Under 13-2-7, when operating in a multiple controller operation at an ATOP workstation, ATC tasks must be completed according to their _____, and the operation must be accomplished according to _____.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-7(a) requires task completion by priority of duties. 13-2-7(b) requires the operation to be accomplished according to facility directives. Both are mandatory.",
+          "choices": [
+            {
+              "text": "priority of duties; facility directives",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "13-2-5": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "RNP distance-based longitudinal separation is being applied between two aircraft. A pilot requests a weather deviation. The deviation monitor window shows a pink advisory with a +3 value in the +/- column. A controller says the +3 means 3 extra miles of spacing exist, so the deviation can be approved without further evaluation.",
+          "question_text": "How should the pink advisory with a positive value be interpreted under 13-2-5?",
+          "choices": [
+            {
+              "text": "A positive value means the required spacing has been exceeded, so the deviation may be approved without any additional evaluation.",
+              "is_correct": false
+            },
+            {
+              "text": "The pink advisory requires further evaluation before approving the deviation. A zero or positive value in the +/- column indicates the aircraft pair is at or close to required spacing, even with the CDI buffer applied.",
+              "is_correct": true
+            },
+            {
+              "text": "A pink advisory is only cautionary and may be disregarded if the controller believes separation appears adequate on the ASD.",
+              "is_correct": false
+            },
+            {
+              "text": "The CDI buffer automatically resolves all spacing concerns, so the pilot should be cleared to deviate immediately regardless of the advisory value.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-2-5(A) requires further evaluation of pink advisories before approving a weather deviation clearance. 13-2-5(b) explains that zero or positive +/- values mean the aircraft pair is at or close to required spacing — not safely beyond it.",
+          "para_context": "WEATHER DEVIATION TOOL"
+        }
+      ]
+    },
+    "13-2-6": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Two adjacent ATOP facilities are coordinating. One controller says that because both facilities use ATOP, automated coordination is always complete coordination with no exceptions. Is this correct under 13-2-6?",
+          "choices": [
+            {
+              "text": "Yes. Between ATOP-equipped facilities, automated coordination is always complete and never needs to be supplemented.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if both facilities are using the same software version of ATOP.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for internal sector transfers. Cross-facility ATOP coordination always requires additional verbal coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Automated coordination normally constitutes complete coordination between ATOP sectors, but is insufficient when the aircraft is in conflict with another in the receiving sector or when facility directives or LOA specify otherwise.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "13-2-6 States automated coordination constitutes complete coordination between ATOP sectors internally and across adjacent ATOP facilities EXCEPT when the aircraft is in conflict with another in the receiving sector or when facility directives/LOA specify otherwise."
+        }
+      ]
+    },
+    "13-2-7": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "At a multiple-controller ATOP workstation, the team begins dividing tasks. One controller wants to handle lower-priority administrative messages before resolving a pending red conflict coordination. Another says facility directives for multiple-person operation are just guidelines once the team has worked together before.",
+          "question_text": "How should task prioritization and team operation be managed under 13-2-7?",
+          "choices": [
+            {
+              "text": "As long as all tasks eventually get done, the order doesn't matter. Facility directives are optional for experienced teams.",
+              "is_correct": false
+            },
+            {
+              "text": "Administrative messages should be handled first to clear the queue before addressing any operational tasks.",
+              "is_correct": false
+            },
+            {
+              "text": "Complete all ATC tasks according to their priority of duties, which means red conflicts and higher-priority duties take precedence. Accomplish the multiple-controller operation according to facility directives.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the designated radar controller needs to follow duty priorities. Other team members can work in any sequence they choose.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-2-7(A) requires ensuring all ATC tasks are completed according to their priority of duties — this applies to the whole team. 13-2-7(b) requires the multiple-controller operation to be accomplished according to facility directives. Neither provision is optional.",
+          "para_context": "TEAM RESPONSIBILITIES − MULTIPLE PERSON OPERATION"
+        }
+      ]
+    }
+  }
+}

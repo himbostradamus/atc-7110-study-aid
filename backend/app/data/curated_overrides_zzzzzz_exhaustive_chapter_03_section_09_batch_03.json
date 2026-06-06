@@ -1,0 +1,1100 @@
+{
+  "activities": {
+    "3-9-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What must be issued to each aircraft operating on intersecting runways?",
+          "choices": [
+            {
+              "text": "Traffic information.",
+              "is_correct": true
+            },
+            {
+              "text": "A blanket hold-short instruction, even if no conflict exists.",
+              "is_correct": false
+            },
+            {
+              "text": "A wake-turbulence waiver advisory.",
+              "is_correct": false
+            },
+            {
+              "text": "A line up and wait clearance before any takeoff clearance can be issued.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Traffic information must be issued to each aircraft operating on intersecting runways."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which arriving-aircraft condition allows the intersecting-runway departure to begin takeoff roll?",
+          "question_text": "Which condition allows the departure to start?",
+          "choices": [
+            {
+              "text": "The arriving aircraft has completed landing roll and acknowledged the instruction to hold short of the intersection.",
+              "is_correct": true
+            },
+            {
+              "text": "The arriving aircraft has touched down and appears able to stop before the intersection.",
+              "is_correct": false
+            },
+            {
+              "text": "The arriving aircraft is on short final and the pilot says braking action is good.",
+              "is_correct": false
+            },
+            {
+              "text": "The arriving aircraft is still airborne but expected to exit before the intersection.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A departure may begin when the arriving aircraft has completed landing roll and acknowledged hold-short or another listed protection condition exists."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this intersecting-runway departure rule correct?",
+          "question_text": "If the preceding departure has passed the intersection or is turning to avert any conflict, the succeeding departure on the intersecting runway may begin takeoff roll.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is one of the listed conditions that allows the succeeding departure to start takeoff roll."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "Is this intersecting-runway wake interval correct?",
+          "question_text": "If projected flight paths will cross, a Category I aircraft behind a Category E aircraft requires 2 minutes from when the preceding aircraft began takeoff roll.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For intersecting-runway wake application, Category I behind Category E requires a 2-minute interval measured from when the preceding aircraft began takeoff roll."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this wake-deviation directive correct?",
+          "question_text": "Do not approve a pilot request to deviate from the required time interval if the preceding aircraft requires wake turbulence separation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Pilot requests to deviate from the required interval must not be approved when the preceding aircraft requires wake turbulence separation."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A departure is ready on one runway while an arrival has just landed on the intersecting runway. The arrival has completed landing roll and acknowledged an instruction to hold short of the intersection. Another controller says you still must wait until the arrival is completely clear of the runway before the departure can start.",
+          "para_context": "On intersecting runways, a departure may begin takeoff roll once one of the listed protections exists, including an arriving aircraft that has completed landing roll and acknowledged a hold-short instruction.",
+          "choices": [
+            {
+              "text": "Issue the required traffic information and you may allow the departure to begin because the arrival completed landing roll and acknowledged hold short of the intersection.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the arriving aircraft is fully clear of the runway in every case because hold short acknowledgment is not enough on intersecting runways.",
+              "is_correct": false
+            },
+            {
+              "text": "Let the departure begin only if the pilots coordinate visually with each other on frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a wake-turbulence waiver to the departure and allow it to roll immediately.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Acknowledged hold-short protection after landing roll is one of the listed conditions that permits the departure to begin, with traffic information still required."
+        }
+      ]
+    },
+    "3-9-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may a departure begin takeoff roll on a nonintersecting converging runway if the flight paths intersect?",
+          "choices": [
+            {
+              "text": "Only after one of the listed crossing-or-turning protections exists for the other aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as both runways are nonintersecting on the airport diagram.",
+              "is_correct": false
+            },
+            {
+              "text": "Any time the other aircraft is airborne, even if it has not crossed the departure runway or turned away.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever both pilots report each other in sight.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Converging-runway departures are protected by the listed crossing-or-turning conditions, not merely by the fact that the pavement does not intersect."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which condition allows the converging-runway departure to begin?",
+          "question_text": "Which condition allows the departure to start?",
+          "choices": [
+            {
+              "text": "The preceding arriving aircraft has crossed over the departure runway.",
+              "is_correct": true
+            },
+            {
+              "text": "The preceding arriving aircraft is established on final and expected to hold short after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding departing aircraft has rotated but has not yet crossed the departure runway or turned away.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding aircraft reports the projected intersection in sight.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "One listed protection is that the preceding arriving aircraft has crossed over the departure runway."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "Is this converging-runway crossover rule correct?",
+          "question_text": "If the extended centerline of a runway crosses a converging runway or its extended centerline within 1 NM of either departure end, apply the provisions of 3-9-8 unless the facility is using aids specified in a facility directive.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the centerline crossover is within 1 NM, the rule shifts to the intersecting-runway provisions unless approved directive-based aids are being used."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "Is this converging-runway wake interval correct?",
+          "question_text": "If projected flight paths will cross, Category B through I aircraft departing behind a Category A aircraft require 3 minutes measured from when the preceding aircraft began takeoff roll.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the listed wake interval for Category B through I behind Category A on converging runways when the projected flight paths will cross."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this converging-runway wake-deviation directive correct?",
+          "question_text": "Do not approve a pilot request to deviate from the required time interval if the preceding aircraft requires wake turbulence separation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The required interval may not be waived by pilot request when the preceding aircraft requires wake turbulence separation."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "Two departures will use converging runways. The extended centerline of one runway crosses the converging runway within 1 NM of the departure end. Your facility is not using any directive-authorized tools such as ADW, VRIP, cut-off points, or automation for this situation. Another controller says the runways are still nonintersecting, so the normal converging-runway rule is enough.",
+          "para_context": "When the extended centerline crossover is within 1 NM of either departure end, apply the intersecting-runway provisions of 3-9-8 unless facility-directive aids are being used.",
+          "choices": [
+            {
+              "text": "Apply the intersecting-runway or intersecting-flight-path provisions of 3-9-8 because the crossover is within 1 NM and no directive-authorized aids are being used.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the standard converging-runway rule automatically because the pavement does not physically intersect.",
+              "is_correct": false
+            },
+            {
+              "text": "Allow the departures to self-separate if both pilots can describe the conflicting runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the 1 NM crossover rule because it applies only to arrivals.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The 1 NM extended-centerline crossover moves the operation into 3-9-8 unless approved directive-based aids are in use."
+        }
+      ]
+    },
+    "3-9-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What must be stated first when issuing a takeoff clearance?",
+          "choices": [
+            {
+              "text": "The runway number.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft call sign.",
+              "is_correct": false
+            },
+            {
+              "text": "The wind.",
+              "is_correct": false
+            },
+            {
+              "text": "The expected heading after departure.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Takeoff clearance begins with the runway number, followed by the clearance."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which situation requires the words full length in the takeoff clearance?",
+          "question_text": "Which situation requires full length?",
+          "choices": [
+            {
+              "text": "Two or more aircraft call ready, with one at full length and one or more at an intersection, and the full-length aircraft is being cleared for takeoff.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time an aircraft departs from a runway longer than 8,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the runway has been shortened by construction.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the full-length aircraft is turbine-powered.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Full length is used to identify the aircraft at the full length of the runway when other departures are at intersections."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this runway-crossing rule correct?",
+          "question_text": "If you are issuing a takeoff clearance, you must ensure the aircraft has crossed all runways along the taxi route that lead to the departure runway, except in the close-proximity configuration described in 3-9-10e.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the general rule, with the stated close-proximity runway exception in 3-9-10e."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this shortened-runway requirement correct?",
+          "question_text": "Whenever a runway has been temporarily or permanently shortened, you must state shortened immediately after the runway number as part of the takeoff clearance.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The word shortened must be issued as part of the takeoff clearance whenever the runway is temporarily or permanently shortened."
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "One word in this takeoff clearance is incorrect. Tap it.",
+          "original_phrase": "RUNWAY TWO SEVEN CLEARED FOR TAKEOFF.",
+          "display_text": "RUNWAY TWO SEVEN CLEARED TO TAKEOFF",
+          "tokens": ["RUNWAY", "TWO", "SEVEN", "CLEARED", "TO", "TAKEOFF"],
+          "error_index": 4,
+          "correct_token": "FOR",
+          "explanation": "The approved phraseology is RUNWAY (number), CLEARED FOR TAKEOFF."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "The aircraft cannot completely cross Runway 24 Left before reaching its departure runway. Build the takeoff clearance that includes the runway crossing.",
+          "target_phrase": "CROSS RUNWAY TWO FOUR LEFT RUNWAY TWO FOUR RIGHT CLEARED FOR TAKEOFF"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "At an airport with close-proximity runways, an aircraft cannot completely cross Runway 24 Left and hold short before reaching departure Runway 24 Right. Another controller wants to issue Runway 24 Right cleared for takeoff first and add the crossing instruction afterward once the aircraft starts moving.",
+          "para_context": "In the close-proximity runway configuration described in 3-9-10e, the runway to be crossed must be stated with the takeoff clearance when the aircraft cannot complete the crossing before reaching its departure runway.",
+          "choices": [
+            {
+              "text": "Include the crossing runway in the takeoff clearance itself.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the takeoff clearance first and add the crossing runway later once the aircraft begins taxiing onto the departure runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Use full length instead of the crossing-runway phraseology because it warns the pilot about the runway geometry.",
+              "is_correct": false
+            },
+            {
+              "text": "Avoid issuing a takeoff clearance and tell the pilot to cross the runway at pilot discretion.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "In that close-proximity runway case, the crossing runway must be part of the takeoff clearance itself."
+        }
+      ]
+    },
+    "3-9-11": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Once an aircraft has started takeoff roll, when may a takeoff clearance be canceled?",
+          "choices": [
+            {
+              "text": "Only for the purpose of safety.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time traffic management wants to preserve an EDCT slot.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the departure sequence changes.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the pilot has not yet called airborne.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "After takeoff roll starts, cancellation is limited to safety."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this takeoff-cancellation directive correct?",
+          "question_text": "If you cancel a previously issued takeoff clearance, inform the pilot of the reason.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The pilot must be informed of the reason when a takeoff clearance is canceled."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this EDCT cancellation rule correct?",
+          "question_text": "After an aircraft has started takeoff roll, you must not cancel the takeoff clearance solely to meet traffic-management requirements or EDCT.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note prohibits canceling takeoff clearance after takeoff roll begins solely for traffic-management requirements or EDCT."
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "One word in this transmission is incorrect. Tap it.",
+          "original_phrase": "CANCEL TAKEOFF CLEARANCE TRAFFIC ON THE RUNWAY.",
+          "display_text": "STOP TAKEOFF CLEARANCE TRAFFIC ON THE RUNWAY",
+          "tokens": ["STOP", "TAKEOFF", "CLEARANCE", "TRAFFIC", "ON", "THE", "RUNWAY"],
+          "error_index": 0,
+          "correct_token": "CANCEL",
+          "explanation": "The approved phraseology begins CANCEL TAKEOFF CLEARANCE."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "An aircraft has been cleared for takeoff, but traffic unexpectedly enters the runway. Build the cancellation transmission.",
+          "target_phrase": "CANCEL TAKEOFF CLEARANCE TRAFFIC ON THE RUNWAY"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "An aircraft has already started takeoff roll. There is no immediate hazard on or near the runway, but traffic management calls and says the aircraft's EDCT situation changed, so the takeoff clearance should be canceled to keep the flow organized.",
+          "para_context": "Once takeoff roll has started, cancellation is only for safety and must not be used solely for traffic-management requirements or EDCT.",
+          "choices": [
+            {
+              "text": "Do not cancel the takeoff clearance solely for EDCT or traffic-management reasons once the takeoff roll has begun.",
+              "is_correct": true
+            },
+            {
+              "text": "Cancel the takeoff clearance immediately because EDCT and traffic-management requirements override the safety limitation after roll starts.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to continue the takeoff, but log the flight as canceled from the tower side so the rule is technically satisfied.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a hold short instruction instead of canceling the takeoff clearance, because the transmission type is what the rule limits.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "After takeoff roll begins, cancellation is limited to safety and cannot be used solely to meet traffic-management or EDCT requirements."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-9-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What must be issued to each aircraft operating on intersecting runways?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Traffic information is required for each aircraft operating on intersecting runways.",
+          "choices": [
+            {
+              "text": "Traffic information.",
+              "is_correct": true
+            },
+            {
+              "text": "A wake-turbulence waiver advisory.",
+              "is_correct": false
+            },
+            {
+              "text": "A mandatory line up and wait clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "A no-delay departure advisory.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which arriving-aircraft condition permits an intersecting-runway departure to begin takeoff roll?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "One listed condition is an arriving aircraft that has completed landing roll and acknowledged an instruction to hold short of the intersection.",
+          "choices": [
+            {
+              "text": "The arriving aircraft has completed landing roll and acknowledged a hold-short instruction for the intersection.",
+              "is_correct": true
+            },
+            {
+              "text": "The arriving aircraft is on short final and expected to stop before the intersection.",
+              "is_correct": false
+            },
+            {
+              "text": "The arriving aircraft has touched down and is decelerating normally.",
+              "is_correct": false
+            },
+            {
+              "text": "The arriving aircraft says the departure may go first.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If projected flight paths will cross, what wake interval applies to a Category I aircraft behind a Category E aircraft on intersecting runways?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The listed wake interval for Category I behind Category E is 2 minutes.",
+          "choices": [
+            {
+              "text": "2 minutes.",
+              "is_correct": true
+            },
+            {
+              "text": "90 seconds.",
+              "is_correct": false
+            },
+            {
+              "text": "3 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "4 minutes.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What additional protection may satisfy the intersecting-runway rule for civilian operations in the listed LAHSO case?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "The paragraph allows an arriving aircraft that has acknowledged a land-and-hold-short clearance in accordance with LAHSO.",
+          "choices": [
+            {
+              "text": "The arriving aircraft has acknowledged a land-and-hold-short clearance for the intersecting runway or flight path.",
+              "is_correct": true
+            },
+            {
+              "text": "The arriving aircraft has been switched to ground before crossing the intersection.",
+              "is_correct": false
+            },
+            {
+              "text": "The arriving aircraft accepts visual separation from the departure.",
+              "is_correct": false
+            },
+            {
+              "text": "The arriving aircraft agrees to expedite off the runway after touchdown.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "May a pilot request to deviate from the required interval be approved when the preceding aircraft requires wake turbulence separation on intersecting runways?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The paragraph says those pilot requests must not be approved.",
+          "choices": [
+            {
+              "text": "No.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, if both pilots agree on frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the succeeding aircraft is Category I.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the intersection is visible from the tower.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-9-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What must exist before a departure may begin takeoff roll on a nonintersecting converging runway when the flight paths intersect?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The departure must wait until one of the listed protections exists for the other aircraft.",
+          "choices": [
+            {
+              "text": "One of the listed crossing-or-turning protections for the other aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Only a pilot report that the other aircraft is in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "A line up and wait clearance on both runways.",
+              "is_correct": false
+            },
+            {
+              "text": "Any airborne status by the other aircraft.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which condition permits the converging-runway departure to begin takeoff roll?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "One listed condition is that the preceding arriving aircraft has crossed over the departure runway.",
+          "choices": [
+            {
+              "text": "The preceding arriving aircraft has crossed over the departure runway.",
+              "is_correct": true
+            },
+            {
+              "text": "The preceding arriving aircraft is about to touch down on the converging runway.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding departing aircraft has rotated but not yet turned away or crossed the departure runway.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding aircraft reports the projected intersection in sight.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When the extended centerline crossover is within 1 NM of either departure end, what rule normally applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "You apply 3-9-8 unless approved facility-directive aids are being used.",
+          "choices": [
+            {
+              "text": "Apply 3-9-8 unless the facility is using aids specified in a facility directive.",
+              "is_correct": true
+            },
+            {
+              "text": "Treat the runways as independent because the pavement does not intersect.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only same-runway separation minima.",
+              "is_correct": false
+            },
+            {
+              "text": "Allow the pilots to self-separate visually.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If projected flight paths will cross on converging runways, what wake interval applies to Category B through I aircraft behind Category A aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "The listed interval is 3 minutes.",
+          "choices": [
+            {
+              "text": "3 minutes.",
+              "is_correct": true
+            },
+            {
+              "text": "2 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "90 seconds.",
+              "is_correct": false
+            },
+            {
+              "text": "4 minutes.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "May a pilot request to deviate from the required interval be approved when the preceding aircraft requires wake turbulence separation on converging runways?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The paragraph says those requests must not be approved.",
+          "choices": [
+            {
+              "text": "No.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, if the other aircraft is already airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the controller issues traffic information.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the runways do not physically intersect.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-9-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What must be stated first when issuing a takeoff clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The runway number is stated first, followed by the takeoff clearance.",
+          "choices": [
+            {
+              "text": "The runway number.",
+              "is_correct": true
+            },
+            {
+              "text": "The wind.",
+              "is_correct": false
+            },
+            {
+              "text": "The call sign.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure heading.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When must the runway intersection be stated in the takeoff clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "It must be stated when clearing an aircraft for takeoff from an intersection.",
+          "choices": [
+            {
+              "text": "When clearing an aircraft for takeoff from an intersection.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the runway is shortened.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when there is more than one departure frequency in use.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when two aircraft are on final to the same runway.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When is full length included in the takeoff clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "It is used when one aircraft is at full length and one or more others are at intersections, and the full-length aircraft is being cleared.",
+          "choices": [
+            {
+              "text": "When one aircraft is at full length and another is at an intersection, and the full-length aircraft is being cleared for takeoff.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the runway is longer than normal for the aircraft type.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the runway has been shortened by construction.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the aircraft is turbine-powered.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the general runway-crossing rule before issuing a takeoff clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "example",
+          "generation_source": "curated",
+          "explanation": "All runways along the taxi route that lead to the departure runway must be crossed first, except for the close-proximity runway case in 3-9-10e.",
+          "choices": [
+            {
+              "text": "Ensure all runways along the taxi route that lead to the departure runway have been crossed first, except for the 3-9-10e close-proximity exception.",
+              "is_correct": true
+            },
+            {
+              "text": "Cross only the runway immediately before the departure runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the takeoff clearance first, then authorize any needed runway crossings afterward.",
+              "is_correct": false
+            },
+            {
+              "text": "The crossing rule applies only to intersection departures.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What word must be stated immediately after the runway number when the runway has been temporarily or permanently shortened?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The required word is shortened.",
+          "choices": [
+            {
+              "text": "Shortened.",
+              "is_correct": true
+            },
+            {
+              "text": "Reduced.",
+              "is_correct": false
+            },
+            {
+              "text": "Temporary.",
+              "is_correct": false
+            },
+            {
+              "text": "Construction.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When the airport configuration prevents the aircraft from fully crossing one runway before reaching its departure runway, what phraseology is required in the takeoff clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The clearance must include the runway to be crossed as part of the takeoff clearance.",
+          "choices": [
+            {
+              "text": "Cross runway (number), runway (number) cleared for takeoff.",
+              "is_correct": true
+            },
+            {
+              "text": "Runway (number), full length, cleared for takeoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway (number), line up and wait, cross at pilot discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway (number), intersection departure, cleared for takeoff.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-9-11": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Once an aircraft has started takeoff roll, when may the takeoff clearance be canceled?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "After takeoff roll starts, cancellation is only for safety.",
+          "choices": [
+            {
+              "text": "Only for the purpose of safety.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever traffic management needs the departure slot back.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the departure sequence changes.",
+              "is_correct": false
+            },
+            {
+              "text": "Any time before the aircraft is airborne.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must accompany a canceled takeoff clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The pilot must be informed of the reason.",
+          "choices": [
+            {
+              "text": "The reason for the cancellation.",
+              "is_correct": true
+            },
+            {
+              "text": "An automatic taxi-back instruction.",
+              "is_correct": false
+            },
+            {
+              "text": "The revised EDCT only.",
+              "is_correct": false
+            },
+            {
+              "text": "A runway crossing clearance.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is not a valid reason to cancel a takeoff clearance after takeoff roll has begun?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "You must not cancel after roll starts solely to meet traffic-management requirements or EDCT.",
+          "choices": [
+            {
+              "text": "Meeting traffic-management requirements or EDCT alone.",
+              "is_correct": true
+            },
+            {
+              "text": "An immediate safety hazard.",
+              "is_correct": false
+            },
+            {
+              "text": "Traffic on the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "A safety-based need to stop the departure.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What words begin the approved takeoff-cancellation phraseology?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The approved phraseology begins CANCEL TAKEOFF CLEARANCE.",
+          "choices": [
+            {
+              "text": "Cancel takeoff clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Stop departure immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Abort the takeoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Reject takeoff clearance.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Before takeoff roll starts, when may a takeoff clearance be canceled?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The rule says to cancel a previously issued clearance for takeoff and inform the pilot of the reason if circumstances require.",
+          "choices": [
+            {
+              "text": "Whenever circumstances require it, with the reason given to the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Only if the pilot first acknowledges unable immediate departure.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for runway incursions.",
+              "is_correct": false
+            },
+            {
+              "text": "Never, because takeoff clearance is irrevocable until roll begins.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "questions": {
+    "6-3-1": {
+      "items": [
+        {
+          "question_text": "Per 6-3-1a, the terminal fix-based departure/arrival minimum uses an inbound fix not less than _____ miles from the airport.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-3-1a specifies a fix inbound not less than 4 miles from the airport. This distance threshold applies to both subparagraphs a and b equally.",
+          "choices": [
+            {
+              "text": "4",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Per 6-3-1a (TERMINAL), when the takeoff direction differs by at least 45 degrees from the reciprocal of the final approach course, the departure must take off before the arriving aircraft does what?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-3-1a uses an inbound fix as the gate: the departure takes off before the arrival leaves a fix located not less than 4 miles from the airport.",
+          "choices": [
+            {
+              "text": "Reaches the final approach fix, regardless of distance from the airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Leaves a fix inbound not less than 4 miles from the airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Reports established on the localizer at any point.",
+              "is_correct": false
+            },
+            {
+              "text": "Descends below the procedure turn altitude.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Per 6-3-1b (TERMINAL), when the takeoff direction does NOT differ by at least 45 degrees from the reciprocal of the final approach course, what additional requirement beyond taking off before the arrival leaves the inbound fix applies to the departing aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-3-1b requires the departure to be ESTABLISHED on a course diverging by at least 45 degrees from the reciprocal of the final approach course before the arrival leaves the inbound fix. This is more restrictive than 6-3-1a which only requires takeoff before the fix.",
+          "choices": [
+            {
+              "text": "The departure must also be above the arrival's altitude before the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure must be established on a course diverging by at least 45 degrees from the reciprocal of the final approach course.",
+              "is_correct": true
+            },
+            {
+              "text": "The departure must be at least 5 miles from the airport before the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "No additional requirement; subparagraph b applies the same rule as subparagraph a.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-3-1c, the time-based minima in subparagraphs d and e must be applied when two conditions are both met. What are they?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-3-1c requires BOTH: (1) absence of an appropriate fix precludes subparagraphs a or b, AND (2) airports where approach control service is not provided. Both conditions must be present to trigger the switch to time-based minima.",
+          "choices": [
+            {
+              "text": "When radar service is terminated and the airport has no published instrument approach procedure.",
+              "is_correct": false
+            },
+            {
+              "text": "When the absence of an appropriate fix precludes a or b, AND at airports where approach control service is not provided.",
+              "is_correct": true
+            },
+            {
+              "text": "When the arrival is more than 10 miles from the airport and the departure is VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "When either condition exists individually — no fix OR no approach control.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-3-1, a tower at an airport WITH approach control service has no appropriate inbound fix to use for separation. Which subparagraph applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-3-1c requires BOTH the absence of an appropriate fix AND the absence of approach control service. If approach control service IS provided, subparagraph c is not triggered even though no fix exists. The paragraph does not specify what to do in this case, creating an operational ambiguity — the controller must use other available separation methods or obtain coordination.",
+          "choices": [
+            {
+              "text": "Subparagraph d (3 minutes) because no fix means time-based is the fallback.",
+              "is_correct": false
+            },
+            {
+              "text": "Subparagraph e (5 minutes) because no fix means the 'other' case always applies.",
+              "is_correct": false
+            },
+            {
+              "text": "Neither d nor e; 6-3-1c requires both no fix AND no approach control service. Other separation methods or coordination is needed.",
+              "is_correct": true
+            },
+            {
+              "text": "Subparagraph a still applies using the outer marker as the fix — any published fix qualifies.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Per 6-3-1d, when the takeoff direction differs by at least 45 degrees from the reciprocal of the final approach course and time-based minima apply, the departure takes off _____ minutes before the arriving aircraft is estimated at the airport.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-3-1d specifies 3 minutes when the angle differs. Compare with 5 minutes in 6-3-1e when the angle does not differ.",
+          "choices": [
+            {
+              "text": "3",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Per 6-3-1e, when the takeoff direction does NOT differ by at least 45 degrees from the reciprocal of the final approach course and time-based minima apply, the departure must take off 5 minutes before the arrival is estimated at the airport OR before the arrival starts what?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-3-1e provides an alternative reference: 5 minutes before the arrival is estimated at the airport OR before it starts a procedure turn. The procedure turn reference appears only in subparagraph e.",
+          "choices": [
+            {
+              "text": "Before the arrival crosses the final approach fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Before the arrival intercepts the glide slope.",
+              "is_correct": false
+            },
+            {
+              "text": "Before the arrival starts the procedure turn.",
+              "is_correct": true
+            },
+            {
+              "text": "Before the arrival begins descent from the initial approach altitude.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Compare 6-3-1a (terminal, fix-based, angle differs) and 6-3-1d (time-based, angle differs). What is the exact operational difference between them?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-3-1a uses an inbound fix as the gate; the departure takes off before the arrival leaves that fix. 6-3-1d uses time: the departure takes off 3 minutes before the arrival is estimated at the airport. Both require the same angle condition, but the separation mechanism and measurement reference differ completely.",
+          "choices": [
+            {
+              "text": "6-3-1a and 6-3-1d are identical; the same minimum applies in both cases.",
+              "is_correct": false
+            },
+            {
+              "text": "6-3-1a applies only at airports with approach control (fix-based), while 6-3-1d applies only at airports without approach control and without an appropriate fix (time-based).",
+              "is_correct": true
+            },
+            {
+              "text": "6-3-1a requires 5 minutes while 6-3-1d requires 3 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "6-3-1a applies to en route facilities while 6-3-1d applies to terminal facilities only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller is separating a departure from an arrival at an airport without approach control service. The takeoff direction differs by at least 45 degrees from the reciprocal of the final approach course, and there IS an appropriate inbound fix at 6 miles. Under 6-3-1, which minimum applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-3-1c triggers d/e only when there is NO appropriate fix AND no approach control. Since an appropriate fix exists, subparagraph a or b could apply. But subparagraph a is explicitly labeled TERMINAL. The paragraph is ambiguous about whether TERMINAL-labeled provisions apply without approach control. The safest reading is that a TERMINAL fix-based method applies when a fix exists, and d/e is only a fallback when no fix exists.",
+          "choices": [
+            {
+              "text": "Subparagraph d (3 minutes before estimated at airport) because approach control is not provided.",
+              "is_correct": false
+            },
+            {
+              "text": "Subparagraph a (take off before arrival leaves the 6-mile fix) because the fix exists and the angle condition is met.",
+              "is_correct": true
+            },
+            {
+              "text": "Subparagraph e (5 minutes) because approach control is not provided regardless of fix availability.",
+              "is_correct": false
+            },
+            {
+              "text": "No 6-3-1 minimum applies; the controller must use radar separation instead.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "6-3-1": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Under 6-3-1, what are the two regimes for separating a departing aircraft from an arriving aircraft on an instrument approach to the same airport?",
+          "choices": [
+            {
+              "text": "Radar-based and non-radar-based separation.",
+              "is_correct": false
+            },
+            {
+              "text": "Fix-based (a, b) and time-based (d, e), with time-based used when no appropriate fix exists and no approach control service is provided.",
+              "is_correct": true
+            },
+            {
+              "text": "Altitude-based and distance-based separation.",
+              "is_correct": false
+            },
+            {
+              "text": "Diverging-course and same-course separation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-3-1 Establishes two parallel sets: fix-based (subparagraphs a and b, labeled TERMINAL) and time-based (d and e). The trigger for switching to time-based is the absence of both an appropriate fix and approach control service per subparagraph c."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "At a terminal facility, a departing aircraft will take off on Runway 27 (heading 270). An arriving aircraft is on an instrument approach with a final approach course of 045 (reciprocal is 225). The takeoff direction of 270 differs from the reciprocal of 225 by 45 degrees. The arrival is inbound to a fix 6 miles from the airport.",
+          "question_text": "Under 6-3-1a, may the departure take off immediately?",
+          "choices": [
+            {
+              "text": "Yes; 270 differs from 225 by exactly 45 degrees, and the fix at 6 miles exceeds the 4-mile minimum.",
+              "is_correct": true
+            },
+            {
+              "text": "No; the angle difference must be greater than 45 degrees, not merely equal to it.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the departure climbs straight ahead until reaching the MVA.",
+              "is_correct": false
+            },
+            {
+              "text": "No; 6-3-1a requires the departure to be established on a diverging course before the fix, not just to take off.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-3-1A requires the takeoff direction to differ by at least 45 degrees from the reciprocal of the final approach course. 270 - 225 = 45 degrees meets the threshold. The fix at 6 miles satisfies 'not less than 4 miles.' The departure need only take off before the arrival leaves the fix; there is no 'established on course' requirement in subparagraph a.",
+          "para_context": "SEPARATION MINIMA"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "At a terminal facility, a departing aircraft will take off on Runway 09 (heading 090). An arriving aircraft is on an instrument approach with a final approach course of 270 (reciprocal is 090). The takeoff direction (090) is the same as the reciprocal of the final approach course (090) — zero degrees difference. The arrival is inbound to a fix 5 miles from the airport.",
+          "question_text": "Under 6-3-1b, what must happen before the departure takes off?",
+          "choices": [
+            {
+              "text": "Nothing special; the departure takes off before the arrival leaves the fix as in subparagraph a.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure must be established on a course diverging by at least 45 degrees from the reciprocal of the final approach course (090) before the arrival leaves the fix.",
+              "is_correct": true
+            },
+            {
+              "text": "The departure must wait until the arrival has landed.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure takes off 5 minutes before the arrival is estimated at the airport.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-3-1B applies when the takeoff direction is other than in subparagraph a (less than 45 degrees difference). It requires the departure to be ESTABLISHED on a diverging course before the arrival leaves the fix — a higher bar than simply taking off.",
+          "para_context": "SEPARATION MINIMA"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You work at a non-approach-control airport. The takeoff direction differs by at least 45 degrees from the reciprocal of the final approach course, but there is no appropriate fix on the approach. An arriving aircraft is making an instrument approach.",
+          "question_text": "Under 6-3-1, what separation minimum must you apply?",
+          "choices": [
+            {
+              "text": "The departure takes off 5 minutes before the arrival is estimated at the airport (subparagraph e).",
+              "is_correct": false
+            },
+            {
+              "text": "The departure takes off 3 minutes before the arrival is estimated at the airport (subparagraph d).",
+              "is_correct": true
+            },
+            {
+              "text": "The departure takes off before the arrival reports at the outer marker.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure takes off immediately; the lack of a fix eliminates the need for separation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-3-1C triggers d/e when no fix exists AND no approach control service is provided. Since the takeoff direction differs by at least 45 degrees, subparagraph d applies: 3 minutes before the arrival is estimated at the airport.",
+          "para_context": "SEPARATION MINIMA"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "At a non-approach-control airport with no appropriate fix, the takeoff direction does NOT differ by at least 45 degrees from the reciprocal of the final approach course. The arriving aircraft will execute a procedure turn at 10 miles.",
+          "question_text": "Under 6-3-1e, by when must the departure have taken off and been established on the diverging course?",
+          "choices": [
+            {
+              "text": "5 minutes before the arrival starts the procedure turn, or 5 minutes before the arrival is estimated at the airport.",
+              "is_correct": true
+            },
+            {
+              "text": "3 minutes before the arrival starts the procedure turn.",
+              "is_correct": false
+            },
+            {
+              "text": "Before the arrival leaves the final approach fix.",
+              "is_correct": false
+            },
+            {
+              "text": "5 minutes after the arrival reports on final.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-3-1E provides two alternative reference points: 5 minutes before the arrival is estimated at the airport OR before it starts the procedure turn. The controller may use whichever occurs earlier in the arrival's flight path.",
+          "para_context": "SEPARATION MINIMA"
+        }
+      ]
+    }
+  }
+}

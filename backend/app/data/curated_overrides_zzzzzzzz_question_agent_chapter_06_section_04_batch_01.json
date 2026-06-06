@@ -1,0 +1,688 @@
+{
+  "questions": {
+    "6-4-1": {
+      "items": [
+        {
+          "question_text": "Per 6-4-1, which of the following is an authorized method of applying longitudinal separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-4-1d explicitly lists changing altitude at a specified time or fix as a longitudinal separation method. The others are not listed.",
+          "choices": [
+            {
+              "text": "Require the aircraft to change altitude at a specified time or fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Require the aircraft to maintain visual separation with another aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the aircraft to report each 10 DME along the route.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the aircraft to select their own crossing time at the next fix.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-1, what is the operational difference between 'CROSS (fix) AT OR BEFORE (time)' and 'CROSS (fix) AT OR AFTER (time)' when applying longitudinal separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "6-4-1 provides both phraseologies as distinct options. 'At or before' creates an upper bound (must arrive no later than the time), while 'at or after' creates a lower bound (must arrive no earlier than the time). The controller selects based on whether the restriction needs to hold back or speed up traffic.",
+          "choices": [
+            {
+              "text": "There is no difference; both are interchangeable.",
+              "is_correct": false
+            },
+            {
+              "text": "'At or before' sets a latest crossing time; 'at or after' sets an earliest crossing time. The controller chooses based on whether earlier or later arrival must be constrained.",
+              "is_correct": true
+            },
+            {
+              "text": "'At or before' is used for arrivals only; 'at or after' is used for departures only.",
+              "is_correct": false
+            },
+            {
+              "text": "'At or before' requires a 10-minute buffer; 'at or after' requires a 5-minute buffer.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-4-2": {
+      "items": [
+        {
+          "question_text": "Under 6-4-2a, when the leading aircraft is at least 44 knots faster, the 5-mile DME or 3-minute minimum applies only when one of three listed conditions is met. Which of the following is NOT one of those conditions?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-4-2a lists three conditions: (1) departing follows preceding departing from same/adjacent airport, (2) departing follows en route that reported over fix serving departure airport, (3) en route follows en route that reported over same fix. Opposite-direction aircraft is not one of the three.",
+          "choices": [
+            {
+              "text": "A departing aircraft follows a preceding aircraft that took off from the same or adjacent airport.",
+              "is_correct": false
+            },
+            {
+              "text": "A departing aircraft follows a preceding en route aircraft that reported over a fix serving the departure airport.",
+              "is_correct": false
+            },
+            {
+              "text": "An en route aircraft follows a preceding en route aircraft that reported over the same fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Two aircraft traveling opposite directions, one en route and the other departing an adjacent airport.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-2b, when the leading aircraft is at least 22 knots faster and DME/ATD is not available, the time minimum is _____ minutes.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-4-2b specifies 5 minutes for 'other aircraft' when the 22-knot speed differential exists. Compare with 3 minutes for the 44-knot case in 6-4-2a.",
+          "choices": [
+            {
+              "text": "5",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-2c1 (climb-through, DME/ATD), the distance minimum is 10 miles. What must be true about the direction of the altitude change relative to the aircraft positions?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-4-2c1 requires the descending aircraft to be leading OR the climbing aircraft to be following. This ensures the altitude change opens separation rather than closes it: the lead descends away, or the trail climbs up into separation.",
+          "choices": [
+            {
+              "text": "The climbing aircraft must be leading to ensure vertical separation is maintained.",
+              "is_correct": false
+            },
+            {
+              "text": "The descending aircraft is leading or the climbing aircraft is following — the altitude change must open rather than close separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Both aircraft must be descending for the 10-mile minimum to apply.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft positions do not matter as long as 10 miles is maintained.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-2c2, non-DME/ATD aircraft climbing or descending through another aircraft's altitude may use 5 minutes of longitudinal separation if ALL three conditions are met. Which of the following is NOT one of those conditions?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-4-2c2 requires: (a) descending is leading or climbing is following; (b) aircraft were separated by not more than 4,000 feet when altitude change started; (c) change is started within 10 minutes after the following aircraft reports over a fix reported by the leading aircraft or acknowledges a time-to-cross clearance. No requirement for DME equipment.",
+          "choices": [
+            {
+              "text": "The descending aircraft is leading or the climbing aircraft is following.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft are separated by not more than 4,000 feet when the altitude change started.",
+              "is_correct": false
+            },
+            {
+              "text": "The change is started within 10 minutes after the following aircraft reports over a fix reported by the leading aircraft or acknowledges a crossing-time clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Both aircraft must be DME-equipped and within 10 miles of the DME NAVAID.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-2c2, what is the maximum initial altitude difference permitted between two aircraft when the altitude change begins for the 5-minute climb-through minimum?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-4-2c2(b) limits the initial separation to not more than 4,000 feet. If the aircraft are further apart vertically when the altitude change starts, c2 does not apply.",
+          "choices": [
+            {
+              "text": "Not more than 2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Not more than 4,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "Not more than 5,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Any altitude difference is permitted as long as the 5-minute rule is followed.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-2c3, what conditions must be met for RNAV aircraft to use 10 miles for the climb-through case?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-4-2c3 requires: (a) descending is leading or climbing is following; (b) aircraft were separated by not more than 4,000 feet when altitude change started; AND the aircraft must be operating along an RNAV route that is 8 miles or less in width. The route width constraint distinguishes c3 from c1.",
+          "choices": [
+            {
+              "text": "The aircraft must be operating along an RNAV route that is 8 miles or less in width, separated by not more than 4,000 feet initially, with the descending aircraft leading or climbing following.",
+              "is_correct": true
+            },
+            {
+              "text": "Both aircraft must be within 10 miles of the same RNAV waypoint and on diverging courses.",
+              "is_correct": false
+            },
+            {
+              "text": "Any RNAV route qualifies; the 10-mile minimum applies to all RNAV altitude changes.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft must be on Q-routes above FL450 only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-2d, when the conditions of subparagraphs a, b, or c cannot be met, the fallback minimum is _____ miles between qualifying DME/ATD aircraft or _____ minutes between other aircraft.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-4-2d provides the catch-all fallback: 20 miles (DME/ATD) or 10 minutes (other). This is double the values in the speed-based minima.",
+          "choices": [
+            {
+              "text": "20",
+              "is_correct": true
+            },
+            {
+              "text": "10",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-2e, when one aircraft uses DME/ATD and the other does not, 30 miles of longitudinal separation may be used. What TWO conditions must be met?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-4-2e requires: (1) the DME/ATD aircraft derives distance from the SAME NAVAID or waypoint the non-DME aircraft reported over; AND (2) the non-DME aircraft is within 15 minutes of that NAVAID.",
+          "choices": [
+            {
+              "text": "Both aircraft must be above FL180 and on IFR flight plans.",
+              "is_correct": false
+            },
+            {
+              "text": "The DME/ATD aircraft uses the same NAVAID/waypoint the non-DME aircraft reported over, AND the non-DME aircraft is within 15 minutes of that NAVAID.",
+              "is_correct": true
+            },
+            {
+              "text": "The non-DME aircraft must be within 10 miles of the DME aircraft and both on converging courses.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the non-DME aircraft position matters; the DME aircraft can use any NAVAID.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-4-3": {
+      "items": [
+        {
+          "question_text": "Under 6-4-3, vertical separation on opposite courses must be maintained from 10 minutes before until 10 minutes after the aircraft are estimated to pass. What total window does this create?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-4-3 requires different altitudes from 10 minutes before until 10 minutes after estimated passing, creating a 20-minute total window of mandatory vertical separation.",
+          "choices": [
+            {
+              "text": "A 20-minute window (10 before + 10 after).",
+              "is_correct": true
+            },
+            {
+              "text": "A 10-minute window covering both before and after passing.",
+              "is_correct": false
+            },
+            {
+              "text": "A 5-minute window before and a 10-minute window after.",
+              "is_correct": false
+            },
+            {
+              "text": "Only until both aircraft are 10 miles past the passing point.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-3a, vertical separation on opposite courses may be discontinued after both aircraft have reported passing which of the following indicating they have passed each other?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-4-3a allows discontinuance when both aircraft report passing NAVAIDs, DME fixes, or waypoints that indicate they have passed each other.",
+          "choices": [
+            {
+              "text": "Any arbitrary position report within 50 miles of the estimated passing point.",
+              "is_correct": false
+            },
+            {
+              "text": "NAVAIDs, DME fixes, or waypoints indicating they have passed each other.",
+              "is_correct": true
+            },
+            {
+              "text": "Only intersections listed on IFR en route charts.",
+              "is_correct": false
+            },
+            {
+              "text": "Only position reports made to the same ARTCC sector.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-3, which note clarifies that the opposite-course procedure is NOT limited to aircraft on the same airway or radial?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-4-3's note explicitly states the procedure may also be applied to aircraft established on diverging airways or radials of the same NAVAID. It is not limited to same-airway opposite-direction traffic.",
+          "choices": [
+            {
+              "text": "The procedure applies ONLY to aircraft on the same airway or radial.",
+              "is_correct": false
+            },
+            {
+              "text": "The procedure may also be applied to aircraft on diverging airways or radials of the same NAVAID.",
+              "is_correct": true
+            },
+            {
+              "text": "The procedure may only be used when both aircraft are at or below FL230.",
+              "is_correct": false
+            },
+            {
+              "text": "The procedure requires both aircraft to use the same NAVAID for position reporting.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-3c, for two RNAV aircraft reporting passing the same position on a route GREATER than 8 miles in width, what distance allows discontinuing vertical separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-4-3c specifies: ≤8 miles width = 8 miles; >8 miles width = 18 miles; and 30 miles for extended usable distance beyond 130 miles. The >8 mile case uses 18 miles.",
+          "choices": [
+            {
+              "text": "8 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "18 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "30 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "10 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-3c, when does the 30-mile RNAV opposite-course requirement apply instead of 8 or 18 miles?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-4-3c requires 30 miles when operating along any portion of a route segment defined by a navigation station requiring extended usable distance limitations beyond 130 miles.",
+          "choices": [
+            {
+              "text": "When operating along a route segment defined by a navigation station requiring extended usable distance limitations beyond 130 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "When both aircraft are above FL450.",
+              "is_correct": false
+            },
+            {
+              "text": "When the route width exceeds 20 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "When either aircraft is not GNSS-equipped.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-3d, when an RNAV aircraft and a VOR aircraft report passing the same position on a route ≤8 miles wide, the RNAV aircraft must be at least _____ miles beyond the reported position before vertical separation may be discontinued.",
+          "question_type": "fill_blank",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-4-3d requires 4 miles for the RNAV aircraft when operating on a route ≤8 miles wide in the mixed RNAV/VOR case. This is half the 8-mile RNAV-only requirement.",
+          "choices": [
+            {
+              "text": "4",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-3d (mixed RNAV/VOR), what distance applies when the route is greater than 8 miles in width?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-4-3d specifies: ≤8 miles width = 4 miles beyond or 3 minutes apart whichever is greater; >8 miles width = 9 miles beyond or 3 minutes apart whichever is greater; extended range beyond 130 miles = 15 miles or 3 minutes.",
+          "choices": [
+            {
+              "text": "9 miles beyond the reported position, or 3 minutes apart whichever is greater.",
+              "is_correct": true
+            },
+            {
+              "text": "4 miles beyond the reported position, regardless of route width.",
+              "is_correct": false
+            },
+            {
+              "text": "18 miles beyond the reported position, matching the RNAV-only requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "30 miles for all mixed RNAV/VOR cases on any route width.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-4-4": {
+      "items": [
+        {
+          "question_text": "Under 6-4-4, when pilots on the same course concur and are in direct radio communication, what longitudinal separation is the following aircraft authorized to maintain?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-4-4 authorizes the following aircraft to maintain 10 minutes OR 20 miles between qualifying DME/ATD aircraft. The mixed DME/ATD qualification (DME aircraft ≤10,000 ft or outside 10 miles) applies to the distance option.",
+          "choices": [
+            {
+              "text": "10 minutes, or 20 miles between qualifying DME/ATD aircraft including mixed DME/ATD with the standard altitude/distance restriction.",
+              "is_correct": true
+            },
+            {
+              "text": "5 minutes or 10 miles, the same as the radar wake turbulence minima.",
+              "is_correct": false
+            },
+            {
+              "text": "Any separation the pilots agree to without controller limitation.",
+              "is_correct": false
+            },
+            {
+              "text": "3 minutes or 5 miles between any two IFR aircraft on the same course.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-4-4, the controller issues 'MAINTAIN AT LEAST ONE ZERO MINUTES/TWO ZERO MILES SEPARATION FROM (ident).' A controller is considering which option to issue. Two aircraft are on the same course, both DME-equipped, and pilots concur. What should the controller consider when choosing between minutes and miles?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "6-4-4 gives the controller discretion to use either 10 minutes or 20 miles. When DME is available, the pilot can use 20 miles directly as a distance reference. The controller should select the option that is most operationally practical and verifiable by the pilots based on their available equipment and the nature of the route.",
+          "choices": [
+            {
+              "text": "Always issue the mile option when DME is available, because it is a shorter minimum.",
+              "is_correct": false
+            },
+            {
+              "text": "Select based on operational practicality and equipment — DME-equipped aircraft can maintain 20 miles by direct measurement, while non-equipped aircraft need the 10-minute time reference.",
+              "is_correct": true
+            },
+            {
+              "text": "Always issue both options simultaneously and let the pilot choose.",
+              "is_correct": false
+            },
+            {
+              "text": "Use 10 minutes for jet aircraft and 20 miles for propeller aircraft.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-4-5": {
+      "items": [
+        {
+          "question_text": "Under 6-4-5, why must the controller advise an RNAV pilot to use DME distances when DME separation is applied along a VOR airway?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-4-5's note explains that ATD from area navigation devices having slant-range correction will NOT coincide with the direct DME readout. Using DME distances ensures both controller and pilot are referencing the same measurement.",
+          "choices": [
+            {
+              "text": "Because RNAV aircraft cannot display ATD distances on VOR airways.",
+              "is_correct": false
+            },
+            {
+              "text": "Because ATD derived from area navigation devices having slant-range correction will not coincide with the direct DME readout, and separation requires a common distance reference.",
+              "is_correct": true
+            },
+            {
+              "text": "Because DME distances are always shorter than ATD distances, providing a safety buffer.",
+              "is_correct": false
+            },
+            {
+              "text": "Because the FAA prohibits RNAV aircraft from using ATD for separation on any route type.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "6-4-2": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Under 6-4-2, what are the four speed-differential/altitude-change cases (a through d) for longitudinal separation on same, converging, or crossing courses?",
+          "choices": [
+            {
+              "text": "44kt faster, 22kt faster, 11kt slower, and no speed differential.",
+              "is_correct": false
+            },
+            {
+              "text": "44kt faster (5mi/3min), 22kt faster (10mi/5min), climb/descend through altitude (10mi/5min), and fallback when a-c cannot be met (20mi/10min).",
+              "is_correct": true
+            },
+            {
+              "text": "Radar-based only, non-radar only, mixed DME/ATD, and pilot-maintained.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminal 44kt, en route 22kt, oceanic climb-through, and domestic fallback.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-4-2 Organizes minima into four tiers: a (≥44kt faster = 5mi/3min), b (≥22kt faster = 10mi/5min), c (climb/descend = 10mi DME or 5min with conditions), and d (fallback = 20mi/10min)."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Two non-DME aircraft are on the same course. The leading aircraft is at 6,000 feet. The following aircraft is at 9,000 feet — a 3,000-foot difference. The following aircraft will descend through the leading aircraft's altitude. The following aircraft reports over the same fix the leading aircraft reported over, and the descent starts 5 minutes after that report.",
+          "question_text": "Under 6-4-2c2, may you use the 5-minute climb-through minimum?",
+          "choices": [
+            {
+              "text": "No; 6-4-2c2(a) requires the descending aircraft to be leading or the climbing aircraft to be following. Here the descending aircraft is following, which closes rather than opens separation.",
+              "is_correct": true
+            },
+            {
+              "text": "No; non-DME aircraft cannot use climb-through minima at all.",
+              "is_correct": false
+            },
+            {
+              "text": "No; the initial altitude difference must be exactly 4,000 feet, not less.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only the 10-mile DME/ATD minimum applies regardless of equipment.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-4-2C2(a) requires the descending aircraft to be leading OR the climbing aircraft to be following — the altitude change must open separation. Here the following aircraft descends through the leading aircraft, so the descending aircraft is following, which closes separation. Condition (a) fails, so c2 does not apply.",
+          "para_context": "MINIMA ON SAME, CONVERGING, OR CROSSING COURSES"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Two non-DME aircraft are on the same course. The leading aircraft will descend through the following aircraft's altitude. The aircraft are separated by 3,000 feet when the descent begins. The following aircraft reported over the same fix as the leading aircraft 3 minutes ago.",
+          "question_text": "Under 6-4-2c2, may you apply the 5-minute climb-through minimum?",
+          "choices": [
+            {
+              "text": "No; 6-4-2c2 requires the flight path to be closing, not opening.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes; the leading aircraft is descending (condition a met), initial separation is 3,000 feet (≤4,000 ft, condition b met), and the change started within 10 minutes of fix reporting (condition c met).",
+              "is_correct": true
+            },
+            {
+              "text": "No; the minimum is always 10 miles regardless of the aircraft positions.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if both aircraft have reported the same position within the last 5 minutes.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "All three 6-4-2c2 conditions are met. Condition (a): the descending aircraft is leading — this opens separation. Condition (b): 3,000 ft ≤ 4,000 ft. Condition (c): change starts within 10 minutes of fix reporting.",
+          "para_context": "MINIMA ON SAME, CONVERGING, OR CROSSING COURSES"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Two aircraft are on converging courses. Neither speed differential nor climb-through conditions apply. Both aircraft are DME-equipped and within 5 miles of the same DME NAVAID.",
+          "question_text": "Under 6-4-2d, what fallback minimum must you apply?",
+          "choices": [
+            {
+              "text": "10 minutes between other aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "20 miles between DME-equipped aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "5 miles, because the aircraft are DME-equipped.",
+              "is_correct": false
+            },
+            {
+              "text": "3 minutes, the standard longitudinal separation for any case.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-4-2D is the catch-all: 20 miles between DME-equipped aircraft (or 10 minutes between other aircraft) when none of the speed-differential or climb-through conditions can be met.",
+          "para_context": "MINIMA ON SAME, CONVERGING, OR CROSSING COURSES"
+        }
+      ]
+    },
+    "6-4-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Two RNAV aircraft are traveling opposite courses along a route that is 8 miles wide. Both have reported passing the same waypoint. You measure 10 miles between them.",
+          "question_text": "Under 6-4-3c, may you discontinue vertical separation?",
+          "choices": [
+            {
+              "text": "Yes; for a route ≤8 miles wide, 8 miles is the minimum. 10 miles exceeds this.",
+              "is_correct": true
+            },
+            {
+              "text": "No; 18 miles is required regardless of route width.",
+              "is_correct": false
+            },
+            {
+              "text": "No; RNAV aircraft must maintain vertical separation until 30 miles apart.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if they are also 3 minutes apart.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-4-3C requires 8 miles for routes ≤8 miles wide. At 10 miles, the requirement is exceeded and vertical separation may be discontinued.",
+          "para_context": "MINIMA ON OPPOSITE COURSES"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An RNAV aircraft and a VOR aircraft report passing the same waypoint on opposite courses along a route that is 12 miles wide. The RNAV aircraft reports being 10 miles beyond the waypoint when the VOR aircraft reports passing it.",
+          "question_text": "Under 6-4-3d, may you discontinue vertical separation?",
+          "choices": [
+            {
+              "text": "No; for routes >8 miles wide, the RNAV aircraft must be at least 9 miles beyond. 10 miles meets this, so vertical separation may be discontinued.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes; 10 miles exceeds the 4-mile requirement for all mixed RNAV/VOR cases.",
+              "is_correct": false
+            },
+            {
+              "text": "No; 18 miles is required for mixed RNAV/VOR on any route width.",
+              "is_correct": false
+            },
+            {
+              "text": "No; mixed RNAV/VOR opposite-course separation requires radar identification of both aircraft.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-4-3D requires 9 miles beyond for routes >8 miles wide in the mixed RNAV/VOR case. At 10 miles beyond, the requirement is met.",
+          "para_context": "MINIMA ON OPPOSITE COURSES"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1179 @@
+{
+  "activities": {
+    "3-1-12": {
+      "replace_types": ["requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this runway-scanning statement match the paragraph?",
+          "question_text": "Ground control must assist local control in visually scanning runways, especially when runways are in close proximity to other movement areas.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-1-12b, ground control assists local control in visually scanning runways, especially when runways are close to other movement areas."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Local control is working an active runway with nearby taxiway movement. Ground control says runway scanning is local control's job alone and will not help watch the runway environment.",
+          "para_context": "Under 3-1-12, local controllers visually scan runways to the maximum extent possible, and ground control assists local control in visually scanning runways, especially when runways are in close proximity to other movement areas.",
+          "choices": [
+            {
+              "text": "Ground control must assist local control in visually scanning the runway environment; runway scanning is not local control's job alone.",
+              "is_correct": true
+            },
+            {
+              "text": "Ground control may ignore runway scanning whenever local control is already staffed.",
+              "is_correct": false
+            },
+            {
+              "text": "Ground control should monitor taxiways only and never assist with runway scanning.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway scanning is optional for both positions if no aircraft are on short final.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-1-12, runway scanning is shared: local control scans to the maximum extent possible and ground control assists, especially where runways are close to other movement areas."
+        }
+      ]
+    },
+    "4-1-1": {
+      "replace_types": ["document_control_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use the table rule from the paragraph.",
+          "question_text": "Under Table 4-1-1, what is the normal usable radius distance for an H-class VOR/VORTAC/TACAN from 18,000 through FL 450?",
+          "choices": [
+            {
+              "text": "130 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "100 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "75 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "40 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 4-1-1 shows 130 miles for an H-class VOR/VORTAC/TACAN from 18,000 through FL 450."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A controller wants to clear an aircraft on an off-route segment within controlled airspace that would rely on an H-class VORTAC 140 miles away while the aircraft is at FL 230.",
+          "para_context": "Under 4-1-1, when specifying a route other than an established airway or route, do not exceed the altitude and distance limitations in the tables on any portion of the route that lies within controlled airspace.",
+          "choices": [
+            {
+              "text": "Do not use that segment as issued, because the route would exceed the table limitation for the aid at that altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Approve it because any H-class aid may be used up to 150 miles in controlled airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve it if the pilot reports the navaid received clearly.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve it because altitude and distance limitations apply only on established airways.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-1-1 and Table 4-1-1, an off-route segment within controlled airspace may not exceed the published altitude and distance limitations for the aid being used."
+        }
+      ]
+    },
+    "4-1-3": {
+      "replace_types": ["requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this crossing-altitude statement match the paragraph?",
+          "question_text": "Use an altitude consistent with the limitations of the aid when clearing an aircraft to cross or hold at a fix.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-1-3, crossing or holding clearances use an altitude consistent with the limitations of the aid."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You plan to clear an aircraft to cross a fix served by a navaid, but the proposed crossing altitude would not be consistent with the aid's limitations. Another controller says the pilot can sort it out once established on course.",
+          "para_context": "Under 4-1-3, when clearing an aircraft to cross or hold at a fix, use an altitude consistent with the limitations of the aid.",
+          "choices": [
+            {
+              "text": "Assign an altitude consistent with the aid's limitations before issuing the crossing or holding clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the inconsistent altitude and leave it to the pilot to adjust if reception becomes unreliable.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the aid limitation whenever the aircraft is IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Use any altitude you need as long as the pilot can see the fix on the map display.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-1-3, the clearance uses an altitude that is consistent with the aid's limitations."
+        }
+      ]
+    },
+    "4-2-2": {
+      "replace_types": ["list_membership", "requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which prefix is one of the approved phrases in this paragraph?",
+          "question_text": "Under 4-2-2, which is one approved prefix when a clearance or request is relayed through a non-ATC facility?",
+          "choices": [
+            {
+              "text": "\"A-T-C clears.\"",
+              "is_correct": true
+            },
+            {
+              "text": "\"Tower relays.\"",
+              "is_correct": false
+            },
+            {
+              "text": "\"Ground approves.\"",
+              "is_correct": false
+            },
+            {
+              "text": "\"Pilot copies.\"",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-2-2a, the relay is prefixed with \"A-T-C clears,\" \"A-T-C advises,\" or \"A-T-C requests,\" as appropriate."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A flight service station will relay a clearance to an aircraft for you. Another controller wants to skip the ATC prefix because the pilot already knows the message came from ATC.",
+          "para_context": "Under 4-2-2, a clearance, information, or request relayed through a non-ATC facility is prefixed with the appropriate ATC phrase, and flight service stations and ARTCC Flight Data Units must prefix clearances the same way.",
+          "choices": [
+            {
+              "text": "Use the appropriate ATC prefix, such as \"ATC clears\" or \"A-T-C clears,\" when the message is relayed.",
+              "is_correct": true
+            },
+            {
+              "text": "Skip the prefix because the origin of the message is already understood.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the prefix only when the aircraft is VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the prefix only for amended routes, not initial clearances.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-2-2, relayed clearances, information, and requests use the appropriate ATC prefix."
+        }
+      ]
+    },
+    "4-2-4": {
+      "replace_types": ["directive_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this clearance-relay statement match the paragraph?",
+          "question_text": "Relay clearances verbatim.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-2-4, clearances are relayed verbatim."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "You must relay another controller's clearance to an aircraft. A coworker suggests paraphrasing it into simpler words since the meaning will be about the same.",
+          "para_context": "Under 4-2-4, relay clearances verbatim.",
+          "choices": [
+            {
+              "text": "Relay the clearance exactly as issued.",
+              "is_correct": true
+            },
+            {
+              "text": "Paraphrase the clearance as long as you keep the same general meaning.",
+              "is_correct": false
+            },
+            {
+              "text": "Shorten the clearance whenever the route is familiar to the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "Relay only the route and altitude, and omit the rest if the aircraft is already airborne.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-2-4, the relay is verbatim, not paraphrased."
+        }
+      ]
+    },
+    "4-2-6": {
+      "replace_types": ["phraseology_builder", "requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "readback_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "The controller issued this through-clearance. Which pilot acknowledgment is correct?",
+          "clearance": "CLEARED THROUGH OMAHA TO BISMARCK.",
+          "choices": [
+            {
+              "text": "Cleared through Omaha to Bismarck, N123AB.",
+              "is_correct": true
+            },
+            {
+              "text": "Cleared to Omaha, then request Bismarck, N123AB.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared direct Bismarck, omitting Omaha, N123AB.",
+              "is_correct": false
+            },
+            {
+              "text": "Holding short of Omaha, N123AB.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-2-6, an aircraft may be cleared through intermediate stops using the phraseology \"CLEARED THROUGH (airport) TO (fix).\""
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "An aircraft will make an intermediate stop before continuing to its filed fix. Another controller says you must issue separate clearances for each leg because the flight is not nonstop.",
+          "para_context": "Under 4-2-6, you may clear an aircraft through intermediate stops.",
+          "choices": [
+            {
+              "text": "You may issue a through clearance covering the intermediate stop and the onward fix.",
+              "is_correct": true
+            },
+            {
+              "text": "You must issue separate clearances for each leg and may not clear through the stop.",
+              "is_correct": false
+            },
+            {
+              "text": "Through clearances are allowed only for military aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Through clearances may be used only after the aircraft departs the intermediate airport.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-2-6, an aircraft may be cleared through intermediate stops."
+        }
+      ]
+    },
+    "4-7-2": {
+      "replace_types": ["list_membership", "requirement_check"],
+      "items": [
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which action is one of the required steps in this paragraph?",
+          "question_text": "Under 4-7-2, which is one required action when controlling an aircraft landing at an airport in an adjacent center's control area near the common boundary?",
+          "choices": [
+            {
+              "text": "Coordinate with the receiving facility for a lower altitude and issue a clearance to the aircraft as appropriate.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the aircraft crosses the common boundary before starting descent coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave the descent entirely to the receiving facility unless the aircraft requests lower.",
+              "is_correct": false
+            },
+            {
+              "text": "Descend the aircraft without coordination as long as the pilot reports the field in sight.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-7-2a, coordinate with the receiving facility for a lower altitude and issue a clearance as appropriate."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You are controlling an aircraft landing at an airport just across the boundary in an adjacent center's airspace. Another controller suggests waiting until the aircraft is close to the boundary to start working the descent.",
+          "para_context": "Under 4-7-2, coordinate with the receiving facility for a lower altitude and initiate the action at a distance sufficient from destination to allow for normal descent and speed reduction.",
+          "choices": [
+            {
+              "text": "Coordinate the lower altitude with the receiving facility and start early enough to allow normal descent and speed reduction.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the aircraft is near the boundary, then rush the descent if needed.",
+              "is_correct": false
+            },
+            {
+              "text": "Skip coordination and clear the aircraft down on your own because the destination is nearby.",
+              "is_correct": false
+            },
+            {
+              "text": "Initiate the descent only after the pilot requests lower altitude.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-7-2, the descent coordination begins far enough from destination to permit a normal descent and speed reduction."
+        }
+      ]
+    },
+    "4-8-3": {
+      "replace_types": ["conditional_rule_check", "scope_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this relayed-approach statement match the paragraph?",
+          "question_text": "Include the weather report, when it is required and available, when an approach clearance is relayed through a communication station other than an air carrier company radio.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-8-3, the weather report is included when required and available if the approach clearance is relayed through a communication station other than an air carrier company radio."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An approach clearance must be relayed through a communication station that is not an air carrier company radio. Current weather is required and available. Another controller says the weather can be omitted because the station is only passing the clearance through.",
+          "para_context": "Under 4-8-3, include the weather report when required and available, or tell the station to issue current weather when relaying the approach clearance.",
+          "choices": [
+            {
+              "text": "Include the required weather report, or tell the station to issue current weather.",
+              "is_correct": true
+            },
+            {
+              "text": "Omit the weather because relayed clearances do not carry weather information.",
+              "is_correct": false
+            },
+            {
+              "text": "Omit the weather whenever the pilot is on an IFR flight plan.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the approach clearance until the aircraft switches to company radio.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-8-3, the required and available weather information is included when the approach clearance is relayed through a non-company communication station."
+        }
+      ]
+    },
+    "4-8-4": {
+      "replace_types": ["minima_rule_check", "reference_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "reference_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this citation statement match the paragraph?",
+          "question_text": "This paragraph cites FAA Order JO 7110.65, Para 4-7-5, Military Turbojet En Route Descent.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The reference cited in 4-8-4 is Para 4-7-5, Military Turbojet En Route Descent."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A military aircraft on a high altitude instrument approach needs an altitude above the charted procedure altitude for separation. Another controller says charted altitudes may never be exceeded on that procedure.",
+          "para_context": "Under 4-8-4, altitudes above those shown on the high altitude instrument approach procedures chart may be specified when required for separation. The maximum assignable altitudes for portions of the procedure are determined through coordination between the ATC facility concerned and the military authority that originated the procedure.",
+          "choices": [
+            {
+              "text": "You may specify an altitude above the charted procedure altitude when required for separation, using the coordinated maximums for the procedure.",
+              "is_correct": true
+            },
+            {
+              "text": "You may never assign above-charted altitudes on a military high altitude instrument approach.",
+              "is_correct": false
+            },
+            {
+              "text": "You may assign any altitude you want above the chart as long as the pilot accepts it.",
+              "is_correct": false
+            },
+            {
+              "text": "You may assign above-charted altitudes only after the aircraft reports visual conditions.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-8-4, above-charted altitudes may be used when required for separation, but the maximum assignable altitudes are determined through facility and military coordination."
+        }
+      ]
+    },
+    "5-9-8": {
+      "replace_types": ["requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this PRM statement match the paragraph?",
+          "question_text": "PRM approaches must be assigned when conducting instrument approaches to dual and triple parallel runways with runway centerlines separated by less than 4,300 feet.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-9-8b, PRM approaches are assigned when conducting instrument approaches to dual and triple parallel runways with centerlines separated by less than 4,300 feet."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A facility wants to conduct PRM simultaneous close parallel precision approaches, but the approaches are not charted as PRM and the instrument approach charts do not specifically authorize simultaneous approaches.",
+          "para_context": "Under 5-9-8, PRM approaches may only be conducted when charted in the approach title and where instrument approach charts specifically authorize simultaneous approaches.",
+          "choices": [
+            {
+              "text": "Do not conduct the PRM approaches under those conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Conduct them anyway if runway centerline spacing is less than 4,300 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Conduct them if the tower agrees, even without chart authorization.",
+              "is_correct": false
+            },
+            {
+              "text": "Conduct them as long as the final controllers brief the pilots verbally.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-9-8a, PRM approaches require charting in the approach title and chart-specific authorization for simultaneous approaches."
+        }
+      ]
+    },
+    "5-10-15": {
+      "replace_types": ["list_membership", "requirement_check", "sequence_steps", "situation_action"],
+      "items": [
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which is one listed exception in this paragraph?",
+          "question_text": "Under 5-10-15, which is one condition that permits a frequency change after a single frequency approach has begun?",
+          "choices": [
+            {
+              "text": "An emergency situation exists.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft has crossed the final approach fix inbound.",
+              "is_correct": false
+            },
+            {
+              "text": "The receiving controller wants an earlier voice check-in.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot has entered IMC after the approach began.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-10-15b, an emergency is one of the listed exceptions that permits a frequency change after the approach has begun."
+        },
+        {
+          "activity_type": "sequence_steps",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Place these communications-transfer steps in the correct procedural order.",
+          "steps": [
+            {
+              "id": "rx-enable",
+              "text": "Receiving controller: position transmitter and receiver selectors to enable communications on the special use frequencies."
+            },
+            {
+              "id": "no-checkin",
+              "text": "Do not require or expect the flight to check on frequency unless an actual frequency change is transmitted to the pilot."
+            },
+            {
+              "id": "tx-preclude",
+              "text": "Transferring controller: position transmitter selectors to preclude further transmissions on the special use frequencies."
+            }
+          ],
+          "correct_order": ["tx-preclude", "rx-enable", "no-checkin"],
+          "explanation": "Per 5-10-15c, after completion of a handoff, the transferring controller precludes further transmissions, the receiving controller enables communications, and the flight is not required or expected to check on frequency unless an actual frequency change is transmitted."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A military aircraft is already on a single frequency approach. There is no emergency, the pilot has not requested a change, the aircraft is still IFR, and the approach has not been completed. Another controller wants to switch the aircraft to a new frequency now just to tidy up sector ownership.",
+          "para_context": "Under 5-10-15, do not require a frequency change after the approach has begun unless one of the listed exceptions exists. After handoff, the flight is not required or expected to check on frequency unless an actual frequency change is transmitted to the pilot.",
+          "choices": [
+            {
+              "text": "Do not require the frequency change under those circumstances.",
+              "is_correct": true
+            },
+            {
+              "text": "Change the frequency now because administrative convenience is an acceptable exception.",
+              "is_correct": false
+            },
+            {
+              "text": "Change the frequency because all single frequency approaches require a controller check-in after handoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Change the frequency as soon as the aircraft is established on final, even without a listed exception.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-10-15b and c, frequency changes after the approach begins are limited to the listed exceptions, and after handoff the flight is not expected to check on frequency unless an actual change is transmitted."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-1-12": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 3-1-12, who must assist local control in visually scanning runways, especially when runways are in close proximity to other movement areas?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-1-12b, ground control must assist local control in visually scanning runways in that circumstance.",
+          "choices": [
+            {
+              "text": "Ground control.",
+              "is_correct": true
+            },
+            {
+              "text": "Flight service.",
+              "is_correct": false
+            },
+            {
+              "text": "Ramp control only.",
+              "is_correct": false
+            },
+            {
+              "text": "No one; the task belongs solely to local control.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-1-12, local controllers must visually scan runways only when traffic volume is light.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is false. Per 3-1-12a, local controllers visually scan runways to the maximum extent possible.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-1-1": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 4-1-1, what is the normal usable radius distance for an H-class VOR/VORTAC/TACAN from 18,000 through FL 450?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "Table 4-1-1 shows 130 miles for an H-class VOR/VORTAC/TACAN from 18,000 through FL 450.",
+          "choices": [
+            {
+              "text": "130 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "100 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "75 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "40 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 4-1-1, when specifying a route other than an established airway or route, you may exceed the table limitations within controlled airspace if the pilot reports reliable reception.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is false. Per 4-1-1, do not exceed the table limitations on portions of the route within controlled airspace.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-1-3": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 4-1-3, what altitude should be used when clearing an aircraft to cross or hold at a fix?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 4-1-3, use an altitude consistent with the limitations of the aid.",
+          "choices": [
+            {
+              "text": "An altitude consistent with the limitations of the aid.",
+              "is_correct": true
+            },
+            {
+              "text": "Any altitude the pilot says is acceptable.",
+              "is_correct": false
+            },
+            {
+              "text": "The highest available altitude, regardless of the aid.",
+              "is_correct": false
+            },
+            {
+              "text": "Any altitude above minimum IFR altitude.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 4-1-3, aid limitations may be ignored when clearing an aircraft to cross a fix if the aircraft is operating IFR.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is false. The crossing or holding altitude must still be consistent with the limitations of the aid.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-2": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 4-2-2, what prefix is used when a clearance is relayed through a non-ATC facility?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 4-2-2, the relay is prefixed with the appropriate ATC phrase such as \"A-T-C clears.\"",
+          "choices": [
+            {
+              "text": "The appropriate ATC prefix, such as \"A-T-C clears.\"",
+              "is_correct": true
+            },
+            {
+              "text": "No prefix is needed if the aircraft expects a clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the facility identifier, without any ATC wording.",
+              "is_correct": false
+            },
+            {
+              "text": "The words \"pilot copies\" before the clearance.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 4-2-2, flight service stations and ARTCC Flight Data Units must prefix a clearance with the appropriate ATC phrase.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 4-2-2b.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-4": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 4-2-4, how are clearances relayed?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 4-2-4, clearances are relayed verbatim.",
+          "choices": [
+            {
+              "text": "Verbatim.",
+              "is_correct": true
+            },
+            {
+              "text": "Paraphrased for brevity.",
+              "is_correct": false
+            },
+            {
+              "text": "Summarized if route and altitude are unchanged.",
+              "is_correct": false
+            },
+            {
+              "text": "Shortened whenever the pilot is familiar with the airport.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 4-2-4, a relayed clearance may be paraphrased as long as the controller keeps the same meaning.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is false. Per 4-2-4, clearances are relayed verbatim.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-6": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 4-2-6, what does the paragraph permit?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 4-2-6, an aircraft may be cleared through intermediate stops.",
+          "choices": [
+            {
+              "text": "An aircraft may be cleared through intermediate stops.",
+              "is_correct": true
+            },
+            {
+              "text": "A separate ATC clearance is always required for each leg.",
+              "is_correct": false
+            },
+            {
+              "text": "Through clearances are authorized only for military flights.",
+              "is_correct": false
+            },
+            {
+              "text": "Through clearances may be issued only after the aircraft departs the intermediate stop.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 4-2-6, controllers may clear an aircraft through intermediate stops.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 4-2-6.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-2": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 4-7-2, what action is taken when controlling an aircraft landing at an airport in an adjacent center's control area near the common boundary?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 4-7-2a, coordinate with the receiving facility for a lower altitude and issue a clearance to the aircraft as appropriate.",
+          "choices": [
+            {
+              "text": "Coordinate with the receiving facility for a lower altitude and issue a clearance as appropriate.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave descent planning entirely to the receiving facility until the aircraft crosses the boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "Descend the aircraft without coordination if the destination is close to the boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay all altitude changes until the pilot reports the airport in sight.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 4-7-2, the action is initiated at a distance sufficient from destination to allow for normal descent and speed reduction.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 4-7-2b.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-3": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 4-8-3, what must be included when an approach clearance is relayed through a communication station other than an air carrier company radio?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 4-8-3, include the weather report when it is required and available, or tell the station to issue current weather.",
+          "choices": [
+            {
+              "text": "The weather report, when it is required and available.",
+              "is_correct": true
+            },
+            {
+              "text": "No weather information, because relayed approach clearances never include weather.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the altimeter setting.",
+              "is_correct": false
+            },
+            {
+              "text": "Only runway information, never weather.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 4-8-3, you may omit required and available weather information when the approach clearance is relayed through a communication station other than an air carrier company radio.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is false. Per 4-8-3, the weather report is included when it is required and available.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-4": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 4-8-4, when may altitudes above those shown on a high altitude instrument approach procedures chart be specified?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 4-8-4, above-charted altitudes may be specified when required for separation.",
+          "choices": [
+            {
+              "text": "When required for separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when requested by the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft reports visual conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "Never; charted altitudes may not be exceeded.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 4-8-4, the maximum altitudes that may be assigned for portions of a high altitude instrument approach procedure are determined through coordination between the ATC facility concerned and the military authority that originated the procedure.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "That statement appears in the note to 4-8-4.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-9-8": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-9-8, when may PRM approaches be conducted?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-9-8a, PRM approaches may only be conducted when charted in the approach title and where instrument approach charts specifically authorize simultaneous approaches.",
+          "choices": [
+            {
+              "text": "Only when charted in the approach title and the instrument approach charts specifically authorize simultaneous approaches.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the tower and TRACON agree to use PRM procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever runway centerline spacing is less than 4,300 feet, regardless of charting.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the airport is VMC.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-9-8, PRM approaches must be assigned when conducting instrument approaches to dual and triple parallel runways with runway centerlines separated by less than 4,300 feet.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 5-9-8b.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-10-15": {
+      "replace_types": ["multiple_choice", "true_false", "ordering"],
+      "items": [
+        {
+          "question_text": "Under 5-10-15, which is one listed exception that permits a frequency change after a single frequency approach has begun?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-10-15b, one permitted exception is that the pilot requests the frequency change.",
+          "choices": [
+            {
+              "text": "The pilot requests the frequency change.",
+              "is_correct": true
+            },
+            {
+              "text": "The receiving controller would like an early check-in.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft has crossed the final approach fix.",
+              "is_correct": false
+            },
+            {
+              "text": "The handoff has been completed.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-10-15, after completion of a handoff on a single frequency approach, you do not require or expect the flight to check on frequency unless an actual frequency change is transmitted to the pilot.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 5-10-15c3.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Place the communications-transfer steps from 5-10-15 in the correct order.",
+          "question_type": "ordering",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-10-15c, the transferring controller precludes further transmissions, the receiving controller enables communications, and the flight is not expected to check on frequency unless an actual frequency change is transmitted.",
+          "choices": [
+            {
+              "text": "Transferring controller: position transmitter selectors to preclude further transmissions on the special use frequencies.",
+              "is_correct": true
+            },
+            {
+              "text": "Receiving controller: position transmitter and receiver selectors to enable communications on the special use frequencies.",
+              "is_correct": true
+            },
+            {
+              "text": "Do not require or expect the flight to check on frequency unless an actual frequency change is transmitted to the pilot.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

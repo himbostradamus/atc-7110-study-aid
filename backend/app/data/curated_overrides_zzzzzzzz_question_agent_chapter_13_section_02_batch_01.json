@@ -1,0 +1,464 @@
+{
+  "questions": {
+    "13-2-1": {
+      "items": [
+        {
+          "question_text": "Under 13-2-1, ATOP provides controllers with automated decision support tools to establish, monitor and maintain separation between aircraft, and between aircraft and what?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-1(a) states ATOP provides decision support for separation between aircraft, and aircraft to airspace and terrain. This is broader than the typical EDST scope which only covers airspace.",
+          "choices": [
+            {
+              "text": "Other aircraft only, because ATOP separation logic does not extend to airspace or terrain.",
+              "is_correct": false
+            },
+            {
+              "text": "Aircraft to airspace and terrain.",
+              "is_correct": true
+            },
+            {
+              "text": "Naval vessels in oceanic transit corridors.",
+              "is_correct": false
+            },
+            {
+              "text": "Only weather cells, because oceanic airspace has no terrain considerations.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-2-1(b), which of the following is NOT listed as an ATOP capability?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The nine listed capabilities include MEARTS-based radar, conflict prediction, ADS-B, ADS-C, CPDLC, AIDC, weather deviation tool, additional decision support tools, and electronic flight data/strips. Automated voice switching is not listed.",
+          "choices": [
+            {
+              "text": "Automatic voice frequency switching based on aircraft position.",
+              "is_correct": true
+            },
+            {
+              "text": "MEARTS based radar surveillance processing.",
+              "is_correct": false
+            },
+            {
+              "text": "ATS Interfacility Data Communications (AIDC).",
+              "is_correct": false
+            },
+            {
+              "text": "Electronic Flight Data including Electronic Flight Strips.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "13-2-2": {
+      "items": [
+        {
+          "question_text": "Under 13-2-2, controllers must assume that conflict probe separation calculations are _____.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-2(a)(1)(a) states controllers must assume conflict probe separation calculations are accurate. This is the foundational assumption of ATOP conflict probe use.",
+          "choices": [
+            {
+              "text": "accurate",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-2-2(a)(3), how many situations are listed in which controllers may override conflict probe?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-2(a)(3) lists four situations: (1) application of a separation standard not recognized by probe, (2) action taken to resolve the conflict and separation ensured, (3) control responsibility delegated to another sector/facility, and (4) other situations specified in facility directives.",
+          "choices": [
+            {
+              "text": "Two: only when probe does not recognize the separation standard or when facility directives say so.",
+              "is_correct": false
+            },
+            {
+              "text": "Three: when separation standard is unrecognized, when control is delegated, or when facility directives say so.",
+              "is_correct": false
+            },
+            {
+              "text": "Four: unrecognized separation standard, conflict actions taken with separation ensured, control delegated, and situations specified in facility directives.",
+              "is_correct": true
+            },
+            {
+              "text": "Six: the four listed plus controller judgment override and pilot-requested override.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-2-2 NOTE, once a trial probe is initiated, it does not take into account any changes made after that point. What must the controller still do when issuing a clearance or accepting a transfer?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The trial probe note explicitly states: 'A trial probe does not alleviate the controller from performing a conflict probe when issuing a clearance or accepting a transfer.' Trial probe is a planning tool; conflict probe is the operational requirement.",
+          "choices": [
+            {
+              "text": "Rely on the trial probe results since they capture the situation at the time of the probe, and no additional probe is needed before issuing the clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Perform a conflict probe when issuing a clearance or accepting a transfer. The trial probe does not replace this requirement.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the trial probe expires and then issue the clearance without any further probe check.",
+              "is_correct": false
+            },
+            {
+              "text": "Use additional decision support tools instead of either trial probe or conflict probe when accepting transfers.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-2-2(a)(8), which of the following separation minima is NOT supported by ATOP conflict probe?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-2(a)(8)(a) lists nine unsupported minima including VFR Climb and Descent (8-8-5). The other options are standard minima that conflict probe does support.",
+          "choices": [
+            {
+              "text": "Standard en route radar separation of 5 NM between aircraft on the same route at the same altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "VFR Climb and Descent under paragraph 8-8-5.",
+              "is_correct": true
+            },
+            {
+              "text": "ADS-C distance-based longitudinal separation at the standard reporting interval.",
+              "is_correct": false
+            },
+            {
+              "text": "Standard oceanic longitudinal separation using Mach Number Technique on the same track.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-2-2(b)(1), additional decision support tools may be used for establishing and maintaining separation standards when:",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-2(b)(1) authorizes additional tools use for separation standards NOT supported by probe, or when probe is unavailable. It also allows use for situational awareness. But (b)(2) prohibits using additional tools to override probe when the standard IS supported.",
+          "choices": [
+            {
+              "text": "The controller personally prefers the appearance of the additional tools over the conflict probe display.",
+              "is_correct": false
+            },
+            {
+              "text": "The separation standard is not supported by probe, or when probe is unavailable.",
+              "is_correct": true
+            },
+            {
+              "text": "The conflict probe results disagree with the controller's expectation, even when the standard is supported.",
+              "is_correct": false
+            },
+            {
+              "text": "The trial probe was run more than five minutes ago and may no longer be current.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "13-2-3": {
+      "items": [
+        {
+          "question_text": "Under 13-2-3, list the four reduced separation flags that must be selected appropriately for each flight on the electronic flight strip.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-3(c)(1)(b) lists M (MNT), R (Reduced MNT), D (Distance-based longitudinal), and W (RVSM) as the four reduced separation flags that controllers must manage.",
+          "choices": [
+            {
+              "text": "M, R, D, and W",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-2-3, the Degraded RNP indicator must be selected on the electronic flight strip when:",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-3(c)(1)(c) states Degraded RNP is selected when the aircraft notifies ATC of a reduction in navigation capability that affects applicable separation minima. It is tied to pilot notification and operational impact.",
+          "choices": [
+            {
+              "text": "The aircraft type is not RNP-capable according to the filed equipment suffix.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft has notified ATC of a reduction in navigation capability that affects the applicable separation minima.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft has been CPDLC connected for more than 30 minutes without a position report.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller subjectively believes the aircraft's navigation performance may be degraded.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-2-3(e) NOTE, the ASD title bar changes color to denote when priority information is being obscured or is out of view. What does this help the controller maintain awareness of?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note explains the title bar color-change function is an alerting mechanism for when priority information on the ASD is being obscured or out of view. It helps the controller know when to reorganize windows to restore visibility.",
+          "choices": [
+            {
+              "text": "That priority information on the ASD may be obscured or out of view, and the title bar must not be covered by other windows or lists.",
+              "is_correct": true
+            },
+            {
+              "text": "That the CPDLC connection to a specific aircraft has been lost.",
+              "is_correct": false
+            },
+            {
+              "text": "That a red conflict has been detected in the controller's sector.",
+              "is_correct": false
+            },
+            {
+              "text": "That the weather deviation tool has detected a new convective cell.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "13-2-4": {
+      "items": [
+        {
+          "question_text": "Under 13-2-4, when CPDLC is available and CPDLC-connected aircraft are operating outside of VHF coverage, CPDLC must be used as the _____ means of communication.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-4(a)(1) uses 'must' and 'primary' — CPDLC is mandatory as the primary means of communication when available for connected aircraft outside VHF coverage.",
+          "choices": [
+            {
+              "text": "primary",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-2-4, when CPDLC is being utilized, what must exist as a backup?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-4(a)(3) explicitly requires a voice backup when CPDLC is being utilized, with HF, SATCOM, and Third party listed as examples. This is a hard requirement, not optional.",
+          "choices": [
+            {
+              "text": "A voice backup (e.g., HF, SATCOM, Third party).",
+              "is_correct": true
+            },
+            {
+              "text": "A second CPDLC terminal at an adjacent workstation.",
+              "is_correct": false
+            },
+            {
+              "text": "An ADS-C contract with a 64-second reporting interval.",
+              "is_correct": false
+            },
+            {
+              "text": "A backup flight plan filed through AIDC with the next facility.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-2-4(c)(5), on initial voice contact with an aircraft after a CPDLC failure, the controller must preface the message with what phraseology?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "13-2-4(c)(5) prescribes the exact phraseology: '(Call Sign) CPDLC Failure, (message).' This is a prescribed phraseology for operational situation management after a CPDLC interruption.",
+          "choices": [
+            {
+              "text": "(Call Sign) CPDLC Failure, (message)",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-2-4, when CPDLC service is to be canceled, what must the controller do?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-4(c)(4) requires advising the pilot as early as possible to facilitate a smooth transition to voice. Workload permitting, the reason for termination should also be provided. This is a proactive duty.",
+          "choices": [
+            {
+              "text": "Wait until the pilot notices the loss of service and inquires on voice before explaining the cancellation.",
+              "is_correct": false
+            },
+            {
+              "text": "Advise the pilot as early as possible to facilitate a smooth transition to voice communications, and workload permitting, provide the reason for the termination.",
+              "is_correct": true
+            },
+            {
+              "text": "Send an automatic CPDLC disconnect message and let the automation handle the transition without pilot notification.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer the aircraft to the next facility immediately regardless of the aircraft's position.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "13-2-1": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "A new controller claims that ATOP is only a flight data display tool and does not include surveillance processing. Which ATOP capabilities prove this is incorrect?",
+          "choices": [
+            {
+              "text": "ATOP includes MEARTS-based radar surveillance processing, ADS-B, and ADS-C, which are all surveillance capabilities.",
+              "is_correct": true
+            },
+            {
+              "text": "ATOP's weather deviation tool is a surveillance function that replaces the need for radar processing.",
+              "is_correct": false
+            },
+            {
+              "text": "AIDC is the primary surveillance function in ATOP for oceanic airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Electronic flight strips are a surveillance mechanism in ATOP.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-2-1(B) lists MEARTS-based radar surveillance processing, ADS-B, and ADS-C as explicit ATOP surveillance capabilities, in addition to its flight data processing functions."
+        }
+      ]
+    },
+    "13-2-2": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A red conflict appears in ATOP. A controller wants to override conflict probe using the range/bearing tool because the controller believes the aircraft will actually pass with more separation than probe predicts. The conflict involves a separation standard that conflict probe does support. No facility directive authorizes an override in this circumstance, and control has not been delegated.",
+          "question_text": "May the controller override the conflict probe in this situation?",
+          "choices": [
+            {
+              "text": "No. Additional decision support tools must never be used to override probe results when the applicable separation standard is supported by probe and none of the other override conditions apply.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because the range/bearing tool always takes precedence over conflict probe when the controller believes probe is inaccurate.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because a red conflict requires immediate action, and the range/bearing tool qualifies as an 'other situation' for override purposes.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only after running a trial probe to confirm the range/bearing calculation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-2-2(B)(2) states: 'Under no circumstances must the controller utilize any of the additional decision support tools to override probe results when the applicable separation standard is supported by probe and none of the other conditions for overriding probe apply.'",
+          "para_context": "CONFLICT DETECTION AND RESOLUTION"
+        }
+      ]
+    },
+    "13-2-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft in ATOP oceanic airspace notifies ATC that its navigation capability has degraded and this affects the applicable separation minima. A controller updates the flight profile but does not select any special indicator on the electronic flight strip for this condition, saying the data block alone is sufficient.",
+          "question_text": "What strip management action is required under 13-2-3?",
+          "choices": [
+            {
+              "text": "Select the Degraded RNP indicator on the electronic flight strip when the aircraft notifies ATC of a reduction in navigation capability that affects applicable separation minima.",
+              "is_correct": true
+            },
+            {
+              "text": "No additional strip action is required. The flight profile update is sufficient documentation of the degraded navigation capability.",
+              "is_correct": false
+            },
+            {
+              "text": "The 'W' RVSM flag should be selected to indicate the aircraft can no longer maintain RVSM performance.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft should be removed from the electronic flight strip system and handled with paper strips only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-2-3(C)(1)(c) explicitly requires selecting the Degraded RNP indicator when an aircraft notifies ATC of reduced navigation capability affecting separation minima. This is a specific strip management requirement distinct from profile updates.",
+          "para_context": "INFORMATION MANAGEMENT"
+        }
+      ]
+    },
+    "13-2-4": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What must the controller say?",
+          "situation": "A CPDLC failure occurs and you are making initial voice contact with the affected aircraft to deliver a revised altitude clearance. The clearance is 'climb and maintain FL370.'",
+          "question_text": "What is the correct phraseology for the initial voice contact with this aircraft?",
+          "choices": [
+            {
+              "text": "N12345, CPDLC Failure, climb and maintain FL370.",
+              "is_correct": true
+            },
+            {
+              "text": "N12345, CPDLC has been terminated, climb and maintain FL370.",
+              "is_correct": false
+            },
+            {
+              "text": "N12345, data link is down, climb and maintain FL370.",
+              "is_correct": false
+            },
+            {
+              "text": "N12345, reverting to voice, climb and maintain FL370.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-2-4(C)(5) prescribes the exact phraseology: '(Call Sign) CPDLC Failure, (message).' The controller must use this exact preface on initial voice contact after a CPDLC issue.",
+          "para_context": "CONTROLLER PILOT DATA LINK COMMUNICATIONS (CPDLC)"
+        }
+      ]
+    }
+  }
+}

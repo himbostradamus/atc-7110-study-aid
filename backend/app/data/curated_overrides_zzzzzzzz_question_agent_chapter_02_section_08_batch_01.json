@@ -1,0 +1,85 @@
+{
+  "questions": {
+    "2-8-1": {
+      "items": [
+        {
+          "question_text": "Under 2-8-1, where RVR equipment is operational, controllers must furnish RVR values for the runway in use regardless of whether navigational or visual aids are subsequently _____.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 2-8-1, RVR values must be furnished irrespective of subsequent operation or nonoperation of navigational or visual aids. The RVR obligation is independent of aid status.",
+          "choices": [
+            {"text": "operational or nonoperational", "is_correct": true}
+          ]
+        }
+      ]
+    },
+    "2-8-2": {
+      "items": [
+        {
+          "question_text": "Under 2-8-2, current touchdown RVR must be issued when prevailing visibility is _____ mile or less regardless of the value indicated.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 2-8-2a1, issue current touchdown RVR when prevailing visibility is 1 mile or less regardless of the RVR value indicated. RVR must also be issued when it indicates a reportable value (6,000 feet or less).",
+          "choices": [
+            {"text": "1", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "Under 2-8-2, RVR data must NOT be reported when the indicated value differs from actual conditions by more than how many feet, as determined from a reliable source?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 2-8-2a3, when the indicated RVR value differs by more than 400 feet from actual conditions within the transmissometer area as determined by a reliable source, the data is not acceptable and must not be reported.",
+          "choices": [
+            {"text": "200 feet.", "is_correct": false},
+            {"text": "300 feet.", "is_correct": false},
+            {"text": "400 feet.", "is_correct": true},
+            {"text": "600 feet.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-8-3": {
+      "items": [
+        {
+          "question_text": "Under 2-8-3, reportable RVR values are RVR _____ feet or less.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per the note in 2-8-2, reportable values are RVR 6,000 feet or less. This is the threshold for when RVR must be reported regardless of prevailing visibility.",
+          "choices": [
+            {"text": "6,000", "is_correct": true}
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "2-8-2": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "situation": "The touchdown RVR for Runway 27R is 5,500 feet. The mid-point RVR is 1,800 feet. The rollout RVR is 2,500 feet. Prevailing visibility is 3 miles.",
+          "para_context": "Report touchdown RVR when it is 6,000 feet or less. Report mid-point or rollout RVR when the value is below 2,000 feet and touchdown RVR is greater than the secondary value.",
+          "instruction": "Under 2-8-2, determine which RVR values must be reported and why.",
+          "explanation": "Touchdown RVR must be reported because 5,500 feet is a reportable value (6,000 feet or less per 2-8-2a2). Mid-point RVR must also be reported because it is below 2,000 feet while touchdown RVR is greater than 2,000 feet. Rollout RVR is 2,500 feet, so it does not meet the below-2,000-foot secondary-value trigger. Prevailing visibility is above 1 mile, but that does not suppress otherwise reportable RVR.",
+          "choices": [
+            {"text": "All three values: touchdown is reportable, mid-point is less than 2,000 feet, and 2-8-2b requires both mid-point and rollout because touchdown RVR is greater than the secondary values.", "is_correct": false},
+            {"text": "Only touchdown RVR, since prevailing visibility is above 1 mile.", "is_correct": false},
+            {"text": "Only touchdown and mid-point RVR, since rollout is above 2,000 feet.", "is_correct": true},
+            {"text": "Only mid-point RVR, since it is the lowest value.", "is_correct": false}
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,618 @@
+{
+  "questions": {
+    "13-1-1": {
+      "items": [
+        {
+          "question_text": "Under 13-1-1, EDST is an integrated function of ERAM used by the sector team in performing its _____ responsibilities.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-1 explicitly states EDST is used by the sector team in performing its strategic planning responsibilities. This is the core purpose of EDST, distinguishing it from tactical separation tools.",
+          "choices": [
+            {
+              "text": "strategic planning",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-1, EDST predicts conflicts between aircraft and between aircraft and what?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-1 states EDST predicts conflicts between aircraft and between aircraft and special use or designated airspace. It does not mention surface areas, weather, or terrain.",
+          "choices": [
+            {
+              "text": "Class D surface areas underneath the sector.",
+              "is_correct": false
+            },
+            {
+              "text": "Special use or designated airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "Forecast convective weather cells with tops above FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "Terrain obstacles along the filed route only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-1, which capability is provided by EDST in addition to conflict prediction and trajectory derivation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-1 lists three EDST capabilities: deriving expected trajectories, predicting conflicts, and providing trial planning and enhanced flight data management. Separation application is not an EDST function.",
+          "choices": [
+            {
+              "text": "Automatic radar separation between aircraft in the same sector.",
+              "is_correct": false
+            },
+            {
+              "text": "Voice communication recording and playback for incident review.",
+              "is_correct": false
+            },
+            {
+              "text": "Trial planning and enhanced flight data management.",
+              "is_correct": true
+            },
+            {
+              "text": "Automated NOTAM dissemination to all aircraft in the sector.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-1 NOTE, the current plan used by EDST may include clearances that have not yet been issued to the aircraft. How does this affect the relationship between the current plan and what the pilot is actually flying?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note explains that the current plan is what EAS predicts an aircraft WILL fly, which may include unissued clearances. This means the current plan can diverge from the pilot's actual clearance, yet EDST still uses it for modeling. The controller must understand this discrepancy rather than assuming the plan always matches what is issued.",
+          "choices": [
+            {
+              "text": "The current plan always matches the pilot's last acknowledged clearance, so EDST trajectory and the pilot's actual path are guaranteed to be the same.",
+              "is_correct": false
+            },
+            {
+              "text": "The current plan may include unissued clearances, so EDST models a trajectory that may not yet reflect what the pilot has actually been told to fly.",
+              "is_correct": true
+            },
+            {
+              "text": "EDST ignores the current plan for aircraft with unissued clearances and reverts to the filed flight plan until all changes are issued.",
+              "is_correct": false
+            },
+            {
+              "text": "The current plan only includes clearances already issued, and the note describes an alternative offline planning mode that controllers must manually activate.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "13-1-2": {
+      "items": [
+        {
+          "question_text": "Under 13-1-2, what two types of alerts must the sector team actively scan for in EDST information?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-2(a) requires actively scanning for predicted aircraft-to-aircraft and aircraft-to-airspace alerts. Both types are mandatory scan targets.",
+          "choices": [
+            {
+              "text": "aircraft-to-aircraft and aircraft-to-airspace",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-2(d), when a conflict probe alert is displayed and sector priorities permit, which of the following is expressly listed as a consideration in determining a solution?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-2(d)(1) lists direct routing, altitude changes, removal of a flight direction constraint, and removal of a static restriction. 13-1-2(d)(2) adds impact on surrounding sector traffic, complexity levels, flight efficiencies, and user preferences. Speed adjustment is not in this list.",
+          "choices": [
+            {
+              "text": "Mandatory speed reduction to minimum clean speed for all conflicting aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Solutions involving direct routing or altitude changes for one or more pertinent aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Immediate vectoring of all flights to the nearest holding fix regardless of sector complexity.",
+              "is_correct": false
+            },
+            {
+              "text": "Automatic handoff of conflicting aircraft to the adjacent sector without prior coordination.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-2(e), the requirement to restart conflict probe before transfer of control when Stop Probe has been activated does NOT apply when:",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note to 13-1-2(e) explicitly states the Stop Probe restart requirement does not apply to aircraft entering a non-EDST facility. The other options are not valid exceptions.",
+          "choices": [
+            {
+              "text": "The aircraft is descending through FL180 within the same facility.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft is entering a non-EDST facility.",
+              "is_correct": true
+            },
+            {
+              "text": "The receiving controller verbally agrees to accept the aircraft with Stop Probe active.",
+              "is_correct": false
+            },
+            {
+              "text": "The Stop Probe was activated by a supervisor rather than a controller.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-2 NOTE, conflict probe alerts are based on approved radar separation but do NOT account for which of the following?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note explicitly states conflict probe does not account for instances where greater separation may be needed (e.g., non-standard formations, A380) or where reduced separation is permitted (e.g., 3 mile airspace). Both are gaps in the alert logic.",
+          "choices": [
+            {
+              "text": "Standard radar separation minima in en route airspace at or above FL290.",
+              "is_correct": false
+            },
+            {
+              "text": "Crossing altitude conflicts where both aircraft are level at their assigned altitudes.",
+              "is_correct": false
+            },
+            {
+              "text": "Instances where greater separation may be needed, such as non-standard formations and A380 operations.",
+              "is_correct": true
+            },
+            {
+              "text": "Time-based longitudinal separation between aircraft on the same airway.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "13-1-3": {
+      "items": [
+        {
+          "question_text": "Under 13-1-3, trial planning is used to evaluate the feasibility of removing a flight direction constraint. What does the paragraph identify as an example of an inappropriate constraint on flight direction?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-3(c) parenthetically defines a flight direction constraint as 'i.e., inappropriate altitude for direction of flight.' This is the only example given in the paragraph for this type of constraint.",
+          "choices": [
+            {
+              "text": "inappropriate altitude for direction of flight",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-3, which of the following is NOT one of the four uses for the trial plan capability when EDST is operational and sector priorities permit?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The four listed uses are: solutions to predicted conflicts, feasibility of granting user requests, removal of flight direction constraints, and removal of static restrictions. Weather deviation evaluation is not listed.",
+          "choices": [
+            {
+              "text": "Evaluating the feasibility of removing a static restriction for an aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Evaluating the feasibility of a weather deviation route around a convective cell.",
+              "is_correct": true
+            },
+            {
+              "text": "Evaluating solutions to predicted conflicts.",
+              "is_correct": false
+            },
+            {
+              "text": "Evaluating the feasibility of granting user requests.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-3, when should the trial plan capability be used?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-3 specifies two preconditions that must both be satisfied: EDST must be operational at the sector AND sector priorities must permit. Neither condition alone is sufficient, and the tool is not reserved for emergencies only.",
+          "choices": [
+            {
+              "text": "At any time regardless of sector workload, because trial planning is always the first priority.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when a conflict probe alert is already displayed and requires immediate resolution.",
+              "is_correct": false
+            },
+            {
+              "text": "When EDST is operational at the sector and when sector priorities permit.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the operations supervisor specifically directs the sector team to use it.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "13-1-4": {
+      "items": [
+        {
+          "question_text": "Under 13-1-4, a trial plan based on a user request shows no alerts. The controller learns the requested change would likely cause an adjacent sector to become overloaded with crossing traffic. What is the correct operational decision?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-4 directs controllers to make every effort to grant user requests when trial plans show no alerts, but includes an explicit exception: 'unless the change is likely to adversely affect operations at another sector.' Adjacent sector overload is exactly this exception case.",
+          "choices": [
+            {
+              "text": "The request must be granted because the trial plan showed no alerts, and sector workload in another area is not a valid reason to deny the request.",
+              "is_correct": false
+            },
+            {
+              "text": "The request may be declined or modified because the change is likely to adversely affect operations at another sector, even though the trial plan shows no alerts.",
+              "is_correct": true
+            },
+            {
+              "text": "The request must be granted but the controller should call the adjacent sector to warn them of the incoming traffic.",
+              "is_correct": false
+            },
+            {
+              "text": "The trial plan must be re-run with forecast winds disabled to get a more conservative alert picture before making any decision.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-4, what standard of effort is required when a user-request trial plan shows no alerts?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The paragraph uses the phrase 'every effort should be made,' which is stronger than 'may grant' but weaker than 'must grant.' It establishes a default toward granting while recognizing the cross-sector exception.",
+          "choices": [
+            {
+              "text": "The request may be granted at the controller's sole discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "No particular effort is required; the trial plan is advisory only and does not compel any action.",
+              "is_correct": false
+            },
+            {
+              "text": "The request must be granted without qualification.",
+              "is_correct": false
+            },
+            {
+              "text": "Every effort should be made to grant the user request.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "13-1-5": {
+      "items": [
+        {
+          "question_text": "Under 13-1-5, for which type of flight must sector teams post flight progress strips?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-5(f) requires strips for nonradar flights. 13-1-5(g) adds strips for any flight plan not contained in the EAS. 13-1-5(h) adds strips needed for safe or efficient operations. All three conditions independently trigger a posting requirement.",
+          "choices": [
+            {
+              "text": "Only flights that are both nonradar and not contained in the EAS simultaneously.",
+              "is_correct": false
+            },
+            {
+              "text": "Nonradar flights, flight plans not contained in the EAS, and any flight progress strips deemed necessary for safe or efficient operations.",
+              "is_correct": true
+            },
+            {
+              "text": "Only flights that have been highlighted on the ACL by a previous sector.",
+              "is_correct": false
+            },
+            {
+              "text": "Only flights assigned to the Special Posting Area.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-5, the Special Posting Area (SPA) should be used to group aircraft that have _____.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-5(e) says the SPA should be used to group aircraft that have special significance, with examples including aircraft to be sequenced, air refueling missions, and formations.",
+          "choices": [
+            {
+              "text": "special significance",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-5, what is the operational purpose of highlighting an entry on the ACL or DL?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-5(d) states highlighting must be used to indicate the flight requires an action or special attention. It is a visual cue to the sector team, not a formal handoff or coordination signal.",
+          "choices": [
+            {
+              "text": "To signal to the adjacent sector that a handoff is imminent.",
+              "is_correct": false
+            },
+            {
+              "text": "To mark a flight that has already been handed off and can be removed from the display.",
+              "is_correct": false
+            },
+            {
+              "text": "To indicate the flight requires an action or special attention.",
+              "is_correct": true
+            },
+            {
+              "text": "To record the exact time the aircraft entered the sector boundary.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-5, the Drop Track Delete option must be used in accordance with what?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-5(i) states the Drop Track Delete option must be used in accordance with facility directives. This is a locally governed function, not a blanket authorization.",
+          "choices": [
+            {
+              "text": "facility directives",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "13-1-1": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You are working a sector with EDST operational. A trainee wants to use the EDST trajectory display to provide radar separation between two aircraft that are converging at the same altitude, arguing that the predicted trajectories show them diverging before loss of separation. Another controller says EDST should not be used for current separation at all.",
+          "question_text": "What is the correct use of EDST in this situation?",
+          "choices": [
+            {
+              "text": "Use EDST trajectory predictions as the primary basis for radar separation when the automated separation minimum appears satisfied on the display.",
+              "is_correct": false
+            },
+            {
+              "text": "Use EDST for strategic planning and conflict prediction, but maintain radar separation using actual radar track data, because EDST is a strategic planning tool that predicts conflicts using current plans which may include unissued clearances.",
+              "is_correct": true
+            },
+            {
+              "text": "Ignore EDST entirely because it is only for historical analysis and post-event review of sector performance.",
+              "is_correct": false
+            },
+            {
+              "text": "Rely on EDST for separation because EDST is designed to replace the radar display for tactical control functions.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-1-1 Defines EDST as a strategic planning tool that predicts conflicts using current plan data. It is not a replacement for radar separation. The current plan may include clearances not yet issued, making it inappropriate for real-time separation decisions.",
+          "para_context": "DESCRIPTION"
+        },
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "A controller enters a planned route amendment into the automation but has not yet issued the clearance to the pilot. Is this amendment part of the current plan for EDST purposes?",
+          "choices": [
+            {
+              "text": "No. Unissued clearances are in a separate pending plan and are excluded from EDST trajectory modeling.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Only clearances the pilot has acknowledged on frequency are part of the current plan.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The current plan is what EAS predicts the aircraft will fly and may include clearances that have not yet been issued to the aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only if the amendment was entered more than five minutes before the aircraft reaches the amended route segment.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per the note to 13-1-1, the current plan for EDST use is what EAS predicts the aircraft will fly, and it may include clearances not yet issued to the aircraft. Unissued planned clearances are part of the modeled trajectory."
+        }
+      ]
+    },
+    "13-1-2": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A conflict probe alert fires for two aircraft at FL330. One aircraft is an A380 super heavy. The alert shows separation will be the standard 5 NM minimum. A controller says the alert is sufficient because conflict probe accounts for all separation requirements, so no additional buffer is needed.",
+          "question_text": "How should the A380 alert be evaluated?",
+          "choices": [
+            {
+              "text": "Treat the alert the same as any other because conflict probe is calibrated for all aircraft types including A380 operations.",
+              "is_correct": false
+            },
+            {
+              "text": "Suppress the alert because A380 separation requirements are handled by a separate automation system, not conflict probe.",
+              "is_correct": false
+            },
+            {
+              "text": "Evaluate the alert recognizing that conflict probe does not account for instances where greater separation may be needed, such as for A380 operations, and ensure appropriate wake turbulence or super-heavy separation is applied.",
+              "is_correct": true
+            },
+            {
+              "text": "Rely on the alert and reduce separation to the minimum shown because conflict probe guarantees standard separation is sufficient for all aircraft.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per the note to 13-1-2, conflict probe alerts are based on approved radar separation but do not account for instances where greater separation may be needed, including A380 operations. The controller must apply additional separation requirements beyond what the alert shows.",
+          "para_context": "CONFLICT DETECTION AND RESOLUTION"
+        },
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "A sector team has activated Stop Probe for an aircraft that will be handed off to a non-EDST tower facility. What is required before transfer of control?",
+          "choices": [
+            {
+              "text": "Coordinate the Stop Probe status with the tower supervisor because towers cannot see conflict probe status without verbal notification.",
+              "is_correct": false
+            },
+            {
+              "text": "Restart conflict probe before the handoff, because Stop Probe must always be restarted before any transfer of control.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the flight plan and re-file it as a VFR flight to avoid the Stop Probe restriction.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing additional regarding Stop Probe restart. The requirement to restart conflict probe before transfer does not apply to aircraft entering a non-EDST facility.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "The note to 13-1-2(e) explicitly exempts aircraft entering a non-EDST facility from the Stop Probe restart requirement before transfer of control."
+        }
+      ]
+    },
+    "13-1-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A pilot requests direct to the destination airport. EDST is operational and sector workload is moderate. Another controller says trial planning should only be used for conflict resolution, not for user requests. A third controller says trial planning may be used for user requests but the sector must be completely quiet before using it.",
+          "question_text": "Under what conditions may trial planning be used to evaluate this pilot request?",
+          "choices": [
+            {
+              "text": "Do not use trial planning at all because user requests must be evaluated based on controller judgment without automation assistance.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until all conflicts are resolved because trial planning may only be used after all alerts have been cleared from the sector.",
+              "is_correct": false
+            },
+            {
+              "text": "Use trial planning now because EDST is operational and sector priorities permit. Trial planning is specifically authorized for evaluating the feasibility of granting user requests.",
+              "is_correct": true
+            },
+            {
+              "text": "Use trial planning only if the pilot declares an emergency, because otherwise user requests are not within the scope of trial planning.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-1-3(B) explicitly lists the feasibility of granting user requests as one of the four uses for trial planning when EDST is operational and sector priorities permit.",
+          "para_context": "TRIAL PLANNING"
+        }
+      ]
+    },
+    "13-1-4": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which statement correctly summarizes the relationship between trial plan results and clearance decisions under 13-1-4?",
+          "choices": [
+            {
+              "text": "A trial plan that shows no alerts is sufficient to override any LOA restrictions on routing or altitudes.",
+              "is_correct": false
+            },
+            {
+              "text": "An alert-free trial plan compels the controller to grant the request immediately with no further evaluation.",
+              "is_correct": false
+            },
+            {
+              "text": "Trial plan results are advisory and have no bearing on whether the controller grants or denies a user request.",
+              "is_correct": false
+            },
+            {
+              "text": "An alert-free trial plan supports granting the user request but does not compel it; the controller must still assess whether the change would adversely affect another sector.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "13-1-4 Uses 'every effort should be made to grant' — a strong default toward approval — but includes the explicit exception for adverse effects on another sector. The trial plan informs but does not dictate the decision."
+        }
+      ]
+    },
+    "13-1-5": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "Your sector is working a mix of routine and special flights: two air refueling missions, a formation flight, three aircraft to be sequenced for the arrival meter, and several standard overflights. A trainee has left all flights in a single ACL list and says the SPA is only for emergencies. The trainee also has a nonradar flight in the sector with no strip posted.",
+          "question_text": "How should the sector team manage these flights under 13-1-5?",
+          "choices": [
+            {
+              "text": "Move all aircraft to the SPA so they are consolidated in one place regardless of significance, and skip strips for nonradar flights because the ACL already tracks them.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave all flights in the standard ACL because the SPA is reserved for emergency aircraft only, and nonradar flights do not require strips when EDST is operational.",
+              "is_correct": false
+            },
+            {
+              "text": "Group the air refueling missions, formation, and sequencing aircraft in the SPA because they have special significance, and post a flight progress strip for the nonradar flight.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the SPA only for the formation flight and ignore the others, and use an electronic-only notation for the nonradar flight since paper strips are no longer required.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-1-5(E) says the SPA should be used to group aircraft that have special significance, with air refueling missions, formations, and aircraft to be sequenced as listed examples. 13-1-5(f) requires posting strips for nonradar flights.",
+          "para_context": "THE AIRCRAFT LIST (ACL), DEPARTURE LIST (DL) AND FLIGHT DATA"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,509 @@
+{
+  "activities": {
+    "3-10-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "What must be included in the landing clearance when the aircraft reports at a position where it should be seen but has not been visually observed?",
+          "choices": [
+            {
+              "text": "Advise not in sight and restate the landing runway.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue only the landing clearance and omit the runway number to avoid confusion.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the aircraft to continue without a landing clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer the aircraft to approach for radar monitoring only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The landing clearance must include not in sight and a restatement of the landing runway."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this not-in-sight landing-clearance requirement correct?",
+          "question_text": "When an arriving aircraft reports at a position where it should be seen but has not been visually observed, you must advise the aircraft it is not in sight and restate the landing runway as part of the landing clearance.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the required landing-clearance content for an aircraft that should be seen but has not been visually observed."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this CTRD observation rule correct?",
+          "question_text": "If the aircraft is observed on the CTRD, you may treat the visually observed requirement as satisfied.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note states that aircraft observance on the CTRD satisfies the visually observed requirement."
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "One word in this landing clearance is incorrect. Tap it.",
+          "original_phrase": "NOT IN SIGHT RUNWAY TWO THREE CLEARED TO LAND.",
+          "display_text": "NOT IN VIEW RUNWAY TWO THREE CLEARED TO LAND",
+          "tokens": ["NOT", "IN", "VIEW", "RUNWAY", "TWO", "THREE", "CLEARED", "TO", "LAND"],
+          "error_index": 2,
+          "correct_token": "SIGHT",
+          "explanation": "The approved phraseology is NOT IN SIGHT, RUNWAY (number) CLEARED TO LAND."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "You cannot see the aircraft, but you can still issue the landing clearance on Runway 23. Build the transmission.",
+          "target_phrase": "NOT IN SIGHT RUNWAY TWO THREE CLEARED TO LAND"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An arriving aircraft reports a position where it should normally be seen, but you still do not have the aircraft visually. Another controller says you can clear it to land normally because the runway is obvious from the pilot's perspective. The aircraft is not yet observed visually by you or on the CTRD.",
+          "para_context": "If an arriving aircraft reports at a position where it should be seen but has not been visually observed, the landing clearance must advise that it is not in sight and must restate the landing runway. Observation on the CTRD satisfies the visually observed requirement.",
+          "choices": [
+            {
+              "text": "Issue the landing clearance with not in sight and restate the runway number.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue a normal landing clearance without the not-in-sight phrase because the runway is obvious to the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "Withhold the landing clearance until the aircraft reports the airport in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Switch the aircraft back to approach because tower cannot issue a landing clearance unless the aircraft is visually observed.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The landing clearance may still be issued, but it must include not in sight and the runway restatement when the aircraft has not been visually observed."
+        }
+      ]
+    },
+    "3-10-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "What should you not do even if it appears a pilot has violated a regulation on approach?",
+          "choices": [
+            {
+              "text": "Do not withhold a landing clearance indefinitely.",
+              "is_correct": true
+            },
+            {
+              "text": "Do not issue runway wind information.",
+              "is_correct": false
+            },
+            {
+              "text": "Do not provide any further assistance to the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "Do not tell the pilot the runway in use.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "An apparent violation does not justify withholding landing clearance indefinitely."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this landing-clearance withholding rule correct?",
+          "question_text": "If it appears a violation of Title 14 of the Code of Federal Regulations has been committed, you should not withhold a landing clearance indefinitely.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph specifically says not to withhold a landing clearance indefinitely even when an apparent regulatory violation seems to have occurred."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which possibility should be considered when an approach appears to involve a regulatory violation?",
+          "question_text": "Which possibility should you consider?",
+          "choices": [
+            {
+              "text": "The apparent violation might be the result of an emergency situation.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot is always attempting to bypass the landing sequence intentionally.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft has automatically canceled IFR and no landing clearance is needed.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot has waived further ATC assistance by deviating from the regulation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph explicitly warns that the apparent violation might actually result from an emergency situation."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this assistance requirement correct?",
+          "question_text": "If the approach appears to involve a regulatory violation, you must still assist the pilot to the extent possible.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "In any event, the pilot is to be assisted to the extent possible."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft appears to have committed a regulatory violation on approach. Another controller says the safest response is to withhold landing clearance until the pilot explains what happened, because clearing the aircraft to land would reward the violation. The aircraft may be managing an abnormal or emergency situation.",
+          "para_context": "Do not withhold a landing clearance indefinitely because an apparent violation might be the result of an emergency situation. In any event, assist the pilot to the extent possible.",
+          "choices": [
+            {
+              "text": "Do not withhold the landing clearance indefinitely and continue assisting the pilot to the extent possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Withhold the landing clearance until the pilot explains the apparent violation in full.",
+              "is_correct": false
+            },
+            {
+              "text": "Stop providing assistance until the pilot states there is no emergency.",
+              "is_correct": false
+            },
+            {
+              "text": "Switch the aircraft to another frequency so the apparent violation can be handled before landing.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule is not to use indefinite withholding of landing clearance as a response to an apparent violation; the pilot may need help because of an emergency."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-10-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What must be included in the landing clearance when an arriving aircraft should be seen but has not been visually observed?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The landing clearance must advise not in sight and restate the landing runway.",
+          "choices": [
+            {
+              "text": "Not in sight and the landing runway restated.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the landing clearance, without the runway number.",
+              "is_correct": false
+            },
+            {
+              "text": "A continue instruction instead of a landing clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "A transfer back to approach control.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What phrase begins the landing clearance in the not-visually-observed case?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The approved phraseology begins NOT IN SIGHT.",
+          "choices": [
+            {
+              "text": "Not in sight.",
+              "is_correct": true
+            },
+            {
+              "text": "Continue approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Report runway in sight.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must be restated in the landing clearance when the aircraft has not been visually observed?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The landing runway must be restated.",
+          "choices": [
+            {
+              "text": "The landing runway.",
+              "is_correct": true
+            },
+            {
+              "text": "The surface wind only.",
+              "is_correct": false
+            },
+            {
+              "text": "The previous approach frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft's full route of flight.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What satisfies the visually observed requirement in this paragraph?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Observation of the aircraft on the CTRD satisfies the visually observed requirement.",
+          "choices": [
+            {
+              "text": "Aircraft observance on the CTRD.",
+              "is_correct": true
+            },
+            {
+              "text": "Any pilot report from a position where the aircraft should be seen.",
+              "is_correct": false
+            },
+            {
+              "text": "A landing-light sighting by another controller off frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "A verbal assurance from approach control.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When does the not in sight landing-clearance phraseology apply?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It applies when the arriving aircraft reports at a position where it should be seen but has not been visually observed.",
+          "choices": [
+            {
+              "text": "When the aircraft reports at a position where it should be seen but has not been visually observed.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the aircraft is more than 5 miles from the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the pilot asks for a straight-in approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the ceiling is below basic VFR minima.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-10-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What should not be done even if it appears a violation of Title 14 of the Code of Federal Regulations has been committed?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The landing clearance should not be withheld indefinitely.",
+          "choices": [
+            {
+              "text": "Do not withhold a landing clearance indefinitely.",
+              "is_correct": true
+            },
+            {
+              "text": "Do not issue surface wind.",
+              "is_correct": false
+            },
+            {
+              "text": "Do not assist the pilot further.",
+              "is_correct": false
+            },
+            {
+              "text": "Do not provide runway information.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What possible explanation does the paragraph give for an apparent violation on approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The apparent violation might actually be the result of an emergency situation.",
+          "choices": [
+            {
+              "text": "It might be the result of an emergency situation.",
+              "is_correct": true
+            },
+            {
+              "text": "It always means the pilot has canceled IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "It always means the pilot ignored the ATIS.",
+              "is_correct": false
+            },
+            {
+              "text": "It proves the pilot no longer wants ATC assistance.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What should ATC do in any event when an approach appears to involve a regulatory violation?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "ATC should assist the pilot to the extent possible.",
+          "choices": [
+            {
+              "text": "Assist the pilot to the extent possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Stop providing assistance until the pilot explains the event.",
+              "is_correct": false
+            },
+            {
+              "text": "Hold the aircraft outside the airspace until a supervisor takes over.",
+              "is_correct": false
+            },
+            {
+              "text": "Defer all help until after the pilot lands and phones the tower.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "May a landing clearance be withheld indefinitely as a way to address an apparent regulatory violation on approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "No. The paragraph explicitly prohibits indefinite withholding of landing clearance in that situation.",
+          "choices": [
+            {
+              "text": "No.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, if the tower has not confirmed there is no emergency.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the violation appears intentional.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the pilot has not yet reported the runway in sight.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What principle does this paragraph reject when an apparent violation is observed on approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It rejects using indefinite withholding of landing clearance as a response to the apparent violation.",
+          "choices": [
+            {
+              "text": "Using indefinite withholding of landing clearance as a response to the apparent violation.",
+              "is_correct": true
+            },
+            {
+              "text": "Providing help during a possible emergency.",
+              "is_correct": false
+            },
+            {
+              "text": "Issuing landing clearance when appropriate separation exists.",
+              "is_correct": false
+            },
+            {
+              "text": "Monitoring the approach closely while assisting the pilot.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

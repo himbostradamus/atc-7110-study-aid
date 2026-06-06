@@ -1,0 +1,107 @@
+{
+  "questions": {
+    "2-7-1": {
+      "items": [
+        {
+          "question_text": "Under 2-7-1, current altimeter settings must be obtained from _____ instruments or directly from weather reporting stations.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 2-7-1a, current altimeter settings must be obtained from 'direct-reading' instruments or directly from weather reporting stations. This ensures accurate, real-time data.",
+          "choices": [
+            {"text": "direct-reading", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "Under 2-7-1, USAF/USA controllers must use what term for altimeter settings reported or received as estimated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 2-7-1c, USAF/USA use the term 'Estimated Altimeter' for altimeter settings reported or received as estimated. This is a military-specific terminology requirement.",
+          "choices": [
+            {"text": "Estimated Altimeter.", "is_correct": true},
+            {"text": "Approximate Altimeter.", "is_correct": false},
+            {"text": "Altimeter Approximately.", "is_correct": false},
+            {"text": "Unofficial Altimeter.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-7-2": {
+      "items": [
+        {
+          "question_text": "Under 2-7-2, an en route controller must issue the altimeter setting to each aircraft at least _____ time while operating in the controller's area of jurisdiction.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 2-7-2c1, issue the altimeter setting to en route aircraft at least 'one' time while operating in your area of jurisdiction. Issue the setting for the nearest reporting station along the aircraft's route of flight.",
+          "choices": [
+            {"text": "one", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "Under 2-7-2, a terminal controller issues an altimeter setting for a location other than the aircraft's departure or destination airport. The controller must identify the _____ of the altimeter setting.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 2-7-2a, terminal controllers must identify the 'source' of an altimeter setting when issued for a location other than the aircraft's departure or destination airport. En route must identify the source for all settings.",
+          "choices": [
+            {"text": "source", "is_correct": true}
+          ]
+        }
+      ]
+    },
+    "2-7-3": {
+      "items": [
+        {
+          "question_text": "Under 2-7-3, high barometric pressure procedures are triggered when the barometric pressure is greater than _____ inches mercury.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 2-7-3, high barometric pressure procedures apply when barometric pressure is greater than 31.00 inches mercury (31\" Hg). This triggers specific phraseology for arrivals and departures.",
+          "choices": [
+            {"text": "31.00", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "Under 2-7-3, when high barometric pressure procedures are in effect, en route/arrival controllers must advise pilots to leave the altimeter set to _____ until reaching the final approach fix.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 2-7-3a, advise pilots to leave altimeter set to '31.00' (stated as 'three one zero zero') until reaching the final approach fix during high barometric pressure conditions.",
+          "choices": [
+            {"text": "31.00", "is_correct": true}
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "2-7-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "situation": "The barometric pressure at your facility has risen to 31.05 inches. A departing aircraft, Delta 123, is climbing and has a mandatory crossing altitude of 1,200 feet AGL before continuing higher.",
+          "para_context": "For departures under high barometric pressure procedures, advise pilots to set 31.00 before any mandatory or crossing altitude, or 1,500 feet AGL, whichever is lower.",
+          "instruction": "Under 2-7-3, what phraseology must you issue to Delta 123?",
+          "explanation": "Per 2-7-3b, departures must be told to set the altimeter to 31.00 prior to reaching any mandatory/crossing altitude or 1,500 feet AGL, whichever is lower. The values to compare are the mandatory crossing altitude and 1,500 feet AGL. Here, 1,200 feet is lower, so the instruction must direct the pilot to set 31.00 prior to reaching 1,200 feet AGL.",
+          "choices": [
+            {"text": "Issue the high barometric pressure phraseology directing the pilot to set 31.00 prior to reaching 1,200 feet AGL.", "is_correct": true},
+            {"text": "Issue the standard altimeter setting without special phraseology since the aircraft is below 1,500 feet.", "is_correct": false},
+            {"text": "Issue the high barometric pressure arrival phraseology since all aircraft below FL180 use the same procedure.", "is_correct": false},
+            {"text": "No special phraseology is needed; the pilot will see the high pressure on their instruments.", "is_correct": false}
+          ]
+        }
+      ]
+    }
+  }
+}

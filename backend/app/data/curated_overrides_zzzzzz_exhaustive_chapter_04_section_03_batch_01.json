@@ -1,0 +1,1388 @@
+{
+  "activities": {
+    "4-3-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may the word takeoff be used in ATC phraseology?",
+          "choices": [
+            {
+              "text": "Only to actually clear an aircraft for takeoff or to cancel a takeoff clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time the transmission concerns departure from the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft begins its takeoff roll.",
+              "is_correct": false
+            },
+            {
+              "text": "Never, because depart and fly always replace it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-3-1 reserves the term takeoff for the actual takeoff clearance or cancellation of that clearance."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this phraseology requirement correct?",
+          "question_text": "You must not use the term takeoff except to actually clear an aircraft for takeoff or to cancel a takeoff clearance.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the core phraseology rule in 4-3-1."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which transmission avoids improper takeoff terminology?",
+          "question_text": "Which transmission is correct?",
+          "choices": [
+            {
+              "text": "Depart northbound.",
+              "is_correct": true
+            },
+            {
+              "text": "Takeoff northbound.",
+              "is_correct": false
+            },
+            {
+              "text": "Takeoff runway heading.",
+              "is_correct": false
+            },
+            {
+              "text": "Takeoff direct Springfield.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the term is not part of an actual takeoff clearance or cancellation, use terms such as depart, departure, or fly."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "You need to tell a pilot to follow runway heading after departure. Another controller suggests saying takeoff runway heading because the aircraft is still at the departure end of the runway.",
+          "para_context": "Use terms such as depart, departure, or fly instead of takeoff except for the actual takeoff clearance or its cancellation.",
+          "choices": [
+            {
+              "text": "Use a transmission such as fly runway heading rather than takeoff runway heading.",
+              "is_correct": true
+            },
+            {
+              "text": "Use takeoff runway heading because any departure instruction may include the word takeoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Avoid any heading instruction until the aircraft is airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "Use departure only if the pilot requests nonstandard phraseology.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph says to use terms such as depart, departure, or fly when the word takeoff is not being used in the actual clearance or cancellation."
+        }
+      ]
+    },
+    "4-3-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When an IFR departure clearance is relayed through an FSS or dispatcher, what must always be included?",
+          "choices": [
+            {
+              "text": "The airport of departure.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot's requested altitude in plain language only.",
+              "is_correct": false
+            },
+            {
+              "text": "The destination weather and alternate requirements.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure controller's initials and facility name.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When a departure clearance is relayed by an FSS, dispatcher, or similar intermediary, the airport of departure must always be included."
+        },
+        {
+          "activity_type": "readback_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "The controller issued this clearance limit. Which pilot readback is correct?",
+          "clearance": "CLEARED TO REYNOLDS AIRPORT.",
+          "choices": [
+            {
+              "text": "Cleared to Reynolds airport, Cessna Three Alpha Bravo.",
+              "is_correct": true
+            },
+            {
+              "text": "Cleared to Reynolds, Cessna Three Alpha Bravo.",
+              "is_correct": false
+            },
+            {
+              "text": "Reynolds cleared, Cessna Three Alpha Bravo.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared Reynolds field, Cessna Three Alpha Bravo.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the clearance limit is an airport, the word airport must follow the airport name."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which clearance-limit phrase is correct?",
+          "question_text": "Which transmission is correct?",
+          "choices": [
+            {
+              "text": "Cleared to Gordonsville V O R.",
+              "is_correct": true
+            },
+            {
+              "text": "Cleared to Gordonsville.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared V O R Gordonsville.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared to Gordonsville airport.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the clearance limit is a NAVAID and the type is known, the type must follow the NAVAID name."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "You are issuing an IFR departure clearance from an airport without ATC service but within a Class E surface area. You need the aircraft to turn after takeoff for separation. Another controller says you can just put the turn in the clearance and let the pilot object later if it does not work.",
+          "para_context": "At locations without Airport Traffic Control Service but within a Class E surface area, obtain or solicit the pilot's concurrence concerning a turn or heading before issuing it in a clearance.",
+          "choices": [
+            {
+              "text": "Obtain or solicit the pilot's concurrence before issuing the turn or heading in the clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the turn without asking, because IFR departure clearances always override pilot concerns.",
+              "is_correct": false
+            },
+            {
+              "text": "Avoid any departure heading and wait until the aircraft is airborne to issue vectors below the MIA.",
+              "is_correct": false
+            },
+            {
+              "text": "Convert the clearance to a VFR release automatically.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph requires pilot concurrence for a turn or heading issued in that Class E surface area departure case."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this no-turn requirement correct?",
+          "question_text": "You must not specify direction of takeoff or turn after takeoff at all other airports; if an initial heading is necessary, it applies only within controlled airspace.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "At airports outside the listed ATC-service and Class E surface-area cases, the rule says not to specify direction of takeoff or turn after takeoff."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Does this ODP application statement match the rule?",
+          "question_text": "This ODP-in-clearance requirement applies when an ODP has been published and pilot compliance is necessary to ensure separation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When pilot compliance with a published ODP is necessary to ensure separation, the ODP is included in the clearance."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "A SID contains published crossing restrictions and you must issue an interim top altitude of FL180. Build the altitude phrase.",
+          "target_phrase": "CLIMB VIA SID EXCEPT MAINTAIN FLIGHT LEVEL ONE EIGHT ZERO"
+        }
+      ]
+    },
+    "4-3-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may abbreviated departure clearance procedures be used?",
+          "choices": [
+            {
+              "text": "When the filed route has not been changed and the listed route-information conditions are met.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the controller wants to shorten the clearance, even if the route changed.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for VFR departures that will pick up IFR later.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the departure airport is towered and radar equipped.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Abbreviated departure clearances require, among other things, that the filed route has not been changed and that the other route-information conditions are satisfied."
+        },
+        {
+          "activity_type": "readback_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "The controller issued this abbreviated departure clearance item. Which pilot readback is correct?",
+          "clearance": "MAINTAIN NINER THOUSAND.",
+          "choices": [
+            {
+              "text": "Maintain niner thousand, United Four Sixty-One.",
+              "is_correct": true
+            },
+            {
+              "text": "Climb via SID, United Four Sixty-One.",
+              "is_correct": false
+            },
+            {
+              "text": "Expect niner thousand, United Four Sixty-One.",
+              "is_correct": false
+            },
+            {
+              "text": "As filed, United Four Sixty-One.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The assigned altitude must be stated in the abbreviated clearance."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which abbreviated departure phrase is correct when no route changes are required?",
+          "question_text": "Which phrase is correct?",
+          "choices": [
+            {
+              "text": "Cleared to Reynolds Airport, David Two Departure, Kingham Transition; then, as filed.",
+              "is_correct": true
+            },
+            {
+              "text": "Cleared as filed to Reynolds Airport, David Two Departure only if convenient.",
+              "is_correct": false
+            },
+            {
+              "text": "David Two Departure to Reynolds Airport as filed transition Kingham.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared to Reynolds Airport via David Two Departure unless revised later.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When no changes are required, the abbreviated clearance states the destination airport, SID and transition as appropriate, then as filed."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "No route changes are required. The aircraft is cleared to Reynolds Airport via the David Two Departure, Kingham Transition, then as filed, and must climb via the SID. Build the abbreviated departure clearance.",
+          "target_phrase": "CLEARED TO REYNOLDS AIRPORT DAVID TWO DEPARTURE KINGHAM TRANSITION THEN AS FILED CLIMB VIA SID"
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Does this FRC application statement match the rule?",
+          "question_text": "This full-route-clearance requirement applies when FRC or FRC followed by a fix appears in the remarks.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "FRC means Full Route Clearance Necessary, and the controller issuing the ATC clearance must issue that full route clearance."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this abbreviated-clearance limitation correct?",
+          "question_text": "You must not use abbreviated departure clearance procedures when a pilot requests a detailed clearance or when the operation requires special military handling such as ALTRV operations.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-3-3 excludes abbreviated procedures from pilot-requested detailed clearances and certain military operations requiring special handling."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "Company operations changed the filed route before departure, but the pilot calls expecting a normal abbreviated clearance. Another controller says the pilot can take the abbreviated clearance anyway and sort out the difference after departure.",
+          "para_context": "Abbreviated departure clearance procedures depend on the filed route not having been changed before departure. If FRC or a route revision applies, the controller issuing the clearance must provide the needed full route information.",
+          "choices": [
+            {
+              "text": "Issue the necessary full route information instead of relying on the abbreviated clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the abbreviated clearance anyway because the pilot can advise unable after takeoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Delete the route from the clearance and issue only the altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to accept the abbreviated clearance and verify the route with center later.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Once the route has changed, the abbreviated clearance assumptions no longer hold and the necessary route information must be issued."
+        }
+      ]
+    },
+    "4-3-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What must untowered IFR departures receive?",
+          "choices": [
+            {
+              "text": "A departure release, a hold for release, or a release time.",
+              "is_correct": true
+            },
+            {
+              "text": "Only an IFR clearance void time, with no other release control option.",
+              "is_correct": false
+            },
+            {
+              "text": "A visual approach clearance before taxi.",
+              "is_correct": false
+            },
+            {
+              "text": "A self-release instruction whenever no radar traffic is visible.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Departures from an airport without an operating control tower must be issued either a departure release, a hold for release, or a release time."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this hold-for-release requirement correct?",
+          "question_text": "Hold for release instructions must be used to tell the pilot or controller that the departure clearance is not valid until additional instructions are received.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the stated purpose of hold for release instructions."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "You need to stop an untowered IFR departure from leaving yet and you expect a 15-minute departure delay. Build the hold-for-release instruction.",
+          "target_phrase": "NOVEMBER FIVE TWO DELTA HOLD FOR RELEASE EXPECT ONE FIVE MINUTES DEPARTURE DELAY"
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which additional step is required with a specified-clock-time release?",
+          "question_text": "Which action is correct?",
+          "choices": [
+            {
+              "text": "Issue a time check to the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue a clearance void time automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the release until flight service confirms the pilot's clock.",
+              "is_correct": false
+            },
+            {
+              "text": "No additional action is required regardless of how the release time is stated.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A facility issuing a release time to a pilot must issue a time check, except that a specified number of minutes does not require one."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A call for release program is in effect. An aircraft's assigned release time is 1410. Another controller says the aircraft can depart at 1406 because it is only a few minutes early and the receiving facility will absorb it.",
+          "para_context": "When CFR is in effect, release the aircraft so it becomes airborne within a window that extends from 2 minutes prior to 1 minute after the assigned time unless otherwise coordinated.",
+          "choices": [
+            {
+              "text": "Do not release it at 1406 unless other coordination changes the window.",
+              "is_correct": true
+            },
+            {
+              "text": "Release it because any time within 5 minutes of the assigned time is acceptable.",
+              "is_correct": false
+            },
+            {
+              "text": "Release it only if the pilot reads back the assigned time exactly.",
+              "is_correct": false
+            },
+            {
+              "text": "Convert the aircraft automatically to a release time rather than CFR handling.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The CFR window runs from 2 minutes before to 1 minute after the assigned time unless otherwise coordinated."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this clearance-void-time condition handled correctly?",
+          "question_text": "If you issue a clearance void time at an airport without an operating control tower, provide alternative instructions requiring the pilot to advise ATC of intentions no later than 30 minutes after the void time if not airborne.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-3-4 requires those alternative instructions with a clearance void time at an untowered airport."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Does this expired-void-time statement match the rule?",
+          "question_text": "This expired-void-time effect applies after the void time passes: authority to depart IFR is withdrawn until a new release is issued and acknowledged, but the departure clearance and IFR flight plan are not canceled.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "An expired clearance void time withdraws IFR departure authority until a new release is issued and acknowledged, but it does not cancel the departure clearance or IFR flight plan."
+        }
+      ]
+    },
+    "4-3-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the rule if a ground stop applicable to an aircraft is in effect?",
+          "choices": [
+            {
+              "text": "Do not release the aircraft without approval from the originator of the ground stop.",
+              "is_correct": true
+            },
+            {
+              "text": "Release the aircraft if the next facility verbally accepts it.",
+              "is_correct": false
+            },
+            {
+              "text": "Release the aircraft if the pilot accepts a departure delay.",
+              "is_correct": false
+            },
+            {
+              "text": "Convert the aircraft to a VFR departure automatically.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A ground-stopped aircraft may not be released without approval from the originator of the ground stop."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this ground-stop rule correct?",
+          "question_text": "Do not release an aircraft if a ground stop applicable to that aircraft is in effect without approval from the originator of the ground stop.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the full rule in paragraph 4-3-5."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which approval source is correct for lifting a ground stop on one aircraft?",
+          "question_text": "Whose approval is required?",
+          "choices": [
+            {
+              "text": "The originator of the ground stop.",
+              "is_correct": true
+            },
+            {
+              "text": "Any adjacent facility that can accept the handoff.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot in command alone.",
+              "is_correct": false
+            },
+            {
+              "text": "The tower supervisor at the departure airport only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Approval must come from the originator of the ground stop."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is ready for release, and a ground stop that applies to it is still active. Another facility says they can take the aircraft immediately and asks you to launch it to avoid further delay, but the originator of the ground stop has not approved any exception.",
+          "para_context": "Do not release an aircraft if a ground stop applicable to that aircraft is in effect, without the approval of the originator of the ground stop.",
+          "choices": [
+            {
+              "text": "Do not release the aircraft until the originator approves it.",
+              "is_correct": true
+            },
+            {
+              "text": "Release the aircraft because the receiving facility has verbally accepted responsibility.",
+              "is_correct": false
+            },
+            {
+              "text": "Release the aircraft if the pilot agrees to depart VFR instead.",
+              "is_correct": false
+            },
+            {
+              "text": "Release the aircraft as long as the delay was caused by weather instead of traffic management.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The originator's approval is required before release."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "4-3-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When may the word takeoff be used in ATC phraseology?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Takeoff is reserved for the actual takeoff clearance or cancellation of that clearance.",
+          "choices": [
+            {
+              "text": "Only to actually clear an aircraft for takeoff or to cancel a takeoff clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time the instruction concerns departure.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft is airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "Never.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which word may be used instead of takeoff when giving a heading or route instruction in a departure clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph says to use words such as depart, departure, or fly.",
+          "choices": [
+            {
+              "text": "Fly.",
+              "is_correct": true
+            },
+            {
+              "text": "Launch.",
+              "is_correct": false
+            },
+            {
+              "text": "Roll.",
+              "is_correct": false
+            },
+            {
+              "text": "Rotate.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "In which transmission is use of the word takeoff appropriate?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The term may be used to clear an aircraft for takeoff or to cancel a takeoff clearance.",
+          "choices": [
+            {
+              "text": "Cancel takeoff clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Takeoff runway heading.",
+              "is_correct": false
+            },
+            {
+              "text": "Takeoff northbound.",
+              "is_correct": false
+            },
+            {
+              "text": "Takeoff direct Springfield.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which transmission best follows paragraph 4-3-1 when no actual takeoff clearance is being issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Use depart, departure, or fly rather than takeoff in that context.",
+          "choices": [
+            {
+              "text": "Fly runway heading.",
+              "is_correct": true
+            },
+            {
+              "text": "Takeoff runway heading.",
+              "is_correct": false
+            },
+            {
+              "text": "Takeoff and fly runway heading.",
+              "is_correct": false
+            },
+            {
+              "text": "Takeoff departure runway heading.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When an IFR departure clearance is relayed through an FSS or dispatcher, what must always be included?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The airport of departure must always be included in that relayed clearance.",
+          "choices": [
+            {
+              "text": "The airport of departure.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot's fuel endurance.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure controller's initials.",
+              "is_correct": false
+            },
+            {
+              "text": "A full weather briefing.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must follow the airport name when the clearance limit is an airport?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The word airport must follow the airport name.",
+          "choices": [
+            {
+              "text": "Airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Field.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminal.",
+              "is_correct": false
+            },
+            {
+              "text": "Destination.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How should the destination be handled for Air Force One operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "For AF1 operations, do not specify the destination airport; the phrase is destination as filed.",
+          "choices": [
+            {
+              "text": "Use destination as filed and do not specify the destination airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Always specify the destination airport twice for emphasis.",
+              "is_correct": false
+            },
+            {
+              "text": "Use cleared to destination airport as filed.",
+              "is_correct": false
+            },
+            {
+              "text": "Omit the route and identify only the runway assignment.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What happens if an aircraft is vectored off a published SID or ODP?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "interpretation",
+          "generation_source": "curated",
+          "explanation": "That vector cancels the DP and ATC becomes responsible for terrain and obstruction separation.",
+          "choices": [
+            {
+              "text": "The DP is canceled and ATC becomes responsible for terrain and obstruction separation.",
+              "is_correct": true
+            },
+            {
+              "text": "The DP remains in effect until the aircraft reaches the en route structure.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot keeps obstacle responsibility, but only until leaving the runway heading.",
+              "is_correct": false
+            },
+            {
+              "text": "The vector affects only route compliance, not terrain or obstruction responsibility.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At a location without ATC service but within a Class E surface area, what must be done before issuing a turn or heading in the clearance if one is necessary?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The pilot's concurrence must be obtained or solicited before issuing the turn or heading.",
+          "choices": [
+            {
+              "text": "Obtain or solicit the pilot's concurrence.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the turn and wait to see if the pilot objects.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the turn only after takeoff clearance is canceled.",
+              "is_correct": false
+            },
+            {
+              "text": "Convert the departure to special VFR automatically.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At all other airports, what should not be specified after takeoff?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Do not specify direction of takeoff or turn after takeoff at all other airports.",
+          "choices": [
+            {
+              "text": "Direction of takeoff or turn after takeoff.",
+              "is_correct": true
+            },
+            {
+              "text": "An initial heading that applies only within controlled airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure airport in a relayed clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "A SID name and transition.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What phrase is used when a SID contains published crossing restrictions and you must issue an interim altitude?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "The phrase is climb via SID except maintain (altitude).",
+          "choices": [
+            {
+              "text": "Climb via SID except maintain (altitude).",
+              "is_correct": true
+            },
+            {
+              "text": "Maintain (altitude) and disregard all SID restrictions.",
+              "is_correct": false
+            },
+            {
+              "text": "Climb unrestricted via SID.",
+              "is_correct": false
+            },
+            {
+              "text": "Cross all fixes at published altitude except maintain.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What is the first route-related condition for using an abbreviated departure clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "The filed route must not have been changed before departure.",
+          "choices": [
+            {
+              "text": "The filed route has not been changed before departure.",
+              "is_correct": true
+            },
+            {
+              "text": "The route has been amended only verbally, not in the strip system.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot agrees to ignore route changes until airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "The route has changed, but only after engine start.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must all ATC facilities concerned have before an abbreviated departure clearance may be used?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "All concerned facilities must have sufficient route-of-flight information to exercise control responsibilities.",
+          "choices": [
+            {
+              "text": "Sufficient route-of-flight information to exercise their control responsibilities.",
+              "is_correct": true
+            },
+            {
+              "text": "A common radio frequency with the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "A release time already coordinated with center.",
+              "is_correct": false
+            },
+            {
+              "text": "The same preferred route database revision.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When the flight will depart IFR, what information must be relayed between the facilities concerned before departure?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Destination airport information must be relayed between the facilities concerned prior to departure.",
+          "choices": [
+            {
+              "text": "Destination airport information.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft's fuel endurance.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure runway braking action.",
+              "is_correct": false
+            },
+            {
+              "text": "The en route altimeter setting sequence.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does FRC mean on a strip or in remarks?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "FRC means Full Route Clearance Necessary.",
+          "choices": [
+            {
+              "text": "Full Route Clearance Necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Flight Release Coordination complete.",
+              "is_correct": false
+            },
+            {
+              "text": "Filed Route Confirmed.",
+              "is_correct": false
+            },
+            {
+              "text": "Fix Revision Coordination.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must still be stated in an abbreviated departure clearance even when no route change is required?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The assigned altitude must still be stated.",
+          "choices": [
+            {
+              "text": "The assigned altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the pilot's requested altitude if it differs from cruise.",
+              "is_correct": false
+            },
+            {
+              "text": "No altitude if the route is unchanged.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the expected altitude and not the assigned altitude.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When should abbreviated departure procedures not be used?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "They should not be used for pilot-requested detailed clearances or military operations requiring special handling such as ALTRV operations.",
+          "choices": [
+            {
+              "text": "When the pilot requests a detailed clearance or the operation requires special military handling.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever a SID is assigned.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the destination airport is outside controlled airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever route changes are not required.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What additional release control must an untowered IFR departure receive?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Untowered IFR departures must receive either a departure release, a hold for release, or a release time.",
+          "choices": [
+            {
+              "text": "A departure release, a hold for release, or a release time.",
+              "is_correct": true
+            },
+            {
+              "text": "Only a clearance void time.",
+              "is_correct": false
+            },
+            {
+              "text": "Only a VFR release and an airborne IFR pickup plan.",
+              "is_correct": false
+            },
+            {
+              "text": "No additional release control if the field is in Class E surface area.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does hold for release tell the pilot or controller?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "It means the departure clearance is not valid until additional instructions are received.",
+          "choices": [
+            {
+              "text": "The departure clearance is not valid until additional instructions are received.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft must depart within a one-minute CFR window.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot may depart at any time after reading back the release.",
+              "is_correct": false
+            },
+            {
+              "text": "The clearance automatically voids if not airborne within 30 minutes.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When issuing a release time using a specified clock time, what else must be given?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "A time check must be issued.",
+          "choices": [
+            {
+              "text": "A time check.",
+              "is_correct": true
+            },
+            {
+              "text": "A clearance void time automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "A mandatory radar handoff point.",
+              "is_correct": false
+            },
+            {
+              "text": "A new proposed departure route.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When CFR is in effect, what is the normal airborne window around the assigned time?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The normal CFR window begins 2 minutes before and ends 1 minute after the assigned time unless otherwise coordinated.",
+          "choices": [
+            {
+              "text": "From 2 minutes prior to 1 minute after the assigned time.",
+              "is_correct": true
+            },
+            {
+              "text": "From 5 minutes prior to 5 minutes after the assigned time.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly at the assigned time only.",
+              "is_correct": false
+            },
+            {
+              "text": "From 1 minute prior to 2 minutes after the assigned time.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What additional instruction must accompany a clearance void time at an airport without an operating control tower?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Alternative instructions must require the pilot to advise ATC of intentions no later than 30 minutes after the void time if not airborne.",
+          "choices": [
+            {
+              "text": "Require the pilot to advise ATC of intentions no later than 30 minutes after the void time if not airborne.",
+              "is_correct": true
+            },
+            {
+              "text": "Require the pilot to cancel the IFR flight plan immediately if not airborne by the void time.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the pilot to depart VFR if possible after the void time expires.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the pilot to contact flight service within 5 minutes only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the effect of an expired clearance void time?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "It withdraws the pilot's authority to depart IFR until a new release is issued and acknowledged; it does not cancel the departure clearance or IFR flight plan.",
+          "choices": [
+            {
+              "text": "It withdraws authority to depart IFR until a new release is issued and acknowledged, but does not cancel the departure clearance or IFR flight plan.",
+              "is_correct": true
+            },
+            {
+              "text": "It cancels the IFR flight plan automatically and requires a complete refiling.",
+              "is_correct": false
+            },
+            {
+              "text": "It cancels the departure clearance but leaves IFR departure authority in effect for 30 more minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "It converts the clearance automatically to a release time.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What is required before releasing an aircraft affected by a ground stop?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Approval is required from the originator of the ground stop.",
+          "choices": [
+            {
+              "text": "Approval from the originator of the ground stop.",
+              "is_correct": true
+            },
+            {
+              "text": "Acceptance by the next facility only.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilot agreement to accept a departure delay.",
+              "is_correct": false
+            },
+            {
+              "text": "A tower supervisor's verbal release.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a ground stop applicable to the aircraft is in effect, what may ATC not do without the originator's approval?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The aircraft may not be released without the originator's approval.",
+          "choices": [
+            {
+              "text": "Release the aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Assign an expected departure delay.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate with the adjacent facility.",
+              "is_correct": false
+            },
+            {
+              "text": "Advise the pilot of the ground stop.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Whose approval controls an exception to the ground stop for that aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The originator of the ground stop controls the exception.",
+          "choices": [
+            {
+              "text": "The originator of the ground stop.",
+              "is_correct": true
+            },
+            {
+              "text": "Any facility willing to accept the handoff.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot in command.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure airport's line supervisor.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which action matches paragraph 4-3-5 when the ground stop remains active and no exception has been approved?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Without the originator's approval, the aircraft is not released.",
+          "choices": [
+            {
+              "text": "Keep the aircraft on the ground.",
+              "is_correct": true
+            },
+            {
+              "text": "Release the aircraft because the receiving facility agreed to accept it.",
+              "is_correct": false
+            },
+            {
+              "text": "Release the aircraft VFR automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a release time for later in the same hour without further approval.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

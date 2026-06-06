@@ -1,0 +1,1226 @@
+{
+  "activities": {
+    "4-3-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When aircraft choose to take delay on the ground before departure, how should departure clearances normally be issued?",
+          "choices": [
+            {
+              "text": "In the order the original clearance requests were made, if practicable.",
+              "is_correct": true
+            },
+            {
+              "text": "In whatever order best favors the fastest aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "In reverse order so late requests are not penalized.",
+              "is_correct": false
+            },
+            {
+              "text": "By requested cruise altitude, highest first.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-3-6 says to issue departure clearances in the order the requests were originally made if practicable."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this sequencing requirement correct?",
+          "question_text": "You must sequence aircraft taking delay on the ground in the order their clearance requests were originally made if practicable.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph preserves the original request order when doing so is practicable."
+        },
+        {
+          "activity_type": "sequence_steps",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Put these delayed departures in the order their clearances should normally be issued.",
+          "steps": [
+            {
+              "id": "alpha",
+              "text": "Cessna Three Alpha Bravo requested clearance first."
+            },
+            {
+              "id": "delta",
+              "text": "Delta Twenty requested clearance second."
+            },
+            {
+              "id": "jetlink",
+              "text": "JetLink Forty requested clearance third."
+            }
+          ],
+          "correct_order": [
+            "alpha",
+            "delta",
+            "jetlink"
+          ],
+          "explanation": "When practicable, delayed departures are cleared in the order the original requests were made."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Three IFR aircraft elected to take delay on the ground. The first requester is still ready to go, but another controller wants to clear a later requester first because it is a turbofan and can climb faster.",
+          "para_context": "When aircraft elect to take delay on the ground before departure, issue departure clearances in the order in which the requests were originally made if practicable.",
+          "choices": [
+            {
+              "text": "Issue the clearance to the aircraft that requested it first, if practicable.",
+              "is_correct": true
+            },
+            {
+              "text": "Clear the faster aircraft first because climb rate takes priority over request order.",
+              "is_correct": false
+            },
+            {
+              "text": "Reorder the sequence by requested altitude rather than request time.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for all aircraft to call back before deciding any sequence.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule preserves the original clearance-request order when doing so is practicable."
+        }
+      ]
+    },
+    "4-3-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "Who must be told about anticipated departure delays?",
+          "choices": [
+            {
+              "text": "Approach control facilities and/or towers.",
+              "is_correct": true
+            },
+            {
+              "text": "Only flight service.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the destination ARTCC.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the affected pilots after they are airborne.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-3-7 requires informing approach control facilities and/or towers of anticipated departure delays."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which coordination target is correct for anticipated departure delays?",
+          "question_text": "Which group must be informed?",
+          "choices": [
+            {
+              "text": "Approach control facilities and/or towers.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the airport authority and airline dispatcher.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the overflight sectors that might later work the aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the ground controller if the airport is towered.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The coordination target is explicitly approach control facilities and/or towers."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this departure-delay requirement correct?",
+          "question_text": "You must inform approach control facilities and/or towers of anticipated departure delays.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the complete requirement in paragraph 4-3-7."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A departure bank will be held for 20 minutes because of release restrictions. Another controller says there is no need to coordinate yet because the aircraft are still on the ground.",
+          "para_context": "Inform approach control facilities and/or towers of anticipated departure delays.",
+          "choices": [
+            {
+              "text": "Inform the affected approach control facilities and/or towers of the anticipated delay.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the first delayed aircraft calls for takeoff before coordinating.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate only if a pilot specifically asks about the delay.",
+              "is_correct": false
+            },
+            {
+              "text": "Use a NOTAM instead of controller-to-controller coordination.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The requirement is to inform the affected facilities about anticipated departure delays."
+        }
+      ]
+    },
+    "4-3-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Absent an automation exception, when must you coordinate with the receiving facility before departure?",
+          "choices": [
+            {
+              "text": "When the departure point is less than 15 minutes flying time from the transferring facility's boundary.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the destination lies outside your ARTCC area.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft is airborne and radar identified.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft is departing IFR from a non-towered airport.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The baseline trigger is a departure point less than 15 minutes flying time from the transferring facility's boundary."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this coordination requirement correct?",
+          "question_text": "You must coordinate with the receiving facility before departure when the departure point is less than 15 minutes flying time from the transferring facility's boundary, unless the listed automated-transfer exception applies.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the main coordination rule in paragraph 4-3-8."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Does this reduced-threshold statement match the rule?",
+          "question_text": "This reduced threshold applies when automatic transfer of data between automated systems will occur: the flying-time requirement may be reduced to 5 minutes or replaced with a mileage-from-boundary parameter when mutually agreeable to both facilities.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The automatic-transfer exception allows the threshold to be reduced to 5 minutes or replaced by an agreed mileage parameter."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which coordination replacement is permitted when automated data transfer will occur and both facilities agree?",
+          "question_text": "Which option is correct?",
+          "choices": [
+            {
+              "text": "Replace the flying-time trigger with a mileage-from-boundary parameter.",
+              "is_correct": true
+            },
+            {
+              "text": "Eliminate coordination entirely for all departures crossing the boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "Extend the trigger automatically to 30 minutes from the boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "Use destination-airport distance instead of boundary distance without facility agreement.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "With automated data transfer and mutual agreement, the threshold may be reduced to 5 minutes or replaced with a mileage parameter from the boundary."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A departure point is 12 minutes flying time from your boundary. Another controller says there is no need to coordinate before departure because the receiving facility uses mandatory radar handoff procedures and will take the handoff later anyway.",
+          "para_context": "Coordinate with the receiving facility before departure when the baseline threshold applies. Agreements with mandatory radar handoff procedures do not remove the need for timely coordination; they mean coordination needs to be effected in a timely manner prior to transfer of control.",
+          "choices": [
+            {
+              "text": "Ensure coordination is effected in a timely manner before transfer of control rather than skipping it.",
+              "is_correct": true
+            },
+            {
+              "text": "Skip coordination because mandatory radar handoff procedures always replace it completely.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay coordination until after the aircraft exits your boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the 5-minute threshold automatically even without automated data transfer or mutual agreement.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Mandatory radar handoff procedures change when coordination must be effected, not whether it can be ignored."
+        }
+      ]
+    },
+    "4-3-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "After obtaining any necessary approval, what may you do when an aircraft with an IFR flight plan requests a VFR departure?",
+          "choices": [
+            {
+              "text": "Authorize the aircraft to depart VFR and give the proper frequency and, if needed, when or where to contact for the IFR clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the IFR clearance in full and tell the pilot to disregard it until airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the flight plan and require a refile after departure.",
+              "is_correct": false
+            },
+            {
+              "text": "Authorize VFR departure only if the pilot agrees to remain on the present frequency until reaching cruise altitude.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule allows a VFR release of an IFR departure after any necessary approval, with proper contact instructions for the later IFR clearance."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "A pilot may depart VFR and should contact center on 125.8 at Centerville V O R for the IFR clearance. Build the transmission.",
+          "target_phrase": "VFR DEPARTURE AUTHORIZED CONTACT CENTER ON ONE TWO FIVE POINT EIGHT AT CENTERVILLE V O R FOR CLEARANCE"
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which opening correctly authorizes the VFR release of the IFR departure?",
+          "question_text": "Which phrase is correct?",
+          "choices": [
+            {
+              "text": "VFR departure authorized.",
+              "is_correct": true
+            },
+            {
+              "text": "IFR release canceled, proceed VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Departure VFR at pilot discretion for later clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "VFR release approved as filed.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The phraseology begins with VFR DEPARTURE AUTHORIZED."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this application statement match the rule?",
+          "question_text": "This VFR release procedure applies when an aircraft that has filed an IFR flight plan requests a VFR departure through a terminal facility, FSS, ARTCC Flight Data Unit, or air/ground communications station.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the facilities named in paragraph 4-3-9."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this unavailable-clearance requirement correct?",
+          "question_text": "If the facility or sector responsible for issuing the IFR clearance is unable to issue it, you must inform the pilot and suggest that the delay be taken on the ground.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the IFR clearance is unavailable, the pilot is informed and the delay is suggested on the ground."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "The sector holding the flight plan cannot issue the IFR clearance yet. You suggest taking the delay on the ground, but the pilot insists on departing VFR and picking up IFR in the air.",
+          "para_context": "If the pilot insists on taking off VFR and obtaining an IFR clearance in the air, inform the facility or sector holding the flight plan of the pilot's intentions and, if possible, the VFR departure time.",
+          "choices": [
+            {
+              "text": "Inform the facility or sector holding the flight plan of the pilot's intentions and, if possible, the VFR departure time.",
+              "is_correct": true
+            },
+            {
+              "text": "Refuse the VFR departure automatically because the IFR clearance is not yet available.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to depart and call any center frequency after airborne without notifying the flight-plan-holding facility.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the IFR flight plan permanently and require a new filing after landing.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If the pilot insists on a VFR departure, the facility or sector holding the flight plan must be informed of that intention and, if possible, the VFR departure time."
+        }
+      ]
+    },
+    "4-3-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Unless alternate procedures are in a letter of agreement or automatic departure messages are being transmitted, where must terminal departure times be forwarded?",
+          "choices": [
+            {
+              "text": "To the facility from which you received the clearance and to the terminal departure controller when that position is involved.",
+              "is_correct": true
+            },
+            {
+              "text": "Only to the destination tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Only to the overlying center, regardless of where the clearance came from.",
+              "is_correct": false
+            },
+            {
+              "text": "Only to flight service because it keeps the legal departure record.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-3-10 requires forwarding departure times to the clearance-originating facility and to the terminal departure controller when involved."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which data-block indication is correct?",
+          "question_text": "What does the flashing DM in the data block signify?",
+          "choices": [
+            {
+              "text": "Unsuccessful transmission of a departure message.",
+              "is_correct": true
+            },
+            {
+              "text": "Delayed message accepted but awaiting manual confirmation.",
+              "is_correct": false
+            },
+            {
+              "text": "Mandatory departure coordination complete.",
+              "is_correct": false
+            },
+            {
+              "text": "Departure message manually entered by the controller.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note says DM flashing in the data block signifies unsuccessful transmission of a departure message."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this forwarding requirement correct?",
+          "question_text": "You must forward departure times to the facility from which you received the clearance and to the terminal departure controller when that position is involved, unless alternate procedures apply.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the forwarding rule in paragraph 4-3-10."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Does this exception statement match the rule?",
+          "question_text": "This normal forwarding requirement does not apply when alternate procedures are prescribed in a letter of agreement or when automatic departure messages are being transmitted between automated facilities.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph begins by excepting those alternate procedures."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You launch an IFR departure from a terminal facility. There is no alternate LOA procedure in place, and automatic departure messages are not being transmitted. Another controller says forwarding the time to the terminal departure controller is unnecessary because the departure controller will see the aircraft on radar.",
+          "para_context": "Unless alternate procedures apply, forward departure times to the facility from which you received the clearance and also to the terminal departure controller when that position is involved in the departure sequence.",
+          "choices": [
+            {
+              "text": "Forward the departure time to both the clearance-originating facility and the terminal departure controller when involved.",
+              "is_correct": true
+            },
+            {
+              "text": "Forward it only to the terminal departure controller because radar removes the need to advise the clearance-originating facility.",
+              "is_correct": false
+            },
+            {
+              "text": "Forward it only to the facility that issued the clearance because the departure controller can infer the time from radar.",
+              "is_correct": false
+            },
+            {
+              "text": "Do not forward it unless the pilot specifically requests confirmation of the departure time.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Without the alternate procedures, both listed recipients must get the departure time when the terminal departure controller is involved."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "4-3-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When aircraft elect to take delay on the ground before departure, how should departure clearances normally be issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The normal order is the order in which the original clearance requests were made, if practicable.",
+          "choices": [
+            {
+              "text": "In the order the original clearance requests were made, if practicable.",
+              "is_correct": true
+            },
+            {
+              "text": "By aircraft speed, fastest first.",
+              "is_correct": false
+            },
+            {
+              "text": "By requested altitude, highest first.",
+              "is_correct": false
+            },
+            {
+              "text": "In reverse request order.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What qualifier does paragraph 4-3-6 place on preserving the original request order?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph says to do so if practicable.",
+          "choices": [
+            {
+              "text": "If practicable.",
+              "is_correct": true
+            },
+            {
+              "text": "Only if all aircraft are turbine powered.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if every pilot agrees to the sequence.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if no release times are assigned.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which sequencing choice conflicts with paragraph 4-3-6?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Skipping the original request order simply because another aircraft is faster conflicts with the rule.",
+          "choices": [
+            {
+              "text": "Moving a later requester ahead just because it is faster.",
+              "is_correct": true
+            },
+            {
+              "text": "Preserving the original request order when practicable.",
+              "is_correct": false
+            },
+            {
+              "text": "Considering whether the sequence is practicable before issuing clearances.",
+              "is_correct": false
+            },
+            {
+              "text": "Using request order as the normal sequencing basis.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Paragraph 4-3-6 applies when aircraft choose to take delay where?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It applies when aircraft elect to take delay on the ground before departure.",
+          "choices": [
+            {
+              "text": "On the ground before departure.",
+              "is_correct": true
+            },
+            {
+              "text": "In holding after departure.",
+              "is_correct": false
+            },
+            {
+              "text": "At cruise after departure release.",
+              "is_correct": false
+            },
+            {
+              "text": "After filing an amended route in flight.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Who must be informed of anticipated departure delays?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Approach control facilities and/or towers must be informed.",
+          "choices": [
+            {
+              "text": "Approach control facilities and/or towers.",
+              "is_correct": true
+            },
+            {
+              "text": "Only flight service.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the destination ARTCC.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the pilots after they check in airborne.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What kind of delays does paragraph 4-3-7 address?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It addresses anticipated departure delays.",
+          "choices": [
+            {
+              "text": "Anticipated departure delays.",
+              "is_correct": true
+            },
+            {
+              "text": "Only arrival gate delays.",
+              "is_correct": false
+            },
+            {
+              "text": "Only IFR reroute delays after departure.",
+              "is_correct": false
+            },
+            {
+              "text": "Only EDCT revisions after wheels-up.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which facility is part of the explicit coordination target in paragraph 4-3-7?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Towers are specifically included in the phrase approach control facilities and/or towers.",
+          "choices": [
+            {
+              "text": "Tower.",
+              "is_correct": true
+            },
+            {
+              "text": "Airport authority.",
+              "is_correct": false
+            },
+            {
+              "text": "Dispatch office.",
+              "is_correct": false
+            },
+            {
+              "text": "Meteorological watch office only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which action best matches paragraph 4-3-7?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The correct action is to inform the affected approach control facilities and/or towers of anticipated delays.",
+          "choices": [
+            {
+              "text": "Coordinate the anticipated departure delays with the affected approach control facilities and/or towers.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the delayed aircraft are airborne to mention the delay.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only local pilot advisories and no interfacility coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate only if the first pilot complains about the delay.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Absent an automation exception, when must coordination with the receiving facility occur before departure?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The baseline trigger is when the departure point is less than 15 minutes flying time from the transferring facility's boundary.",
+          "choices": [
+            {
+              "text": "When the departure point is less than 15 minutes flying time from the transferring facility's boundary.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the destination is outside your facility.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft checks in with the receiving facility.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the departure is from a non-towered airport.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If automatic transfer of data between automated systems will occur, to what flying-time threshold may the requirement be reduced?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The threshold may be reduced to 5 minutes.",
+          "choices": [
+            {
+              "text": "5 minutes.",
+              "is_correct": true
+            },
+            {
+              "text": "2 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "10 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "30 minutes.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What other parameter may replace the flying-time trigger when automated transfer will occur and both facilities agree?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It may be replaced with a mileage-from-boundary parameter when mutually agreeable.",
+          "choices": [
+            {
+              "text": "A mileage-from-boundary parameter.",
+              "is_correct": true
+            },
+            {
+              "text": "A required handoff altitude only.",
+              "is_correct": false
+            },
+            {
+              "text": "A destination-airport distance parameter.",
+              "is_correct": false
+            },
+            {
+              "text": "A departure-release clock time.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does the note encourage for facilities that need earlier coordination?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note encourages agreements requiring additional time between facilities that need earlier coordination.",
+          "choices": [
+            {
+              "text": "Agreements requiring additional time.",
+              "is_correct": true
+            },
+            {
+              "text": "Automatic elimination of all predeparture coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "Mandatory release times for every boundary departure.",
+              "is_correct": false
+            },
+            {
+              "text": "Replacement of the boundary trigger with destination miles in every case.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When agreements establish mandatory radar handoff procedures, when must coordination be effected?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Coordination must be effected in a timely manner prior to transfer of control.",
+          "choices": [
+            {
+              "text": "In a timely manner prior to transfer of control.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the receiving facility accepts the handoff symbol.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft has crossed the boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "No coordination is required at all once mandatory radar handoff procedures exist.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "After any necessary approval, what may you do when an IFR flight-planned aircraft requests a VFR departure?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "You may authorize the VFR departure and give the proper frequency and, if appropriate, where or when to contact for clearance.",
+          "choices": [
+            {
+              "text": "Authorize the VFR departure and give the proper contact instructions for the IFR clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the full IFR clearance and tell the pilot to disregard it until airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the flight plan and require a refile after departure.",
+              "is_correct": false
+            },
+            {
+              "text": "Refuse the request unless the aircraft can remain on the same frequency until cruise.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the approved phrase that begins the VFR release transmission?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The phraseology begins with VFR DEPARTURE AUTHORIZED.",
+          "choices": [
+            {
+              "text": "VFR departure authorized.",
+              "is_correct": true
+            },
+            {
+              "text": "IFR departure released VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Depart VFR and expect clearance later.",
+              "is_correct": false
+            },
+            {
+              "text": "VFR release approved as filed.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the facility or sector responsible for issuing the IFR clearance cannot issue it, what should you suggest?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The pilot should be informed and the delay should be suggested on the ground.",
+          "choices": [
+            {
+              "text": "Suggest that the delay be taken on the ground.",
+              "is_correct": true
+            },
+            {
+              "text": "Suggest departure VFR with no further coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "Suggest cancellation of the IFR flight plan only.",
+              "is_correct": false
+            },
+            {
+              "text": "Suggest immediate airborne holding near the airport.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the pilot insists on departing VFR and obtaining the IFR clearance in the air, who must be informed?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The facility or sector holding the flight plan must be informed of the pilot's intentions and, if possible, the VFR departure time.",
+          "choices": [
+            {
+              "text": "The facility or sector holding the flight plan.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the destination tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the departure airport manager.",
+              "is_correct": false
+            },
+            {
+              "text": "No one, because the pilot accepted responsibility.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What additional information should be provided to the facility or sector holding the flight plan if possible?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "If possible, provide the VFR departure time.",
+          "choices": [
+            {
+              "text": "The VFR departure time.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot's preferred cruise altitude only.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft's gate number.",
+              "is_correct": false
+            },
+            {
+              "text": "The next planned frequency change after departure.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Paragraph 4-3-9 applies when an aircraft with what kind of flight plan requests a VFR departure?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It applies when the aircraft has filed an IFR flight plan.",
+          "choices": [
+            {
+              "text": "An IFR flight plan.",
+              "is_correct": true
+            },
+            {
+              "text": "Only a composite VFR/IFR flight plan filed by company dispatch.",
+              "is_correct": false
+            },
+            {
+              "text": "Only a special VFR request with no IFR flight plan on file.",
+              "is_correct": false
+            },
+            {
+              "text": "Any flight plan, including local closed traffic only.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Unless alternate procedures are in place, where must terminal departure times be forwarded?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They go to the facility that issued the clearance and to the terminal departure controller when involved.",
+          "choices": [
+            {
+              "text": "To the facility from which the clearance was received and to the terminal departure controller when involved.",
+              "is_correct": true
+            },
+            {
+              "text": "Only to the destination tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Only to the overlying center regardless of who issued the clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Only to flight service.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is one explicit exception to the normal forwarding requirement in paragraph 4-3-10?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "One exception is when automatic departure messages are being transmitted between automated facilities.",
+          "choices": [
+            {
+              "text": "Automatic departure messages are being transmitted between automated facilities.",
+              "is_correct": true
+            },
+            {
+              "text": "The departure airport is non-towered.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure is VFR-on-top.",
+              "is_correct": false
+            },
+            {
+              "text": "The terminal departure controller is working more than one sector.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does a flashing DM in the data block signify?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note says DM flashing signifies unsuccessful transmission of a departure message.",
+          "choices": [
+            {
+              "text": "Unsuccessful transmission of a departure message.",
+              "is_correct": true
+            },
+            {
+              "text": "Delayed message accepted for later transmission.",
+              "is_correct": false
+            },
+            {
+              "text": "Mandatory departure coordination completed.",
+              "is_correct": false
+            },
+            {
+              "text": "Data block manually updated by the controller.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What kind of LOA procedures are named as alternatives for providing equivalent procedures?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note names assumed departure times or mandatory radar handoff procedures prescribed by letter of agreement.",
+          "choices": [
+            {
+              "text": "Assumed departure times or mandatory radar handoff procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "Automatic VFR releases or tower-initiated route amendments.",
+              "is_correct": false
+            },
+            {
+              "text": "Ground stop waivers or release-time substitutions.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilot-discretion climb procedures and expected-altitude notices.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When must the terminal departure controller receive the forwarded departure time?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The terminal departure controller receives it when that position is involved in the departure sequence.",
+          "choices": [
+            {
+              "text": "When that position is involved in the departure sequence.",
+              "is_correct": true
+            },
+            {
+              "text": "Only if the aircraft will level off below 10,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the departure airport is towered.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the receiving ARTCC requests it.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

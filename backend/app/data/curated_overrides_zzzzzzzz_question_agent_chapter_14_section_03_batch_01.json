@@ -1,0 +1,370 @@
+{
+  "questions": {
+    "14-3-1": {
+      "items": [
+        {
+          "question_text": "Under 14-3-1, when may voice communications be utilized for CPDLC-connected aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-1(b): voice may be utilized when it will provide an operational advantage and/or when workload or equipment capabilities demand. Voice is not prohibited but is secondary to CPDLC outside VHF coverage.",
+          "choices": [
+            {
+              "text": "Only when the aircraft is within VHF coverage; outside VHF, voice is not authorized for CPDLC aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "When it will provide an operational advantage and/or when workload or equipment capabilities demand.",
+              "is_correct": true
+            },
+            {
+              "text": "Voice is never permitted for CPDLC-connected aircraft; all communication must be via data link.",
+              "is_correct": false
+            },
+            {
+              "text": "Only during the first 60 days after CPDLC commissioning at the facility.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 14-3-1, to the extent possible, what should be used in lieu of free text messages?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-1(e): to the extent possible, the CPDLC message set should be used in lieu of free text messages. The message set ensures proper closure of CPDLC exchanges.",
+          "choices": [
+            {
+              "text": "CPDLC message set",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 14-3-1, why should the CPDLC message set be preferred over free text messages?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The note to 14-3-1 states using the CPDLC message set ensures the proper closure of CPDLC exchanges. Free text messages do not guarantee this automated closure.",
+          "choices": [
+            {
+              "text": "Free text messages require ICAO document 10037 approval, which is not available for oceanic operations.",
+              "is_correct": false
+            },
+            {
+              "text": "The message set is faster to transmit over SATCOM voice backup channels.",
+              "is_correct": false
+            },
+            {
+              "text": "The message set ensures proper closure of CPDLC exchanges.",
+              "is_correct": true
+            },
+            {
+              "text": "Free text messages cannot be received by FANS 1/A aircraft outside VHF coverage.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "14-3-2": {
+      "items": [
+        {
+          "question_text": "Under 14-3-2, when the receiving facility is CPDLC-capable, how is the data link transfer accomplished?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-2(a): the data link transfer is automatic and accomplished within facility adapted parameters. The controller does not need to manually initiate the transfer to a CPDLC-capable facility.",
+          "choices": [
+            {
+              "text": "Manually, by the controller sending a connection request (CR1) to the receiving facility.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot confirms via CPDLC downlink that they are ready for transfer.",
+              "is_correct": false
+            },
+            {
+              "text": "Automatically, within facility adapted parameters.",
+              "is_correct": true
+            },
+            {
+              "text": "By voice coordination between the two facilities followed by a manual CPDLC handoff.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "14-3-3": {
+      "items": [
+        {
+          "question_text": "Under 14-3-3, what should the controller do if unable to complete a manual data link transfer after an automated transfer failure?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-3(a): after attempting a manual transfer and being unable to complete it, the controller should advise the pilot to log on to the next facility and send an End Service (EOS) message. The manual attempt must be tried first.",
+          "choices": [
+            {
+              "text": "Advise the pilot to log on to the next facility and send an End Service (EOS) message.",
+              "is_correct": true
+            },
+            {
+              "text": "Terminate the CPDLC connection and revert all communications to voice for the remainder of the flight.",
+              "is_correct": false
+            },
+            {
+              "text": "Send a connection request (CR1) and wait for the system to reconcile the transfer automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer the aircraft using only voice procedures and cancel the CPDLC service entirely.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 14-3-3, if the CPDLC connection is lost on a specific aircraft, what are the controller's options?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-3(c): the controller should send a connection request message (CR1) or advise the pilot via backup communications to log on again. Both options are available.",
+          "choices": [
+            {
+              "text": "Wait for the aircraft to automatically reconnect; no controller action is required for individual connection loss.",
+              "is_correct": false
+            },
+            {
+              "text": "Send a connection request message (CR1) or advise the pilot via backup communications to log on again.",
+              "is_correct": true
+            },
+            {
+              "text": "Terminate CPDLC service for all aircraft in the sector until the specific aircraft reconnects.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer the aircraft to the next facility immediately, since no CPDLC connection means the aircraft is no longer oceanic.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 14-3-3, what are the controller's obligations when CPDLC service is to be canceled?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-3(d): the controller must advise the pilot as early as possible (mandatory). Workload permitting, the controller should also advise the reason (discretionary). This is a must/should distinction.",
+          "choices": [
+            {
+              "text": "May cancel CPDLC without advising the pilot, as the aircraft will detect the termination automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "Must provide the reason for termination in all cases, regardless of workload.",
+              "is_correct": false
+            },
+            {
+              "text": "Must advise the pilot as early as possible to facilitate a smooth transition to voice.",
+              "is_correct": true
+            },
+            {
+              "text": "Should wait until the aircraft is within VHF coverage before advising of the cancellation.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 14-3-3, when there is uncertainty that a CPDLC clearance was delivered to an aircraft, what must the controller do regarding the airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-3(e): the controller must continue to protect the airspace associated with the clearance until an appropriate operational response is received from the flight crew. If no response is received, the controller initiates action to ensure receipt.",
+          "choices": [
+            {
+              "text": "Cancel the clearance and reassign new airspace boundaries via voice immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Continue to protect the airspace associated with the clearance until an appropriate operational response is received from the flight crew.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume the clearance was delivered and release the airspace to the next sector.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for the next automated system update, which will confirm delivery status automatically.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 14-3-3, on initial voice contact with an aircraft when there was uncertainty that a CPDLC clearance was delivered, how should the controller preface the message?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-3(e) prescribes the phraseology: '(Call Sign) CPDLC Failure, (message).' This phraseology is used when re-establishing voice contact to resolve clearance delivery uncertainty.",
+          "choices": [
+            {
+              "text": "CPDLC Failure",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "14-3-1": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What are the acceptable voice backup methods when oceanic CPDLC is being utilized?",
+          "choices": [
+            {
+              "text": "VHF only, because other methods are not certified for oceanic operations.",
+              "is_correct": false
+            },
+            {
+              "text": "HF, SATCOM, or Third Party.",
+              "is_correct": true
+            },
+            {
+              "text": "Any method, at the controller's discretion, with no specified options.",
+              "is_correct": false
+            },
+            {
+              "text": "Only SATCOM, because HF is being phased out for oceanic CPDLC operations.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "14-3-1(C) lists the examples of acceptable voice backups as HF, SATCOM, and Third Party."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A CPDLC-connected aircraft is outside VHF coverage. The pilot sends a route request via CPDLC. A trainee responds by voice because the sector frequency is quiet, and composes the response in free text rather than selecting from the CPDLC message set because it feels more natural to type.",
+          "question_text": "How should the controller respond to the pilot's CPDLC message?",
+          "choices": [
+            {
+              "text": "Respond by voice since the frequency is available, which is always preferable to data link.",
+              "is_correct": false
+            },
+            {
+              "text": "Respond via CPDLC using the standard message set to the extent possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Respond via free-text CPDLC, since outside VHF coverage the message set is not required.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for the pilot to call on voice before responding, since CPDLC should not be used for route requests.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "14-3-1(D): when a pilot communicates via CPDLC, respond via CPDLC. 14-3-1(e): prefer the message set over free text. Outside VHF, CPDLC is the primary means of communication.",
+          "para_context": "MEANS OF COMMUNICATION"
+        }
+      ]
+    },
+    "14-3-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An automated CPDLC transfer fails for an oceanic aircraft. A trainee wants to immediately advise the pilot to log on to the next facility and send an End Service message, skipping the manual transfer attempt. The pilot is still connected and responsive on CPDLC.",
+          "question_text": "What is the correct sequence of actions for a failed automated CPDLC transfer?",
+          "choices": [
+            {
+              "text": "Advise the pilot to log on to the next facility immediately and send an EOS without attempting manual transfer.",
+              "is_correct": false
+            },
+            {
+              "text": "First attempt to initiate the transfer manually; if unable to complete it, then advise the pilot to log on to the next facility and send an EOS.",
+              "is_correct": true
+            },
+            {
+              "text": "Cancel CPDLC service entirely for that aircraft and transition all communications to voice.",
+              "is_correct": false
+            },
+            {
+              "text": "Send a CR1 to the pilot and wait for automatic reconnection before attempting transfer again.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "14-3-3(A): manual transfer attempt comes first. Only if unable to complete the transfer should the controller then advise the pilot to log on and send EOS.",
+          "para_context": "ABNORMAL CONDITIONS"
+        },
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "When CPDLC service must be canceled in oceanic operations, what is the distinction between what the controller must do and what the controller should do?",
+          "choices": [
+            {
+              "text": "Must provide the reason for termination in all cases; should (workload permitting) advise the pilot of the new voice frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Must advise the pilot as early as possible to facilitate transition to voice; should (workload permitting) advise the reason for termination.",
+              "is_correct": true
+            },
+            {
+              "text": "Both the early advice and the reason for termination carry the same obligation; neither is conditional on workload.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller may cancel CPDLC without any advance notice to the pilot in oceanic operations.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "14-3-3(D): the controller must advise as early as possible (mandatory). Workload permitting, the controller should also advise the reason (discretionary). This must/should distinction is operationally significant."
+        },
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "If an expected operational response to an oceanic CPDLC clearance is not received from the flight crew, what must the controller do?",
+          "choices": [
+            {
+              "text": "Assume the clearance was received and continue normal operations; the system handles non-responses automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the clearance and issue a new one via CPDLC free text with a higher priority response attribute.",
+              "is_correct": false
+            },
+            {
+              "text": "Initiate appropriate action to ensure the clearance was received by the flight crew.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for the next automated system cycle, which will retransmit any undelivered clearances.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "14-3-3(E): if an expected response is not received, the controller will initiate appropriate action to ensure the clearance was received. This is in addition to continuing to protect the airspace."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1002 @@
+{
+  "activities": {
+    "10-1-1": {
+      "sync_replace_types": true,
+      "replace_types": ["requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "If a pilot never says \"Mayday\" or \"Pan-Pan\" but you believe an emergency or urgent situation exists, how should it be handled?",
+          "choices": [
+            {
+              "text": "Handle it as though it were an emergency.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for the pilot to use the formal emergency words before providing emergency handling.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat it as an emergency only if another facility agrees with that interpretation.",
+              "is_correct": false
+            },
+            {
+              "text": "Assume it is only an urgency condition unless the pilot explicitly says \"Mayday.\"",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-1-1, if the words \"Mayday\" or \"Pan-Pan\" are not used but you believe an emergency or urgent situation exists, it is handled as though it were an emergency."
+        }
+      ]
+    },
+    "10-1-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "readback_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which emergency transmission is correct?",
+          "clearance": "AIRCRAFT, N123B, PILOT INCAPACITATION, 12 MILES SOUTHWEST OF KOJC, LANDING KIXD AIRPORT. EMERGENCY AUTOLAND IN 13 MINUTES ON RUNWAY 36.",
+          "choices": [
+            {
+              "text": "Aircraft, N123B, pilot incapacitation, 12 miles southwest of KOJC, landing KIXD airport. Emergency Autoland in 13 minutes on runway 36.",
+              "is_correct": true
+            },
+            {
+              "text": "Aircraft, N123B, pilot incapacitation, 12 miles southeast of KOJC, landing KIXD airport. Emergency Autoland in 13 minutes on runway 36.",
+              "is_correct": false
+            },
+            {
+              "text": "Aircraft, N123B, pilot incapacitation, 12 miles southwest of KOJC, landing KOJC airport. Emergency Autoland in 13 minutes on runway 36.",
+              "is_correct": false
+            },
+            {
+              "text": "Aircraft, N123B, pilot incapacitation, 12 miles southwest of KOJC, landing KIXD airport. Emergency Autoland in 13 minutes on runway 35.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-1-2b, an Emergency Autoland system may transmit the call sign, activation, position, intended emergency landing airport and runway, and ETE."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A distressed pilot requests the nearest airport and gives only partial information about the problem. You think a different airport may be more beneficial because of weather and equipment, and another controller says you should simply assign that airport without further discussion.",
+          "para_context": "Use the information provided or solicit more information as necessary to assist the distressed aircraft. Provide assistance consistent with the pilot's requests. If you believe an alternative course of action may prove more beneficial, transmit your recommendation or recommendations to the pilot.",
+          "choices": [
+            {
+              "text": "Solicit any additional information needed, assist consistent with the pilot's request, and transmit your recommendation if you believe another course may be more beneficial.",
+              "is_correct": true
+            },
+            {
+              "text": "Assign the airport you prefer immediately because the controller, not the pilot, decides the most beneficial course during every emergency.",
+              "is_correct": false
+            },
+            {
+              "text": "Refuse further help until the pilot provides every detail you would like to have before offering assistance.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for the pilot to request a recommendation specifically before asking any follow-up questions or offering any alternative.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-1-2, use or solicit needed information, assist consistent with the pilot's requests, and recommend a better alternative if you believe one exists."
+        },
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "If you think a distressed aircraft would benefit from a different course of action than the pilot requested, what should you do?",
+          "choices": [
+            {
+              "text": "Provide assistance consistent with the pilot's request and transmit your recommendation to the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Ignore the pilot's request and issue the course of action you prefer without explanation.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the emergency is over before suggesting any alternative.",
+              "is_correct": false
+            },
+            {
+              "text": "Provide no assistance until the pilot supplies every possible item of supplemental information.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-1-2, you use the information provided or solicit more as necessary, assist consistent with the pilot's requests, and transmit recommendations if an alternative appears more beneficial."
+        }
+      ]
+    },
+    "10-1-3": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "requirement_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When should available FAA, military, FCC, or other emergency services and facilities be enlisted for an aircraft in distress?",
+          "choices": [
+            {
+              "text": "When the pilot requests them or when you deem them necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft has already made a forced landing.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the distress aircraft is no longer on your frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after center approval has been obtained in writing.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-1-3, maximum assistance is provided to aircraft in distress, and available radar facilities, emergency services, and facilities are enlisted when the pilot requests them or when deemed necessary."
+        }
+      ]
+    },
+    "10-1-4": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "directive_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "If you are already in communication with an aircraft in distress, when may responsibility for handling the emergency be transferred to another facility?",
+          "choices": [
+            {
+              "text": "Only when you believe better handling of the emergency will result.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as the aircraft enters another facility's airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot specifically requests a different facility.",
+              "is_correct": false
+            },
+            {
+              "text": "Immediately after fire and rescue services are notified.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-1-4, the controller in communication with the aircraft in distress handles the emergency and transfers that responsibility only when better handling will result."
+        }
+      ]
+    },
+    "10-1-5": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "requirement_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "What coordination is required for an aircraft believed overdue, lost, or in emergency status?",
+          "choices": [
+            {
+              "text": "Coordinate efforts to the extent possible to assist the aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for confirmation of an accident before coordinating with anyone else.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate only with the destination airport and no other facility or service.",
+              "is_correct": false
+            },
+            {
+              "text": "Suspend coordination once the aircraft is more than 30 minutes overdue.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-1-5, efforts are coordinated to the extent possible to assist any aircraft believed overdue, lost, or in emergency status."
+        }
+      ]
+    },
+    "10-1-6": {
+      "sync_replace_types": true,
+      "replace_types": ["knowledge_check", "requirement_check"],
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A disabled aircraft has stopped on a taxiway, and local fire vehicles need to cross active movement areas to reach it. Another controller wants to keep normal airport traffic moving through the area and let the emergency vehicles sort out their own route.",
+          "para_context": "When an emergency occurs on the airport proper, control other air and ground traffic to avoid conflicts in the area where the emergency is being handled. This also applies when routes within the airport proper are required for movement of local emergency equipment going to or from an emergency outside the airport proper.",
+          "choices": [
+            {
+              "text": "Control other air and ground traffic to avoid conflicts in the emergency area and along the routes needed by the responding vehicles.",
+              "is_correct": true
+            },
+            {
+              "text": "Keep normal traffic moving through the area because the emergency vehicles can work around it on their own.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat the event as a vehicle-routing problem only and do not protect the aircraft side of the emergency area.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the vehicles arrive at the disabled aircraft before changing any traffic flow around the scene.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-1-6, the emergency area and the routes needed by local emergency equipment are protected from conflicting air and ground traffic."
+        },
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When an emergency occurs on the airport proper, what must be done with other air and ground traffic?",
+          "choices": [
+            {
+              "text": "Control it to avoid conflicts in the area where the emergency is being handled, including routes needed by local emergency equipment.",
+              "is_correct": true
+            },
+            {
+              "text": "Allow normal traffic flow to continue unless the runway is physically blocked.",
+              "is_correct": false
+            },
+            {
+              "text": "Move only ground traffic because airborne traffic is not part of the airport emergency response.",
+              "is_correct": false
+            },
+            {
+              "text": "Hold emergency vehicles outside the movement area until all aircraft are clear of the pattern.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-1-6, when an airport ground emergency occurs, other air and ground traffic is controlled to avoid conflicts in the area, including routes needed by local emergency equipment."
+        }
+      ]
+    },
+    "10-1-7": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What should generally be avoided during an inflight emergency involving a military fighter-type aircraft, especially at low altitude?",
+          "choices": [
+            {
+              "text": "Frequency changes, transponder code changes, and unnecessary radio transmissions.",
+              "is_correct": true
+            },
+            {
+              "text": "Any radar service because the pilot must fly entirely without ATC help.",
+              "is_correct": false
+            },
+            {
+              "text": "Any acknowledgment of the emergency until the aircraft reaches pattern altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordination with the destination base because it increases pilot workload.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-1-7, the high workload on military fighter-type aircraft pilots means frequency changes, transponder code changes, and radio transmissions should be minimized, especially at low altitude."
+        }
+      ]
+    },
+    "10-2-1": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "directive_check", "requirement_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the minimum information required to begin assisting an inflight emergency?",
+          "choices": [
+            {
+              "text": "Aircraft identification and type, the nature of the emergency, and the pilot's desires.",
+              "is_correct": true
+            },
+            {
+              "text": "Fuel remaining, souls on board, and destination airport only.",
+              "is_correct": false
+            },
+            {
+              "text": "Aircraft color, navigation equipment, and visible landmarks only.",
+              "is_correct": false
+            },
+            {
+              "text": "Every item in the supplemental information list before taking any action.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-1, assistance begins as soon as enough information has been obtained to act, and the minimum required information is aircraft identification and type, nature of the emergency, and the pilot's desires."
+        }
+      ]
+    },
+    "10-2-2": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "requirement_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When should you change frequencies for an aircraft in emergency status?",
+          "choices": [
+            {
+              "text": "Only when there is a valid reason.",
+              "is_correct": true
+            },
+            {
+              "text": "Immediately to 121.5 or 243.0, even if communications are clear on the current frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the aircraft is more than 10 miles from the facility boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot specifically asks to change frequencies.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-2, it may be best to keep the aircraft on the initial contact frequency, and frequencies are changed only when there is a valid reason."
+        }
+      ]
+    },
+    "10-2-3": {
+      "sync_replace_types": true,
+      "replace_types": ["term_definition_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which is a recognized method of orienting a disoriented aircraft?",
+          "choices": [
+            {
+              "text": "Sighting by other aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Requesting the pilot to orbit until the weather improves.",
+              "is_correct": false
+            },
+            {
+              "text": "Turning off the transponder to simplify the radar display.",
+              "is_correct": false
+            },
+            {
+              "text": "Assigning an emergency squawk solely for navigation purposes.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-3, recognized orientation methods include radar, NAVAIDs, pilotage, and sighting by other aircraft."
+        }
+      ]
+    },
+    "10-2-4": {
+      "sync_replace_types": true,
+      "replace_types": ["knowledge_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "If weather and circumstances permit, what altitude-related recommendation may improve communications or radar reception for an aircraft in difficulty?",
+          "choices": [
+            {
+              "text": "Recommend that the aircraft maintain or increase altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Recommend an immediate descent regardless of the surrounding conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "Recommend shutting down transponder equipment before changing altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Recommend a climb only if the pilot is already in a turn.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-4, when necessary and if weather and circumstances permit, the aircraft may be advised to maintain or increase altitude to improve communications or radar."
+        }
+      ]
+    },
+    "10-2-5": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which situation requires you to consider that an aircraft emergency exists and inform the RCC or ARTCC?",
+          "choices": [
+            {
+              "text": "Unexpected loss of both radar contact and radio communications with an IFR or VFR aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "A routine route amendment requested by the pilot for weather avoidance with no loss of service.",
+              "is_correct": false
+            },
+            {
+              "text": "A frequency change to a better equipped facility after pilot request.",
+              "is_correct": false
+            },
+            {
+              "text": "A pilot report of moderate chop with no operational impairment.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-5, an emergency is considered to exist and the RCC or ARTCC is informed when there is unexpected loss of radar contact and radio communications with an IFR or VFR aircraft, among the other listed conditions."
+        }
+      ]
+    },
+    "10-2-6": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "requirement_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "After assigning or verifying code 7500, what should you assume if the pilot acknowledges the code and then fails to communicate further?",
+          "choices": [
+            {
+              "text": "Assume the flight is being subjected to hijack.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume the code selection was accidental unless the pilot repeats the declaration twice.",
+              "is_correct": false
+            },
+            {
+              "text": "Assume only a communications failure exists and treat it as code 7600.",
+              "is_correct": false
+            },
+            {
+              "text": "Assume there is no emergency unless the pilot specifically asks for emergency handling.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-6, if the pilot acknowledges assignment or verification of code 7500 and then does not communicate further, the flight is assumed to be subject to hijack."
+        }
+      ]
+    },
+    "10-2-7": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "minima_rule_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "If a VFR aircraft in weather difficulty needs service from another facility, what should accompany the frequency change?",
+          "choices": [
+            {
+              "text": "Advise the pilot of the reason for the change, request contact with the appropriate facility, and inform that facility of the situation.",
+              "is_correct": true
+            },
+            {
+              "text": "Direct the pilot to change frequencies immediately without explanation so radio time is minimized.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the pilot has actually entered IMC before telling the next facility anything.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the pilot to declare an emergency before any coordination with another facility is permitted.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-7, when a frequency change is necessary for a VFR aircraft in weather difficulty, the pilot is told the reason, asked to contact the appropriate control facility, and that facility is informed of the situation."
+        }
+      ]
+    },
+    "10-2-8": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "minima_rule_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "A VFR pilot in weather difficulty says the aircraft is not IFR capable and refuses to file an IFR flight plan. When may radar assistance still be provided?",
+          "choices": [
+            {
+              "text": "If the pilot declares an emergency, or refuses to declare one but you have determined the exact nature of the radar services desired.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft lands at a VFR airport and requests airborne assistance again.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the pilot agrees to accept an unrestricted climb through IMC first.",
+              "is_correct": false
+            },
+            {
+              "text": "Never, because refusal to file IFR ends ATC assistance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-8, if the pilot is not qualified for or capable of IFR flight, or refuses to file an IFR flight plan, radar assistance may still be provided if the pilot declares an emergency or refuses to declare one but the exact nature of the desired radar services has been determined."
+        }
+      ]
+    },
+    "10-2-9": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "minima_rule_check", "scope_check", "sequence_steps"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which technique is specifically listed for radar assistance to a pilot not qualified to operate in IFR conditions?",
+          "choices": [
+            {
+              "text": "Have the pilot lower the gear and slow to approach speed while still in VFR conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Delay all turns until the aircraft is deep in IMC so the pilot can focus on instruments.",
+              "is_correct": false
+            },
+            {
+              "text": "Use abrupt maneuvers to get the aircraft out of cloud layers quickly.",
+              "is_correct": false
+            },
+            {
+              "text": "Require repeated frequency changes so different sectors can share the workload.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-9, one listed technique is to have the pilot lower the gear and slow to approach speed while still in VFR conditions."
+        }
+      ]
+    },
+    "10-2-10": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What limitation applies to authorized operational ground testing of an ELT?",
+          "choices": [
+            {
+              "text": "It is restricted to the first 5 minutes of each hour and no more than three audio sweeps.",
+              "is_correct": true
+            },
+            {
+              "text": "It may be conducted at any time as long as a controller is listening on 121.5.",
+              "is_correct": false
+            },
+            {
+              "text": "It is limited to one continuous 15-minute test each day.",
+              "is_correct": false
+            },
+            {
+              "text": "It is prohibited unless both terminal and en route controllers approve it in advance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-10, operational ground testing of ELTs is authorized during the first 5 minutes of each hour and is restricted to no more than three audio sweeps."
+        }
+      ]
+    },
+    "10-2-11": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "If a pilot facing an aircraft bomb threat requests technical assistance, what should ATC avoid doing?",
+          "choices": [
+            {
+              "text": "Avoid suggesting what actions the pilot should take.",
+              "is_correct": true
+            },
+            {
+              "text": "Avoid relaying any available technical advice from FAA explosive experts.",
+              "is_correct": false
+            },
+            {
+              "text": "Avoid issuing altitude or destination clearances requested by the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "Avoid notifying supervisory personnel until the pilot confirms a device was found.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-11, when a pilot requests technical assistance or it appears such assistance may be needed, controllers must not suggest what actions the pilot should take."
+        }
+      ]
+    },
+    "10-2-12": {
+      "sync_replace_types": true,
+      "replace_types": ["requirement_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When an aircraft asks for the nearest explosive-detection K-9 team, what should you obtain first?",
+          "choices": [
+            {
+              "text": "The aircraft identification and position, and then advise your supervisor of the request.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the destination airport, because the K-9 team location can be guessed from that.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the number of people on board before doing anything else.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing until the pilot confirms a diversion is certain.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-12, the aircraft identification and position are obtained and the supervisor is advised of the pilot request before the nearest K-9 team location is relayed."
+        }
+      ]
+    },
+    "10-2-13": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "directive_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When a MANPADS threat or attack is determined to be real, what should happen to landing clearance?",
+          "choices": [
+            {
+              "text": "Do not withhold landing clearance solely because of the MANPADS threat.",
+              "is_correct": true
+            },
+            {
+              "text": "Cancel all landing clearance authority until the operator decides how to proceed.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue landing clearance only after the aircraft requests it a second time.",
+              "is_correct": false
+            },
+            {
+              "text": "Withhold landing clearance unless the pilot first accepts a reroute.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-13, landing clearance is not withheld because of a real MANPADS threat or attack; instead, useful threat information is issued to pilots."
+        }
+      ]
+    },
+    "10-2-14": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "After a reported unauthorized laser illumination event, how often should the general caution warning be broadcast, and for how long after the last report?",
+          "choices": [
+            {
+              "text": "Every 5 minutes for 20 minutes.",
+              "is_correct": true
+            },
+            {
+              "text": "Every 20 minutes for 5 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "Once immediately, with no repeat broadcast needed.",
+              "is_correct": false
+            },
+            {
+              "text": "Every 15 minutes for one hour.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-14, the general caution warning is broadcast every 5 minutes for 20 minutes following the last laser report."
+        }
+      ]
+    },
+    "10-2-16": {
+      "sync_replace_types": true,
+      "replace_types": ["requirement_check"],
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A distressed pilot needs help reaching the recommended airport. Another controller says the only approved guidance method is radar vectors and that if radar coverage becomes unreliable, ATC has no other guidance options.",
+          "para_context": "When necessary, guidance to the emergency airport may use radar, following another aircraft, NAVAIDs, pilotage by landmarks, or compass headings. Those methods still need to be used with the normal emergency-airport recommendation factors in mind.",
+          "choices": [
+            {
+              "text": "Use any suitable listed guidance method, including radar, following another aircraft, NAVAIDs, pilotage, or compass headings, while still considering the normal emergency-airport recommendation factors.",
+              "is_correct": true
+            },
+            {
+              "text": "Use radar only, because the other methods are not approved for emergency guidance.",
+              "is_correct": false
+            },
+            {
+              "text": "Stop providing guidance if radar becomes weak, because ATC may not shift to landmarks, headings, or NAVAIDs after recommending an airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Rely only on the automated emergency-airport tool after the airport is chosen, because controller judgment no longer applies during the guidance phase.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-16, controllers may use radar, another aircraft, NAVAIDs, pilotage, or compass headings to guide the aircraft, and those methods are still weighed with the usual emergency-airport recommendation factors."
+        },
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which is an approved means of guiding an aircraft to an emergency airport when necessary?",
+          "choices": [
+            {
+              "text": "Following another aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Delaying all guidance until the pilot chooses an airport without assistance.",
+              "is_correct": false
+            },
+            {
+              "text": "Using only automated airport-selection output and no controller guidance.",
+              "is_correct": false
+            },
+            {
+              "text": "Assigning visual separation from terrain at pilot discretion.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-16, approved guidance methods include radar, following another aircraft, NAVAIDs, pilotage by landmarks, and compass headings."
+        }
+      ]
+    },
+    "10-2-17": {
+      "sync_replace_types": true,
+      "replace_types": ["knowledge_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may the EOVM or EAM be used to provide emergency advisory service?",
+          "choices": [
+            {
+              "text": "Only when the pilot has declared an emergency or the controller determines an emergency exists or is imminent because the aircraft cannot maintain an appropriate terrain or obstacle clearance minimum altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time a pilot requests vectors around weather, even if terrain clearance is not an issue.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft has descended below the MVA and radar contact is lost.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever an automated airport-selection tool recommends a lower terrain route.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-17, the EOVM/EAM is used only when the pilot has declared an emergency or the controller determines an emergency exists or is imminent because an appropriate terrain or obstacle clearance minimum altitude cannot be maintained."
+        }
+      ]
+    },
+    "10-2-18": {
+      "sync_replace_types": true,
+      "replace_types": ["requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "If a turbine-powered aircraft reports it has entered a volcanic ash cloud and a distress situation exists, what should ATC avoid initiating until the aircraft exits the ash cloud?",
+          "choices": [
+            {
+              "text": "Climb clearances.",
+              "is_correct": true
+            },
+            {
+              "text": "Any exchange of position information.",
+              "is_correct": false
+            },
+            {
+              "text": "Any descent planning, even if terrain requires it.",
+              "is_correct": false
+            },
+            {
+              "text": "Any coordination with adjacent facilities.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-18, climb clearances are not initiated for turbine-powered aircraft until the aircraft has exited the volcanic ash cloud."
+        }
+      ]
+    },
+    "10-2-19": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "After receiving a report of illness, death, or another public-health risk on board, what should the controller do as soon as possible?",
+          "choices": [
+            {
+              "text": "Obtain the listed information and notify the OMIC, OS, or CIC as soon as possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the flight lands before collecting any details so the crew can focus on flying.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate follow-on public-health details over ATC frequencies whenever possible.",
+              "is_correct": false
+            },
+            {
+              "text": "Relay only the call sign to the next sector and let that sector handle the rest.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 10-2-19, the controller obtains the listed information and notifies the OMIC, OS, or CIC as soon as possible so it can be relayed to the DEN."
+        }
+      ]
+    },
+    "10-3-1": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "requirement_check", "scope_check"]
+    },
+    "10-3-2": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "requirement_check", "scope_check"]
+    },
+    "10-3-3": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "requirement_check", "scope_check"]
+    },
+    "10-3-4": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "directive_check", "document_control_check", "requirement_check", "scope_check"]
+    },
+    "10-3-5": {
+      "sync_replace_types": true,
+      "replace_types": ["knowledge_check"]
+    },
+    "10-3-6": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "directive_check", "requirement_check"]
+    },
+    "10-3-7": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "scope_check"]
+    },
+    "10-4-1": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "requirement_check", "scope_check"]
+    },
+    "10-4-2": {
+      "sync_replace_types": true,
+      "replace_types": ["knowledge_check"]
+    },
+    "10-4-3": {
+      "sync_replace_types": true,
+      "replace_types": ["knowledge_check"]
+    },
+    "10-4-4": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "directive_check", "document_control_check", "requirement_check", "scope_check", "term_definition_check"]
+    },
+    "10-5-1": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "requirement_check"]
+    },
+    "10-5-2": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "example_check"]
+    },
+    "10-6-1": {
+      "sync_replace_types": true,
+      "replace_types": ["knowledge_check", "scope_check"]
+    },
+    "10-6-2": {
+      "sync_replace_types": true,
+      "replace_types": ["requirement_check"]
+    },
+    "10-6-3": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "scope_check"]
+    },
+    "10-6-4": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "requirement_check", "scope_check"]
+    },
+    "10-6-5": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "requirement_check"]
+    },
+    "10-7-1": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "directive_check", "requirement_check"]
+    },
+    "10-7-2": {
+      "sync_replace_types": true,
+      "replace_types": ["minima_rule_check"]
+    },
+    "10-7-3": {
+      "sync_replace_types": true,
+      "replace_types": ["requirement_check"]
+    },
+    "10-7-4": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "requirement_check"]
+    },
+    "10-7-5": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check"]
+    }
+  }
+}

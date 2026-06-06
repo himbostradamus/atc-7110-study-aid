@@ -1,0 +1,464 @@
+{
+  "questions": {
+    "7-3-1": {
+      "items": [
+        {
+          "question_text": "Complete: Under 7-3-1, you may clear an aircraft to maintain VFR-on-top if the pilot of an aircraft on an _____ flight plan requests the clearance.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-3-1a, the pilot must be on an IFR flight plan. VFR-on-top is an IFR clearance that suspends IFR separation but does not cancel the IFR flight plan. The pilot must request it; the controller cannot initiate it.",
+          "choices": [
+            {
+              "text": "IFR",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 7-3-1 note 1, what responsibilities does a pilot retain after being cleared VFR-on-top?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-3-1 note 1, the pilot must: fly at an appropriate VFR altitude, comply with VFR visibility and cloud distance criteria, see and avoid other aircraft, AND comply with instrument flight rules applicable to the flight (e.g., adherence to ATC clearances). The pilot does NOT become released from IFR requirements.",
+          "choices": [
+            {
+              "text": "Only see-and-avoid responsibilities; IFR compliance is waived because the aircraft is now VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Fly at an appropriate VFR altitude, comply with VFR visibility and cloud criteria, see and avoid other aircraft, and comply with applicable IFR rules including ATC clearances.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the responsibility to report reaching VFR-on-top conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "Sole responsibility for all traffic separation; ATC's obligation to provide advisories ends.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 7-3-1b, when clearing an aircraft to climb through weather and then maintain VFR-on-top, what must the controller inform the pilot about the meteorological formation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-3-1b2 and b3, the controller must either inform the pilot of the reported height of the tops of the meteorological formation, OR inform the pilot that no top report is available. Both fulfill the information requirement; one must be provided.",
+          "choices": [
+            {
+              "text": "The reported height of the tops, or that no top report is available.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the cloud base altitude, because tops information is the pilot's responsibility to determine.",
+              "is_correct": false
+            },
+            {
+              "text": "That the controller will vector the aircraft around the weather if tops are unknown.",
+              "is_correct": false
+            },
+            {
+              "text": "The type of meteorological formation only; altitude information is optional.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 7-3-1c, when is VFR-on-top not authorized to separate holding aircraft from each other or from en route aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-3-1c, VFR-on-top may not be used between sunset and sunrise to separate holding aircraft from each other or from en route aircraft, unless restrictions are applied to ensure appropriate IFR vertical separation. The restriction is time-based, not weather-based.",
+          "choices": [
+            {
+              "text": "When the weather at the holding fix is below VFR minimums.",
+              "is_correct": false
+            },
+            {
+              "text": "Between sunset and sunrise, unless IFR vertical separation restrictions are applied.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the holding aircraft are operating in Class B airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "When the holding aircraft are at different altitudes regardless of time of day.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Complete: Under 7-3-1c, the phraseology for altitude-restricted VFR-on-top is: MAINTAIN VFR-ON-TOP AT OR _____ / BELOW / BETWEEN (altitudes).",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-3-1c phraseology, the controller uses MAINTAIN VFR-ON-TOP AT OR ABOVE/BELOW/BETWEEN (altitudes). These altitude restrictions ensure IFR vertical separation is maintained when VFR-on-top is used between sunset and sunrise.",
+          "choices": [
+            {
+              "text": "ABOVE",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 7-3-1d, what is the controller's obligation when there is reason to believe flight in VFR conditions may become impractical for a VFR-on-top aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-3-1d, the controller must issue an alternative clearance ensuring separation from all other aircraft for which the controller has separation responsibility. The phraseology is 'IF UNABLE, (alternative procedure), AND ADVISE.' This mirrors the obligation in 7-1-2b.",
+          "choices": [
+            {
+              "text": "Cancel the IFR flight plan because VFR-on-top already eliminates all IFR separation obligations.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue an alternative clearance that will ensure separation from all other aircraft for which the controller has separation responsibility.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for the pilot to report inability to continue VFR before taking any action.",
+              "is_correct": false
+            },
+            {
+              "text": "Switch the aircraft to VFR conditions clearance under 7-1-2 because VFR-on-top is no longer practical.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 7-3-1, how does VFR-on-top differ from a VFR conditions clearance under 7-1-2?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "VFR-on-top (7-3-1) suspends IFR separation but the aircraft remains on an IFR flight plan and must comply with both VFR and applicable IFR rules. The pilot is responsible for appropriate VFR altitude per 91.159. VFR conditions (7-1-2) is a clearance to maintain visual conditions with altitude specified by ATC. VFR-on-top can be issued to separate holding aircraft (with restrictions at night); VFR conditions has no such explicit holding application.",
+          "choices": [
+            {
+              "text": "VFR-on-top suspends IFR separation but keeps the aircraft on an IFR flight plan requiring IFR rule compliance and pilot-selected VFR altitude; VFR conditions is a clearance lasting until a fix/time with ATC-specified altitudes.",
+              "is_correct": true
+            },
+            {
+              "text": "They are identical; both phrases mean the same thing and are interchangeable in ATC phraseology.",
+              "is_correct": false
+            },
+            {
+              "text": "VFR conditions cancels the IFR flight plan; VFR-on-top keeps the aircraft IFR but relieves the pilot of all IFR compliance.",
+              "is_correct": false
+            },
+            {
+              "text": "VFR-on-top may only be used in Class A airspace; VFR conditions may only be used below FL180.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "7-3-2": {
+      "items": [
+        {
+          "question_text": "Complete: Under 7-3-2, inform a VFR-on-top aircraft when a report indicates the pilot is not complying with 14 CFR section _____.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-3-2, the controller's obligation to inform the pilot is triggered by evidence of non-compliance with 14 CFR section 91.159(a), which prescribes VFR cruising altitudes based on magnetic course.",
+          "choices": [
+            {
+              "text": "91.159(a)",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 7-3-2 note, what aircraft are excluded from the 14 CFR 91.159(a) VFR cruising altitude requirements?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Per the 7-3-2 note, the VFR cruising altitudes apply to aircraft 'not in a holding pattern of 2 minutes or less, or turning.' Aircraft in such holding patterns or turning are excluded from the cruising altitude requirements during that maneuver.",
+          "choices": [
+            {
+              "text": "Aircraft in a holding pattern of 2 minutes or less, or turning.",
+              "is_correct": true
+            },
+            {
+              "text": "Aircraft operating within Class B or Class C airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Aircraft flying below 3,000 feet AGL at any time.",
+              "is_correct": false
+            },
+            {
+              "text": "All aircraft on IFR flight plans regardless of clearance type.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 7-3-2, to what altitude range does the VFR-on-top cruising level advisory apply?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-3-2, the VFR-on-top cruising levels apply more than 3,000 feet above the surface to and including FL 180 (18,000 feet MSL). Below 3,000 feet AGL, the pilot may choose any altitude; above FL180 is Class A where VFR-on-top is not permitted (per 7-1-1).",
+          "choices": [
+            {
+              "text": "More than 3,000 feet above the surface to and including FL 180.",
+              "is_correct": true
+            },
+            {
+              "text": "From the surface to FL 180 without minimum altitude threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "From 1,200 feet AGL upward to and including FL 240.",
+              "is_correct": false
+            },
+            {
+              "text": "Only from FL 180 to FL 600 where VFR-on-top is available.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 7-3-2 phraseology, how are the proper cruising levels communicated when the pilot needs to be informed?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-3-2 phraseology, the controller states: 'VFR-ON-TOP CRUISING LEVELS FOR YOUR DIRECTION OF FLIGHT ARE: more than 3,000 feet above the surface to FL 180: ODD/EVEN ALTITUDES/FLIGHT LEVELS PLUS FIVE HUNDRED FEET.' The specific odd/even designation depends on the pilot's magnetic course.",
+          "choices": [
+            {
+              "text": "ADVISE WHEN READY TO COPY CRUISING ALTITUDE.",
+              "is_correct": false
+            },
+            {
+              "text": "VFR-ON-TOP CRUISING LEVELS FOR YOUR DIRECTION OF FLIGHT ARE: ODD/EVEN ALTITUDES/FLIGHT LEVELS PLUS FIVE HUNDRED FEET.",
+              "is_correct": true
+            },
+            {
+              "text": "MAINTAIN VFR CRUISING ALTITUDE APPROPRIATE FOR DIRECTION OF FLIGHT.",
+              "is_correct": false
+            },
+            {
+              "text": "CRUISE AT VFR ALTITUDES PER 14 CFR SECTION 91.159.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "7-3-1": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Under 7-3-1b, what are the five conditions for clearing an aircraft to climb through weather and then maintain VFR-on-top?",
+          "choices": [
+            {
+              "text": "Pilot on IFR flight plan with request; tops reported or no tops report; alternative clearance for separation when necessary; and reclear to maintain VFR-on-top when the pilot reports reaching it.",
+              "is_correct": true
+            },
+            {
+              "text": "VFR flight plan filed; weather at or above minimums; clearance from adjacent sector; pilot reports on top; and controller issues IFR separation.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilot request; visual separation applied; altitude assigned by ATC; merge advisory issued; and controller terminates radar service.",
+              "is_correct": false
+            },
+            {
+              "text": "ATIS received; pilot reports cloud tops; approach clearance issued; tower notified; and pilot accepts VFR separation responsibility.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-3-1b, the five conditions are: (1) pilot requests the clearance, (2) inform of reported tops height or (3) that no tops report is available, (4) when necessary, ensure separation by issuing alternative clearance, (5) reclear to maintain VFR-on-top when the pilot reports reaching it."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should the controller do?",
+          "situation": "It is one hour after sunset and a controller has two IFR aircraft holding at the same fix. One aircraft requests VFR-on-top. The controller considers clearing both aircraft VFR-on-top to separate them without IFR vertical separation.",
+          "para_context": "Per 7-3-1c, do not clear aircraft to maintain VFR-on-top between sunset and sunrise to separate holding aircraft from each other or from en route aircraft unless restrictions are applied to ensure the appropriate IFR vertical separation.",
+          "question_text": "Can the controller use VFR-on-top to separate the holding aircraft at night?",
+          "choices": [
+            {
+              "text": "Yes, but only with altitude restrictions applied to ensure appropriate IFR vertical separation.",
+              "is_correct": true
+            },
+            {
+              "text": "No, VFR-on-top is never permitted for separation of any aircraft after sunset.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, VFR-on-top may be used freely at night because the pilot's see-and-avoid responsibility is sufficient.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because VFR-on-top is not authorized in holding patterns regardless of time of day.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-3-1c, VFR-on-top can be used to separate holding aircraft at night, but ONLY if altitude restrictions are applied to ensure IFR vertical separation. The phraseology 'MAINTAIN VFR-ON-TOP AT OR ABOVE/BELOW/BETWEEN (altitudes)' provides this restriction."
+        },
+        {
+          "activity_type": "readback_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "The controller issued a VFR-on-top clearance with altitude restriction. Which pilot readback is correct?",
+          "clearance": "MAINTAIN VFR-ON-TOP AT OR ABOVE ONE THREE THOUSAND FIVE HUNDRED.",
+          "choices": [
+            {
+              "text": "Maintain VFR-on-top at or above one three thousand five hundred.",
+              "is_correct": true
+            },
+            {
+              "text": "Maintain VFR-on-top at one three thousand five hundred.",
+              "is_correct": false
+            },
+            {
+              "text": "Maintain VFR conditions at or above thirteen five hundred.",
+              "is_correct": false
+            },
+            {
+              "text": "Maintain VFR-on-top above flight level one three five.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-3-1c phraseology, the correct format is MAINTAIN VFR-ON-TOP AT OR ABOVE/BELOW/BETWEEN (altitudes). 'At or above' is a specific altitude restriction used primarily at night or when vertical separation must be ensured."
+        },
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Under 7-3-1 note 2, which services must controllers continue providing to VFR-on-top aircraft even though IFR separation is suspended?",
+          "choices": [
+            {
+              "text": "Traffic advisories, safety alerts, and merging target procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "No services; all ATC services cease when VFR-on-top is issued.",
+              "is_correct": false
+            },
+            {
+              "text": "Only IFR separation; traffic advisories and safety alerts are discontinued.",
+              "is_correct": false
+            },
+            {
+              "text": "Only wake turbulence advisories, because merging target procedures require IFR separation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-3-1 note 2, even though IFR separation is not applied to VFR-on-top aircraft, controllers must continue to provide traffic advisories, safety alerts, and apply merging target procedures."
+        },
+        {
+          "activity_type": "source_lookup",
+          "generation_source": "question_agent",
+          "difficulty": 1,
+          "source_kind": "reference",
+          "source_label": "FAA Order JO 7110.65, Paragraph 9-3-3",
+          "lookup_context": [
+            "Paragraph 7-3-1 references 9-3-3 for additional VFR-on-top procedures"
+          ],
+          "task": "Identify the referenced paragraph for additional VFR-on-top procedures.",
+          "instruction": "Use the references in 7-3-1.",
+          "question_text": "Which paragraph does 7-3-1 reference for additional VFR-on-top information?",
+          "choices": [
+            {
+              "text": "Paragraph 9-4-5.",
+              "is_correct": false
+            },
+            {
+              "text": "Paragraph 7-1-1.",
+              "is_correct": false
+            },
+            {
+              "text": "Paragraph 9-3-3.",
+              "is_correct": true
+            },
+            {
+              "text": "Paragraph 5-1-4.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-3-1 references, the paragraph points to 9-3-3 VFR-On-Top for additional procedures."
+        }
+      ]
+    },
+    "7-3-2": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Under 7-3-2, what VFR cruising altitude should a VFR-on-top aircraft use when flying a magnetic course of 090 degrees at 5,500 feet MSL?",
+          "choices": [
+            {
+              "text": "Odd cardinal altitude plus 500 feet — in this case, 5,500 feet is correct.",
+              "is_correct": true
+            },
+            {
+              "text": "Even cardinal altitude plus 500 feet — the aircraft should be at 4,500 or 6,500 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Any altitude above 3,000 feet AGL, because VFR-on-top aircraft are not bound by cruising altitude rules.",
+              "is_correct": false
+            },
+            {
+              "text": "The altitude assigned by ATC in the IFR clearance, not a VFR cruising altitude.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-3-2 and 14 CFR 91.159(a), magnetic courses 0-179 use odd cardinal altitudes plus 500 feet. At 5,500 feet with a course of 090, the aircraft is at the correct altitude."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should the controller do?",
+          "situation": "A VFR-on-top aircraft reports at 5,500 feet MSL on a magnetic course of 270 degrees, operating above 3,000 feet AGL. A radar report indicates the aircraft's altitude does not match the required VFR cruising altitude for its direction of flight.",
+          "para_context": "Per 7-3-2, when a report indicates the pilot is not complying with 14 CFR 91.159(a), inform the aircraft of the proper VFR-on-top cruising levels. For magnetic courses 180-359, the proper altitudes are even altitudes plus 500 feet.",
+          "question_text": "What should the controller tell this pilot?",
+          "choices": [
+            {
+              "text": "VFR-ON-TOP CRUISING LEVELS FOR YOUR DIRECTION OF FLIGHT ARE EVEN ALTITUDES PLUS FIVE HUNDRED FEET.",
+              "is_correct": true
+            },
+            {
+              "text": "5,500 feet is correct; no advisory is needed.",
+              "is_correct": false
+            },
+            {
+              "text": "Resume your own navigation at an IFR altitude because VFR-on-top cruising rules do not apply below FL 180.",
+              "is_correct": false
+            },
+            {
+              "text": "VFR-ON-TOP CRUISING LEVELS FOR YOUR DIRECTION OF FLIGHT ARE ODD ALTITUDES PLUS FIVE HUNDRED FEET.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-3-2 and 14 CFR 91.159(a), westbound courses (180-359) use even altitudes plus 500 feet. At 5,500 feet (odd + 500), the aircraft is at the wrong altitude for its direction of flight and should be at an even altitude plus 500 feet like 4,500 or 6,500."
+        }
+      ]
+    }
+  }
+}

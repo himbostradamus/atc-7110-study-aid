@@ -1,0 +1,474 @@
+{
+  "questions": {
+    "3-2-1": {
+      "items": [
+        {
+          "question_text": "Complete: Use ATC light signals from _____ to control aircraft and the movement of vehicles, equipment, and personnel on the movement area when radio communications cannot be employed.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The paragraph explicitly directs controllers to the table that contains all light signal meanings.",
+          "choices": [
+            {
+              "text": "TBL 3-2-1",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "An aircraft on the ground receives a flashing red signal from the tower. The pilot believes this means the same thing as it would for an aircraft in flight. What is the actual difference?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "table",
+          "generation_source": "question_agent",
+          "explanation": "Flashing red means 'Taxi clear of landing area or runway in use' for aircraft on the ground, but means 'Airport unsafe — Do not land' for aircraft in flight. These are completely different meanings that depend on whether the aircraft is airborne.",
+          "choices": [
+            {
+              "text": "There is no difference — flashing red always means the same thing regardless of aircraft status.",
+              "is_correct": false
+            },
+            {
+              "text": "On the ground it means taxi clear of the landing area or runway; in flight it means airport unsafe, do not land.",
+              "is_correct": true
+            },
+            {
+              "text": "On the ground it means stop; in flight it means give way and continue circling.",
+              "is_correct": false
+            },
+            {
+              "text": "On the ground it means return to starting point; in flight it means cleared to land.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A vehicle operator on the movement area interprets a steady green light as 'cleared to taxi' because the operator has heard that steady green allows movement. According to TBL 3-2-1, what does steady green actually mean for vehicles, equipment, and personnel?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "table",
+          "generation_source": "question_agent",
+          "explanation": "For vehicles, equipment, and personnel, steady green means 'Cleared to cross; proceed; go.' It is not 'cleared to taxi' which is the aircraft-on-ground meaning of flashing green. This is a common confusion because the signal-column meanings differ by recipient type.",
+          "choices": [
+            {
+              "text": "Cleared to taxi, same as for an aircraft on the ground.",
+              "is_correct": false
+            },
+            {
+              "text": "Stop and await further instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared to cross; proceed; go.",
+              "is_correct": true
+            },
+            {
+              "text": "Return to starting point on the airport.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A trainee controller observes an aircraft on the ground receive a steady green signal and tells the pilot it means 'cleared to taxi.' A more experienced controller corrects this. What does steady green actually mean to an aircraft on the ground under TBL 3-2-1?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "table",
+          "generation_source": "question_agent",
+          "explanation": "Steady green to an aircraft on the ground means 'Cleared for takeoff.' Flashing green means 'Cleared to taxi.' Confusing these two is a common and dangerous error because it could result in an aircraft taking the runway when only cleared to taxi.",
+          "choices": [
+            {
+              "text": "Cleared to taxi — the trainee was correct.",
+              "is_correct": false
+            },
+            {
+              "text": "Return for landing, to be followed by steady green at the proper time.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared for takeoff.",
+              "is_correct": true
+            },
+            {
+              "text": "Cleared to cross the runway.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller at a non-towered satellite airport with no radio capability wants to use ATC light signals to control an aircraft. The controller has never needed to use them before. What source must the controller reference for the signal meanings?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 3-2-1 specifically directs controllers to 'TBL 3-2-1' for the signal meanings. There is no alternative source cited in the paragraph for these meanings.",
+          "choices": [
+            {
+              "text": "The facility directive, which may define its own local light signal meanings.",
+              "is_correct": false
+            },
+            {
+              "text": "Table 3-2-1 from FAA Order JO 7110.65.",
+              "is_correct": true
+            },
+            {
+              "text": "The Aeronautical Information Manual, Chapter 4.",
+              "is_correct": false
+            },
+            {
+              "text": "FAA Order JO 7210.3, Facility Operation and Administration.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-2-2": {
+      "items": [
+        {
+          "question_text": "Complete: Direct a general warning signal, alternating _____ and _____, to aircraft or vehicle operators, as appropriate, when specified conditions exist.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The warning signal is explicitly 'alternating red and green.' Both colors are part of the signal definition.",
+          "choices": [
+            {
+              "text": "red green",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Complete the note: The warning signal is not a _____ signal and can be followed by any other light signal, as circumstances permit.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note explicitly states the warning signal is 'not a prohibitive signal.' This is the key operational characteristic — it warns but does not forbid subsequent action.",
+          "choices": [
+            {
+              "text": "prohibitive",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A controller issues an alternating red-and-green warning signal to an aircraft for a soft-field condition. The pilot, seeing red in the signal, comes to a complete stop and refuses to move. The pilot later argues that any signal containing red means 'stop.' Is the pilot's interpretation correct under 3-2-2?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note explicitly states the warning signal is 'not a prohibitive signal.' It is a caution that means 'exercise extreme caution,' not 'stop.' It can even be followed by another light signal. The pilot should exercise heightened alertness, not stop.",
+          "choices": [
+            {
+              "text": "Yes — any red component in an ATC light signal always requires the aircraft to stop.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes — the warning signal is prohibitive and means the aircraft must not move until a different signal is given.",
+              "is_correct": false
+            },
+            {
+              "text": "No — the warning signal is not prohibitive; it means exercise extreme caution, and the aircraft may continue with heightened alertness.",
+              "is_correct": true
+            },
+            {
+              "text": "No — but the aircraft should return to the starting point before continuing.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which of the following is NOT one of the three listed conditions in 3-2-2 for directing the alternating red-and-green general warning signal?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The three listed conditions are: (a) converging aircraft with collision hazard, (b) mechanical trouble unknown to pilot, (c) other hazardous conditions requiring intensified alertness. 'Pilot requests a radio check' is not listed and would be handled through radio, not light signals.",
+          "choices": [
+            {
+              "text": "Aircraft are converging and a collision hazard exists.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot requests a radio check to verify communication quality.",
+              "is_correct": true
+            },
+            {
+              "text": "Mechanical trouble exists of which the pilot might not be aware.",
+              "is_correct": false
+            },
+            {
+              "text": "Other hazardous conditions are present which call for intensified pilot or operator alertness.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller notices ice accumulation on the runway surface. There are no converging aircraft and no mechanical trouble is apparent. Should the controller direct the general warning signal?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Ice on the runway falls under condition (c): 'Other hazardous conditions are present which call for intensified pilot or operator alertness.' The paragraph explicitly lists 'ice on the runway' as an example under this condition.",
+          "choices": [
+            {
+              "text": "No — the warning signal is only for collision hazards between converging aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "No — the warning signal only applies to mechanical trouble that the pilot may not know about.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes — ice on the runway is a hazardous condition listed as an example under condition (c).",
+              "is_correct": true
+            },
+            {
+              "text": "Yes — but only if the pilot first requests information about runway conditions.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "After issuing an alternating red-and-green warning signal for converging aircraft, the controller wants to now clear one aircraft to land. Is the controller permitted to follow the warning signal with a steady green?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note states the warning signal 'can be followed by any other light signal, as circumstances permit.' The controller may issue a steady green landing clearance after the warning signal once circumstances permit, because the warning signal is not prohibitive.",
+          "choices": [
+            {
+              "text": "No — the warning signal is prohibitive and no other light signal may follow it.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes — but only after both aircraft are on the ground.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes — the warning signal is not prohibitive and can be followed by another light signal as circumstances permit.",
+              "is_correct": true
+            },
+            {
+              "text": "No — after a warning signal, the controller must use radio communications for any subsequent clearance.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-2-3": {
+      "items": [
+        {
+          "question_text": "Complete: To obtain acknowledgment from an aircraft equipped with _____ only, request the aircraft to do specific maneuvers or flash lights.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The procedure is specifically for aircraft with 'receiver only' — they can hear ATC but cannot transmit.",
+          "choices": [
+            {
+              "text": "receiver",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A receiver-only helicopter is in flight at night and needs to acknowledge a light signal. The pilot flashes the navigation lights. Is this correct under 3-2-3?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "For helicopters between sunset and sunrise, the approved acknowledgment is to 'Flash landing light or search light.' Navigation lights are the nighttime acknowledgment for fixed-wing aircraft, not helicopters. This is a discrimination point between aircraft categories.",
+          "choices": [
+            {
+              "text": "Yes — all aircraft use navigation or landing lights at night for acknowledgment.",
+              "is_correct": false
+            },
+            {
+              "text": "No — helicopters at night must flash the landing light or search light, not navigation lights.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes — but only if the landing light is inoperative.",
+              "is_correct": false
+            },
+            {
+              "text": "No — helicopters at night must rock the tip path plane instead.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the key operational difference between the daylight acknowledgment for a hovering helicopter versus a helicopter in flight under 3-2-3?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "A hovering helicopter may either 'turn the helicopter toward the controlling facility and flash the landing light or rock the tip path plane.' A helicopter in flight may 'either flash the landing light or rock the tip path plane.' The hovering procedure adds the option of turning toward the facility as part of the acknowledgment.",
+          "choices": [
+            {
+              "text": "There is no difference — hovering and in-flight helicopters use identical acknowledgments.",
+              "is_correct": false
+            },
+            {
+              "text": "Hovering helicopters must rock the wings; in-flight helicopters must flash the landing light.",
+              "is_correct": false
+            },
+            {
+              "text": "Hovering helicopters have the additional option of turning toward the controlling facility while flashing the landing light; in-flight helicopters do not have the turn option.",
+              "is_correct": true
+            },
+            {
+              "text": "In-flight helicopters may move ailerons or rudder; hovering helicopters cannot.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller requests a receiver-only helicopter to acknowledge a light signal during daylight while the helicopter is in forward flight. The pilot rocks the wings. A second controller says helicopters must always rock the tip path plane. Who is correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Rocking wings is the fixed-wing aircraft in-flight acknowledgment, not the helicopter procedure. For a helicopter in flight during daylight, the correct acknowledgment is to 'either flash the landing light or rock the tip path plane.' The first controller's instruction was wrong; the second controller is correct that helicopters use different methods.",
+          "choices": [
+            {
+              "text": "The pilot was correct — all aircraft rock wings in flight during daylight.",
+              "is_correct": false
+            },
+            {
+              "text": "The first controller was correct — helicopters in flight use the same acknowledgment as fixed-wing aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Neither — helicopters in flight during daylight must turn toward the facility and flash the landing light.",
+              "is_correct": false
+            },
+            {
+              "text": "The second controller was correct — helicopters in flight must flash the landing light or rock the tip path plane, not rock the wings.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A fixed-wing receiver-only aircraft is on the ground at dusk, after sunset. The controller needs an acknowledgment. Which method is correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "For fixed-wing aircraft between sunset and sunrise, the method is to 'Flash navigation or landing lights.' The time-of-day boundary is explicitly sunset/sunrise, and moving ailerons/rudder is only for between sunrise and sunset.",
+          "choices": [
+            {
+              "text": "Move ailerons or rudder, because the aircraft is on the ground.",
+              "is_correct": false
+            },
+            {
+              "text": "Rock the wings, because at dusk wing rocking is more visible.",
+              "is_correct": false
+            },
+            {
+              "text": "Flash navigation or landing lights.",
+              "is_correct": true
+            },
+            {
+              "text": "No acknowledgment is required after sunset for aircraft on the ground.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under TBL 3-2-1, what does a steady red signal mean to an aircraft on the ground versus an aircraft in flight?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "table",
+          "generation_source": "question_agent",
+          "explanation": "Steady red on the ground means 'Stop.' Steady red in flight means 'Give way to other aircraft and continue circling.' These are distinctly different operational instructions that depend on the aircraft's flight status.",
+          "choices": [
+            {
+              "text": "Both mean stop.",
+              "is_correct": false
+            },
+            {
+              "text": "Both mean give way and continue circling.",
+              "is_correct": false
+            },
+            {
+              "text": "On the ground: Stop. In flight: Give way to other aircraft and continue circling.",
+              "is_correct": true
+            },
+            {
+              "text": "On the ground: Give way to other aircraft and continue circling. In flight: Stop.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "3-2-2": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You are working local control using light signals because the aircraft has no radio. You see two aircraft converging and a collision hazard exists. You direct the alternating red-and-green warning signal to both. The collision hazard resolves, and both aircraft are now clear. One aircraft now needs a landing clearance. Another controller says you must wait until the aircraft acknowledges the warning signal before issuing any other light signal.",
+          "para_context": "The warning signal is not a prohibitive signal and can be followed by any other light signal, as circumstances permit.",
+          "choices": [
+            {
+              "text": "Wait for an acknowledgment from the aircraft before issuing the landing clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the steady green landing clearance now because the warning signal is not prohibitive and circumstances now permit.",
+              "is_correct": true
+            },
+            {
+              "text": "Switch to radio to issue the landing clearance because light signals cannot be used in sequence.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue flashing green first as a transition signal, then steady green.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note explicitly states the warning signal is not prohibitive and can be followed by another light signal as circumstances permit. Since the collision hazard has resolved, the controller may now issue a landing clearance."
+        }
+      ]
+    },
+    "3-2-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You are controlling a receiver-only helicopter operating at night. You issue a light signal and need acknowledgment. The helicopter is in forward flight after sunset. Another controller advises you to ask for navigation light flashes because 'all aircraft at night use the same acknowledgment method.'",
+          "para_context": "Receiver-only helicopter acknowledgments at night: Flash landing light or search light. Fixed-wing acknowledgments at night: Flash navigation or landing lights.",
+          "choices": [
+            {
+              "text": "Request navigation light flashes because all aircraft use the same nighttime acknowledgment under 3-2-3.",
+              "is_correct": false
+            },
+            {
+              "text": "Request the helicopter to flash the landing light or search light, because helicopters have a different nighttime procedure.",
+              "is_correct": true
+            },
+            {
+              "text": "Request the helicopter to rock the tip path plane because visual acknowledgment is preferred over lights at night.",
+              "is_correct": false
+            },
+            {
+              "text": "Skip acknowledgment entirely because helicopters operating at night do not need to acknowledge light signals.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "3-2-3 Specifies different nighttime acknowledgment procedures for helicopters (landing light or search light) versus fixed-wing aircraft (navigation or landing lights). The helicopter-specific procedure must be used."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "questions": {
+    "2-9-1": {
+      "items": [
+        {
+          "question_text": "Under 2-9-1, each ATIS message must be identified by a phonetic letter code word at both the beginning and the _____ of the message.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 2-9-1a, identify each ATIS message by a phonetic letter code word at both the beginning and the 'end' of the message. This provides dual-point message identification.",
+          "choices": [
+            {"text": "end", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "Under 2-9-1, alphabet letter phonetic words are used sequentially from \"Alpha\" through \"_____\" and repeated.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 2-9-1a1, alphabet letter phonetic words must be used sequentially beginning with 'Alpha' and ending with 'Zulu,' then repeated. The sequence is independent of calendar days.",
+          "choices": [
+            {"text": "Zulu", "is_correct": true}
+          ]
+        }
+      ]
+    },
+    "2-9-2": {
+      "items": [
+        {
+          "question_text": "Under 2-9-2, a new ATIS recording must be made upon receipt of any new official weather regardless of whether there is or is not a change in _____.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 2-9-2a1, a new recording must be made upon receipt of any new official weather regardless of whether there is or is not a change in 'values.' This ensures pilots always receive the most current official weather.",
+          "choices": [
+            {"text": "values", "is_correct": true}
+          ]
+        }
+      ]
+    },
+    "2-9-3": {
+      "items": [
+        {
+          "question_text": "Under 2-9-3, ATIS weather observations must always include remarks of lightning, cumulonimbus, and _____ clouds.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 2-9-3a4d, ATIS must always include weather observation remarks of lightning, cumulonimbus, and 'towering cumulus' clouds. These are mandatory inclusions regardless of other content.",
+          "choices": [
+            {"text": "towering cumulus", "is_correct": true}
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "2-9-2": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "instruction": "The current ATIS broadcast reports braking action as 'fair.' A new braking action report is received indicating braking action is now 'poor' on the runway in use.",
+          "question_text": "Under 2-9-2, must a new ATIS recording be made?",
+          "explanation": "Yes. Per 2-9-2a2, a new recording must be made when runway braking action reports indicate runway braking is worse than that included in the current ATIS broadcast. 'Poor' is worse than 'fair.'",
+          "choices": [
+            {"text": "Yes, because braking action has worsened from the current ATIS broadcast.", "is_correct": true},
+            {"text": "No, because braking action is not an official weather observation.", "is_correct": false},
+            {"text": "Only if the change occurs within 10 minutes of the last recording.", "is_correct": false},
+            {"text": "No, because the ATIS should only be updated at the top of each hour.", "is_correct": false}
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "questions": {
+    "7-7-1": {
+      "items": [
+        {
+          "question_text": "Complete: Under 7-7-1, apply TRSA procedures within the designated TRSA in addition to the basic services described in Chapter 7, Section _____.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-7-1, TRSA procedures are applied in addition to (not instead of) the basic services in Section 6 (Basic Radar Service to VFR Aircraft). TRSA is an overlay, not a replacement.",
+          "choices": [
+            {
+              "text": "6",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "7-7-3": {
+      "items": [
+        {
+          "question_text": "Under 7-7-3, what methods may be used to separate participating VFR aircraft from IFR aircraft in a TRSA?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-7-3, separation may be by any one of: visual separation (per 7-2-1), radar separation (per Chapter 5), nonradar separation (per Chapter 6), or pilot-applied visual separation (per 7-2-1). This gives controllers flexibility in TRSA separation methods.",
+          "choices": [
+            {
+              "text": "Visual separation, radar separation, nonradar separation, or pilot-applied visual separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Only radar separation, because TRSA operations require radar coverage.",
+              "is_correct": false
+            },
+            {
+              "text": "Only visual separation, because TRSA aircraft are all VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Only nonradar separation, because TRSA is a nonradar procedure.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "7-7-4": {
+      "items": [
+        {
+          "question_text": "Under 7-7-4, must helicopters and powered-lift aircraft be separated from each other in a TRSA?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-7-4, helicopters and powered-lift aircraft need not be separated from other helicopters or powered-lift aircraft. However, traffic information must be exchanged as required by 2-1-21. This is a separation exemption, not a traffic information exemption.",
+          "choices": [
+            {
+              "text": "No, they need not be separated, but traffic information must be exchanged.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, they must be separated by the same standards as fixed-wing aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "No, and no traffic information is required because they have inherent maneuvering capability.",
+              "is_correct": false
+            },
+            {
+              "text": "Only visual separation is required between helicopters and powered-lift aircraft.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "7-7-5": {
+      "items": [
+        {
+          "question_text": "Complete: Under 7-7-5a, altitude information contained in a clearance, instruction, or advisory to VFR aircraft must meet MVA, MSA, or minimum _____ altitude criteria.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-7-5a, any altitude assignment to VFR aircraft in a TRSA must meet at least one of: MVA (Minimum Vectoring Altitude), MSA (Minimum Safe Altitude), or minimum IFR altitude criteria. This ensures terrain and obstruction clearance even though the aircraft is VFR.",
+          "choices": [
+            {
+              "text": "IFR",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "7-7-6": {
+      "items": [
+        {
+          "question_text": "Under 7-7-6, who specifies the approach interval in TRSA operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-7-6, the tower must specify the approach interval. This is a tower function — the tower determines how much spacing is needed between successive arrivals, and approach control sequences aircraft to meet that interval.",
+          "choices": [
+            {
+              "text": "The approach control facility.",
+              "is_correct": false
+            },
+            {
+              "text": "The tower.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot of the leading aircraft in the sequence.",
+              "is_correct": false
+            },
+            {
+              "text": "The ARTCC sector controlling the arrival airspace.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "7-7-2": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should the controller do?",
+          "situation": "VFR aircraft are being held inside the TRSA due to arrival saturation at the primary airport. A pilot asks when to expect further clearance into the airport.",
+          "para_context": "Per 7-7-2, when VFR aircraft are held either inside or outside the TRSA, the controller must inform the pilot when to expect further clearance (EFC).",
+          "question_text": "What information must the controller provide to the holding VFR pilot?",
+          "choices": [
+            {
+              "text": "When to expect further clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "The current ATIS code and landing runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Only that the pilot should continue holding and stand by.",
+              "is_correct": false
+            },
+            {
+              "text": "The delay is indefinite; no time estimate is required for VFR holding.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-7-2, the controller must inform VFR aircraft held inside or outside the TRSA when to expect further clearance. This is an EFC obligation similar to IFR holding."
+        }
+      ]
+    },
+    "7-7-7": {
+      "items": [
+        {
+          "activity_type": "readback_check",
+          "generation_source": "question_agent",
+          "difficulty": 1,
+          "instruction": "The controller provided TRSA departure information. Which pilot readback is correct?",
+          "clearance": "CONTACT DEPARTURE CONTROL ON ONE TWO SIX POINT EIGHT FIVE AFTER PASSING TWO THOUSAND FIVE HUNDRED.",
+          "choices": [
+            {
+              "text": "After two thousand five hundred, contact departure on one two six point eight five.",
+              "is_correct": true
+            },
+            {
+              "text": "Contacting approach on one two six point eight five now.",
+              "is_correct": false
+            },
+            {
+              "text": "Roger, maintain VFR at two thousand five hundred until further advised.",
+              "is_correct": false
+            },
+            {
+              "text": "Wilco, switching to ground control.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-7-7a, at controlled airports within the TRSA, departing VFR aircraft proposing to operate within the TRSA are informed when to contact departure control and the frequency to use."
+        }
+      ]
+    },
+    "7-7-5": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Under 7-7-5b, what happens when an altitude assigned to a VFR aircraft in a TRSA is contrary to 14 CFR 91.159?",
+          "choices": [
+            {
+              "text": "The pilot must advise ATC and ATC may assign an appropriate alternate altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot must comply regardless, because ATC altitude assignments override 14 CFR.",
+              "is_correct": false
+            },
+            {
+              "text": "The assignment is automatically canceled and the pilot may choose any VFR altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot must file a pilot deviation report within 10 days.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-7-5b, if the assigned altitude is contrary to 14 CFR 91.159 (VFR cruising altitudes), the pilot must advise ATC, and ATC may then assign an appropriate alternate altitude."
+        }
+      ]
+    }
+  }
+}

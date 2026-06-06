@@ -1,0 +1,961 @@
+{
+  "activities": {
+    "13-1-1": {
+      "sync_replace_types": true,
+      "replace_types": ["capability_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "For EDST purposes, what does the current plan represent?",
+          "choices": [
+            {
+              "text": "What the En Route Automation System predicts the aircraft will fly, including clearances that may not yet have been issued.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the route and altitude that have already been acknowledged by the pilot on frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the filed flight plan before any controller amendments are considered.",
+              "is_correct": false
+            },
+            {
+              "text": "A radar-only reconstruction of the aircraft's most recent observed track.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "EDST uses the current plan predicted by automation, which can include clearances not yet issued, to model trajectories and detect conflicts."
+        }
+      ]
+    },
+    "13-1-2": {
+      "sync_replace_types": true,
+      "replace_types": ["capability_check", "conditional_rule_check", "minima_rule_check", "requirement_check", "scope_check", "sequence_steps"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "What must be done before transferring control of an aircraft for which Stop Probe has been activated?",
+          "choices": [
+            {
+              "text": "Restart conflict probe for that aircraft unless otherwise coordinated.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave Stop Probe active and let the next sector decide whether to restart it.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer the aircraft immediately because Stop Probe suspends any need for further conflict evaluation.",
+              "is_correct": false
+            },
+            {
+              "text": "Convert the flight to nonradar handling before transfer so conflict probe no longer applies.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If Stop Probe has been activated, conflict probe must be restarted before transfer of control unless a coordination exception applies."
+        }
+      ]
+    },
+    "13-1-3": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "directive_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When EDST is operational at the sector and priorities permit, what is the trial plan capability used to evaluate?",
+          "choices": [
+            {
+              "text": "Predicted conflict solutions, user requests, and whether direction or static restrictions can be removed.",
+              "is_correct": true
+            },
+            {
+              "text": "Only actual conflicts that have already generated an alert, not user-request feasibility.",
+              "is_correct": false
+            },
+            {
+              "text": "Only sector staffing plans and traffic-management initiatives for the next shift.",
+              "is_correct": false
+            },
+            {
+              "text": "Only airport acceptance rates and departure metering initiatives.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Trial planning is used proactively to evaluate conflict solutions, user requests, and the feasibility of removing certain constraints when EDST is available."
+        }
+      ]
+    },
+    "13-1-4": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "requirement_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "If a trial plan based on a user request shows no alerts, what should normally happen next?",
+          "choices": [
+            {
+              "text": "Make every effort to grant the request unless the change would likely adversely affect another sector's operation.",
+              "is_correct": true
+            },
+            {
+              "text": "Grant the request automatically because the absence of alerts ends the evaluation.",
+              "is_correct": false
+            },
+            {
+              "text": "Deny the request unless the next sector has already accepted it in automation.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the trial plan because only actual alerts matter operationally.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "No-alert trial plans support granting the request, but the controller still considers whether the change would adversely affect another sector."
+        }
+      ]
+    },
+    "13-1-5": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "requirement_check", "scope_check", "sequence_steps"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the sector team's primary source of flight data in EDST?",
+          "choices": [
+            {
+              "text": "The Aircraft List (ACL).",
+              "is_correct": true
+            },
+            {
+              "text": "A locally maintained handwritten strip board unless the flight is nonradar.",
+              "is_correct": false
+            },
+            {
+              "text": "The Special Posting Area, because it consolidates every flight of interest.",
+              "is_correct": false
+            },
+            {
+              "text": "Any Remarks field entry that appears in the flight plan, because it overrides the main list presentation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The ACL is the primary sector-team source of flight data, with remarks and other notifications reviewed from there."
+        }
+      ]
+    },
+    "13-1-6": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "directive_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When a flight plan changes after the Coordination Menu was used to annotate manual coordination, when is the yellow Coordination Indicator removed?",
+          "choices": [
+            {
+              "text": "After any appropriate follow-up action has been taken.",
+              "is_correct": true
+            },
+            {
+              "text": "Immediately when the flight plan changes, even before any follow-up action.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft is handed off to the next facility.",
+              "is_correct": false
+            },
+            {
+              "text": "Never, because the indicator remains as a permanent record of prior coordination.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Manual coordination status is annotated by approved means, and if the flight plan later changes the yellow coordination coding is removed after the necessary action has been taken."
+        }
+      ]
+    },
+    "13-1-7": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "requirement_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "What may be used to annotate holding instructions for flights in hold?",
+          "choices": [
+            {
+              "text": "The Hold View, Hold Data Menu, hold message, a flight progress strip, or a facility-approved worksheet.",
+              "is_correct": true
+            },
+            {
+              "text": "Only controller memory, because the aircraft symbol already shows the hold graphically.",
+              "is_correct": false
+            },
+            {
+              "text": "Any worksheet the sector prefers, whether or not the facility has approved it.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the Hold View; all other annotation methods are prohibited.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Holding instructions must be annotated using one of the approved methods named in the paragraph and in accordance with facility directives."
+        }
+      ]
+    },
+    "13-1-8": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "minima_rule_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "What important limitation applies when control information is entered in the ACL or DL Free Text Area?",
+          "choices": [
+            {
+              "text": "The information does not pass on handoff and, if needed by the next controller, must be coordinated separately.",
+              "is_correct": true
+            },
+            {
+              "text": "The information automatically transfers with the aircraft and therefore should not be coordinated separately.",
+              "is_correct": false
+            },
+            {
+              "text": "The information may be left indefinitely once entered because free text serves as a permanent flight record.",
+              "is_correct": false
+            },
+            {
+              "text": "The information may be entered in plain language only; controller abbreviations are not authorized there.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Free Text Area entries have operational limits: they use authorized abbreviations, must be updated or deleted when no longer relevant, and do not pass automatically on handoff."
+        }
+      ]
+    },
+    "13-1-9": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may IAFDOF, UTM, or EDCT coding be acknowledged and removed from the display?",
+          "choices": [
+            {
+              "text": "Only after the appropriate action, coordination, or notification has actually been completed.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as the coding appears, so the list stays visually uncluttered during the coordination process.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the route text is already visible elsewhere in the display.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft has been transferred to the next sector, regardless of whether the action was completed.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The automation coding is acknowledged and removed only after the corresponding required action has been taken."
+        }
+      ]
+    },
+    "13-1-10": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "Why must the sector team perform automation entries in a timely manner?",
+          "choices": [
+            {
+              "text": "Because stale trajectory-model data can make aircraft entries and conflict-probe notifications misleading for the sector and surrounding facilities.",
+              "is_correct": true
+            },
+            {
+              "text": "Because timely entries are needed only to keep the aircraft list visually organized, not to support probe accuracy.",
+              "is_correct": false
+            },
+            {
+              "text": "Because forecast wind updates are the only data source conflict probe actually depends on.",
+              "is_correct": false
+            },
+            {
+              "text": "Because interim altitude updates are always optional unless requested by the next sector.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Conflict-probe results depend on current modeled trajectory data, so late automation entries can mislead both the sector and surrounding facilities."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A controller delays updating a flight's interim altitude and route amendment because the aircraft is still tracking normally and the probe picture does not look urgent yet. Another controller says those entries can wait until the handoff is closer because EDST will sort out the trajectory later.",
+          "para_context": "Conflict-probe accuracy depends on timely updates to the data used to model each flight's trajectory, including route, assigned and interim altitudes, adapted restrictions, and aircraft type. Some sectors may have a directive exception for interim-altitude entry, but otherwise the entries are made promptly.",
+          "choices": [
+            {
+              "text": "Enter the changed trajectory data in a timely manner so probe notifications remain reliable, unless a specific facility directive provides a defined exception.",
+              "is_correct": true
+            },
+            {
+              "text": "Delay the update until the next handoff because probe notifications are unaffected until control is transferred.",
+              "is_correct": false
+            },
+            {
+              "text": "Update only the route, because interim altitude and aircraft type changes do not affect the modeled trajectory.",
+              "is_correct": false
+            },
+            {
+              "text": "Skip the update whenever the aircraft is tracking normally on radar, because track data alone keeps the probe current.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Timely trajectory-data entry keeps conflict-probe results meaningful; delaying those updates can mislead both the current sector and adjacent facilities."
+        }
+      ]
+    },
+    "13-1-11": {
+      "sync_replace_types": true,
+      "replace_types": ["requirement_check", "scope_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How may delay information be recorded in EDST operations?",
+          "choices": [
+            {
+              "text": "Automatically through ERAM hold tools or manually on flight progress strips or facility-approved worksheets, in accordance with the facility standard.",
+              "is_correct": true
+            },
+            {
+              "text": "Only manually on flight progress strips, because ERAM hold tools do not satisfy delay-recording requirements.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the flight exits holding, regardless of whether any automated tool captured the delay.",
+              "is_correct": false
+            },
+            {
+              "text": "At the controller's discretion, because delay information is optional unless TMU requests it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Delay information must be recorded, and the paragraph allows both automatic ERAM hold-tool recording and approved manual methods."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A flight is held with ERAM Hold View active. Another controller says there is no need to worry about delay recording because the delay can be estimated later from memory if needed. A teammate also assumes that automatic delay recording begins as soon as the aircraft enters holding, regardless of how the facility tracks the event.",
+          "para_context": "Applicable delay-reporting directives still apply, and delay information must be recorded. Delay may be recorded through approved manual methods or automatically through ERAM hold tools; when using Hold Data Menu or Hold View, automatic recording occurs when the aircraft is cleared out of hold.",
+          "choices": [
+            {
+              "text": "Make sure delay information is recorded in the approved way and recognize that Hold Data Menu or Hold View records the delay automatically when the aircraft is cleared out of hold.",
+              "is_correct": true
+            },
+            {
+              "text": "Skip recording because any hold can be reconstructed from memory later if someone needs the delay data.",
+              "is_correct": false
+            },
+            {
+              "text": "Assume ERAM records the delay the moment the aircraft enters holding, so no one needs to monitor the eventual hold-clearance-out event.",
+              "is_correct": false
+            },
+            {
+              "text": "Record the delay only if the aircraft remains in holding through a sector boundary crossing.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Delay information is mandatory, and with Hold Data Menu or Hold View the automatic recording occurs when the aircraft is cleared out of hold."
+        }
+      ]
+    },
+    "13-1-12": {
+      "sync_replace_types": true,
+      "replace_types": ["capability_check", "conditional_rule_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What data does ESDT use for overdue-aircraft notification?",
+          "choices": [
+            {
+              "text": "Radar track data.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the aircraft's filed route and estimated times over fixes.",
+              "is_correct": false
+            },
+            {
+              "text": "Voice position reports received from the pilot on frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "The most recent manual entry in the ACL remarks field.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The overdue-aircraft notification logic in ESDT is based on radar track data."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "An overdue-aircraft notification appears on the display. Another controller wants to update the aircraft route to make the alert disappear and then move on, arguing that once the notice clears there is no need to follow the overdue-aircraft procedures unless the alert returns.",
+          "para_context": "Upon receipt of the overdue-aircraft notification, take the actions required by the overdue-aircraft procedures. The alert is based on radar track data, and updating the route of flight can remove the notification, but that does not replace the required response to receiving the notice.",
+          "choices": [
+            {
+              "text": "Take the applicable overdue-aircraft actions when the notification is received and do not treat route updating as a substitute for those procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "Update the route to clear the alert and take no further action unless the notification reappears.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the alert unless the pilot also fails to respond on frequency, because the notification is only advisory.",
+              "is_correct": false
+            },
+            {
+              "text": "Handle the notice only as a flight-plan data problem, because overdue notification is not tied to radar track information.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The notification triggers overdue-aircraft procedures when received; clearing the display by changing route data is not the operational response."
+        }
+      ]
+    },
+    "13-1-13": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "requirement_check", "scope_check", "sequence_steps"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the Graphic Plan Display allowed to do operationally?",
+          "choices": [
+            {
+              "text": "Aid situational awareness and strategic planning only.",
+              "is_correct": true
+            },
+            {
+              "text": "Serve as a substitute for radar track position and Mode C when the display looks reliable.",
+              "is_correct": false
+            },
+            {
+              "text": "Provide radar identification, radar separation, and point-out approval if the trajectory line is current.",
+              "is_correct": false
+            },
+            {
+              "text": "Replace the radar display during temporary surveillance uncertainty.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "GPD is limited to situational-awareness and strategic-planning support; it is not used as a substitute for radar track or altitude data or for radar functions."
+        }
+      ]
+    },
+    "13-1-14": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "If current forecast wind data are unavailable, how should conflict probe and trial planning be handled?",
+          "choices": [
+            {
+              "text": "Continue using them, recognizing that alert and trajectory data may be affected.",
+              "is_correct": true
+            },
+            {
+              "text": "Stop using both tools completely until forecast wind data are restored.",
+              "is_correct": false
+            },
+            {
+              "text": "Use conflict probe only, because trial planning becomes prohibited without forecast winds.",
+              "is_correct": false
+            },
+            {
+              "text": "Rely on the alert output without qualification, because missing forecast wind data affects only display cosmetics.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The tools remain in use, but the controller recognizes that missing forecast wind data can affect trajectories and alerts."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "Current forecast wind data are unavailable. One controller wants to stop using conflict probe and trial planning entirely until the data feed returns, while another wants to keep using the tools exactly as if nothing has changed.",
+          "para_context": "The tools remain available, but the sector team must recognize that missing current forecast wind data can affect both alert output and modeled trajectory information.",
+          "choices": [
+            {
+              "text": "Continue using conflict probe and trial planning, but treat the resulting alert and trajectory data with the appropriate caution.",
+              "is_correct": true
+            },
+            {
+              "text": "Suspend both tools entirely because neither may be used without current forecast wind data.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the tools without any special recognition, because forecast wind loss does not affect the modeled output.",
+              "is_correct": false
+            },
+            {
+              "text": "Continue using trial planning only and disregard conflict probe until the wind feed is restored.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Loss of forecast wind data does not prohibit tool use, but it does require recognition that the outputs may be degraded."
+        }
+      ]
+    },
+    "13-1-15": {
+      "sync_replace_types": true,
+      "replace_types": ["capability_check", "conditional_rule_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "If connectivity to an adjacent ERAM facility is lost, how should EDST be used?",
+          "choices": [
+            {
+              "text": "Continue using EDST, recognizing that alert data may be affected.",
+              "is_correct": true
+            },
+            {
+              "text": "Stop using EDST until connectivity is fully restored, because its alert logic becomes invalid.",
+              "is_correct": false
+            },
+            {
+              "text": "Continue using EDST with no qualification, because adjacent-facility connectivity does not affect alerting.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only the aircraft list and suspend all strategic-planning tools immediately.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "EDST remains in use when adjacent ERAM connectivity is lost, but the team recognizes that the alert data may be affected."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "Connectivity to an adjacent ERAM facility is lost. One controller wants to ignore EDST completely until the link is restored, while another wants to treat the alerts as fully unaffected because your own sector display is still updating normally.",
+          "para_context": "Loss of adjacent-facility connectivity does not shut EDST off, but it does require recognition that alert data may be affected.",
+          "choices": [
+            {
+              "text": "Continue using EDST, but recognize that the alert data may be affected by the lost interfacility connectivity.",
+              "is_correct": true
+            },
+            {
+              "text": "Suspend EDST entirely because any loss of connectivity automatically invalidates all decision-support use.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat the alerts as fully unaffected as long as the local display is still refreshing normally.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only trial planning and disregard all alerting until the adjacent facility reconnects.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph allows continued EDST use but warns the team to account for the possibility that alert data have been affected."
+        }
+      ]
+    },
+    "13-1-16": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "During a surveillance or flight-data outage, how may electronic flight data be used while the facility transitions?",
+          "choices": [
+            {
+              "text": "To support situational awareness while the facility transitions to alternate automation capabilities or nonradar procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "As a replacement for radar separation until all surveillance returns.",
+              "is_correct": false
+            },
+            {
+              "text": "Only as a historical archive, not for any operational awareness during the transition.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the facility has fully transitioned to nonradar procedures.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Electronic flight data may still support situational awareness during the transition period, even though the facility may be moving to alternate automation or nonradar procedures."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A surveillance and flight-data outage begins. One controller wants to discard the electronic flight data immediately because it is not full-service automation anymore, while another wants to keep using it as if it still provides normal radar capability.",
+          "para_context": "Electronic flight data can still support situational awareness during the transition to alternate automation capabilities or nonradar procedures, but it is not being treated as a substitute for restored surveillance separation capability.",
+          "choices": [
+            {
+              "text": "Use the electronic flight data to support situational awareness while the facility transitions, but do not treat it as full normal-surveillance capability.",
+              "is_correct": true
+            },
+            {
+              "text": "Discard the electronic flight data entirely because it has no operational value once the outage begins.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the electronic flight data as a full replacement for radar separation until the outage ends.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait to use the electronic flight data until the facility has already completed the transition to nonradar procedures.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph preserves a limited, practical use for the electronic flight data during the transition period."
+        }
+      ]
+    },
+    "13-1-17": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "directive_check", "requirement_check", "scope_check", "sequence_steps", "situation_action"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which item is one of the Airspace Configuration Elements used in ERAM?",
+          "choices": [
+            {
+              "text": "Airport Stream Filters (ASF).",
+              "is_correct": true
+            },
+            {
+              "text": "Embedded Route Text (ERT).",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft list remarks indicator.",
+              "is_correct": false
+            },
+            {
+              "text": "A controller-applied conflict-probe Stop Probe entry.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The named Airspace Configuration Elements are Special Activity Airspace, Airport Stream Filters, and adapted restrictions."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "By facility directive, your sector is responsible for updating Airspace Configuration Elements. A controller activates a Special Activity Airspace entry in the Airspace Status View and says that action itself completes the required coordination. The same controller sees an Airport Stream Filter status change and decides there is no need to notify the operations supervisor because the status is already visible in automation.",
+          "para_context": "When sector teams are assigned Airspace Configuration Element responsibility by facility directive, they update the elements to current status and notify the operations supervisor when a status is modified. Unless an LOA or facility directive says otherwise, activating or scheduling SAA in the Airspace Status View does not itself constitute coordination for activation of the airspace.",
+          "choices": [
+            {
+              "text": "Update the assigned elements, notify the operations supervisor when the status is modified, and do not treat Airspace Status View activation by itself as coordination unless an LOA or directive specifically provides for that.",
+              "is_correct": true
+            },
+            {
+              "text": "Treat activation in the Airspace Status View as the required coordination in every case and notify the operations supervisor only if a pilot later asks about the change.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave the element unchanged until another sector confirms the status verbally, because sector teams never update configuration elements directly.",
+              "is_correct": false
+            },
+            {
+              "text": "Update only SAA items and ignore ASF or adapted restriction status changes because they are not Airspace Configuration Elements.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Automation status updates do not automatically equal airspace-activation coordination, and sector responsibility includes both status updates and operations-supervisor notification when assigned by directive."
+        }
+      ]
+    },
+    "13-2-1": {
+      "sync_replace_types": true,
+      "replace_types": ["capability_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which description best matches the ATOP ATC system?",
+          "choices": [
+            {
+              "text": "A surveillance and flight-data-processing system that provides automated decision support for separation between aircraft and between aircraft and airspace or terrain.",
+              "is_correct": true
+            },
+            {
+              "text": "A flight-data display only, with no automated separation-support functions for oceanic controllers.",
+              "is_correct": false
+            },
+            {
+              "text": "An ADS-C-only tool that excludes radar surveillance, CPDLC, and electronic flight strips.",
+              "is_correct": false
+            },
+            {
+              "text": "A weather-deviation planning tool that supplements, but does not include, surveillance or flight-data processing.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ATOP combines surveillance and flight-data processing and includes automated decision-support capabilities for separation and airspace or terrain conflict management."
+        }
+      ]
+    },
+    "13-2-2": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "directive_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "When conflict probe is being used in ATOP airspace, what should controllers assume about the conflict-probe separation calculations?",
+          "choices": [
+            {
+              "text": "They are accurate, and the results are used to initiate and maintain the prescribed separation minima unless the procedure explicitly states an exception.",
+              "is_correct": true
+            },
+            {
+              "text": "They are only advisory and should not normally be used to initiate or maintain separation.",
+              "is_correct": false
+            },
+            {
+              "text": "They are accurate only after a trial probe has also been run for the same aircraft pair.",
+              "is_correct": false
+            },
+            {
+              "text": "They are accurate only for conflicts already inside the controller's sector and not for external transfers.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ATOP conflict-probe procedures presume the calculations are accurate and use them operationally, subject to the paragraph's stated exceptions and limitations."
+        }
+      ]
+    },
+    "13-2-3": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "minima_rule_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which flag is one of the reduced-separation flags controllers must ensure is selected appropriately for each flight in ATOP?",
+          "choices": [
+            {
+              "text": "D for distance-based longitudinal separation.",
+              "is_correct": true
+            },
+            {
+              "text": "E for EDCT-managed departure release.",
+              "is_correct": false
+            },
+            {
+              "text": "P for preferred-route status.",
+              "is_correct": false
+            },
+            {
+              "text": "T for trial-probe pending.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ATOP data management includes ensuring the proper reduced-separation flags are selected, including Mach number, reduced MNT, distance-based longitudinal, and RVSM."
+        }
+      ]
+    },
+    "13-2-4": {
+      "sync_replace_types": true,
+      "replace_types": ["conditional_rule_check", "requirement_check", "scope_check", "term_definition_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "If there is uncertainty that a CPDLC clearance was delivered to an aircraft in oceanic ATOP operations, what must the controller do with the airspace tied to that clearance?",
+          "choices": [
+            {
+              "text": "Continue protecting the airspace associated with the clearance until an appropriate operational response is received.",
+              "is_correct": true
+            },
+            {
+              "text": "Release the protected airspace as soon as the next facility accepts the transfer.",
+              "is_correct": false
+            },
+            {
+              "text": "Assume the clearance was delivered if the aircraft remains CPDLC connected.",
+              "is_correct": false
+            },
+            {
+              "text": "Remove the protection once a voice backup exists, even if no operational closure has been received.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Uncertainty about CPDLC delivery does not end the controller's obligation to protect the associated airspace until operational closure is received."
+        }
+      ]
+    },
+    "13-2-5": {
+      "sync_replace_types": true,
+      "replace_types": ["requirement_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "What does a pink advisory in the weather-deviation monitor window with a zero or positive value in the plus-or-minus column indicate?",
+          "choices": [
+            {
+              "text": "The aircraft pair is at or close to the required spacing and the deviation requires further evaluation before approval.",
+              "is_correct": true
+            },
+            {
+              "text": "The deviation is conflict-free because ATOP has already added every required spacing buffer automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft pair is well beyond the required spacing and may be cleared without further review.",
+              "is_correct": false
+            },
+            {
+              "text": "The weather-deviation tool is unavailable and must be ignored until the advisory clears.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A pink advisory with zero or positive spacing means the aircraft pair is at or near the required spacing, so the request needs more evaluation before the clearance is approved."
+        }
+      ]
+    },
+    "13-2-6": {
+      "sync_replace_types": true,
+      "replace_types": ["knowledge_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When does automated coordination between ATOP sectors stop being complete coordination by itself?",
+          "choices": [
+            {
+              "text": "When the aircraft is in conflict with another in the receiving sector, or when a facility directive or LOA otherwise specifies an exception.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the flight is changing altitude or route, regardless of conflict status.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever both sectors are inside adjacent ATOP facilities rather than the same facility.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the aircraft is CPDLC connected, because data link removes the validity of automated coordination.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Automated coordination is ordinarily complete between ATOP sectors, but conflicts in the receiving sector and explicit directive or LOA exceptions still require more."
+        }
+      ]
+    },
+    "13-2-7": {
+      "sync_replace_types": true,
+      "replace_types": ["directive_check", "requirement_check", "scope_check"],
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "What governs multiple-controller operation at an ATOP workstation?",
+          "choices": [
+            {
+              "text": "ATC tasks are completed according to their priority of duties, and the multiple-controller operation is accomplished according to facility directives.",
+              "is_correct": true
+            },
+            {
+              "text": "Local convenience governs task division as long as all team members understand the operation informally.",
+              "is_correct": false
+            },
+            {
+              "text": "Higher-priority tasks may be deferred if a lower-priority administrative task is already in progress.",
+              "is_correct": false
+            },
+            {
+              "text": "Facility directives become optional when everyone at the workstation has previous ATOP experience.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Multiple-controller operation is not ad hoc; it follows task priorities and the applicable facility directives."
+        }
+      ]
+    }
+  }
+}

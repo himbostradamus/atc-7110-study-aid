@@ -1,0 +1,601 @@
+{
+  "activities": {
+    "3-7-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "When must aircraft and vehicle access to the ILS critical area be controlled for an arriving aircraft inside the outer marker or the fix used in lieu of it?",
+          "choices": [
+            {
+              "text": "When the official weather observation is a ceiling of less than 800 feet or visibility less than 2 miles, unless the aircraft has the runway in sight or is circling to another runway.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever any instrument approach is being flown, regardless of weather or runway in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Only during CAT III approaches.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot explicitly requests critical-area protection.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ILS critical area protection is tied to weather below 800 and 2 miles and an arriving aircraft inside the OM or equivalent fix, unless the aircraft has the runway in sight or is circling to another runway."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this critical-area rule correct?",
+          "question_text": "If an arriving aircraft is inside the ILS outer marker or the fix used in lieu of it and the official weather is below 800 feet ceiling or 2 miles visibility, you must not authorize vehicles or aircraft to operate in or over the critical area unless the aircraft has reported the runway in sight, is circling to another runway, or a listed exception applies.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the core protection rule for the ILS critical area."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which is one listed localizer critical-area exception?",
+          "question_text": "Which exception is listed?",
+          "choices": [
+            {
+              "text": "A preceding departing aircraft or missed approach on the same or another runway passing through or over the area.",
+              "is_correct": true
+            },
+            {
+              "text": "Any aircraft that is visually identified from the tower cab.",
+              "is_correct": false
+            },
+            {
+              "text": "Any vehicle escorted by airport operations.",
+              "is_correct": false
+            },
+            {
+              "text": "Any arrival outside 5 miles final.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "One listed localizer critical-area exception is a preceding departing aircraft or missed approach that passes through or over the area."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "Is this localizer-minima rule correct?",
+          "question_text": "If the official weather observation indicates a ceiling below 200 feet or RVR 2,000 feet and an arriving aircraft is inside the middle marker or, if there is no middle marker, 1/2 mile final, do not authorize vehicles or aircraft to operate in or over the localizer critical area.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those tighter minima trigger the stricter localizer critical-area protection rule."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this autoland advisory directive correct?",
+          "question_text": "Issue the advisory ILS CRITICAL AREA NOT PROTECTED promptly if an arriving aircraft advises a coupled, CATIII, autoland, or similar approach and the critical area will not be protected when the weather is 800-foot ceiling or better, or 2 miles visibility or better.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That advisory is required promptly when an autoland-type approach is announced and the critical area will not be protected under those weather conditions."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "Low IFR conditions require you to keep traffic clear of the Runway 27 ILS critical area. Build the hold-short instruction.",
+          "target_phrase": "HOLD SHORT OF RUNWAY TWO SEVEN ILS CRITICAL AREA"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "Weather is below 800 and 2 miles and an arrival is inside the outer marker. A vehicle wants to enter the ILS critical area for a quick task. Later, another arrival reports it will conduct an autoland approach while the weather is above 800 and 2 miles, but you know the critical area cannot be protected for that approach.",
+          "para_context": "Critical-area protection applies when weather is below 800 and 2 miles and the arriving aircraft is inside the OM or equivalent fix. If a coupled or autoland-type approach is announced and the critical area will not be protected in better weather, the advisory ILS CRITICAL AREA NOT PROTECTED must be issued promptly.",
+          "choices": [
+            {
+              "text": "Keep the vehicle out of the critical area in the first case, and promptly issue ILS CRITICAL AREA NOT PROTECTED in the second case.",
+              "is_correct": true
+            },
+            {
+              "text": "Allow the vehicle in because critical-area protection applies only to aircraft, and withhold the advisory in the second case because the weather is above 800 and 2 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Allow the vehicle in if the driver can see the runway, and delay the autoland advisory until the aircraft reaches short final.",
+              "is_correct": false
+            },
+            {
+              "text": "Apply the autoland advisory only during CAT III weather and otherwise ignore critical-area protection requests.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Low-weather ILS critical-area protection keeps aircraft and vehicles out of the area, and the explicit not-protected advisory is required for autoland-type operations when the critical area will not be protected in better weather."
+        }
+      ]
+    },
+    "3-7-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "When must the POFZ be clear of traffic?",
+          "choices": [
+            {
+              "text": "When an aircraft on a vertically guided final approach is within 2 miles of the threshold and the ceiling is below 300 feet or visibility is less than 3/4 statute mile.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever any aircraft is within 5 miles on final, regardless of weather or approach type.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft is below decision altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the runway is in CAT III use.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the specific POFZ protection triggers."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "Is this final-approach OCS rule correct?",
+          "question_text": "If an aircraft on a vertically guided approach is within 2 miles of the threshold and the official weather observation indicates a ceiling below 800 feet or visibility less than 2 statute miles, the final approach OCS must be clear of aircraft and vehicles.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the protection criteria for the final approach OCS."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which vehicle is exempt from the POFZ or OCS restriction?",
+          "question_text": "Which exemption is listed?",
+          "choices": [
+            {
+              "text": "A vehicle less than 10 feet high that is necessary for maintenance of the airport or navigation facilities and is operating outside the movement area.",
+              "is_correct": true
+            },
+            {
+              "text": "Any airport operations vehicle with flashing lights on.",
+              "is_correct": false
+            },
+            {
+              "text": "Any maintenance vehicle operating on a taxiway shoulder.",
+              "is_correct": false
+            },
+            {
+              "text": "Any vehicle escorted by a controller or supervisor.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the specific exemption listed in the note."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "Is this missed-approach traffic rule correct?",
+          "question_text": "If it is not possible to clear the POFZ or OCS before an aircraft reaches a point 2 miles from the threshold and the weather is below the paragraph limits, you must issue traffic to the landing aircraft.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the stated fallback if the protected area cannot be cleared in time."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this clearing requirement correct?",
+          "question_text": "The POFZ and OCS must be cleared as soon as practical.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note states that the POFZ and OCS must be cleared as soon as practical."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "An arrival may miss the approach and there is taxiing traffic right of the runway. Build the missed-approach advisory.",
+          "target_phrase": "IN THE EVENT OF MISSED APPROACH TAXIING AIRCRAFT RIGHT OF RUNWAY"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A vertically guided arrival is 2 miles from the threshold. Ceiling and visibility are both below the paragraph limits, and a vehicle right of the runway cannot be moved clear before the aircraft reaches the threshold. Another controller says the vehicle is low enough that you can just wait and see if the aircraft goes missed.",
+          "para_context": "The POFZ and OCS protect missed-approach execution. If they cannot be cleared before the aircraft reaches 2 miles from the threshold in below-minimum weather, traffic must be issued to the landing aircraft, and the area must be cleared as soon as practical.",
+          "choices": [
+            {
+              "text": "Issue the missed-approach traffic advisory to the landing aircraft and continue working to clear the protected area as soon as practical.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait to see whether the aircraft actually misses the approach before saying anything because advisory traffic is optional.",
+              "is_correct": false
+            },
+            {
+              "text": "Do nothing if the vehicle is not on the runway centerline because the POFZ and OCS protect only runway pavement.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the approach immediately because any traffic near the runway automatically closes the approach regardless of the paragraph conditions.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the protected area cannot be cleared in time under the low-weather triggers, the controller issues missed-approach traffic and clears the area as soon as practical."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-7-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must the ILS critical area be protected for arrivals inside the outer marker or equivalent fix?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Protection applies when the official weather observation is below 800 feet ceiling or 2 miles visibility, unless the aircraft has the runway in sight or is circling to another runway.",
+          "choices": [
+            {
+              "text": "When the official weather observation is below 800 feet ceiling or 2 miles visibility, unless the aircraft has the runway in sight or is circling to another runway.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever any aircraft is inside the outer marker, regardless of weather.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for coupled or autoland approaches.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when airport operations requests protection.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which is one listed exception for localizer critical-area operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A preceding arriving aircraft landing or exiting, or a preceding departing aircraft or missed approach, may pass through or over the area.",
+          "choices": [
+            {
+              "text": "A preceding arriving aircraft on the same or another runway passing over or through the area while landing or exiting the runway.",
+              "is_correct": true
+            },
+            {
+              "text": "Any vehicle operating with headlights on.",
+              "is_correct": false
+            },
+            {
+              "text": "Any aircraft with the field in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Any operation after the arrival reaches the glideslope intercept.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What tighter localizer critical-area restriction applies when the official weather is below 200 feet ceiling or RVR 2,000 feet?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "No vehicles or aircraft may be authorized in or over the area when the arriving aircraft is inside the middle marker or, without a middle marker, 1/2 mile final.",
+          "choices": [
+            {
+              "text": "Do not authorize operations in or over the localizer critical area when the arrival is inside the middle marker or, if none, 1/2 mile final.",
+              "is_correct": true
+            },
+            {
+              "text": "Close the entire airport whenever the aircraft is inside 1 mile final.",
+              "is_correct": false
+            },
+            {
+              "text": "Protect only the glideslope critical area, not the localizer critical area.",
+              "is_correct": false
+            },
+            {
+              "text": "Allow vehicle traffic if the arrival has landing clearance.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When is the glideslope critical area protected from vehicle or aircraft operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It is protected when the arrival is inside the OM or equivalent fix and weather is below 800 feet ceiling or 2 miles visibility, unless the aircraft has the runway in sight or is circling to another runway.",
+          "choices": [
+            {
+              "text": "When the arrival is inside the OM or equivalent fix and weather is below 800 feet ceiling or 2 miles visibility, unless the aircraft has the runway in sight or is circling to another runway.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the arrival is inside the middle marker.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when airport lighting is at step 3 or higher.",
+              "is_correct": false
+            },
+            {
+              "text": "Only during military operations.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What advisory is issued if a coupled or autoland-type approach is announced and the ILS critical area will not be protected while weather is 800-foot ceiling or better, or 2 miles visibility or better?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The phraseology is ILS CRITICAL AREA NOT PROTECTED.",
+          "choices": [
+            {
+              "text": "ILS CRITICAL AREA NOT PROTECTED.",
+              "is_correct": true
+            },
+            {
+              "text": "AUTOLAND APPROVED, CRITICAL AREA OPEN.",
+              "is_correct": false
+            },
+            {
+              "text": "GLIDESLOPE SENSITIVE AREA ACTIVE.",
+              "is_correct": false
+            },
+            {
+              "text": "MISSED APPROACH EXPECT HOLD SHORT TRAFFIC.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Who may define precision approach critical-area criteria at military controlled airports?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The Department of Defense is authorized to define the criteria, and waiver authority rests with the appropriate military authority.",
+          "choices": [
+            {
+              "text": "The Department of Defense.",
+              "is_correct": true
+            },
+            {
+              "text": "The local airport manager.",
+              "is_correct": false
+            },
+            {
+              "text": "The nearest FAA regional office only.",
+              "is_correct": false
+            },
+            {
+              "text": "Any airline conducting the approach.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-7-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must the POFZ be clear of traffic?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The POFZ must be clear when a vertically guided arrival is within 2 miles of the threshold and weather is below 300-foot ceiling or 3/4-mile visibility.",
+          "choices": [
+            {
+              "text": "When a vertically guided arrival is within 2 miles of the threshold and weather is below 300-foot ceiling or 3/4-mile visibility.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever an arrival is inside 5 miles, regardless of weather.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft is flying an ILS approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft reports the runway in sight.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What are the final approach OCS protection triggers?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The OCS must be clear when a vertically guided arrival is within 2 miles of the threshold and weather is below 800-foot ceiling or 2-mile visibility.",
+          "choices": [
+            {
+              "text": "A vertically guided arrival within 2 miles of the threshold with weather below 800-foot ceiling or 2-mile visibility.",
+              "is_correct": true
+            },
+            {
+              "text": "Any arrival on final in IFR conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "Only an ILS approach inside the middle marker.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when runway visual range drops below 1,200 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Only horizontal surfaces can penetrate the POFZ.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The note says only horizontal surfaces such as wings can penetrate the POFZ, not vertical surfaces such as the fuselage or tail."
+        },
+        {
+          "question_text": "Which vehicle is exempt from the POFZ or OCS restriction?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The exemption applies to vehicles less than 10 feet high that are necessary for maintenance and operating outside the movement area.",
+          "choices": [
+            {
+              "text": "A vehicle less than 10 feet high, needed for maintenance, operating outside the movement area.",
+              "is_correct": true
+            },
+            {
+              "text": "Any airport operations vehicle on a taxiway shoulder.",
+              "is_correct": false
+            },
+            {
+              "text": "Any snow vehicle on an active taxiway.",
+              "is_correct": false
+            },
+            {
+              "text": "Any vehicle holding short of the runway.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the POFZ or OCS cannot be cleared before the aircraft reaches 2 miles from the threshold and the weather is below the paragraph limits, what must be done?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Traffic must be issued to the landing aircraft.",
+          "choices": [
+            {
+              "text": "Issue traffic to the landing aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Cancel the approach automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for the aircraft to miss the approach before saying anything.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer the aircraft to approach control again.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What continuing clearing requirement applies to the POFZ and OCS?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They must be cleared as soon as practical.",
+          "choices": [
+            {
+              "text": "They must be cleared as soon as practical.",
+              "is_correct": true
+            },
+            {
+              "text": "They must remain closed until weather improves above VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "They must be reopened only after a supervisor inspection.",
+              "is_correct": false
+            },
+            {
+              "text": "They may remain occupied if the traffic is below 10 knots groundspeed.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

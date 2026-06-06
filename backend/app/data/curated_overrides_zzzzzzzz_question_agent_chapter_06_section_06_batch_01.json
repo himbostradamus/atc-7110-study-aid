@@ -1,0 +1,124 @@
+{
+  "questions": {
+    "6-6-1": {
+      "items": [
+        {
+          "question_text": "Under 6-6-1's note, what performance characteristics must a controller consider when applying the basic vertical separation rule?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-6-1's note instructs controllers to consider known aircraft performance characteristics, pilot-furnished and/or Mode C detected information indicating climb/descent will NOT be consistent with the AIM-recommended rates.",
+          "choices": [
+            {
+              "text": "Only the aircraft type, ignoring pilot-furnished or Mode C information about actual climb performance.",
+              "is_correct": false
+            },
+            {
+              "text": "Known aircraft performance characteristics, plus pilot-furnished or Mode C-detected information indicating climb/descent will not be consistent with AIM recommended rates.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the filed true airspeed from the flight plan, regardless of actual observed performance.",
+              "is_correct": false
+            },
+            {
+              "text": "No performance characteristics need consideration; the standard 6-6-1 rule works for all aircraft.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-6-2": {
+      "items": [
+        {
+          "question_text": "Under 6-6-2c2, why must Mode C NOT be used to effect separation with an aircraft on a cruise clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-6-2c2 prohibits Mode C for cruise-clearance separation because the cruise clearance gives the pilot a block of airspace from MIA up to the cruising altitude with discretion to climb/descend within it. Mode C cannot confirm that the pilot has verbally committed to leaving an altitude.",
+          "choices": [
+            {
+              "text": "Because a cruise clearance assigns a block of airspace where the pilot may climb or descend at discretion and return to any altitude within the block; Mode C cannot confirm the pilot has committed to leaving an altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Because Mode C is less accurate than DME for determining altitude separation.",
+              "is_correct": false
+            },
+            {
+              "text": "Because cruise clearances are only used in Class G airspace where Mode C is not required.",
+              "is_correct": false
+            },
+            {
+              "text": "Because Mode C separation is prohibited for all vertical separation — only pilot verbal reports are authorized.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-6-2, an aircraft on a cruise clearance reports leaving an altitude in descent. What restriction does the note place on that aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-6-2's note states that when the pilot verbally reports leaving an altitude in descent, he/she may NOT return to that altitude. This is critical because a cruise clearance otherwise permits pilot-discretion movement within the block.",
+          "choices": [
+            {
+              "text": "The aircraft may return to the altitude at any time because the cruise block extends from MIA to the cruising altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Once the pilot verbally reports leaving an altitude in descent, he/she may not return to that altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft may return to the altitude only after reporting reaching the next lower altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft must continue descent all the way to the MIA before any climb is permitted.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "6-6-2": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft on a cruise clearance at 8,000 feet has verbally reported leaving 8,000 in descent and reported passing through 7,000 feet (1,000 feet below, the appropriate minimum for IFR below FL290). Another aircraft requests 8,000 feet.",
+          "question_text": "Under 6-6-2, may you assign 8,000 feet to the second aircraft?",
+          "choices": [
+            {
+              "text": "Yes; the cruise aircraft reported leaving 8,000 (cannot return to it) and reported passing through 7,000 — satisfying the stricter 6-6-2c2 requirement.",
+              "is_correct": true
+            },
+            {
+              "text": "No; a cruise clearance prevents altitude reassignment until the cruising altitude restriction is canceled.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if you use Mode C to confirm the aircraft is below 8,000.",
+              "is_correct": false
+            },
+            {
+              "text": "No; the cruise aircraft must report reaching the MIA before 8,000 can be reassigned.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 6-6-2c2, the stricter rule applies: the aircraft must report at or passing through another altitude separated from the original by the appropriate minimum. The pilot reported leaving 8,000 (cannot return to it per the note) and passed through 7,000 (1,000 ft below = appropriate minimum). However, do NOT use Mode C to effect this separation per the explicit prohibition in c2.",
+          "para_context": "EXCEPTIONS"
+        }
+      ]
+    }
+  }
+}

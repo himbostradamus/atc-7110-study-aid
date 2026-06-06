@@ -1,0 +1,664 @@
+{
+  "questions": {
+    "6-2-1": {
+      "items": [
+        {
+          "question_text": "Per 6-2-1, diverging course minima apply when aircraft depart the same or adjacent airports and will fly courses diverging by at least _____ degrees.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-2-1 applies only when the divergence angle reaches 45 degrees or more. This is the threshold that gates the entire paragraph.",
+          "choices": [
+            {
+              "text": "45",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Per 6-2-1a, which of the following correctly states the three-tier progression of diverging-course departure minima?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-2-1a lists: immediately after takeoff = 1 minute; within 5 minutes after takeoff = 2 minutes; within 13 miles DME/ATD after takeoff = 3 miles. Each tier uses a different unit and threshold.",
+          "choices": [
+            {
+              "text": "1 minute immediately, 2 minutes within 5 minutes, 3 miles within 13 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "2 minutes immediately, 3 minutes within 5 minutes, 5 miles within 13 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "1 minute immediately, 3 minutes within 5 minutes, 5 miles within 13 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "2 miles immediately, 3 miles within 5 minutes, 5 miles within 13 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller applies 1 minute of initial separation to two successive departures that will fly diverging courses, but the second aircraft will not actually begin its divergence until approximately 3 minutes after takeoff. Under 6-2-1a, is 1 minute sufficient?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-2-1a1 applies 'immediately after takeoff' which means divergence must occur promptly. If the divergence does not start until 3 minutes after takeoff, the aircraft falls under 6-2-1a2 (within 5 minutes after takeoff = 2 minutes), not a1.",
+          "choices": [
+            {
+              "text": "Yes, because 1 minute applies to all diverging-course departures regardless of when divergence begins.",
+              "is_correct": false
+            },
+            {
+              "text": "No; divergence at 3 minutes after takeoff falls under the 'within 5 minutes' tier, requiring 2 minutes.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, provided the divergence angle reaches at least 45 degrees eventually.",
+              "is_correct": false
+            },
+            {
+              "text": "No; any divergence after 1 minute requires 3 miles of separation.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Per 6-2-1 note item 2, when one or both departure surfaces is a helipad or vertipad, the takeoff course is used as a reference comparable to the _____ of a runway, and the helipad/vertipad center is used as the _____.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-2-1 explicitly maps helipad/vertipad geometry to runway geometry: takeoff course = centerline, pad center = threshold.",
+          "choices": [
+            {
+              "text": "centerline",
+              "is_correct": true
+            },
+            {
+              "text": "threshold",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-2-1b (TERMINAL), simultaneous takeoffs from different runways flying diverging courses immediately after takeoff are authorized when the runways' centerlines are parallel and separated by at least how many feet?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-2-1b requires centerlines to be parallel and separated by at least 3,500 feet, and the aircraft must fly diverging courses immediately after takeoff.",
+          "choices": [
+            {
+              "text": "2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "3,500 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "4,300 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "2,500 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-2-1c1 (TERMINAL, nonintersecting runways), when the runways diverge by 15 to 29 degrees inclusive, simultaneous takeoffs require the distance between runway centerlines at and beyond the takeoff points to be at least _____ feet.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-2-1c1(b)(1) requires at least 2,000 feet for divergence of 15-29 degrees inclusive. Compare with less than 15 degrees requiring 3,500 feet per (b)(2).",
+          "choices": [
+            {
+              "text": "2,000",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-2-1c1 (TERMINAL, nonintersecting runways), which of the following is a correct pairing of divergence angle and required centerline distance for simultaneous takeoffs?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-2-1c1(a) permits divergence of 30 degrees or more with no centerline distance requirement beyond nonintersecting geometry. 6-2-1c1(b)(1) requires 2,000 ft for 15-29 degrees. 6-2-1c1(b)(2) requires 3,500 ft for less than 15 degrees.",
+          "choices": [
+            {
+              "text": "Divergence less than 15 degrees requires at least 2,000 feet between centerlines.",
+              "is_correct": false
+            },
+            {
+              "text": "Divergence of 30 degrees or more requires no specific centerline distance beyond nonintersecting geometry.",
+              "is_correct": true
+            },
+            {
+              "text": "Divergence of 15 to 29 degrees requires at least 3,500 feet between centerlines.",
+              "is_correct": false
+            },
+            {
+              "text": "Divergence of 30 degrees or more requires at least 2,000 feet between centerlines plus a turn.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-2-1c2 (TERMINAL, intersecting runways), when the runways diverge by 15 to 29 degrees inclusive, what additional condition beyond the preceding aircraft passing the intersection point is required before authorizing the succeeding aircraft's takeoff?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-2-1c2(b) adds an explicit requirement for intersecting runways at 15-29 degrees: the preceding aircraft must have commenced a turn. This turn requirement does not appear in c2(a) for 30 degrees or more.",
+          "choices": [
+            {
+              "text": "The succeeding aircraft must also have commenced a turn.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding aircraft must have commenced a turn.",
+              "is_correct": true
+            },
+            {
+              "text": "The centerlines must be separated by at least 2,000 feet at the intersection point.",
+              "is_correct": false
+            },
+            {
+              "text": "No additional condition exists; passing the intersection point is sufficient for all divergence angles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller is working a terminal facility with two intersecting runways that diverge by 35 degrees. The preceding aircraft has passed the point of runway intersection. Under 6-2-1c2, may the controller authorize the succeeding aircraft's takeoff?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-2-1c2(a) applies when runways diverge by 30 degrees or more. Only the intersection-passage condition is required; the turn requirement in (b) applies only to 15-29 degrees. 35 degrees exceeds 30, so c2(a) governs.",
+          "choices": [
+            {
+              "text": "No; intersecting runways always require the preceding aircraft to have commenced a turn regardless of divergence angle.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes; for divergence of 30 degrees or more, passing the intersection point is the only condition.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only if the centerlines are also separated by at least 2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "No; intersecting runways at any divergence angle require both the preceding aircraft to have passed the intersection and commenced a turn.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller recalls that for nonintersecting runways under 6-2-1c1, the 2,000-foot centerline distance applies to all runways diverging by less than 30 degrees. Is this understanding correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "6-2-1c1(b) distinguishes two sub-ranges: 15-29 degrees requires 2,000 feet (b1), but less than 15 degrees requires 3,500 feet (b2). A blanket 'less than 30 degrees = 2,000 feet' is incorrect because the sub-15-degree case needs more distance.",
+          "choices": [
+            {
+              "text": "Yes; 2,000 feet is the correct centerline distance for all nonintersecting runway divergence below 30 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "No; divergence below 15 degrees requires 3,500 feet, not 2,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes; the 3,500-foot threshold applies only to parallel runways under 6-2-1b.",
+              "is_correct": false
+            },
+            {
+              "text": "No; nonintersecting runways never have a centerline distance requirement.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-2-2": {
+      "items": [
+        {
+          "question_text": "Per 6-2-2, when the following aircraft will climb through the altitude assigned to the leading aircraft on the same course, the time minimum is _____ minutes until the following aircraft passes through the assigned altitude of the leading aircraft.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-2-2 specifies exactly 3 minutes as the time-based minimum for same-course climb-through separation.",
+          "choices": [
+            {
+              "text": "3",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Per 6-2-2, the 5-mile distance minimum may be used between DME-equipped aircraft; RNAV-equipped aircraft using ATD; and between DME and ATD aircraft provided the DME aircraft is either _____ feet or below, or outside of _____ miles from the DME NAVAID.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-2-2 restricts mixed DME/ATD use: the DME aircraft must be at 10,000 feet or below, or outside 10 miles from the DME NAVAID. Both numbers must be exact.",
+          "choices": [
+            {
+              "text": "10,000",
+              "is_correct": true
+            },
+            {
+              "text": "10",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A DME-equipped aircraft is at 12,000 feet and 8 miles from the DME NAVAID. The trailing aircraft is RNAV-equipped using ATD. Under 6-2-2, may the 5-mile same-course minimum be applied between these two aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-2-2 requires that for mixed DME/ATD use, the DME aircraft must be EITHER at or below 10,000 feet OR outside 10 miles from the DME NAVAID. At 12,000 feet (above 10,000) and 8 miles (inside 10), NEITHER condition is met, so the 5-mile minimum cannot be applied.",
+          "choices": [
+            {
+              "text": "Yes, because both aircraft have distance-reporting equipment.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because the DME aircraft is above 10,000 feet and inside 10 miles from the DME NAVAID, failing both prongs of the qualification.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because 8 miles from the DME NAVAID is close enough to 'outside 10 miles' for operational purposes.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because mixed DME/ATD use is not permitted at any altitude or distance.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller applies 5 miles of same-course separation between two aircraft. The lead aircraft is DME-equipped at 8,000 feet and 15 miles from the DME NAVAID. The trailing aircraft is RNAV-equipped using ATD. Under 6-2-2, is this application correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-2-2 permits mixed DME/ATD use when the DME aircraft is at or below 10,000 feet OR outside 10 miles. Here, 8,000 feet satisfies the altitude prong regardless of distance, so the 5-mile minimum is authorized.",
+          "choices": [
+            {
+              "text": "No; the DME aircraft must be both at or below 10,000 feet AND outside 10 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes; the DME aircraft at 8,000 feet satisfies the altitude prong, authorizing the 5-mile minimum.",
+              "is_correct": true
+            },
+            {
+              "text": "No; DME/ATD mixed use is never permitted on same-course departures.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if both aircraft file the same departure procedure.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-2-2, a controller may choose between a time-based minimum of 3 minutes and a distance-based minimum of 5 miles for same-course successive departures. Under what condition may the 5-mile option be used between two RNAV-equipped aircraft using ATD?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-2-2 authorizes 5 miles between 'RNAV equipped aircraft using ATD' without the DME restriction that applies to mixed DME/ATD pairs. Pure ATD-to-ATD is unconditionally eligible for the 5-mile minimum.",
+          "choices": [
+            {
+              "text": "Only when both aircraft are also DME-equipped as a backup.",
+              "is_correct": false
+            },
+            {
+              "text": "Without restriction; pure ATD-to-ATD is unconditionally eligible for 5 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when one aircraft is at 10,000 feet or below.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the leading aircraft is outside 10 miles from the DME NAVAID.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Two successive departures are on the same course. The leading aircraft is at 5,000 feet and the following aircraft was just cleared for takeoff. Under 6-2-2, does the controller need to apply 3 minutes if the following aircraft will not climb through the leading aircraft's altitude?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "6-2-2's trigger condition is that the following aircraft 'will climb through the altitude assigned to the leading aircraft.' If no climb-through occurs, the same-course departure minimums of 6-2-2 are not the controlling rule (other separation rules may apply).",
+          "choices": [
+            {
+              "text": "Yes; 3 minutes always applies between successive departures on the same course.",
+              "is_correct": false
+            },
+            {
+              "text": "No; 6-2-2 applies only when the following aircraft will climb through the leading aircraft's assigned altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but the controller may substitute 5 miles for the 3 minutes at any time.",
+              "is_correct": false
+            },
+            {
+              "text": "No; 6-2-2 never applies to departures from the same airport.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "6-2-1": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Under 6-2-1, what is the prerequisite divergence angle for applying any of the diverging-course initial separation minima?",
+          "choices": [
+            {
+              "text": "At least 30 degrees, matching the most common runway divergence threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "At least 45 degrees.",
+              "is_correct": true
+            },
+            {
+              "text": "At least 15 degrees, the minimum divergence needed for nonintersecting runways.",
+              "is_correct": false
+            },
+            {
+              "text": "Any divergence angle is sufficient as long as the aircraft depart from adjacent airports.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-2-1'S body text requires courses diverging by 45 degrees or more. The 30-degree and 15-degree thresholds appear in subparagraphs c1 and c2 for specific runway geometry scenarios, not as the general prerequisite."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "FIG 6-2-1, 6-2-2, 6-2-3",
+          "lookup_context": [
+            "Successive departures from same or adjacent airports",
+            "Courses diverge by 45 degrees or more",
+            "Apply the correct time or distance minimum"
+          ],
+          "task": "Match the departure timing to the correct minimum.",
+          "instruction": "Apply the diverging-course minimum for the given timeframe.",
+          "question_text": "Two successive departures will fly diverging courses. The second aircraft will begin its divergence within 5 minutes after takeoff. What minimum applies?",
+          "choices": [
+            {
+              "text": "1 minute until courses diverge.",
+              "is_correct": false
+            },
+            {
+              "text": "2 minutes until courses diverge.",
+              "is_correct": true
+            },
+            {
+              "text": "3 miles until courses diverge.",
+              "is_correct": false
+            },
+            {
+              "text": "3 minutes until courses diverge.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-2-1A2 applies to divergence 'within 5 minutes after takeoff' and requires 2 minutes. The 1-minute tier applies only to divergence 'immediately after takeoff,' and the 3-mile tier applies when the aircraft are within 13 miles DME/ATD."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "At a terminal facility, two aircraft will depart in the same direction from different runways whose centerlines are parallel and 4,200 feet apart. Both will fly diverging courses immediately after takeoff. The second pilot requests an immediate departure.",
+          "question_text": "Under 6-2-1b, may you authorize simultaneous takeoffs?",
+          "choices": [
+            {
+              "text": "No; simultaneous takeoffs require at least 1 minute of separation regardless of runway geometry.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes; centerlines are parallel, separated by at least 3,500 feet, and aircraft will fly diverging courses immediately after takeoff.",
+              "is_correct": true
+            },
+            {
+              "text": "No; the runway centerlines must be nonintersecting and diverge by at least 15 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if both aircraft are turbine-powered and IFR.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-2-1B explicitly authorizes simultaneous takeoffs for same-direction departures from parallel runways with centerlines at least 3,500 feet apart, provided diverging courses are flown immediately after takeoff. 4,200 feet exceeds the threshold.",
+          "para_context": "MINIMA ON DIVERGING COURSES"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "At a terminal facility, you have two nonintersecting runways that diverge by 20 degrees. The distance between runway centerlines at the takeoff points is 2,500 feet. Two aircraft will fly diverging courses immediately after takeoff.",
+          "question_text": "Under 6-2-1c1, may you authorize simultaneous takeoffs?",
+          "choices": [
+            {
+              "text": "No; divergence of less than 30 degrees always prohibits simultaneous takeoffs on nonintersecting runways.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes; divergence of 20 degrees falls in the 15-29 degree range, and 2,500 feet exceeds the required 2,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "No; 20 degrees divergence requires at least 3,500 feet between centerlines.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the preceding aircraft has commenced a turn before the second takeoff.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-2-1C1(b)(1) requires at least 2,000 feet for 15-29 degrees inclusive. At 20 degrees and 2,500 feet, both conditions are met. The turn requirement in c2(b) applies only to intersecting runways.",
+          "para_context": "MINIMA ON DIVERGING COURSES"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "At a terminal facility, two intersecting runways diverge by 20 degrees. The preceding aircraft has passed the point of runway intersection but is still flying runway heading. The succeeding aircraft requests takeoff clearance.",
+          "question_text": "Under 6-2-1c2, may you authorize the succeeding aircraft's takeoff?",
+          "choices": [
+            {
+              "text": "Yes; passing the intersection point is the only requirement for all intersecting runway scenarios.",
+              "is_correct": false
+            },
+            {
+              "text": "No; for 15-29 degrees divergence on intersecting runways, the preceding aircraft must have commenced a turn in addition to passing the intersection point.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes; the turn requirement applies only when the divergence is less than 15 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "No; intersecting runways require 2,000 feet of centerline separation regardless of divergence angle.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-2-1C2(b) requires two conditions for intersecting runways at 15-29 degrees: (1) preceding aircraft has passed the intersection, AND (2) preceding aircraft has commenced a turn. Only the first condition is met.",
+          "para_context": "MINIMA ON DIVERGING COURSES"
+        },
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "How does the turn requirement for intersecting runways under 6-2-1c2 differ between divergence of 30 degrees or more versus 15-29 degrees?",
+          "choices": [
+            {
+              "text": "A turn is required for 30 degrees or more but not for 15-29 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "A turn is required for 15-29 degrees but not for 30 degrees or more.",
+              "is_correct": true
+            },
+            {
+              "text": "A turn is required for both angle ranges, but a steeper turn is needed for 15-29 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "No turn is ever required for intersecting runways; only the intersection-passage condition applies.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-2-1C2(a) (30 degrees or more) requires only the passage of the intersection point. 6-2-1c2(b) (15-29 degrees) adds the commenced-turn requirement. The narrower divergence creates more path overlap risk."
+        }
+      ]
+    },
+    "6-2-2": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Under 6-2-2, which of the following correctly states all authorized same-course separation methods for successive departures when the following aircraft will climb through the leading aircraft's altitude?",
+          "choices": [
+            {
+              "text": "3 minutes only; distance-based methods are not authorized on the same course.",
+              "is_correct": false
+            },
+            {
+              "text": "3 minutes, or 5 miles between eligible DME and/or ATD-equipped aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "3 minutes, or 3 miles between any aircraft with radar contact.",
+              "is_correct": false
+            },
+            {
+              "text": "5 miles only; time-based separation is superseded by distance when radar is available.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-2-2 Provides two alternatives: 3 minutes (time), OR 5 miles between qualifying DME/ATD aircraft (distance). The controller may use either method when conditions permit."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Two successive departures are on the same course. The leading aircraft is DME-equipped, at 11,000 feet, and 12 miles from the DME NAVAID. The trailing aircraft is RNAV-equipped using ATD. The following aircraft will climb through the leading aircraft's altitude. You have functioning DME and ATD readouts for both.",
+          "question_text": "Under 6-2-2, may you apply the 5-mile minimum between these two aircraft?",
+          "choices": [
+            {
+              "text": "Yes, because both aircraft have some form of distance-reporting equipment.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes; the DME aircraft is outside 10 miles from the DME NAVAID, satisfying the qualification for mixed DME/ATD use.",
+              "is_correct": true
+            },
+            {
+              "text": "No; the DME aircraft is above 10,000 feet and therefore ineligible.",
+              "is_correct": false
+            },
+            {
+              "text": "No; mixed DME/ATD use requires both aircraft to be DME-equipped.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "6-2-2 Requires the DME aircraft to be EITHER at or below 10,000 feet OR outside 10 miles from the DME NAVAID. At 12 miles, the distance prong is satisfied even though the altitude exceeds 10,000 feet.",
+          "para_context": "MINIMA ON SAME COURSE"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "Aircraft A departed 1 minute ago at 3,000 feet climbing to 8,000. Aircraft B will depart on the same course climbing to 6,000, which means B will climb through A's assigned altitude of 3,000. Neither aircraft has DME or ATD.",
+          "question_text": "Under 6-2-2, what separation must you apply?",
+          "choices": [
+            {
+              "text": "No separation is needed because B will level at 6,000, below A's final altitude of 8,000.",
+              "is_correct": false
+            },
+            {
+              "text": "3 minutes until B passes through 3,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "5 miles; the altitude at which they level off determines the method.",
+              "is_correct": false
+            },
+            {
+              "text": "5 miles is the only option since no usable time-based method exists for same-course departures.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Without DME or ATD, the distance option is unavailable. 6-2-2's time-based minimum of 3 minutes must be applied. The fact that B's final altitude is lower than A's does not matter — the climb-through at 3,000 feet triggers the rule.",
+          "para_context": "MINIMA ON SAME COURSE"
+        },
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "Under 6-2-2, when is the 5-mile DME/ATD same-course minimum NOT authorized between a DME aircraft and an ATD aircraft?",
+          "choices": [
+            {
+              "text": "When the DME aircraft is at 9,000 feet and 5 miles from the DME NAVAID.",
+              "is_correct": false
+            },
+            {
+              "text": "When the DME aircraft is at 12,000 feet and 8 miles from the DME NAVAID.",
+              "is_correct": true
+            },
+            {
+              "text": "When the DME aircraft is at 12,000 feet and 15 miles from the DME NAVAID.",
+              "is_correct": false
+            },
+            {
+              "text": "When the DME aircraft is at 10,000 feet and 3 miles from the DME NAVAID.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "At 12,000 feet AND 8 miles, the DME aircraft fails both prongs: above 10,000 feet AND inside 10 miles. In contrast, 9,000 feet satisfies the altitude prong; 15 miles satisfies the distance prong; 10,000 feet qualifies as 'at or below.'"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "questions": {
+    "5-6-1": {
+      "items": [
+        {
+          "question_text": "Under 5-6-1, which of the following is NOT a listed purpose for vectoring aircraft in controlled airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-6-1a lists: separation, safety, noise abatement, operational advantage, confidence maneuver, or pilot request. 'Fuel efficiency' is not listed.",
+          "choices": [
+            {
+              "text": "Separation.",
+              "is_correct": false
+            },
+            {
+              "text": "Fuel efficiency.",
+              "is_correct": true
+            },
+            {
+              "text": "Confidence maneuver.",
+              "is_correct": false
+            },
+            {
+              "text": "Noise abatement.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "NOTE: Under 5-6-1, VFR aircraft not at an altitude assigned by ATC may be vectored at _____ altitude.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note under 5-6-1c states VFR aircraft not at an assigned altitude may be vectored at ANY altitude, with the pilot responsible for CFR compliance.",
+          "choices": [
+            {
+              "text": "any",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "5-6-2": {
+      "items": [
+        {
+          "question_text": "Under 5-6-2g, aircraft may not be vectored off an Obstacle Departure Procedure until at or above what altitude?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-6-2g: aircraft may not be vectored off an ODP until at or above the MVA/MIA, at which time the ODP is canceled. Once vectored off, the ODP is canceled and cannot be resumed.",
+          "choices": [
+            {
+              "text": "At or above the MVA/MIA.",
+              "is_correct": true
+            },
+            {
+              "text": "At or above the ODP published altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "At or above 1,000 feet AGL.",
+              "is_correct": false
+            },
+            {
+              "text": "At or above the minimum vectoring altitude published on the approach plate.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "NOTE: Under 5-6-2d, after a climb via or descend via clearance has been issued, what effect does vectoring off a SID/STAR have on the published restrictions?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note states: after a climb via/descend via clearance has been issued, a vector/deviation off the SID/STAR cancels ALL published altitude and speed restrictions on the procedure.",
+          "choices": [
+            {
+              "text": "It cancels ALL published altitude and speed restrictions on the procedure.",
+              "is_correct": true
+            },
+            {
+              "text": "It only cancels speed restrictions; altitude restrictions remain.",
+              "is_correct": false
+            },
+            {
+              "text": "It only cancels altitude restrictions; speed restrictions remain.",
+              "is_correct": false
+            },
+            {
+              "text": "The restrictions remain in effect until the pilot acknowledges the vector.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-6-2e, in which case is the controller NOT required to inform an aircraft of its position when terminating radar navigational guidance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-6-2e3: position information is not required when the aircraft is RNAV, FMS, or DME equipped and being vectored toward a VORTAC/TACAN or waypoint within the NAVAID service volume.",
+          "choices": [
+            {
+              "text": "When the aircraft is RNAV, FMS, or DME equipped and being vectored toward a VORTAC/TACAN or waypoint within the NAVAID service volume.",
+              "is_correct": true
+            },
+            {
+              "text": "When the aircraft is established within the protected airspace for the nonradar route.",
+              "is_correct": false
+            },
+            {
+              "text": "When the aircraft is operating VFR and on an assigned heading.",
+              "is_correct": false
+            },
+            {
+              "text": "When the aircraft has already been cleared for the approach.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-6-3": {
+      "items": [
+        {
+          "question_text": "Under 5-6-3 TERMINAL, when vectoring a departing IFR aircraft or one executing a missed approach below the minimum altitude for IFR operations, what data block condition must NOT exist?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-6-3a: vectors below minimum IFR altitude may be applied when ISR is NOT displayed in the full data block, and one of the obstacle separation conditions is met.",
+          "choices": [
+            {
+              "text": "ISR must not be displayed in the full data block.",
+              "is_correct": true
+            },
+            {
+              "text": "TRK must not be displayed in the data block.",
+              "is_correct": false
+            },
+            {
+              "text": "CST must be displayed in the data block.",
+              "is_correct": false
+            },
+            {
+              "text": "NAT must be displayed in the data block.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "5-6-2": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "An aircraft was issued a 'descend via' clearance on the Ksino One arrival. You now vector the aircraft off the STAR for traffic. You later instruct the aircraft to resume the procedure.",
+          "question_text": "Under 5-6-2f, what must you include when clearing the aircraft to resume the procedure?",
+          "choices": [
+            {
+              "text": "Issue or reissue all applicable published crossing restrictions, or instruct the aircraft to Descend Via the STAR.",
+              "is_correct": true
+            },
+            {
+              "text": "Simply say 'resume the Ksino One arrival' because the restrictions reactivate automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "Only issue the next waypoint crossing restriction and maintain the current altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the STAR entirely and issue a completely new clearance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "5-6-2F requires issuing/reissuing all applicable restrictions or instructing Climb Via/Descend Via when resuming a procedure with published crossing restrictions.",
+          "para_context": "METHODS"
+        }
+      ]
+    }
+  }
+}

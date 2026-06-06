@@ -1,0 +1,172 @@
+{
+  "questions": {
+    "5-7-1": {
+      "items": [
+        {
+          "question_text": "Under 5-7-1, speed adjustments should be kept to the minimum necessary and should avoid adjustments requiring alternate _____.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-7-1 states: avoid adjustments requiring alternate decreases and increases.",
+          "choices": [
+            {
+              "text": "decreases and increases",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-7-1, when should speed adjustments be terminated?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Speed adjustments should be terminated when no longer needed to achieve or maintain required or desired spacing.",
+          "choices": [
+            {
+              "text": "When they are no longer needed to achieve or maintain required or desired spacing.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the pilot has been issued a new altitude assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "After exactly 5 minutes of operation at the assigned speed.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft has exited Class B airspace.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-7-2": {
+      "items": [
+        {
+          "question_text": "Under 5-7-2, which is NOT one of the methods for instructing aircraft on speed?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The methods include: maintain present/specific speed, maintain specified speed or greater/less, maintain highest/lowest practical speed, increase or reduce to a specified speed or by a specified number of knots.",
+          "choices": [
+            {
+              "text": "Maintain present/specific speed.",
+              "is_correct": false
+            },
+            {
+              "text": "Reduce speed by 50 percent immediately.",
+              "is_correct": true
+            },
+            {
+              "text": "Maintain the highest/lowest practical speed.",
+              "is_correct": false
+            },
+            {
+              "text": "Increase or reduce to a specified speed or by a specified number of knots.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-7-3": {
+      "items": [
+        {
+          "question_text": "Under 5-7-3a, when assigning airspeeds to aircraft operating between FL 280 and 10,000 feet, what is the minimum speed?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-7-3a: between FL280 and 10,000 feet, assign a speed not less than 250 knots or the equivalent Mach number.",
+          "choices": [
+            {
+              "text": "Not less than 250 knots or the equivalent Mach number.",
+              "is_correct": true
+            },
+            {
+              "text": "Not less than 210 knots.",
+              "is_correct": false
+            },
+            {
+              "text": "Not less than 300 knots.",
+              "is_correct": false
+            },
+            {
+              "text": "Any speed the controller deems appropriate.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-7-4": {
+      "items": [
+        {
+          "question_text": "Under 5-7-4, what phraseology is used when ATC-assigned speed adjustments are no longer required and no published speed restrictions apply?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-7-4a: when ATC-assigned speed is no longer needed and no published speed restriction applies, advise 'RESUME NORMAL SPEED.'",
+          "choices": [
+            {
+              "text": "RESUME NORMAL SPEED.",
+              "is_correct": true
+            },
+            {
+              "text": "SPEED AT YOUR DISCRETION.",
+              "is_correct": false
+            },
+            {
+              "text": "CANCEL SPEED RESTRICTION.",
+              "is_correct": false
+            },
+            {
+              "text": "NO SPEED RESTRICTION.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "5-7-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "You need to assign a speed to an aircraft at FL200 for spacing. The pilot is VFR and not on an IFR flight plan. The aircraft is a jet that normally cruises at 240 knots at this altitude.",
+          "question_text": "Under 5-7-3, what is the minimum speed you may assign?",
+          "choices": [
+            {
+              "text": "Not less than 250 knots or the equivalent Mach number.",
+              "is_correct": true
+            },
+            {
+              "text": "240 knots, because that matches the aircraft's normal cruise speed.",
+              "is_correct": false
+            },
+            {
+              "text": "210 knots, the minimum for turbojet operations.",
+              "is_correct": false
+            },
+            {
+              "text": "No minimum applies because the aircraft is VFR.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "5-7-3A applies to aircraft between FL280 and 10,000 feet, requiring a minimum of 250 knots or equivalent Mach. At FL200, the aircraft is within this altitude band.",
+          "para_context": "SPEED ASSIGNMENTS"
+        }
+      ]
+    }
+  }
+}

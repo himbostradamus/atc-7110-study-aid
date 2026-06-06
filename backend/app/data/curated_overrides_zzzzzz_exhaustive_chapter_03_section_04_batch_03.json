@@ -1,0 +1,1744 @@
+{
+  "activities": {
+    "3-4-13": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "Who must be kept informed of HIRL changes that affect RVR?",
+          "choices": [
+            {
+              "text": "The appropriate approach controller or PAR controller.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the local controller because RVR affects the landing runway only after handoff is complete.",
+              "is_correct": false
+            },
+            {
+              "text": "Only airport operations because lighting changes are a field-maintenance issue rather than an ATC issue.",
+              "is_correct": false
+            },
+            {
+              "text": "No coordination is required unless a pilot asks about the light change.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "HIRL changes affecting RVR are coordinated to the appropriate approach or PAR controller."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this HIRL/RVR coordination directive correct?",
+          "question_text": "Keep the appropriate approach controller or PAR controller informed, in advance if possible, of HIRL changes that affect RVR.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the direct coordination instruction in 3-4-13."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this HIRL/RVR condition rule correct?",
+          "question_text": "If a HIRL change affects RVR, you must inform the appropriate approach controller or PAR controller in advance if possible.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule is to coordinate those HIRL changes in advance if possible."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this HIRL/RVR requirement correct?",
+          "question_text": "HIRL changes that affect RVR must be passed to the appropriate approach controller or PAR controller.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That coordination is required because the change affects RVR-sensitive approach operations."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "The HIRL intensity serving an active runway is about to change in a way that affects RVR. The inbound aircraft are still on approach frequency. Another controller says the change can wait until the arrivals are on tower because the runway lights are a tower issue.",
+          "para_context": "Keep the appropriate approach controller or PAR controller informed, in advance if possible, of HIRL changes that affect RVR.",
+          "choices": [
+            {
+              "text": "Inform the appropriate approach controller or PAR controller in advance if possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the arrivals are on tower because runway-light changes affect only tower operations.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the coordination unless a pilot reports seeing the change on final.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate only with airport operations because RVR is not an approach-control concern.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph requires coordination to the appropriate approach or PAR controller, and it should be done in advance if possible."
+        }
+      ]
+    },
+    "3-4-14": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How are medium intensity runway lights normally operated?",
+          "choices": [
+            {
+              "text": "In accordance with the MIRL table unless pilot request or controller judgment calls for a different setting.",
+              "is_correct": true
+            },
+            {
+              "text": "At one fixed intensity after sunset regardless of visibility.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the associated MALSR is at its brightest setting.",
+              "is_correct": false
+            },
+            {
+              "text": "Only by specific pilot request because no standard visibility table applies.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "MIRL uses Table 3-4-10 unless one of the listed exceptions applies."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use the MIRL intensity table.",
+          "question_text": "During the day, what MIRL setting applies when visibility is less than 2 miles?",
+          "choices": [
+            {
+              "text": "Step 3.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 1.",
+              "is_correct": false
+            },
+            {
+              "text": "When requested only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-10 assigns step 3 during the day when visibility is less than 2 miles."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this MIRL night rule correct?",
+          "question_text": "If it is nighttime and visibility is 1 to 3 miles, use MIRL step 2 unless a listed exception applies.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Night visibility of 1 to 3 miles corresponds to step 2 in the MIRL table."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this MIRL exception rule correct?",
+          "question_text": "Pilot request or controller judgment may change the normal MIRL table setting if the controller's action is not contrary to the pilot's request.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the listed exceptions in 3-4-14."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which MIRL visibility and step pairing is correct?",
+          "question_text": "Which pairing matches the MIRL table?",
+          "choices": [
+            {
+              "text": "At night, visibility more than 3 miles corresponds to step 1.",
+              "is_correct": true
+            },
+            {
+              "text": "During the day, visibility less than 2 miles corresponds to step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "At night, visibility less than 1 mile corresponds to step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "During the day, visibility 2 to 3 miles corresponds to step 1.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Night visibility greater than 3 miles uses step 1 in Table 3-4-10."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Night visibility is 2 miles. No pilot has requested a different MIRL setting, and there is no local need to override the table. Another controller wants to leave the lights at step 3 because brighter always seems safer.",
+          "para_context": "Operate MIRL by Table 3-4-10 unless pilot request or controller judgment changes the setting. At night, visibility from 1 to 3 miles uses step 2.",
+          "choices": [
+            {
+              "text": "Use step 2 because that is the normal table setting for 1 to 3 miles visibility at night.",
+              "is_correct": true
+            },
+            {
+              "text": "Use step 3 because brighter is always preferred whenever visibility is below 3 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Use step 1 because step 2 is reserved for day operations.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the lights off because step 2 is unavailable without a pilot request.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Without an exception, the normal MIRL table governs."
+        }
+      ]
+    },
+    "3-4-15": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When are high speed turnoff lights operated?",
+          "choices": [
+            {
+              "text": "Whenever the associated runway lights are used for arriving aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the associated runway lights are used for departing aircraft only.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when a pilot specifically asks for them.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the runway edge lights are at their highest setting.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "High speed turnoff lights are tied to arrivals using the associated runway lights."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this turnoff-light directive correct?",
+          "question_text": "Use high speed turnoff lights whenever the associated runway lights are used for arriving aircraft.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the base operating instruction in 3-4-15."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this turnoff-light duration rule correct?",
+          "question_text": "If high speed turnoff lights are being used for an arriving aircraft, you must leave them on until the aircraft has either entered a taxiway or passed the last light.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the stated duration for arrival use."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this turnoff-light exception rule correct?",
+          "question_text": "Facility directives or pilot request may govern high speed turnoff light operation differently from the normal arrival-use rule.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Local directives and pilot request are the listed exceptions."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which is a normal turnoff-light shutoff trigger?",
+          "question_text": "Which event is one of the normal endpoints for arrival use of high speed turnoff lights?",
+          "choices": [
+            {
+              "text": "The aircraft has entered a taxiway.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft has crossed the runway threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft receives taxi instructions after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "The departing queue reaches the runway hold line.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "One normal endpoint is the aircraft entering a taxiway. The other is passing the last light."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "An arrival rolls out and passes the first several turnoff lights without exiting. Another controller wants to turn the high speed turnoff lights off immediately after touchdown because the arrival has already seen them.",
+          "para_context": "Operate high speed turnoff lights whenever the associated runway lights are used for arriving aircraft. Leave them on until the aircraft has either entered a taxiway or passed the last light.",
+          "choices": [
+            {
+              "text": "Leave the high speed turnoff lights on until the aircraft enters a taxiway or passes the last light.",
+              "is_correct": true
+            },
+            {
+              "text": "Turn them off immediately after touchdown because the arrival no longer needs guidance once on the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn them off as soon as the aircraft slows below taxi speed, regardless of where it is on the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Keep them on only if the pilot requests them after landing.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The lights remain on until the aircraft exits via taxiway or passes the last turnoff light."
+        }
+      ]
+    },
+    "3-4-16": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How are taxiway lights normally operated?",
+          "choices": [
+            {
+              "text": "In accordance with the applicable taxiway-light table unless a facility directive, pilot request, or controller judgment changes the setting.",
+              "is_correct": true
+            },
+            {
+              "text": "At one fixed default intensity through the full day and night cycle.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when runway edge lights are also operating at high intensity.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when visibility is less than 1 mile because taxiway-light settings are otherwise optional.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Taxiway lights follow the applicable installed-system table unless one of the listed exceptions applies."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use the taxiway-light tables.",
+          "question_text": "For a three-step taxiway-light system, what night setting applies when visibility is less than 1 mile?",
+          "choices": [
+            {
+              "text": "Step 2.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 1.",
+              "is_correct": false
+            },
+            {
+              "text": "On request only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-11 assigns step 2 at night when visibility is less than 1 mile."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this one-step taxiway-light rule correct?",
+          "question_text": "If a one-step taxiway-light system is installed, use it during the day when visibility is less than 1 mile and keep it on at night.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-13 uses the one-step system during the day when visibility is less than 1 mile and at night with the status On."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this taxiway-light exception rule correct?",
+          "question_text": "Facility directives, pilot request, or controller judgment may change the normal taxiway-light setting.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the listed exceptions in 3-4-16."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which taxiway-light table pairing is correct?",
+          "question_text": "Which pairing matches one of the taxiway-light tables?",
+          "choices": [
+            {
+              "text": "For a five-step system, night visibility of 1 mile or more corresponds to step 3.",
+              "is_correct": true
+            },
+            {
+              "text": "For a three-step system, day visibility less than 1 mile corresponds to step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "For a five-step system, night visibility less than 1 mile corresponds to step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "For a one-step system, daytime visibility 1 mile or more requires the system on.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "In the five-step taxiway-light table, night visibility of 1 mile or more uses step 3."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "The airport uses a one-step taxiway-light system. Night operations are in progress, and another controller wants the taxiway lights off because visibility is excellent and the runway lighting is already bright.",
+          "para_context": "Taxiway lights use the applicable table unless an exception applies. For a one-step taxiway-light system, the night status is On.",
+          "choices": [
+            {
+              "text": "Keep the one-step taxiway-light system on because the night status is On unless an allowed exception applies.",
+              "is_correct": true
+            },
+            {
+              "text": "Turn the one-step system off because it is needed only when visibility is less than 1 mile.",
+              "is_correct": false
+            },
+            {
+              "text": "Switch the one-step system to a medium setting because bright runway lights replace the taxiway-light rule.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the five-step table instead because it gives more flexibility even for a one-step installation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The installed system determines the applicable table, and the one-step night status is simply On."
+        }
+      ]
+    },
+    "3-4-17": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When should obstruction lights be turned on if controls are provided?",
+          "choices": [
+            {
+              "text": "Between sunset and sunrise.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when an emergency aircraft is inbound.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the rotating beacon is already on.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when visibility is below basic VFR minima.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If controls are provided, obstruction lights are turned on between sunset and sunrise."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this obstruction-light directive correct?",
+          "question_text": "Turn obstruction lights on between sunset and sunrise if controls are provided.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the full rule in 3-4-17."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this obstruction-light condition rule correct?",
+          "question_text": "If controls are provided, turn obstruction lights on between sunset and sunrise.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule is conditional on the controls being provided."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "What should you do?",
+          "situation": "The airport has controllable obstruction lights. Sunset has occurred, and another controller says they may remain off unless a pilot reports difficulty seeing the obstruction.",
+          "para_context": "If controls are provided, turn the lights on between sunset and sunrise.",
+          "choices": [
+            {
+              "text": "Turn the obstruction lights on.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave them off unless a pilot requests them.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave them off unless visibility falls below VFR minima.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the rotating beacon is on before using them.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule does not depend on pilot request or weather. It depends on the time period and the presence of controls."
+        }
+      ]
+    },
+    "3-4-18": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "Besides nighttime operation, when should the rotating beacon be turned on if controls are provided?",
+          "choices": [
+            {
+              "text": "Between sunrise and sunset when the reported ceiling or visibility is below basic VFR minima.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever an IFR flight plan is active to the airport, regardless of weather.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when runway edge lights are already at their highest setting.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the active runway changes.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The beacon is also turned on during the day when reported ceiling or visibility is below basic VFR minima."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this rotating-beacon directive correct?",
+          "question_text": "Turn the rotating beacon on between sunset and sunrise if controls are provided.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the base rotating-beacon rule."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this daytime beacon rule correct?",
+          "question_text": "If it is between sunrise and sunset and the reported ceiling or visibility is below basic VFR minima, turn on the rotating beacon.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the daytime weather trigger for rotating-beacon use."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which condition triggers daytime rotating-beacon use?",
+          "question_text": "Which daytime condition requires use of the rotating beacon?",
+          "choices": [
+            {
+              "text": "Reported ceiling or visibility below basic VFR minima.",
+              "is_correct": true
+            },
+            {
+              "text": "Any IFR arrival within 20 miles of the airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway edge lights set above medium intensity.",
+              "is_correct": false
+            },
+            {
+              "text": "A pilot requests taxi instructions while on the ground.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The daytime trigger is reported ceiling or visibility below basic VFR minima."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "It is midday. The reported ceiling has dropped below basic VFR minima, but another controller says the rotating beacon is mainly a night aid and may stay off until sunset.",
+          "para_context": "If controls are provided, turn the rotating beacon on between sunset and sunrise and between sunrise and sunset when the reported ceiling or visibility is below basic VFR minima.",
+          "choices": [
+            {
+              "text": "Turn the rotating beacon on now because the daytime weather trigger is met.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave it off until sunset because the beacon is required only at night.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave it off until a pilot requests it on frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Use obstruction lights instead because the beacon is not part of daytime weather procedures.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rotating beacon has a specific daytime weather trigger in addition to the normal night rule."
+        }
+      ]
+    },
+    "3-4-19": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How is the runway status light system normally operated?",
+          "choices": [
+            {
+              "text": "On a continuous basis with automatic intensity settings, except under the listed conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the tower is handling IFR traffic.",
+              "is_correct": false
+            },
+            {
+              "text": "Only on pilot request because intensity is automatic.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when surface visibility is below basic VFR minima.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "RWSL is normally operated continuously with automatic intensity settings."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this RWSL requirement correct?",
+          "question_text": "Once a runway status light system is turned off, it must remain off until technical operations personnel return it to service.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph explicitly says the system remains off until returned to service by technical operations personnel."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this visible-runway RWSL rule correct?",
+          "question_text": "If a pilot or vehicle reports that a portion of the RWSL system is on and cannot accept a clearance, and ATC visually observes the entire runway to be clear while the lights remain illuminated, ATC must turn the lights off and reissue the clearance.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the rule when the runway is fully visible from the tower."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this RWSL out-of-service directive correct?",
+          "question_text": "Consider the runway status light system out of service when the operational status displays Lost Comm with System until technical operations personnel check and confirm it is operational.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Lost Comm with System means the system is treated as out of service until technical operations confirms it operational."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this RWSL operating-scope statement correct?",
+          "question_text": "The continuous-operation requirement applies to the runway status light system except under the listed abnormal conditions and pilot-request intensity adjustments.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the overall operating scope described in 3-4-19."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot reports that part of the RWSL system is illuminated and cannot accept the clearance. The far end of the runway is not visible from the tower, but ASDE shows the runway is clear and the lights remain on.",
+          "para_context": "If part of the runway is not visible from the tower, ATC must visually scan the ASDE system. If the runway is observed to be clear and the lights remain illuminated, turn the lights off and reissue the clearance.",
+          "choices": [
+            {
+              "text": "Use ASDE to verify the runway is clear, then turn the lights off and reissue the clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Ignore the report because automatic-intensity systems are not controller-managed.",
+              "is_correct": false
+            },
+            {
+              "text": "Reissue the clearance without turning the lights off because ASDE already shows the runway clear.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel all runway operations for the remainder of the shift automatically.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the runway is not fully visible from the tower, ATC uses ASDE for the scan. If the runway is clear and the lights remain illuminated, the lights are turned off and the clearance is reissued."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-4-13": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Who must be kept informed of HIRL changes that affect RVR?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The appropriate approach controller or PAR controller is informed of HIRL changes that affect RVR.",
+          "choices": [
+            {
+              "text": "The appropriate approach controller or PAR controller.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the local controller.",
+              "is_correct": false
+            },
+            {
+              "text": "Only airport operations.",
+              "is_correct": false
+            },
+            {
+              "text": "No one unless a pilot asks.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "HIRL changes that affect RVR should be coordinated in advance if possible.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The paragraph specifically says in advance if possible."
+        },
+        {
+          "question_text": "If a HIRL change affects RVR, what kind of coordination timing does the rule prefer?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The preferred timing is advance coordination if possible.",
+          "choices": [
+            {
+              "text": "In advance if possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the first aircraft reports the lighting change.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the runway is closed to arrivals.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when airport operations has confirmed the change in writing.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A HIRL change affects RVR while arrivals are still on approach frequency. What should tower do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The change is coordinated to the appropriate approach or PAR controller, preferably in advance.",
+          "choices": [
+            {
+              "text": "Inform the appropriate approach controller or PAR controller in advance if possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the arrivals are on tower frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate only with ground control.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat the change as a field issue only and avoid ATC coordination.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which controllers are named in 3-4-13 as the coordination targets for HIRL changes affecting RVR?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph specifically identifies the appropriate approach controller or PAR controller.",
+          "choices": [
+            {
+              "text": "Approach or PAR controllers.",
+              "is_correct": true
+            },
+            {
+              "text": "Ground or clearance delivery controllers.",
+              "is_correct": false
+            },
+            {
+              "text": "Ramp control or airport operations.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the center controller.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-14": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "How are MIRL normally operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "MIRL follows the MIRL table unless a listed exception applies.",
+          "choices": [
+            {
+              "text": "In accordance with the MIRL table unless pilot request or controller judgment changes the setting.",
+              "is_correct": true
+            },
+            {
+              "text": "At one fixed night setting regardless of visibility.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the associated MALSR is operating.",
+              "is_correct": false
+            },
+            {
+              "text": "Only on pilot request.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "During the day, what MIRL setting applies when visibility is less than 2 miles?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-10 assigns step 3 for daytime visibility less than 2 miles.",
+          "choices": [
+            {
+              "text": "Step 3.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 1.",
+              "is_correct": false
+            },
+            {
+              "text": "When requested only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At night, visibility from 1 to 3 miles corresponds to MIRL step 2.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "That is the night-table assignment in Table 3-4-10."
+        },
+        {
+          "question_text": "At night, what MIRL setting applies when visibility is more than 3 miles?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-10 assigns step 1 at night when visibility is more than 3 miles.",
+          "choices": [
+            {
+              "text": "Step 1.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilot request only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What two exceptions can change the normal MIRL table setting?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The listed exceptions are pilot request and controller judgment if not contrary to the pilot's request.",
+          "choices": [
+            {
+              "text": "Pilot request or controller judgment.",
+              "is_correct": true
+            },
+            {
+              "text": "Airport management direction or RVR-equipment status.",
+              "is_correct": false
+            },
+            {
+              "text": "Only pilot request.",
+              "is_correct": false
+            },
+            {
+              "text": "Only controller judgment.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-15": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When are high speed turnoff lights operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They are operated whenever the associated runway lights are used for arriving aircraft.",
+          "choices": [
+            {
+              "text": "Whenever the associated runway lights are used for arriving aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the associated runway lights are used for departures only.",
+              "is_correct": false
+            },
+            {
+              "text": "Only on pilot request.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the runway is active for both arrivals and departures at the same time.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How long do high speed turnoff lights normally remain on for an arriving aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They stay on until the aircraft has entered a taxiway or passed the last light.",
+          "choices": [
+            {
+              "text": "Until the aircraft has entered a taxiway or passed the last light.",
+              "is_correct": true
+            },
+            {
+              "text": "Only until touchdown.",
+              "is_correct": false
+            },
+            {
+              "text": "Until the aircraft reaches the ramp.",
+              "is_correct": false
+            },
+            {
+              "text": "Only until the first taxiway turnoff becomes available.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Facility directives or pilot request may change the normal high speed turnoff light rule.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Those are the listed exceptions in 3-4-15."
+        },
+        {
+          "question_text": "Which event is one of the normal turnoff-light shutoff endpoints for an arrival?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "One endpoint is the aircraft entering a taxiway. The other is passing the last light.",
+          "choices": [
+            {
+              "text": "The aircraft has entered a taxiway.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft crosses the threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft receives taxi instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "The next departure calls ready.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "An arriving aircraft has not exited the runway and has not passed the last high speed turnoff light. What should be done with the high speed turnoff lights?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They remain on until one of the two listed endpoints occurs.",
+          "choices": [
+            {
+              "text": "Keep them on.",
+              "is_correct": true
+            },
+            {
+              "text": "Turn them off immediately after touchdown.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn them off unless the pilot requests them after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "Use them only if a local directive specifically restarts them.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-16": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "How are taxiway lights normally operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Taxiway lights follow the applicable installed-system table unless an exception applies.",
+          "choices": [
+            {
+              "text": "In accordance with the applicable taxiway-light table unless a facility directive, pilot request, or controller judgment changes the setting.",
+              "is_correct": true
+            },
+            {
+              "text": "At one fixed intensity all day and night.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when visibility is less than 1 mile.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when runway edge lights are at maximum intensity.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For a three-step taxiway-light system, what night setting applies when visibility is less than 1 mile?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-11 assigns step 2 at night when visibility is less than 1 mile.",
+          "choices": [
+            {
+              "text": "Step 2.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 1.",
+              "is_correct": false
+            },
+            {
+              "text": "On request only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For a one-step taxiway-light system, the night status is On.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Table 3-4-13 shows the night status for the one-step system as On."
+        },
+        {
+          "question_text": "For a five-step taxiway-light system, what night setting applies when visibility is 1 mile or more?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-12 assigns step 3 at night when visibility is 1 mile or more.",
+          "choices": [
+            {
+              "text": "Step 3.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 1.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What kinds of exceptions can change the normal taxiway-light setting?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The listed exceptions are facility directives, pilot request, and controller judgment.",
+          "choices": [
+            {
+              "text": "Facility directives, pilot request, or controller judgment.",
+              "is_correct": true
+            },
+            {
+              "text": "Only pilot request.",
+              "is_correct": false
+            },
+            {
+              "text": "Only facility directives.",
+              "is_correct": false
+            },
+            {
+              "text": "Only ASDE system status.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A one-step taxiway-light system is installed and night operations are in progress. What is the normal status if no exception applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "For the one-step system, the night status is On.",
+          "choices": [
+            {
+              "text": "On.",
+              "is_correct": true
+            },
+            {
+              "text": "Off unless visibility is less than 1 mile.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-17": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When are obstruction lights turned on if controls are provided?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The rule is between sunset and sunrise.",
+          "choices": [
+            {
+              "text": "Between sunset and sunrise.",
+              "is_correct": true
+            },
+            {
+              "text": "Only during emergencies.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when visibility is below VFR minima.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the rotating beacon is on.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If controls are provided, obstruction lights are turned on between sunset and sunrise.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "That is the entire operating rule in 3-4-17."
+        },
+        {
+          "question_text": "What condition must be true before the obstruction-light timing rule applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The rule applies if controls are provided.",
+          "choices": [
+            {
+              "text": "Controls are provided.",
+              "is_correct": true
+            },
+            {
+              "text": "An emergency aircraft is inbound.",
+              "is_correct": false
+            },
+            {
+              "text": "The rotating beacon is on.",
+              "is_correct": false
+            },
+            {
+              "text": "Visibility is below VFR minima.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "It is after sunset and controllable obstruction lights are available. What should be done?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The lights are turned on between sunset and sunrise if controls are provided.",
+          "choices": [
+            {
+              "text": "Turn the obstruction lights on.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave them off unless a pilot requests them.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave them off until visibility falls below VFR minima.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the beacon is turned on first.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-18": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When is the rotating beacon turned on if controls are provided?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It is turned on at night and also by day when reported ceiling or visibility is below basic VFR minima.",
+          "choices": [
+            {
+              "text": "Between sunset and sunrise, and also during the day when reported ceiling or visibility is below basic VFR minima.",
+              "is_correct": true
+            },
+            {
+              "text": "Only between sunset and sunrise.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when an IFR flight plan is active to the airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when runway edge lights are at the highest setting.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "During the day, what weather condition triggers rotating-beacon use?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The daytime trigger is reported ceiling or visibility below basic VFR minima.",
+          "choices": [
+            {
+              "text": "Reported ceiling or visibility below basic VFR minima.",
+              "is_correct": true
+            },
+            {
+              "text": "Any IFR arrival within 20 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway edge lights at maximum intensity.",
+              "is_correct": false
+            },
+            {
+              "text": "A change in active runway.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The rotating beacon is turned on during the day when the reported ceiling or visibility is below basic VFR minima.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "That is the daylight weather trigger in 3-4-18."
+        },
+        {
+          "question_text": "What is the basic nighttime rotating-beacon rule?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The base nighttime rule is to turn it on between sunset and sunrise.",
+          "choices": [
+            {
+              "text": "Turn it on between sunset and sunrise.",
+              "is_correct": true
+            },
+            {
+              "text": "Turn it on only if visibility is below VFR minima.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn it on only if an aircraft is on approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn it on only after runway edge lights are on.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "It is midday and the reported ceiling is below basic VFR minima. What should be done with the rotating beacon?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The daytime weather trigger requires beacon use.",
+          "choices": [
+            {
+              "text": "Turn it on.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave it off until sunset.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave it off unless a pilot requests it.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only obstruction lights instead.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-19": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "How is the runway status light system normally operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "RWSL is equipped with automatic intensity settings and is operated continuously except under the listed conditions.",
+          "choices": [
+            {
+              "text": "On a continuous basis with automatic intensity settings, except under the listed conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Only during IFR operations.",
+              "is_correct": false
+            },
+            {
+              "text": "Only on pilot request.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when visibility is below basic VFR minima.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a pilot or vehicle reports RWSL illuminated and unable to accept the clearance, and the entire runway is visible and observed clear while the lights remain on, what should ATC do?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "ATC turns the lights off and reissues the clearance once the runway is verified clear and the lights remain illuminated.",
+          "choices": [
+            {
+              "text": "Turn the lights off and reissue the clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Tell the pilot to disregard the lights and accept the clearance anyway.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel all runway operations for the rest of the shift automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the report because RWSL intensity is automatic.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If part of the runway is not visible from the tower during an RWSL report, what system must ATC use to complete the scan?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "ATC must visually scan the ASDE system when part of the runway is not visible from the tower.",
+          "choices": [
+            {
+              "text": "The ASDE system.",
+              "is_correct": true
+            },
+            {
+              "text": "The beacon-control panel.",
+              "is_correct": false
+            },
+            {
+              "text": "The MALSR brightness selector.",
+              "is_correct": false
+            },
+            {
+              "text": "The rotating-beacon status display.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the RWSL operational status displays Lost Comm with System, how should the system be treated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It is considered out of service until technical operations personnel check and confirm it operational.",
+          "choices": [
+            {
+              "text": "As out of service until technical operations checks and confirms it operational.",
+              "is_correct": true
+            },
+            {
+              "text": "As usable at reduced intensity until the next pilot report.",
+              "is_correct": false
+            },
+            {
+              "text": "As normal unless the beacon is also affected.",
+              "is_correct": false
+            },
+            {
+              "text": "As pilot-discretion only, without any need for technical operations involvement.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Once an RWSL system is turned off, it must remain off until returned to service by technical operations personnel.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "That requirement is stated directly in 3-4-19."
+        },
+        {
+          "question_text": "What may ATC do upon pilot request regarding RWSL intensity?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph allows intensity adjustment upon pilot request.",
+          "choices": [
+            {
+              "text": "Adjust the light intensity.",
+              "is_correct": true
+            },
+            {
+              "text": "Turn the system fully off permanently.",
+              "is_correct": false
+            },
+            {
+              "text": "Suspend the continuous-operation requirement for the rest of the shift.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer control of the system directly to the pilot.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

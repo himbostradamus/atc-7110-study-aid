@@ -1,0 +1,423 @@
+{
+  "activities": {
+    "2-9-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How is each ATIS message identified?",
+          "choices": [
+            {"text": "By a phonetic letter code word at both the beginning and the end of the message.", "is_correct": true},
+            {"text": "By a numeric sequence at the beginning only.", "is_correct": false},
+            {"text": "By the airport identifier at the end only.", "is_correct": false},
+            {"text": "By a phonetic code word only when weather changes.", "is_correct": false}
+          ],
+          "explanation": "Each ATIS message uses a phonetic code word at both the beginning and end."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "The ATIS recording must be reviewed for completeness, accuracy, speech rate, and proper enunciation before being transmitted.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "Those four checks are required before an ATIS recording is transmitted."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Under what condition are specific sequential portions of the alphabet authorized to be assigned between facilities or between arrival and departure ATIS broadcasts?",
+          "choices": [
+            {"text": "When designated by a letter of agreement or facility directive.", "is_correct": true},
+            {"text": "Whenever the local controller prefers to split the alphabet informally.", "is_correct": false},
+            {"text": "Only when the ATIS has already cycled through Zulu in the same day.", "is_correct": false},
+            {"text": "Only after an interruption of more than 12 hours.", "is_correct": false}
+          ],
+          "explanation": "Specific alphabet segments may be assigned only through formal designation by LOA or facility directive."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An ATIS broadcast has been interrupted for more than 12 hours. Another controller wants to resume with the last code word used before the outage so the sequence remains unbroken.",
+          "para_context": "ATIS code words are used sequentially Alpha through Zulu and repeated without regard to a new day. After a broadcast interruption of more than 12 hours, the first resumed message is identified with Alpha or the first assigned alphabet letter word.",
+          "choices": [
+            {"text": "Resume with Alpha or the first assigned alphabet letter word.", "is_correct": true},
+            {"text": "Resume with the last code word used before the outage.", "is_correct": false},
+            {"text": "Skip directly to Zulu to highlight the long interruption.", "is_correct": false},
+            {"text": "Resume without a code word until the next official weather observation arrives.", "is_correct": false}
+          ],
+          "explanation": "A long interruption resets the resumed broadcast to Alpha or the assigned starting letter."
+        }
+      ]
+    },
+    "2-9-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When must a new ATIS recording be made because of weather alone?",
+          "choices": [
+            {"text": "Upon receipt of any new official weather, even if the values do not change.", "is_correct": true},
+            {"text": "Only when visibility or ceiling values change materially.", "is_correct": false},
+            {"text": "Only when the altimeter changes by at least 0.02 inches.", "is_correct": false},
+            {"text": "Only when the current code letter has already been in use for one hour.", "is_correct": false}
+          ],
+          "explanation": "Any new official weather triggers a new recording, even without a change in values."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If a pilot is unable to receive the ATIS, controllers must issue the current weather, runway in use, approach or departure information, pertinent NOTAMs, and airport conditions.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "That full package is issued when a pilot cannot receive the ATIS."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When a pilot has acknowledged the ATIS broadcast, under what condition is omission of the ATIS items already contained in that broadcast authorized?",
+          "choices": [
+            {"text": "When those items are current, while rapidly changing conditions are still issued by ATC.", "is_correct": true},
+            {"text": "Only when the pilot reads back the full ATIS message verbatim.", "is_correct": false},
+            {"text": "Only when no braking-action or NOTAM information exists.", "is_correct": false},
+            {"text": "Never; all ATIS items must always be restated on first contact.", "is_correct": false}
+          ],
+          "explanation": "Current ATIS items may be omitted after acknowledgment, but rapidly changing conditions are still issued by ATC."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "The ATIS has changed to Information Charlie, and numerous flocks of ducks are in the immediate vicinity of Madison Airport at unknown altitude. Build the broadcast update.",
+          "target_phrase": "ATTENTION ALL AIRCRAFT INFORMATION CHARLIE CURRENT NUMEROUS FLOCKS OF DUCKS IN THE IMMEDIATE VICINITY OF MADISON AIRPORT ALTITUDE UNKNOWN"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot checks in for arrival without stating the ATIS code. The pilot then says the ATIS is unreadable due to radio issues, and rapidly changing wind and braking-action information is current.",
+          "para_context": "If a pilot does not state the appropriate ATIS code on initial contact, confirm receipt of the current ATIS. If a pilot cannot receive the ATIS, issue the current weather, runway in use, approach or departure information, pertinent NOTAMs, and airport conditions.",
+          "choices": [
+            {"text": "Confirm whether the pilot has the current ATIS, and if not, issue the current weather, runway, approach or departure information, pertinent NOTAMs, airport conditions, and any rapidly changing conditions.", "is_correct": true},
+            {"text": "Tell the pilot to remain outside the airspace until the ATIS becomes readable again.", "is_correct": false},
+            {"text": "Issue only the ATIS code letter and assume the pilot will obtain the rest from another aircraft.", "is_correct": false},
+            {"text": "Delay all weather and braking-action information until after the landing clearance is issued.", "is_correct": false}
+          ],
+          "explanation": "Pilots who cannot receive the ATIS still must receive the current operationally relevant information from ATC."
+        }
+      ]
+    },
+    "2-9-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which weather observation remarks must always be included in ATIS when present?",
+          "choices": [
+            {"text": "Lightning, cumulonimbus, and towering cumulus clouds.", "is_correct": true},
+            {"text": "Only runway visual range and density altitude remarks.", "is_correct": false},
+            {"text": "Only dew point and temperature remarks.", "is_correct": false},
+            {"text": "Only pilot braking-action comments.", "is_correct": false}
+          ],
+          "explanation": "Those three weather-observation remarks are always included when present."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When a runway length has been temporarily or permanently shortened, the word Warning must preface the runway number and the word shortened must be included in the ATIS message.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "Both the warning preface and the word shortened are required in the ATIS message."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "You need to include an unauthorized laser illumination event on the ATIS: 0100 Zulu, eight-mile final Runway 18 Right, 3,000 feet, green laser from the southwest. Build the report.",
+          "target_phrase": "UNAUTHORIZED LASER ILLUMINATION EVENT AT ZERO ONE ZERO ZERO ZULU EIGHT MILE FINAL RUNWAY ONE EIGHT RIGHT AT THREE THOUSAND FEET GREEN LASER FROM THE SOUTHWEST"
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "One word in this phraseology is incorrect. Tap it.",
+          "original_phrase": "WARNING RUNWAY ONE ZERO HAS BEEN SHORTENED NINER THOUSAND EIGHT HUNDRED AND FIFTY FEET AVAILABLE",
+          "display_text": "WARNING RUNWAY ONE ZERO HAS BEEN EXTENDED NINER THOUSAND EIGHT HUNDRED AND FIFTY FEET AVAILABLE",
+          "tokens": [
+            "WARNING",
+            "RUNWAY",
+            "ONE",
+            "ZERO",
+            "HAS",
+            "BEEN",
+            "EXTENDED",
+            "NINER",
+            "THOUSAND",
+            "EIGHT",
+            "HUNDRED",
+            "AND",
+            "FIFTY",
+            "FEET",
+            "AVAILABLE"
+          ],
+          "error_index": 6,
+          "correct_token": "SHORTENED",
+          "explanation": "The ATIS warning phraseology for a reduced runway length uses the word shortened, not extended."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Construction has shortened Runway 10 to 9,850 feet and the project will continue for weeks. Another controller wants to mention the closure casually in the ATIS without using the runway-shortened warning phraseology because pilots already know about the NOTAM.",
+          "para_context": "When a runway length has been temporarily or permanently shortened, Warning must preface the runway number and the word shortened must be included in the message. The available runway length must also be included for the duration of the project, and longer for permanent shortening as required.",
+          "choices": [
+            {"text": "Use the warning phraseology, include the word shortened, and state the available runway length in feet.", "is_correct": true},
+            {"text": "Mention the construction informally and omit the exact available length because the NOTAM already covers it.", "is_correct": false},
+            {"text": "Remove the runway from the ATIS entirely until construction is complete.", "is_correct": false},
+            {"text": "State only the runway number and the word caution without mentioning shortening.", "is_correct": false}
+          ],
+          "explanation": "The shortened-runway ATIS language is mandatory and includes both the warning cue and the available length."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "2-9-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "How is each ATIS message identified?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Each ATIS message uses a phonetic letter code word at both the beginning and end of the message.",
+          "choices": [
+            {"text": "By a phonetic letter code word at both the beginning and the end of the message.", "is_correct": true},
+            {"text": "By a numeric sequence at the beginning only.", "is_correct": false},
+            {"text": "By the airport identifier at the end only.", "is_correct": false},
+            {"text": "Only when weather conditions change significantly.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "If a recorded broadcast has been interrupted for more than 12 hours, how is the first resumed message identified?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The first resumed broadcast after a long interruption uses Alpha or the assigned first letter.",
+          "choices": [
+            {"text": "With Alpha or the first assigned alphabet letter word.", "is_correct": true},
+            {"text": "With the last letter used before the interruption.", "is_correct": false},
+            {"text": "With Zulu to indicate a long outage.", "is_correct": false},
+            {"text": "With no code word until the next new weather observation.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "ATIS code words are used sequentially from Alpha through Zulu and then repeated without regard to the beginning of a new day.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "That is the normal ATIS code-word sequence rule.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "When arrival and departure ATIS messages are broadcast separately, what may each message contain?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Separate broadcasts need contain only information appropriate to that operation.",
+          "choices": [
+            {"text": "Only information appropriate for that operation.", "is_correct": true},
+            {"text": "The full arrival and departure package in each message.", "is_correct": false},
+            {"text": "Only weather, with all runway information omitted.", "is_correct": false},
+            {"text": "Only runway information, with weather omitted.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-9-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must a new ATIS recording be made because of weather alone?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Any new official weather report triggers a new recording even if the values do not change.",
+          "choices": [
+            {"text": "Upon receipt of any new official weather, even if there is no change in values.", "is_correct": true},
+            {"text": "Only when the values change materially.", "is_correct": false},
+            {"text": "Only when visibility changes by at least one mile.", "is_correct": false},
+            {"text": "Only when the ATIS code letter has been in use for one hour.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "When a pilot acknowledges receipt of the ATIS, controllers may omit items contained in the broadcast if those items are current.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Current ATIS items may be omitted after acknowledgment, while rapidly changing conditions are still issued by ATC.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Complete the example from 2-9-2: \"Information CHARLIE current. Advise when you have _____.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The example ends with the current code word Charlie.",
+          "choices": [
+            {"text": "CHARLIE", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "If a pilot is unable to receive the ATIS, what information must be issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Issue the current weather, runway in use, approach or departure information, pertinent NOTAMs, and airport conditions.",
+          "choices": [
+            {"text": "The current weather, runway in use, approach or departure information, pertinent NOTAMs, and airport conditions.", "is_correct": true},
+            {"text": "Only the altimeter and approach in use.", "is_correct": false},
+            {"text": "Only the ATIS code and runway in use.", "is_correct": false},
+            {"text": "Only the weather, because NOTAMs and airport conditions remain entirely the pilot's responsibility.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "What must controllers broadcast on all appropriate frequencies when the ATIS code changes?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "They must broadcast the ATIS code change and the pertinent operational changes that caused it, when known.",
+          "choices": [
+            {"text": "The new ATIS code and the pertinent operational changes that required the change, when known.", "is_correct": true},
+            {"text": "Only the new code letter.", "is_correct": false},
+            {"text": "Only the new official weather sequence time.", "is_correct": false},
+            {"text": "Only the runway change, even if another condition caused the update.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "After a pilot has initially acknowledged the ATIS, no additional acknowledgement is required when the controller later broadcasts pertinent changes to the ATIS code.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note states that additional acknowledgements are not required after the pilot's initial ATIS confirmation.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-9-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Which weather observation remarks must always be included in ATIS when present?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Lightning, cumulonimbus, and towering cumulus clouds are always included when present.",
+          "choices": [
+            {"text": "Lightning, cumulonimbus, and towering cumulus clouds.", "is_correct": true},
+            {"text": "Only runway visual range and density altitude remarks.", "is_correct": false},
+            {"text": "Only dew point and temperature remarks.", "is_correct": false},
+            {"text": "Only pilot braking-action comments.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "How long must terminal facilities include a reported unauthorized laser illumination event on the ATIS broadcast following the last report?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Laser illumination events remain on the ATIS for one hour following the last report.",
+          "choices": [
+            {"text": "One hour following the last report.", "is_correct": true},
+            {"text": "Thirty minutes following the last report.", "is_correct": false},
+            {"text": "Until the next official weather sequence only.", "is_correct": false},
+            {"text": "Until local midnight.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "When a runway length has been shortened, what must preface the runway number in the ATIS message?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The word Warning must preface the runway number.",
+          "choices": [
+            {"text": "Warning.", "is_correct": true},
+            {"text": "Caution.", "is_correct": false},
+            {"text": "Notice.", "is_correct": false},
+            {"text": "Attention.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "When a FICON NOTAM indicates runway condition codes X/X/X, what statement must be included on the ATIS broadcast?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The required statement is Runway Condition Codes Missing.",
+          "choices": [
+            {"text": "Runway Condition Codes Missing.", "is_correct": true},
+            {"text": "Runway Condition Codes Unreliable.", "is_correct": false},
+            {"text": "Braking action unknown.", "is_correct": false},
+            {"text": "Runway unavailable due reporting outage.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "The ceiling or sky condition, visibility, and obstructions to vision may be omitted if the ceiling is above 5,000 feet and the visibility is more than 5 miles.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Those items may be omitted under that better-than-5,000-and-5 condition.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Complete the prescribed ATIS diversion advisory: \"Advise on initial _____ if you want to divert.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The MANPADS advisory phrase tells pilots to advise on initial contact if they want to divert.",
+          "choices": [
+            {"text": "CONTACT", "is_correct": true}
+          ]
+        }
+      ]
+    }
+  }
+}

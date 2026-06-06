@@ -1,0 +1,810 @@
+{
+  "activities": {
+    "2-6-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "What weather familiarization is required when a controller comes on duty?",
+          "choices": [
+            {"text": "Become familiar with pertinent weather information and stay aware of current and forecast weather needed for ATC duties.", "is_correct": true},
+            {"text": "Review only current METARs, because forecasts are handled by the next shift.", "is_correct": false},
+            {"text": "Wait until a pilot asks for weather before checking current conditions.", "is_correct": false},
+            {"text": "Rely on the ATIS broadcast alone and skip forecast review.", "is_correct": false}
+          ],
+          "explanation": "Controllers must come on duty already familiar with pertinent weather and remain aware of current and forecast information needed to perform ATC duties."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Controllers must become familiar with pertinent weather information when coming on duty and stay aware of current and forecast weather needed to perform ATC duties.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "That restates the requirement in 2-6-1."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which weather awareness applies throughout a controller's shift?",
+          "choices": [
+            {"text": "Stay aware of both current and forecast weather information needed for ATC duties.", "is_correct": true},
+            {"text": "Track only observed weather and ignore forecast trends until conditions deteriorate.", "is_correct": false},
+            {"text": "Track forecast weather only for departure airports, not for en route or arrival impacts.", "is_correct": false},
+            {"text": "Review weather only during formal position relief briefings.", "is_correct": false}
+          ],
+          "explanation": "The requirement covers continuing awareness of both current and forecast weather needed for ATC duties."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "You are relieving a busy tower position just as low ceilings and convective weather are moving toward the airport. The departing controller says you can catch up on the weather later once the arrival push is over.",
+          "para_context": "Controllers must become familiar with pertinent weather information when coming on duty and stay aware of current and forecast weather information needed to perform ATC duties.",
+          "choices": [
+            {"text": "Review the pertinent current and forecast weather as part of taking the position and continue monitoring it during the shift.", "is_correct": true},
+            {"text": "Take the position immediately and delay weather familiarization until a pilot requests an advisory.", "is_correct": false},
+            {"text": "Rely on the previous controller's memory of the weather instead of reviewing it yourself.", "is_correct": false},
+            {"text": "Focus only on the field observation and ignore the forecast because the forecast is not operationally required.", "is_correct": false}
+          ],
+          "explanation": "Weather familiarization is part of coming on duty, not something to postpone until traffic slows down."
+        }
+      ]
+    },
+    "2-6-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which condition is one of the listed triggers for soliciting a PIREP?",
+          "choices": [
+            {"text": "Turbulence of moderate degree or greater.", "is_correct": true},
+            {"text": "Any tailwind on final, regardless of intensity or forecast.", "is_correct": false},
+            {"text": "Visibility greater than 10 miles.", "is_correct": false},
+            {"text": "Only weather that has already been confirmed by a SIGMET.", "is_correct": false}
+          ],
+          "explanation": "Moderate or greater turbulence is one of the listed conditions for PIREP solicitation."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "A low-level wind shear PIREP with reported airspeed fluctuations of 10 knots or more must be classified as urgent.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "LLWS PIREPs with airspeed fluctuations of 10 knots or more are classified as urgent."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When a PIREP involves icing, what additional details are required with the report?",
+          "choices": [
+            {"text": "Icing type and intensity, plus the air temperature in which the icing is occurring.", "is_correct": true},
+            {"text": "Only whether the pilot wants a new altitude.", "is_correct": false},
+            {"text": "The nearest runway braking action report and altimeter setting.", "is_correct": false},
+            {"text": "The radar site that first displayed the precipitation.", "is_correct": false}
+          ],
+          "explanation": "Icing PIREPs include icing type and intensity and the air temperature in which icing is occurring."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "You want a pilot to report ride conditions between two fixes. Build the request.",
+          "target_phrase": "REQUEST RIDE CONDITIONS BETWEEN BRADFORD AND ELMIRA"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot reports the smell of sulfur gas in the cabin but confirms no volcanic ash clouds are present. Another controller wants to classify the report as urgent automatically because sulfur gas is associated with volcanic activity.",
+          "para_context": "Volcanic eruption, ash clouds, and sulfur gas detection in the cabin are generally urgent, but if the pilot reports only the smell of H2S or SO2 in the cabin and confirms no volcanic ash clouds are present, classify the report as a routine PIREP.",
+          "choices": [
+            {"text": "Classify the report as a routine PIREP.", "is_correct": true},
+            {"text": "Classify it as urgent because any sulfur-gas report is automatically urgent.", "is_correct": false},
+            {"text": "Reject the report unless the pilot also provides a volcanic ash cloud position.", "is_correct": false},
+            {"text": "Treat it as a braking action report instead of a PIREP.", "is_correct": false}
+          ],
+          "explanation": "A sulfur-gas report without ash clouds stays routine under the stated exception."
+        }
+      ]
+    },
+    "2-6-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When tower visibility and surface visibility are both available below 4 miles, which observation is used for aircraft operations?",
+          "choices": [
+            {"text": "The lower of the two observations.", "is_correct": true},
+            {"text": "The tower observation only.", "is_correct": false},
+            {"text": "The surface observation only.", "is_correct": false},
+            {"text": "The average of the two observations.", "is_correct": false}
+          ],
+          "explanation": "Below 4 miles, use the lower of the tower or surface prevailing visibility observations."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Controllers must describe the wind as calm when the wind velocity is less than three knots.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "That is the calm-wind threshold in 2-6-3."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which official weather change must be forwarded to the appropriate control facility?",
+          "choices": [
+            {"text": "A drop to less than a 1,000-foot ceiling or below the highest circling minimum, whichever is greater.", "is_correct": true},
+            {"text": "Any cloud cover change, even when visibility and ceiling remain well above thresholds.", "is_correct": false},
+            {"text": "A change in dew point alone.", "is_correct": false},
+            {"text": "A temperature change of one degree or more.", "is_correct": false}
+          ],
+          "explanation": "The reporting triggers include the listed ceiling and visibility thresholds and improvements back above them."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "The tower observes prevailing visibility drop from 5 miles to 3 miles while the surface observation remains higher. The weather observer has not yet noticed the change.",
+          "para_context": "When prevailing visibility is less than 4 miles, use the lower of the tower and surface observations, forward tower visibility observations to the weather observer, and notify the observer when tower visibility decreases to less than 4 miles or increases to 4 miles or more.",
+          "choices": [
+            {"text": "Use the lower observation for operations, forward the tower visibility to the weather observer, and notify the observer of the drop below 4 miles.", "is_correct": true},
+            {"text": "Keep using the higher surface visibility until the weather observer updates the official report.", "is_correct": false},
+            {"text": "Use the tower visibility but do not notify the weather observer unless the visibility falls below 1 mile.", "is_correct": false},
+            {"text": "Average the two observations and pass that value to aircraft.", "is_correct": false}
+          ],
+          "explanation": "All three actions are required once the tower visibility trigger is met."
+        }
+      ]
+    },
+    "2-6-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What term is used when describing satellite-derived weather to aircraft?",
+          "choices": [
+            {"text": "Weather.", "is_correct": true},
+            {"text": "Precipitation.", "is_correct": false},
+            {"text": "Turbulence.", "is_correct": false},
+            {"text": "Echo intensity.", "is_correct": false}
+          ],
+          "explanation": "Satellite-derived weather is described with the term weather, and intensity is not issued from that source."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When approving a weather deviation for an aircraft that was previously issued a crossing altitude, including climb via or descend via, the controller must assign an altitude to maintain and, if necessary, a speed, and advise the pilot if the aircraft is expected to resume the procedure.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "That is the required handling once a weather deviation takes an aircraft off a procedure with altitude restrictions."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "When forwarding weather deviation information, what must the transferring controller clearly coordinate?",
+          "choices": [
+            {"text": "The nature of the route guidance being provided, such as assigned headings, suggested headings, or pilot-initiated deviation.", "is_correct": true},
+            {"text": "Only the precipitation intensity level currently displayed on the sector scope.", "is_correct": false},
+            {"text": "Only the pilot's requested ride report, because route guidance is implied by the track.", "is_correct": false},
+            {"text": "Only the next controller's preferred route back on course.", "is_correct": false}
+          ],
+          "explanation": "The receiving controller must know whether the aircraft is on assigned headings, suggested headings, or a pilot-initiated deviation."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "Traffic prevents an immediate return to course. Build the weather-deviation approval.",
+          "target_phrase": "DEVIATION NORTH OF COURSE APPROVED ADVISE CLEAR OF WEATHER"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft on a descend-via clearance requests a weather deviation. Another controller wants to approve the deviation laterally but leave the altitude and speed untouched because the published STAR already contains restrictions.",
+          "para_context": "A vector or deviation off a SID or STAR cancels the published altitude and speed restrictions on that procedure. When approving a weather deviation for an aircraft that had previously been issued a crossing altitude, including climb via or descend via, assign an altitude to maintain and, if necessary, a speed, and advise the pilot if you intend to clear the aircraft to resume the procedure.",
+          "choices": [
+            {"text": "Approve the deviation with an altitude to maintain and, if necessary, a speed, and advise if the aircraft is expected to resume the procedure.", "is_correct": true},
+            {"text": "Approve the deviation laterally and let the aircraft continue on published STAR restrictions without any assigned altitude.", "is_correct": false},
+            {"text": "Deny the deviation unless the pilot first exits the STAR on their own.", "is_correct": false},
+            {"text": "Approve the deviation and tell the pilot to choose any altitude that avoids the weather.", "is_correct": false}
+          ],
+          "explanation": "Once the aircraft leaves the lateral path, the controller must protect altitude and speed explicitly."
+        }
+      ]
+    },
+    "2-6-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which weather information may be transmitted without consulting the weather reporting station?",
+          "choices": [
+            {"text": "General weather information that does not include specific values, and elements derived directly from instruments, pilots, or radar.", "is_correct": true},
+            {"text": "Specific ceiling and visibility values from memory, as long as they were heard earlier in the shift.", "is_correct": false},
+            {"text": "Any weather value if it helps move traffic more quickly.", "is_correct": false},
+            {"text": "Official weather observations only after the station closes for the night.", "is_correct": false}
+          ],
+          "explanation": "General weather information and direct instrument, pilot, or radar-derived elements may be transmitted without consulting the station."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Specific weather values such as ceiling and visibility may be transmitted if the information comes from an FAA-approved automation surface weather system.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "An FAA-approved automation surface weather system is one of the allowed sources for specific values."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which source may be used to transmit a specific ceiling or visibility value?",
+          "choices": [
+            {"text": "Information obtained from the official observer for the element being reported.", "is_correct": true},
+            {"text": "A tower estimate that has not been provided to or verified by the observer.", "is_correct": false},
+            {"text": "A pilot's description of how the horizon looks from downwind.", "is_correct": false},
+            {"text": "A guess based on the previous hour's ATIS.", "is_correct": false}
+          ],
+          "explanation": "Specific values require an authorized source such as the official observer or one of the other listed means."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "The tower sees visibility and ceiling values that differ from what the weather station is reporting. Another controller suggests passing the tower values directly to pilots as the new official report.",
+          "para_context": "Specific values may be transmitted only from the listed approved sources. Differences between weather elements observed from the tower and those reported by the weather station must be reported to the official observer for the element concerned.",
+          "choices": [
+            {"text": "Report the difference to the official observer for the affected weather element.", "is_correct": true},
+            {"text": "Replace the station value with the tower value immediately, because tower personnel are closest to the runway.", "is_correct": false},
+            {"text": "Suppress all weather information until both sources match exactly.", "is_correct": false},
+            {"text": "Forward the difference only to pilots and not to the official observer.", "is_correct": false}
+          ],
+          "explanation": "Observed differences are reported to the official observer rather than treated as a new official observation automatically."
+        }
+      ]
+    },
+    "2-6-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Within what distance of a controller's sector or area of jurisdiction must pilots be advised of hazardous weather that may impact operations?",
+          "choices": [
+            {"text": "Within 150 NM.", "is_correct": true},
+            {"text": "Within 50 NM.", "is_correct": false},
+            {"text": "Within 100 NM.", "is_correct": false},
+            {"text": "Within 200 NM.", "is_correct": false}
+          ],
+          "explanation": "The paragraph requires hazardous inflight weather advisories for hazards that may impact operations within 150 NM."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Upon receipt of hazardous weather information, controllers must broadcast a hazardous inflight weather advisory on all frequencies except the emergency frequency.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "That is the required dissemination rule in 2-6-6a."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Under what condition is a tower cab or approach control facility authorized to limit hazardous weather information broadcasts to events within 50 NM?",
+          "choices": [
+            {"text": "When any part of the described hazardous weather area is within 50 NM of the airspace under that facility's jurisdiction.", "is_correct": true},
+            {"text": "Whenever the weather is routine rather than convective.", "is_correct": false},
+            {"text": "Only when the advisory is a SIGMET and never for a CWA or UUA.", "is_correct": false},
+            {"text": "Only when pilots specifically request fewer broadcasts.", "is_correct": false}
+          ],
+          "explanation": "Terminal facilities may choose the 50 NM limitation only under that stated condition."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "You are broadcasting a hazardous inflight weather advisory for SIGMET Two for severe turbulence within central Kansas. Build the advisory.",
+          "target_phrase": "ATTENTION ALL AIRCRAFT HAZARDOUS WEATHER INFORMATION SIGMET TWO FOR SEVERE TURBULENCE WITHIN CENTRAL KANSAS AVAILABLE ON FLIGHT SERVICE FREQUENCIES"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "After you broadcast a hazardous weather advisory, a pilot asks for more detail than you can provide over the frequency.",
+          "para_context": "Controllers must broadcast the hazardous weather advisory and direct pilots requesting additional information to contact the nearest Flight Service.",
+          "choices": [
+            {"text": "Direct the pilot to contact the nearest Flight Service for additional information.", "is_correct": true},
+            {"text": "Tell the pilot to wait until landing because additional hazardous weather details may not be given on frequency.", "is_correct": false},
+            {"text": "Refer the pilot only to another aircraft on frequency that reported the hazard.", "is_correct": false},
+            {"text": "Cancel the advisory so the pilot can make an independent decision without ATC input.", "is_correct": false}
+          ],
+          "explanation": "Additional hazardous weather information requests are directed to Flight Service."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "2-6-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must controllers become familiar with pertinent weather information?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Controllers must become familiar with pertinent weather information when coming on duty.",
+          "choices": [
+            {"text": "When coming on duty.", "is_correct": true},
+            {"text": "Only after the first pilot requests a weather advisory.", "is_correct": false},
+            {"text": "Only when weather drops below IFR minimums.", "is_correct": false},
+            {"text": "Only at the start of the midnight shift.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Controllers must stay aware of current and forecast weather information needed to perform ATC duties.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The requirement includes ongoing awareness of both current and forecast weather needed for ATC duties.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Why does 2-6-1 require continuing weather awareness after a controller comes on duty?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The paragraph ties weather awareness directly to the controller's ability to perform ATC duties.",
+          "choices": [
+            {"text": "Because current and forecast weather information is needed to perform ATC duties.", "is_correct": true},
+            {"text": "Because only supervisors are allowed to issue weather information after the initial briefing.", "is_correct": false},
+            {"text": "Because pilots are expected to rely on controllers rather than on any weather products.", "is_correct": false},
+            {"text": "Because forecasts replace observed weather once a shift begins.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "According to the note under 2-6-1, weather has the potential to impact which phase of flight?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The note says every phase of flight has the potential to be impacted by weather.",
+          "choices": [
+            {"text": "Every phase of flight.", "is_correct": true},
+            {"text": "Only approach and landing.", "is_correct": false},
+            {"text": "Only climb and cruise.", "is_correct": false},
+            {"text": "Only operations below 10,000 feet.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-6-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Which condition is one of the listed triggers for soliciting a PIREP?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The solicitation list includes ceilings at or below 5,000 feet, low visibility, thunderstorms, turbulence, icing, wind shear, poor braking action, volcanic ash, sulfur gases, and other pertinent hazards.",
+          "choices": [
+            {"text": "Icing of light degree or greater.", "is_correct": true},
+            {"text": "Any broken cloud layer above 12,000 feet.", "is_correct": false},
+            {"text": "Only conditions already contained in a SIGMET.", "is_correct": false},
+            {"text": "Any time the altimeter changes by 0.01.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Approach control services must ensure at least one descent or climb-out PIREP is obtained each hour when ceilings at or below 5,000 feet exist or are forecast.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "That hourly descent or climb-out PIREP requirement applies in the listed ceiling condition when providing approach control services.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "A low-level wind shear PIREP with reported airspeed fluctuations of 10 knots or more is classified as what type of PIREP?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "LLWS with airspeed fluctuations of 10 knots or more is classified as urgent.",
+          "choices": [
+            {"text": "Urgent.", "is_correct": true},
+            {"text": "Routine.", "is_correct": false},
+            {"text": "Administrative only.", "is_correct": false},
+            {"text": "Unusable unless verified by another aircraft.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "If a pilot reports only the smell of sulfur gas in the cabin and confirms no volcanic ash clouds are present, how is the PIREP classified?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "That narrow sulfur-gas-only case is classified as a routine PIREP.",
+          "choices": [
+            {"text": "Routine.", "is_correct": true},
+            {"text": "Urgent.", "is_correct": false},
+            {"text": "It is not a PIREP and should be discarded.", "is_correct": false},
+            {"text": "A braking action report.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Complete the PIREP solicitation phraseology: \"REQUEST _____ CONDITIONS ALONG PRESENT ROUTE.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The phraseology permits REQUEST FLIGHT CONDITIONS or REQUEST specific conditions such as ride conditions.",
+          "choices": [
+            {"text": "FLIGHT", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "When a PIREP involves turbulence, which additional details must be recorded?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Turbulence PIREPs include duration and intensity.",
+          "choices": [
+            {"text": "Duration and intensity.", "is_correct": true},
+            {"text": "Runway length and surface temperature.", "is_correct": false},
+            {"text": "Only whether the pilot accepted a vector around the area.", "is_correct": false},
+            {"text": "Only the nearest weather observer's comments.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "En route facilities must relay all operationally significant PIREPs to the facility weather coordinator.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "That is the en route dissemination requirement.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-6-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When prevailing visibility is less than 4 miles and both tower and surface observations are available, which value is used for aircraft operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Use the lower of the tower or surface prevailing visibility observations.",
+          "choices": [
+            {"text": "The lower observation.", "is_correct": true},
+            {"text": "The higher observation.", "is_correct": false},
+            {"text": "The tower observation only.", "is_correct": false},
+            {"text": "The average of the two.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Wind velocity less than three knots is described as calm.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "That is the calm-wind rule in 2-6-3.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Which weather change must be forwarded to the appropriate control facility?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "A drop below the listed ceiling or visibility thresholds, or an improvement back above them, triggers reporting.",
+          "choices": [
+            {"text": "Visibility becoming less than 3 miles.", "is_correct": true},
+            {"text": "A one-degree temperature change.", "is_correct": false},
+            {"text": "A wind shift from 090 to 120 degrees with good visibility and high ceilings.", "is_correct": false},
+            {"text": "A sky condition change from scattered to broken above 10,000 feet.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Towers at airports where military turbo-jet en route descents are routinely conducted must report the conditions to the ARTCC even if it is not the controlling facility.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "That special reporting rule applies to those towers.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "If the receiving facility informs you that weather reports are not required for a specific time period, what should you do?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The reports are discontinued for that specific time period.",
+          "choices": [
+            {"text": "Discontinue the reports for that time period.", "is_correct": true},
+            {"text": "Continue the reports until the weather improves above all thresholds.", "is_correct": false},
+            {"text": "Continue the reports but reduce them to every other observation.", "is_correct": false},
+            {"text": "Transfer responsibility to the next facility without changing anything.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-6-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What term is used when describing satellite-derived weather to aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Satellite-derived weather is described with the term weather, not precipitation intensity.",
+          "choices": [
+            {"text": "Weather.", "is_correct": true},
+            {"text": "Precipitation.", "is_correct": false},
+            {"text": "Turbulence.", "is_correct": false},
+            {"text": "Extreme returns.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "When describing radar-derived weather, what term is used instead of weather?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Radar-derived weather is described with the term precipitation.",
+          "choices": [
+            {"text": "Precipitation.", "is_correct": true},
+            {"text": "Weather.", "is_correct": false},
+            {"text": "Turbulence.", "is_correct": false},
+            {"text": "Radar area.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "When precipitation intensity information is not available, complete the phraseology: \"AREA IS THREE ZERO MILES IN DIAMETER, INTENSITY _____.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The prescribed phraseology ends with intensity unknown.",
+          "choices": [
+            {"text": "UNKNOWN", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "In STARS terminal precipitation descriptors, Levels 3 and 4 correspond to what intensity?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "In STARS, Levels 3 and 4 correspond to heavy precipitation.",
+          "choices": [
+            {"text": "Heavy.", "is_correct": true},
+            {"text": "Moderate.", "is_correct": false},
+            {"text": "Extreme.", "is_correct": false},
+            {"text": "Light.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "After approving a weather deviation for an aircraft that had previously been issued a crossing altitude, including climb via or descend via, what must the controller issue?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "The controller must issue an altitude to maintain and, if necessary, a speed, and advise if the aircraft is expected to resume the procedure.",
+          "choices": [
+            {"text": "An altitude to maintain and, if necessary, a speed.", "is_correct": true},
+            {"text": "Only a lateral limit, because the published procedure keeps the altitude and speed active.", "is_correct": false},
+            {"text": "Only a time restriction to report clear of weather.", "is_correct": false},
+            {"text": "No further instructions if the pilot requested the deviation.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "In en route fourth-line weather-deviation coordination, what does /F indicate?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "The /F indicates the pilot has been authorized to deviate and rejoin the route of flight at the next NAVAID or waypoint in the flight plan.",
+          "choices": [
+            {"text": "The pilot may rejoin the route at the next NAVAID or waypoint in the flight plan.", "is_correct": true},
+            {"text": "The aircraft is free of all altitude restrictions until landing.", "is_correct": false},
+            {"text": "The receiving controller must vector the aircraft immediately off course.", "is_correct": false},
+            {"text": "The weather intensity was furnished verbally rather than electronically.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "If traffic or airspace prevents you from clearing the aircraft on course at the time of weather-deviation approval, what instruction should be included?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "When you cannot clear the aircraft back on course immediately, the phraseology includes advise clear of weather.",
+          "choices": [
+            {"text": "Advise clear of weather.", "is_correct": true},
+            {"text": "Resume own navigation when ready.", "is_correct": false},
+            {"text": "Cancel IFR if unable.", "is_correct": false},
+            {"text": "Stand by for SIGMET number.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-6-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Which weather information may be transmitted without consulting the weather reporting station?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "General weather information without specific values, and direct instrument, pilot, or radar-derived elements, may be transmitted without consulting the station.",
+          "choices": [
+            {"text": "General weather information that does not include specific values.", "is_correct": true},
+            {"text": "Specific ceiling values recalled from an earlier observation.", "is_correct": false},
+            {"text": "Any visibility value estimated from the tower cab.", "is_correct": false},
+            {"text": "Any weather element as long as it sounds conservative.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Specific ceiling and visibility values may be transmitted if obtained from an FAA-approved automation surface weather system.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "That is one of the approved means for specific values.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Which source authorizes you to transmit a specific visibility value?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Specific values may be transmitted when obtained from one of the listed authorized sources, including the official observer.",
+          "choices": [
+            {"text": "The official observer for the element being reported.", "is_correct": true},
+            {"text": "An unofficial estimate from a pilot in the pattern.", "is_correct": false},
+            {"text": "A memory of the previous ATIS.", "is_correct": false},
+            {"text": "A guess based on the horizon from the tower cab.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "What must be done when tower-observed weather elements differ from those reported by the weather station?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Those differences are reported to the official observer for the element concerned.",
+          "choices": [
+            {"text": "Report the differences to the official observer for the element concerned.", "is_correct": true},
+            {"text": "Use the tower-observed value as the new official report without coordination.", "is_correct": false},
+            {"text": "Suppress all weather information until the values match.", "is_correct": false},
+            {"text": "Pass the difference only to pilots and not to the observer.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-6-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Within what distance of a controller's sector or area of jurisdiction must pilots be advised of hazardous weather that may impact operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The advisory requirement applies within 150 NM of the sector or area of jurisdiction.",
+          "choices": [
+            {"text": "150 NM.", "is_correct": true},
+            {"text": "50 NM.", "is_correct": false},
+            {"text": "100 NM.", "is_correct": false},
+            {"text": "200 NM.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Controllers must broadcast a hazardous inflight weather advisory on all frequencies except the emergency frequency upon receipt of hazardous weather information.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "That is the required broadcast rule in 2-6-6a.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Complete the hazardous weather advisory phraseology: \"ATTENTION ALL AIRCRAFT. HAZARDOUS WEATHER INFORMATION (advisory) FOR (specific weather phenomenon) WITHIN (geographical area), AVAILABLE ON _____ FREQUENCIES.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The phraseology ends with available on Flight Service frequencies.",
+          "choices": [
+            {"text": "FLIGHT SERVICE", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "When may a tower cab or approach control facility limit hazardous weather broadcasts to events within 50 NM?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Terminal facilities may choose that limitation when any part of the described area is within 50 NM of the airspace under their jurisdiction.",
+          "choices": [
+            {"text": "When any part of the described area is within 50 NM of the airspace under the facility's jurisdiction.", "is_correct": true},
+            {"text": "Whenever the weather is reported as moderate rather than severe.", "is_correct": false},
+            {"text": "Only when the advisory is a Convective SIGMET.", "is_correct": false},
+            {"text": "Only when aircraft request a narrower advisory area.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "If a pilot requests additional hazardous weather information after the advisory is broadcast, where should the pilot be directed?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Pilots requesting additional information are directed to contact the nearest Flight Service.",
+          "choices": [
+            {"text": "The nearest Flight Service.", "is_correct": true},
+            {"text": "Only the previous aircraft that filed the UUA.", "is_correct": false},
+            {"text": "The emergency frequency.", "is_correct": false},
+            {"text": "The local weather observer, directly on the tower frequency.", "is_correct": false}
+          ]
+        }
+      ]
+    }
+  }
+}

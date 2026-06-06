@@ -1,0 +1,1230 @@
+{
+  "activities": {
+    "3-4-3": {
+      "replace_types": ["conditional_rule_check", "reference_check", "requirement_check", "scope_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this VASI statement match the paragraph?",
+          "question_text": "Controllers must operate VASI systems with remote on-off switching when they serve the runway in use and intensities are controlled in accordance with Tables 3-4-2 and 3-4-3, except as required by facility directives to meet local conditions or by the pilot.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That requirement and its listed exceptions appear in 3-4-3."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use Table 3-4-3 to answer this question.",
+          "question_text": "Under the three-step VASI intensity table, which setting applies during twilight?",
+          "choices": [
+            {
+              "text": "Medium.",
+              "is_correct": true
+            },
+            {
+              "text": "High.",
+              "is_correct": false
+            },
+            {
+              "text": "Low.",
+              "is_correct": false
+            },
+            {
+              "text": "On pilot request only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-3 shows the medium setting for twilight."
+        },
+        {
+          "activity_type": "reference_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this citation match the paragraph's reference?",
+          "question_text": "This paragraph cites FAA Order JO 7210.3, Para 10-6-5, Visual Approach Slope Indicator (VASI) Systems.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That JO reference appears in 3-4-3. The paragraph also cites FAA Order 6850.2."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A remote-switched VASI serves the runway in use, and the controller is about to leave it off even though intensities can be set in accordance with the VASI tables and no local directive or pilot request calls for something different.",
+          "para_context": "Under 3-4-3, VASI systems with remote on-off switching must be operated when they serve the runway in use and intensities are controlled in accordance with Tables 3-4-2 and 3-4-3, except as required by facility directives or the pilot.",
+          "choices": [
+            {
+              "text": "Operate the VASI for the runway in use.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave the VASI off because remote-switched VASI operation is optional.",
+              "is_correct": false
+            },
+            {
+              "text": "Operate the VASI only if twilight is in progress.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the VASI on only after the aircraft crosses the threshold.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-3, remote-switched VASI serving the runway in use must be operated unless a listed exception applies."
+        }
+      ]
+    },
+    "3-4-4": {
+      "replace_types": ["conditional_rule_check", "requirement_check", "scope_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this PAPI statement match the paragraph?",
+          "question_text": "Controllers must operate PAPI systems with remote on-off switching when they serve the runway in use and intensities are controlled in accordance with Table 3-4-4, except as required by local facility directives or as requested by the pilot.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That requirement and its exceptions appear in 3-4-4."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use Table 3-4-4 to answer this question.",
+          "question_text": "Under the five-step PAPI table, which step applies at night from sunset to sunrise?",
+          "choices": [
+            {
+              "text": "Step 3.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 1.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-4 shows step 3 for night operation."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which item is one of the listed exceptions in this paragraph?",
+          "question_text": "Under 3-4-4, which item is one stated exception to operating PAPI in accordance with Table 3-4-4?",
+          "choices": [
+            {
+              "text": "As requested by the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever RVR is unavailable.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the approach controller approves the setting.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when twilight is in progress.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-4b, operation may vary as requested by the pilot."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A remote-switched PAPI serves the runway in use. Table 3-4-4 supports the needed setting, and there is no local directive requiring something different, but the pilot specifically requests a different intensity.",
+          "para_context": "Under 3-4-4, PAPI systems with remote on-off switching are operated in accordance with Table 3-4-4, except as required by local facility directives or as requested by the pilot.",
+          "choices": [
+            {
+              "text": "Honor the pilot's requested exception.",
+              "is_correct": true
+            },
+            {
+              "text": "Ignore the request because the table never permits exceptions.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the PAPI off because only photoelectric control is authorized.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the day setting only, regardless of time or request.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-4b, pilot request is one of the listed exceptions."
+        }
+      ]
+    },
+    "3-4-14": {
+      "replace_types": ["list_membership", "reference_check", "table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use Table 3-4-10 to answer this question.",
+          "question_text": "Under the MIRL intensity table, which step applies at night when visibility is more than 3 miles?",
+          "choices": [
+            {
+              "text": "Step 1.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "When requested only, with no assigned step.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-10 shows step 1 at night when visibility is more than 3 miles."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which item is one of the listed MIRL exceptions?",
+          "question_text": "Under 3-4-14, which item is one stated exception to operating MIRL in accordance with Table 3-4-10?",
+          "choices": [
+            {
+              "text": "As requested by the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the tower is closed.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever taxiway lights are on.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for military aircraft.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-14a, pilot request is one listed exception."
+        },
+        {
+          "activity_type": "reference_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this citation match the paragraph's reference?",
+          "question_text": "This paragraph cites FAA Order JO 7110.65, Para 3-4-12, HIRL Associated With MALSR.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That reference appears in 3-4-14."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "Night visibility is 4 miles. A pilot asks for brighter MIRL than the normal table setting, and another controller says pilot request does not matter because the table is mandatory in every case.",
+          "para_context": "Under 3-4-14, MIRL are operated in accordance with Table 3-4-10 except as requested by the pilot or as you deem necessary if not contrary to the pilot's request.",
+          "choices": [
+            {
+              "text": "Adjust the MIRL in response to the pilot request because it is a listed exception.",
+              "is_correct": true
+            },
+            {
+              "text": "Refuse any change because the table has no exceptions.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn MIRL off because night visibility is more than 3 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the day visibility column instead of the night column.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-14, pilot request is one of the listed exceptions to the MIRL table."
+        }
+      ]
+    },
+    "3-4-15": {
+      "replace_types": ["list_membership", "scope_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this high-speed turnoff light statement match the paragraph?",
+          "question_text": "Controllers must operate high speed turnoff lights whenever the associated runway lights are used for arriving aircraft, and leave them on until the aircraft has either entered a taxiway or passed the last light.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That requirement appears in 3-4-15a."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which item is one of the listed provisions in this paragraph?",
+          "question_text": "Under 3-4-15, which item is specifically listed for high speed turnoff lights?",
+          "choices": [
+            {
+              "text": "As requested by the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when taxiway centerline lights are unavailable.",
+              "is_correct": false
+            },
+            {
+              "text": "Only between sunset and sunrise.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft exits the movement area.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-15c, pilot request is specifically listed."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "An arriving aircraft is still rolling past the final high speed turnoff light. Another controller wants the high speed turnoff lights extinguished immediately because the aircraft is already off the runway centerline.",
+          "para_context": "Under 3-4-15, high speed turnoff lights are operated whenever associated runway lights are used for arriving aircraft and remain on until the aircraft has either entered a taxiway or passed the last light.",
+          "choices": [
+            {
+              "text": "Leave the turnoff lights on until the aircraft enters a taxiway or passes the last light.",
+              "is_correct": true
+            },
+            {
+              "text": "Turn them off as soon as the aircraft crosses the runway edge line.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn them off unless the pilot specifically asks to keep them on.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave them off because arriving aircraft do not use them.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-15a, the lights remain on until the aircraft enters a taxiway or passes the last light."
+        }
+      ]
+    },
+    "3-4-16": {
+      "replace_types": ["list_membership", "table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use Table 3-4-11 to answer this question.",
+          "question_text": "Under the three-step taxiway light table, which step applies at night when visibility is less than 1 mile?",
+          "choices": [
+            {
+              "text": "Step 2.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 1.",
+              "is_correct": false
+            },
+            {
+              "text": "On only, with no numbered step.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-11 shows step 2 at night when visibility is less than 1 mile."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which item is one of the listed taxiway-light exceptions?",
+          "question_text": "Under 3-4-16, which item is one stated exception to the taxiway light tables?",
+          "choices": [
+            {
+              "text": "As requested by the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when runway edge lights are on step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the airport beacon is on.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for taxiing military aircraft.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-16b, pilot request is one of the listed exceptions."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "Night visibility is less than 1 mile and the airport uses the three-step taxiway light table. A pilot asks for a brighter taxiway light setting than normal, and another controller insists the tables allow no exceptions.",
+          "para_context": "Under 3-4-16, taxiway lights are operated in accordance with the applicable tables, except where a facility directive specifies other settings or times, as requested by the pilot, or as you deem necessary if not contrary to pilot request.",
+          "choices": [
+            {
+              "text": "Treat the pilot request as a listed exception and adjust accordingly.",
+              "is_correct": true
+            },
+            {
+              "text": "Refuse any change because the taxiway light tables never allow exceptions.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the one-step table even if the airport uses a three-step system.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the taxiway lights off because visibility is below 1 mile.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-16, pilot request is one of the listed exceptions to the taxiway light tables."
+        }
+      ]
+    },
+    "3-4-17": {
+      "replace_types": ["conditional_rule_check", "requirement_check"],
+      "items": [
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this obstruction-light directive stated correctly?",
+          "question_text": "If controls are provided, turn the obstruction lights on between sunset and sunrise.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the full requirement in 3-4-17."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "What should you do?",
+          "situation": "Sunset has occurred and obstruction-light controls are available. A trainee suggests waiting until full darkness before turning the lights on.",
+          "para_context": "Under 3-4-17, if controls are provided, the obstruction lights are turned on between sunset and sunrise.",
+          "choices": [
+            {
+              "text": "Turn the obstruction lights on now.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the end of civil twilight before turning them on.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave them off unless a pilot reports low visibility.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn them on only during daylight VFR operations.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-17, the operative period is between sunset and sunrise if controls are provided."
+        }
+      ]
+    },
+    "3-4-18": {
+      "replace_types": ["conditional_rule_check", "list_membership", "minima_rule_check", "requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this rotating-beacon rule match the paragraph?",
+          "question_text": "If controls are provided, turn the rotating beacon on between sunset and sunrise.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That requirement appears in 3-4-18a."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which daytime condition is one of the listed rotating-beacon triggers?",
+          "question_text": "Under 3-4-18, which daytime condition requires the rotating beacon to be on if controls are provided?",
+          "choices": [
+            {
+              "text": "The reported ceiling or visibility is below basic VFR minima.",
+              "is_correct": true
+            },
+            {
+              "text": "The runway lights are set above step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot requests REIL.",
+              "is_correct": false
+            },
+            {
+              "text": "A PAR controller has the ASR out of service.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-18b, the beacon is turned on between sunrise and sunset when reported ceiling or visibility is below basic VFR minima."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "It is daytime, and the reported visibility drops below basic VFR minima. Rotating beacon controls are available, but another controller says the beacon is a night-only light and should stay off until sunset.",
+          "para_context": "Under 3-4-18, if controls are provided, the rotating beacon is turned on between sunset and sunrise and also between sunrise and sunset when the reported ceiling or visibility is below basic VFR minima.",
+          "choices": [
+            {
+              "text": "Turn the rotating beacon on now.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until sunset because daytime low-VFR conditions do not matter.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave the beacon off unless a pilot specifically requests it.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the beacon on only if the runway is closed.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-4-18b, the beacon is turned on during daytime when reported ceiling or visibility is below basic VFR minima."
+        }
+      ]
+    },
+    "5-12-2": {
+      "replace_types": ["directive_check", "requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this DH-notification directive stated correctly?",
+          "question_text": "Provide the decision height to any pilot who requests it.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the full requirement in 5-12-2."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "What should you do?",
+          "situation": "A pilot requests the decision height during a PAR approach briefing. Another controller says the pilot should already know it and that controllers do not provide it on request.",
+          "para_context": "Under 5-12-2, provide the decision height to any pilot who requests it.",
+          "choices": [
+            {
+              "text": "Provide the decision height.",
+              "is_correct": true
+            },
+            {
+              "text": "Refuse to provide it because controllers never issue decision height on request.",
+              "is_correct": false
+            },
+            {
+              "text": "Provide it only after touchdown.",
+              "is_correct": false
+            },
+            {
+              "text": "Provide only the missed approach instructions instead.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-12-2, the DH is provided to any pilot who requests it."
+        }
+      ]
+    },
+    "5-12-5": {
+      "replace_types": ["directive_check", "requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this distance-from-touchdown directive stated correctly?",
+          "question_text": "Inform the aircraft of its distance from touchdown at least once each mile on final approach.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the full requirement in 5-12-5."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is continuing inbound on final during a PAR approach. Another controller suggests skipping one of the mileage calls because one earlier call should be enough until threshold.",
+          "para_context": "Under 5-12-5, the aircraft is informed of its distance from touchdown at least once each mile on final approach.",
+          "choices": [
+            {
+              "text": "Continue giving the aircraft its distance from touchdown at least once each mile.",
+              "is_correct": true
+            },
+            {
+              "text": "Omit the next mileage advisory because one call per approach is sufficient.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until decision height to give the next distance call.",
+              "is_correct": false
+            },
+            {
+              "text": "Stop mileage calls once the aircraft reports the runway in sight.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-12-5, the aircraft receives distance-from-touchdown information at least once each mile on final approach."
+        }
+      ]
+    },
+    "5-12-6": {
+      "replace_types": ["directive_check", "requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this decision-height directive stated correctly?",
+          "question_text": "Inform the aircraft when it reaches the published decision height.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the full requirement in 5-12-6."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "What should you do?",
+          "situation": "A PAR aircraft reaches the published decision height. A trainee thinks the decision-height call can be skipped because the pilot already received glidepath information on the way down.",
+          "para_context": "Under 5-12-6, the aircraft is informed when it reaches the published decision height.",
+          "choices": [
+            {
+              "text": "Inform the aircraft that it is at decision height now.",
+              "is_correct": true
+            },
+            {
+              "text": "Skip the call because earlier glidepath information replaces it.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until after the aircraft crosses the threshold to make the call.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue only the communication transfer instruction instead.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-12-6, the aircraft is informed when it reaches published decision height."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-4-3": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under Table 3-4-2, which VASI setting applies during the day from sunrise to sunset?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-2 shows the high setting during the day from sunrise to sunset.",
+          "choices": [
+            {
+              "text": "High.",
+              "is_correct": true
+            },
+            {
+              "text": "Low.",
+              "is_correct": false
+            },
+            {
+              "text": "Medium.",
+              "is_correct": false
+            },
+            {
+              "text": "On pilot request only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-4-3, VASI systems with remote on-off switching must be operated when they serve the runway in use and intensities are controlled in accordance with Tables 3-4-2 and 3-4-3, except as required by facility directives to meet local conditions or by the pilot.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in the body of 3-4-3.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-4": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under Table 3-4-4, which PAPI step applies during the day from sunrise to sunset?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-4 shows step 4 during the day.",
+          "choices": [
+            {
+              "text": "Step 4.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-4-4, PAPI systems with remote on-off switching must be operated when they serve the runway in use and intensities are controlled in accordance with Table 3-4-4, except as required by local facility directives or as requested by the pilot.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in the body of 3-4-4.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-14": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under Table 3-4-10, which MIRL step applies during the day when visibility is 2 to 3 miles?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-10 shows step 2 during the day when visibility is 2 to 3 miles.",
+          "choices": [
+            {
+              "text": "Step 2.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 1.",
+              "is_correct": false
+            },
+            {
+              "text": "On pilot request only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-4-14, MIRL may be operated as you deem necessary if not contrary to the pilot's request.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That exception appears in 3-4-14b.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-15": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 3-4-15, how long are high speed turnoff lights left on for arriving aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-4-15a, the lights remain on until the aircraft has either entered a taxiway or passed the last light.",
+          "choices": [
+            {
+              "text": "Until the aircraft has either entered a taxiway or passed the last light.",
+              "is_correct": true
+            },
+            {
+              "text": "Only until the aircraft touches down.",
+              "is_correct": false
+            },
+            {
+              "text": "Until the aircraft reaches the terminal ramp.",
+              "is_correct": false
+            },
+            {
+              "text": "Only until the pilot reports clear of the runway.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-4-15, high speed turnoff lights are operated whenever the associated runway lights are used for arriving aircraft.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 3-4-15a.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-16": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under Table 3-4-13, when are one-step taxiway lights on at night?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-13 shows one-step taxiway lights on at night.",
+          "choices": [
+            {
+              "text": "On.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when requested.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when visibility is less than 1 mile.",
+              "is_correct": false
+            },
+            {
+              "text": "Off unless a facility directive says otherwise.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-4-16, a facility directive may specify other taxiway light settings or times to meet local conditions.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That exception appears in 3-4-16a.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-17": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 3-4-17, when are obstruction lights turned on if controls are provided?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph states that if controls are provided, the lights are turned on between sunset and sunrise.",
+          "choices": [
+            {
+              "text": "Between sunset and sunrise.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when visibility is below basic VFR minima.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the runway lights are turned on.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the tower is closed.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-4-17, if controls are provided, obstruction lights are turned on between sunset and sunrise.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is the full statement in 3-4-17.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-18": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 3-4-18, when must the rotating beacon be turned on during daytime if controls are provided?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-4-18b, it is turned on between sunrise and sunset when the reported ceiling or visibility is below basic VFR minima.",
+          "choices": [
+            {
+              "text": "When the reported ceiling or visibility is below basic VFR minima.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever runway edge lights are on.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot requests it.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after sunset.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-4-18, if controls are provided, the rotating beacon is turned on between sunset and sunrise.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 3-4-18a.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-12-2": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-12-2, to whom is the decision height provided?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph says decision height is provided to any pilot who requests it.",
+          "choices": [
+            {
+              "text": "Any pilot who requests it.",
+              "is_correct": true
+            },
+            {
+              "text": "Only military pilots.",
+              "is_correct": false
+            },
+            {
+              "text": "Only pilots on missed approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Only pilots who report low visibility.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The phraseology for 5-12-2 is DECISION HEIGHT (number of feet).",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "That phraseology appears in 5-12-2.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-12-5": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-12-5, how often is the aircraft informed of its distance from touchdown on final approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph requires at least one distance-from-touchdown advisory each mile on final approach.",
+          "choices": [
+            {
+              "text": "At least once each mile.",
+              "is_correct": true
+            },
+            {
+              "text": "Only once per approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft passes the threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot requests it.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The phraseology for 5-12-5 is (Number of miles) MILES FROM TOUCHDOWN.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "That phraseology appears in 5-12-5.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-12-6": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-12-6, when is the aircraft informed that it has reached decision height?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph says the aircraft is informed when it reaches the published decision height.",
+          "choices": [
+            {
+              "text": "When it reaches the published decision height.",
+              "is_correct": true
+            },
+            {
+              "text": "When it begins final descent.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after touchdown.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the pilot requests the call.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The phraseology for 5-12-6 is AT DECISION HEIGHT.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "That phraseology appears in 5-12-6.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

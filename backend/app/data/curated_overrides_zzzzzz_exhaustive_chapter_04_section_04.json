@@ -1,0 +1,1496 @@
+{
+  "activities": {
+    "4-4-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What principle governs route assignment here?",
+          "choices": [
+            {
+              "text": "Clear aircraft via routes consistent with the altitude stratum in which the operation will be conducted.",
+              "is_correct": true
+            },
+            {
+              "text": "Always use the shortest available route regardless of altitude stratum.",
+              "is_correct": false
+            },
+            {
+              "text": "Keep every aircraft on published airways and never use random RNAV routing.",
+              "is_correct": false
+            },
+            {
+              "text": "Base the route solely on the pilot's requested altitude, regardless of route structure.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-4-1 ties route assignment to the altitude stratum in which the operation will be conducted."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this random-RNAV requirement correct?",
+          "question_text": "You must clear or report a GNSS-equipped RNAV aircraft that is not being radar monitored as established on a point-to-point route.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When not being radar monitored, GNSS-equipped RNAV aircraft on random RNAV routes must be cleared via or reported to be established on a point-to-point route."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this random-RNAV distance limit correct?",
+          "question_text": "When applying nonradar separation on a random RNAV route, the maximum distance between points must not exceed 500 miles.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For nonradar separation on random RNAV routes, the maximum distance between defining points is 500 miles."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which point set is acceptable for a nonradar random RNAV route?",
+          "question_text": "Which point selection is correct?",
+          "choices": [
+            {
+              "text": "Published fixes that are recallable from the aircraft navigation database and shown on the controller display or chart.",
+              "is_correct": true
+            },
+            {
+              "text": "Any landmarks the pilot can describe verbally, even if they are not in the navigation database.",
+              "is_correct": false
+            },
+            {
+              "text": "Any unpublished user-created points that only the pilot can view in the FMS.",
+              "is_correct": false
+            },
+            {
+              "text": "Any NAVAID names, regardless of whether they are authorized for the route segment or visible to the controller.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The defining points must be published NAVAIDs, waypoints, fixes, or airports that are recallable from the aircraft navigation database and displayed on controller maps or charts."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "After SUNOL, the aircraft should proceed direct PYE. Build the point-to-point route segment.",
+          "target_phrase": "AFTER SUNOL PROCEED DIRECT PYE"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A GNSS-equipped RNAV aircraft is not being radar monitored. A controller proposes clearing it direct between two unpublished user points that are not shown on the controller display because the pilot says they are stored in the aircraft's database.",
+          "para_context": "When not being radar monitored, GNSS-equipped RNAV aircraft on random RNAV routes must be on a point-to-point route between published points that are recallable from the aircraft navigation database and displayed on controller video maps or charts.",
+          "choices": [
+            {
+              "text": "Use published points that are in the aircraft database and displayed to the controller instead of the unpublished user points.",
+              "is_correct": true
+            },
+            {
+              "text": "Allow the unpublished user points because the pilot can see them in the FMS.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the unpublished points only if the distance between them is under 500 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve the user-point route and waive display requirements because the aircraft is RNAV-equipped.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The nonradar random RNAV route must use published, recallable points displayed on controller maps or charts."
+        }
+      ]
+    },
+    "4-4-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What additional service is required when RNAV aircraft transition between designated or established ATS routes via random RNAV routes?",
+          "choices": [
+            {
+              "text": "Provide radar monitoring during the random RNAV transition.",
+              "is_correct": true
+            },
+            {
+              "text": "Suspend altitude assignments until the aircraft rejoins a published route.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the pilot to navigate by raw data only until established.",
+              "is_correct": false
+            },
+            {
+              "text": "Convert the flight to nonradar handling during the transition.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-4-2 requires radar monitoring when RNAV aircraft transition between ATS routes via random RNAV routes."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which method is one of the approved route-structure transition methods?",
+          "question_text": "Which method is correct?",
+          "choices": [
+            {
+              "text": "Assign a SID or STAR.",
+              "is_correct": true
+            },
+            {
+              "text": "Suspend the ATS route and tell the pilot to navigate by visual landmarks.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the pilot to cancel IFR before changing route structures.",
+              "is_correct": false
+            },
+            {
+              "text": "Transition only by vectors and never by direct routing between NAVAIDs.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Assigning a SID or STAR is one of the approved route-structure transition methods."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this transition requirement correct?",
+          "question_text": "You must provide radar monitoring to RNAV aircraft transitioning between designated or established ATS routes via random RNAV routes to a NAVAID, waypoint, airport, or fix on the new route.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph explicitly requires radar monitoring for that RNAV transition method."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An RNAV aircraft will transition from one established ATS route to another via a random RNAV segment to a waypoint on the new route. Another controller says no radar monitoring is needed because both endpoints are on published structures.",
+          "para_context": "RNAV aircraft transitioning between designated or established ATS routes via random RNAV routes must be provided radar monitoring.",
+          "choices": [
+            {
+              "text": "Provide radar monitoring during the random RNAV transition.",
+              "is_correct": true
+            },
+            {
+              "text": "Omit radar monitoring because both endpoints are on published ATS routes.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the aircraft to cancel RNAV capability for the transition segment.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the route transition until the aircraft can be vectored to every intermediate point.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Published endpoints do not remove the radar-monitoring requirement for the random RNAV transition segment."
+        }
+      ]
+    },
+    "4-4-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Below FL180, what is the maximum distance allowed between degree-distance fixes used to define a military route segment?",
+          "choices": [
+            {
+              "text": "80 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "120 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "180 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "260 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Below FL180, the distance between degree-distance fixes must not exceed 80 miles."
+        },
+        {
+          "activity_type": "sequence_steps",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Put the components of a degree-distance fix in order.",
+          "steps": [
+            {
+              "id": "location",
+              "text": "State the location identifier."
+            },
+            {
+              "id": "azimuth",
+              "text": "State the azimuth in degrees magnetic."
+            },
+            {
+              "id": "distance",
+              "text": "State the distance in miles from the NAVAID used."
+            }
+          ],
+          "correct_order": [
+            "location",
+            "azimuth",
+            "distance"
+          ],
+          "explanation": "A degree-distance fix is composed of a location identifier, an azimuth in degrees magnetic, and a distance in miles from the NAVAID used."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this degree-distance spacing limit correct?",
+          "question_text": "At FL180 and above, the distance between the fixes used to define the route must not exceed 260 miles.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "At FL180 and above, the maximum distance between fixes is 260 miles."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which route definition matches the degree-distance format?",
+          "question_text": "Which route point is correctly formed?",
+          "choices": [
+            {
+              "text": "MKE 030025.",
+              "is_correct": true
+            },
+            {
+              "text": "030 MKE 25.",
+              "is_correct": false
+            },
+            {
+              "text": "MKE direct 25 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Milwaukee radial 30 distance variable.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The example degree-distance fix is MKE 030025."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A military flight plan proposes a degree-distance route segment below FL180 using fixes 110 miles apart. Another controller says it is acceptable because the aircraft is military and will provide accurate position reports.",
+          "para_context": "Below FL180, the distance between the fixes used to define a degree-distance route segment must not exceed 80 miles.",
+          "choices": [
+            {
+              "text": "Reject that segment as filed because the spacing exceeds the below-FL180 limit.",
+              "is_correct": true
+            },
+            {
+              "text": "Accept it because military aircraft may exceed the 80-mile limit whenever they provide compulsory reports.",
+              "is_correct": false
+            },
+            {
+              "text": "Accept it if the pilot agrees to remain at or above FL180 after departure.",
+              "is_correct": false
+            },
+            {
+              "text": "Accept it as long as the NAVAID is within service volume at one endpoint only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Below FL180, 110 miles exceeds the 80-mile maximum between fixes."
+        }
+      ]
+    },
+    "4-4-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When a route is unusable because of NAVAID status, what word must immediately precede a depicted alternative route issued to a non-RNAV aircraft?",
+          "choices": [
+            {
+              "text": "Substitute.",
+              "is_correct": true
+            },
+            {
+              "text": "Amended.",
+              "is_correct": false
+            },
+            {
+              "text": "Bypass.",
+              "is_correct": false
+            },
+            {
+              "text": "Alternate.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-4-4 requires the word substitute immediately preceding the alternative depicted route."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which alternative route type is approved for a non-RNAV aircraft when part of a route is unusable?",
+          "question_text": "Which alternative is correct?",
+          "choices": [
+            {
+              "text": "A route defined by NAVAID radials, courses, or azimuths.",
+              "is_correct": true
+            },
+            {
+              "text": "A random RNAV route through unpublished user waypoints only.",
+              "is_correct": false
+            },
+            {
+              "text": "A direct route between visual checkpoints selected by the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "A route through Class G airspace whether or not requested by the pilot.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "An approved non-RNAV alternative may be a route defined by NAVAID radials, courses, or azimuths."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "Victor 16 is unusable from Gordonsville to Roanoke. Build the substituted-route phrase.",
+          "target_phrase": "SUBSTITUTE VICTOR ONE SIX FROM GORDONSVILLE TO ROANOKE"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A non-RNAV aircraft must be rerouted because part of its airway is unusable due to a NAVAID outage. Another controller wants to treat the route as direct between published NAVAIDs for the non-RNAV aircraft, but also says there is no need to mention the NAVAID outage to an RNAV aircraft that will proceed to that NAVAID location.",
+          "para_context": "Non-RNAV aircraft may be cleared via a depicted substitute route, NAVAID radials/courses/azimuths, direct to or between NAVAIDs, or vectors. RNAV aircraft proceeding to the NAVAID location must be informed of the NAVAID outage.",
+          "choices": [
+            {
+              "text": "Use an approved alternative route for the non-RNAV aircraft and inform the RNAV aircraft of the NAVAID outage if it will proceed to the NAVAID location.",
+              "is_correct": true
+            },
+            {
+              "text": "Use any convenient direct reroute for the non-RNAV aircraft and omit the outage information to the RNAV aircraft because RNAV does not use the facility.",
+              "is_correct": false
+            },
+            {
+              "text": "Avoid all reroutes and hold both aircraft until the NAVAID returns to service.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the substitute route only to RNAV aircraft and vector the non-RNAV aircraft off IFR.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph gives approved alternative-route methods for non-RNAV aircraft and separately requires that RNAV aircraft be informed if they will proceed to the NAVAID location."
+        }
+      ]
+    },
+    "4-4-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may routes through Class G airspace be included in a clearance?",
+          "choices": [
+            {
+              "text": "Only when requested by the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever they save mileage or simplify ATC traffic flow.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when weather in Class G is VMC the entire way.",
+              "is_correct": false
+            },
+            {
+              "text": "Never, because IFR clearances may not include Class G airspace.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-4-5 says to include routes through Class G airspace only when requested by the pilot."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this Class G routing requirement correct?",
+          "question_text": "You must include routes through Class G airspace only when requested by the pilot.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the governing rule in paragraph 4-4-5."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which filing is considered a request by the pilot for Class G routing?",
+          "question_text": "Which case counts as the pilot's request?",
+          "choices": [
+            {
+              "text": "A flight plan filed for a random RNAV route through Class G airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "Any IFR flight plan that happens to cross a Class G segment on the chart, even if it was not filed that way.",
+              "is_correct": false
+            },
+            {
+              "text": "Any route shortened by ATC for traffic management through Class G airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Any VFR release of an IFR departure.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A flight plan filed for a random RNAV route through Class G airspace is considered a request by the pilot."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Does this Class G statement match the note?",
+          "question_text": "This Class G effect applies: separation criteria are not applicable there, but traffic advisories and safety alerts are applicable to aircraft in direct communication with ATC.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note says separation criteria are not applicable in Class G airspace, while traffic advisories and safety alerts are applicable to aircraft in direct communication with ATC."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An IFR route proposal would take an aircraft through Class G airspace. The pilot did not request that routing. Another controller says it is acceptable because the aircraft will remain in direct communication with ATC and can still receive safety alerts there.",
+          "para_context": "Routes through Class G airspace are included only when requested by the pilot. Direct communication does not change that request requirement.",
+          "choices": [
+            {
+              "text": "Do not include the Class G routing unless the pilot requests it.",
+              "is_correct": true
+            },
+            {
+              "text": "Include it because direct communications and safety alerts make the request unnecessary.",
+              "is_correct": false
+            },
+            {
+              "text": "Include it if the aircraft is RNAV-capable, even without a pilot request.",
+              "is_correct": false
+            },
+            {
+              "text": "Include it whenever the route was suggested by another ATC facility.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Pilot request is still required before including routes through Class G airspace."
+        }
+      ]
+    },
+    "4-4-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "En route, when may you issue a revised routing clearance that takes an aircraft off its flight plan route past the last fix in your facility's airspace?",
+          "choices": [
+            {
+              "text": "Only when requested by the pilot or when operational necessity dictates.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time the route is shorter than the filed route.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the aircraft is not part of a traffic management initiative.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the overlying ARTCC TMU can accept the change later.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-4-6 limits off-route direct clearances past the last fix in your airspace to pilot request or operational necessity."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this direct-routing requirement correct?",
+          "question_text": "You must not issue a routing clearance that takes an aircraft off its flight plan route if the aircraft is part of a known traffic management initiative or the route under consideration is within a protected segment, unless operational necessity dictates.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the basic restriction in paragraph 4-4-6(a)."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "Which coordination pairing is correct for a protected-segment routing amendment?",
+          "question_text": "Which coordination is correct?",
+          "choices": [
+            {
+              "text": "A terminal facility TMU coordinates with the overlying ARTCC TMU.",
+              "is_correct": true
+            },
+            {
+              "text": "A terminal facility TMU coordinates directly with the ATCSCC for every protected-segment amendment.",
+              "is_correct": false
+            },
+            {
+              "text": "An ARTCC TMU coordinates only with the departure airport tower, even for amendments outside its own facility.",
+              "is_correct": false
+            },
+            {
+              "text": "An ATCS coordinates with the terminal departure controller only, with no TMU involvement.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph specifies that a terminal facility TMU coordinates with the overlying ARTCC TMU."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Does this exception statement match the note?",
+          "question_text": "This note-based exception applies: the paragraph does not preclude a routing clearance that conforms to an LOA or SOP within or between facilities, or one required to maintain separation or comply with traffic flow management initiatives.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note preserves LOA/SOP, separation, and traffic-flow-management based routing changes."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A controller wants to shortcut an aircraft off its filed route through a protected segment simply because the new route is shorter. The aircraft is part of a known traffic management initiative, and there is no operational necessity. Another specialist says the change is harmless as long as TMU can be told after the fact.",
+          "para_context": "Unless operational necessity dictates, do not issue a routing clearance that takes an aircraft off its flight plan route if the aircraft is part of a known traffic management initiative or if the route under consideration is within a protected segment.",
+          "choices": [
+            {
+              "text": "Do not issue the shortcut under those conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the shortcut because a shorter route is enough justification by itself.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the shortcut now and coordinate later because the aircraft is already in controlled airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the shortcut if the pilot reads back the amended route exactly.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A protected-segment or known-TMI route should not be shortcut without operational necessity."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "Is this protected-segment coordination condition handled correctly?",
+          "question_text": "If a flight routing within a protected segment is amended and the amendment is outside the ARTCC TMU's own facility, coordinate with the ATCSCC.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-4-6 assigns that outside-facility coordination to the ATCSCC."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "4-4-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What principle governs route assignment here?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Routes must be consistent with the altitude stratum in which the operation will be conducted.",
+          "choices": [
+            {
+              "text": "Routes must be consistent with the altitude stratum in which the operation will be conducted.",
+              "is_correct": true
+            },
+            {
+              "text": "Always use the shortest available route.",
+              "is_correct": false
+            },
+            {
+              "text": "Always keep the aircraft on published airways only.",
+              "is_correct": false
+            },
+            {
+              "text": "Base the route only on the pilot's requested altitude.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When a GNSS-equipped RNAV aircraft is not being radar monitored on a random RNAV route, what kind of route must it be on?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "It must be cleared via or reported established on a point-to-point route.",
+          "choices": [
+            {
+              "text": "A point-to-point route.",
+              "is_correct": true
+            },
+            {
+              "text": "Any direct route between user-defined waypoints.",
+              "is_correct": false
+            },
+            {
+              "text": "A vector route only.",
+              "is_correct": false
+            },
+            {
+              "text": "A DME arc only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the maximum distance between points on a random RNAV route when nonradar separation is being applied?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The maximum distance is 500 miles.",
+          "choices": [
+            {
+              "text": "500 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "260 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "750 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "80 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How much lateral protection is required either side of the route centerline on that random RNAV segment?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The protected airspace is 4 miles either side of the route centerline.",
+          "choices": [
+            {
+              "text": "4 miles either side.",
+              "is_correct": true
+            },
+            {
+              "text": "2 miles either side.",
+              "is_correct": false
+            },
+            {
+              "text": "8 miles either side.",
+              "is_correct": false
+            },
+            {
+              "text": "10 miles either side.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What altitude condition applies to assigned altitudes on that route segment?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "Assigned altitudes must be at or above the highest MIA along the projected route segment, including its protected airspace.",
+          "choices": [
+            {
+              "text": "They must be at or above the highest MIA along the projected route segment, including the protected airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "They may be at any altitude above the MEA on the first published airway encountered.",
+              "is_correct": false
+            },
+            {
+              "text": "They may be below the highest MIA if the pilot reports terrain in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "They must be at or above the destination airport elevation only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which phraseology is used for a point-to-point route segment beginning after a fix?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The phraseology is After (fix) proceed direct (fix).",
+          "choices": [
+            {
+              "text": "After SUNOL proceed direct PYE.",
+              "is_correct": true
+            },
+            {
+              "text": "Proceed direct after SUNOL to PYE when ready.",
+              "is_correct": false
+            },
+            {
+              "text": "Direct after SUNOL PYE.",
+              "is_correct": false
+            },
+            {
+              "text": "After SUNOL join direct PYE airway.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-4-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What additional service is required when RNAV aircraft transition between designated or established ATS routes via random RNAV routes?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Provide radar monitoring during the random RNAV transition.",
+          "choices": [
+            {
+              "text": "Provide radar monitoring.",
+              "is_correct": true
+            },
+            {
+              "text": "Suspend altitude assignments.",
+              "is_correct": false
+            },
+            {
+              "text": "Require raw-data navigation only.",
+              "is_correct": false
+            },
+            {
+              "text": "Convert the aircraft to nonradar handling.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which method is one approved way to effect transition within or between route structures?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Assigning a SID or STAR is one of the approved transition methods.",
+          "choices": [
+            {
+              "text": "Assign a SID or STAR.",
+              "is_correct": true
+            },
+            {
+              "text": "Require the pilot to cancel IFR before the transition.",
+              "is_correct": false
+            },
+            {
+              "text": "Transition only by visual checkpoints.",
+              "is_correct": false
+            },
+            {
+              "text": "Suspend ATS route use until the next sector.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For the random RNAV transition method, what endpoints may be used on the new route?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The transition may be to a NAVAID, waypoint, airport, or fix on the new route.",
+          "choices": [
+            {
+              "text": "A NAVAID, waypoint, airport, or fix on the new route.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the destination airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Only a published airway intersection.",
+              "is_correct": false
+            },
+            {
+              "text": "Any landmark the pilot can identify visually.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which statement about route-structure transitions is correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Aircraft may be cleared to climb or descend via the ATS route on which flight will be conducted.",
+          "choices": [
+            {
+              "text": "An aircraft may be cleared to climb or descend via the ATS route on which flight will be conducted.",
+              "is_correct": true
+            },
+            {
+              "text": "Aircraft may transition between route structures only by vectors.",
+              "is_correct": false
+            },
+            {
+              "text": "RNAV transitions between ATS routes do not require monitoring once both endpoints are on published routes.",
+              "is_correct": false
+            },
+            {
+              "text": "A SID or STAR may be used only for terminal arrivals and not for route-structure transition.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-4-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Below FL180, what is the maximum distance allowed between degree-distance fixes used to define a military route segment?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Below FL180, the maximum distance is 80 miles.",
+          "choices": [
+            {
+              "text": "80 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "120 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "180 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "260 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At FL180 and above, what is the maximum distance between fixes used to define the route?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "At FL180 and above, the maximum distance is 260 miles.",
+          "choices": [
+            {
+              "text": "260 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "80 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "150 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "500 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which elements compose a degree-distance fix?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A degree-distance fix is composed of a location identifier, an azimuth in degrees magnetic, and a distance in miles from the NAVAID used.",
+          "choices": [
+            {
+              "text": "Location identifier, azimuth in degrees magnetic, and distance in miles from the NAVAID used.",
+              "is_correct": true
+            },
+            {
+              "text": "Airport identifier, true bearing, and altitude above the NAVAID.",
+              "is_correct": false
+            },
+            {
+              "text": "Latitude, longitude, and route color.",
+              "is_correct": false
+            },
+            {
+              "text": "Call sign, waypoint name, and DME distance only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How are degree-distance fixes used to define a route treated for position reporting unless ATC authorizes otherwise?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They are considered compulsory reporting points unless ATC authorizes omission when traffic conditions permit.",
+          "choices": [
+            {
+              "text": "As compulsory reporting points.",
+              "is_correct": true
+            },
+            {
+              "text": "As optional reporting points only.",
+              "is_correct": false
+            },
+            {
+              "text": "As pilot-discretion reporting points below FL180 only.",
+              "is_correct": false
+            },
+            {
+              "text": "As nonreporting points unless the pilot requests otherwise.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which example matches the degree-distance format?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "example",
+          "generation_source": "curated",
+          "explanation": "The example in the paragraph is MKE 030025.",
+          "choices": [
+            {
+              "text": "MKE 030025.",
+              "is_correct": true
+            },
+            {
+              "text": "030 MKE 25.",
+              "is_correct": false
+            },
+            {
+              "text": "MKE direct 25.",
+              "is_correct": false
+            },
+            {
+              "text": "Milwaukee 25 northeast.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-4-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When a depicted alternative route is issued to a non-RNAV aircraft because part of a route is unusable, what word must immediately precede that route?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The word substitute must immediately precede the alternative depicted route.",
+          "choices": [
+            {
+              "text": "Substitute.",
+              "is_correct": true
+            },
+            {
+              "text": "Amended.",
+              "is_correct": false
+            },
+            {
+              "text": "Bypass.",
+              "is_correct": false
+            },
+            {
+              "text": "Alternate.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which route type is one approved alternative for a non-RNAV aircraft when part of an airway or route is unusable because of NAVAID status?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A route defined by NAVAID radials, courses, or azimuths is one approved alternative.",
+          "choices": [
+            {
+              "text": "A route defined by NAVAID radials, courses, or azimuths.",
+              "is_correct": true
+            },
+            {
+              "text": "A random RNAV route through unpublished user waypoints only.",
+              "is_correct": false
+            },
+            {
+              "text": "A route based only on visual checkpoints selected by the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "A route through Class G airspace whether or not the pilot requested it.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What should RNAV aircraft be told if they will proceed to the location of the unusable NAVAID?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "They should be informed of the NAVAID outage.",
+          "choices": [
+            {
+              "text": "Inform them of the NAVAID outage.",
+              "is_correct": true
+            },
+            {
+              "text": "Tell them nothing, because RNAV does not require NAVAID information.",
+              "is_correct": false
+            },
+            {
+              "text": "Require them to cancel RNAV navigation.",
+              "is_correct": false
+            },
+            {
+              "text": "Instruct them to disregard the outage unless they ask about it.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which phrase correctly applies the depicted-route requirement?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The depicted-route phrase uses the word substitute immediately before the route.",
+          "choices": [
+            {
+              "text": "Substitute Victor 16 from Gordonsville to Roanoke.",
+              "is_correct": true
+            },
+            {
+              "text": "Alternate Victor 16 from Gordonsville to Roanoke.",
+              "is_correct": false
+            },
+            {
+              "text": "Victor 16 substitute Gordonsville to Roanoke.",
+              "is_correct": false
+            },
+            {
+              "text": "Reroute Victor 16 Gordonsville to Roanoke.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-4-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When may routes through Class G airspace be included in a clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Only when requested by the pilot.",
+          "choices": [
+            {
+              "text": "Only when requested by the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever they shorten the route.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when weather in Class G is VMC.",
+              "is_correct": false
+            },
+            {
+              "text": "Never.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is one way a pilot can be considered to have requested routing through Class G airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "A flight plan filed for a random RNAV route through Class G airspace is considered a request by the pilot.",
+          "choices": [
+            {
+              "text": "By filing a random RNAV route through Class G airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "By accepting any direct route offered by ATC after takeoff.",
+              "is_correct": false
+            },
+            {
+              "text": "By remaining in direct communication with ATC while crossing Class G.",
+              "is_correct": false
+            },
+            {
+              "text": "By filing any IFR flight plan that passes near Class G airspace.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does the note say about separation criteria in Class G airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Separation criteria are not applicable in Class G airspace.",
+          "choices": [
+            {
+              "text": "They are not applicable there.",
+              "is_correct": true
+            },
+            {
+              "text": "They are fully applicable there whenever the aircraft is IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "They apply only to aircraft above 10,000 feet MSL in Class G.",
+              "is_correct": false
+            },
+            {
+              "text": "They apply only if the pilot requested Class G routing verbally.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What ATC services are still applicable in Class G airspace to aircraft in direct communication with ATC?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Traffic advisories and safety alerts are applicable to aircraft in direct communication with ATC.",
+          "choices": [
+            {
+              "text": "Traffic advisories and safety alerts.",
+              "is_correct": true
+            },
+            {
+              "text": "Standard IFR separation criteria only.",
+              "is_correct": false
+            },
+            {
+              "text": "Approach clearances and mandatory vectors only.",
+              "is_correct": false
+            },
+            {
+              "text": "None, because ATC services do not apply in Class G.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-4-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "En route, when may you issue a revised routing clearance that takes an aircraft off its flight plan route past the last fix in your facility's airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Only when requested by the pilot or when operational necessity dictates.",
+          "choices": [
+            {
+              "text": "Only when requested by the pilot or when operational necessity dictates.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time the route is shorter.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the aircraft is not part of a traffic management initiative.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever TMU can be advised after the aircraft is rerouted.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What two conditions trigger the basic restriction against taking an aircraft off its flight plan route unless operational necessity dictates?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The restriction applies if the aircraft is part of a known traffic management initiative or if the route under consideration is within a protected segment.",
+          "choices": [
+            {
+              "text": "The aircraft is part of a known traffic management initiative or the route under consideration is within a protected segment.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft is RNAV-capable or the route is longer than the filed route.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft has already crossed the last fix in your airspace or the pilot has not requested lower altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "The route crosses Class G airspace or the destination is outside your ARTCC.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a protected-segment routing amendment is made by a terminal facility TMU, with whom must it coordinate?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A terminal facility TMU coordinates with the overlying ARTCC TMU.",
+          "choices": [
+            {
+              "text": "The overlying ARTCC TMU.",
+              "is_correct": true
+            },
+            {
+              "text": "The ATCSCC in every case.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the departure tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the receiving en route controller.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a protected-segment routing amendment is outside the ARTCC TMU's own facility, with whom must the ARTCC TMU coordinate?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The coordination is with the ATCSCC.",
+          "choices": [
+            {
+              "text": "ATCSCC.",
+              "is_correct": true
+            },
+            {
+              "text": "The nearest terminal facility TMU only.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot directly.",
+              "is_correct": false
+            },
+            {
+              "text": "No one, because outside-facility amendments are unrestricted.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does the note say this paragraph must not preclude?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note preserves route changes that conform to an LOA or SOP, or are required to maintain separation or comply with traffic flow management initiatives.",
+          "choices": [
+            {
+              "text": "A routing clearance that conforms to an LOA or SOP, or is required to maintain separation or comply with traffic flow management initiatives.",
+              "is_correct": true
+            },
+            {
+              "text": "Any shortcut that reduces mileage by more than 10 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Any route change issued after the last fix in your airspace without pilot request.",
+              "is_correct": false
+            },
+            {
+              "text": "All protected-segment amendments as long as the pilot agrees.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which statement about direct clearances is correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A shorter route by itself is not enough if the aircraft is in a known TMI or the route is within a protected segment and no operational necessity exists.",
+          "choices": [
+            {
+              "text": "A shorter route alone is not enough justification to take an aircraft off its route if a known TMI or protected segment restriction applies and there is no operational necessity.",
+              "is_correct": true
+            },
+            {
+              "text": "Any shorter route may be issued immediately, with TMU notified afterward if convenient.",
+              "is_correct": false
+            },
+            {
+              "text": "Protected-segment restrictions disappear once the aircraft is airborne and radar identified.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilot readback alone cures any protected-segment routing restriction.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

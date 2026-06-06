@@ -1,0 +1,208 @@
+{
+  "questions": {
+    "13-1-16": {
+      "items": [
+        {
+          "question_text": "Under 13-1-16, during a surveillance or flight data outage, electronic flight data may be used to support situational awareness while the facility transitions to _____ or nonradar procedures.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-16 authorizes the continued use of electronic flight data for situational awareness during the transition period to alternate automation capabilities or nonradar procedures. Both transition paths are explicitly named.",
+          "choices": [
+            {
+              "text": "alternate automation capabilities",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-16, during a surveillance or flight data outage, electronic flight data may be used for what purpose?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-16 permits a specific, limited use: to support situational awareness while the facility transitions. It does not authorize electronic flight data as a replacement for radar separation or as a post-transition archive.",
+          "choices": [
+            {
+              "text": "As a full replacement for radar separation throughout the outage period.",
+              "is_correct": false
+            },
+            {
+              "text": "Only as a historical archive for post-outage review and analysis.",
+              "is_correct": false
+            },
+            {
+              "text": "To support situational awareness while the facility transitions to alternate automation capabilities or nonradar procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "To automatically assume control of all aircraft in the affected airspace until surveillance returns.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "13-1-17": {
+      "items": [
+        {
+          "question_text": "Under 13-1-17, what are the three Airspace Configuration Elements?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-17(a) explicitly lists three elements: Special Activity Airspace (SAA), Airport Stream Filters (ASF), and adapted restrictions. Other ERAM features like ERT or RAN are not in this list.",
+          "choices": [
+            {
+              "text": "Special Activity Airspace, Airport Stream Filters, and Embedded Route Text.",
+              "is_correct": false
+            },
+            {
+              "text": "Special Activity Airspace, Airport Stream Filters, and adapted restrictions.",
+              "is_correct": true
+            },
+            {
+              "text": "Special Activity Airspace, Route Action Notifications, and adapted restrictions.",
+              "is_correct": false
+            },
+            {
+              "text": "Airport Stream Filters, Embedded Route Text, and IAFDOF settings.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-17, activating or scheduling SAA in the Airspace Status View does NOT by itself constitute _____ for activation of airspace.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note to 13-1-17 states clearly: unless otherwise covered in an LOA or facility directive, activating or scheduling the SAA in the Airspace Status View does NOT constitute coordination for activation of airspace. This is an important operational distinction.",
+          "choices": [
+            {
+              "text": "coordination",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-17, when are sector teams required to update Airspace Configuration Elements and notify the operations supervisor?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-17(b) ties the responsibility to the facility directive: 'Where assigned as a sector responsibility by facility directive.' 13-1-17(c) adds the supervisor notification requirement for elements designated as a sector responsibility. Both conditions depend on the facility assignment, not on a blanket rule.",
+          "choices": [
+            {
+              "text": "At all sectors at all times, because Airspace Configuration Elements are always a sector responsibility under the order.",
+              "is_correct": false
+            },
+            {
+              "text": "Where assigned as a sector responsibility by facility directive. The sector team must update elements to current status and notify the operations supervisor when a status is modified.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the operations supervisor specifically requests an update, regardless of whether the sector is assigned responsibility by directive.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for Special Activity Airspace items. Airport Stream Filters and adapted restrictions do not trigger the update or notification requirement.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 13-1-17, activation of SAA in the Airspace Status View does not by itself constitute coordination for activation of airspace. Under what conditions can the Airspace Status View activation alone satisfy coordination requirements?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note's exception is: 'Unless otherwise covered in an LOA or facility directive.' This means an LOA or facility directive can establish that Airspace Status View activation does constitute coordination, but without such an agreement, it does not.",
+          "choices": [
+            {
+              "text": "It never can. Airspace Status View activation is purely an internal display function and can never serve as coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "If covered by an LOA or facility directive that specifically provides for it.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the SAA is activated at least 30 minutes before the scheduled activation time.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the activation is performed by the operations supervisor rather than the sector controller.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "13-1-16": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "During a surveillance outage, electronic flight data remains available. A controller wants to use it for radar-based separation because the data appears current on the display. Is this authorized under 13-1-16?",
+          "choices": [
+            {
+              "text": "Yes. During an outage, electronic flight data may be used for any purpose that maintains traffic flow, including radar separation, because the normal operational limitations are suspended.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Electronic flight data during an outage is authorized only to support situational awareness while the facility transitions, not as a replacement for radar separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only after the operations supervisor approves the expanded use in writing.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Electronic flight data must be shut down completely during any surveillance outage to prevent automation conflicts.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-1-16 Limits electronic flight data use during an outage to supporting situational awareness while transitioning to alternate automation or nonradar procedures. It does not authorize using it as a substitute for radar separation."
+        }
+      ]
+    },
+    "13-1-17": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Your sector is assigned, by facility directive, responsibility for updating Airspace Configuration Elements. A controller activates an SAA in the Airspace Status View and announces that this completes the airspace activation coordination with the using agency. The controller also updates an Airport Stream Filter to inactive status but does not notify the operations supervisor, saying the status change is already visible in automation so no additional notification is needed.",
+          "question_text": "What duty requirements have been misunderstood?",
+          "choices": [
+            {
+              "text": "Both requirements were handled correctly. SAA activation in the Status View always satisfies coordination needs, and the supervisor can see all automation status changes without being notified.",
+              "is_correct": false
+            },
+            {
+              "text": "Airspace Status View activation does not by itself constitute coordination for airspace activation unless covered by an LOA or facility directive. Additionally, the operations supervisor must be notified when the status of an Airspace Configuration Element has been modified.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the SAA coordination requirement was misunderstood. The supervisor notification is optional when the change is made through automation since the change is automatically logged.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the supervisor notification was missed. SAA activation in the Airspace Status View always serves as coordination for airspace activation under any circumstances.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-1-17 Note: Airspace Status View activation alone is NOT coordination unless an LOA or facility directive says otherwise. 13-1-17(c): for elements designated as sector responsibility, the operations supervisor must be notified when status is modified. Both were violated.",
+          "para_context": "AIRSPACE CONFIGURATION ELEMENTS"
+        }
+      ]
+    }
+  }
+}

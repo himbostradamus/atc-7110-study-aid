@@ -1,0 +1,329 @@
+{
+  "activities": {
+    "2-8-2": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "2-8-2 RVR reportable-value note",
+          "lookup_context": ["Weather element: runway visual range", "Task: determine when the RVR value is reportable"],
+          "task": "Choose the threshold at or below which RVR is treated as reportable.",
+          "instruction": "Apply the RVR reportable-value note.",
+          "question_text": "Under the 2-8-2 note, which RVR value range in feet is reportable?",
+          "choices": [
+            {"text": "RVR 6,000 feet or less.", "is_correct": true},
+            {"text": "RVR 5,000 feet or less.", "is_correct": false},
+            {"text": "RVR 2,000 feet or less.", "is_correct": false},
+            {"text": "RVR 1 mile or less.", "is_correct": false}
+          ],
+          "explanation": "The note defines reportable values as RVR 6,000 feet or less."
+        }
+      ]
+    },
+    "3-4-5": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "3-4-5 approach-light operating minima",
+          "lookup_context": ["Time: between sunrise and sunset", "Ceiling: less than 1,000 feet", "Approaches are being made to a runway served by the lights"],
+          "task": "Decide whether the approach lights must be operated for the stated daytime weather condition.",
+          "instruction": "Apply the approach-light weather trigger.",
+          "question_text": "It is daytime, ceiling is less than 1,000 feet, and approaches are being made to a runway served by approach lights. What action follows from 3-4-5?",
+          "choices": [
+            {"text": "Operate the approach lights.", "is_correct": true},
+            {"text": "Operate them only after pilot request.", "is_correct": false},
+            {"text": "Leave them off because the trigger applies only at night.", "is_correct": false},
+            {"text": "Operate only runway edge lights, not approach lights.", "is_correct": false}
+          ],
+          "explanation": "One daytime trigger for operating approach lights is a ceiling less than 1,000 feet when approaches are being made to a runway served by those lights."
+        }
+      ]
+    },
+    "3-4-6": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "TBL 3-4-5 note",
+          "lookup_context": ["Time: night", "Visibility: 1 to 3 miles inclusive", "Pilot has not requested step 4 or 5"],
+          "task": "Apply the night ALS setting and the pilot-request exception.",
+          "instruction": "Use the ALS intensity table and note.",
+          "question_text": "At night with visibility 1 to 3 miles inclusive and no pilot request for a higher step, what ALS setting follows from TBL 3-4-5?",
+          "choices": [
+            {"text": "Use step 2.", "is_correct": true},
+            {"text": "Use step 4 automatically.", "is_correct": false},
+            {"text": "Use step 5 automatically.", "is_correct": false},
+            {"text": "Turn the ALS off unless visibility drops below 1 mile.", "is_correct": false}
+          ],
+          "explanation": "The table assigns step 2 for that night visibility band. Step 4 or 5 at night is used on pilot request."
+        }
+      ]
+    },
+    "3-4-7": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "3-4-7 sequenced flashing light trigger",
+          "lookup_context": ["Visibility: less than 3 miles", "Instrument approaches are being made to the runway served by the associated ALS"],
+          "task": "Decide whether the sequenced flashing lights must be operated.",
+          "instruction": "Apply the SFL operating trigger.",
+          "question_text": "Visibility is less than 3 miles and instrument approaches are being made to the runway served by the associated ALS. What does 3-4-7 require for sequenced flashing lights?",
+          "choices": [
+            {"text": "Operate the sequenced flashing lights.", "is_correct": true},
+            {"text": "Operate them only if the pilot requests them.", "is_correct": false},
+            {"text": "Operate them only when visibility is less than 1 mile.", "is_correct": false},
+            {"text": "Do not operate them during instrument approaches.", "is_correct": false}
+          ],
+          "explanation": "The primary SFL trigger is visibility less than 3 miles while instrument approaches are being made to the served runway."
+        }
+      ]
+    },
+    "3-4-9": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "3-4-9 ALSF-2 operating triggers",
+          "lookup_context": ["System: ALSF-2", "Prevailing visibility: 3/4 mile or less"],
+          "task": "Choose the required ALSF-2 operating action for the visibility trigger.",
+          "instruction": "Apply the ALSF-2 visibility trigger.",
+          "question_text": "Prevailing visibility is 3/4 mile or less. What action follows for the ALSF-2 system under 3-4-9?",
+          "choices": [
+            {"text": "Operate the ALSF-2 system.", "is_correct": true},
+            {"text": "Operate only if the ceiling is also below 200 feet.", "is_correct": false},
+            {"text": "Operate only on pilot request.", "is_correct": false},
+            {"text": "Turn off the sequenced flashers but leave steady lights on.", "is_correct": false}
+          ],
+          "explanation": "Prevailing visibility of 3/4 mile or less is one of the listed triggers for ALSF-2 operation."
+        }
+      ]
+    },
+    "3-4-10": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "3-4-10 runway edge light daytime trigger",
+          "lookup_context": ["Time: between sunrise and sunset", "Surface visibility: less than 2 miles"],
+          "task": "Determine whether daytime runway edge light operation uses the same arrival/departure timing as night.",
+          "instruction": "Apply the runway edge light weather trigger.",
+          "question_text": "It is daytime and surface visibility is less than 2 miles. What runway edge light action follows from 3-4-10?",
+          "choices": [
+            {"text": "Turn runway edge lights on using the same arrival/departure timing used at night.", "is_correct": true},
+            {"text": "Keep runway edge lights off because the rule applies only after sunset.", "is_correct": false},
+            {"text": "Turn them on only when visibility is less than 1 mile.", "is_correct": false},
+            {"text": "Operate only approach lights; runway edge lights are not triggered by surface visibility.", "is_correct": false}
+          ],
+          "explanation": "The daytime trigger is surface visibility less than 2 miles, using the same timing framework as the nighttime rule."
+        }
+      ]
+    },
+    "3-4-11": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "TBL 3-4-8",
+          "lookup_context": ["Systems: HIRL, runway centerline lights, touchdown zone lights", "Time: night", "Visibility: 3 to 5 miles inclusive"],
+          "task": "Select the intensity step for the stated night visibility band.",
+          "instruction": "Apply the HIRL/RCLS/TDZL night intensity table.",
+          "question_text": "At night with visibility 3 to 5 miles inclusive, which HIRL/RCLS/TDZL setting follows from TBL 3-4-8?",
+          "choices": [
+            {"text": "Step 2.", "is_correct": true},
+            {"text": "Step 1.", "is_correct": false},
+            {"text": "Step 3.", "is_correct": false},
+            {"text": "Step 5.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-8 assigns step 2 at night for visibility from 3 to 5 miles inclusive."
+        }
+      ]
+    },
+    "3-4-12": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "TBL 3-4-9",
+          "lookup_context": ["System: HIRL associated with MALSR", "Time: night", "Visibility: less than 1 mile", "No different pilot request"],
+          "task": "Select the night intensity step for the stated visibility band.",
+          "instruction": "Apply the HIRL-with-MALSR night table.",
+          "question_text": "At night with visibility less than 1 mile and no different pilot request, which HIRL-with-MALSR setting follows from TBL 3-4-9?",
+          "choices": [
+            {"text": "Step 4.", "is_correct": true},
+            {"text": "Step 1.", "is_correct": false},
+            {"text": "Step 2.", "is_correct": false},
+            {"text": "Step 5 only.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-9 assigns step 4 at night when visibility is less than 1 mile, unless a pilot requests a different setting."
+        }
+      ]
+    },
+    "3-4-14": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "TBL 3-4-10",
+          "lookup_context": ["System: MIRL", "Time: night", "Visibility: 1 to 3 miles", "No listed exception changes the setting"],
+          "task": "Select the MIRL setting for the stated night visibility band.",
+          "instruction": "Apply the MIRL night table.",
+          "question_text": "At night with visibility 1 to 3 miles and no listed exception, which MIRL setting follows from TBL 3-4-10?",
+          "choices": [
+            {"text": "Step 2.", "is_correct": true},
+            {"text": "Step 1.", "is_correct": false},
+            {"text": "Step 3.", "is_correct": false},
+            {"text": "Off unless requested.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-10 assigns step 2 for MIRL at night when visibility is 1 to 3 miles."
+        }
+      ]
+    },
+    "3-4-16": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "TBL 3-4-13",
+          "lookup_context": ["System: one-step taxiway lights", "Daytime visibility: less than 1 mile", "Night status: on"],
+          "task": "Apply the one-step taxiway-light table for both daytime low visibility and nighttime use.",
+          "instruction": "Apply the one-step taxiway-light table.",
+          "question_text": "A one-step taxiway-light system is installed. Under TBL 3-4-13, how does the less-than-1-mile daytime trigger combine with night use?",
+          "choices": [
+            {"text": "During the day when visibility is less than 1 mile, and at night with the status on.", "is_correct": true},
+            {"text": "Only at night; daytime visibility does not matter.", "is_correct": false},
+            {"text": "Only during the day when visibility is less than 3 miles.", "is_correct": false},
+            {"text": "Only when a pilot requests taxiway lights.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-13 uses the one-step system during the day when visibility is less than 1 mile and at night with the status on."
+        }
+      ]
+    },
+    "3-4-18": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "3-4-18 rotating beacon daytime trigger",
+          "lookup_context": ["Time: between sunrise and sunset", "Reported ceiling or visibility: below basic VFR minima"],
+          "task": "Decide whether the rotating beacon must be on for the daytime weather condition.",
+          "instruction": "Apply the rotating beacon weather trigger.",
+          "question_text": "It is daytime and the reported ceiling or visibility is below basic VFR minima. What action follows from 3-4-18?",
+          "choices": [
+            {"text": "Turn on the rotating beacon.", "is_correct": true},
+            {"text": "Keep the beacon off until sunset.", "is_correct": false},
+            {"text": "Turn it on only if the runway lights are also on.", "is_correct": false},
+            {"text": "Use it only for aircraft without radios.", "is_correct": false}
+          ],
+          "explanation": "The daytime rotating-beacon trigger is reported ceiling or visibility below basic VFR minima."
+        }
+      ]
+    },
+    "3-7-5": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "3-7-5 localizer critical area protection",
+          "lookup_context": ["Ceiling: below 200 feet or RVR 2,000 feet", "Arriving aircraft: inside the middle marker or, with no middle marker, 1/2 mile final"],
+          "task": "Determine the required protection for vehicles or aircraft in or over the localizer critical area.",
+          "instruction": "Apply the localizer critical-area protection trigger.",
+          "question_text": "Weather is below the tighter localizer-critical-area trigger and an arrival is inside the middle marker. What must ATC do with vehicles or aircraft in or over the localizer critical area?",
+          "choices": [
+            {"text": "Do not authorize them to operate in or over the localizer critical area.", "is_correct": true},
+            {"text": "Authorize them if the arriving aircraft is still outside the threshold.", "is_correct": false},
+            {"text": "Authorize them if the pilot reports the runway in sight.", "is_correct": false},
+            {"text": "Protect only the glide slope critical area, not the localizer critical area.", "is_correct": false}
+          ],
+          "explanation": "Those weather and aircraft-position conditions trigger stricter localizer critical-area protection."
+        }
+      ]
+    },
+    "3-7-6": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "3-7-6 final approach OCS / POFZ protection",
+          "lookup_context": ["Aircraft: vertically guided approach within 2 miles of threshold", "Weather: ceiling below 800 feet or visibility less than 2 statute miles"],
+          "task": "Decide what must be clear when the protected condition exists.",
+          "instruction": "Apply the final approach OCS protection criteria.",
+          "question_text": "An aircraft on a vertically guided approach is within 2 miles of the threshold and weather is below the 3-7-6 trigger. What must be clear?",
+          "choices": [
+            {"text": "The final approach OCS must be clear of aircraft and vehicles.", "is_correct": true},
+            {"text": "Only the departure runway must be clear.", "is_correct": false},
+            {"text": "Only the localizer critical area must be clear.", "is_correct": false},
+            {"text": "No protected surface requirement applies once the aircraft is inside 2 miles.", "is_correct": false}
+          ],
+          "explanation": "When the aircraft-position and weather criteria are met, the final approach OCS must be clear of aircraft and vehicles."
+        }
+      ]
+    }
+  }
+}

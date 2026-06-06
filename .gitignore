@@ -1,0 +1,36 @@
+# Dependencies and generated builds
+frontend/node_modules/
+frontend/dist/
+backend/.venv/
+.venv/
+venv/
+
+# Machine-local databases and PostgreSQL clusters
+.local-pg/
+*.db
+*.db.*
+!frontend/public/curriculum.db
+backend/app/data/db_backups/
+
+# Agent scratch space and generated logs
+backend/app/data/question_authoring_workspace/
+backend/app/data/aircraft_image_search_workspace/
+backend/app/data/aircraft_image_review_workspace/
+*.log
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+!backend/.env.example
+
+# Python and editor artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.DS_Store
+
+# Generated public backups
+frontend/public/*.bak

@@ -1,0 +1,654 @@
+{
+  "activities": {
+    "3-9-6": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "3-9-6 same-runway departure landmark minimum",
+          "lookup_context": ["Only Category I aircraft are involved", "Distances can be determined by suitable landmarks", "Preceding aircraft is airborne"],
+          "task": "Choose the distance condition that permits the succeeding aircraft to begin takeoff roll.",
+          "instruction": "Apply the same-runway departure minimum.",
+          "question_text": "For Category I same-runway departures using the daylight landmark alternative in 3-9-6, what airborne-distance minimum is required?",
+          "choices": [
+            {"text": "At least 3,000 feet between the aircraft.", "is_correct": true},
+            {"text": "At least 2,500 feet from the runway threshold.", "is_correct": false},
+            {"text": "At least 4,500 feet between the aircraft.", "is_correct": false},
+            {"text": "No distance minimum once the preceding aircraft is airborne.", "is_correct": false}
+          ],
+          "explanation": "For this Category I same-runway departure case, the landmark-based airborne-distance minimum is 3,000 feet."
+        }
+      ]
+    },
+    "3-9-8": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "3-9-8 intersecting-runway wake interval",
+          "lookup_context": ["Projected flight paths will cross", "Follower: Category I", "Preceding aircraft: Category E"],
+          "task": "Select the required interval and when it is measured from.",
+          "instruction": "Apply the intersecting-runway wake interval.",
+          "question_text": "For intersecting runways in 3-9-8, what interval applies when a Category I departure follows a Category E departure and projected flight paths will cross?",
+          "choices": [
+            {"text": "2 minutes from when the preceding aircraft began takeoff roll.", "is_correct": true},
+            {"text": "3 minutes from when the preceding aircraft became airborne.", "is_correct": false},
+            {"text": "2 minutes from when the preceding aircraft crossed the runway end.", "is_correct": false},
+            {"text": "No interval applies if both aircraft depart from different runways.", "is_correct": false}
+          ],
+          "explanation": "Category I behind Category E requires a 2-minute interval measured from when the preceding aircraft began takeoff roll when projected flight paths will cross."
+        }
+      ]
+    },
+    "3-9-9": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "3-9-9 nonintersecting converging runway wake interval",
+          "lookup_context": ["Projected flight paths will cross", "Follower: Category B through I", "Preceding aircraft: Category A"],
+          "task": "Choose the required wake interval and measurement point.",
+          "instruction": "Apply the converging-runway wake interval.",
+          "question_text": "For 3-9-9 converging runway operations, what interval applies to Category B through I aircraft departing behind Category A when projected flight paths will cross?",
+          "choices": [
+            {"text": "3 minutes measured from when the preceding aircraft began takeoff roll.", "is_correct": true},
+            {"text": "2 minutes measured from when the preceding aircraft began takeoff roll.", "is_correct": false},
+            {"text": "3 miles radar separation before takeoff clearance.", "is_correct": false},
+            {"text": "No wake interval because the runways do not physically intersect.", "is_correct": false}
+          ],
+          "explanation": "For Category B through I behind Category A in this converging-runway case, the listed interval is 3 minutes from the preceding aircraft's takeoff roll."
+        }
+      ]
+    },
+    "3-10-3": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "3-10-3 same-runway arrival landmark minimum",
+          "lookup_context": ["Time: sunrise to sunset", "Suitable landmarks determine distance", "Follower: Category I arrival", "Preceding landed aircraft: Category I or II"],
+          "task": "Choose the threshold-distance alternative before the preceding aircraft is clear.",
+          "instruction": "Apply the same-runway arrival minimum.",
+          "question_text": "For a Category I arrival behind a landed Category I or II aircraft, what daylight landmark distance in feet from the landing threshold permits the preceding aircraft not yet to be clear?",
+          "choices": [
+            {"text": "At least 3,000 feet from the landing threshold.", "is_correct": true},
+            {"text": "At least 2,500 feet from the landing threshold.", "is_correct": false},
+            {"text": "At least 4,500 feet from the landing threshold.", "is_correct": false},
+            {"text": "No threshold distance alternative exists.", "is_correct": false}
+          ],
+          "explanation": "For a Category I arrival behind a landed Category I or II aircraft, the daylight landmark minimum is 3,000 feet from the landing threshold."
+        }
+      ]
+    },
+    "3-10-4": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "3-10-4 arrival behind departure crossing-runway interval",
+          "lookup_context": ["Arrival will fly through airborne path of departure", "Departing aircraft: Category A", "Arrival category: B through I", "Radar separation is not used"],
+          "task": "Select the required time interval.",
+          "instruction": "Apply the intersecting-flight-path interval.",
+          "question_text": "What minute interval applies when a Category B through I arrival will fly through the airborne path of a departing Category A aircraft unless radar separation is used?",
+          "choices": [
+            {"text": "3 minutes.", "is_correct": true},
+            {"text": "2 minutes.", "is_correct": false},
+            {"text": "1 minute.", "is_correct": false},
+            {"text": "No interval if the runways are crossing runways.", "is_correct": false}
+          ],
+          "explanation": "The listed interval for Category B through I behind Category A in that crossing-runway arrival-behind-departure case is 3 minutes unless radar separation is used."
+        }
+      ]
+    },
+    "3-10-10": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "3-10-10 altitude-restricted low approach minimum",
+          "lookup_context": ["Operation: altitude-restricted low approach", "Question: lowest authorized restriction above airport"],
+          "task": "Choose the minimum altitude restriction.",
+          "instruction": "Apply the altitude-restricted low approach minimum.",
+          "question_text": "For an altitude-restricted low approach under 3-10-10, what is the minimum altitude above the airport?",
+          "choices": [
+            {"text": "No less than 500 feet above the airport.", "is_correct": true},
+            {"text": "No less than 200 feet above the airport.", "is_correct": false},
+            {"text": "No less than 1,000 feet above the airport.", "is_correct": false},
+            {"text": "Any altitude requested by the pilot.", "is_correct": false}
+          ],
+          "explanation": "The paragraph sets 500 feet above the airport as the minimum altitude restriction."
+        }
+      ]
+    },
+    "3-11-5": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "3-11-5 simultaneous helicopter/powered-lift operations",
+          "lookup_context": ["Operation: simultaneous helicopter or powered-lift landings or takeoffs", "Courses to be flown do not conflict"],
+          "task": "Choose the minimum distance between landing or takeoff points.",
+          "instruction": "Apply the simultaneous landing/takeoff distance minimum.",
+          "question_text": "If courses do not conflict, what minimum distance in feet is required between simultaneous helicopter or powered-lift landing or takeoff points?",
+          "choices": [
+            {"text": "At least 200 feet.", "is_correct": true},
+            {"text": "At least 500 feet.", "is_correct": false},
+            {"text": "At least 1,000 feet.", "is_correct": false},
+            {"text": "No minimum distance if the courses do not conflict.", "is_correct": false}
+          ],
+          "explanation": "The required minimum distance is at least 200 feet, and the courses also must not conflict."
+        }
+      ]
+    },
+    "3-12-2": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "3-12-2 sea lane departure separation",
+          "lookup_context": ["Same sea lane", "Follower: Category I", "Preceding aircraft: Category II", "Landmarks determine distance"],
+          "task": "Choose the landmark-based departure distance minimum.",
+          "instruction": "Apply the sea lane departure separation minimum.",
+          "question_text": "What distance in feet is required when a Category I aircraft departs behind a Category II aircraft on the same sea lane and landmarks determine distance?",
+          "choices": [
+            {"text": "At least 3,000 feet between the aircraft.", "is_correct": true},
+            {"text": "At least 2,500 feet between the aircraft.", "is_correct": false},
+            {"text": "At least 4,500 feet between the aircraft.", "is_correct": false},
+            {"text": "Only airborne status is required.", "is_correct": false}
+          ],
+          "explanation": "For a Category I aircraft behind a Category II aircraft, the landmark-based departure minimum is 3,000 feet."
+        }
+      ]
+    },
+    "3-12-3": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "3-12-3 sea lane arrival separation",
+          "lookup_context": ["Time: sunrise to sunset", "Follower: Category II arrival", "Preceding arrival: Category I or II has landed", "Landmarks determine distance"],
+          "task": "Choose the distance from landing threshold required before the preceding aircraft is clear.",
+          "instruction": "Apply the sea lane arrival separation minimum.",
+          "question_text": "What daylight landmark distance in feet from the landing threshold applies to a Category II arrival behind a landed Category I or II aircraft?",
+          "choices": [
+            {"text": "2,500 feet.", "is_correct": true},
+            {"text": "3,000 feet.", "is_correct": false},
+            {"text": "4,500 feet.", "is_correct": false},
+            {"text": "No distance alternative exists.", "is_correct": false}
+          ],
+          "explanation": "For a Category II arrival behind a Category I or II arrival, the daylight landmark minimum is 2,500 feet from the landing threshold."
+        }
+      ]
+    },
+    "4-1-1": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "TBL 4-1-3",
+          "lookup_context": ["System: ILS", "Height: 4,500 feet above transmitter", "Compare localizer and glideslope distances"],
+          "task": "Choose the usable distance values and note the flight-check limitation exception.",
+          "instruction": "Apply the ILS usable height/distance table.",
+          "question_text": "What ILS usable distances apply at 4,500 feet above the transmitter unless current flight-check limits differ?",
+          "choices": [
+            {"text": "Localizer 18 miles; glideslope 10 miles.", "is_correct": true},
+            {"text": "Localizer 10 miles; glideslope 18 miles.", "is_correct": false},
+            {"text": "Localizer and glideslope both 25 miles.", "is_correct": false},
+            {"text": "Use 40 miles for both because ILS is treated as an H-class NAVAID.", "is_correct": false}
+          ],
+          "explanation": "The ILS table gives 18 miles for localizer and 10 miles for glideslope at 4,500 feet above the transmitter, unless current flight-check limitations differ."
+        }
+      ]
+    },
+    "4-1-5": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "4-1-5 unpublished fix divergence minimum",
+          "lookup_context": ["Both NAVAIDs are within 30 NM of an unpublished fix"],
+          "task": "Choose the minimum divergence angle.",
+          "instruction": "Apply the unpublished-fix divergence minimum.",
+          "question_text": "What minimum divergence angle applies when both NAVAIDs are within 30 NM of an unpublished fix?",
+          "choices": [
+            {"text": "30 degrees.", "is_correct": true},
+            {"text": "15 degrees.", "is_correct": false},
+            {"text": "45 degrees.", "is_correct": false},
+            {"text": "No divergence angle minimum applies.", "is_correct": false}
+          ],
+          "explanation": "Within 30 NM of the unpublished fix, the minimum divergence angle is 30 degrees."
+        }
+      ]
+    },
+    "4-4-1": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "4-4-1 random RNAV route point spacing",
+          "lookup_context": ["Route type: random RNAV", "Purpose: nonradar separation"],
+          "task": "Choose the maximum distance between route-defining points.",
+          "instruction": "Apply the random RNAV route point-spacing limit.",
+          "question_text": "For nonradar separation on a random RNAV route under 4-4-1, what is the maximum distance between defining points?",
+          "choices": [
+            {"text": "500 miles.", "is_correct": true},
+            {"text": "260 miles.", "is_correct": false},
+            {"text": "130 miles.", "is_correct": false},
+            {"text": "No maximum applies to RNAV routes.", "is_correct": false}
+          ],
+          "explanation": "For nonradar separation on random RNAV routes, the maximum distance between defining points is 500 miles."
+        }
+      ]
+    },
+    "4-4-3": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "4-4-3 route fix-spacing limit",
+          "lookup_context": ["Altitude: FL180 and above", "Question: maximum distance between fixes used to define the route"],
+          "task": "Choose the maximum fix spacing.",
+          "instruction": "Apply the route fix-spacing limit.",
+          "question_text": "Under 4-4-3, at FL180 and above, what maximum distance may separate the fixes used to define the route?",
+          "choices": [
+            {"text": "260 miles.", "is_correct": true},
+            {"text": "500 miles.", "is_correct": false},
+            {"text": "130 miles.", "is_correct": false},
+            {"text": "No maximum applies above FL180.", "is_correct": false}
+          ],
+          "explanation": "At FL180 and above, the maximum distance between fixes is 260 miles."
+        }
+      ]
+    },
+    "4-5-1": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "4-5-1 RVSM vertical separation minimum",
+          "lookup_context": ["Altitude: at or above FL290", "One aircraft is non-RVSM"],
+          "task": "Choose the vertical separation minimum.",
+          "instruction": "Apply the non-RVSM vertical minimum.",
+          "question_text": "At or above FL290 under 4-5-1, what vertical minimum applies between a non-RVSM aircraft and any other aircraft?",
+          "choices": [
+            {"text": "2,000 feet.", "is_correct": true},
+            {"text": "1,000 feet.", "is_correct": false},
+            {"text": "500 feet.", "is_correct": false},
+            {"text": "No extra vertical minimum if one aircraft is RVSM capable.", "is_correct": false}
+          ],
+          "explanation": "When a non-RVSM aircraft is involved at or above FL290, the vertical minimum is 2,000 feet."
+        }
+      ]
+    },
+    "4-5-4": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "4-5-4 lowest usable flight level table",
+          "lookup_context": ["Altimeter setting: 29.92 or higher"],
+          "task": "Choose the lowest usable flight level.",
+          "instruction": "Apply the lowest usable flight level rule.",
+          "question_text": "What is the lowest usable flight level when the altimeter setting is 29.92 or higher?",
+          "choices": [
+            {"text": "FL180.", "is_correct": true},
+            {"text": "FL190.", "is_correct": false},
+            {"text": "FL200.", "is_correct": false},
+            {"text": "FL210.", "is_correct": false}
+          ],
+          "explanation": "FL180 remains usable when the altimeter setting is 29.92 or higher."
+        }
+      ]
+    },
+    "4-5-6": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "4-5-6 MEA/MOCA NAVAID-distance exception",
+          "lookup_context": ["Navigation source: VOR, VORTAC, or TACAN", "Clearance below MEA but not below MOCA"],
+          "task": "Choose the distance from the NAVAID within which the exception applies.",
+          "instruction": "Apply the MEA/MOCA exception limit.",
+          "question_text": "Under 4-5-6, within what distance of a VOR, VORTAC, or TACAN may an aircraft be cleared below the MEA but not below the MOCA?",
+          "choices": [
+            {"text": "Within 22 miles of that NAVAID.", "is_correct": true},
+            {"text": "Within 40 miles of that NAVAID.", "is_correct": false},
+            {"text": "Within 130 miles of that NAVAID.", "is_correct": false},
+            {"text": "At any distance if radar identified.", "is_correct": false}
+          ],
+          "explanation": "The VOR/VORTAC/TACAN exception is limited to within 22 miles of the NAVAID."
+        }
+      ]
+    },
+    "4-6-8": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "4-6-8 ILS critical-area holding restriction",
+          "lookup_context": ["Weather trigger exists", "Holding would be below 5,000 feet AGL", "Inbound toward airport on or within 1 statute mile of localizer between OM/substitute fix and airport"],
+          "task": "Decide whether holding may be authorized in the protected area.",
+          "instruction": "Apply the ILS critical-area holding restriction.",
+          "question_text": "When the 4-6-8 weather trigger exists, may ATC authorize holding below 5,000 feet AGL inbound toward the airport on or within 1 statute mile of the localizer between the OM/substitute fix and the airport?",
+          "choices": [
+            {"text": "No, do not authorize that holding.", "is_correct": true},
+            {"text": "Yes, if the aircraft is above the glideslope.", "is_correct": false},
+            {"text": "Yes, if the pilot accepts responsibility.", "is_correct": false},
+            {"text": "Yes, because the restriction applies only below 3,000 feet AGL.", "is_correct": false}
+          ],
+          "explanation": "That is the protected area and altitude restriction for ILS critical-area holding."
+        }
+      ]
+    },
+    "4-7-5": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "4-7-5 descent point rule",
+          "lookup_context": ["Purpose: avoid excessive low-altitude flight", "Method uses first two digits of the flight level"],
+          "task": "Choose the arithmetic rule for the descent point.",
+          "instruction": "Apply the descent point rule.",
+          "question_text": "How is the descent point determined from a flight level to avoid excessive low-altitude flight?",
+          "choices": [
+            {"text": "Add 10 to the first two digits of the flight level.", "is_correct": true},
+            {"text": "Subtract 10 from the first two digits of the flight level.", "is_correct": false},
+            {"text": "Use the last two digits of the flight level.", "is_correct": false},
+            {"text": "Use a fixed 20-mile descent point for all flight levels.", "is_correct": false}
+          ],
+          "explanation": "The paragraph states that the descent point is determined by adding 10 to the first two digits of the flight level."
+        }
+      ]
+    },
+    "5-1-6": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "5-1-6 RNAV ATS route protected width note",
+          "lookup_context": ["Route type: RNAV ATS route", "Question: lateral protected airspace width"],
+          "task": "Choose the route width and protected distance on each side of centerline.",
+          "instruction": "Apply the RNAV route width note.",
+          "question_text": "What protected width in miles applies to RNAV ATS routes?",
+          "choices": [
+            {"text": "8 miles total, with 4 miles on each side of route centerline.", "is_correct": true},
+            {"text": "4 miles total, with 2 miles on each side of route centerline.", "is_correct": false},
+            {"text": "10 miles total, with 5 miles on each side of route centerline.", "is_correct": false},
+            {"text": "No lateral protected width is specified.", "is_correct": false}
+          ],
+          "explanation": "The note states an 8-mile route width with 4 miles of protected airspace on each side of centerline."
+        }
+      ]
+    },
+    "5-2-15": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "5-2-15 altitude readout validation tolerance",
+          "lookup_context": ["Compare altitude readout to pilot-reported altitude", "Question: validation tolerance"],
+          "task": "Choose the maximum permitted variation.",
+          "instruction": "Apply the altitude readout validation tolerance.",
+          "question_text": "When is an altitude readout valid compared with the pilot-reported altitude, using the feet-based tolerance?",
+          "choices": [
+            {"text": "When it varies less than 300 feet.", "is_correct": true},
+            {"text": "When it varies less than 500 feet.", "is_correct": false},
+            {"text": "When it varies less than 1,000 feet.", "is_correct": false},
+            {"text": "Whenever the aircraft is radar identified.", "is_correct": false}
+          ],
+          "explanation": "The validation standard is variation less than 300 feet from the pilot-reported altitude."
+        }
+      ]
+    },
+    "5-7-1": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "5-7-1 speed adjustment necessity limit",
+          "lookup_context": ["Controller is using speed adjustments", "Purpose: achieve or maintain required/desired spacing"],
+          "task": "Choose how aggressively speed adjustments should be used.",
+          "instruction": "Apply the speed-adjustment necessity rule.",
+          "question_text": "When achieving or maintaining required or desired spacing, what minimum-necessary limit applies to speed adjustments?",
+          "choices": [
+            {"text": "Keep them to the minimum necessary.", "is_correct": true},
+            {"text": "Use the largest speed change available to solve spacing quickly.", "is_correct": false},
+            {"text": "Use speed adjustments only after issuing vectors.", "is_correct": false},
+            {"text": "Avoid speed adjustments whenever aircraft are on published routes.", "is_correct": false}
+          ],
+          "explanation": "Speed adjustments must be kept to the minimum necessary to achieve or maintain required or desired spacing."
+        }
+      ]
+    },
+    "5-7-3": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "5-7-3 below Class B / VFR corridor speed limit",
+          "lookup_context": ["Aircraft is below Class B airspace or in a VFR corridor through Class B airspace"],
+          "task": "Choose the maximum assignable speed.",
+          "instruction": "Apply the Class B related speed limit.",
+          "question_text": "What maximum speed in knots may be assigned below Class B airspace or in a VFR corridor through Class B airspace?",
+          "choices": [
+            {"text": "Not more than 200 knots.", "is_correct": true},
+            {"text": "Not more than 210 knots.", "is_correct": false},
+            {"text": "Not more than 250 knots.", "is_correct": false},
+            {"text": "No speed limit applies if ATC assigns the speed.", "is_correct": false}
+          ],
+          "explanation": "The speed limit in that situation is not more than 200 knots."
+        }
+      ]
+    },
+    "5-8-4": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "5-8-4 departure from arrival on final minimum",
+          "lookup_context": ["Departing aircraft versus arriving aircraft on final", "Separation will increase within 1 minute after takeoff", "Exception: except as provided in 5-8-5"],
+          "task": "Choose the initial and increasing separation requirements.",
+          "instruction": "Apply the departure/arrival radar separation minimum.",
+          "question_text": "What minimum may separate a departure from an arrival on final if separation increases to 3 miles, or 5 miles when 40 miles or more from the antenna, within 1 minute after takeoff?",
+          "choices": [
+            {"text": "2 miles.", "is_correct": true},
+            {"text": "1 mile.", "is_correct": false},
+            {"text": "3 miles immediately with no increase requirement.", "is_correct": false},
+            {"text": "5 miles immediately in all cases.", "is_correct": false}
+          ],
+          "explanation": "Except as provided in 5-8-5, the rule allows 2 miles initially if separation increases to the required 3 or 5 miles within 1 minute after takeoff."
+        }
+      ]
+    },
+    "5-11-1": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "5-11-1 surveillance approach recommended altitudes",
+          "lookup_context": ["Pilot requests recommended altitudes", "Altitudes must be at or above the published MDA", "Applies for each mile on final"],
+          "task": "Choose what ATC must tell the pilot.",
+          "instruction": "Apply the recommended-altitudes requirement.",
+          "question_text": "If recommended altitudes are requested, what must ATC tell the pilot about altitudes at or above the published MDA for each mile on final?",
+          "choices": [
+            {"text": "That recommended altitudes will be given for each mile on final.", "is_correct": true},
+            {"text": "That only the final MDA will be given.", "is_correct": false},
+            {"text": "That recommended altitudes below MDA may be issued if requested.", "is_correct": false},
+            {"text": "That altitudes are unavailable during surveillance approaches.", "is_correct": false}
+          ],
+          "explanation": "If requested, tell the pilot that recommended altitudes at or above the published MDA will be given for each mile on final."
+        }
+      ]
+    },
+    "5-13-5": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "minima_rule",
+          "source_label": "5-13-5 display-filter altitude buffer",
+          "lookup_context": ["Vertical separation applicable: 1,000 feet", "Question: display extent above highest and below lowest sector altitude/flight level"],
+          "task": "Choose the display-filter buffer.",
+          "instruction": "Apply the display-filter altitude buffer.",
+          "question_text": "When 1,000-foot vertical separation is applicable, how far above the highest and below the lowest sector altitude or flight level must the display include?",
+          "choices": [
+            {"text": "1,200 feet above and below.", "is_correct": true},
+            {"text": "1,000 feet above and below.", "is_correct": false},
+            {"text": "2,000 feet above and below.", "is_correct": false},
+            {"text": "2,200 feet above and below.", "is_correct": false}
+          ],
+          "explanation": "Where 1,000-foot vertical separation applies, the display includes 1,200 feet above the highest and below the lowest altitude or flight level of the sector."
+        }
+      ]
+    },
+    "6-7-5": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["minima_rule_check"],
+      "replace_types": ["minima_rule_check"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "6-7-5 timed approach interval",
+          "lookup_context": ["Operation: successive timed approaches", "No listed exception applies"],
+          "task": "Choose the default interval.",
+          "instruction": "Apply the timed-approach interval minimum.",
+          "question_text": "What default minimum interval applies between successive timed approaches unless a listed exception applies?",
+          "choices": [
+            {"text": "2 minutes or a 5-mile radar interval.", "is_correct": true},
+            {"text": "1 minute or a 3-mile radar interval.", "is_correct": false},
+            {"text": "3 minutes or a 10-mile radar interval.", "is_correct": false},
+            {"text": "No default interval if aircraft are established inbound.", "is_correct": false}
+          ],
+          "explanation": "The basic interval is 2 minutes or 5 miles unless one of the listed exceptions applies."
+        }
+      ]
+    }
+  }
+}

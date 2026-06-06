@@ -1,0 +1,764 @@
+{
+  "activities": {
+    "2-4-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When tower positions are combined, which frequency must not be used for airborne communications?",
+          "choices": [
+            {"text": "Ground control frequency.", "is_correct": true},
+            {"text": "Local control frequency.", "is_correct": false},
+            {"text": "The frequency named in the ATIS.", "is_correct": false},
+            {"text": "Any frequency shared with clearance delivery.", "is_correct": false}
+          ],
+          "explanation": "When tower positions are combined, airborne communications are not conducted on ground control frequency."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A tower is combining local and ground positions. Another controller suggests putting an inbound aircraft on ground frequency to keep the local frequency less congested.",
+          "para_context": "When positions are combined in the tower, do not use ground control frequency for airborne communications.",
+          "choices": [
+            {"text": "Keep airborne communications off the ground control frequency and work the aircraft on the frequency intended for that airborne function.", "is_correct": true},
+            {"text": "Move the aircraft to ground frequency because once positions are combined the distinction between local and ground no longer matters.", "is_correct": false},
+            {"text": "Tell the pilot to monitor both frequencies and answer whichever controller calls first.", "is_correct": false},
+            {"text": "Use ground frequency only if the aircraft is within the traffic pattern, since it is still close to the airport.", "is_correct": false}
+          ],
+          "explanation": "The rule is about the purpose of the frequency, not just the pilot's proximity to the airport. Airborne communications stay off ground control frequency."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When local and ground functions are combined on one frequency, what setup is used and how may ATIS help?",
+          "choices": [
+            {"text": "Combine them on local control, and use ATIS to specify the desired frequency.", "is_correct": true},
+            {"text": "Combine them on ground control, and use ATIS only to announce that frequencies are split.", "is_correct": false},
+            {"text": "Leave both frequencies active and use ATIS to tell pilots to choose the less busy one.", "is_correct": false},
+            {"text": "Use clearance delivery as the shared frequency, and use ATIS only for weather.", "is_correct": false}
+          ],
+          "explanation": "The note recommends combining on local control, and ATIS may be used to specify the desired frequency."
+        }
+      ]
+    },
+    "2-4-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the normal monitoring requirement for interphones and assigned radio frequencies?",
+          "choices": [
+            {"text": "Monitor them continuously.", "is_correct": true},
+            {"text": "Monitor them whenever traffic volume becomes moderate or higher.", "is_correct": false},
+            {"text": "Monitor interphones continuously, but assigned radio frequencies only when expected traffic is IFR.", "is_correct": false},
+            {"text": "Monitor only the primary assigned frequency unless a supervisor directs otherwise.", "is_correct": false}
+          ],
+          "explanation": "Paragraph 2-4-2 states the continuous-monitoring requirement directly."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which facilities are specifically identified in the note as required to monitor all assigned frequencies continuously?",
+          "choices": [
+            {"text": "All FAA facilities, including RAPCONs and RATCFs.", "is_correct": true},
+            {"text": "Only ARTCCs and approach controls with more than one radar position open.", "is_correct": false},
+            {"text": "Only control towers, because interphone monitoring is implied for all other facilities.", "is_correct": false},
+            {"text": "Only facilities using published frequencies.", "is_correct": false}
+          ],
+          "explanation": "The note explicitly says all FAA facilities, including RAPCONs and RATCFs, are required to monitor all assigned frequencies continuously."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "Traffic has been quiet for several minutes, and a controller at an FAA facility wants to stop monitoring a less-used assigned frequency until traffic picks up again.",
+          "para_context": "Monitor interphones and assigned radio frequencies continuously.",
+          "choices": [
+            {"text": "Keep monitoring the assigned frequency continuously.", "is_correct": true},
+            {"text": "Stop monitoring it temporarily, because continuous monitoring applies only when the frequency is actively in use.", "is_correct": false},
+            {"text": "Switch it to guard instead, because guard monitoring can substitute for assigned-frequency monitoring.", "is_correct": false},
+            {"text": "Monitor it only every five minutes as long as the interphone remains monitored continuously.", "is_correct": false}
+          ],
+          "explanation": "At FAA facilities, assigned radio frequencies are continuously monitored, not only when they are busy."
+        }
+      ]
+    },
+    "2-4-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "readback_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "The controller issued this instruction. Which pilot readback is correct?",
+          "clearance": "HOLD SHORT OF RUNWAY ONE EIGHT.",
+          "choices": [
+            {"text": "Hold short of Runway One Eight, Cessna Three Alpha Bravo.", "is_correct": true},
+            {"text": "Roger, Cessna Three Alpha Bravo.", "is_correct": false},
+            {"text": "Hold short of Runway One Seven, Cessna Three Alpha Bravo.", "is_correct": false},
+            {"text": "Cross Runway One Eight, Cessna Three Alpha Bravo.", "is_correct": false}
+          ],
+          "explanation": "Hold short instructions require an accurate readback, and the acknowledgment must identify the aircraft."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot reads back a taxi clearance but omits the hold short instruction and does not identify the aircraft in the acknowledgment.",
+          "para_context": "Ensure items read back are correct, ensure the read back of hold short instructions, and ensure pilots use call signs or registration numbers in any read back acknowledging a clearance or instruction.",
+          "choices": [
+            {"text": "Obtain a correct readback of the hold short instruction and ensure the acknowledgment includes the call sign or registration.", "is_correct": true},
+            {"text": "Accept the acknowledgment because any response shows the pilot heard the instruction.", "is_correct": false},
+            {"text": "Correct only the aircraft identification and ignore the missing hold short readback.", "is_correct": false},
+            {"text": "Wait to see whether the aircraft stops before deciding whether the readback matters.", "is_correct": false}
+          ],
+          "explanation": "The controller must ensure the hold short instruction is read back and that the acknowledgment identifies the aircraft."
+        },
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What should the initial readback of a taxi, departure, or landing clearance include?",
+          "choices": [
+            {"text": "The runway assignment, including left, right, or center when applicable.", "is_correct": true},
+            {"text": "Only the altitude or route numbers, because runway assignment is already understood from the context.", "is_correct": false},
+            {"text": "The word wilco instead of the runway assignment unless the controller asks for the numbers.", "is_correct": false},
+            {"text": "The facility identification before the runway assignment.", "is_correct": false}
+          ],
+          "explanation": "The note under 2-4-3 says the initial readback of a taxi, departure, or landing clearance should include the runway assignment."
+        }
+      ]
+    },
+    "2-4-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may a pilot be authorized to interrupt communications guard?",
+          "choices": [
+            {"text": "As necessary.", "is_correct": true},
+            {"text": "Only after declaring an emergency.", "is_correct": false},
+            {"text": "Only after landing clearance has been issued.", "is_correct": false},
+            {"text": "Only when the pilot is outside controlled airspace.", "is_correct": false}
+          ],
+          "explanation": "Paragraph 2-4-4 authorizes interruption of communications guard as necessary."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot with only one operative communications radio has a safety-related company issue and requests permission to abandon guard for a mutually agreeable period while remaining in contact with ATC on the assigned frequency.",
+          "para_context": "As necessary, authorize a pilot to interrupt communications guard. In the one-radio safety example, the pilot advises ATC which NAVAID voice facility and company frequency will be monitored.",
+          "choices": [
+            {"text": "Authorize the interruption as necessary and ensure the pilot provides the NAVAID voice facility and company frequency to be monitored.", "is_correct": true},
+            {"text": "Deny the request automatically, because guard may never be interrupted once an aircraft is airborne.", "is_correct": false},
+            {"text": "Tell the pilot to leave the assigned ATC frequency instead of guard because ATC can relay any company information later.", "is_correct": false},
+            {"text": "Approve the interruption only if the pilot agrees not to report which company frequency will be monitored.", "is_correct": false}
+          ],
+          "explanation": "The note describes this exact one-radio, safety-related use case and the information the pilot provides."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "If a pilot interrupts guard under the note to 2-4-4, what information should the pilot provide to controllers?",
+          "choices": [
+            {"text": "The NAVAID voice facility and the company frequency the pilot will monitor.", "is_correct": true},
+            {"text": "Only the expected duration, because the monitored frequencies are private company information.", "is_correct": false},
+            {"text": "Only the reason for the interruption, because the monitored frequency does not affect ATC.", "is_correct": false},
+            {"text": "The destination airport and the aircraft's filed alternate.", "is_correct": false}
+          ],
+          "explanation": "The note says the pilot informs controllers of both the NAVAID voice facility and the company frequency to be monitored."
+        }
+      ]
+    },
+    "2-4-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which transmissions are authorized on ATC communications channels?",
+          "choices": [
+            {"text": "Only messages necessary for air traffic control or otherwise contributing to air safety.", "is_correct": true},
+            {"text": "Any operationally interesting information, even if it does not affect ATC or safety.", "is_correct": false},
+            {"text": "Routine company messages whenever the frequency is quiet.", "is_correct": false},
+            {"text": "Administrative traffic if all controllers on the position agree.", "is_correct": false}
+          ],
+          "explanation": "The paragraph limits transmissions to ATC necessity or air-safety contribution."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "The control frequency is quiet. An airline asks you to pass a routine gate-assignment update to one of its aircraft because dispatch cannot reach the crew another way.",
+          "para_context": "Transmit only those messages necessary for air traffic control or otherwise contributing to air safety.",
+          "choices": [
+            {"text": "Do not pass it on ATC frequency unless it is necessary for ATC or contributes to air safety.", "is_correct": true},
+            {"text": "Pass it because any quiet period on the frequency allows non-ATC company traffic.", "is_correct": false},
+            {"text": "Pass it only if the crew first says unable to contact company on another channel.", "is_correct": false},
+            {"text": "Pass it because anything involving an aircraft operator automatically counts as ATC business.", "is_correct": false}
+          ],
+          "explanation": "Frequency quietness is not the standard. Necessity for ATC or air safety is."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "May a message that is not directly part of control instructions still be transmitted if it affects safe flight operations?",
+          "choices": [
+            {"text": "It may be transmitted if it contributes to air safety.", "is_correct": true},
+            {"text": "It may not be transmitted unless it is worded as a clearance.", "is_correct": false},
+            {"text": "It may be transmitted only after the aircraft leaves controlled airspace.", "is_correct": false},
+            {"text": "It may be transmitted only if the pilot specifically requests it by call sign.", "is_correct": false}
+          ],
+          "explanation": "The paragraph expressly allows messages that otherwise contribute to air safety."
+        }
+      ]
+    },
+    "2-4-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which response best matches the required actions when false or deceptive communications occur?",
+          "choices": [
+            {"text": "Correct the false information, alert aircraft in the affected area, collect pertinent information, and notify the operations supervisor.", "is_correct": true},
+            {"text": "Wait for a second false transmission before broadcasting anything so you do not create unnecessary alarm.", "is_correct": false},
+            {"text": "Change only the working frequency and continue normal operations unless a pilot reports confusion.", "is_correct": false},
+            {"text": "Tell aircraft to ignore all ATC instructions until the source is located.", "is_correct": false}
+          ],
+          "explanation": "The paragraph lays out a four-part response: correct, broadcast, collect, and notify."
+        },
+        {
+          "activity_type": "sequence_steps",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Put the false-communication response steps in order.",
+          "steps": [
+            {
+              "id": "correct",
+              "text": "Correct the false information."
+            },
+            {
+              "id": "broadcast",
+              "text": "Broadcast an alert to aircraft operating on all frequencies within the affected area."
+            },
+            {
+              "id": "collect",
+              "text": "Collect pertinent information regarding the incident."
+            },
+            {
+              "id": "notify",
+              "text": "Notify the operations supervisor and report all relevant information pertaining to the incident."
+            }
+          ],
+          "correct_order": [
+            "correct",
+            "broadcast",
+            "collect",
+            "notify"
+          ],
+          "explanation": "The required flow in 2-4-6 is to correct first, then alert aircraft, then collect information, then notify the operations supervisor."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "False ATC instructions have been reported near Long Beach Airport. Build the warning broadcast.",
+          "target_phrase": "ATTENTION ALL AIRCRAFT FALSE ATC INSTRUCTIONS HAVE BEEN RECEIVED IN THE AREA OF LONG BEACH AIRPORT EXERCISE EXTREME CAUTION ON ALL FREQUENCIES AND VERIFY INSTRUCTIONS"
+        }
+      ]
+    },
+    "2-4-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When relaying operational information to an aircraft or aircraft operator, what two limitations apply?",
+          "choices": [
+            {"text": "Give the source of the message and do not agree to handle such relays on a regular basis.", "is_correct": true},
+            {"text": "Give the source only if asked, and handle the relays regularly once the operator has validated them.", "is_correct": false},
+            {"text": "Treat the message as your own and avoid identifying the source to reduce confusion.", "is_correct": false},
+            {"text": "Relay it only if it comes from another ATC facility and never if it comes from an operator.", "is_correct": false}
+          ],
+          "explanation": "Necessary relays are allowed, but the source must be given and regular handling should not be accepted."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "An airline repeatedly asks your position to pass routine operational messages to one of its aircraft whenever dispatch is busy. The controller taking the request wants to just make it a normal service the position provides.",
+          "para_context": "Relay operational information as necessary, do not agree to handle such messages on a regular basis, and give the source of any such message you relay.",
+          "choices": [
+            {"text": "Relay only as necessary, give the source, and do not agree to handle the messages on a regular basis.", "is_correct": true},
+            {"text": "Agree to make it a standard service because the messages are operational and the airline uses your airspace often.", "is_correct": false},
+            {"text": "Refuse every relay request, because controllers may never relay operator-originated information.", "is_correct": false},
+            {"text": "Relay the message but remove the source so the flight crew treats it as direct ATC guidance.", "is_correct": false}
+          ],
+          "explanation": "The paragraph permits necessary relays but expressly forbids agreeing to handle them routinely."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which additional relay categories may be relayed in addition to as-needed operational information for aircraft or operators?",
+          "choices": [
+            {"text": "Official FAA messages as required, and operational information to military aircraft operating on or planning to operate on IRs.", "is_correct": true},
+            {"text": "Only military messages, because official FAA messages must always go by administrative channels.", "is_correct": false},
+            {"text": "Only official FAA messages, because IR-related traffic is handled entirely by flight service.", "is_correct": false},
+            {"text": "Neither of those; 2-4-7 is limited strictly to civil operator traffic.", "is_correct": false}
+          ],
+          "explanation": "Subparagraphs b and c identify those additional relay categories directly."
+        }
+      ]
+    },
+    "2-4-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which sequence matches the standard format for initial radio contact with an aircraft?",
+          "choices": [
+            {"text": "Aircraft identification, ATC unit identification, message if any, and \"over\" if required.", "is_correct": true},
+            {"text": "ATC unit identification, aircraft identification, message if any, and \"over\" if required.", "is_correct": false},
+            {"text": "Message if any, aircraft identification, ATC unit identification, and \"over\" if required.", "is_correct": false},
+            {"text": "Aircraft identification, message if any, ATC unit identification, and \"over\" if required.", "is_correct": false}
+          ],
+          "explanation": "The initial format is listed in that order."
+        },
+        {
+          "activity_type": "sequence_steps",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Put the initial radio-call elements in order.",
+          "steps": [
+            {
+              "id": "aircraft",
+              "text": "Identify the aircraft."
+            },
+            {
+              "id": "unit",
+              "text": "Identify the ATC unit."
+            },
+            {
+              "id": "message",
+              "text": "State the message, if any."
+            },
+            {
+              "id": "over",
+              "text": "Add the word \"over\" if required."
+            }
+          ],
+          "correct_order": [
+            "aircraft",
+            "unit",
+            "message",
+            "over"
+          ],
+          "explanation": "Initial radio contact uses aircraft ID first, then ATC unit ID, then any message, then \"over\" if required."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "On subsequent radio transmissions from the same sector or position, what may be omitted from the format?",
+          "choices": [
+            {"text": "Use the same format, except the identification of the ATC unit may be omitted.", "is_correct": true},
+            {"text": "Use only the message, because the aircraft already knows both the aircraft and unit identifications.", "is_correct": false},
+            {"text": "Omit the aircraft identification but always keep the ATC unit identification.", "is_correct": false},
+            {"text": "Reverse the order so the ATC unit identification comes before the aircraft identification.", "is_correct": false}
+          ],
+          "explanation": "Subsequent transmissions keep the same structure except that the ATC unit identification may be omitted."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "2-4-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When tower positions are combined, which frequency must not be used for airborne communications?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "When tower positions are combined, airborne communications are not conducted on ground control frequency.",
+          "choices": [
+            {"text": "Ground control frequency.", "is_correct": true},
+            {"text": "Local control frequency.", "is_correct": false},
+            {"text": "ATIS frequency.", "is_correct": false},
+            {"text": "Clearance delivery frequency.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Why does 2-4-1 warn against airborne use of a ground control frequency when positions are combined?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note explains that airborne use of a ground control frequency can create interference to or from other towers.",
+          "choices": [
+            {"text": "It can cause interference to other towers or interference to your aircraft from another tower.", "is_correct": true},
+            {"text": "It prevents ATIS from transmitting weather updates.", "is_correct": false},
+            {"text": "It makes all surface-movement instructions invalid until repeated on local control.", "is_correct": false},
+            {"text": "It blocks use of the tower light-gun system.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "When local and ground functions are combined, what frequency setup is recommended and how may ATIS support it?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note recommends combining the functions on local control, and ATIS may be used to specify the desired frequency.",
+          "choices": [
+            {"text": "Combine them on local control and use ATIS to specify the desired frequency.", "is_correct": true},
+            {"text": "Combine them on ground control and use ATIS only for taxi-route changes.", "is_correct": false},
+            {"text": "Keep both frequencies active and use ATIS to tell pilots to pick one at random.", "is_correct": false},
+            {"text": "Move both functions to clearance delivery and use ATIS only for weather dissemination.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-4-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What must be monitored continuously under 2-4-2?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The paragraph requires continuous monitoring of interphones and assigned radio frequencies.",
+          "choices": [
+            {"text": "Interphones and assigned radio frequencies.", "is_correct": true},
+            {"text": "Only primary frequencies that currently have traffic.", "is_correct": false},
+            {"text": "Interphones only, unless the supervisor reassigns a radio frequency.", "is_correct": false},
+            {"text": "Only published frequencies, not discrete ones.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Which facilities are specifically named in the 2-4-2 note as required to monitor all assigned frequencies continuously?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note names all FAA facilities, including RAPCONs and RATCFs.",
+          "choices": [
+            {"text": "All FAA facilities, including RAPCONs and RATCFs.", "is_correct": true},
+            {"text": "Only towers and terminal radar facilities.", "is_correct": false},
+            {"text": "Only ARTCCs that own the frequencies locally.", "is_correct": false},
+            {"text": "Only military-operated FAA contract facilities.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "What caveat does the note to 2-4-2 make for USAF facilities?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note says USAF facilities may not monitor all unpublished discrete frequencies.",
+          "choices": [
+            {"text": "They may not monitor all unpublished discrete frequencies.", "is_correct": true},
+            {"text": "They are exempt from monitoring interphones continuously.", "is_correct": false},
+            {"text": "They may monitor only company frequencies when traffic is light.", "is_correct": false},
+            {"text": "They are prohibited from monitoring any unpublished frequency at all.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-4-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Which readback must controllers specifically ensure under 2-4-3?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Hold short instructions are specifically called out for readback assurance.",
+          "choices": [
+            {"text": "Hold short instructions, whether part of taxi instructions or a LAHSO clearance.", "is_correct": true},
+            {"text": "Every charted altitude in a published procedure.", "is_correct": false},
+            {"text": "Every traffic advisory, even after the pilot reports traffic in sight.", "is_correct": false},
+            {"text": "Every altimeter setting repeated in the ATIS broadcast.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "What should the initial readback of a taxi, departure, or landing clearance include?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note says the initial readback should include the runway assignment, including left, right, or center when applicable.",
+          "choices": [
+            {"text": "The runway assignment, including left, right, or center when applicable.", "is_correct": true},
+            {"text": "Only the call sign and the word wilco.", "is_correct": false},
+            {"text": "The departure frequency before the runway assignment.", "is_correct": false},
+            {"text": "Only the numbers that were not published on a chart.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Until a pilot acknowledges a controller's clearance or instruction, what cannot the controller know?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note explains that until acknowledgment, the controller cannot know whether the pilot will comply or remain as previously cleared.",
+          "choices": [
+            {"text": "Whether the pilot will comply with the clearance or remain as previously cleared.", "is_correct": true},
+            {"text": "Whether the pilot has the destination weather aboard.", "is_correct": false},
+            {"text": "Whether the pilot can hear other aircraft on frequency.", "is_correct": false},
+            {"text": "Whether the pilot has filed an alternate airport.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-4-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When may a pilot be authorized to interrupt communications guard?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "This may be authorized as necessary.",
+          "choices": [
+            {"text": "As necessary.", "is_correct": true},
+            {"text": "Only after the pilot has declared an emergency.", "is_correct": false},
+            {"text": "Only while outside Class A airspace.", "is_correct": false},
+            {"text": "Only after switching off the assigned ATC frequency.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "What one-radio scenario is discussed in the note to 2-4-4?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note addresses a pilot with one operative communications radio who has a safety-related company problem requiring airborne communications.",
+          "choices": [
+            {"text": "A pilot with only one operative communications radio who needs airborne company communications for a safety-related problem.", "is_correct": true},
+            {"text": "A pilot with two radios who wants to monitor guard and company simultaneously for convenience.", "is_correct": false},
+            {"text": "A pilot on the ground who wants to use company frequency before engine start.", "is_correct": false},
+            {"text": "A pilot who wants to leave guard for non-operational passenger service matters.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "If a pilot is approved to interrupt guard under the note to 2-4-4, what should be reported to ATC?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The pilot informs controllers of the NAVAID voice facility and the company frequency to be monitored.",
+          "choices": [
+            {"text": "The NAVAID voice facility and the company frequency the pilot will monitor.", "is_correct": true},
+            {"text": "Only the company's phone number and dispatch office location.", "is_correct": false},
+            {"text": "Only the estimated time away from guard.", "is_correct": false},
+            {"text": "The NAVAID frequency only, because the company frequency is not operationally relevant to ATC.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-4-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What messages may be transmitted under 2-4-5?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Only ATC-necessary or air-safety-contributing messages are authorized.",
+          "choices": [
+            {"text": "Only messages necessary for air traffic control or otherwise contributing to air safety.", "is_correct": true},
+            {"text": "Any message that seems operationally useful to a pilot.", "is_correct": false},
+            {"text": "Any company message when the controller judges the frequency quiet enough.", "is_correct": false},
+            {"text": "Any message if the aircraft operator asks the controller to relay it.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "If a message is not directly part of control instructions but still contributes to air safety, how does 2-4-5 treat it?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The paragraph expressly allows transmissions that otherwise contribute to air safety.",
+          "choices": [
+            {"text": "It may be transmitted.", "is_correct": true},
+            {"text": "It may not be transmitted unless it is rephrased as a clearance.", "is_correct": false},
+            {"text": "It may be transmitted only after obtaining supervisory approval.", "is_correct": false},
+            {"text": "It may be transmitted only if the pilot first requests the information by call sign.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Which situation would violate 2-4-5 if no safety issue exists?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "A routine non-safety company message does not meet the ATC-or-air-safety standard.",
+          "choices": [
+            {"text": "Passing a routine gate-assignment update that does not affect air traffic control or air safety.", "is_correct": true},
+            {"text": "Passing a safety-related operational message.", "is_correct": false},
+            {"text": "Issuing a traffic-control instruction.", "is_correct": false},
+            {"text": "Relaying a message that contributes to the safe conduct of flight.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-4-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "If deceptive or phantom transmissions are being received in an area, what must be broadcast to aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The rule requires an alert to aircraft operating on all frequencies within the affected area.",
+          "choices": [
+            {"text": "An alert on all frequencies within the affected area.", "is_correct": true},
+            {"text": "A warning only on the primary local frequency.", "is_correct": false},
+            {"text": "A request for pilots to ignore all ATC instructions until further notice.", "is_correct": false},
+            {"text": "A notification to company frequencies instead of ATC frequencies.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Which action comes after broadcasting the alert but before notifying the operations supervisor?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The paragraph sequence is correct, broadcast, collect, then notify.",
+          "choices": [
+            {"text": "Collect pertinent information regarding the incident.", "is_correct": true},
+            {"text": "Issue a blanket instruction for all aircraft to squawk standby.", "is_correct": false},
+            {"text": "Terminate radar services in the affected area.", "is_correct": false},
+            {"text": "Direct all aircraft to change to guard frequency.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Complete the prescribed warning phraseology: \"EXERCISE EXTREME CAUTION ON ALL FREQUENCIES AND _____ INSTRUCTIONS.\"",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The published example ends with \"VERIFY INSTRUCTIONS.\"",
+          "choices": [
+            {"text": "VERIFY", "is_correct": true}
+          ]
+        }
+      ]
+    },
+    "2-4-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When relaying operational information to an aircraft or aircraft operator, what must you include?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The controller must give the source of the message.",
+          "choices": [
+            {"text": "The source of the message.", "is_correct": true},
+            {"text": "The controller's operating initials.", "is_correct": false},
+            {"text": "The time the message was approved by dispatch.", "is_correct": false},
+            {"text": "The weather at the receiving aircraft's destination.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "What standing arrangement does 2-4-7 prohibit when handling relayed operational messages?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Controllers are told not to agree to handle such messages on a regular basis.",
+          "choices": [
+            {"text": "Agreeing to handle such messages on a regular basis.", "is_correct": true},
+            {"text": "Relaying official FAA messages as required.", "is_correct": false},
+            {"text": "Relaying operational information when necessary.", "is_correct": false},
+            {"text": "Identifying the source of a relayed message.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Which relay category is specifically authorized under 2-4-7 in addition to as-needed civil operational relays?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The paragraph expressly authorizes relaying official FAA messages and operational information to military aircraft on or planning to operate on IRs.",
+          "choices": [
+            {"text": "Official FAA messages as required.", "is_correct": true},
+            {"text": "Routine airline administrative traffic whenever requested.", "is_correct": false},
+            {"text": "Passenger service information unrelated to flight operations.", "is_correct": false},
+            {"text": "Only company dispatch messages sent over a NAVAID voice facility.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-4-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Which sequence matches the standard format for initial radio contact with an aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The initial format is aircraft identification, ATC unit identification, message if any, and \"over\" if required.",
+          "choices": [
+            {"text": "Aircraft identification, ATC unit identification, message if any, and \"over\" if required.", "is_correct": true},
+            {"text": "ATC unit identification, aircraft identification, message if any, and \"over\" if required.", "is_correct": false},
+            {"text": "Message first, then aircraft identification, then ATC unit identification.", "is_correct": false},
+            {"text": "Aircraft identification, message if any, ATC unit identification, and always \"over.\"", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "On subsequent radio transmissions from the same sector or position, what identification may normally be omitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The subsequent-transmission rule keeps the same format except that the ATC unit identification may be omitted.",
+          "choices": [
+            {"text": "The identification of the ATC unit.", "is_correct": true},
+            {"text": "The identification of the aircraft.", "is_correct": false},
+            {"text": "The message, if it is short.", "is_correct": false},
+            {"text": "The word \"over\" only during approach control operations.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "During what portion of a radar approach may a terminal controller omit aircraft identification after initial contact?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The terminal exception in 2-4-8 allows omission of aircraft identification during the final portion of a radar approach.",
+          "choices": [
+            {"text": "During the final portion of a radar approach.", "is_correct": true},
+            {"text": "As soon as radar contact is established.", "is_correct": false},
+            {"text": "Only after the aircraft reports the runway in sight.", "is_correct": false},
+            {"text": "Only after the aircraft is switched to tower.", "is_correct": false}
+          ]
+        }
+      ]
+    }
+  }
+}

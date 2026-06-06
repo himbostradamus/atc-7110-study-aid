@@ -1,0 +1,763 @@
+{
+  "activities": {
+    "3-12-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When do the sea-lane provisions in this section apply?",
+          "choices": [
+            {
+              "text": "Where sea lanes are established and controlled.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever a seaplane is operating anywhere near an airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Only during daylight VFR operations.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the facility also provides approach control.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The section applies where sea lanes are established and controlled."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this application statement match the rule?",
+          "question_text": "This section applies only where sea lanes are established and controlled.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the full application statement for the section."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which operation falls under this section?",
+          "question_text": "Which situation belongs here?",
+          "choices": [
+            {
+              "text": "A controlled sea lane with established operating procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "Any uncontrolled lake used occasionally by floatplanes.",
+              "is_correct": false
+            },
+            {
+              "text": "A standard runway pattern used by landplanes only.",
+              "is_correct": false
+            },
+            {
+              "text": "An improvised shoreline pickup point with no controlled sea lane.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The section is limited to established and controlled sea lanes."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A controller wants to apply the sea-lane separation rules to an area of open water where floatplanes occasionally operate, even though no sea lane has been established or controlled there.",
+          "para_context": "The provisions of this section apply only where sea lanes are established and controlled.",
+          "choices": [
+            {
+              "text": "Do not apply this section there, because the section is limited to established and controlled sea lanes.",
+              "is_correct": true
+            },
+            {
+              "text": "Apply the section to any body of water whenever a floatplane is present.",
+              "is_correct": false
+            },
+            {
+              "text": "Apply the section only if the pilot requests it by radio.",
+              "is_correct": false
+            },
+            {
+              "text": "Apply the section at night only, because uncontrolled water areas are treated like sea lanes after sunset.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The section does not expand to every water operation. It applies only to established and controlled sea lanes."
+        }
+      ]
+    },
+    "3-12-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Before a departing aircraft may commence takeoff on the same sea lane behind a preceding departure, what must normally occur?",
+          "choices": [
+            {
+              "text": "The preceding departure must cross the end of the sea lane or turn to avert any conflict, unless a listed landmark-distance exception applies.",
+              "is_correct": true
+            },
+            {
+              "text": "The preceding departure only needs to become airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "The succeeding pilot may choose the interval when both aircraft are Category I.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding departure must leave the entire airport traffic area.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The normal release is crossing the end of the sea lane or turning to avert conflict, with listed landmark-distance exceptions if distances can be determined."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which condition allows departure behind a preceding arrival on the same sea lane?",
+          "question_text": "Which condition is sufficient?",
+          "choices": [
+            {
+              "text": "The preceding landing aircraft has taxied out of the sea lane.",
+              "is_correct": true
+            },
+            {
+              "text": "The preceding landing aircraft has come to a stop in the sea lane.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding landing aircraft has crossed midfield.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding landing aircraft has reported slowing on the water.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Behind a preceding arrival, the next departure waits until the landing aircraft has taxied out of the sea lane."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this sea-lane distance minimum correct?",
+          "question_text": "If landmarks let you determine distances and a Category I aircraft is departing behind a Category II aircraft on the same sea lane, the preceding aircraft need only be airborne if at least 3,000 feet exists between the aircraft.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For a Category I aircraft behind a Category II aircraft, the landmark-based departure minimum is 3,000 feet."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this sea-lane departure rule correct?",
+          "question_text": "If suitable landmarks let you determine distances, a preceding departure may need only be airborne rather than beyond the end of the sea lane, provided the required category-based minimum distance exists.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The landmark exception permits release once the preceding departure is airborne, but only if the correct category-based distance exists."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this floatplane note applied correctly?",
+          "question_text": "A floatplane line up and wait instruction should be followed by takeoff clearance or another clearance as soon as practical.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Because floatplanes do not have braking capability like wheeled aircraft, line up and wait should be followed by takeoff or other clearance as soon as practical."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A Category I floatplane is ready to depart behind a Category II departure on the same sea lane. Landmarks allow you to judge distance accurately. The preceding aircraft is airborne but only 2,000 feet ahead. Another controller says that once a seaplane is airborne the next departure can always go.",
+          "para_context": "When landmark distances can be determined, a preceding departure may need only be airborne if the listed category minimum exists. A Category I aircraft behind a Category II aircraft requires 3,000 feet.",
+          "choices": [
+            {
+              "text": "Hold the departure until the preceding aircraft is at least 3,000 feet ahead or otherwise satisfies the normal departure-release condition.",
+              "is_correct": true
+            },
+            {
+              "text": "Release it now because airborne status alone is always enough when landmarks are available.",
+              "is_correct": false
+            },
+            {
+              "text": "Release it now because Category I aircraft may always depart behind Category II at 1,500 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Hold it only if the preceding aircraft is Category III.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The landmark exception still requires the correct category-based distance. Here the required minimum is 3,000 feet, not 2,000."
+        }
+      ]
+    },
+    "3-12-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Before an arriving aircraft crosses the landing threshold on the same sea lane behind another arrival, what must normally occur?",
+          "choices": [
+            {
+              "text": "The other aircraft must have landed and taxied out of the sea lane, unless a listed daylight landmark-distance exception applies.",
+              "is_correct": true
+            },
+            {
+              "text": "The other aircraft only needs to slow to idle on the water.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller may always clear the arrival once the previous aircraft is past midfield.",
+              "is_correct": false
+            },
+            {
+              "text": "The arrival may cross the threshold whenever visibility is more than 3 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The normal rule is that the preceding arrival has landed and taxied out of the sea lane, with listed daylight landmark exceptions."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which condition allows arrival behind a preceding departure on the same sea lane?",
+          "question_text": "Which condition is sufficient?",
+          "choices": [
+            {
+              "text": "The preceding departure has crossed the end of the sea lane or turned to avert any conflict, unless a listed airborne-distance exception applies.",
+              "is_correct": true
+            },
+            {
+              "text": "The preceding departure has merely become airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding departure has switched frequencies.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding departure has passed abeam the dock.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Arrival separation behind a preceding departure normally requires the departure to cross the end of the sea lane or turn to avert conflict."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this sea-lane arrival minimum correct?",
+          "question_text": "The required minimum distance from the landing threshold is 2,500 feet when, between sunrise and sunset, a Category II aircraft is landing behind a Category I or II aircraft that has already landed and landmarks let you determine distance.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For a Category II arrival behind a Category I or II arrival, the daylight landmark minimum is 2,500 feet from the landing threshold."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this daylight landmark rule correct?",
+          "question_text": "If it is between sunrise and sunset, landmarks let you determine distance, and the other aircraft has landed, the other aircraft need not be clear of the sea lane if the required minimum distance from the landing threshold exists.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The daylight landmark exception allows the preceding arrival to remain in the sea lane if the correct threshold distance exists."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this sea-lane arrival distance rule correct?",
+          "question_text": "If landmarks let you determine distance and either the arriving aircraft or the preceding departure is Category III, the minimum distance from the landing threshold must be 6,000 feet when the departure is airborne.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For arrival behind an airborne departure, any Category III involvement requires 6,000 feet from the landing threshold."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A Category II floatplane is arriving behind a Category I aircraft that has landed but is still in the sea lane. It is daytime and landmarks allow accurate distance judgment. The preceding aircraft is 2,100 feet from the landing threshold. Another controller says the arrival can continue because the previous aircraft is on the water and well clear of touchdown speed.",
+          "para_context": "Between sunrise and sunset, if landmarks allow distance judgment and the preceding arrival has landed, a Category II aircraft landing behind a Category I or II requires 2,500 feet from the threshold if the preceding aircraft is still in the sea lane.",
+          "choices": [
+            {
+              "text": "Do not allow the arrival to cross the threshold yet, because the required daylight landmark minimum is 2,500 feet and only 2,100 feet exists.",
+              "is_correct": true
+            },
+            {
+              "text": "Allow the arrival to continue because any landed aircraft on the water is acceptable once landmarks are available.",
+              "is_correct": false
+            },
+            {
+              "text": "Allow the arrival to continue because Category II behind Category I requires only 2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Allow the arrival to continue because threshold spacing matters only behind departures, not behind arrivals.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A Category II aircraft behind a Category I or II arrival needs 2,500 feet from the threshold under the daylight landmark exception."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-12-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When do the sea-lane provisions in this section apply?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The section applies where sea lanes are established and controlled.",
+          "choices": [
+            {
+              "text": "Where sea lanes are established and controlled.",
+              "is_correct": true
+            },
+            {
+              "text": "At any water landing area used by floatplanes.",
+              "is_correct": false
+            },
+            {
+              "text": "Only in daylight.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when no runway is available.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Does this section apply automatically to every uncontrolled body of water used occasionally by seaplanes?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "No. The section is limited to established and controlled sea lanes.",
+          "choices": [
+            {
+              "text": "No.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes.",
+              "is_correct": false
+            },
+            {
+              "text": "Only between sunrise and sunset.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if more than one floatplane is present.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the controlling prerequisite before this section is used?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The sea lane must be both established and controlled.",
+          "choices": [
+            {
+              "text": "The sea lane is established and controlled.",
+              "is_correct": true
+            },
+            {
+              "text": "The floatplane pilot requests the procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "The operation occurs at a towered airport.",
+              "is_correct": false
+            },
+            {
+              "text": "The operation is IFR.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which operation belongs under section 3-12?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The section belongs to established and controlled sea-lane operations.",
+          "choices": [
+            {
+              "text": "An established, controlled sea lane.",
+              "is_correct": true
+            },
+            {
+              "text": "An ad hoc shoreline pickup point with no controlled sea lane.",
+              "is_correct": false
+            },
+            {
+              "text": "A runway used by wheeled aircraft only.",
+              "is_correct": false
+            },
+            {
+              "text": "A floatplane area with no established sea lane procedures.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-12-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Before a departure may commence takeoff on the same sea lane behind a preceding departure, what must normally happen?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The preceding departure normally must cross the end of the sea lane or turn to avert any conflict.",
+          "choices": [
+            {
+              "text": "The preceding departure crosses the end of the sea lane or turns to avert conflict.",
+              "is_correct": true
+            },
+            {
+              "text": "The preceding departure only becomes airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding departure reaches midpoint of the sea lane.",
+              "is_correct": false
+            },
+            {
+              "text": "The succeeding pilot accepts visual separation.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Before a departure may commence takeoff behind a preceding arrival on the same sea lane, what must happen?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The preceding landing aircraft must taxi out of the sea lane.",
+          "choices": [
+            {
+              "text": "The preceding landing aircraft taxis out of the sea lane.",
+              "is_correct": true
+            },
+            {
+              "text": "The preceding landing aircraft comes to a stop.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding landing aircraft reports clear of the airport area.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding landing aircraft is past touchdown point.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If landmarks let you determine distances, what minimum applies when a Category I aircraft departs behind a Category II aircraft on the same sea lane?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That combination requires 3,000 feet.",
+          "choices": [
+            {
+              "text": "3,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "1,500 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "2,500 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "6,000 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If either aircraft is Category III and landmarks let you determine distances, what departure minimum applies on the same sea lane?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Any Category III involvement requires 6,000 feet.",
+          "choices": [
+            {
+              "text": "6,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "3,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "1,500 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What special note applies when you instruct a floatplane to line up and wait?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Because of the lack of braking capability, line up and wait should be followed by takeoff or other clearance as soon as practical.",
+          "choices": [
+            {
+              "text": "Follow it with takeoff or other clearance as soon as practical.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave the aircraft in place until it reports ready a second time.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the aircraft to maintain brakes while holding position.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat it exactly like a wheeled aircraft with no extra caution.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-12-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Before an arrival may cross the landing threshold on the same sea lane behind a preceding arrival, what must normally happen?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The preceding arrival normally must land and taxi out of the sea lane.",
+          "choices": [
+            {
+              "text": "The preceding arrival lands and taxis out of the sea lane.",
+              "is_correct": true
+            },
+            {
+              "text": "The preceding arrival merely lands.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding arrival reports slowing on the water.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding arrival reaches the midpoint of the sea lane.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Before an arrival may cross the landing threshold behind a preceding departure on the same sea lane, what must normally happen?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The preceding departure normally must cross the end of the sea lane or turn to avert conflict.",
+          "choices": [
+            {
+              "text": "The preceding departure crosses the end of the sea lane or turns to avert conflict.",
+              "is_correct": true
+            },
+            {
+              "text": "The preceding departure only becomes airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding departure reaches 500 feet AGL.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding departure reports turning crosswind.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Between sunrise and sunset, if landmarks let you determine distances and a Category II aircraft is landing behind a Category I or II aircraft that has landed, what threshold distance is required if the preceding aircraft remains in the sea lane?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That daylight landmark minimum is 2,500 feet.",
+          "choices": [
+            {
+              "text": "2,500 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "3,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "6,000 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If landmarks let you determine distances and either the arriving aircraft or the preceding departure is Category III, what threshold distance is required when the departure is airborne?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Any Category III involvement requires 6,000 feet from the landing threshold.",
+          "choices": [
+            {
+              "text": "6,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "3,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "2,500 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "1,500 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When does the daylight landmark exception allow a preceding arrival to remain in the sea lane while the next arrival crosses the threshold?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Only between sunrise and sunset, when landmarks allow distance judgment, the other aircraft has landed, and the correct threshold distance exists.",
+          "choices": [
+            {
+              "text": "Between sunrise and sunset, with landmark distance judgment, after the other aircraft has landed, and only if the correct threshold distance exists.",
+              "is_correct": true
+            },
+            {
+              "text": "At any time of day if the other aircraft has landed.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when both aircraft are Category I.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever visibility exceeds 3 miles.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

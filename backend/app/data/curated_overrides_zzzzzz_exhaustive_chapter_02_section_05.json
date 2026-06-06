@@ -1,0 +1,379 @@
+{
+  "activities": {
+    "2-5-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How are ATS route letters spoken when describing a route such as R20 or A50?",
+          "choices": [
+            {"text": "State the route letters phonetically, followed by the route number in group form.", "is_correct": true},
+            {"text": "State the route letters as plain-English letter names, followed by each separate digit.", "is_correct": false},
+            {"text": "State only the route number because the route letters are implied by the chart.", "is_correct": false},
+            {"text": "State the route letters phonetically, then the route number digit by digit.", "is_correct": false}
+          ],
+          "explanation": "ATS route letters are spoken phonetically and the route number is spoken in group form."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "You need to state the route designator for North American Route 67 Bravo. Build the phraseology.",
+          "target_phrase": "NORTH AMERICAN ROUTE SIXTY-SEVEN BRAVO"
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When must the alternate direction be added after a Victor airway number?",
+          "choices": [
+            {"text": "When describing a VOR, VORTAC, or TACAN alternate airway.", "is_correct": true},
+            {"text": "When describing any standard Victor airway, even without an alternate direction.", "is_correct": false},
+            {"text": "Only when the route is a military training route.", "is_correct": false},
+            {"text": "Only when the route number has more than two digits.", "is_correct": false}
+          ],
+          "explanation": "A VOR, VORTAC, or TACAN alternate airway uses Victor, the airway number in group form, and the alternate direction."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A controller wants to clear an aircraft via A50 and plans to say \"A fifty\" because the pilot is domestic and the route appears clearly on the strip.",
+          "para_context": "ATS routes use phonetic route letters followed by the route number in group form. Low-altitude published RNAV routes also use the route letter phonetically followed by the route number in group form.",
+          "choices": [
+            {"text": "State the route letter phonetically, such as \"Alfa Fifty.\"", "is_correct": true},
+            {"text": "Say \"A fifty\" because phonetics are optional for domestic ATS routes.", "is_correct": false},
+            {"text": "Drop the route letter and state only \"Fifty.\"", "is_correct": false},
+            {"text": "Say each numeral separately as \"Alfa five zero.\"", "is_correct": false}
+          ],
+          "explanation": "ATS route letters are spoken phonetically, not as plain letter names."
+        }
+      ]
+    },
+    "2-5-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How should a NAVAID be stated when it is used as a clearance limit and the type is known?",
+          "choices": [
+            {"text": "State the name of the NAVAID followed by the type of NAVAID.", "is_correct": true},
+            {"text": "State only the NAVAID name because the type is always implied.", "is_correct": false},
+            {"text": "State only the location identifier because that is more precise than the name.", "is_correct": false},
+            {"text": "State the NAVAID frequency instead of the NAVAID type.", "is_correct": false}
+          ],
+          "explanation": "When a NAVAID is the clearance limit and the type is known, include the NAVAID type after the name."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "You need to describe a 20-mile arc southwest of Kirksville VOR. Build the phraseology.",
+          "target_phrase": "TWO ZERO MILE ARC SOUTHWEST OF KIRKSVILLE VOR"
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "How must a nondirectional beacon reference be described?",
+          "choices": [
+            {"text": "State the course to or bearing from the beacon, then the beacon name, then the words radio beacon.", "is_correct": true},
+            {"text": "State only the beacon name and the course, because the words radio beacon are redundant.", "is_correct": false},
+            {"text": "State the magnetic heading, the beacon frequency, and the associated airport.", "is_correct": false},
+            {"text": "State the course and the runway served by the beacon.", "is_correct": false}
+          ],
+          "explanation": "Nondirectional beacon references include the course to or bearing from the beacon, the beacon name, and the words radio beacon."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You are issuing a clearance limit to Grand Rapids, and the type of NAVAID is known. Another controller says just saying \"Grand Rapids\" is enough because the pilot will know which facility you mean.",
+          "para_context": "When a NAVAID is used as a clearance limit, state the name of the NAVAID followed by the type of NAVAID if the type is known.",
+          "choices": [
+            {"text": "State the NAVAID name followed by the type, such as \"Grand Rapids VOR.\"", "is_correct": true},
+            {"text": "State only \"Grand Rapids\" because a known fix name never needs the type.", "is_correct": false},
+            {"text": "State only the location identifier because it is shorter than the NAVAID name.", "is_correct": false},
+            {"text": "Avoid using the NAVAID at all and substitute the nearest airport name.", "is_correct": false}
+          ],
+          "explanation": "A clearance limit uses the NAVAID name and type when the type is known."
+        }
+      ]
+    },
+    "2-5-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How should an unnamed fix based on a radial and distance be described?",
+          "choices": [
+            {"text": "State the NAVAID name, the specified radial, localizer, or azimuth, the distance in miles, and the phrase mile fix.", "is_correct": true},
+            {"text": "State only the airway crossing nearest the fix and let the pilot infer the rest.", "is_correct": false},
+            {"text": "State the airport name and the mileage from the field without the NAVAID reference.", "is_correct": false},
+            {"text": "State the NAVAID name and the mileage only, because the radial is optional.", "is_correct": false}
+          ],
+          "explanation": "An unnamed fix uses the NAVAID name, the specified radial, localizer, or azimuth, the mileage, and the words mile fix."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "You need to state the Appleton 050 radial 37-mile fix. Build the fix description.",
+          "target_phrase": "APPLETON ZERO FIVE ZERO RADIAL THREE SEVEN MILE FIX"
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "If a fix is charted on a SID, STAR, en route chart, or approach plate, how must it be stated?",
+          "choices": [
+            {"text": "State the name of the fix.", "is_correct": true},
+            {"text": "State the nearest airway and mileage from the NAVAID.", "is_correct": false},
+            {"text": "State the NAVAID name and radial even when the fix name is charted.", "is_correct": false},
+            {"text": "State the runway associated with the procedure first.", "is_correct": false}
+          ],
+          "explanation": "When the fix is charted, use the fix name rather than restating the underlying radial-and-distance components."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A controller says an aircraft is \"passing Victor Twelve\" to describe the aircraft's position relative to a fix on the route.",
+          "para_context": "Use specific terms to describe a fix. Do not use expressions such as passing Victor Twelve or passing J Eleven.",
+          "choices": [
+            {"text": "Use a specific fix description or the charted fix name instead of saying \"passing Victor Twelve.\"", "is_correct": true},
+            {"text": "Keep using the airway name because it is shorter than a fix description.", "is_correct": false},
+            {"text": "Use only the mileage from the departure airport and omit the fix reference.", "is_correct": false},
+            {"text": "Describe the position by sector boundary instead of by fix.", "is_correct": false}
+          ],
+          "explanation": "A route name is not a substitute for a specific fix description."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "2-5-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "How is a named route such as NAR 67B stated?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Named routes are stated as North American Route or Bahama Route followed by the route number in group form.",
+          "choices": [
+            {"text": "North American Route Sixty-Seven Bravo.", "is_correct": true},
+            {"text": "NAR Six Seven Bravo.", "is_correct": false},
+            {"text": "North American Route Six Seven Bravo.", "is_correct": false},
+            {"text": "November Alfa Romeo Sixty-Seven Bravo.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Complete the prescribed route designator: \"NORTH AMERICAN ROUTE SIXTY-SEVEN _____.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The approved named-route example is North American Route Sixty-Seven Bravo.",
+          "choices": [
+            {"text": "BRAVO", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "How is low-altitude published RNAV route T210 stated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Low-altitude published RNAV routes use the route letter phonetically followed by the number in group form.",
+          "choices": [
+            {"text": "Tango Two Ten.", "is_correct": true},
+            {"text": "T Two One Zero.", "is_correct": false},
+            {"text": "Tango Two One Zero.", "is_correct": false},
+            {"text": "Tee Two Ten.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Published high-altitude RNAV routes are stated with the letter Q followed by the route number in group form.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "High-altitude published RNAV routes use the letter Q followed by the route number in group form.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "How should IR 531 be spoken?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Military training routes use the letters I-R or V-R followed by the route number in group form.",
+          "choices": [
+            {"text": "I-R Five Thirty-One.", "is_correct": true},
+            {"text": "I R Five Three One.", "is_correct": false},
+            {"text": "India Romeo Five Thirty-One.", "is_correct": false},
+            {"text": "I-R Five Three One.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-5-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When a NAVAID is used as a clearance limit and the type is known, how should it be stated?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "A clearance-limit NAVAID uses the name followed by the NAVAID type if the type is known.",
+          "choices": [
+            {"text": "State the NAVAID name followed by the type of NAVAID.", "is_correct": true},
+            {"text": "State only the NAVAID name.", "is_correct": false},
+            {"text": "State only the NAVAID frequency.", "is_correct": false},
+            {"text": "State the associated airport name instead of the NAVAID name.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Complete the clearance-limit phraseology: \"CLEARED TO GRAND RAPIDS _____.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The approved example is Cleared to Grand Rapids VOR.",
+          "choices": [
+            {"text": "VOR", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "How is a 20-mile arc southwest of Kirksville VOR described?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Arcs use the distance in miles, the words mile arc, the compass direction from the NAVAID, the word of, and the NAVAID name.",
+          "choices": [
+            {"text": "Two Zero mile arc southwest of Kirksville VOR.", "is_correct": true},
+            {"text": "Kirksville VOR southwest arc two zero miles.", "is_correct": false},
+            {"text": "Southwest Kirksville arc twenty miles VOR.", "is_correct": false},
+            {"text": "Kirksville two zero southwest radial arc.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "How is a quadrant within a radius of a NAVAID described?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "State the quadrant direction and the distance in miles from the NAVAID.",
+          "choices": [
+            {"text": "State the direction from the NAVAID in terms of the quadrant, followed by the distance in miles from the NAVAID.", "is_correct": true},
+            {"text": "State the runway served by the NAVAID and the mileage from the airport.", "is_correct": false},
+            {"text": "State the NAVAID frequency, then the inbound course, then the mileage.", "is_correct": false},
+            {"text": "State only the distance, because the quadrant is implied by the fix name.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "A nondirectional beacon reference may omit the words radio beacon if the beacon name is already obvious.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Nondirectional beacon references include the words radio beacon.",
+          "choices": [
+            {"text": "True", "is_correct": false},
+            {"text": "False", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "When a NAVAID is used in routing, what may be stated for the NAVAID reference?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Routing may use the NAVAID name or the phonetic alphabet equivalent of the location identifier.",
+          "choices": [
+            {"text": "The NAVAID name or the phonetic alphabet equivalent of its location identifier.", "is_correct": true},
+            {"text": "Only the associated airport name.", "is_correct": false},
+            {"text": "Only the NAVAID frequency.", "is_correct": false},
+            {"text": "Only the airway number that crosses the NAVAID.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-5-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "If a fix is not named, how should it be stated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "An unnamed fix uses the NAVAID name, the specified radial, localizer, or azimuth, the distance in miles, and the phrase mile fix.",
+          "choices": [
+            {"text": "State the NAVAID name, the specified radial, localizer, or azimuth, the distance in miles, and the phrase mile fix.", "is_correct": true},
+            {"text": "State only the mileage from the airport because the NAVAID reference is optional.", "is_correct": false},
+            {"text": "State the airway identifier and the mileage from the NAVAID.", "is_correct": false},
+            {"text": "State the chart name instead of the NAVAID reference.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Complete the unnamed-fix phraseology: \"APPLETON ZERO FIVE ZERO RADIAL THREE SEVEN MILE _____.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The approved unnamed-fix phrase ends with mile fix.",
+          "choices": [
+            {"text": "FIX", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "If a fix is charted on a SID, STAR, en route chart, or approach plate, how should it be described?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "A charted fix is described by its fix name.",
+          "choices": [
+            {"text": "State the name of the fix.", "is_correct": true},
+            {"text": "State the NAVAID name and radial even if the fix name is published.", "is_correct": false},
+            {"text": "State the airway number the fix lies on.", "is_correct": false},
+            {"text": "State the nearest airport name and distance.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "It is acceptable to describe a fix by saying \"passing Victor Twelve\" if the pilot and controller both know the route.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Use specific fix terms instead of expressions such as passing Victor Twelve or passing J Eleven.",
+          "choices": [
+            {"text": "True", "is_correct": false},
+            {"text": "False", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "Which transmission correctly states an unnamed localizer-based fix?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "A localizer-based unnamed fix states the localizer or azimuth, the distance in miles, and the phrase mile fix.",
+          "choices": [
+            {"text": "Reno localizer back course Four mile fix.", "is_correct": true},
+            {"text": "Reno Four mile localizer back course.", "is_correct": false},
+            {"text": "Four mile fix off Reno airway.", "is_correct": false},
+            {"text": "Reno localizer four miles to the runway.", "is_correct": false}
+          ]
+        }
+      ]
+    }
+  }
+}

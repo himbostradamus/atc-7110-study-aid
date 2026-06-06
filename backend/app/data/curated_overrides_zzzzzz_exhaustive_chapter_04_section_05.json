@@ -1,0 +1,2322 @@
+{
+  "activities": {
+    "4-5-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What vertical separation normally applies up to and including FL410?",
+          "choices": [
+            {
+              "text": "1,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "3,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "4,000 feet.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The basic vertical separation minimum through FL410 is 1,000 feet."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this vertical-separation rule correct?",
+          "question_text": "At or above FL290, 2,000 feet must be applied between a non-RVSM aircraft and any other aircraft at or above FL290.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When a non-RVSM aircraft is involved at or above FL290, the vertical minimum is 2,000 feet."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this exception applied correctly?",
+          "question_text": "If a supersonic aircraft and any other aircraft are in oceanic airspace above FL450, apply 4,000 feet of vertical separation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The oceanic supersonic exception requires 4,000 feet above FL450."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which separation value is correct here?",
+          "question_text": "Above FL600, what vertical separation applies between military aircraft?",
+          "choices": [
+            {
+              "text": "5,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "3,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "4,000 feet.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Above FL600, military aircraft use 5,000 feet vertical separation."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the correct control action.",
+          "situation": "A non-RVSM aircraft at FL330 will pass another aircraft at FL340.",
+          "para_context": "Normal vertical separation through FL410 is 1,000 feet, but once a non-RVSM aircraft is involved at or above FL290, 2,000 feet is required from all other aircraft at or above FL290.",
+          "choices": [
+            {
+              "text": "The plan is not legal because 1,000 feet is not enough once a non-RVSM aircraft is involved at or above FL290.",
+              "is_correct": true
+            },
+            {
+              "text": "The plan is legal because 1,000 feet is always enough below FL410.",
+              "is_correct": false
+            },
+            {
+              "text": "The plan is legal if both aircraft are in radar contact.",
+              "is_correct": false
+            },
+            {
+              "text": "The plan is legal if the pilot of the non-RVSM aircraft accepts it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "At or above FL290, a non-RVSM aircraft requires 2,000 feet from all other aircraft at or above FL290."
+        }
+      ]
+    },
+    "4-5-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "At and below FL410, what altitude pattern applies on magnetic courses from 0 through 179 degrees?",
+          "choices": [
+            {
+              "text": "Odd cardinal altitudes or flight levels at 2,000-foot intervals.",
+              "is_correct": true
+            },
+            {
+              "text": "Even cardinal altitudes or flight levels at 2,000-foot intervals.",
+              "is_correct": false
+            },
+            {
+              "text": "Any altitude if the aircraft is radar identified.",
+              "is_correct": false
+            },
+            {
+              "text": "Only block altitudes.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Courses from 0 through 179 degrees take odd cardinal altitudes or flight levels at and below FL410."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use the altitude-assignment table.",
+          "question_text": "An aircraft at FL370 is on a magnetic course of 250 degrees. Which assignment follows the table?",
+          "choices": [
+            {
+              "text": "FL380.",
+              "is_correct": true
+            },
+            {
+              "text": "FL370.",
+              "is_correct": false
+            },
+            {
+              "text": "FL390.",
+              "is_correct": false
+            },
+            {
+              "text": "FL410 only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "At and below FL410, courses from 180 through 359 degrees use even cardinal flight levels."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which assignment belongs to this exception?",
+          "question_text": "For a one-way route above FL410, which flight level fits the table's exception pattern?",
+          "choices": [
+            {
+              "text": "FL450.",
+              "is_correct": true
+            },
+            {
+              "text": "FL440.",
+              "is_correct": false
+            },
+            {
+              "text": "FL420.",
+              "is_correct": false
+            },
+            {
+              "text": "FL460.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "On one-way routes, any odd cardinal flight level above FL410 may be assigned."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this table rule correct?",
+          "question_text": "If an aircraft is below 3,000 feet above the surface, any course may be assigned any altitude.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The table permits any altitude below 3,000 feet above the surface regardless of course."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the correct assignment.",
+          "situation": "A non-ALTRV aircraft is eastbound at FL430.",
+          "para_context": "Above FL410, eastbound traffic uses odd cardinal flight levels beginning with FL450 unless a stated table exception applies.",
+          "choices": [
+            {
+              "text": "FL450.",
+              "is_correct": true
+            },
+            {
+              "text": "FL430.",
+              "is_correct": false
+            },
+            {
+              "text": "FL470 only if the route is one way.",
+              "is_correct": false
+            },
+            {
+              "text": "FL440.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Above FL410, courses from 0 through 179 degrees use odd cardinal flight levels beginning with FL450."
+        }
+      ]
+    },
+    "4-5-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "If traffic conditions are the reason for using a random altitude and the aircraft will proceed beyond your facility, what must exist?",
+          "choices": [
+            {
+              "text": "A letter of agreement covering the specific operations and procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "Only pilot acceptance of the random altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "A verbal agreement with the destination tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing beyond local sector approval.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Traffic-based random altitude assignments beyond the facility require LOA coverage."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which reason is authorized here?",
+          "question_text": "Which reason may justify disregarding the normal flight-direction altitude rule?",
+          "choices": [
+            {
+              "text": "Mission requirements when the aircraft is operating on an MTR.",
+              "is_correct": true
+            },
+            {
+              "text": "Any pilot preference for a smoother ride.",
+              "is_correct": false
+            },
+            {
+              "text": "A request to save fuel on a normal route without approvals.",
+              "is_correct": false
+            },
+            {
+              "text": "Any late arrival to the airport.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Mission requirements are an exception only when the aircraft is operating on an MTR."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this approval requirement correct?",
+          "question_text": "When meteorological conditions are the reason for the exception, you must obtain prior approval from affected positions or sectors within the facility and, if necessary, from the adjacent facility concerned.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Weather-based random altitude assignments require those prior approvals."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this mission-rule statement correct?",
+          "question_text": "For mission requirements, the exception may be used only when the aircraft is operating on an MTR.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Mission requirements are limited to MTR operations."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the correct control action.",
+          "situation": "A pilot says the only appropriate direction-of-flight altitude exceeds the aircraft's operational limitations.",
+          "para_context": "Operational-limitation use of the random-altitude exception still requires the stated prior approvals from affected positions or sectors and, if necessary, the adjacent facility concerned.",
+          "choices": [
+            {
+              "text": "Obtain prior approval from affected positions or sectors within the facility and, if necessary, from the adjacent facility concerned.",
+              "is_correct": true
+            },
+            {
+              "text": "Assign the requested altitude immediately because operational limitations always control.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to remain VFR instead.",
+              "is_correct": false
+            },
+            {
+              "text": "Only notify the adjacent facility after the aircraft has passed the boundary.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Operational-limitation use of the exception still requires the stated prior approvals."
+        }
+      ]
+    },
+    "4-5-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When do you use the lowest-usable-flight-level table?",
+          "choices": [
+            {
+              "text": "When a pressure change affects a usable flight level in your area and you need to clear aircraft at or above 18,000 feet MSL.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time an aircraft requests a higher altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Only in Class A terminal airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the altimeter is above 29.92.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The table is used when pressure changes affect usable flight levels at or above 18,000 feet MSL."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use the lowest-usable-flight-level table.",
+          "question_text": "If the altimeter setting is 29.91, what is the lowest usable flight level?",
+          "choices": [
+            {
+              "text": "FL190.",
+              "is_correct": true
+            },
+            {
+              "text": "FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "FL200.",
+              "is_correct": false
+            },
+            {
+              "text": "FL210.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "An altimeter setting from 29.91 through 28.92 makes FL190 the lowest usable flight level."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this table reading correct?",
+          "question_text": "With an altimeter setting of 29.92 or higher, FL180 is the lowest usable flight level.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "FL180 remains usable when the altimeter is 29.92 or higher."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the correct assignment judgment.",
+          "situation": "The altimeter setting is 28.70 and an aircraft is being cleared at or above 18,000 feet MSL.",
+          "para_context": "The lowest usable flight level comes from the altimeter-setting table. Settings from 28.91 through 27.92 make FL200 the lowest usable flight level.",
+          "choices": [
+            {
+              "text": "FL200.",
+              "is_correct": true
+            },
+            {
+              "text": "FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "FL190.",
+              "is_correct": false
+            },
+            {
+              "text": "FL210.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Altimeter settings from 28.91 through 27.92 require FL200 as the lowest usable flight level."
+        }
+      ]
+    },
+    "4-5-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When is an adjusted minimum flight level required?",
+          "choices": [
+            {
+              "text": "When the minimum IFR altitude is at or above 18,000 feet MSL and the altimeter is below 29.92.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever any aircraft climbs above 10,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft is outside radar coverage.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for military aircraft.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is when the adjustment table must be applied."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use the minimum-flight-level-adjustment table.",
+          "question_text": "What adjustment factor applies when the altimeter setting is 29.55?",
+          "choices": [
+            {
+              "text": "500 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "None.",
+              "is_correct": false
+            },
+            {
+              "text": "1,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "1,500 feet.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Altimeter settings from 29.91 through 29.42 require a 500-foot adjustment."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this table reading correct?",
+          "question_text": "When the altimeter setting is 29.10, you must add 1,000 feet to the flight-level equivalent of the minimum altitude.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Altimeter settings from 29.41 through 28.92 correspond to a 1,000-foot adjustment."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which adjustment is correct?",
+          "question_text": "If the altimeter setting is 28.30, what adjustment factor applies?",
+          "choices": [
+            {
+              "text": "2,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "1,500 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "1,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "500 feet.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Altimeter settings from 28.41 through 27.92 require a 2,000-foot adjustment."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the correct adjusted flight level.",
+          "situation": "The minimum IFR altitude is 18,000 feet MSL and the altimeter setting is 29.35.",
+          "para_context": "When the minimum IFR altitude is at or above 18,000 feet MSL and the altimeter is below 29.92, add the table's adjustment factor to the flight-level equivalent.",
+          "choices": [
+            {
+              "text": "FL190.",
+              "is_correct": true
+            },
+            {
+              "text": "FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "FL185.",
+              "is_correct": false
+            },
+            {
+              "text": "FL200.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A 1,000-foot adjustment is added to the FL180 equivalent, producing FL190."
+        }
+      ]
+    },
+    "4-5-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the basic altitude rule when an MEA exists on the route segment being flown?",
+          "choices": [
+            {
+              "text": "Assign at or above the MEA unless one of the paragraph's specific exceptions applies.",
+              "is_correct": true
+            },
+            {
+              "text": "Assign any altitude above the MOCA without conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign below the MEA whenever the pilot requests it.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign below the MEA whenever radar contact exists, regardless of route type.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The default rule is to assign at or above the MEA unless a listed exception applies."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this radar-procedure requirement correct?",
+          "question_text": "If radar procedures are used and no MOCA is published, any altitude assigned below the MEA must still be at or above the MVA or MIA along the route, and lost communications instructions must be issued.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the required protections when using the radar-procedure option below the MEA."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this mileage limit correct?",
+          "question_text": "An aircraft using VOR, VORTAC, or TACAN for navigation may be cleared below the MEA but not below the MOCA only within 22 miles of that NAVAID.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The VOR/VORTAC/TACAN exception is limited to within 22 miles of the NAVAID."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which condition allows below-MEA operation here?",
+          "question_text": "Which condition alone allows below-MEA but not below-MOCA operation?",
+          "choices": [
+            {
+              "text": "The aircraft is GNSS equipped.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot promises to climb if coverage becomes weak.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft is on a one-way route.",
+              "is_correct": false
+            },
+            {
+              "text": "The route segment contains an unpublished fix.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "GNSS equipment is one of the listed conditions for clearing below the MEA but not below the MOCA."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this climb-trigger rule correct?",
+          "question_text": "If a higher MEA begins at a fix and no MCA is specified, the aircraft must be cleared to begin climb prior to or immediately after passing that fix.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Without an MCA, the climb must begin prior to or immediately after passing the fix where the higher MEA starts."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "Choose the correct control action.",
+          "situation": "An aircraft is on a segment with a higher MEA ahead, and an MCA is published at the fix.",
+          "para_context": "If a higher MEA begins at a fix and an MCA is specified, the aircraft must be cleared to begin climb before the fix so it crosses that fix at or above the MCA.",
+          "choices": [
+            {
+              "text": "Clear the aircraft to begin climb prior to the fix so it crosses the fix at or above the MCA.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the aircraft is past the fix, then issue the climb.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the climb only after the pilot asks for it.",
+              "is_correct": false
+            },
+            {
+              "text": "Keep the aircraft at the lower altitude until the next sector assumes control.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When an MCA is specified, the climb must be started before the fix so the aircraft crosses at or above the MCA."
+        }
+      ]
+    },
+    "4-5-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "When issuing cruise with an airport clearance limit and an unpublished route, what is normally required?",
+          "choices": [
+            {
+              "text": "An appropriate crossing altitude that ensures IFR obstruction clearance until the aircraft reaches a fix, point, or route where altitude information is available.",
+              "is_correct": true
+            },
+            {
+              "text": "No crossing altitude if the aircraft is above 10,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Only a speed restriction.",
+              "is_correct": false
+            },
+            {
+              "text": "A block altitude instead of a crossing altitude.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That crossing altitude preserves IFR obstruction clearance until the aircraft reaches an area where the pilot has usable altitude information."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this time-restriction rule correct?",
+          "question_text": "A UTC time check must accompany a climb or descent clearance that uses a clock time restriction unless the clearance is issued by CPDLC or, while in radar contact and direct two-way VHF/UHF voice communication, you use an elapsed-time restriction in full-minute increments.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is how the paragraph distinguishes clock-time restrictions from elapsed-time restrictions."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "Which vertical-navigation statement is correct?",
+          "question_text": "Which use of descend-via phraseology is correct when clearing direct to a waypoint without a published altitude on the STAR?",
+          "choices": [
+            {
+              "text": "Assign a crossing altitude at that fix, then issue the descend-via clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Use descend-via immediately with no altitude assignment because the pilot will choose one.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel all published restrictions and issue only a speed restriction.",
+              "is_correct": false
+            },
+            {
+              "text": "Use descend-via only after the aircraft reaches the runway transition.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If you clear direct to a waypoint without a published altitude, you must assign a crossing altitude before using descend via."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "An arrival must cross JONES at or above 11,000 feet. Build the crossing restriction.",
+          "target_phrase": "CROSS JONES AT OR ABOVE ONE ONE THOUSAND",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"CROSS JONES AT OR ABOVE ONE ONE THOUSAND.\"",
+          "word_bank": [
+            "ABOVE",
+            "AT",
+            "BELOW",
+            "CROSS",
+            "ELEVEN",
+            "JONES",
+            "ONE",
+            "ONE",
+            "OR",
+            "THOUSAND"
+          ],
+          "correct_sequence": [
+            3,
+            5,
+            1,
+            8,
+            0,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "One word in this phraseology is incorrect. Tap it.",
+          "original_phrase": "AMERICAN EIGHTY THREE, AMEND ALTITUDE, DESCEND AND MAINTAIN FLIGHT LEVEL TWO SIX ZERO.",
+          "display_text": "AMERICAN EIGHTY THREE AMEND HEADING DESCEND AND MAINTAIN FLIGHT LEVEL TWO SIX ZERO",
+          "tokens": [
+            "AMERICAN",
+            "EIGHTY",
+            "THREE",
+            "AMEND",
+            "HEADING",
+            "DESCEND",
+            "AND",
+            "MAINTAIN",
+            "FLIGHT",
+            "LEVEL",
+            "TWO",
+            "SIX",
+            "ZERO"
+          ],
+          "error_index": 4,
+          "correct_token": "ALTITUDE",
+          "explanation": "When canceling the pilot's-discretion portion by assigning a new altitude, the controller must state that the new altitude is an amended altitude."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "Choose the correct control action.",
+          "situation": "An aircraft was climbing via a SID to an interim altitude of 10,000 feet. After departure, you can now clear it to the originally published top altitude on that SID.",
+          "para_context": "When an aircraft has an interim altitude and can later be returned to the original top altitude on a SID with published crossing restrictions, the clearance is restated as climb via SID.",
+          "choices": [
+            {
+              "text": "Climb via SID.",
+              "is_correct": true
+            },
+            {
+              "text": "Resume own navigation, maintain one zero thousand.",
+              "is_correct": false
+            },
+            {
+              "text": "Climb and maintain the published top altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Proceed direct the first fix and maintain one zero thousand.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If ATC can subsequently clear the aircraft to the original top altitude on the SID, the correct restatement is \"climb via SID.\""
+        }
+      ]
+    },
+    "4-5-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What should be done if practicable when an aircraft cannot yet be climbed or descended?",
+          "choices": [
+            {
+              "text": "Tell the aircraft when to expect higher or lower, or when to request the altitude change from another facility.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait silently until the next clearance can be issued.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a random altitude without explanation.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to choose the next altitude and advise later.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If practicable, the pilot should be told when to expect higher or lower, or when to request the change from another facility."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "The aircraft should be told to expect a higher altitude in 20 miles. Build the phraseology.",
+          "target_phrase": "EXPECT HIGHER IN TWO ZERO MILES",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"EXPECT HIGHER IN TWO ZERO MILES.\"",
+          "word_bank": [
+            "EXPECT",
+            "HIGHER",
+            "IN",
+            "LOWER",
+            "MILES",
+            "TWO",
+            "ZERO"
+          ],
+          "correct_sequence": [
+            0,
+            1,
+            2,
+            5,
+            6,
+            4
+          ]
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which phraseology option is correct?",
+          "question_text": "Which transmission correctly tells the pilot to request the altitude change from the next facility at a fix?",
+          "choices": [
+            {
+              "text": "Request altitude change from Kansas City Center at BUM.",
+              "is_correct": true
+            },
+            {
+              "text": "Descend at pilot's discretion whenever ready.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel IFR if unable the next altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Resume own navigation and choose the next flight level.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "This paragraph supports either an expect-higher/lower advisory or a request-altitude-change advisory from another facility."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the correct advisory.",
+          "situation": "You cannot climb the aircraft yet, but you expect to do so 10 miles ahead.",
+          "para_context": "If practicable, advise the aircraft when to expect higher or lower, or when to request the altitude change from another facility.",
+          "choices": [
+            {
+              "text": "Tell the aircraft to expect higher in 10 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue a block altitude without explanation.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay any information until the next controller takes the aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to request a climb from no one in particular.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If practicable, this paragraph calls for advising when to expect the climb or descent."
+        }
+      ]
+    },
+    "4-5-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "When should a pilot normally be asked to confirm assigned altitude in nonradar operations?",
+          "choices": [
+            {
+              "text": "On initial contact and when position reports are received, unless one of the stated exceptions applies.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after a handoff from another ARTCC.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft is level at a flight level.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot volunteers the altitude first.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the default altitude-confirmation rule in nonradar operations."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which case is an exception?",
+          "question_text": "Which case is an exception to the initial-contact altitude-verification requirement?",
+          "choices": [
+            {
+              "text": "A terminal aircraft transferred to you from another sector or position within your facility.",
+              "is_correct": true
+            },
+            {
+              "text": "An aircraft leaving your airspace for another center.",
+              "is_correct": false
+            },
+            {
+              "text": "Any aircraft above the lowest usable flight level.",
+              "is_correct": false
+            },
+            {
+              "text": "Any aircraft receiving a position report from FSS.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "An intrafacility transfer inside a terminal facility is a stated exception."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this USA readback rule correct?",
+          "question_text": "In the USA, all pilot altitude readbacks must be reconfirmed.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph explicitly requires reconfirmation of all pilot altitude readbacks in USA operations."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "A nonradar aircraft is assigned FL330 and you need it to verify that flight level. Build the phraseology.",
+          "target_phrase": "VERIFY ASSIGNED FLIGHT LEVEL THREE THREE ZERO",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"VERIFY ASSIGNED FLIGHT LEVEL THREE THREE ZERO.\"",
+          "word_bank": [
+            "ALTITUDE",
+            "ASSIGNED",
+            "FLIGHT",
+            "LEVEL",
+            "THREE",
+            "THREE",
+            "VERIFY",
+            "ZERO"
+          ],
+          "correct_sequence": [
+            6,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "activity_type": "readback_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "The pilot's altitude readback is correct. Which controller response is correct?",
+          "clearance": "VERIFY ASSIGNED ALTITUDE SIX THOUSAND.",
+          "choices": [
+            {
+              "text": "Affirmative six thousand.",
+              "is_correct": true
+            },
+            {
+              "text": "Roger altitude six thousand.",
+              "is_correct": false
+            },
+            {
+              "text": "Maintain at or above six thousand.",
+              "is_correct": false
+            },
+            {
+              "text": "Negative six thousand.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If the altitude readback is correct, the controller reconfirms with \"AFFIRMATIVE (altitude).\""
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the correct phraseology judgment.",
+          "situation": "A climbing nonradar aircraft has been assigned 17,000 feet, which is below the lowest usable flight level.",
+          "para_context": "Below the lowest usable flight level, the controller verifies the assigned altitude rather than the assigned flight level.",
+          "choices": [
+            {
+              "text": "Verify assigned altitude one seven thousand.",
+              "is_correct": true
+            },
+            {
+              "text": "Verify assigned flight level one seven zero.",
+              "is_correct": false
+            },
+            {
+              "text": "Verify at flight level one seven zero.",
+              "is_correct": false
+            },
+            {
+              "text": "Affirmative one seven thousand.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Below the lowest usable flight level, the controller verifies the assigned altitude, not a flight level."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "4-5-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What vertical separation normally applies to IFR aircraft up to and including FL410?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The normal vertical minimum through FL410 is 1,000 feet.",
+          "choices": [
+            {
+              "text": "1,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "3,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "4,000 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Above FL410, the basic vertical separation standard is 2,000 feet unless a listed exception applies.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Above FL410, 2,000 feet is the standard minimum unless one of the exceptions applies.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At or above FL290, what separation applies between a non-RVSM aircraft and any other aircraft at or above FL290?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That case requires 2,000 feet.",
+          "choices": [
+            {
+              "text": "2,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "1,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "3,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "4,000 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "In oceanic airspace above FL450, what vertical separation applies between a supersonic aircraft and any other aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The oceanic supersonic exception uses 4,000 feet.",
+          "choices": [
+            {
+              "text": "4,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "1,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "5,000 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Above FL600 between military aircraft, what vertical minimum applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Military aircraft above FL600 use 5,000 feet vertical separation.",
+          "choices": [
+            {
+              "text": "5,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "4,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "3,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "2,000 feet.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "At and below FL410, what altitude pattern applies on magnetic courses from 0 through 179 degrees?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "table",
+          "generation_source": "curated",
+          "explanation": "Those courses use odd cardinal altitudes or flight levels.",
+          "choices": [
+            {
+              "text": "Odd cardinal altitudes or flight levels.",
+              "is_correct": true
+            },
+            {
+              "text": "Even cardinal altitudes or flight levels.",
+              "is_correct": false
+            },
+            {
+              "text": "Any altitude if radar identified.",
+              "is_correct": false
+            },
+            {
+              "text": "Only block altitudes.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At and below FL410, courses from 180 through 359 degrees take even cardinal altitudes or flight levels.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "table",
+          "generation_source": "curated",
+          "explanation": "The table assigns even cardinal altitudes or flight levels to 180 through 359 degree courses at and below FL410.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Above FL410, which eastbound flight level matches the direction table?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "table",
+          "generation_source": "curated",
+          "explanation": "Eastbound above FL410 uses odd cardinal flight levels beginning with FL450.",
+          "choices": [
+            {
+              "text": "FL450.",
+              "is_correct": true
+            },
+            {
+              "text": "FL430.",
+              "is_correct": false
+            },
+            {
+              "text": "FL440.",
+              "is_correct": false
+            },
+            {
+              "text": "FL420.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Below 3,000 feet above the surface, any course may be assigned any altitude.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "table",
+          "generation_source": "curated",
+          "explanation": "The table permits any altitude below 3,000 feet above the surface regardless of course.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For one-way routes above FL410, which flight level fits the exception pattern?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "table",
+          "generation_source": "curated",
+          "explanation": "One-way routes may use any odd cardinal flight level above FL410.",
+          "choices": [
+            {
+              "text": "FL450.",
+              "is_correct": true
+            },
+            {
+              "text": "FL440.",
+              "is_correct": false
+            },
+            {
+              "text": "FL460.",
+              "is_correct": false
+            },
+            {
+              "text": "FL420.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "If traffic conditions are the reason for using a random altitude beyond your facility, what must exist?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That operation must be covered by a letter of agreement.",
+          "choices": [
+            {
+              "text": "A letter of agreement covering the specific operations and procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "Only pilot acceptance.",
+              "is_correct": false
+            },
+            {
+              "text": "Only local supervisor approval.",
+              "is_correct": false
+            },
+            {
+              "text": "Only destination-tower approval.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Mission requirements justify the exception only when the aircraft is operating on an MTR.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Mission-requirement use of the exception is limited to MTR operations.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When meteorological conditions justify the exception, what approval is required?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Prior approval is required from affected positions or sectors and, if necessary, the adjacent facility concerned.",
+          "choices": [
+            {
+              "text": "Prior approval from affected positions or sectors and, if necessary, the adjacent facility concerned.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the pilot's acceptance.",
+              "is_correct": false
+            },
+            {
+              "text": "Only destination-facility approval.",
+              "is_correct": false
+            },
+            {
+              "text": "No approval if the route stays IFR.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which reason is specifically authorized for a military aircraft on a random route?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Military aircraft on random routes may use the exception when prior approval is obtained from the facility concerned.",
+          "choices": [
+            {
+              "text": "Military aircraft operating on random routes with prior approval from the facility concerned.",
+              "is_correct": true
+            },
+            {
+              "text": "Any military request for smoother air.",
+              "is_correct": false
+            },
+            {
+              "text": "Any pilot request after takeoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Any route flown above FL410.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A pilot says the available proper altitude exceeds the aircraft's operational limitations. May you assign a different cardinal altitude without coordination?",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "No. Prior approval is still required from affected positions or sectors and, if necessary, the adjacent facility.",
+          "choices": [
+            {
+              "text": "False",
+              "is_correct": true
+            },
+            {
+              "text": "True",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What is the lowest usable flight level when the altimeter setting is 29.92 or higher?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "table",
+          "generation_source": "curated",
+          "explanation": "With an altimeter setting of 29.92 or higher, FL180 is the lowest usable flight level.",
+          "choices": [
+            {
+              "text": "FL180.",
+              "is_correct": true
+            },
+            {
+              "text": "FL190.",
+              "is_correct": false
+            },
+            {
+              "text": "FL200.",
+              "is_correct": false
+            },
+            {
+              "text": "FL210.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "An altimeter setting from 29.91 through 28.92 makes FL190 the lowest usable flight level.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "table",
+          "generation_source": "curated",
+          "explanation": "That range corresponds to FL190 as the lowest usable flight level.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the altimeter setting is 28.70, what is the lowest usable flight level?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "table",
+          "generation_source": "curated",
+          "explanation": "Altimeter settings from 28.91 through 27.92 require FL200 as the lowest usable flight level.",
+          "choices": [
+            {
+              "text": "FL200.",
+              "is_correct": true
+            },
+            {
+              "text": "FL190.",
+              "is_correct": false
+            },
+            {
+              "text": "FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "FL210.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "You use the lowest-usable-flight-level table only when a pressure change affects a usable flight level in your area of jurisdiction.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is the condition that triggers use of the table.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When is an adjusted minimum flight level required?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It is required when the minimum IFR altitude is at or above 18,000 feet MSL and the altimeter is below 29.92.",
+          "choices": [
+            {
+              "text": "When the minimum IFR altitude is at or above 18,000 feet MSL and the altimeter is below 29.92.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever an aircraft climbs above 10,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Only outside radar coverage.",
+              "is_correct": false
+            },
+            {
+              "text": "Only in mountainous areas.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What adjustment factor applies with an altimeter setting of 29.55?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "table",
+          "generation_source": "curated",
+          "explanation": "Altimeter settings from 29.91 through 29.42 require a 500-foot adjustment.",
+          "choices": [
+            {
+              "text": "500 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "None.",
+              "is_correct": false
+            },
+            {
+              "text": "1,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "1,500 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "An altimeter setting of 29.10 requires a 1,000-foot adjustment.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "table",
+          "generation_source": "curated",
+          "explanation": "Altimeter settings from 29.41 through 28.92 correspond to a 1,000-foot adjustment.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What adjustment factor applies when the altimeter setting is 28.30?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "table",
+          "generation_source": "curated",
+          "explanation": "Altimeter settings from 28.41 through 27.92 require a 2,000-foot adjustment.",
+          "choices": [
+            {
+              "text": "2,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "1,500 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "1,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "500 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the minimum IFR altitude is 18,000 feet and the altimeter is 29.35, what adjusted minimum flight level applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A 1,000-foot adjustment added to the FL180 equivalent produces FL190.",
+          "choices": [
+            {
+              "text": "FL190.",
+              "is_correct": true
+            },
+            {
+              "text": "FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "FL185.",
+              "is_correct": false
+            },
+            {
+              "text": "FL200.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What is the basic altitude rule on a route segment with an MEA?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The basic rule is to assign at or above the MEA unless a listed exception applies.",
+          "choices": [
+            {
+              "text": "Assign at or above the MEA unless a stated exception applies.",
+              "is_correct": true
+            },
+            {
+              "text": "Assign any altitude above the MOCA.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign below the MEA whenever radar contact exists.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign the pilot's requested altitude if it is IFR.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A GNSS-equipped aircraft may be cleared below the MEA but not below the MOCA on the route segment being flown.",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "GNSS equipment is one of the listed conditions that permits operation below the MEA but not below the MOCA.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How close to a VOR, VORTAC, or TACAN must an aircraft be to use the navaid-based below-MEA option?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The aircraft must be within 22 miles of that NAVAID.",
+          "choices": [
+            {
+              "text": "Within 22 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "Within 25 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Within 40 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Within 50 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "On a jet route, may an aircraft be cleared below the MEA if radar service is provided and the clearance does not go below the prescribed minimum altitude for IFR operations?",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Yes. That is one of the jet-route exceptions.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a higher MEA begins at a fix and no MCA is specified, when must the aircraft be cleared to begin climb?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Without an MCA, the climb begins prior to or immediately after passing the fix.",
+          "choices": [
+            {
+              "text": "Prior to or immediately after passing the fix where the higher MEA is designated.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the next controller accepts the handoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot requests the climb.",
+              "is_correct": false
+            },
+            {
+              "text": "After the aircraft is 22 miles past the fix.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If an MCA is specified at the fix where a higher MEA begins, what must ATC ensure?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The aircraft must be cleared to begin climb before the fix so it crosses at or above the MCA.",
+          "choices": [
+            {
+              "text": "The aircraft begins climb prior to the fix so it crosses at or above the MCA.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft remains level until 22 miles after the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot decides when to climb after crossing the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "The climb is delayed until the next route segment starts.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When issuing cruise with an airport clearance limit and an unpublished route, what is normally required?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "An appropriate crossing altitude is normally required to preserve IFR obstruction clearance.",
+          "choices": [
+            {
+              "text": "An appropriate crossing altitude until the aircraft reaches a point where altitude information is available to the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Only a speed restriction.",
+              "is_correct": false
+            },
+            {
+              "text": "Only a block altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "No additional restriction if the aircraft is above 10,000 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A clock-time climb or descent restriction normally requires a UTC time check.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A UTC time check is normally required when using a clock-time restriction.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may you use an elapsed-time climb or descent restriction without reference to the UTC clock?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That option is limited to radar contact with direct controller-to-pilot, two-way VHF/UHF voice communication.",
+          "choices": [
+            {
+              "text": "When the aircraft is in radar contact and in direct controller-to-pilot, two-way VHF/UHF voice communication.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time the pilot requests it.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when using HF relay.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after leaving the STAR.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A descent clearance with a crossing altitude authorizes descent at pilot's discretion for the portion of the flight to which the crossing restriction applies.",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is how the pilot's-discretion authority works with a crossing restriction.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If an aircraft is cleared direct to a waypoint without a published altitude on the STAR, what must be issued before descend via?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A crossing altitude must be assigned at that waypoint or fix.",
+          "choices": [
+            {
+              "text": "A crossing altitude at that waypoint or fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Only a speed restriction.",
+              "is_correct": false
+            },
+            {
+              "text": "A block altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing else; descend via is enough.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When canceling a pilot's-discretion portion of a climb or descent by assigning a new altitude, what must the controller tell the pilot?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller must identify the new altitude as an amended altitude.",
+          "choices": [
+            {
+              "text": "That the new altitude is an amended altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "That the clearance is advisory only.",
+              "is_correct": false
+            },
+            {
+              "text": "That no readback is required.",
+              "is_correct": false
+            },
+            {
+              "text": "That speed restrictions are canceled.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "After an interim altitude on a SID, if ATC can now clear the aircraft to the originally published top altitude, what instruction is used?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The correct restatement is \"climb via SID.\"",
+          "choices": [
+            {
+              "text": "Climb via SID.",
+              "is_correct": true
+            },
+            {
+              "text": "Climb and maintain the top altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Resume own navigation and maintain present altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Proceed direct the first fix, maintain present altitude.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "If practicable, what should be told to an aircraft that cannot yet be climbed or descended?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The pilot should be told when to expect higher or lower, or when to request the change from another facility.",
+          "choices": [
+            {
+              "text": "When to expect higher or lower, or when to request the altitude change from another facility.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the next route fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the current altimeter setting.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing until the actual altitude change is available.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "An expected altitude change may be given in miles or minutes.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The phraseology allows expect-higher or expect-lower in miles or minutes, or at a fix.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which advisory fits this paragraph?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "This paragraph allows telling the pilot when to expect a change or when to request one from another facility.",
+          "choices": [
+            {
+              "text": "Request altitude change from Kansas City Center at BUM.",
+              "is_correct": true
+            },
+            {
+              "text": "Descend at pilot's discretion now.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel IFR if unable.",
+              "is_correct": false
+            },
+            {
+              "text": "Hold east of the fix as published.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If you expect the climb in 20 miles, what kind of advisory is appropriate if practicable?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The correct advisory is to tell the aircraft to expect higher in 20 miles.",
+          "choices": [
+            {
+              "text": "Expect higher in 20 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "Maintain present altitude indefinitely.",
+              "is_correct": false
+            },
+            {
+              "text": "Climb via SID now.",
+              "is_correct": false
+            },
+            {
+              "text": "Verify assigned altitude.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When should altitude confirmation normally be requested in nonradar operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It is normally requested on initial contact and with position reports unless an exception applies.",
+          "choices": [
+            {
+              "text": "On initial contact and when position reports are received, unless an exception applies.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after interfacility handoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for climbing aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Only above the lowest usable flight level.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A terminal aircraft transferred to you from another sector or position within your facility is an exception to the initial-contact altitude-verification requirement.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "An intrafacility terminal transfer is one of the stated exceptions.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "In USA operations, what must be done with all pilot altitude readbacks?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They must all be reconfirmed.",
+          "choices": [
+            {
+              "text": "Reconfirm them.",
+              "is_correct": true
+            },
+            {
+              "text": "Log them only if they are incorrect.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore them if the aircraft is radar identified.",
+              "is_correct": false
+            },
+            {
+              "text": "Repeat them only on first contact.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which phraseology fits a flight-level assignment at or above the lowest usable flight level?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That case uses verify assigned flight level.",
+          "choices": [
+            {
+              "text": "Verify assigned flight level three three zero.",
+              "is_correct": true
+            },
+            {
+              "text": "Verify assigned altitude three three zero.",
+              "is_correct": false
+            },
+            {
+              "text": "Affirmative flight level three three zero.",
+              "is_correct": false
+            },
+            {
+              "text": "Negative maintain flight level three three zero.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a pilot's altitude readback is correct, which controller response is correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A correct readback is reconfirmed with \"affirmative\" and the altitude.",
+          "choices": [
+            {
+              "text": "Affirmative six thousand.",
+              "is_correct": true
+            },
+            {
+              "text": "Roger six thousand.",
+              "is_correct": false
+            },
+            {
+              "text": "Negative six thousand.",
+              "is_correct": false
+            },
+            {
+              "text": "Maintain at or above six thousand.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the assigned value is below the lowest usable flight level, should the controller verify altitude or flight level?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Below the lowest usable flight level, the controller verifies the assigned altitude.",
+          "choices": [
+            {
+              "text": "Altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Flight level.",
+              "is_correct": false
+            },
+            {
+              "text": "Either one is acceptable.",
+              "is_correct": false
+            },
+            {
+              "text": "Neither one; only reconfirm the readback after the next position report.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

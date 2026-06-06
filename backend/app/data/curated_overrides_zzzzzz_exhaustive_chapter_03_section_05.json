@@ -1,0 +1,782 @@
+{
+  "activities": {
+    "3-5-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Who determines which runway or runways are designated runway in use, active runway, or duty runway?",
+          "choices": [
+            {
+              "text": "The ATCT supervisor or controller in charge.",
+              "is_correct": true
+            },
+            {
+              "text": "The local controller working the departure position, unless the pilot objects.",
+              "is_correct": false
+            },
+            {
+              "text": "The first pilot to request a runway after each ATIS change.",
+              "is_correct": false
+            },
+            {
+              "text": "Airport operations, unless the wind exceeds 10 knots.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The supervisor or CIC determines which runway or runways are designated runway in use, active runway, or duty runway."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this runway-selection responsibility statement correct?",
+          "question_text": "Responsibility for determining the runway in use, active runway, or duty runway rests with the ATCT supervisor or controller in charge.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That responsibility is assigned to the supervisor or CIC."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this wind-based runway-selection rule correct?",
+          "question_text": "If the wind is 5 knots or more, you must assign the runway most nearly aligned with the wind unless an exception applies.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "With wind 5 knots or more, the normal rule is to use the runway most nearly aligned with the wind."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which is a listed exception to the normal wind-based runway selection rule?",
+          "question_text": "Which listed exception can override the normal wind-based runway choice?",
+          "choices": [
+            {
+              "text": "A Runway Use Program is in effect.",
+              "is_correct": true
+            },
+            {
+              "text": "A pilot has not yet acknowledged the ATIS code.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure queue is longer on the wind-favored runway.",
+              "is_correct": false
+            },
+            {
+              "text": "The airport beacon is on during the day.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Operational advantage of another runway and a Runway Use Program are the listed exceptions."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this runway-request handling rule correct?",
+          "question_text": "ATC may honor a pilot request for a different runway as soon as operationally practicable and will advise the pilot when the requested runway is noise-sensitive.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the rule for handling pilot preference for a different runway."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "The wind is 8 knots favoring Runway 27. Another runway would reduce taxi delay, but using it would create a significant tailwind component. Another controller argues delay relief should take precedence because no formal Runway Use Program is in effect.",
+          "para_context": "Runway selection normally follows the runway most nearly aligned with the wind at 5 knots or more, and tailwind and crosswind considerations take precedence over delay, capacity, and noise-abatement concerns.",
+          "choices": [
+            {
+              "text": "Keep tailwind and crosswind considerations ahead of delay relief and use the runway selection that satisfies the wind rule unless a listed exception truly applies.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the shorter-taxi runway because delay and capacity always outrank wind alignment when no Runway Use Program exists.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore wind because pilots are expected to request another runway if they dislike the assigned tailwind.",
+              "is_correct": false
+            },
+            {
+              "text": "Use any runway that reduces taxi time as long as the pilot has the current ATIS.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Tailwind and crosswind considerations outrank delay, capacity, and noise-abatement considerations."
+        }
+      ]
+    },
+    "3-5-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may a designated STOL runway be assigned?",
+          "choices": [
+            {
+              "text": "Only when requested by the pilot or as specified in a letter of agreement with an aircraft operator.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever it shortens taxi distance, even without a pilot request or letter of agreement.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for military aircraft or helicopters.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the wind is less than 5 knots.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A designated STOL runway may be assigned only by pilot request or as specified in a letter of agreement."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this STOL-runway directive correct?",
+          "question_text": "Issue the measured STOL runway length if the pilot requests it.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If the pilot asks for the measured STOL runway length, the controller issues it."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this STOL assignment condition correct?",
+          "question_text": "If a designated STOL runway is assigned, it must have been requested by the pilot or specified in a letter of agreement with an aircraft operator.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the only two authorized bases for assigning a designated STOL runway."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which condition permits assignment of a designated STOL runway?",
+          "question_text": "Which condition permits assigning a designated STOL runway?",
+          "choices": [
+            {
+              "text": "It is specified in a letter of agreement with an aircraft operator.",
+              "is_correct": true
+            },
+            {
+              "text": "It reduces taxi distance for a late-departing aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "The runway is not currently being used by other traffic.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller believes the aircraft can safely fit on it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "An LOA with an aircraft operator is one of the two allowed bases for assigning a designated STOL runway."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this STOL-runway requirement correct?",
+          "question_text": "If the pilot requests the measured STOL runway length, you must issue it.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The measured STOL runway length is issued when the pilot requests it."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A controller wants to assign a designated STOL runway to save taxi time even though the pilot has not requested it and there is no letter of agreement covering that operator. The pilot also asks how much measured STOL runway length is available if STOL use becomes an option.",
+          "para_context": "A designated STOL runway may be assigned only when requested by the pilot or as specified in a letter of agreement. Issue the measured STOL runway length if the pilot requests it.",
+          "choices": [
+            {
+              "text": "Do not assign the STOL runway on your own, but issue the measured STOL runway length because the pilot requested that information.",
+              "is_correct": true
+            },
+            {
+              "text": "Assign the STOL runway to save taxi time and withhold the measured length until the pilot accepts the assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign the STOL runway because operational convenience is enough, but measured length may be given only after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "Refuse to provide the measured length unless a letter of agreement already authorizes use of the STOL runway.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The STOL runway cannot be assigned on controller initiative alone, but measured length is issued if requested."
+        }
+      ]
+    },
+    "3-5-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When authorizing use of a runway and a tailwind component exists, what wind information must always be stated?",
+          "choices": [
+            {
+              "text": "Both wind direction and velocity.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the tailwind component in knots.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the runway heading difference.",
+              "is_correct": false
+            },
+            {
+              "text": "No wind information if the pilot has the ATIS.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When a tailwind component exists, both wind direction and velocity must always be stated."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this tailwind requirement correct?",
+          "question_text": "When authorizing use of a runway and a tailwind component exists, you must always state both wind direction and velocity.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the direct requirement in 3-5-3."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this tailwind condition rule correct?",
+          "question_text": "If a tailwind component exists when you authorize a runway, you must state both wind direction and velocity.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule is triggered by the existence of a tailwind component."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which wind detail must be included with a runway authorization when a tailwind exists?",
+          "question_text": "Which wind detail must be stated when a tailwind component exists?",
+          "choices": [
+            {
+              "text": "Wind velocity.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the tailwind component rounded to the nearest whole knot.",
+              "is_correct": false
+            },
+            {
+              "text": "Only whether the wind is calm or gusty.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the crosswind component because direction is already implied by the assigned runway.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Both wind direction and velocity must be stated, so wind velocity is one of the required details."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A runway assignment will involve a tailwind component. Another controller says the pilot already has the ATIS, so repeating the wind is unnecessary unless the tailwind gets stronger.",
+          "para_context": "When authorizing use of runways and a tailwind component exists, always state both wind direction and velocity. The wind may be described as calm when appropriate.",
+          "choices": [
+            {
+              "text": "State both wind direction and velocity with the runway authorization.",
+              "is_correct": true
+            },
+            {
+              "text": "Skip the wind call because ATIS already contains it.",
+              "is_correct": false
+            },
+            {
+              "text": "State only the tailwind component because direction is implied by the runway authorization.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the wind advisory until the pilot asks whether the runway has a tailwind.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ATIS does not remove the requirement to state both wind direction and velocity when a tailwind component exists."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-5-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Who determines which runway or runways are designated runway in use, active runway, or duty runway?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That determination belongs to the ATCT supervisor or controller in charge.",
+          "choices": [
+            {
+              "text": "The ATCT supervisor or controller in charge.",
+              "is_correct": true
+            },
+            {
+              "text": "The first local controller handling departures after the ATIS change.",
+              "is_correct": false
+            },
+            {
+              "text": "Airport operations.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot requesting the most favorable runway.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If wind is 5 knots or more, what runway should normally be assigned?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The normal rule is the runway most nearly aligned with the wind.",
+          "choices": [
+            {
+              "text": "The runway most nearly aligned with the wind.",
+              "is_correct": true
+            },
+            {
+              "text": "The calm-wind runway.",
+              "is_correct": false
+            },
+            {
+              "text": "The runway that minimizes taxi delay.",
+              "is_correct": false
+            },
+            {
+              "text": "Whichever runway the preceding aircraft used.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If wind is less than 5 knots and no listed exception applies, use the calm-wind runway.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "That is the normal sub-5-knot rule."
+        },
+        {
+          "question_text": "What takes precedence over delay, capacity, and noise-abatement considerations when selecting a runway in use?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Tailwind and crosswind considerations take precedence.",
+          "choices": [
+            {
+              "text": "Tailwind and crosswind considerations.",
+              "is_correct": true
+            },
+            {
+              "text": "Whatever runway reduces taxi delay the most.",
+              "is_correct": false
+            },
+            {
+              "text": "Noise-abatement commitments.",
+              "is_correct": false
+            },
+            {
+              "text": "The runway preferred by the approach control facility.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which is a listed exception to the normal wind-based runway assignment rule?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Operational advantage of another runway and a Runway Use Program are the listed exceptions.",
+          "choices": [
+            {
+              "text": "Use of another runway is operationally advantageous.",
+              "is_correct": true
+            },
+            {
+              "text": "The departure queue is shorter on another runway.",
+              "is_correct": false
+            },
+            {
+              "text": "A pilot has not yet acknowledged the ATIS.",
+              "is_correct": false
+            },
+            {
+              "text": "The runway with the strongest headwind is also the noisiest.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a pilot prefers a different runway than the one specified, how may ATC handle the request?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "ATC may honor the request as soon as operationally practicable and will advise the pilot if the requested runway is noise-sensitive.",
+          "choices": [
+            {
+              "text": "ATC may honor it as soon as operationally practicable and will advise if the requested runway is noise-sensitive.",
+              "is_correct": true
+            },
+            {
+              "text": "ATC must deny it unless the wind is calm.",
+              "is_correct": false
+            },
+            {
+              "text": "ATC may honor it only if the pilot waives all noise-abatement restrictions.",
+              "is_correct": false
+            },
+            {
+              "text": "ATC must honor it immediately regardless of operational impact.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-5-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When may a designated STOL runway be assigned?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A designated STOL runway may be assigned only by pilot request or as specified in a letter of agreement.",
+          "choices": [
+            {
+              "text": "Only when requested by the pilot or as specified in a letter of agreement with an aircraft operator.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever it reduces taxi distance.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for military aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever wind is less than 5 knots.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A designated STOL runway may be assigned whenever it is operationally convenient for ATC, even without pilot request or an LOA.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": false,
+          "explanation": "The only authorized bases are pilot request or an LOA with the aircraft operator."
+        },
+        {
+          "question_text": "What must ATC issue if the pilot requests the measured STOL runway length?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The measured STOL runway length is issued on pilot request.",
+          "choices": [
+            {
+              "text": "The measured STOL runway length.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the published runway length from the airport diagram.",
+              "is_correct": false
+            },
+            {
+              "text": "The available landing distance but not the measured STOL length.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing unless the STOL runway is already assigned.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which condition permits assignment of a designated STOL runway?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "An LOA with an aircraft operator is one of the two authorized assignment bases.",
+          "choices": [
+            {
+              "text": "It is specified in a letter of agreement with an aircraft operator.",
+              "is_correct": true
+            },
+            {
+              "text": "It is the shortest taxi route.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller believes it improves efficiency.",
+              "is_correct": false
+            },
+            {
+              "text": "The active runway has a light crosswind.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A pilot asks for the measured STOL runway length but does not request assignment of the STOL runway. What may ATC do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The measured STOL runway length is issued if requested even though assignment of the STOL runway itself still remains limited by the rule.",
+          "choices": [
+            {
+              "text": "Issue the measured STOL runway length without assigning the STOL runway on your own initiative.",
+              "is_correct": true
+            },
+            {
+              "text": "Assign the STOL runway automatically because asking for the length is the same as asking for the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Refuse to give the length unless an LOA already authorizes STOL use for that operator.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay giving the length until after the aircraft lands.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-5-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When authorizing a runway and a tailwind component exists, what wind information must always be stated?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Both wind direction and velocity must always be stated when a tailwind component exists.",
+          "choices": [
+            {
+              "text": "Both wind direction and velocity.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the tailwind component in knots.",
+              "is_correct": false
+            },
+            {
+              "text": "Only wind velocity.",
+              "is_correct": false
+            },
+            {
+              "text": "No wind information if the pilot has the ATIS.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When a tailwind component exists, ATIS alone satisfies the wind-reporting requirement for runway authorization.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": false,
+          "explanation": "The controller must still state both wind direction and velocity."
+        },
+        {
+          "question_text": "Which wind detail must be stated when a tailwind component exists?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Wind velocity is one of the two required pieces of information.",
+          "choices": [
+            {
+              "text": "Wind velocity.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the tailwind component rounded to the nearest whole knot.",
+              "is_correct": false
+            },
+            {
+              "text": "Only whether the wind is calm or gusty.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the crosswind component.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What note is given about describing the wind under 3-5-3?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The note says the wind may be described as calm when appropriate.",
+          "choices": [
+            {
+              "text": "The wind may be described as calm when appropriate.",
+              "is_correct": true
+            },
+            {
+              "text": "The wind may be omitted when the pilot has ATIS.",
+              "is_correct": false
+            },
+            {
+              "text": "The wind should always be converted into tailwind component only.",
+              "is_correct": false
+            },
+            {
+              "text": "The wind should be reported only after runway assignment is accepted.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A runway authorization will involve a tailwind component. What should ATC say about the wind?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Both wind direction and velocity must be stated.",
+          "choices": [
+            {
+              "text": "State both wind direction and velocity.",
+              "is_correct": true
+            },
+            {
+              "text": "State only the tailwind component because direction is implied by the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "State only wind direction because ATIS covers velocity.",
+              "is_correct": false
+            },
+            {
+              "text": "Say nothing unless the pilot asks for the wind a second time.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

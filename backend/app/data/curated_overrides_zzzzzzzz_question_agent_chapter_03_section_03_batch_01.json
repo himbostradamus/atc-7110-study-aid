@@ -1,0 +1,896 @@
+{
+  "questions": {
+    "3-3-1": {
+      "items": [
+        {
+          "question_text": "Complete: Copy _____ any information received and record the name of the person submitting it.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The paragraph requires verbatim copying of received information — not a summary or paraphrase.",
+          "choices": [
+            {
+              "text": "verbatim",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Complete: Confirm information obtained from other than authorized _____ or FAA personnel unless this function is the responsibility of the military operations office.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The paragraph requires confirmation only of information from unauthorized sources. Airport and FAA personnel are the authorized sources.",
+          "choices": [
+            {
+              "text": "airport",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A ground crew member who is NOT on the airport manager's authorized personnel list reports a large debris field on the runway. You call airport management but cannot reach them. Under 3-3-1, what two actions are now required?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "First, the report should be confirmed because it came from an unauthorized source. Second, if management cannot be reached, the controller must issue a NOTAM publicizing the unsafe condition and inform management as soon as practicable. Both steps apply in this combined scenario.",
+          "choices": [
+            {
+              "text": "Confirm the report if possible, and if management still cannot be reached, issue a NOTAM and inform management as soon as practicable.",
+              "is_correct": true
+            },
+            {
+              "text": "Close the runway yourself because the debris presents an immediate hazard and management is unreachable.",
+              "is_correct": false
+            },
+            {
+              "text": "Broadcast the report as-is on ATIS without confirmation, because urgency overrides the unauthorized-source rule.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the report until management can be reached, because only authorized personnel reports are actionable.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller receives an updated RwyCC for Runway 18: codes 4, 3, 3. The ATIS is still broadcasting the previous report. The controller decides to wait until the next ATIS update cycle rather than verbally issuing the new codes. Is this correct under 3-3-1?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 3-3-1e(1)(b) requires that when an update to the RwyCC is provided, the controller must verbally issue it to all aircraft until the ATIS broadcast can be updated. Waiting for the ATIS cycle without verbal issuance violates this requirement.",
+          "choices": [
+            {
+              "text": "Yes — ATIS is the designated distribution system and verbal issuance is optional.",
+              "is_correct": false
+            },
+            {
+              "text": "No — the updated RwyCC must be verbally issued to aircraft until the ATIS can be updated.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only if the change from the previous report involves a single code change.",
+              "is_correct": false
+            },
+            {
+              "text": "No — but the controller need only issue it to arriving aircraft, not departures.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A pilot reports 'braking seems fair to ok' on Runway 9. No RwyCC is available. What should the controller issue to other aircraft under 3-3-1f?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "In the absence of RwyCC, only factual information as reported by the airport operator or pilots concerning runway surface condition and describing accumulation of precipitation should be issued. The controller should relay the pilot's factual observation, converting nonstandard braking terminology only if 3-3-4 procedures apply. The controller does NOT convert to RwyCC.",
+          "choices": [
+            {
+              "text": "Convert the pilot's words into an estimated RwyCC and issue that.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the pilot's factual report of the runway surface condition without creating a RwyCC.",
+              "is_correct": true
+            },
+            {
+              "text": "Hold the report until airport management confirms the condition and issues an official RwyCC.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the report only if the pilot uses approved braking-action terminology.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Who is legally authorized to close a runway, and what action can a controller take if unable to reach that authority?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Only airport management or the military operations office can close a runway. The controller cannot close it but can issue a NOTAM publicizing an unsafe condition when management is unreachable. A NOTAM does not close the runway — it publicizes the condition.",
+          "choices": [
+            {
+              "text": "The tower chief can close the runway; if unavailable, any certified controller may close it temporarily.",
+              "is_correct": false
+            },
+            {
+              "text": "Only airport management/military operations can close a runway; the controller can issue a NOTAM publicizing unsafe conditions if management is unreachable.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller can close the runway for up to 30 minutes, after which airport management must take over.",
+              "is_correct": false
+            },
+            {
+              "text": "Any FAA-certified employee at the facility can close a runway during emergencies.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-3-2": {
+      "items": [
+        {
+          "question_text": "Complete: If the pilot persists in his/her request, quote him/her the appropriate parts of the _____ applying to the runway and inform him/her that a clearance cannot be issued.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The body says to quote 'the appropriate parts of the NOTAM applying to the runway.' This is the second step in the escalation sequence.",
+          "choices": [
+            {
+              "text": "NOTAM",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A pilot insists on landing on a closed runway. The controller determines the operation would not adversely affect other traffic. Under 3-3-2, does the controller issue a landing clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The controller never issues a clearance for a closed/unsafe runway. At the final step, the controller only informs the pilot the operation will be at the pilot's own risk. The phraseology 'LANDING WILL BE AT YOUR OWN RISK' is not a clearance.",
+          "choices": [
+            {
+              "text": "Yes — once the controller determines traffic won't be affected, a normal landing clearance can be issued.",
+              "is_correct": false
+            },
+            {
+              "text": "No — the controller never issues a clearance; the controller only states the operation will be at the pilot's own risk.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes — but only as a 'special VFR clearance' with limitations.",
+              "is_correct": false
+            },
+            {
+              "text": "No — the controller must deny the request entirely at this stage.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under what circumstances does 3-3-2c allow the ILS associated with a closed runway to be used for approaches?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The ILS may be used only when: (1) a side-step maneuver to the parallel runway is being used per paragraph 4-8-7, or (2) not using the ILS would adversely affect airport operational efficiency. Both are exceptions; routine ILS use with a closed runway is otherwise not permitted.",
+          "choices": [
+            {
+              "text": "Only when a military aircraft requires precision guidance and no other ILS is available.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the weather is below VFR minimums and pilots request the approach aid.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the side-step exception applies or not using the ILS would adversely affect airport efficiency.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the runway is physically clear but closed for administrative reasons.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-3-3": {
+      "items": [
+        {
+          "question_text": "Complete: Issue airport condition information necessary for an aircraft's safe operation in time for it to be _____ to the pilot.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The timing standard is that the information must arrive 'in time for it to be useful to the pilot' — not too late to affect decisions.",
+          "choices": [
+            {
+              "text": "useful",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "What unique requirement does item (g) of 3-3-3 impose for volcanic ash that does NOT apply to other listed conditions?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Only volcanic ash requires stating whether it is wet or dry (if known). No other listed condition has this moisture-state requirement. The note explains why: wet ash degrades braking action, while dry ash may necessitate minimum reverse thrust.",
+          "choices": [
+            {
+              "text": "It must include whether the ash is wet or dry, if known.",
+              "is_correct": true
+            },
+            {
+              "text": "It must include the depth of the ash in inches.",
+              "is_correct": false
+            },
+            {
+              "text": "It requires a NOTAM regardless of how minor the ash deposit is.",
+              "is_correct": false
+            },
+            {
+              "text": "It must be reported to the airport operator before issuing to aircraft.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What operational difference does wet volcanic ash have compared to dry volcanic ash, according to the 3-3-3 note?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note says 'Braking action on wet ash may be degraded. Dry ash on the runway may necessitate minimum use of reverse thrust.' These are different operational concerns — braking quality vs engine ingestion control.",
+          "choices": [
+            {
+              "text": "Wet ash is heavier and harder to remove; dry ash is easily blown away by wind.",
+              "is_correct": false
+            },
+            {
+              "text": "Wet ash degrades braking action; dry ash may necessitate minimum use of reverse thrust.",
+              "is_correct": true
+            },
+            {
+              "text": "Wet ash improves braking; dry ash reduces visibility more than wet ash.",
+              "is_correct": false
+            },
+            {
+              "text": "There is no operational difference — the wet/dry distinction is only for reporting purposes.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which of the following is NOT among the categories of airport condition information that 3-3-3 says should be included 'as appropriate'?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The listed categories are: construction, rough portions, braking conditions, snowdrifts/piles, parked aircraft, irregular lighting, volcanic ash, and other pertinent conditions. 'Expected fuel truck arrival times' is not listed and relates to ramp operations, not movement area conditions.",
+          "choices": [
+            {
+              "text": "Construction work on or immediately adjacent to the movement area.",
+              "is_correct": false
+            },
+            {
+              "text": "Irregular operation of part or all of the airport lighting system.",
+              "is_correct": false
+            },
+            {
+              "text": "Rough portions of the movement area.",
+              "is_correct": false
+            },
+            {
+              "text": "Expected fuel truck arrival times at the general aviation ramp.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "3-3-4": {
+      "items": [
+        {
+          "question_text": "Complete the approved braking action terms as listed in 3-3-4: \"good,\" \"good to medium,\" \"medium,\" \"______,\" \"poor,\" or \"nil.\"",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The six approved terms in order are: good, good to medium, medium, medium to poor, poor, nil. 'Medium to poor' is often forgotten but is an explicitly approved term.",
+          "choices": [
+            {
+              "text": "medium to poor",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A pilot reports 'braking action fair to poor.' Under 3-3-4, what must the controller do before issuing this to other aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "'Fair' is not an approved braking-action term. The controller must ask the pilot to recategorize the report using approved terms. The controller cannot translate it themselves or issue the non-standard report as-is.",
+          "choices": [
+            {
+              "text": "Issue the report as 'medium to poor' because 'fair to poor' is closest to that approved term.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the report as 'fair to poor' without changes, because the pilot used plain language.",
+              "is_correct": false
+            },
+            {
+              "text": "Ask the pilot to categorize the braking action using the approved terms.",
+              "is_correct": true
+            },
+            {
+              "text": "Discard the report entirely because only reports using the exact approved terms may be accepted.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A USAF C-17 and a civilian Cessna 172 are both inbound. An RCR is available. Under 3-3-4d, how does the RCR distribution differ between these two aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The RCR must be issued to all USAF and ANG aircraft automatically. For the civilian Cessna, the RCR is issued only upon pilot request. Different distribution rules apply based on the aircraft's service branch.",
+          "choices": [
+            {
+              "text": "Issue the RCR to both automatically because the RCR applies to all aircraft equally.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the RCR automatically to the C-17; issue it to the Cessna only if the pilot requests it.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the RCR to the C-17 only if requested; issue it automatically to the Cessna.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the RCR to neither, because RCR distribution is only for ANG aircraft, not USAF.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A braking action report affects only the last 2,000 feet of Runway 27. Another controller suggests describing the affected area as 'south of Taxiway Delta' because pilots know the airport layout. What guidance does 3-3-4 give about this?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note explicitly says to use 'descriptive terms, such as the first or the last half of the runway' rather than landmark descriptions like 'opposite the fire station, south of a taxiway, etc.' The reason is that extraneous landmarks are hard to distinguish during low visibility, at night, or while busy landing.",
+          "choices": [
+            {
+              "text": "Use 'south of Taxiway Delta' because taxiway references are more precise than runway portions.",
+              "is_correct": false
+            },
+            {
+              "text": "Use runway-relative descriptions such as 'last half' or 'last 2,000 feet' rather than extraneous landmarks.",
+              "is_correct": true
+            },
+            {
+              "text": "Either description is equally acceptable under the note because both are 'easily understood.'",
+              "is_correct": false
+            },
+            {
+              "text": "Issue only the braking term without location since the affected area is at the far end.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-3-5": {
+      "items": [
+        {
+          "question_text": "Complete: When runway braking action reports are received from pilots which include the terms \"medium,\" \"poor,\" or \"nil,\" or whenever weather conditions are conducive to deteriorating or rapidly changing runway conditions, include on the ATIS broadcast the statement \"Braking Action Advisories are _____ .\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The exact ATIS statement is 'Braking Action Advisories are in effect.'",
+          "choices": [
+            {
+              "text": "in effect",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Complete: _____ PIREPs of runway braking action.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The paragraph requires controllers to actively 'Solicit PIREPs' of runway braking action during the advisory period, not wait for pilots to volunteer them.",
+          "choices": [
+            {
+              "text": "Solicit",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "During Braking Action Advisories, what additional consideration applies when issuing braking reports to super or heavy aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 3-3-5b(1) says 'When possible, include reports from super or heavy aircraft when the arriving or departing aircraft is a super or heavy.' The advisory for super/heavy aircraft should preferentially include reports from similar weight-class aircraft when available.",
+          "choices": [
+            {
+              "text": "Super or heavy aircraft should, when possible, receive braking reports from other super or heavy aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Super and heavy aircraft are exempt from receiving braking reports because their weight makes them less affected.",
+              "is_correct": false
+            },
+            {
+              "text": "Super or heavy aircraft must receive all available braking reports regardless of source.",
+              "is_correct": false
+            },
+            {
+              "text": "Only light aircraft reports should be given to super or heavy aircraft for consistency.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-3-5b(3), which braking action report levels require advising the Airport Operator?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The paragraph requires advising the Airport Operator when reports of 'good to medium,' 'medium,' 'medium to poor,' 'poor,' or 'nil' are received. Notably, 'good' is NOT on this list — only degraded braking reports trigger operator notification.",
+          "choices": [
+            {
+              "text": "All braking action reports, including good.",
+              "is_correct": false
+            },
+            {
+              "text": "Only 'poor' and 'nil' reports.",
+              "is_correct": false
+            },
+            {
+              "text": "Reports of good to medium, medium, medium to poor, poor, or nil.",
+              "is_correct": true
+            },
+            {
+              "text": "Only medium, medium to poor, and poor — but not good to medium or nil.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Braking Action Advisories are in effect on ATIS. The controller has been issuing braking reports to arriving aircraft. A departure calls ready for takeoff. Should the controller issue the braking report to the departure?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 3-3-5b(1) requires issuing the latest braking action report 'to each arriving and departing aircraft.' Departures are explicitly included — they need the information early enough to be beneficial, just as arrivals do.",
+          "choices": [
+            {
+              "text": "No — braking action reports are for arriving aircraft only because departures need only runway length and wind.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes — the requirement applies to each arriving and departing aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Only if the departure specifically requests the braking report.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the departure aircraft is a heavy or super.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What two independent triggers exist in 3-3-5a for putting Braking Action Advisories on the ATIS?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Either pilot reports of medium/poor/nil OR weather conducive to deteriorating/rapidly changing runway conditions triggers the ATIS statement. These are independent conditions — either one alone is sufficient.",
+          "choices": [
+            {
+              "text": "A NOTAM closure and a specific pilot request.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilot reports of medium, poor, or nil braking, OR weather conditions conducive to deteriorating or rapidly changing runway conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "An airport operator directive and confirmation from at least two arriving aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Any RwyCC below 5 and a reported crosswind component exceeding 15 knots.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-3-6": {
+      "items": [
+        {
+          "question_text": "Complete: For normal operations, arresting systems remotely controlled by ATC must remain in the _____ or down position.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The default position is 'retracted or down.' Both terms are used in the paragraph to describe the same normal state.",
+          "choices": [
+            {
+              "text": "retracted",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Complete the standard emergency phraseology for a pilot requesting immediate arresting system engagement: \"_____ - _____ - _____\"",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The emergency phraseology is 'BARRIER - BARRIER - BARRIER' or 'CABLE - CABLE - CABLE.' The threefold repetition is the emergency signal.",
+          "choices": [
+            {
+              "text": "BARRIER BARRIER BARRIER",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A military jet aircraft is landing with a suspected hydraulic failure. No pilot or military authority has requested the arresting system. Under 3-3-6b(3), should the controller raise the arresting system?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Yes. 3-3-6b(3) says to raise the system when 'a military jet aircraft is landing with known or suspected radio failure or conditions (drag chute/hydraulic/electrical failure, etc.) that indicate an arresting system may be needed.' This is a separate trigger from pilot or military authority request — the controller acts on the observed or known condition.",
+          "choices": [
+            {
+              "text": "No — only a pilot or military authority request can trigger raising the system.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes — suspected hydraulic failure in a military jet is one of the listed conditions that independently warrant raising the system.",
+              "is_correct": true
+            },
+            {
+              "text": "No — hydraulic failure alone is specifically excluded unless accompanied by radio failure.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only after the pilot declares an emergency.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A military jet engages a raised barrier during landing. The engagement was preplanned as a practice engagement with all required notifications made beforehand. Under 3-3-6h, must crash alarm procedures be initiated?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "No. 3-3-6h says crash alarm systems need not be activated for preplanned practice engagements not associated with emergencies, if all required notifications were made before the practice engagement per local military operating procedures.",
+          "choices": [
+            {
+              "text": "Yes — any engagement of a barrier or cable, regardless of planning, requires immediate crash alarm initiation.",
+              "is_correct": false
+            },
+            {
+              "text": "No — preplanned practice engagements with proper prior notifications do not require crash alarm activation.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes — but only if the barrier shows signs of damage after the engagement.",
+              "is_correct": false
+            },
+            {
+              "text": "No — practice engagements never require crash alarms regardless of notification status.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the default assumption about which end of the runway a barrier or cable request refers to?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note states 'A request to raise a barrier or hook cable means the barrier or cable on the departure end of the runway. If an approach end engagement is required, the pilot or military authority will specifically request that the approach end cable be raised.'",
+          "choices": [
+            {
+              "text": "The approach end, because that's where the aircraft would normally engage it first.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure end, unless the approach end is specifically requested.",
+              "is_correct": true
+            },
+            {
+              "text": "Both ends simultaneously, unless otherwise specified.",
+              "is_correct": false
+            },
+            {
+              "text": "Whichever end the tower determines is most appropriate for the aircraft.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-3-7": {
+      "items": [
+        {
+          "question_text": "Complete: The FFM remote sensing unit must be operational when the weather is below _____ ILS minimums.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The FFM must be operational when weather is below CAT II ILS minimums — not CAT I or CAT III.",
+          "choices": [
+            {
+              "text": "CAT II",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "What does the FFM remote status alarm indicate according to 3-3-7c?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The alarm indicates 'an inoperative or an out-of-tolerance localizer signal.' The paragraph gives examples: course shift due to equipment malfunction or vehicle/aircraft encroachment into the critical area.",
+          "choices": [
+            {
+              "text": "An inoperative or out-of-tolerance localizer signal.",
+              "is_correct": true
+            },
+            {
+              "text": "An inoperative or out-of-tolerance glideslope signal.",
+              "is_correct": false
+            },
+            {
+              "text": "A complete ILS shutdown requiring immediate approach cancellation.",
+              "is_correct": false
+            },
+            {
+              "text": "A weather minimums violation requiring CAT III upgrade.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The FFM alarm sounds when an aircraft is between the middle marker (or 1/2 mile final) and the inner marker (or CAT II MAP). What is the controller's action under 3-3-7e(2)?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "When the aircraft is between the MM and IM (or equivalent points), the controller must immediately issue the advisory that the localizer is unreliable. Unlike the outside-MM case, there is no check-for-encroachment step — the advisory is issued immediately.",
+          "choices": [
+            {
+              "text": "Check for visible critical area encroachment, then issue the advisory if the alarm persists.",
+              "is_correct": false
+            },
+            {
+              "text": "Immediately issue the advisory that the localizer is unreliable.",
+              "is_correct": true
+            },
+            {
+              "text": "No action is required because the aircraft has already passed the middle marker.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the landing clearance and issue missed approach instructions.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The FFM alarm sounds after an aircraft has passed the inner marker on a CAT II approach. What action is required under 3-3-7e(3)?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "No action is required once the aircraft has passed the inner marker or CAT II MAP. The paragraph explicitly says 'there is no action requirement.' The aircraft is too close to touchdown for an advisory to be useful.",
+          "choices": [
+            {
+              "text": "Immediately issue the advisory — the alarm always requires an advisory regardless of aircraft position.",
+              "is_correct": false
+            },
+            {
+              "text": "No action is required.",
+              "is_correct": true
+            },
+            {
+              "text": "Cancel the landing clearance because the aircraft is past the decision point.",
+              "is_correct": false
+            },
+            {
+              "text": "Monitor the alarm and issue the advisory only if it persists for more than 10 seconds.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The FFM alarm sounds while an aircraft is outside the middle marker. The controller checks and sees a vehicle in the critical area. What should the controller do?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The controller should direct the vehicle to clear the critical area immediately. The paragraph says to 'check for encroachment of those portions of the critical area that can be seen from the tower' to 'determine possible causal factors.' If encroachment is found, clearing it may resolve the alarm. If the alarm persists until the MM/1/2 mile final, the advisory is then issued.",
+          "choices": [
+            {
+              "text": "Immediately issue the unreliable-localizer advisory without taking any action regarding the vehicle.",
+              "is_correct": false
+            },
+            {
+              "text": "Direct the vehicle to clear the critical area, and if the alarm has not cleared by the MM/1/2 mile final, issue the unreliable-localizer advisory.",
+              "is_correct": true
+            },
+            {
+              "text": "Ignore the alarm because the cause is known to be vehicle encroachment rather than equipment malfunction.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel all approaches immediately because critical-area encroachment automatically invalidates the localizer.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "3-3-1": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An updated RwyCC report arrives for Runway 9: the codes have changed from 5-5-5 to 3-3-3. The ATIS is currently broadcasting the old report and the next update cycle is 15 minutes away. Several aircraft are on approach and one is holding for departure. Another controller says to just wait for the ATIS cycle since the codes are still being broadcast from the previous report.",
+          "para_context": "When an update to the RwyCC is provided, you must verbally issue the new codes to all aircraft until the ATIS broadcast can be updated.",
+          "choices": [
+            {
+              "text": "Wait for the ATIS update cycle — ATIS is sufficient for distributing RwyCC information.",
+              "is_correct": false
+            },
+            {
+              "text": "Verbally issue the updated codes to all arriving and departing aircraft until the ATIS is updated.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the update only to arriving aircraft because departures do not need RwyCC.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the update only if a pilot directly asks about runway conditions.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "3-3-1E(1)(b) explicitly requires verbal issuance of RwyCC updates to aircraft until the ATIS broadcast can be updated."
+        }
+      ]
+    },
+    "3-3-4": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot reports 'braking is marginal near the fire station on the north side.' The weather is 1/2 mile visibility and night. A heavy B767 and a light general aviation aircraft are both on approach. Another controller says to relay the report as-is because the pilot used clear language.",
+          "para_context": "Use approved braking-action terms only. If a pilot uses non-approved terms, ask them to recategorize. Describe affected runway portions using runway-relative terms (e.g., first half, last half), not extraneous landmarks like the fire station, especially at night or in low visibility.",
+          "choices": [
+            {
+              "text": "Ask the pilot to recategorize using approved terms, obtain a runway-relative location description, and include the reporting aircraft type in the advisory.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the report as 'marginal near the fire station' because the pilot's plain language is better than approved terms in low visibility.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the report as 'medium to poor' without asking the pilot, because 'marginal' maps to that approved term.",
+              "is_correct": false
+            },
+            {
+              "text": "Suppress the report because it was given in non-approved terms and cannot be used.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The controller must standardize the terminology by asking the pilot to recategorize, and must describe the affected runway area without relying on extraneous landmarks."
+        }
+      ]
+    },
+    "3-3-6": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A military F-16 is on final approach. Another controller on position mentions the aircraft had reported a possible hydraulic issue during taxi but continued. No one has requested the arresting system be raised. The F-16 is a military jet aircraft landing with a condition that may indicate an arresting system is needed.",
+          "para_context": "Raise aircraft arresting systems whenever a military jet aircraft is landing with known or suspected conditions (drag chute/hydraulic/electrical failure, etc.) that indicate an arresting system may be needed. Exceptions apply for aircraft that cannot engage arresting systems.",
+          "choices": [
+            {
+              "text": "Raise the arresting system and inform the pilot of the barrier/cable position.",
+              "is_correct": true
+            },
+            {
+              "text": "Do nothing — only a specific pilot or military authority request can trigger raising the system.",
+              "is_correct": false
+            },
+            {
+              "text": "Ask the pilot whether they want the system raised before taking any action.",
+              "is_correct": false
+            },
+            {
+              "text": "Raise the system only if the pilot also reports a radio failure.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "3-3-6B(3) independently authorizes raising the system when a military jet lands with suspected hydraulic failure — no pilot or authority request is needed."
+        }
+      ]
+    },
+    "3-3-7": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Weather is below CAT II minimums and the FFM remote status unit alarms while an arriving aircraft is outside the middle marker on the ILS to Runway 27. You can see a maintenance vehicle in the critical area from the tower. Another controller says to immediately tell the pilot the localizer is unreliable.",
+          "para_context": "When the FFM alarms and the aircraft is outside the MM (or 1/2 mile final), check for visible critical-area encroachment. If the alarm has not cleared before the aircraft reaches the MM (or 1/2 mile final), immediately issue the advisory that the localizer is unreliable.",
+          "choices": [
+            {
+              "text": "Immediately issue the advisory — the alarm always triggers an advisory regardless of aircraft position.",
+              "is_correct": false
+            },
+            {
+              "text": "Direct the vehicle out of the critical area. If the alarm persists until the aircraft reaches the MM (or 1/2 mile final), issue the unreliable-localizer advisory.",
+              "is_correct": true
+            },
+            {
+              "text": "Cancel the approach because critical-area encroachment during CAT II weather is a mandatory missed-approach trigger.",
+              "is_correct": false
+            },
+            {
+              "text": "Do nothing — the alarm is clearly caused by the vehicle and the localizer is actually fine.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The outside-MM procedure includes checking for and resolving visible encroachments first. The advisory is only issued if the alarm has not cleared by the MM or 1/2 mile final."
+        }
+      ]
+    }
+  }
+}

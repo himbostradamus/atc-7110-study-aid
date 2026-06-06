@@ -1,0 +1,951 @@
+{
+  "activities": {
+    "3-1-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How should controllers describe vehicles, equipment, or personnel on or near the movement area?",
+          "choices": [
+            {
+              "text": "In a way that helps the pilot recognize them.",
+              "is_correct": true
+            },
+            {
+              "text": "Only by exact airport-diagram coordinates.",
+              "is_correct": false
+            },
+            {
+              "text": "Only by clock position, even if that would be less clear.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot reports the traffic in sight.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The traffic description should help the pilot recognize the vehicle, equipment, personnel, or aircraft involved."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this traffic-information statement correct?",
+          "question_text": "Describe vehicles, equipment, or personnel on or near the movement area in a manner that will assist pilots in recognizing them.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Recognition by the pilot is the point of the description."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this relative-position statement correct?",
+          "question_text": "Relative-position traffic information is used in an easy-to-understand manner, such as to your right or ahead of you.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph favors plain relative descriptions that are immediately understandable."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this CTRD capability statement correct?",
+          "question_text": "A CTRD may be used to provide traffic advisories with the standard radar phraseology prescribed for traffic advisories.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph specifically allows standard radar traffic-advisory phraseology when using a CTRD."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A mower is working left of Runway 27. Another controller wants to tell the pilot only that there is \"ground equipment somewhere near the runway\" because the exact side is not important.",
+          "para_context": "Traffic information should help the pilot recognize vehicles, equipment, personnel, or aircraft. Relative position should be described in an easy-to-understand way.",
+          "choices": [
+            {
+              "text": "Describe the mower in plain, recognizable terms, such as mower left of Runway 27.",
+              "is_correct": true
+            },
+            {
+              "text": "Omit the side of the runway because pilots should find the equipment visually without location cues.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only airport-diagram grid coordinates so the advisory is as technical as possible.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the pilot reports the mower in sight before issuing any traffic information.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The pilot needs a description that is easy to visualize and recognize quickly."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Build the controller transmission.",
+          "situation": "A mower is operating left of Runway 27 and you need to pass that traffic information. Build the advisory.",
+          "target_phrase": "MOWER LEFT OF RUNWAY TWO SEVEN",
+          "word_bank": [
+            "MOWER",
+            "LEFT",
+            "OF",
+            "RUNWAY",
+            "TWO",
+            "SEVEN",
+            "AHEAD",
+            "YOU"
+          ],
+          "correct_sequence": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    "3-1-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Before issuing taxi instructions, a takeoff clearance, or movement-area authorization, what must you determine?",
+          "choices": [
+            {
+              "text": "The position of the aircraft, personnel, or equipment involved.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the pilot's readback accuracy.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the last reported wind at the runway in use.",
+              "is_correct": false
+            },
+            {
+              "text": "Only whether the airport diagram marks the movement area clearly.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Position determination comes before movement instructions or movement-area authorization."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this position-determination statement correct?",
+          "question_text": "Identify the position of an aircraft, personnel, or equipment before issuing taxi instructions, takeoff clearance, or authorizing personnel or equipment to proceed onto the movement area.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The position check is a prerequisite to issuing those authorizations."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this position-source statement correct?",
+          "question_text": "Position determination may be accomplished visually or through use of a display system when possible.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note names visual observation and display systems as the preferred ways to determine position when available."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this fallback condition correct?",
+          "question_text": "When ATC is unable to determine position visually or via a display system, position reports may be used.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Position reports are the fallback when visual or display-based determination is not available."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Fog and a temporary display outage prevent you from visually locating a maintenance truck that requests permission to proceed onto the movement area. Another controller says to authorize it anyway because the truck called from its usual location a minute ago.",
+          "para_context": "Determine the position of aircraft, personnel, or equipment before issuing movement instructions or movement-area authorization. If visual or display-based determination is unavailable, position reports may be used.",
+          "choices": [
+            {
+              "text": "Obtain and use a current position report before authorizing the truck onto the movement area.",
+              "is_correct": true
+            },
+            {
+              "text": "Authorize the truck based on its usual position because position determination is optional for vehicles.",
+              "is_correct": false
+            },
+            {
+              "text": "Deny all movement-area requests whenever a display system is unavailable, even if a reliable position report can be obtained.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the movement-area authorization first and verify the truck's position once it starts moving.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule is to determine position first, using a position report if visual or display confirmation is not available."
+        }
+      ]
+    },
+    "3-1-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the permitted use of an uncertified tower display workstation?",
+          "choices": [
+            {
+              "text": "As an aid to visually locate aircraft or determine their spatial relationship to known geographic points.",
+              "is_correct": true
+            },
+            {
+              "text": "To provide radar services and radar traffic advisories.",
+              "is_correct": false
+            },
+            {
+              "text": "To place aircraft in radar contact for local-control purposes.",
+              "is_correct": false
+            },
+            {
+              "text": "To apply radar separation whenever visual observation is inconvenient.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Uncertified tower displays are only a visual aid, not a basis for radar service."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this uncertified-display statement correct?",
+          "question_text": "Do not provide radar services or traffic advisories using uncertified tower display workstations.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The uncertified display can help a controller see the picture, but it does not authorize radar service."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this certified-display capability statement correct?",
+          "question_text": "Certified tower radar displays provide the ability to determine an aircraft's identification, exact location, or spatial relationship to other aircraft.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is one of the expressly allowed certified-display uses."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this outage condition correct?",
+          "question_text": "If the ASR supporting the ASDE system is out and MLAT is inoperative or not present, the tower position responsible for aircraft on approach to the airport must enable the ADS-B indicator on the tower display workstation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The ADS-B indicator must be enabled in that specific outage combination."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Using a certified tower radar display, you suggest a heading to a VFR aircraft to help with identification. Another controller wants to tell the pilot, \"radar contact,\" because the aircraft is now easy to track on the display.",
+          "para_context": "Tower radar displays are an aid to local controllers. Suggested headings are advisory, and local controllers should not advise pilots that they are in radar contact because the display use is not treated as radar service.",
+          "choices": [
+            {
+              "text": "Keep the heading advisory in advisory terms and do not tell the pilot the aircraft is in radar contact.",
+              "is_correct": true
+            },
+            {
+              "text": "Advise radar contact because any certified display automatically authorizes local radar service.",
+              "is_correct": false
+            },
+            {
+              "text": "Stop using the display entirely because certified tower displays may not support suggested headings to VFR aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Switch to uncertified-display procedures and continue using radar traffic advisories anyway.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The local controller may use the display as an aid and suggest headings, but should not imply full radar service by saying radar contact."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Build the controller transmission.",
+          "situation": "A pattern aircraft should turn base now. Build the transmission.",
+          "target_phrase": "TURN BASE LEG NOW",
+          "word_bank": [
+            "TURN",
+            "BASE",
+            "LEG",
+            "NOW",
+            "LEFT",
+            "HEADING"
+          ],
+          "correct_sequence": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "3-1-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When should you inform an aircraft of an observed abnormal condition?",
+          "choices": [
+            {
+              "text": "When requested by the pilot or when you deem it necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft lands.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if another aircraft confirms the same abnormality.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when maintenance personnel tell you to pass the information.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The advisory may be pilot-requested or controller-initiated when necessary."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this abnormality-advisory statement correct?",
+          "question_text": "When requested by a pilot or when you deem it necessary, inform an aircraft of any observed abnormal aircraft condition.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph authorizes both pilot-requested and controller-initiated abnormality advisories."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this advisory-use statement correct?",
+          "question_text": "Observed abnormality advisories are used when a pilot requests the information or when the controller deems the observed condition important enough to pass.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The scope of the advisory is tied to pilot request or controller judgment about an observed condition."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "You observe an aircraft on approach with its landing gear still up. Another controller says not to mention it unless the pilot specifically asks, because the gear may come down on its own in the flare.",
+          "para_context": "Controllers inform aircraft of observed abnormal aircraft conditions when requested by a pilot or when the controller deems it necessary.",
+          "choices": [
+            {
+              "text": "Advise the pilot of the observed abnormal condition because you deem it necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Say nothing unless the pilot first asks for an abnormality check.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the aircraft lands, because abnormality information should never be passed while airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer the aircraft to another frequency so a different controller can decide whether to mention it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule allows the controller to initiate the advisory whenever the observed condition makes it necessary."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Build the controller transmission.",
+          "situation": "You observe an aircraft on approach with its landing gear still up. Build the advisory.",
+          "target_phrase": "LANDING GEAR APPEARS UP",
+          "word_bank": [
+            "LANDING",
+            "GEAR",
+            "APPEARS",
+            "UP",
+            "DOWN",
+            "OPEN"
+          ],
+          "correct_sequence": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-1-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "How should vehicles, equipment, or personnel near the movement area be described to a pilot?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The description should help the pilot recognize the traffic involved.",
+          "choices": [
+            {
+              "text": "In a way that helps the pilot recognize them.",
+              "is_correct": true
+            },
+            {
+              "text": "Only by exact map coordinates.",
+              "is_correct": false
+            },
+            {
+              "text": "Only by clock position, even if that is less clear.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot reports the traffic in sight.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Relative-position traffic information should be described in an easy-to-understand manner, such as to your right or ahead of you.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The paragraph favors plain relative descriptions that the pilot can quickly visualize."
+        },
+        {
+          "question_text": "Which of the following best matches the paragraph's traffic-information style?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "example",
+          "generation_source": "curated",
+          "explanation": "The examples use simple relative descriptions and recognizable references.",
+          "choices": [
+            {
+              "text": "Traffic, Boeing 737 on 2-mile final to the parallel runway, Runway 26 Right, cleared to land. Caution wake turbulence.",
+              "is_correct": true
+            },
+            {
+              "text": "Traffic occupying coordinate grid B-4, lateral displacement unknown, use your discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "Traffic probably somewhere west of the field, type uncertain.",
+              "is_correct": false
+            },
+            {
+              "text": "Traffic as previously described unless changed by airport diagram revision.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When using a CTRD, what phraseology may be used for traffic advisories?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "example",
+          "generation_source": "curated",
+          "explanation": "The paragraph authorizes standard radar traffic-advisory phraseology when using a CTRD.",
+          "choices": [
+            {
+              "text": "The standard radar phraseology prescribed for traffic advisories.",
+              "is_correct": true
+            },
+            {
+              "text": "Only airport-diagram phraseology approved by the airport manager.",
+              "is_correct": false
+            },
+            {
+              "text": "Only phraseology that avoids any relative-position reference.",
+              "is_correct": false
+            },
+            {
+              "text": "No traffic-advisory phraseology at all, because CTRD use prohibits traffic calls.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Complete the advisory: \"MOWER LEFT OF RUNWAY TWO _____\"",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "example",
+          "generation_source": "curated",
+          "explanation": "The example traffic advisory ends with the runway number Seven.",
+          "choices": [
+            {
+              "text": "SEVEN",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "3-1-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Before issuing taxi instructions, a takeoff clearance, or movement-area authorization, what must be determined?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller must first determine the position of the aircraft, personnel, or equipment involved.",
+          "choices": [
+            {
+              "text": "The position of the aircraft, personnel, or equipment involved.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the latest runway wind.",
+              "is_correct": false
+            },
+            {
+              "text": "Only whether the pilot copied the ATIS correctly.",
+              "is_correct": false
+            },
+            {
+              "text": "Only whether the airport lighting is at operating intensity.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Position determination must occur before issuing taxi instructions, takeoff clearance, or authorizing personnel or equipment onto the movement area.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The paragraph makes position determination a prerequisite."
+        },
+        {
+          "question_text": "What methods may be used to determine position when possible?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note names visual determination and display systems as the preferred methods when available.",
+          "choices": [
+            {
+              "text": "Visual observation or a display system.",
+              "is_correct": true
+            },
+            {
+              "text": "Only position reports from the pilot or vehicle operator.",
+              "is_correct": false
+            },
+            {
+              "text": "Only airport surface diagrams and posted work schedules.",
+              "is_correct": false
+            },
+            {
+              "text": "Only supervisor-approved movement logs.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When ATC cannot determine position visually or through a display system, position reports may be used.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Position reports are the fallback method when the preferred methods are unavailable."
+        },
+        {
+          "question_text": "Fog and a display outage prevent a controller from locating a vehicle that wants to enter the movement area. What is the correct next step?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The controller still has to determine position before authorizing movement, so a current position report is the appropriate fallback.",
+          "choices": [
+            {
+              "text": "Obtain a current position report before authorizing the vehicle onto the movement area.",
+              "is_correct": true
+            },
+            {
+              "text": "Authorize the vehicle based on where it was usually parked earlier in the shift.",
+              "is_correct": false
+            },
+            {
+              "text": "Deny all future vehicle requests until the display returns, even if the position can be reported reliably.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the movement-area authorization first and ask for the vehicle's position after it starts moving.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-1-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What is the permitted use of an uncertified tower display workstation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The uncertified display is only an aid to visually locate aircraft or determine spatial relationship to known points.",
+          "choices": [
+            {
+              "text": "As an aid to visually locate aircraft or determine their spatial relationship to known geographic points.",
+              "is_correct": true
+            },
+            {
+              "text": "To provide radar services and radar traffic advisories.",
+              "is_correct": false
+            },
+            {
+              "text": "To advise pilots they are in radar contact.",
+              "is_correct": false
+            },
+            {
+              "text": "To apply radar separation inside the surface area.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Radar services and traffic advisories are not to be provided using uncertified tower display workstations.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The uncertified workstation is a visual aid only."
+        },
+        {
+          "question_text": "Which of the following is an authorized use of a certified tower radar display?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "Certified displays may be used to determine identification, exact location, spatial relationship, radar traffic advisories, and suggested headings to VFR aircraft.",
+          "choices": [
+            {
+              "text": "Determining an aircraft's exact location or spatial relationship to other aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Guaranteeing radar separation to all aircraft in the pattern.",
+              "is_correct": false
+            },
+            {
+              "text": "Telling pilots they are in radar contact whenever the aircraft target is displayed clearly.",
+              "is_correct": false
+            },
+            {
+              "text": "Replacing visual-separation requirements whenever the display is available.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Why should pilots not be advised they are in radar contact when local control is using a tower radar display as an aid?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The display use is not treated as radar service, and saying radar contact could mislead the pilot into assuming radar-vector benefits are being provided.",
+          "choices": [
+            {
+              "text": "Because the display use is not treated as radar service and could mislead the pilot into assuming radar-service benefits.",
+              "is_correct": true
+            },
+            {
+              "text": "Because radar contact may only be used by approach controls, never by towers under any circumstances.",
+              "is_correct": false
+            },
+            {
+              "text": "Because the phrase radar contact is reserved exclusively for emergency aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Because tower displays may never be used to provide suggested headings to VFR aircraft.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the ASR supporting the ASDE system is out and MLAT is inoperative or not present, what must the approach-responsible tower position do?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "The paragraph specifically requires enabling the ADS-B indicator on the tower display workstation in that outage condition.",
+          "choices": [
+            {
+              "text": "Enable the ADS-B indicator on the tower display workstation.",
+              "is_correct": true
+            },
+            {
+              "text": "Suspend all use of the tower display workstation until ASR service is restored.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer all arriving traffic to ground control because local may no longer use the display.",
+              "is_correct": false
+            },
+            {
+              "text": "Advise pilots they are now in radar contact because ADS-B is available.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Complete the advisory: \"TURN BASE LEG _____\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "example",
+          "generation_source": "curated",
+          "explanation": "The example instruction is Turn base leg now.",
+          "choices": [
+            {
+              "text": "NOW",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "3-1-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When should a controller inform an aircraft of an observed abnormal condition?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller may pass the advisory when the pilot requests it or when the controller deems it necessary.",
+          "choices": [
+            {
+              "text": "When the pilot requests it or when the controller deems it necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft lands and clears the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when another aircraft reports the same problem.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the airport manager directs the controller to pass the information.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Observed abnormality advisories may be issued when the pilot requests the information or when the controller deems the observed condition important enough to pass.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The paragraph authorizes both pilot-requested and controller-initiated abnormality advisories."
+        },
+        {
+          "question_text": "Which of the following best matches the abnormality-advisory phraseology in 3-1-10?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "example",
+          "generation_source": "curated",
+          "explanation": "The phraseology format is Item appears observed condition.",
+          "choices": [
+            {
+              "text": "Landing gear appears down and in place.",
+              "is_correct": true
+            },
+            {
+              "text": "I think your landing gear is probably down, verify when able.",
+              "is_correct": false
+            },
+            {
+              "text": "Possible baggage issue observed, use caution at your discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "Suspected abnormal condition, check all systems and advise.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller sees an aircraft on approach with its landing gear still up. What is correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller may initiate the abnormality advisory when the observed condition makes it necessary.",
+          "choices": [
+            {
+              "text": "The controller may advise the pilot because the observed condition makes the advisory necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller must wait for the pilot to request an abnormality check first.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller should wait until after landing because abnormality information is not passed while airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller should transfer the aircraft rather than issue an abnormality advisory directly.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Complete the advisory: \"LANDING GEAR APPEARS _____\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "example",
+          "generation_source": "curated",
+          "explanation": "One of the listed examples is Landing gear appears up.",
+          "choices": [
+            {
+              "text": "UP",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

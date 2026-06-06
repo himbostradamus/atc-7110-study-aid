@@ -1,0 +1,1550 @@
+{
+  "activities": {
+    "4-8-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may a controller clear an aircraft for an approach to one runway and inform it that landing will be made on a parallel runway?",
+          "choices": [
+            {
+              "text": "When the instrument approach procedure authorizes a side-step maneuver.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot prefers the parallel runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft has crossed the landing threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at airports without parallel runways published on the chart.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A side-step maneuver may be authorized only when the instrument approach procedure itself authorizes it."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this minima rule correct?",
+          "question_text": "A side-step maneuver may be authorized only using the higher weather minima or MDA published on the approach chart.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Side-step maneuvers require the higher published side-step minima or MDA."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which runway relationship applies?",
+          "question_text": "In a side-step maneuver, what runway relationship is involved?",
+          "choices": [
+            {
+              "text": "The aircraft is cleared to one runway and lands on a parallel runway.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft is cleared to a taxiway and lands on a helipad.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft is cleared to a parallel runway and lands on an intersecting runway only.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft is cleared to the destination airport and chooses any surface it wants.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A side-step means the instrument approach is flown to one runway while landing is made on a parallel runway."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "The aircraft is cleared for the ILS Runway 7 Left approach and will land on Runway 7 Right. Build the clearance.",
+          "target_phrase": "CLEARED ILS RUNWAY SEVEN LEFT APPROACH SIDE-STEP TO RUNWAY SEVEN RIGHT",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"CLEARED ILS RUNWAY SEVEN LEFT APPROACH, SIDE-STEP TO RUNWAY SEVEN RIGHT.\"",
+          "word_bank": [
+            "APPROACH",
+            "CLEARED",
+            "ILS",
+            "LEFT",
+            "RIGHT",
+            "RUNWAY",
+            "RUNWAY",
+            "SEVEN",
+            "SEVEN",
+            "SIDE-STEP",
+            "TO"
+          ],
+          "correct_sequence": [
+            1,
+            2,
+            5,
+            7,
+            3,
+            0,
+            9,
+            10,
+            6,
+            8,
+            4
+          ]
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "The chart authorizes a side-step maneuver, and the aircraft is flying the ILS to Runway 7 Left but needs to land on the parallel Runway 7 Right.",
+          "para_context": "When authorized by an instrument approach procedure, an aircraft may be cleared for an approach to one runway and informed that landing will be made on a parallel runway. Side-step maneuvers use higher published weather minima or MDA.",
+          "choices": [
+            {
+              "text": "Clear the aircraft for the Runway 7 Left approach and issue side-step instructions to Runway 7 Right.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue a normal circling clearance instead because side-step is never used between parallel runways.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the approach because landing on a different runway is never allowed after the clearance is issued.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to disregard side-step minima because the ILS minima already apply.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If the procedure authorizes side-step, the aircraft may be cleared to the approach runway and instructed to side-step to the parallel landing runway."
+        }
+      ]
+    },
+    "4-8-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When should a change to the advisory service frequency be approved for an IFR aircraft landing at an airport not served by a tower or FSS?",
+          "choices": [
+            {
+              "text": "When direct communications are no longer required.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft has landed and canceled IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot reports the runway in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot specifically says local traffic information is unavailable.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The frequency change is approved once ATC no longer requires direct communications."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this communications-release rule correct?",
+          "question_text": "If an IFR aircraft intends to land at an airport not served by a tower or FSS, you may approve the change to the advisory service frequency when you no longer require direct communications.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is exactly when the communications release is approved."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which airport type fits this rule?",
+          "question_text": "This communications-release rule applies when the airport is not served by which facilities?",
+          "choices": [
+            {
+              "text": "A tower or an FSS.",
+              "is_correct": true
+            },
+            {
+              "text": "An ATIS or AWOS only.",
+              "is_correct": false
+            },
+            {
+              "text": "A center or TRACON only.",
+              "is_correct": false
+            },
+            {
+              "text": "A customs office or airport manager only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule applies to airports not served by a control tower or FSS."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "situation": "You no longer require direct communications with the IFR aircraft and are releasing it to the local advisory frequency. Build the transmission.",
+          "target_phrase": "CHANGE TO ADVISORY FREQUENCY APPROVED",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"CHANGE TO ADVISORY FREQUENCY APPROVED.\"",
+          "word_bank": [
+            "ADVISORY",
+            "APPROVED",
+            "CHANGE",
+            "FREQUENCY",
+            "TO"
+          ],
+          "correct_sequence": [
+            2,
+            4,
+            0,
+            3,
+            1
+          ]
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An IFR aircraft is nearing a landing at a non-towered airport. You no longer need direct communications, and prompt local traffic awareness would help the pilot.",
+          "para_context": "When an IFR aircraft intends to land at an airport not served by a tower or FSS, approve a change to the advisory service frequency once direct communications are no longer required. This permits the aircraft to receive timely local traffic information.",
+          "choices": [
+            {
+              "text": "Approve the change to the advisory frequency.",
+              "is_correct": true
+            },
+            {
+              "text": "Keep the aircraft on your frequency until after landing and cancellation regardless of local traffic needs.",
+              "is_correct": false
+            },
+            {
+              "text": "Deny the frequency change unless the aircraft is VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate IFR immediately without approving any frequency change.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Once direct communications are no longer needed, the advisory-frequency change should be approved."
+        }
+      ]
+    },
+    "4-8-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Except for a VFR aircraft practicing an instrument approach, what does an approach clearance automatically authorize?",
+          "choices": [
+            {
+              "text": "Execution of the depicted missed approach procedure for the IAP being flown.",
+              "is_correct": true
+            },
+            {
+              "text": "Any alternate missed approach the pilot prefers.",
+              "is_correct": false
+            },
+            {
+              "text": "Immediate descent below the published missed approach altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "A communications release to advisory frequency only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A normal approach clearance automatically authorizes the depicted missed approach, except for a VFR practice-approach aircraft."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this alternate-missed rule correct?",
+          "question_text": "If an alternate missed approach procedure is necessary, the controller must issue the procedure description as published on the appropriate FAA or military form for the IAP.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When an alternate missed approach is required, the controller issues the published description from the appropriate source form."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this NOTAM exception correct?",
+          "question_text": "If the alternate missed approach procedure is published and in effect by NOTAM, the controller may omit the procedure description.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A published alternate missed approach that is already in effect by NOTAM need not be restated to the pilot."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which aircraft is the exception?",
+          "question_text": "Which aircraft does not receive automatic authorization to execute the depicted missed approach from the approach clearance alone?",
+          "choices": [
+            {
+              "text": "A VFR aircraft practicing an instrument approach.",
+              "is_correct": true
+            },
+            {
+              "text": "An IFR arrival flying the published IAP.",
+              "is_correct": false
+            },
+            {
+              "text": "An IFR aircraft on a low approach.",
+              "is_correct": false
+            },
+            {
+              "text": "An aircraft on a relayed approach clearance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The automatic missed-approach authorization does not apply to a VFR aircraft practicing an instrument approach."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft has commenced the missed approach and you need to turn it away from conflicting traffic.",
+          "para_context": "After an aircraft commences a missed approach, it may be vectored at or above the MVA or MIA, or ATC may follow the provisions for vectors below minimum altitude when applicable.",
+          "choices": [
+            {
+              "text": "Vector the aircraft at or above the MVA or MIA.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the aircraft lands or cancels IFR before issuing any vector.",
+              "is_correct": false
+            },
+            {
+              "text": "Descend the aircraft below the MVA or MIA without using the vectors-below-minimum-altitude provisions.",
+              "is_correct": false
+            },
+            {
+              "text": "Assume the pilot may choose any missed approach without further ATC involvement.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Once the missed approach begins, the aircraft may be vectored at or above the MVA or MIA, or under the applicable low-altitude vectoring provisions."
+        }
+      ]
+    },
+    "4-8-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When the pilot says they are unfamiliar with the procedure, what must be specified in the approach clearance?",
+          "choices": [
+            {
+              "text": "Initial approach altitude, procedure turn distance and direction, procedure turn altitude, final approach course and altitude, and missed approach procedures if necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the runway number and tower frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the missed approach point and airport elevation.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the final approach course because the chart covers the rest.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the specific approach items that must be provided when the pilot says they are unfamiliar with the procedure."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this unfamiliar-pilot rule correct?",
+          "question_text": "If the pilot says they are unfamiliar with the procedure, the controller must specify the initial approach altitude, the procedure turn information, the final approach course and altitude, and missed approach procedures if considered necessary.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the required information set for a pilot unfamiliar with the procedure."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which chart note still matters?",
+          "question_text": "Which type of chart notation should be called out when the pilot is unfamiliar with the procedure?",
+          "choices": [
+            {
+              "text": "A notation that places responsibility on the pilot to comply with a charted limitation or instruction.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the chart edition date.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the chart creator's initials.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the runway length table.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The controller should specify applicable approach-chart notations that place responsibilities or restrictions on the pilot."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot reports being unfamiliar with the procedure and requests help with the full instrument approach briefing.",
+          "para_context": "When the pilot says they are unfamiliar with the procedure, the approach clearance should specify the initial approach altitude, procedure turn direction and distance, procedure turn altitude, final approach course and altitude, and missed approach procedures if necessary, along with applicable chart notations that place responsibilities on the pilot.",
+          "choices": [
+            {
+              "text": "Include the listed approach-information items in the approach clearance and add any applicable chart notations that place responsibilities on the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Tell the pilot to read the chart after switching to tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue only the final approach course and omit the rest because the chart already exists.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the approach because unfamiliarity automatically disqualifies the pilot from receiving the clearance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the pilot is unfamiliar, the controller must provide the listed approach details and applicable pilot-responsibility chart notations."
+        }
+      ]
+    },
+    "4-8-11": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "If traffic conditions or workload prevent authorization of a practice instrument approach, what should ATC do?",
+          "choices": [
+            {
+              "text": "Advise the pilot of the reason and, if applicable, the anticipated delay until the operation can be approved.",
+              "is_correct": true
+            },
+            {
+              "text": "Deny the approach with no explanation because practice approaches are always low priority.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate any practice approach already in progress immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the approach indefinitely without updating the pilot.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ATC advises the reason for the delay or refusal and, if applicable, the anticipated delay. Controller-imposed delays should not be indefinite."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this flow-protection rule correct?",
+          "question_text": "Except for military aircraft operating at military airfields, you must ensure that neither VFR nor IFR practice approaches disrupt the flow of other arriving and departing IFR or VFR aircraft.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Practice approaches are authorized only so long as they do not disrupt the flow of other traffic, except for the military-airfield exception."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "Is this VFR-practice separation rule correct?",
+          "question_text": "If a facility directive requires IFR separation for a VFR aircraft practicing an instrument approach, IFR separation must be provided, and except for super or heavy aircraft, 500 feet vertical separation may be applied between VFR aircraft and between a VFR and an IFR aircraft.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the facility directive requires IFR separation, that separation must be provided, with the stated 500-foot exception for non-super/non-heavy operations."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "A VFR aircraft is approved for a practice approach under a directive that does not provide separation services. Build the advisory.",
+          "target_phrase": "MAINTAIN VFR PRACTICE APPROACH APPROVED NO SEPARATION SERVICES PROVIDED",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"MAINTAIN VFR, PRACTICE APPROACH APPROVED, NO SEPARATION SERVICES PROVIDED.\"",
+          "word_bank": [
+            "APPROACH",
+            "APPROVED",
+            "MAINTAIN",
+            "NO",
+            "PRACTICE",
+            "PROVIDED",
+            "SEPARATION",
+            "SERVICES",
+            "VFR"
+          ],
+          "correct_sequence": [
+            2,
+            8,
+            4,
+            0,
+            1,
+            3,
+            6,
+            7,
+            5
+          ]
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which aircraft is not automatic here?",
+          "question_text": "Which aircraft is not automatically authorized to execute the missed approach procedure during a practice instrument approach?",
+          "choices": [
+            {
+              "text": "A VFR aircraft practicing an instrument approach.",
+              "is_correct": true
+            },
+            {
+              "text": "An IFR aircraft practicing the approach.",
+              "is_correct": false
+            },
+            {
+              "text": "An IFR aircraft that has not yet reached the missed approach point.",
+              "is_correct": false
+            },
+            {
+              "text": "An IFR aircraft that cancels after landing.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "VFR practice-approach aircraft must specifically request and receive approval for the missed approach."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A VFR aircraft practicing an instrument approach wants to fly the published missed approach, and a facility directive requires IFR separation for VFR practice approaches.",
+          "para_context": "VFR practice-approach aircraft must be instructed to maintain VFR. If a facility directive requires IFR separation, that separation must be provided. A VFR practice aircraft is not automatically authorized to execute the missed approach; the pilot must request it and the controller must approve it. When approved under the IFR-separation directive, IFR separation continues throughout the missed approach.",
+          "choices": [
+            {
+              "text": "Approve the missed approach only if requested, and provide IFR separation throughout the procedure as required by the facility directive.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume the missed approach is automatically authorized because the aircraft is already on the procedure.",
+              "is_correct": false
+            },
+            {
+              "text": "Deny the missed approach automatically because VFR aircraft may never execute one.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve it but discontinue separation as soon as the aircraft reaches the missed approach point.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A VFR practice aircraft needs specific missed-approach approval, and if the directive requires IFR separation, that separation continues through the missed approach."
+        }
+      ]
+    },
+    "4-8-12": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How is an aircraft conducting a touch-and-go, low approach, or practice approach treated before it touches down or crosses the landing threshold?",
+          "choices": [
+            {
+              "text": "As an arriving aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "As a departing aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "As VFR-only traffic regardless of flight plan.",
+              "is_correct": false
+            },
+            {
+              "text": "As uncontrolled traffic outside ATC jurisdiction.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The aircraft is considered arriving until touchdown or threshold crossing, then departing afterward."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this climb-out rule correct?",
+          "question_text": "Before the aircraft begins final descent, issue the departure instructions it will follow after the low approach, touch-and-go, or practice approach, and those climb-out instructions must include a specific heading or route of flight and altitude unless the aircraft will maintain VFR and contact the tower.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The climb-out instructions are issued before final descent and must include heading or route and altitude, except for the maintain-VFR-contact-tower case."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this repeated-approach rule correct?",
+          "question_text": "If climb-out instructions remain the same, they may be omitted after the first approach.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Once the first approach has been covered, unchanged climb-out instructions may be omitted on later approaches."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "After a low approach, the aircraft should climb and maintain 6,000, then turn right heading 360. Build the climb-out instruction.",
+          "target_phrase": "AFTER COMPLETING LOW APPROACH CLIMB AND MAINTAIN SIX THOUSAND TURN RIGHT HEADING THREE SIX ZERO",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"AFTER COMPLETING LOW APPROACH, CLIMB AND MAINTAIN SIX THOUSAND. TURN RIGHT, HEADING THREE SIX ZERO.\"",
+          "word_bank": [
+            "AFTER",
+            "AND",
+            "APPROACH",
+            "CLIMB",
+            "COMPLETING",
+            "HEADING",
+            "LOW",
+            "MAINTAIN",
+            "RIGHT",
+            "SIX",
+            "SIX",
+            "THOUSAND",
+            "THREE",
+            "TURN",
+            "ZERO"
+          ],
+          "correct_sequence": [
+            0,
+            4,
+            6,
+            2,
+            3,
+            1,
+            7,
+            9,
+            11,
+            13,
+            8,
+            5,
+            12,
+            10,
+            14
+          ]
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which exception omits the heading or route?",
+          "question_text": "When may climb-out instructions omit a specific heading or route of flight and altitude?",
+          "choices": [
+            {
+              "text": "When the aircraft will maintain VFR and contact the tower.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the aircraft is on a low approach instead of a touch-and-go.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the pilot has the airport in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the aircraft is already above pattern altitude.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The exception is the maintain-VFR-contact-tower case."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is about to begin final descent for a low approach, and the pilot will depart straight ahead on instructions after crossing the threshold.",
+          "para_context": "Before final descent on a touch-and-go, low approach, or practice approach, the controller issues the departure instructions to be followed after the approach. Climb-out instructions must include a specific heading or route and altitude unless the aircraft will maintain VFR and contact the tower.",
+          "choices": [
+            {
+              "text": "Issue the departure and climb-out instructions before the aircraft begins final descent.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until after the aircraft crosses the threshold to decide what departure instructions will apply.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat the aircraft as a departure before it reaches the threshold and omit arrival sequencing entirely.",
+              "is_correct": false
+            },
+            {
+              "text": "Omit all climb-out instructions because low approaches never require departure guidance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The departure instructions are issued before final descent so the pilot knows what to do upon completion of the approach."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "4-8-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When may a controller clear an aircraft for an approach to one runway and inform it that landing will be made on a parallel runway?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "This is the side-step maneuver, and it may be used only when the procedure authorizes it.",
+          "choices": [
+            {
+              "text": "When the procedure authorizes a side-step maneuver.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot prefers the parallel runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft crosses the threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the ILS is out of service.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A side-step maneuver requires higher published weather minima or MDA.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The higher side-step minima or MDA are published on the approach chart.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What runway relationship is involved in a side-step maneuver?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The side-step is an approach to one runway with landing on a parallel runway.",
+          "choices": [
+            {
+              "text": "Approach to one runway, landing on a parallel runway.",
+              "is_correct": true
+            },
+            {
+              "text": "Approach to one runway, landing on a taxiway.",
+              "is_correct": false
+            },
+            {
+              "text": "Approach to one runway, landing on an intersecting runway only.",
+              "is_correct": false
+            },
+            {
+              "text": "Approach to any runway, landing wherever the pilot chooses.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which transmission correctly applies side-step phraseology?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "example",
+          "generation_source": "curated",
+          "explanation": "The clearance states the instrument approach runway and then the side-step runway.",
+          "choices": [
+            {
+              "text": "Cleared ILS Runway Seven Left approach. Side-step to Runway Seven Right.",
+              "is_correct": true
+            },
+            {
+              "text": "Cleared Runway Seven Right approach. Parallel land on Seven Left.",
+              "is_correct": false
+            },
+            {
+              "text": "Circle west of the airport for Runway Seven Right.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared visual approach to either runway.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the chart does not authorize side-step, may ATC create one by instruction alone?",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "No. The maneuver must be authorized by the instrument approach procedure.",
+          "choices": [
+            {
+              "text": "False",
+              "is_correct": true
+            },
+            {
+              "text": "True",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When should a change to the advisory service frequency be approved for an IFR aircraft landing at an airport not served by a tower or FSS?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The change is approved when direct communications are no longer required.",
+          "choices": [
+            {
+              "text": "When direct communications are no longer required.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft has landed.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot cancels IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot requests a traffic advisory from another aircraft.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If an IFR aircraft intends to land at an airport not served by a tower or FSS, approve the change to the advisory service frequency when you no longer require direct communications.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is the communications-release rule.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which phraseology releases the IFR aircraft to the local advisory frequency?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The published phraseology is \"CHANGE TO ADVISORY FREQUENCY APPROVED.\"",
+          "choices": [
+            {
+              "text": "Change to advisory frequency approved.",
+              "is_correct": true
+            },
+            {
+              "text": "Change to tower frequency approved.",
+              "is_correct": false
+            },
+            {
+              "text": "Contact traffic advisory on your own.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel IFR and monitor CTAF.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Why is an expeditious frequency change useful in this situation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "It lets the pilot receive timely local airport traffic information.",
+          "choices": [
+            {
+              "text": "It permits the aircraft to receive timely local airport traffic information.",
+              "is_correct": true
+            },
+            {
+              "text": "It transfers missed-approach responsibility to local traffic.",
+              "is_correct": false
+            },
+            {
+              "text": "It eliminates the need to comply with IFR communications requirements.",
+              "is_correct": false
+            },
+            {
+              "text": "It authorizes a visual approach without further clearance.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Except for a VFR aircraft practicing an instrument approach, what does an approach clearance automatically authorize?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The normal approach clearance automatically authorizes the depicted missed approach for the IAP being flown.",
+          "choices": [
+            {
+              "text": "Execution of the depicted missed approach procedure for the IAP being flown.",
+              "is_correct": true
+            },
+            {
+              "text": "Any alternate missed approach the pilot chooses.",
+              "is_correct": false
+            },
+            {
+              "text": "Immediate vectors below minimum altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "A release to advisory frequency only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If an alternate missed approach is necessary, must the controller issue the procedure description as published on the appropriate FAA or military form for the IAP?",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Yes. The alternate missed approach is issued as published unless it is already published and in effect by NOTAM.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may the description of an alternate missed approach procedure be omitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The description may be omitted when the alternate missed approach is already published and in effect via NOTAM.",
+          "choices": [
+            {
+              "text": "When the alternate missed approach is published and in effect via NOTAM.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot says they know the procedure.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the aircraft is VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot crosses the missed approach point.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which aircraft does not receive automatic authorization to execute the depicted missed approach from the approach clearance alone?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The exception is a VFR aircraft practicing an instrument approach.",
+          "choices": [
+            {
+              "text": "A VFR aircraft practicing an instrument approach.",
+              "is_correct": true
+            },
+            {
+              "text": "An IFR aircraft flying the IAP.",
+              "is_correct": false
+            },
+            {
+              "text": "An IFR aircraft on a relayed approach clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "An aircraft receiving vectors to final.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "After an aircraft commences the missed approach, where may it be vectored?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "After the missed approach begins, the aircraft may be vectored at or above the MVA or MIA, or under the applicable vectors-below-minimum-altitude provisions.",
+          "choices": [
+            {
+              "text": "At or above the MVA or MIA, or under the vectors-below-minimum-altitude provisions when applicable.",
+              "is_correct": true
+            },
+            {
+              "text": "Only along the depicted missed approach route with no vectors ever permitted.",
+              "is_correct": false
+            },
+            {
+              "text": "At any altitude the controller judges useful, regardless of obstacle criteria.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot lands and requests another clearance.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When the pilot says they are unfamiliar with the procedure, what information must be specified in the approach clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller specifies the initial approach altitude, procedure turn details, final approach course and altitude, and missed approach procedures if necessary.",
+          "choices": [
+            {
+              "text": "The initial approach altitude, procedure turn details, final approach course and altitude, and missed approach procedures if necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the final approach course and airport elevation.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the runway number and tower frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the missed approach point and touchdown zone elevation.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the pilot says they are unfamiliar with the procedure, the controller must specify the procedure turn altitude and the direction and distance from the holding fix within which the procedure turn is to be completed.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Both the procedure turn altitude and the direction and distance for the turn are specifically listed.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which chart notation should still be specified to an unfamiliar pilot?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The controller should specify chart notations that place compliance responsibility on the pilot.",
+          "choices": [
+            {
+              "text": "A chart notation that requires the pilot to comply with a published limitation or instruction.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the chart publication date.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the airport diagram legend.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the runway lighting footnote.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If considered necessary, what additional information should be specified for an unfamiliar pilot besides the inbound approach geometry?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Missed approach procedures are specified if the controller considers it necessary.",
+          "choices": [
+            {
+              "text": "The missed approach procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "The airport gate assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the CTAF frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "The surface movement guidance plan.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which phraseology element belongs in the unfamiliar-pilot briefing for the procedure turn?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The phraseology includes the procedure turn altitude and the number of minutes or miles and direction from the holding fix.",
+          "choices": [
+            {
+              "text": "Procedure turn at (altitude), (number) minutes or miles (direction).",
+              "is_correct": true
+            },
+            {
+              "text": "Report established on final when able.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared visual approach at pilot's discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "Line up and wait on the parallel runway.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-11": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "If traffic conditions or workload prevent authorization of a practice instrument approach, what should ATC do?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "ATC advises the reason and, if applicable, the anticipated delay. Controller-imposed delays should not be indefinite.",
+          "choices": [
+            {
+              "text": "Advise the pilot of the reason and, if applicable, the anticipated delay.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue an indefinite delay with no explanation.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate every practice approach already in progress.",
+              "is_correct": false
+            },
+            {
+              "text": "Refuse the approach automatically whenever an IFR arrival exists anywhere in the area.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Except for military aircraft operating at military airfields, practice instrument approaches must not disrupt the flow of other arriving and departing IFR or VFR aircraft.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "That traffic-flow protection applies to both VFR and IFR practice approaches, with the military-airfield exception.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must a VFR aircraft conducting a practice instrument approach be instructed to do on initial contact or as soon as possible thereafter?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The pilot must be instructed to maintain VFR.",
+          "choices": [
+            {
+              "text": "Maintain VFR.",
+              "is_correct": true
+            },
+            {
+              "text": "Cancel IFR immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Climb to the initial approach altitude immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Contact the tower before entering final.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When a facility directive does not require IFR separation for a VFR aircraft practicing an instrument approach, what phraseology is used?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The advisory includes maintain VFR, practice approach approved, and no separation services provided.",
+          "choices": [
+            {
+              "text": "Maintain VFR, practice approach approved, no separation services provided.",
+              "is_correct": true
+            },
+            {
+              "text": "Cleared approach, maintain IFR, separation guaranteed.",
+              "is_correct": false
+            },
+            {
+              "text": "Practice approach approved, radar vectors only.",
+              "is_correct": false
+            },
+            {
+              "text": "Maintain VFR, missed approach automatically approved.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Is a VFR aircraft automatically authorized to execute the published missed approach during a practice instrument approach?",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "No. A VFR practice aircraft must specifically request and receive approval for the missed approach.",
+          "choices": [
+            {
+              "text": "False",
+              "is_correct": true
+            },
+            {
+              "text": "True",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a facility directive requires IFR separation for a VFR aircraft practicing an approach and the pilot is approved for the missed approach, how long must IFR separation be provided?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "When approved under the directive-required separation case, IFR separation continues throughout the procedure including the missed approach.",
+          "choices": [
+            {
+              "text": "Throughout the procedure, including the missed approach.",
+              "is_correct": true
+            },
+            {
+              "text": "Only until the aircraft reaches the missed approach point.",
+              "is_correct": false
+            },
+            {
+              "text": "Only until the aircraft reports the runway in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Separation is not required once the aircraft is VFR.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-12": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "How is an aircraft conducting a touch-and-go, low approach, or practice approach treated before it touches down or crosses the landing threshold?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Before touchdown or threshold crossing, it is treated as an arriving aircraft.",
+          "choices": [
+            {
+              "text": "As an arriving aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "As a departing aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "As local pattern traffic outside ATC separation rules.",
+              "is_correct": false
+            },
+            {
+              "text": "As special VFR traffic only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Before the aircraft begins final descent on a low approach, touch-and-go, or practice approach, what must ATC issue?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The pilot must receive the departure instructions that will apply after completion of the approach.",
+          "choices": [
+            {
+              "text": "The departure instructions to be followed after the approach is completed.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the landing clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Only a frequency change.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing until after the threshold is crossed.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Climb-out instructions must include a specific heading or route of flight and altitude unless the aircraft will maintain VFR and contact the tower.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is the stated exception to the heading or route and altitude requirement.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may climb-out instructions be omitted after the first approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "They may be omitted after the first approach if they remain unchanged.",
+          "choices": [
+            {
+              "text": "When the instructions remain the same.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the aircraft is VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the pilot has already flown one low approach at any airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when tower requests the omission.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which climb-out instruction is correct for a low approach that will climb to 6,000 and turn right heading 360 after completion?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "example",
+          "generation_source": "curated",
+          "explanation": "The example states the post-approach climb and heading before final descent.",
+          "choices": [
+            {
+              "text": "After completing low approach, climb and maintain six thousand. Turn right, heading three six zero.",
+              "is_correct": true
+            },
+            {
+              "text": "After landing, request departure instructions from tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared low approach, further departure instructions after threshold crossing.",
+              "is_correct": false
+            },
+            {
+              "text": "Maintain VFR, low approach approved, no other instructions.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

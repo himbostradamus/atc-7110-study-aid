@@ -1,0 +1,1562 @@
+{
+  "activities": {
+    "5-1-7": {
+      "replace_types": [
+        "requirement_check",
+        "scope_check",
+        "situation_action"
+      ],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this controller requirement match the paragraph?",
+          "question_text": "When the flight progress recording components of the EAS FDP are not operational, manually record the observed or reported time over a fix at least once for each controlled aircraft in your sector of responsibility.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That requirement is the substance of 5-1-7."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this scope or responsibility statement match the paragraph?",
+          "question_text": "This EN ROUTE procedure applies when the flight progress recording components of the EAS FDP are not operational.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "This EN ROUTE procedure applies when the listed FDP components are not operational."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "The EAS FDP flight progress recording components fail in your en route sector while several controlled aircraft are crossing fixes.",
+          "para_context": "Under 5-1-7, manually record the observed or reported time over a fix at least once for each controlled aircraft in your sector of responsibility when the flight progress recording components of the EAS FDP are not operational.",
+          "choices": [
+            {
+              "text": "Manually record the observed or reported time over a fix at least once for each controlled aircraft in your sector.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until each aircraft exits the sector before reconstructing the fix times from memory.",
+              "is_correct": false
+            },
+            {
+              "text": "Record fix times only for aircraft that request a manual progress check.",
+              "is_correct": false
+            },
+            {
+              "text": "Suspend all fix-time recording because the FDP failure removes the requirement.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-1-7, manual fix posting replaces the failed flight progress recording function for controlled aircraft in the sector."
+        }
+      ]
+    },
+    "5-3-1": {
+      "replace_types": [
+        "conditional_rule_check",
+        "requirement_check",
+        "reference_check",
+        "situation_action"
+      ],
+      "items": [
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this conditional rule match the paragraph?",
+          "question_text": "Before you provide radar service, establish and maintain radar identification of the aircraft involved except as provided in the listed application paragraphs.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the basic rule stated in 5-3-1."
+        },
+        {
+          "activity_type": "reference_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this citation match the paragraph's reference?",
+          "question_text": "This paragraph cites FAA Order JO 7110.65, Para 5-1-1, Presentation and Equipment Performance.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "This paragraph cites both 3-1-9 and 5-1-1."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A controller is about to provide radar service to an aircraft that has just entered the sector, but radar identification has not yet been established.",
+          "para_context": "Under 5-3-1, before providing radar service, establish and maintain radar identification of the aircraft involved except where the listed application exceptions apply.",
+          "choices": [
+            {
+              "text": "Establish and maintain radar identification before providing radar service unless one of the listed application exceptions applies.",
+              "is_correct": true
+            },
+            {
+              "text": "Begin radar service immediately and confirm identification later because the service itself establishes identity.",
+              "is_correct": false
+            },
+            {
+              "text": "Provide radar service first and discontinue it only if radar identification cannot be maintained afterward.",
+              "is_correct": false
+            },
+            {
+              "text": "Rely on any previous controller's assumption of identity without establishing it yourself.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-3-1, radar identification must exist before radar service begins, subject only to the listed exceptions."
+        }
+      ]
+    },
+    "5-4-4": {
+      "replace_types": [
+        "requirement_check",
+        "scope_check",
+        "situation_action"
+      ],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this controller requirement match the paragraph?",
+          "question_text": "When using the term \"traffic\" for coordinating separation, the controller issuing traffic must issue appropriate restrictions.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That requirement appears in 5-4-4a."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this scope or responsibility statement match the paragraph?",
+          "question_text": "The controller accepting the restrictions is responsible for ensuring that approved separation is maintained between the involved aircraft.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That responsibility appears in 5-4-4b."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "You coordinate separation using the term \"traffic\" with another controller and assign the traffic relationship but no altitude or route restriction.",
+          "para_context": "Under 5-4-4, the controller issuing traffic must issue appropriate restrictions, and the controller accepting those restrictions is responsible for ensuring that approved separation is maintained.",
+          "choices": [
+            {
+              "text": "Issue the appropriate restrictions as part of the coordination and understand that the accepting controller then ensures approved separation is maintained.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the word \"traffic\" by itself because the accepting controller decides all restrictions after acceptance.",
+              "is_correct": false
+            },
+            {
+              "text": "Avoid issuing restrictions because the term \"traffic\" automatically transfers separation responsibility back to the originating controller.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat the coordination as advisory only, with neither controller responsible for maintaining approved separation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-4-4, \"traffic\" coordination requires restrictions from the issuing controller and separation responsibility from the accepting controller."
+        }
+      ]
+    },
+    "5-7-3": {
+      "replace_types": [
+        "list_membership",
+        "minima_rule_check",
+        "situation_action"
+      ],
+      "items": [
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which is one listed speed assignment in this paragraph?",
+          "question_text": "Under 5-7-3, which is one listed speed assignment?",
+          "choices": [
+            {
+              "text": "To helicopters, assign a speed not less than 60 knots.",
+              "is_correct": true
+            },
+            {
+              "text": "To turbojet departures, assign a speed not more than 210 knots.",
+              "is_correct": false
+            },
+            {
+              "text": "To aircraft beneath Class B airspace, assign a speed not less than 200 knots.",
+              "is_correct": false
+            },
+            {
+              "text": "To arrival turbojets within 20 flying miles of the runway threshold, assign a speed not less than 230 knots.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A minimum of 60 knots for helicopters is one of the listed assignments in 5-7-3e."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this minima or speed-limit statement match the paragraph?",
+          "question_text": "Below Class B airspace or in a VFR corridor designated through Class B airspace, assign a speed not more than 200 knots.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That speed limit appears in 5-7-3b."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A turbojet arrival is below 10,000 feet and inside 20 flying miles of the runway threshold. You need a speed assignment that stays at the lowest value permitted by the paragraph.",
+          "para_context": "Under 5-7-3c1, turbojet arrivals below 10,000 feet may be assigned not less than 210 knots, or not less than 170 knots when within 20 flying miles of the runway threshold.",
+          "choices": [
+            {
+              "text": "Assign not less than 170 knots.",
+              "is_correct": true
+            },
+            {
+              "text": "Assign not less than 150 knots.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign not more than 200 knots because all arrivals below 10,000 feet use the Class B limit.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign not less than 230 knots because departure and arrival minima are interchangeable.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-7-3c1(b), 170 knots is the lowest listed minimum for a turbojet arrival within 20 flying miles of the threshold."
+        }
+      ]
+    },
+    "5-9-11": {
+      "replace_types": [
+        "requirement_check",
+        "scope_check",
+        "situation_action"
+      ],
+      "items": [
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this scope or responsibility statement match the paragraph?",
+          "question_text": "This transitional procedure applies when aircraft are conducting simultaneous dependent, independent, or other approaches allowing reduced separation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That scope statement summarizes the opening condition in 5-9-11."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this controller requirement match the paragraph?",
+          "question_text": "If one aircraft goes around or has its approach clearance terminated before approved reduced separation is lost, control instructions must be issued expeditiously to increase separation and establish approved separation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the core requirement in 5-9-11."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Two aircraft are conducting simultaneous approaches with reduced separation. One aircraft executes a go-around before the approved reduced separation is lost.",
+          "para_context": "Under 5-9-11, expeditiously issue control instructions to increase separation, ensure those instructions establish approved separation, and issue wake turbulence cautionary advisories in accordance with paragraph 2-1-20.",
+          "choices": [
+            {
+              "text": "Issue immediate control instructions that increase separation and establish approved separation, and include wake turbulence cautionary advisories as required.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until reduced separation is actually lost before issuing any new control instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only traffic information because a go-around automatically cancels the need for approved separation.",
+              "is_correct": false
+            },
+            {
+              "text": "Continue the approaches unchanged unless both pilots request vectors.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-9-11, the controller acts before reduced separation is lost and must restore approved separation with immediate instructions."
+        }
+      ]
+    },
+    "5-10-1": {
+      "replace_types": [
+        "directive_check",
+        "scope_check",
+        "situation_action"
+      ],
+      "items": [
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this directive stated correctly?",
+          "question_text": "Provide radar approaches in accordance with standard or special instrument approach procedures.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That directive appears in 5-10-1a."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this scope or responsibility statement match the paragraph?",
+          "question_text": "Acceptance of a radar approach does not waive the prescribed weather minima, and the pilot is responsible for determining whether the approach and landing are authorized under the existing weather minima.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That note appears under 5-10-1."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A pilot requests a radar approach to expedite traffic, and another aircraft in distress is also being considered for the same type of service in poor weather.",
+          "para_context": "Under 5-10-1, radar approaches are provided in accordance with standard or special instrument approach procedures. A radar approach may be given to any aircraft upon request and may be offered to aircraft in distress regardless of weather conditions or to expedite traffic. Acceptance does not waive weather minima.",
+          "choices": [
+            {
+              "text": "A radar approach may be given upon request and may also be offered to an aircraft in distress regardless of weather conditions, but acceptance does not waive the prescribed minima.",
+              "is_correct": true
+            },
+            {
+              "text": "A radar approach may be given only when weather exceeds published minima because distress does not change the rule.",
+              "is_correct": false
+            },
+            {
+              "text": "A radar approach must be denied for traffic-expediting purposes because it is reserved for emergencies only.",
+              "is_correct": false
+            },
+            {
+              "text": "Once the pilot accepts a radar approach, the pilot is no longer responsible for weather-minima compliance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-10-1, radar approaches may be used on request, may be offered in distress regardless of weather, and do not waive prescribed minima."
+        }
+      ]
+    },
+    "5-11-1": {
+      "replace_types": [
+        "directive_check",
+        "minima_rule_check",
+        "situation_action"
+      ],
+      "items": [
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this directive stated correctly?",
+          "question_text": "Provide recommended altitudes on final if the pilot requests.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That directive appears in the opening sentence of 5-11-1."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this minima statement match the paragraph?",
+          "question_text": "If recommended altitudes are requested, tell the pilot that recommended altitudes at or above the published minimum descent altitude will be given for each mile on final.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That requirement appears in 5-11-1."
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "One word in this phraseology is incorrect. Tap it.",
+          "original_phrase": "RECOMMENDED ALTITUDES WILL BE PROVIDED FOR EACH MILE ON FINAL TO MINIMUM DESCENT ALTITUDE/CIRCLING MINIMUM DESCENT ALTITUDE.",
+          "display_text": "RECOMMENDED ALTITUDES WILL BE WITHHELD FOR EACH MILE ON FINAL TO MINIMUM DESCENT ALTITUDE/CIRCLING MINIMUM DESCENT ALTITUDE",
+          "tokens": [
+            "RECOMMENDED",
+            "ALTITUDES",
+            "WILL",
+            "BE",
+            "WITHHELD",
+            "FOR",
+            "EACH",
+            "MILE",
+            "ON",
+            "FINAL",
+            "TO",
+            "MINIMUM",
+            "DESCENT",
+            "ALTITUDE/CIRCLING",
+            "MINIMUM",
+            "DESCENT",
+            "ALTITUDE"
+          ],
+          "error_index": 4,
+          "correct_token": "PROVIDED",
+          "explanation": "Per 5-11-1, the correct phraseology says recommended altitudes will be provided for each mile on final."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A pilot requests recommended altitudes during the final segment of a surveillance approach.",
+          "para_context": "Under 5-11-1, provide recommended altitudes on final if the pilot requests and advise that recommended altitudes at or above the published minimum descent altitude will be given for each mile on final.",
+          "choices": [
+            {
+              "text": "Provide the recommended altitudes and advise that altitudes at or above the published minimum descent altitude will be given for each mile on final.",
+              "is_correct": true
+            },
+            {
+              "text": "Decline the request because recommended altitudes are never provided on final approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Give only one altitude at the outer marker because the paragraph does not allow mile-by-mile information.",
+              "is_correct": false
+            },
+            {
+              "text": "Provide altitudes below the published minimum descent altitude if that helps the pilot descend sooner.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-11-1, the service is available on request and is tied to mile-by-mile recommended altitudes at or above the published MDA."
+        }
+      ]
+    },
+    "5-13-3": {
+      "replace_types": [
+        "list_membership",
+        "requirement_check",
+        "situation_action"
+      ],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this controller requirement match the paragraph?",
+          "question_text": "Do not modify assigned or interim altitude information prior to establishing communication with an aircraft outside your area of jurisdiction unless verbal coordination identifying who will modify the data block has been accomplished.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That requirement appears in 5-13-3a2."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which is one listed computer entry in this paragraph?",
+          "question_text": "Under 5-13-3, which is one entry you may make when an aircraft is cleared to maintain an altitude different from the flight plan database?",
+          "choices": [
+            {
+              "text": "A procedure altitude if the aircraft is cleared to vertically navigate on a SID or STAR with published restrictions.",
+              "is_correct": true
+            },
+            {
+              "text": "Any route amendment entered in the altitude field as long as the pilot has acknowledged it.",
+              "is_correct": false
+            },
+            {
+              "text": "The receiving controller's initials instead of an interim altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "A new beacon code in place of altitude information.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A procedure altitude is one of the listed entries in 5-13-3a3(c)."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft outside your area of jurisdiction is climbing to an interim altitude, but you have not yet established communication and no verbal coordination has identified who will modify the data block.",
+          "para_context": "Under 5-13-3, assigned or interim altitude information must not be modified outside your area of jurisdiction before communication is established unless verbal coordination identifies who will modify the data block. The altitude field must reflect the current aircraft status unless otherwise specified.",
+          "choices": [
+            {
+              "text": "Do not modify the assigned or interim altitude information yet because communication or the required verbal coordination has not occurred.",
+              "is_correct": true
+            },
+            {
+              "text": "Update the altitude field immediately because current status always overrides jurisdiction and coordination limits.",
+              "is_correct": false
+            },
+            {
+              "text": "Change the route field instead of the altitude field because route data may always be modified outside your jurisdiction.",
+              "is_correct": false
+            },
+            {
+              "text": "Delete the interim altitude and wait for the next sector to build the data block from scratch.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-13-3, the altitude field must reflect status, but outside-jurisdiction changes still require communication or the specified verbal coordination."
+        }
+      ]
+    },
+    "5-13-8": {
+      "replace_types": [
+        "scope_check",
+        "requirement_check",
+        "situation_action"
+      ],
+      "items": [
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this scope or responsibility statement match the paragraph?",
+          "question_text": "Controller initiated coast tracks are used only in Flight Plan Aided Tracking mode, except free coast tracking may be used as a reminder that aircraft without corresponding computer-stored flight plan information are under your control.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the scope statement in 5-13-8a."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this controller requirement match the paragraph?",
+          "question_text": "Prior to initiating a coast track, you must ensure that a departure message or progress report corresponding with the aircraft's current position is entered into the computer.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That requirement appears in 5-13-8b."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "You need to start a coast track for an aircraft that lacks corresponding stored flight plan information, and the aircraft is now in radar surveillance.",
+          "para_context": "Under 5-13-8, controller initiated coast tracks are started in FLAT mode, free coast tracking may be used as a reminder that such aircraft are under your control, a corresponding departure message or progress report must be entered before initiating the track, and radar tracking should begin as soon as practicable once the aircraft is in radar surveillance.",
+          "choices": [
+            {
+              "text": "Ensure the required departure message or progress report is in the computer, use FLAT mode or free coast tracking only as authorized, and initiate action to start radar tracking as soon as practicable.",
+              "is_correct": true
+            },
+            {
+              "text": "Start a free coast track without any corresponding computer entry because the lack of stored flight plan information removes the entry requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay radar tracking indefinitely because a coast track may remain the final state after surveillance begins.",
+              "is_correct": false
+            },
+            {
+              "text": "Use free coast tracking for any aircraft with stored flight plan information as long as the route is current.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-13-8, coast tracks have specific FLAT-mode, entry, and follow-up radar tracking requirements."
+        }
+      ]
+    },
+    "6-7-1": {
+      "replace_types": [
+        "list_membership",
+        "requirement_check",
+        "situation_action"
+      ],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this controller requirement match the paragraph?",
+          "question_text": "Direct communication must be maintained with the aircraft until the pilot is instructed to contact the tower.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That requirement appears in 6-7-1a."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which is one listed condition in this paragraph?",
+          "question_text": "If only one missed approach procedure is available under 6-7-1, which is one required condition?",
+          "choices": [
+            {
+              "text": "Course reversal is not required.",
+              "is_correct": true
+            },
+            {
+              "text": "The missed approach procedure must include a course reversal so spacing can be increased.",
+              "is_correct": false
+            },
+            {
+              "text": "Reported ceiling and visibility may be lower than the highest prescribed circling minimums as long as radar vectors are used.",
+              "is_correct": false
+            },
+            {
+              "text": "Tower communications may be delayed until after the aircraft passes the final approach fix.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 6-7-1c1, no course reversal is one of the required conditions when only one missed approach procedure is available."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You want to use timed approaches at a towered airport, but the only available missed approach procedure requires a course reversal and the weather is marginal.",
+          "para_context": "Under 6-7-1, timed approaches may be used at airports served by a tower if the listed conditions are met. If only one missed approach procedure is available, course reversal must not be required and the reported ceiling and visibility must be at or above the highest prescribed circling minimums for the procedure in use.",
+          "choices": [
+            {
+              "text": "Do not use the timed-approach procedure under those conditions because the single missed approach procedure cannot require course reversal.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the timed approach anyway because tower service alone satisfies the paragraph.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the timed approach as long as direct communication is maintained, even if course reversal is required.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the timed approach only after the pilot agrees to accept lower-than-circling weather.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 6-7-1c, the single missed approach option cannot require course reversal, and the weather must also meet the highest prescribed circling minima."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "5-1-7": {
+      "replace_types": [
+        "multiple_choice",
+        "true_false"
+      ],
+      "items": [
+        {
+          "question_text": "Under 5-1-7, when is manual fix posting required?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-1-7, manual fix posting is required when the flight progress recording components of the EAS FDP are not operational.",
+          "choices": [
+            {
+              "text": "When the flight progress recording components of the EAS FDP are not operational.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever a pilot asks for a manual time check over a fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when both radar surveillance and FDP are unavailable.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for aircraft that are not under control in the sector.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must be manually recorded under 5-1-7?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-1-7, the controller records the observed or reported time over a fix at least once for each controlled aircraft in the sector.",
+          "choices": [
+            {
+              "text": "The observed or reported time over a fix at least once for each controlled aircraft in the sector.",
+              "is_correct": true
+            },
+            {
+              "text": "Every altitude change and speed assignment for uncontrolled traffic in adjacent sectors.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the estimated time over the boundary fix for aircraft requesting higher altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "The time of each radar handoff whether or not the aircraft crosses a fix.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-1-7, manually record the observed or reported time over a fix at least once for each controlled aircraft in your sector of responsibility when the flight progress recording components of the EAS FDP are not operational.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is the requirement in 5-1-7.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-3-1": {
+      "replace_types": [
+        "multiple_choice",
+        "true_false"
+      ],
+      "items": [
+        {
+          "question_text": "Before providing radar service under 5-3-1, what must a controller establish and maintain?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-3-1, the controller must establish and maintain radar identification of the aircraft involved before providing radar service, except for the listed exceptions.",
+          "choices": [
+            {
+              "text": "Radar identification of the aircraft involved.",
+              "is_correct": true
+            },
+            {
+              "text": "A completed handoff from every adjacent sector regardless of the service being provided.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilot acceptance of visual separation.",
+              "is_correct": false
+            },
+            {
+              "text": "A route amendment in the data block for every aircraft entering the sector.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which of the following is cited in 5-3-1 as part of the application exceptions to the basic radar-identification rule?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "5-3-1 cites paragraph 5-5-1, subparagraphs b2 and b3, and paragraph 8-5-5 as exceptions to the general requirement.",
+          "choices": [
+            {
+              "text": "Paragraph 5-5-1, subparagraphs b2 and b3, and paragraph 8-5-5.",
+              "is_correct": true
+            },
+            {
+              "text": "Paragraph 5-9-11 only.",
+              "is_correct": false
+            },
+            {
+              "text": "Paragraph 2-1-20 and paragraph 10-2-10.",
+              "is_correct": false
+            },
+            {
+              "text": "Paragraph 6-7-1 only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-3-1, radar identification may be established after radar service begins as long as it is maintained once established.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph requires radar identification before radar service begins, except for the listed exceptions.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "5-4-4": {
+      "replace_types": [
+        "multiple_choice",
+        "true_false"
+      ],
+      "items": [
+        {
+          "question_text": "When using the term \"traffic\" for coordinating separation under 5-4-4, what must the issuing controller do?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-4-4a, the controller issuing traffic must issue appropriate restrictions.",
+          "choices": [
+            {
+              "text": "Issue appropriate restrictions.",
+              "is_correct": true
+            },
+            {
+              "text": "Transfer communications immediately and let the receiving controller choose any needed restrictions.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue only traffic information because restrictions are optional.",
+              "is_correct": false
+            },
+            {
+              "text": "Avoid using the word \"traffic\" unless both aircraft are already separated by wake turbulence standards.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-4-4, who ensures that approved separation is maintained between the involved aircraft after the restrictions are accepted?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-4-4b, the controller accepting the restrictions is responsible for ensuring approved separation is maintained.",
+          "choices": [
+            {
+              "text": "The controller accepting the restrictions.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller who first used the term \"traffic,\" regardless of acceptance.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot of the faster aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "The supervisory controller only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-4-4, the controller accepting the restrictions must be responsible for ensuring that approved separation is maintained between the involved aircraft.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement is 5-4-4b.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-7-3": {
+      "replace_types": [
+        "multiple_choice",
+        "true_false"
+      ],
+      "items": [
+        {
+          "question_text": "Under 5-7-3, what speed may be assigned to aircraft operating beneath Class B airspace or in a VFR corridor designated through Class B airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-7-3b, assign a speed not more than 200 knots.",
+          "choices": [
+            {
+              "text": "Not more than 200 knots.",
+              "is_correct": true
+            },
+            {
+              "text": "Not less than 200 knots.",
+              "is_correct": false
+            },
+            {
+              "text": "Not more than 170 knots in all cases.",
+              "is_correct": false
+            },
+            {
+              "text": "Not less than 250 knots or equivalent Mach number.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-7-3, what is the minimum listed speed for turbojet departures?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-7-3d1, turbojet departures are assigned a speed not less than 230 knots.",
+          "choices": [
+            {
+              "text": "Not less than 230 knots.",
+              "is_correct": true
+            },
+            {
+              "text": "Not less than 210 knots.",
+              "is_correct": false
+            },
+            {
+              "text": "Not more than 230 knots.",
+              "is_correct": false
+            },
+            {
+              "text": "Not less than 250 knots.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-7-3, helicopters may be assigned a speed not less than 60 knots.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That assignment appears in 5-7-3e.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-9-11": {
+      "replace_types": [
+        "multiple_choice",
+        "true_false"
+      ],
+      "items": [
+        {
+          "question_text": "When one aircraft in reduced-separation simultaneous approaches executes a go-around before the approved reduced separation is lost, what must be done under 5-9-11?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-9-11, control instructions must be issued expeditiously to increase separation and establish approved separation.",
+          "choices": [
+            {
+              "text": "Issue control instructions expeditiously to increase separation and establish approved separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the aircraft diverge naturally before deciding whether new instructions are needed.",
+              "is_correct": false
+            },
+            {
+              "text": "Continue using reduced separation because a go-around automatically restores spacing.",
+              "is_correct": false
+            },
+            {
+              "text": "Use wake turbulence advisories only, because separation instructions are unnecessary until final is rejoined.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What additional advisory requirement appears in 5-9-11 after the control instructions are issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "5-9-11 requires wake turbulence cautionary advisories in accordance with paragraph 2-1-20.",
+          "choices": [
+            {
+              "text": "Issue wake turbulence cautionary advisories in accordance with paragraph 2-1-20.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue only a traffic alert if both aircraft remain on the localizer.",
+              "is_correct": false
+            },
+            {
+              "text": "Suspend all further approach clearances for the airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer both aircraft to tower frequency immediately without additional coordination.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-9-11, the control instructions issued during the transitional procedure may establish approved separation if convenient, but they are not required to do so.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph says those instructions must establish approved separation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "5-10-1": {
+      "replace_types": [
+        "multiple_choice",
+        "true_false"
+      ],
+      "items": [
+        {
+          "question_text": "Under 5-10-1, when may a radar approach be given or offered?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-10-1b, a radar approach may be given to any aircraft upon request and may be offered to aircraft in distress regardless of weather conditions or to expedite traffic.",
+          "choices": [
+            {
+              "text": "It may be given to any aircraft upon request and may be offered to aircraft in distress regardless of weather conditions or to expedite traffic.",
+              "is_correct": true
+            },
+            {
+              "text": "It may be offered only to aircraft in distress and never for traffic expediting.",
+              "is_correct": false
+            },
+            {
+              "text": "It must be denied whenever weather is below published minima, even to aircraft in distress.",
+              "is_correct": false
+            },
+            {
+              "text": "It may be given only when requested by the tower local controller.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does acceptance of a radar approach not do under 5-10-1?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note under 5-10-1 says acceptance does not waive the prescribed weather minima for the airport or the aircraft operator.",
+          "choices": [
+            {
+              "text": "It does not waive the prescribed weather minima for the airport or the aircraft operator.",
+              "is_correct": true
+            },
+            {
+              "text": "It does not authorize the controller to issue a radar approach.",
+              "is_correct": false
+            },
+            {
+              "text": "It does not permit the pilot to continue talking to approach control.",
+              "is_correct": false
+            },
+            {
+              "text": "It does not allow traffic-expediting radar approaches.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-10-1, acceptance of a radar approach waives the prescribed weather minima because the controller is now responsible for weather authorization.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The paragraph says acceptance does not waive the minima and the pilot remains responsible for whether the approach and landing are authorized.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "5-11-1": {
+      "replace_types": [
+        "multiple_choice",
+        "true_false",
+        "fill_blank"
+      ],
+      "items": [
+        {
+          "question_text": "When are recommended altitudes on final provided under 5-11-1?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-11-1, recommended altitudes on final are provided if the pilot requests them.",
+          "choices": [
+            {
+              "text": "If the pilot requests them.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever a surveillance approach is in use, whether requested or not.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft reaches minimum descent altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for circling approaches.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If recommended altitudes are requested under 5-11-1, what must the controller tell the pilot?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller informs the pilot that recommended altitudes at or above the published MDA will be given for each mile on final.",
+          "choices": [
+            {
+              "text": "That recommended altitudes at or above the published minimum descent altitude will be given for each mile on final.",
+              "is_correct": true
+            },
+            {
+              "text": "That only one advisory altitude will be given at the final approach fix.",
+              "is_correct": false
+            },
+            {
+              "text": "That recommended altitudes below the published minimum descent altitude may be issued if requested.",
+              "is_correct": false
+            },
+            {
+              "text": "That the pilot must switch to tower before any altitude information can be provided.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-11-1, if recommended altitudes are requested, inform the pilot that recommended altitudes at or above the published minimum descent altitude will be given for each mile on final.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is the requirement in 5-11-1.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-13-3": {
+      "replace_types": [
+        "multiple_choice",
+        "true_false"
+      ],
+      "items": [
+        {
+          "question_text": "Under 5-13-3, what must the altitude field of the data block always reflect unless otherwise specified in an appropriate facility directive?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-13-3a1, the altitude field must always reflect the current status of the aircraft unless otherwise specified.",
+          "choices": [
+            {
+              "text": "The current status of the aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "The filed altitude only, even after amended clearances are issued.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the coordinated altitude from the previous sector.",
+              "is_correct": false
+            },
+            {
+              "text": "The lowest minimum IFR altitude in the sector.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which of the following is one listed computer entry under 5-13-3 when an aircraft is cleared to maintain an altitude different from the flight plan database?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Per 5-13-3a3, acceptable entries include a new assigned altitude, an interim altitude, a procedure altitude, or, where appropriate for interfacility handoffs, an LIA.",
+          "choices": [
+            {
+              "text": "An interim altitude when the aircraft will maintain the new altitude for a short period and later be recleared.",
+              "is_correct": true
+            },
+            {
+              "text": "The next route amendment inserted into the altitude field.",
+              "is_correct": false
+            },
+            {
+              "text": "A handoff acceptance code entered instead of any altitude information.",
+              "is_correct": false
+            },
+            {
+              "text": "The last assigned speed in place of any interim altitude entry.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-13-3, flight plan route data must not be modified outside the controller's area of jurisdiction unless verbally coordinated or specified in a Letter of Agreement or Facility Directive.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 5-13-3b.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-13-8": {
+      "replace_types": [
+        "multiple_choice",
+        "true_false"
+      ],
+      "items": [
+        {
+          "question_text": "Under 5-13-8, when may free coast tracking be used?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-13-8a, free coast tracking may be used as a reminder that aircraft without corresponding computer-stored flight plan information are under the controller's control.",
+          "choices": [
+            {
+              "text": "As a reminder that aircraft without corresponding computer-stored flight plan information are under your control.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever you want to avoid starting the track in FLAT mode.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after radar tracking has permanently replaced all computer tracking.",
+              "is_correct": false
+            },
+            {
+              "text": "For any aircraft with stored flight plan information, if the route is current.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Before initiating a coast track under 5-13-8, what must be ensured?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-13-8b, ensure a departure message or progress report corresponding with the aircraft's current position is entered into the computer.",
+          "choices": [
+            {
+              "text": "That a departure message or progress report corresponding with the aircraft's current position is entered into the computer.",
+              "is_correct": true
+            },
+            {
+              "text": "That the aircraft has already been in radar surveillance long enough to permit unrestricted free coast tracking.",
+              "is_correct": false
+            },
+            {
+              "text": "That the receiving controller has accepted a handoff.",
+              "is_correct": false
+            },
+            {
+              "text": "That the flight progress strip has been removed from all displays.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-13-8, as soon as practicable after the aircraft is in radar surveillance, initiate action to cause radar tracking to begin on the aircraft.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That requirement appears in 5-13-8c.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-7-1": {
+      "replace_types": [
+        "multiple_choice",
+        "true_false"
+      ],
+      "items": [
+        {
+          "question_text": "Where may timed approaches using nonradar procedures or radar vectors to the final approach course be used under 6-7-1?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 6-7-1, they may be used at airports served by a tower if the listed conditions are met.",
+          "choices": [
+            {
+              "text": "At airports served by a tower, if the listed conditions are met.",
+              "is_correct": true
+            },
+            {
+              "text": "At any airport regardless of tower status, if the pilots agree to spacing.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at airports without radar coverage.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when more than one missed approach procedure is published.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If only one missed approach procedure is available under 6-7-1, which condition must be met?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 6-7-1c, no course reversal may be required and the reported ceiling and visibility must meet or exceed the highest prescribed circling minimums.",
+          "choices": [
+            {
+              "text": "Course reversal is not required and the reported ceiling and visibility are at or above the highest prescribed circling minimums for the procedure in use.",
+              "is_correct": true
+            },
+            {
+              "text": "Course reversal is required so aircraft can be resequenced for timed spacing.",
+              "is_correct": false
+            },
+            {
+              "text": "Reported weather may be below the highest prescribed circling minimums if tower communications are good.",
+              "is_correct": false
+            },
+            {
+              "text": "Direct communication may be terminated before the pilot is told to contact the tower.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-7-1, direct communication must be maintained with the aircraft until the pilot is instructed to contact the tower.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That requirement appears in 6-7-1a.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

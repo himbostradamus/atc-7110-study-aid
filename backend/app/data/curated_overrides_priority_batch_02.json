@@ -1,0 +1,1142 @@
+{
+  "activities": {
+    "3-9-9": {
+      "replace_types": ["requirement_check", "minima_rule_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this converging-runway statement match the paragraph?",
+          "question_text": "If the preceding aircraft requires wake turbulence separation, do not approve pilot requests to deviate from the required time interval.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-9-9d, the required time interval is not waived at pilot request when wake turbulence separation is required."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which wake-turbulence interval matches the paragraph?",
+          "question_text": "Under 3-9-9c, what interval applies to a Category E aircraft taking off behind a Category C aircraft on a converging runway when projected flight paths will cross?",
+          "choices": [
+            {
+              "text": "2 minutes.",
+              "is_correct": true
+            },
+            {
+              "text": "3 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "4 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "No interval is required if the runways do not intersect.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-9-9c3, Category E, F, G, H, or I aircraft behind a Category C aircraft require 2 minutes on converging runways when projected flight paths will cross."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A departure is ready on Runway 18. An arriving aircraft on a nonintersecting converging runway has not yet completed the landing roll and has not passed the projected intersection. Another controller wants to launch the departure now because the runways do not physically intersect.",
+          "para_context": "Under 3-9-9, when flight paths intersect, do not let the departure begin takeoff roll until one of the specified conditions exists, such as the preceding aircraft crossing the departure runway, turning to avert conflict, or the arriving aircraft completing the landing roll and holding short of or passing the projected intersection.",
+          "choices": [
+            {
+              "text": "Hold the departure. Do not let takeoff roll begin until one of the listed separation conditions exists.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the takeoff clearance now because nonintersecting runways never require converging-runway separation.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the takeoff clearance as long as the departure agrees to turn immediately after liftoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Launch the departure and apply wake-turbulence timing only after the aircraft is airborne.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-9-9a, when projected flight paths intersect, the departure does not begin takeoff roll until one of the listed conditions exists."
+        }
+      ]
+    },
+    "3-11-3": {
+      "replace_types": ["list_membership", "requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which condition satisfies helicopter departure separation?",
+          "question_text": "Under 3-11-3, which is one of the conditions that allows a departing helicopter or powered-lift aircraft to take off?",
+          "choices": [
+            {
+              "text": "A preceding arriving helicopter or powered-lift aircraft has taxied off the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "A preceding arriving helicopter has merely come to a stop on the landing area.",
+              "is_correct": false
+            },
+            {
+              "text": "A preceding departing helicopter is airborne but still over the takeoff area.",
+              "is_correct": false
+            },
+            {
+              "text": "A preceding helicopter is air-taxiing within the airport boundary but has not left the takeoff or landing area involved.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-11-3b, one approved condition is that a preceding arriving helicopter or powered-lift aircraft has taxied off the landing area."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A helicopter is ready for departure from the helipad. The preceding arrival has touched down on the same landing area and is still on the pad, but the pilot says they can depart now because the other helicopter has stopped moving.",
+          "para_context": "Under 3-11-3, a departing helicopter or powered-lift aircraft does not take off until a preceding departing helicopter has left the takeoff area or a preceding arriving helicopter has taxied off the landing area. Helicopters performing air-taxiing within the airport boundary are considered taxiing aircraft.",
+          "choices": [
+            {
+              "text": "Hold the departure until the preceding arriving helicopter has taxied off the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "Authorize departure as soon as the preceding helicopter comes to a stop on the landing area.",
+              "is_correct": false
+            },
+            {
+              "text": "Authorize departure once the preceding helicopter lifts into an air-taxi hover over the landing area.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the departure if the pilot accepts responsibility for rotorwash separation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-11-3b, the arrival must have taxied off the landing area before the departure is authorized."
+        }
+      ]
+    },
+    "3-11-4": {
+      "replace_types": ["list_membership", "requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which condition satisfies helicopter arrival separation?",
+          "question_text": "Under 3-11-4, which is one of the conditions that allows an arriving helicopter or powered-lift aircraft to land?",
+          "choices": [
+            {
+              "text": "A preceding arriving helicopter or powered-lift aircraft has come to a stop or taxied off the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "A preceding arriving helicopter has touched down but is still moving on the landing area.",
+              "is_correct": false
+            },
+            {
+              "text": "A preceding departing helicopter is still over the landing area but climbing away.",
+              "is_correct": false
+            },
+            {
+              "text": "A preceding departing helicopter has only reached the edge of the landing area without leaving it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-11-4a, one approved condition is that the preceding arriving helicopter or powered-lift aircraft has come to a stop or taxied off the landing area."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An arriving powered-lift aircraft is on short final to a landing area just used by another helicopter. The preceding helicopter touched down but is still rolling across the landing area. Another controller says the arrival may continue because the first helicopter is already on the ground.",
+          "para_context": "Under 3-11-4, an arriving helicopter or powered-lift aircraft does not land until a preceding arriving helicopter has come to a stop or taxied off the landing area, or a preceding departing helicopter has left the landing area.",
+          "choices": [
+            {
+              "text": "Do not authorize the landing yet. Wait until the preceding arrival has come to a stop or taxied off the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "Allow the landing as soon as the preceding helicopter is firmly on the ground, even if it is still moving on the landing area.",
+              "is_correct": false
+            },
+            {
+              "text": "Allow the landing if the arriving pilot reports the preceding helicopter in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Convert the arriving aircraft to departure separation standards once it crosses the threshold.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-11-4a, the preceding arrival must have come to a stop or taxied off the landing area before the next arrival lands."
+        }
+      ]
+    },
+    "3-11-5": {
+      "replace_types": ["conditional_rule_check", "minima_rule_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which simultaneous-operations minimum matches the paragraph?",
+          "question_text": "Under 3-11-5, what minimum distance is required between helicopter or powered-lift landing or takeoff points for simultaneous landings or takeoffs?",
+          "choices": [
+            {
+              "text": "200 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "150 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "300 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "500 feet.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-11-5, simultaneous helicopter or powered-lift landings or takeoffs require at least 200 feet between the points and nonconflicting courses."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Two helicopters want simultaneous takeoff from nearby pads. The surface markings show the pads are 200 feet apart, but the proposed departure courses would converge immediately after liftoff. Another controller says the 200-foot spacing alone is enough.",
+          "para_context": "Under 3-11-5, simultaneous landings or takeoffs may be authorized only if the points are at least 200 feet apart and the courses to be flown do not conflict. You may use surface markings to determine the minimum or instruct one helicopter or powered-lift aircraft to remain at least 200 feet from the other.",
+          "choices": [
+            {
+              "text": "Do not authorize the simultaneous takeoffs as proposed, because the courses conflict even though the pads are 200 feet apart.",
+              "is_correct": true
+            },
+            {
+              "text": "Authorize the simultaneous takeoffs because the 200-foot spacing requirement alone is sufficient.",
+              "is_correct": false
+            },
+            {
+              "text": "Authorize the simultaneous takeoffs and have the pilots sort out the conflicting courses visually after liftoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Require 200 feet only for simultaneous landings, not takeoffs.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-11-5, both conditions must be met: at least 200 feet between the points and nonconflicting courses."
+        }
+      ]
+    },
+    "5-9-5": {
+      "replace_types": ["conditional_rule_check", "scope_check", "reference_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Who has the separation responsibility here?",
+          "question_text": "Under 5-9-5, who is responsible for separation of radar arrivals unless visual separation is provided by the tower or a letter of agreement/facility directive authorizes otherwise?",
+          "choices": [
+            {
+              "text": "The radar controller performing the approach control function.",
+              "is_correct": true
+            },
+            {
+              "text": "The tower local controller in every case.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot flying the lead aircraft on final.",
+              "is_correct": false
+            },
+            {
+              "text": "The TRACON supervisor unless the aircraft is inside the final approach fix.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-9-5a, the radar controller performing the approach control function is responsible unless tower-provided visual separation or an LOA/facility directive authorizes otherwise."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this timed-approach statement match the paragraph?",
+          "question_text": "When timed approaches are being conducted, the radar controller must maintain the specified radar separation until the aircraft has passed the final approach fix inbound or the OM/fix used in lieu of the outer marker and is within 5 miles of the runway on the final approach course, unless the tower can provide visual separation sooner.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-9-5b, that is when the radar controller may discontinue the specified radar separation during timed approaches, unless the tower provides visual separation sooner."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You are working radar arrivals on timed approaches. One aircraft has not yet passed the final approach fix inbound and is still more than 5 miles from the runway on final. The tower has not yet taken visual separation. Another controller says you can drop the timed-approach radar separation now because both aircraft are established on final.",
+          "para_context": "Under 5-9-5, during timed approaches the radar controller maintains the specified radar separation until the aircraft is observed past the final approach fix inbound or the OM/fix used in lieu of the outer marker and within 5 miles of the runway on final approach course, or until visual separation can be provided by the tower.",
+          "choices": [
+            {
+              "text": "Keep the required radar separation in place until the rule's conditions are met or the tower provides visual separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Drop the radar separation as soon as both aircraft are established on the same final approach course.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer separation responsibility to the pilots once they intercept final.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate radar separation whenever the tower reports the runway is in sight from the cab.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-9-5b, established-on-final alone is not enough. The radar controller maintains the specified radar separation until the paragraph's conditions are met or the tower can provide visual separation."
+        }
+      ]
+    },
+    "5-13-4": {
+      "replace_types": ["list_membership", "minima_rule_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which reported-altitude update point is listed in the paragraph?",
+          "question_text": "Under 5-13-4, which is one of the times you must enter a reported altitude into the computer when Mode C altitude information is unavailable or unreliable?",
+          "choices": [
+            {
+              "text": "When an aircraft at an assigned altitude is issued a clearance to climb or descend.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft reaches the next handoff boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot reports level at an odd flight level.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the aircraft changes heading by more than 30 degrees.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-13-4b, reported altitude is entered when an aircraft at an assigned altitude is issued a clearance to climb or descend."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which altitude-update interval matches the paragraph?",
+          "question_text": "Under 5-13-4c, during climb to or descent from FL 180 and above, how often must reported altitudes be entered at a minimum when Mode C altitude information is unavailable or unreliable?",
+          "choices": [
+            {
+              "text": "At least each 10,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "At least each 5,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "At least each 2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at FL 180 and again at top of climb or bottom of descent.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-13-4c, the minimum interval is each 10,000 feet during climb to or descent from FL 180 and above."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Mode C altitude is unreliable for an aircraft cruising level at an assigned altitude. You issue the aircraft a climb clearance. Another controller says you can wait to update the computer until the aircraft reports leaving the altitude because the assigned altitude is already in the system.",
+          "para_context": "Under 5-13-4, when Mode C altitude information is not available or is unreliable, reported altitude entries are required when the aircraft reaches the assigned altitude, when an aircraft at an assigned altitude is issued a climb or descent clearance, and at least each 10,000 feet during climb to or descent from FL 180 and above.",
+          "choices": [
+            {
+              "text": "Enter the reported altitude when the climb clearance is issued; do not wait for the next report.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the aircraft reports leaving the altitude before making any entry.",
+              "is_correct": false
+            },
+            {
+              "text": "Skip the entry because reported altitudes are needed only when the aircraft levels off.",
+              "is_correct": false
+            },
+            {
+              "text": "Update the computer only if the climb is above FL 180.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-13-4b, an altitude entry is required when an aircraft at an assigned altitude is issued a clearance to climb or descend."
+        }
+      ]
+    },
+    "5-13-5": {
+      "replace_types": ["minima_rule_check", "requirement_check", "scope_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which display-filter minimum matches the paragraph?",
+          "question_text": "Under 5-13-5, how far above the highest and below the lowest altitude or flight level of a sector must the display include when 1,000-foot vertical separation is applicable?",
+          "choices": [
+            {
+              "text": "1,200 feet above and below.",
+              "is_correct": true
+            },
+            {
+              "text": "1,000 feet above and below.",
+              "is_correct": false
+            },
+            {
+              "text": "2,000 feet above and below.",
+              "is_correct": false
+            },
+            {
+              "text": "2,200 feet above and below.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-13-5a, where 1,000-foot vertical separation applies, the display includes 1,200 feet above the highest and below the lowest altitude or flight level of the sector."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this selected-altitude statement match the paragraph?",
+          "question_text": "For purposes of 5-13-5, the data block must contain the Mode C altitude and either the call sign or beacon code at a minimum.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per the note in 5-13-5, the minimum required data block contents are Mode C altitude and call sign or beacon code."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You are setting display filters for a sector that uses 2,000-foot vertical separation. Another controller proposes setting the display only 1,200 feet above the highest and below the lowest flight level of the sector because that matches the filters used in a neighboring 1,000-foot sector.",
+          "para_context": "Under 5-13-5, sectors must ensure the display of Mode C targets and data blocks by entering altitude limits and display filters that include the altitude stratum of the sector plus 2,200 feet above the highest and below the lowest flight level where 2,000-foot vertical separation is applicable.",
+          "choices": [
+            {
+              "text": "Use 2,200 feet above the highest and below the lowest flight level of the sector, not 1,200 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "Use 1,200 feet because the same filter applies in all sectors regardless of separation minima.",
+              "is_correct": false
+            },
+            {
+              "text": "Use no extra altitude buffer as long as the sector uses limited data blocks.",
+              "is_correct": false
+            },
+            {
+              "text": "Use 1,000 feet because the filter should match the vertical separation standard exactly.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-13-5b, sectors using 2,000-foot vertical separation include 2,200 feet above the highest and below the lowest flight level of the sector."
+        }
+      ]
+    },
+    "5-14-7": {
+      "replace_types": ["directive_check", "requirement_check"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this MSAW-inhibit statement match the paragraph?",
+          "question_text": "Inhibit MSAW processing of VFR aircraft and aircraft that cancel IFR flight plans unless the pilot specifically requests otherwise.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-14-7a, that is the rule for inhibiting MSAW processing."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft cancels IFR and will continue VFR. The pilot does not ask to keep MSAW processing active. A controller also enters a low altitude alert suppress message and says that action only hides the alert and does not count as acknowledgment.",
+          "para_context": "Under 5-14-7, inhibit MSAW processing of VFR aircraft and aircraft that cancel IFR unless the pilot specifically requests otherwise. A suppress message entered from the control position constitutes acknowledgment of the alert and indicates that appropriate action has or will be taken.",
+          "choices": [
+            {
+              "text": "Inhibit MSAW processing unless the pilot requests otherwise, and treat entry of the suppress message as acknowledgment that appropriate action has or will be taken.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave MSAW active by default after IFR cancellation and treat the suppress message as display-only with no acknowledgment meaning.",
+              "is_correct": false
+            },
+            {
+              "text": "Inhibit MSAW only after the aircraft lands, because the paragraph applies only on the surface.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the suppress message because acknowledgment requires a separate verbal callout to the supervisor.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-14-7, VFR aircraft and aircraft canceling IFR are inhibited unless the pilot requests otherwise, and entry of the suppress message constitutes alert acknowledgment."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-9-9": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 3-9-9, when may a departure begin takeoff roll after a preceding arriving aircraft on a nonintersecting converging runway?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-9-9a2, one approved condition is that the arriving aircraft has completed the landing roll and will hold short of the projected intersection, passed it, or crossed over the departure runway.",
+          "choices": [
+            {
+              "text": "When the arriving aircraft has completed the landing roll and will hold short of the projected intersection, passed it, or crossed over the departure runway.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as the arriving aircraft touches down on the other runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the arriving aircraft reaches the ramp.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the departure agrees to turn immediately after liftoff.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-9-9, what applies if the extended centerline of a runway crosses a converging runway or its extended centerline within 1 NM or less from either departure end and the facility is not using specified aids?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-9-9b, apply the provisions of paragraph 3-9-8 unless the facility is using aids specified in a facility directive.",
+          "choices": [
+            {
+              "text": "Apply paragraph 3-9-8, Intersecting Runway/Intersecting Flight Path Operations.",
+              "is_correct": true
+            },
+            {
+              "text": "Treat the runways as fully independent and apply no additional converging-runway provisions.",
+              "is_correct": false
+            },
+            {
+              "text": "Apply helicopter simultaneous-operations standards from 3-11-5.",
+              "is_correct": false
+            },
+            {
+              "text": "Apply only wake-turbulence intervals and ignore flight-path conflict rules.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-9-9, you may approve a pilot request to deviate from the required time interval even when the preceding aircraft requires wake turbulence separation.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is false. Per 3-9-9d, pilot requests to deviate from the required time interval are not approved when the preceding aircraft requires wake turbulence separation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "3-11-3": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 3-11-3, when may a departing helicopter or powered-lift aircraft take off after a preceding departing helicopter or powered-lift aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-11-3a, the preceding departing helicopter or powered-lift aircraft must have left the takeoff area.",
+          "choices": [
+            {
+              "text": "When the preceding departing helicopter or powered-lift aircraft has left the takeoff area.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as the preceding aircraft becomes airborne over the takeoff area.",
+              "is_correct": false
+            },
+            {
+              "text": "Once the preceding aircraft reaches a hover, even if it remains over the takeoff area.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the preceding aircraft leaves the airport traffic area entirely.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-11-3, when may a departing helicopter or powered-lift aircraft take off after a preceding arriving helicopter or powered-lift aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-11-3b, the preceding arriving helicopter or powered-lift aircraft must have taxied off the landing area.",
+          "choices": [
+            {
+              "text": "When the preceding arriving helicopter or powered-lift aircraft has taxied off the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as the preceding arrival comes to a stop on the landing area.",
+              "is_correct": false
+            },
+            {
+              "text": "As soon as the preceding arrival touches down.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the preceding arrival shuts down on the ramp.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under the note in 3-11-3, helicopters or powered-lift aircraft performing air-taxiing operations within the boundary of the airport are considered taxiing aircraft.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "That statement appears in the note to 3-11-3.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-11-4": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 3-11-4, when may an arriving helicopter or powered-lift aircraft land after a preceding arriving helicopter or powered-lift aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-11-4a, the preceding arriving helicopter or powered-lift aircraft must have come to a stop or taxied off the landing area.",
+          "choices": [
+            {
+              "text": "When the preceding arriving helicopter or powered-lift aircraft has come to a stop or taxied off the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as the preceding arrival touches down.",
+              "is_correct": false
+            },
+            {
+              "text": "As soon as the preceding arrival begins to decelerate on the landing area.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the preceding arrival has shut down its engines.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-11-4, when may an arriving helicopter or powered-lift aircraft land after a preceding departing helicopter or powered-lift aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-11-4b, the preceding departing helicopter or powered-lift aircraft must have left the landing area.",
+          "choices": [
+            {
+              "text": "When the preceding departing helicopter or powered-lift aircraft has left the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as the preceding departure is airborne over the landing area.",
+              "is_correct": false
+            },
+            {
+              "text": "Once the preceding departure begins the takeoff roll from the landing area.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the preceding departure switches to departure frequency.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-11-4, an arriving helicopter may land once the preceding arriving helicopter is on the ground, even if it is still moving on the landing area.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is false. Under 3-11-4a, the preceding arrival must have come to a stop or taxied off the landing area.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "3-11-5": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 3-11-5, when may helicopters or powered-lift aircraft conduct simultaneous landings or takeoffs?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-11-5, both conditions are required: at least 200 feet between the points and nonconflicting courses.",
+          "choices": [
+            {
+              "text": "When the points are at least 200 feet apart and the courses to be flown do not conflict.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the points are at least 200 feet apart, even if the courses conflict.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the courses do not conflict, even if the points are less than 200 feet apart.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when both aircraft are hover-taxi capable.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-11-5, how may the controller determine or ensure the 200-foot minimum for simultaneous helicopter or powered-lift operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-11-5, the controller may refer to surface markings or instruct one aircraft to remain at least 200 feet from the other.",
+          "choices": [
+            {
+              "text": "Refer to surface markings or instruct a helicopter or powered-lift aircraft to remain at least 200 feet from the other aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Rely solely on the pilots' visual judgment without reference to markings or instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "Use runway centerline spacing only; helipad markings may not be used.",
+              "is_correct": false
+            },
+            {
+              "text": "Require 500 feet unless both pilots waive the published 200-foot standard.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-11-5, simultaneous operations may be authorized at 200 feet even when the courses to be flown conflict.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is false. Per 3-11-5, the courses to be flown must not conflict.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "5-9-5": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-9-5, who is normally responsible for separation of radar arrivals?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-9-5a, the radar controller performing the approach control function is responsible unless visual separation is provided by the tower or an LOA/facility directive authorizes otherwise.",
+          "choices": [
+            {
+              "text": "The radar controller performing the approach control function.",
+              "is_correct": true
+            },
+            {
+              "text": "The tower local controller in every case.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot of the lead aircraft on final approach.",
+              "is_correct": false
+            },
+            {
+              "text": "The handoff controller until both aircraft are on the same final approach course.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-9-5, during timed approaches, until when must the radar controller maintain the specified radar separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-9-5b, maintain it until the aircraft is observed past the FAF inbound or OM/fix used in lieu and within 5 miles of the runway on final approach course, or until the tower can provide visual separation.",
+          "choices": [
+            {
+              "text": "Until the aircraft is observed past the final approach fix inbound or OM/fix used in lieu and within 5 miles of the runway on final approach course, or until the tower can provide visual separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Only until both aircraft are established on final approach course.",
+              "is_correct": false
+            },
+            {
+              "text": "Only until the aircraft crosses the outer marker, regardless of distance from the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Only until the aircraft reports the runway in sight.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-9-5, radar final controllers ensure that established separation is maintained between aircraft under their control and other aircraft established on the same final approach course.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 5-9-5a.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-13-4": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-13-4, when must reported altitudes be entered into the computer when Mode C altitude information is unavailable or unreliable?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-13-4, entries are required when an aircraft reaches the assigned altitude, when an aircraft at an assigned altitude is issued a climb or descent clearance, and at least each 10,000 feet during climb to or descent from FL 180 and above.",
+          "choices": [
+            {
+              "text": "At the listed update points in the paragraph, including reaching assigned altitude, issuing a climb or descent from an assigned altitude, and at least each 10,000 feet during climb to or descent from FL 180 and above.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the pilot reports level at an assigned altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft changes sectors.",
+              "is_correct": false
+            },
+            {
+              "text": "Only during descent, not climb.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-13-4, what is the minimum reported-altitude update interval during climb to or descent from FL 180 and above when Mode C altitude information is unavailable or unreliable?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Per 5-13-4c, the minimum interval is each 10,000 feet.",
+          "choices": [
+            {
+              "text": "Each 10,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "Each 5,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Each 2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Only once above FL 180.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-13-4, altitude updates are optional because slant range correction formulas do not depend on them.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "That is false. The note says altitude updates are required to assure maximum accuracy in applying slant range correction formulas.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "5-13-5": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-13-5, how far above the highest and below the lowest altitude or flight level of the sector must the display include where 1,000-foot vertical separation is applicable?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-13-5a, include 1,200 feet above and below.",
+          "choices": [
+            {
+              "text": "1,200 feet above and below.",
+              "is_correct": true
+            },
+            {
+              "text": "1,000 feet above and below.",
+              "is_correct": false
+            },
+            {
+              "text": "2,000 feet above and below.",
+              "is_correct": false
+            },
+            {
+              "text": "2,200 feet above and below.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-13-5, what must the data block contain at a minimum for purposes of this paragraph?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note to 5-13-5 requires Mode C altitude and call sign or beacon code at a minimum.",
+          "choices": [
+            {
+              "text": "Mode C altitude and call sign or beacon code.",
+              "is_correct": true
+            },
+            {
+              "text": "Mode C altitude, call sign, and beacon code in every case.",
+              "is_correct": false
+            },
+            {
+              "text": "Beacon code only, as long as altitude filters are correct.",
+              "is_correct": false
+            },
+            {
+              "text": "Call sign only, as long as a full data block is displayed.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-13-5, exceptions to these selected-altitude-limit requirements may be authorized for specific altitudes in certain ARTCC sectors if defined in appropriate facility directives and approved by the respective service area operations directorate.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "That statement appears in note 2 to 5-13-5.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-14-7": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-14-7, when should MSAW processing be inhibited for VFR aircraft and aircraft that cancel IFR flight plans?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-14-7a, inhibit it unless the pilot specifically requests otherwise.",
+          "choices": [
+            {
+              "text": "Unless the pilot specifically requests otherwise.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft lands.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the controller first issues a low altitude alert.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft enters Class G airspace.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-14-7, what does computer entry of a low altitude alert suppress message constitute?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-14-7b, it constitutes acknowledgment of the alert and indicates that appropriate action has or will be taken.",
+          "choices": [
+            {
+              "text": "Acknowledgment of the alert and indication that appropriate action has or will be taken.",
+              "is_correct": true
+            },
+            {
+              "text": "A request for the pilot to verify altitude by voice readback.",
+              "is_correct": false
+            },
+            {
+              "text": "Notice that the alert was computer-generated in error and may be ignored.",
+              "is_correct": false
+            },
+            {
+              "text": "A requirement to hand the aircraft off immediately to another position.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-14-7, after an aircraft cancels IFR, MSAW processing must remain active unless a supervisor authorizes inhibition.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is false. Per 5-14-7a, inhibit MSAW processing unless the pilot specifically requests otherwise.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

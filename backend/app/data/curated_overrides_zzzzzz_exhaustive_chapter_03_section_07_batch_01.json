@@ -1,0 +1,1149 @@
+{
+  "activities": {
+    "3-7-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which word should not be used when authorizing aircraft, vehicles, equipment, or personnel to taxi or operate on the surface?",
+          "choices": [
+            {
+              "text": "Cleared.",
+              "is_correct": true
+            },
+            {
+              "text": "Taxi.",
+              "is_correct": false
+            },
+            {
+              "text": "Proceed.",
+              "is_correct": false
+            },
+            {
+              "text": "Hold.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Surface authorizations use taxi, proceed, or hold as appropriate, not the word 'cleared.'"
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this ground-movement directive correct?",
+          "question_text": "Use specific instructions by radio or directional light signals to approve or disapprove movement on the movement area, except where permitted in a letter of agreement.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Specific instructions by radio or directional light signals are the baseline rule for approving or disapproving movement on the movement area."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this intersection-departure rule correct?",
+          "question_text": "If a pilot requests the remaining distance for an intersection departure, you must issue the measured distance from the intersection to the runway end rounded down to the nearest 50 feet.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the remaining distance is requested for an intersection departure, the measured distance is issued rounded down to the nearest 50 feet."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which surface instruction is specifically listed as not approved?",
+          "question_text": "Which phrase is not approved?",
+          "choices": [
+            {
+              "text": "THE FIELD IS YOURS.",
+              "is_correct": true
+            },
+            {
+              "text": "PROCEED ON RUNWAY TWO SIX RIGHT, HOLD SHORT OF RUNWAY ONE EIGHT LEFT.",
+              "is_correct": false
+            },
+            {
+              "text": "HOLD SHORT OF RUNWAY TWO SEVEN.",
+              "is_correct": false
+            },
+            {
+              "text": "PROCEED ON TAXIWAY BRAVO, HOLD SHORT OF RUNWAY ONE EIGHT LEFT.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Unconditional instructions such as 'THE FIELD IS YOURS' are specifically listed as not approved."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this shortened-runway statement correct?",
+          "question_text": "Do not use the term full length when the runway length available for departures has been temporarily shortened.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the departure length has been temporarily shortened, 'full length' is not used."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "An aircraft is departing from the Bravo intersection on Runway 26 Right with 4,000 feet available. Build the advisory.",
+          "target_phrase": "RUNWAY TWO SIX RIGHT AT BRAVO INTERSECTION DEPARTURE FOUR THOUSAND FEET AVAILABLE"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Airport operations needs to inspect a runway complex while a landing aircraft is approaching. Another controller wants to say, 'Proceed across Runway Three Six behind the landing Citation, the field is yours.' A military aircraft also asks for the remaining distance from an intersection departure point.",
+          "para_context": "Surface movement must be approved with specific instructions. Conditional instructions tied to arriving or departing aircraft are not allowed, unconditional phrases like 'THE FIELD IS YOURS' are not approved, and intersection departures require the measured distance to be issued to all military aircraft unless covered by directives.",
+          "choices": [
+            {
+              "text": "Issue specific proceed and hold short instructions with positive control, avoid conditional or unconditional phrasing, and provide the measured intersection-departure distance rounded down to the nearest 50 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "Tell airport operations to proceed behind the landing traffic because the conflict is obvious, and omit the intersection distance unless the pilot asks again.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the phrase 'cleared on all surfaces' because airport operations is not an aircraft, and give the pilot the published declared distance.",
+              "is_correct": false
+            },
+            {
+              "text": "Authorize the inspection with 'proceed as requested' and tell the military aircraft to use the Chart Supplement for any runway-length information.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Surface movement instructions must remain specific and positively controlled, conditional/unconditional shortcut phrases are not allowed, and required intersection-departure distance information must be issued when applicable."
+        }
+      ]
+    },
+    "3-7-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What must every taxi clearance or ground route include?",
+          "choices": [
+            {
+              "text": "The specific route to follow.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the final destination on the airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the departure runway number.",
+              "is_correct": false
+            },
+            {
+              "text": "A runway crossing clearance for every possible future crossing.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Taxi clearances and ground routes must include the specific route to follow."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this runway-assignment confirmation rule correct?",
+          "question_text": "If you issue a taxi clearance to a runway, you must confirm that the aircraft has the correct runway assignment.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When a taxi clearance to a runway is issued, the controller confirms the aircraft has the correct runway assignment."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this runway-crossing directive correct?",
+          "question_text": "Issue a crossing clearance to aircraft for each runway their route crosses.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Aircraft need a runway crossing clearance for each runway their route crosses unless the approved multiple-crossing exception applies."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this multiple-runway-crossing rule correct?",
+          "question_text": "If the taxi distance between runway centerlines is 1,300 feet or less, multiple runway crossings may be issued with a single clearance only after the air traffic manager has approval from the appropriate Service Area Director of Air Traffic Operations.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the limited condition under which a single clearance may cover multiple runway crossings."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which is one listed reason to issue progressive taxi or ground movement instructions?",
+          "question_text": "Which reason is listed?",
+          "choices": [
+            {
+              "text": "The pilot or operator requests them.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft is taxiing during daylight in good visibility.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller wants a shorter radio transmission.",
+              "is_correct": false
+            },
+            {
+              "text": "The route remains fully visible and uncomplicated from the tower.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Progressive taxi is issued when requested, when traffic or field conditions make it necessary, or during reduced visibility when needed."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "An aircraft is taxiing to Runway 36 Left via Alpha and must hold short of Runway 27 Right. Build the taxi clearance.",
+          "target_phrase": "RUNWAY THREE SIX LEFT TAXI VIA ALPHA HOLD SHORT OF RUNWAY TWO SEVEN RIGHT"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is told to follow another aircraft toward a departure runway. The route will cross Runway 27 Right and then hold short of Runway 27 Left, but the pilot only says 'Roger' to the hold short instruction. Another controller says the follow instruction already covers the runway crossing so nothing else is needed.",
+          "para_context": "A runway crossing clearance is required in addition to follow instructions. Runway hold short instructions must be read back when requested and should be requested when they are not received. After issuing a crossing clearance, specify the route to follow if it has not already been issued.",
+          "choices": [
+            {
+              "text": "Issue the specific runway crossing clearance, keep the hold short restriction in the route, and request a read back of the hold instructions because it was not received.",
+              "is_correct": true
+            },
+            {
+              "text": "Rely on the follow instruction alone because the lead aircraft defines the crossing clearance automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "Allow the aircraft to continue because 'Roger' is always enough for runway hold short instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "Delete the hold short restriction because follow instructions and runway crossings should not be combined.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Follow instructions do not replace runway crossing clearances, and missing read back of runway hold short instructions must be corrected."
+        }
+      ]
+    },
+    "3-7-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What should be avoided when issuing clearances around super or heavy aircraft on the ground?",
+          "choices": [
+            {
+              "text": "Clearances that require them to use greater than normal taxiing power.",
+              "is_correct": true
+            },
+            {
+              "text": "Any taxi clearance that includes a runway number.",
+              "is_correct": false
+            },
+            {
+              "text": "Any cautionary advisory mentioning jet blast or rotor wash.",
+              "is_correct": false
+            },
+            {
+              "text": "Any instruction for a light aircraft to follow other traffic.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Ground clearances should avoid requiring super or heavy aircraft to use greater than normal taxiing power."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this blast-hazard directive correct?",
+          "question_text": "Use ground clearances that avoid requiring super or heavy aircraft to use greater than normal taxiing power.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the stated directive for super and heavy aircraft during ground operations."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this proximity rule correct?",
+          "question_text": "If a clearance would place a small aircraft or helicopter in close proximity to a taxiing or hover-taxi helicopter, you should avoid issuing that clearance.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph says to avoid clearances that put small aircraft or helicopters close to taxiing or hover-taxi helicopters."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which cautionary advisory word may be used for blast or wash hazards?",
+          "question_text": "Which advisory word is approved?",
+          "choices": [
+            {
+              "text": "Jet blast.",
+              "is_correct": true
+            },
+            {
+              "text": "Attention.",
+              "is_correct": false
+            },
+            {
+              "text": "Wake alert.",
+              "is_correct": false
+            },
+            {
+              "text": "Caution zone.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Controllers may use rotor wash, jet blast, or prop wash when issuing cautionary advisories."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this caution requirement correct?",
+          "question_text": "When taxiing smaller aircraft or helicopters in the vicinity of larger aircraft or helicopters, you must use caution.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note specifically says to use caution when taxiing smaller aircraft or helicopters in the vicinity of larger aircraft or helicopters."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "A light aircraft must follow a Boeing 757 to Runway 36 Left via Alpha, and you need a jet-blast caution. Build the transmission.",
+          "target_phrase": "FOLLOW BOEING 757 RUNWAY THREE-SIX LEFT TAXI VIA ALPHA CAUTION JET BLAST"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A small aircraft will need to taxi near a hover-taxi helicopter, and a second light aircraft will follow a Boeing 757 toward the runway. Another controller says there is no need for any cautionary advisory as long as everyone stays on the taxiway centerline.",
+          "para_context": "Avoid clearances that place smaller aircraft or helicopters in close proximity to larger hazards, and use cautionary advisories such as jet blast, rotor wash, or prop wash as appropriate.",
+          "choices": [
+            {
+              "text": "Avoid the close-proximity clearance if possible and use an appropriate cautionary advisory such as jet blast or rotor wash when the hazard exists.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the clearances unchanged because taxiway centerline spacing removes the blast and wash concern automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "Substitute the word attention for all hazard advisories because cautionary words are not approved in ground operations.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the Boeing 757 to use greater than normal taxi power so the smaller aircraft can clear the area sooner.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Ground clearances should avoid blast and wash hazards, not create them, and the approved cautionary words include jet blast, rotor wash, and prop wash."
+        }
+      ]
+    },
+    "3-7-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "How should a taxiing aircraft or vehicle normally be held clear of a runway?",
+          "choices": [
+            {
+              "text": "By instructing it to hold short of a specific runway or hold at a specified point, with traffic information as necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "By telling it to stop whenever the pilot or operator thinks it is clear enough.",
+              "is_correct": false
+            },
+            {
+              "text": "By canceling its taxi clearance until the runway is empty.",
+              "is_correct": false
+            },
+            {
+              "text": "By transferring responsibility to airport management.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Runway proximity is protected by holding traffic short of the runway or at a specified point, with traffic information as necessary."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this runway-proximity directive correct?",
+          "question_text": "Use a hold short instruction for a specific runway or a hold instruction at a specified point to keep taxiing traffic clear of the runway.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the two listed ways to hold taxiing traffic clear of the runway."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which additional information may need to be issued when holding traffic clear of a runway?",
+          "question_text": "Which information may be needed?",
+          "choices": [
+            {
+              "text": "Traffic information.",
+              "is_correct": true
+            },
+            {
+              "text": "A revised altimeter setting.",
+              "is_correct": false
+            },
+            {
+              "text": "The airport manager's hold-line standard.",
+              "is_correct": false
+            },
+            {
+              "text": "The declared distance remaining on the runway.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph explicitly says to issue traffic information as necessary."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this traffic-information statement correct?",
+          "question_text": "Issue traffic information as necessary when holding a taxiing aircraft or vehicle clear of a runway.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Traffic information is part of the stated runway-proximity rule when necessary."
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "One word in this runway-proximity instruction is incorrect. Tap it.",
+          "original_phrase": "HOLD SHORT OF RUNWAY TWO SEVEN TRAFFIC LANDING CESSNA.",
+          "display_text": "HOLD SHORT AT RUNWAY TWO SEVEN TRAFFIC LANDING CESSNA",
+          "tokens": ["HOLD", "SHORT", "AT", "RUNWAY", "TWO", "SEVEN", "TRAFFIC", "LANDING", "CESSNA"],
+          "error_index": 2,
+          "correct_token": "OF",
+          "explanation": "For a runway number, the phrase is 'HOLD SHORT OF (runway number)...' not 'HOLD SHORT AT ...'"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A vehicle is approaching Runway 27 and another controller says to just tell it to stop near the hold line because the driver can see the landing traffic. The landing aircraft is on short final and the driver has not yet been given any traffic information.",
+          "para_context": "Traffic is held clear of the runway by a hold short instruction for the runway or a hold instruction at a specified point, with traffic information issued as necessary.",
+          "choices": [
+            {
+              "text": "Issue a specific hold short or hold-at-point instruction and include traffic information as necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Let the driver decide where to stop because visual contact with the runway removes the need for a specific hold instruction.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel all instructions until the aircraft lands because runway-proximity rules do not apply to vehicles.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only the phrase hold position because runway or point references are optional in runway-proximity situations.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule requires a specific hold short or hold-at-point instruction, with traffic information as necessary."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-7-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What is the basic rule for approving or disapproving movement on the movement area?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Movement is approved or disapproved with specific instructions by radio or directional light signals, except where permitted in an LOA.",
+          "choices": [
+            {
+              "text": "Use specific instructions by radio or directional light signals, except where permitted in a letter of agreement.",
+              "is_correct": true
+            },
+            {
+              "text": "Use any phraseology the vehicle operator understands.",
+              "is_correct": false
+            },
+            {
+              "text": "Use unconditional phrases so long as traffic is light.",
+              "is_correct": false
+            },
+            {
+              "text": "Use taxi instructions only for aircraft, not for vehicles or personnel.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The word cleared is approved for taxi or surface-movement authorization if the runway is inactive.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": false,
+          "explanation": "The word 'cleared' is not used in conjunction with taxi or equipment, vehicle, or personnel surface authorization."
+        },
+        {
+          "question_text": "If a pilot requests the remaining distance for an intersection departure, how is it issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The measured distance from the intersection to the runway end is issued rounded down to the nearest 50 feet.",
+          "choices": [
+            {
+              "text": "Issue the measured distance from the intersection to the runway end rounded down to the nearest 50 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the published declared distance rounded to the nearest 100 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the full runway length unless the pilot objects.",
+              "is_correct": false
+            },
+            {
+              "text": "Refer the pilot to the Chart Supplement because ATC does not issue distance information.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "May declared distances be used for any ATC purpose?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Declared distances are not used for ATC purposes.",
+          "choices": [
+            {
+              "text": "No, they cannot be used for any ATC purpose.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, for intersection-departure advisories only.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, whenever the runway is temporarily shortened.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if airport operations confirms them.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When is the term full length not used for departures?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It is not used when the runway length available for departures has been temporarily shortened.",
+          "choices": [
+            {
+              "text": "When the runway length available for departures has been temporarily shortened.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever an intersection departure is offered.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever a military aircraft is departing.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever a runway is more than 10,000 feet long.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which phrase is specifically listed as not approved for runway or taxiway operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "'PROCEED AS REQUESTED' is specifically listed as not approved for instructing aircraft, vehicles, equipment, or personnel to cross or operate on a runway.",
+          "choices": [
+            {
+              "text": "PROCEED AS REQUESTED.",
+              "is_correct": true
+            },
+            {
+              "text": "PROCEED ON RUNWAY TWO SIX RIGHT, HOLD SHORT OF RUNWAY ONE EIGHT LEFT.",
+              "is_correct": false
+            },
+            {
+              "text": "HOLD SHORT OF RUNWAY TWO SEVEN.",
+              "is_correct": false
+            },
+            {
+              "text": "RUNWAY TWO SIX RIGHT AT BRAVO INTERSECTION DEPARTURE FOUR THOUSAND FEET AVAILABLE.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-7-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What must every taxi clearance or ground movement route include?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The route must include the specific route to follow.",
+          "choices": [
+            {
+              "text": "The specific route to follow.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the departure runway number.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the hold short point.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the final destination on the field.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A pilot's read back of taxi instructions with the runway assignment can be considered confirmation of the runway assignment.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "A runway-assignment read back can be considered confirmation."
+        },
+        {
+          "question_text": "What does the absence of holding instructions authorize an aircraft or vehicle to cross?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Without holding instructions, the route authorizes crossing all taxiways that intersect the taxi route.",
+          "choices": [
+            {
+              "text": "All taxiways that intersect the taxi route.",
+              "is_correct": true
+            },
+            {
+              "text": "All runways that intersect the taxi route.",
+              "is_correct": false
+            },
+            {
+              "text": "Any nonmovement area.",
+              "is_correct": false
+            },
+            {
+              "text": "Any runway holding position marking.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is required for each runway an aircraft's taxi route crosses?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A runway crossing clearance is required for each crossed runway unless the approved multiple-crossing exception applies.",
+          "choices": [
+            {
+              "text": "A runway crossing clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Only a follow instruction.",
+              "is_correct": false
+            },
+            {
+              "text": "Only a taxi route with no runway reference.",
+              "is_correct": false
+            },
+            {
+              "text": "No extra clearance if the aircraft is taxiing to departure.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may multiple runway crossings be issued with a single clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "This is allowed only where runway centerlines are 1,300 feet or less apart and the air traffic manager has approval from the appropriate Service Area Director of Air Traffic Operations.",
+          "choices": [
+            {
+              "text": "When runway centerlines are 1,300 feet or less apart and the required approval has been received.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the aircraft is following another aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the pilot reads back the whole route correctly.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the runways are inactive.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If an aircraft is instructed to follow traffic and must cross a runway, what is additionally required?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The follow instruction does not replace the required runway crossing clearance.",
+          "choices": [
+            {
+              "text": "A runway crossing clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Only a traffic advisory.",
+              "is_correct": false
+            },
+            {
+              "text": "Only a hold short instruction for the lead aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing else; the follow instruction covers the crossing.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When must hold short instructions be read back or requested again?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller requests a read back of runway hold short instructions when it is not received.",
+          "choices": [
+            {
+              "text": "When the runway hold short read back is not received.",
+              "is_correct": true
+            },
+            {
+              "text": "Only during reduced visibility.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for vehicles, not aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot says unable.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which is one listed reason to issue progressive taxi or ground movement instructions?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "One listed reason is that the pilot or operator requests them.",
+          "choices": [
+            {
+              "text": "The pilot or operator requests them.",
+              "is_correct": true
+            },
+            {
+              "text": "The route is simple and fully visible from the tower.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller wants to shorten the transmission.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft is taxiing only on a nonmovement area.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-7-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What should be avoided when taxiing super or heavy aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Avoid clearances that require super or heavy aircraft to use greater than normal taxiing power.",
+          "choices": [
+            {
+              "text": "Requiring greater than normal taxiing power.",
+              "is_correct": true
+            },
+            {
+              "text": "Any mention of the runway in use.",
+              "is_correct": false
+            },
+            {
+              "text": "Any follow instruction for smaller aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Any cautionary advisory about jet blast.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which proximity should be avoided during ground operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Small aircraft or helicopters should not be placed in close proximity to taxiing or hover-taxi helicopters.",
+          "choices": [
+            {
+              "text": "A small aircraft or helicopter close to a taxiing or hover-taxi helicopter.",
+              "is_correct": true
+            },
+            {
+              "text": "A light aircraft on the same taxiway centerline as another light aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "A heavy aircraft holding short of a runway.",
+              "is_correct": false
+            },
+            {
+              "text": "A helicopter using a run-up pad.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Controllers may use rotor wash, jet blast, or prop wash in cautionary advisories.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Those are the listed cautionary-advisory words controllers may use."
+        },
+        {
+          "question_text": "What cautionary advisory fits a light aircraft following a Boeing 757 on the taxiway?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The listed example uses 'Caution jet blast.'",
+          "choices": [
+            {
+              "text": "Caution jet blast.",
+              "is_correct": true
+            },
+            {
+              "text": "Caution wake turbulence only.",
+              "is_correct": false
+            },
+            {
+              "text": "Attention prop wash.",
+              "is_correct": false
+            },
+            {
+              "text": "Heavy power approved.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What controller goal does this paragraph emphasize for smaller aircraft and helicopters near larger traffic?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller is expected to avoid creating close-proximity blast or wash hazards.",
+          "choices": [
+            {
+              "text": "Avoid creating close-proximity blast or wash hazards.",
+              "is_correct": true
+            },
+            {
+              "text": "Keep all smaller traffic behind heavy aircraft at any distance.",
+              "is_correct": false
+            },
+            {
+              "text": "Require larger traffic to stop and wait for all smaller aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Use cautionary advisories only after a pilot requests them.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-7-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "How is a taxiing aircraft or vehicle held clear of the runway?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Traffic is held clear by a hold short instruction for the runway or a hold instruction at a specified point, with traffic information as necessary.",
+          "choices": [
+            {
+              "text": "Use a hold short instruction for the runway or a hold instruction at a specified point, with traffic information as necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Tell the operator to stop wherever the hold line appears to be.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the taxi clearance until traffic has landed.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave the positioning decision to airport management.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Traffic information may need to be issued when holding an aircraft or vehicle clear of a runway.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The paragraph expressly says to issue traffic information as necessary."
+        },
+        {
+          "question_text": "Which hold instruction fits a runway hold-short situation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The phraseology uses 'HOLD SHORT OF' for a runway number.",
+          "choices": [
+            {
+              "text": "HOLD SHORT OF RUNWAY TWO SEVEN.",
+              "is_correct": true
+            },
+            {
+              "text": "HOLD SHORT AT RUNWAY TWO SEVEN.",
+              "is_correct": false
+            },
+            {
+              "text": "HOLD BEHIND RUNWAY TWO SEVEN.",
+              "is_correct": false
+            },
+            {
+              "text": "STOP AT SOME POINT BEFORE RUNWAY TWO SEVEN.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is one of the two listed ways to hold taxiing traffic clear of a runway?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "One listed method is to instruct the aircraft or vehicle to hold at a specified point.",
+          "choices": [
+            {
+              "text": "Instruct it to hold at a specified point.",
+              "is_correct": true
+            },
+            {
+              "text": "Tell it to follow landing traffic until the runway is available.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell it to remain outside the movement area until further notice.",
+              "is_correct": false
+            },
+            {
+              "text": "Ask airport management to position it for you.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Who is responsible for properly positioning the aircraft, vehicle, or equipment at the hold line, sign, or designated point?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The note says the operator is responsible for proper positioning at the hold line, sign, or designated point.",
+          "choices": [
+            {
+              "text": "The operator.",
+              "is_correct": true
+            },
+            {
+              "text": "The airport manager.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller.",
+              "is_correct": false
+            },
+            {
+              "text": "The runway safety action team.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

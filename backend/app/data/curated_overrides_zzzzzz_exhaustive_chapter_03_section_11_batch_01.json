@@ -1,0 +1,902 @@
+{
+  "activities": {
+    "3-11-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "What movement term applies when a helicopter proceeds at a slow speed above the surface, normally below 20 knots and in ground effect?",
+          "choices": [
+            {
+              "text": "Hover-taxi.",
+              "is_correct": true
+            },
+            {
+              "text": "Air-taxi.",
+              "is_correct": false
+            },
+            {
+              "text": "Ground taxi.",
+              "is_correct": false
+            },
+            {
+              "text": "Line up and wait.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Hover-taxi applies to slow movement above the surface, normally below 20 knots and in ground effect."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this taxi phraseology rule apply?",
+          "question_text": "If a wheeled helicopter or powered-lift aircraft must taxi on the surface, use normal taxi and ground movement phraseology.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Surface taxi by a wheeled helicopter or powered-lift aircraft uses the normal taxi and ground movement phraseology."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this air-taxi expectation correct?",
+          "question_text": "During air-taxi, remain below 100 feet AGL unless otherwise requested or instructed.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Unless otherwise requested or instructed, air-taxiing is expected to remain below 100 feet AGL."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which transmission fits air-taxi phraseology?",
+          "question_text": "Which transmission is correct?",
+          "choices": [
+            {
+              "text": "AIR-TAXI VIA DIRECT TO THE HELIPAD REMAIN AT OR BELOW FIVE HUNDRED.",
+              "is_correct": true
+            },
+            {
+              "text": "HOVER-TAXI DIRECT TO THE HELIPAD ABOVE FIVE HUNDRED.",
+              "is_correct": false
+            },
+            {
+              "text": "AIR-TAXI TO THE HELIPAD CLEARED FOR TAKEOFF.",
+              "is_correct": false
+            },
+            {
+              "text": "TAXI VIA DIRECT TO THE HELIPAD ABOVE THE MOVEMENT AREA.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Air-taxi phraseology may include VIA, TO, and REMAIN AT OR BELOW as needed."
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "One word in this phraseology is incorrect. Tap it.",
+          "original_phrase": "AIR-TAXI VIA DIRECT TO THE HELIPAD REMAIN AT OR BELOW FIVE HUNDRED.",
+          "display_text": "AIR-TAXI VIA DIRECT TO THE HELIPAD REMAIN AT OR ABOVE FIVE HUNDRED",
+          "tokens": [
+            "AIR-TAXI",
+            "VIA",
+            "DIRECT",
+            "TO",
+            "THE",
+            "HELIPAD",
+            "REMAIN",
+            "AT",
+            "OR",
+            "ABOVE",
+            "FIVE",
+            "HUNDRED"
+          ],
+          "error_index": 9,
+          "correct_token": "BELOW",
+          "explanation": "The air-taxi restriction phrase is REMAIN AT OR BELOW, not REMAIN AT OR ABOVE."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "A helicopter requests expeditious movement from the ramp direct to the helipad. It must avoid a fuel truck and remain at or below 500 feet. Build the instruction.",
+          "target_phrase": "AIR-TAXI VIA DIRECT TO THE HELIPAD AVOID FUEL TRUCK REMAIN AT OR BELOW FIVE HUNDRED"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A wheeled helicopter needs to move across soft uneven ground to the helipad. The pilot requests slow movement above the surface. A small trainer is taxiing nearby, and another controller says to keep the helicopter on the surface because hover-taxi always wastes less time and fuel.",
+          "para_context": "Ground taxiing generally uses less fuel and less turbulence, but rough, soft, or uneven terrain may make hover-taxi or air-taxi necessary for safety. Clearances should not require small aircraft or helicopters to taxi in close proximity to taxiing or hover-taxi helicopters.",
+          "choices": [
+            {
+              "text": "Use hover-taxi phraseology if that slow above-surface movement is requested or necessary for safety, and avoid a clearance that puts the trainer in close proximity to the helicopter.",
+              "is_correct": true
+            },
+            {
+              "text": "Insist on surface taxi because lower fuel burn always overrides the pilot's safety-based request.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue air-taxi above 100 feet AGL because the pilot alone decides the altitude whenever the surface is soft.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear the nearby trainer to taxi close behind the helicopter because close-proximity cautions do not apply to helicopter movements.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Safety can require hover-taxi or air-taxi, and controllers should avoid clearances that place other aircraft in close proximity to taxiing or hover-taxi helicopters."
+        }
+      ]
+    },
+    "3-11-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When should you use 'departure from (location) will be at your own risk' instead of a normal takeoff clearance?",
+          "choices": [
+            {
+              "text": "When departure is requested from a non-movement area, an unauthorized area, or off the airport and the operation appears reasonable.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the helicopter departs from an active runway intersection.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the pilot requests any turn after takeoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the tailwind exceeds 5 knots.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Own-risk departure phraseology replaces a normal takeoff clearance for reasonable departures from non-movement, unauthorized, or off-airport locations."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this downwind-takeoff limit correct?",
+          "question_text": "Unless agreed to by the pilot, do not issue a downwind takeoff if the tailwind exceeds 5 knots.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A downwind takeoff may not be issued with tailwind greater than 5 knots unless the pilot agrees."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this takeoff-clearance rule correct?",
+          "question_text": "If a takeoff clearance can be issued instead of extended hover-taxi or air-taxi, you should issue the takeoff clearance.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph specifically says to issue takeoff clearance instead of extended hover-taxi or air-taxi whenever possible."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which transmission fits the normal helicopter takeoff clearance?",
+          "question_text": "Which transmission is correct?",
+          "choices": [
+            {
+              "text": "TAXIWAY ALPHA MAKE RIGHT TURN FOR NORTHBOUND DEPARTURE REMAIN EAST OF RUNWAY THREE SIX CAUTION CRANES CLEARED FOR TAKEOFF.",
+              "is_correct": true
+            },
+            {
+              "text": "TAXIWAY ALPHA DEPARTURE FROM TAXIWAY ALPHA WILL BE AT YOUR OWN RISK CLEARED FOR TAKEOFF.",
+              "is_correct": false
+            },
+            {
+              "text": "TAXIWAY ALPHA MAKE RIGHT TURN FOR NORTHBOUND DEPARTURE CLEARED FOR LANDING.",
+              "is_correct": false
+            },
+            {
+              "text": "TAXIWAY ALPHA AIR-TAXI NORTHBOUND AND EXPECT TAKEOFF CLEARANCE.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A normal helicopter takeoff clearance can include the present position, turn or route, avoid or remain instruction, caution, and CLEARED FOR TAKEOFF."
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "One word in this phraseology is incorrect. Tap it.",
+          "original_phrase": "MAKE RIGHT TURN FOR NORTHBOUND DEPARTURE. CLEARED FOR TAKEOFF.",
+          "display_text": "MAKE RIGHT TURN FOR NORTHBOUND DEPARTURE CLEARED FOR LANDING",
+          "tokens": [
+            "MAKE",
+            "RIGHT",
+            "TURN",
+            "FOR",
+            "NORTHBOUND",
+            "DEPARTURE",
+            "CLEARED",
+            "FOR",
+            "LANDING"
+          ],
+          "error_index": 8,
+          "correct_token": "TAKEOFF",
+          "explanation": "The normal helicopter departure phrase ends with CLEARED FOR TAKEOFF, not CLEARED FOR LANDING."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "A helicopter is departing from Taxiway Alpha. It should make a left turn for westbound departure and avoid the fuel farm. Build the transmission.",
+          "target_phrase": "TAXIWAY ALPHA MAKE LEFT TURN FOR WESTBOUND DEPARTURE AVOID FUEL FARM CLEARED FOR TAKEOFF"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A helicopter requests departure from a grass area beside the movement area for a southbound departure. The tailwind for that requested direction is 7 knots, the operation appears reasonable, and another controller says you must deny it because any tailwind above 5 knots automatically prohibits the departure.",
+          "para_context": "Reasonable departures from non-movement, unauthorized, or off-airport locations use own-risk phraseology. Downwind takeoffs with tailwind greater than 5 knots require pilot agreement, and a pilot request to take off from a given point in a given direction constitutes agreement.",
+          "choices": [
+            {
+              "text": "If the location is non-movement or otherwise unauthorized but the operation appears reasonable, use own-risk departure phraseology; the requested point and direction constitute pilot agreement to the downwind departure.",
+              "is_correct": true
+            },
+            {
+              "text": "Deny it automatically because any tailwind greater than 5 knots prohibits helicopter departures under all circumstances.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a normal takeoff clearance from the grass area because the pilot's request eliminates the need for own-risk phraseology.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve it only if you first clear the helicopter to hover-taxi for an extended period instead of using departure phraseology.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A reasonable non-movement or unauthorized-area departure uses own-risk phraseology, and the pilot's requested point and direction supply the agreement needed for a downwind departure."
+        }
+      ]
+    },
+    "3-11-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may a departing helicopter or powered-lift aircraft take off behind a preceding departing helicopter or powered-lift aircraft?",
+          "choices": [
+            {
+              "text": "When the preceding departure has left the takeoff area.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as the preceding departure becomes airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "When the preceding departure reports midfield crosswind.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the pilots are in sight of each other.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A following departure must wait until the preceding departure has left the takeoff area."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which condition allows departure behind a preceding arrival?",
+          "question_text": "Which condition is sufficient?",
+          "choices": [
+            {
+              "text": "The preceding arriving helicopter has taxied off the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "The preceding arriving helicopter has touched down.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding arriving helicopter has stopped on the landing area.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding arriving helicopter has canceled IFR.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Behind a preceding arrival, the departure waits until that arrival has taxied off the landing area."
+        },
+        {
+          "activity_type": "term_definition_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "For this rule, the term taxiing aircraft refers to helicopters or powered-lift aircraft performing air-taxi operations within the airport boundary.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note specifically says air-taxiing helicopters or powered-lift aircraft within the airport boundary are considered taxiing aircraft."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this departure-separation scope statement match the rule?",
+          "question_text": "This rule applies to separation of a departing helicopter or powered-lift aircraft from other helicopters or powered-lift aircraft.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 3-11-3 is specifically about separating a departing helicopter or powered-lift aircraft from other helicopters or powered-lift aircraft."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this departure-release rule correct?",
+          "question_text": "If the preceding arriving helicopter has landed and stopped on the landing area, the next helicopter may take off even if the arrival has not taxied off yet.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ],
+          "explanation": "The arrival must taxi off the landing area. Stopping on it is not enough."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A helicopter is ready for departure. The preceding helicopter has just landed and is stopped on the landing area waiting for marshaller instructions. Another controller says stopped is good enough because it is no longer airborne.",
+          "para_context": "A helicopter or powered-lift departure waits until the preceding departure has left the takeoff area or the preceding arrival has taxied off the landing area. Air-taxiing helicopters within the airport boundary are considered taxiing aircraft.",
+          "choices": [
+            {
+              "text": "Hold the departure until the arriving helicopter has taxied off the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "Clear the departure because touchdown and a stop on the landing area satisfy the rule.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear the departure because air-taxiing or taxiing helicopters inside the airport boundary do not affect this separation rule.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear the departure if the departing pilot accepts visual separation from the stopped helicopter.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A preceding arrival must taxi off the landing area before the following helicopter or powered-lift departure may take off."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-11-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What movement term applies when a helicopter proceeds at a slow speed above the surface, normally below 20 knots and in ground effect?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "Hover-taxi applies to slow movement above the surface, normally below 20 knots and in ground effect.",
+          "choices": [
+            {
+              "text": "Hover-taxi.",
+              "is_correct": true
+            },
+            {
+              "text": "Air-taxi.",
+              "is_correct": false
+            },
+            {
+              "text": "Ground taxi.",
+              "is_correct": false
+            },
+            {
+              "text": "Line up and wait.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the preferred method for helicopter movements on airports when ground operations and conditions permit?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note says air-taxi is the preferred method for helicopter movements on airports when conditions permit.",
+          "choices": [
+            {
+              "text": "Air-taxi.",
+              "is_correct": true
+            },
+            {
+              "text": "Extended hover-taxi.",
+              "is_correct": false
+            },
+            {
+              "text": "Surface taxi only.",
+              "is_correct": false
+            },
+            {
+              "text": "Opposite-direction departure.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Unless otherwise requested or instructed, what altitude is expected during air-taxi?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Unless otherwise requested or instructed, the pilot is expected to remain below 100 feet AGL during air-taxi.",
+          "choices": [
+            {
+              "text": "Below 100 feet AGL.",
+              "is_correct": true
+            },
+            {
+              "text": "At or above 500 feet AGL.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly 20 feet AGL.",
+              "is_correct": false
+            },
+            {
+              "text": "At pattern altitude.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Who is responsible for selecting a safe airspeed during air-taxi?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The pilot is solely responsible for selecting a safe airspeed for the air-taxi altitude and operation.",
+          "choices": [
+            {
+              "text": "The pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Ground control.",
+              "is_correct": false
+            },
+            {
+              "text": "The local controller.",
+              "is_correct": false
+            },
+            {
+              "text": "Airport operations.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What phraseology should be used for a wheeled helicopter taxiing on the surface?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A wheeled helicopter taxiing on the surface uses normal taxi and ground movement phraseology.",
+          "choices": [
+            {
+              "text": "Normal taxi and ground movement phraseology.",
+              "is_correct": true
+            },
+            {
+              "text": "Air-taxi phraseology only.",
+              "is_correct": false
+            },
+            {
+              "text": "Takeoff-clearance phraseology.",
+              "is_correct": false
+            },
+            {
+              "text": "Own-risk departure phraseology.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What kind of clearance should be avoided around small aircraft near taxiing or hover-taxi helicopters?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Controllers should avoid clearances that require small aircraft or helicopters to taxi in close proximity to taxiing or hover-taxi helicopters.",
+          "choices": [
+            {
+              "text": "A clearance requiring close proximity to the helicopter.",
+              "is_correct": true
+            },
+            {
+              "text": "A clearance to remain below 100 feet AGL.",
+              "is_correct": false
+            },
+            {
+              "text": "A clearance with a caution advisory.",
+              "is_correct": false
+            },
+            {
+              "text": "A clearance that includes a route via the movement area.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-11-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Whenever possible, what should be issued instead of extended hover-taxi or air-taxi operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph says to issue takeoff clearance in lieu of extended hover-taxi or air-taxi whenever possible.",
+          "choices": [
+            {
+              "text": "A takeoff clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "A landing clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "An air-taxi route only.",
+              "is_correct": false
+            },
+            {
+              "text": "A runway-crossing clearance.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which phraseology is used for a reasonable departure from a non-movement, unauthorized, or off-airport location?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "Those departures use DEPARTURE FROM (location) WILL BE AT YOUR OWN RISK, with additional instructions and USE CAUTION if needed.",
+          "choices": [
+            {
+              "text": "Departure from (location) will be at your own risk.",
+              "is_correct": true
+            },
+            {
+              "text": "Cleared for takeoff from (location).",
+              "is_correct": false
+            },
+            {
+              "text": "Air-taxi from (location) as filed.",
+              "is_correct": false
+            },
+            {
+              "text": "Line up and wait from (location).",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which words end the normal helicopter or powered-lift takeoff clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The normal departure phrase ends with CLEARED FOR TAKEOFF.",
+          "choices": [
+            {
+              "text": "Cleared for takeoff.",
+              "is_correct": true
+            },
+            {
+              "text": "At your own risk.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared to land.",
+              "is_correct": false
+            },
+            {
+              "text": "Taxi as requested.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may a downwind takeoff be issued if the tailwind exceeds 5 knots?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A downwind takeoff with tailwind greater than 5 knots requires pilot agreement.",
+          "choices": [
+            {
+              "text": "Only when the pilot agrees.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time the operation appears reasonable.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the helicopter is departing from a runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the operation is at night.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What constitutes agreement to a downwind takeoff for this rule?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "A pilot request to take off from a given point in a given direction constitutes agreement.",
+          "choices": [
+            {
+              "text": "The pilot requests takeoff from a given point in a given direction.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller reads back the wind.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot accepts a taxi route.",
+              "is_correct": false
+            },
+            {
+              "text": "The helicopter enters the movement area.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which additional instruction may be included in the normal helicopter takeoff clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The clearance may include AVOID, REMAIN, and CAUTION instructions as needed.",
+          "choices": [
+            {
+              "text": "Remain east of Runway 36.",
+              "is_correct": true
+            },
+            {
+              "text": "Report clear of Class A airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Climb and maintain flight level 180.",
+              "is_correct": false
+            },
+            {
+              "text": "Squawk 7700 after lift-off.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-11-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What must a preceding departing helicopter or powered-lift aircraft do before the next helicopter or powered-lift departure may take off?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The preceding departure must leave the takeoff area.",
+          "choices": [
+            {
+              "text": "Leave the takeoff area.",
+              "is_correct": true
+            },
+            {
+              "text": "Become airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "Cross the departure end.",
+              "is_correct": false
+            },
+            {
+              "text": "Report on course.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must a preceding arriving helicopter or powered-lift aircraft do before the next departure may take off?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The preceding arrival must taxi off the landing area.",
+          "choices": [
+            {
+              "text": "Taxi off the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "Touch down and stop.",
+              "is_correct": false
+            },
+            {
+              "text": "Roll below 20 knots.",
+              "is_correct": false
+            },
+            {
+              "text": "Advise the tower it is clear of the pattern.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How are helicopters or powered-lift aircraft performing air-taxi operations within the airport boundary treated for this rule?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note says they are considered taxiing aircraft.",
+          "choices": [
+            {
+              "text": "They are considered taxiing aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "They are considered departing aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "They are considered landing traffic only.",
+              "is_correct": false
+            },
+            {
+              "text": "They are exempt from this separation rule.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which traffic pairing is this rule written for?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It addresses a departing helicopter or powered-lift aircraft in relation to other helicopters or powered-lift aircraft.",
+          "choices": [
+            {
+              "text": "A departing helicopter or powered-lift aircraft in relation to other helicopters or powered-lift aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Any departure in relation to fixed-wing arrivals only.",
+              "is_correct": false
+            },
+            {
+              "text": "A fixed-wing departure in relation to helicopter taxi traffic only.",
+              "is_correct": false
+            },
+            {
+              "text": "All runway operations regardless of aircraft type.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Is touchdown or stopping on the landing area alone enough to release the next helicopter departure?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "No. Behind a preceding arrival, the next departure waits until that arrival has taxied off the landing area.",
+          "choices": [
+            {
+              "text": "No. The arrival must taxi off the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes. A full stop on the landing area is enough.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. Touchdown alone is enough if the runway is long.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. Either touchdown or a stop is enough if both pilots agree.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1129 @@
+{
+  "activities": {
+    "2-2-11": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When does a revised ETA have to be forwarded as amended data?",
+          "choices": [
+            {
+              "text": "When the time differs by more than 3 minutes from the estimate given.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever any ETA changes at all, no matter how small.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the receiving facility specifically asks for a revised ETA.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft is within 30 minutes of proposed departure time.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ETA revisions are forwarded only when the time differs by more than 3 minutes from the estimate already given."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When a route or altitude in a previously issued clearance is amended within 30 minutes of an aircraft's proposed departure time, the facility that amended the clearance must coordinate the amendment with the receiving facility by verbal and automated means unless automated means are unavailable.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Within 30 minutes of proposed departure, route or altitude amendments are coordinated by both verbal and automated means; if automation is unavailable, verbal coordination alone is sufficient."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If a controller receives a UTM notification to an FDIO-only facility, the controller must effect manual coordination for the flight plan data and verify that data to the receiving facility within 3 minutes of the transfer of control point estimate.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "UTM notifications to FDIO-only facilities require manual coordination plus verification within 3 minutes of the transfer of control point estimate."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Twenty minutes before an aircraft's proposed departure time, you amend its route and altitude. The receiving facility is expected to transmit the amended clearance to the pilot, but the automated coordination path is down. Another controller says to wait for automation to recover before telling the receiving facility anything.",
+          "para_context": "When a route or altitude in a previously issued clearance is amended within 30 minutes of proposed departure time, the amending facility coordinates with the receiving facility by verbal and automated means. If automated means are unavailable, verbal coordination is sufficient.",
+          "choices": [
+            {
+              "text": "Coordinate the amendment verbally with the receiving facility now, because automation being unavailable does not remove the need for timely coordination.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for the automation path to recover, because both verbal and automated coordination are always required together.",
+              "is_correct": false
+            },
+            {
+              "text": "Enter the amendment locally and let the receiving facility discover it from the next strip printout.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay all coordination until the aircraft calls ready to taxi so the route change remains closer to departure.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph preserves timely coordination even when automation is unavailable by allowing verbal coordination alone."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "American Two needs an amended coordination message changing the flight level to 330. Build the transmission.",
+          "target_phrase": "AMERICAN TWO REVISED FLIGHT LEVEL THREE THREE ZERO"
+        }
+      ]
+    },
+    "2-2-12": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What information from airborne military aircraft is forwarded to FSSs under 2-2-12?",
+          "choices": [
+            {
+              "text": "IFR flight plans, changes from VFR to IFR flight plans, and the specified changes to IFR flight plans.",
+              "is_correct": true
+            },
+            {
+              "text": "Only destination changes, because fuel and routing changes are handled only by the center.",
+              "is_correct": false
+            },
+            {
+              "text": "Only VFR route changes involving military training routes.",
+              "is_correct": false
+            },
+            {
+              "text": "Only fuel exhaustion changes after the aircraft has landed.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph covers IFR flight plans, VFR-to-IFR changes, and specific IFR flight plan changes received from airborne military aircraft."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Controllers must forward to FSSs any change in fuel exhaustion time received from an airborne military aircraft.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A change in fuel exhaustion time is one of the specified items forwarded to FSSs."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If an airborne military aircraft changes destination, controllers must forward aircraft identification and type, departure point, original destination, position and time, new destination, ETA, remarks including any change in fuel exhaustion time, and revised ETA to FSS.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the full destination-change data set listed in the paragraph."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "This forwarding rule applies to information received from airborne military aircraft and sent to FSSs.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph is specifically about forwarding airborne military-flight information to FSSs."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An airborne military aircraft reports a new destination, its current position and time, a new ETA, and a change in fuel exhaustion time. Another controller wants to forward only the new destination because the rest can be figured out from the original plan.",
+          "para_context": "For a destination change from an airborne military aircraft, FSS receives aircraft identification and type, departure point, original destination, position and time, new destination, ETA, remarks including any fuel exhaustion change, and revised ETA.",
+          "choices": [
+            {
+              "text": "Forward the full destination-change data set, including the fuel exhaustion-time change and revised ETA.",
+              "is_correct": true
+            },
+            {
+              "text": "Forward only the new destination because it is the only operationally significant change.",
+              "is_correct": false
+            },
+            {
+              "text": "Forward only the fuel exhaustion-time change and keep the rest local to ATC.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the aircraft lands so the destination change can be confirmed before sending anything to FSS.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph lists a specific destination-change package, not a destination-only message."
+        }
+      ]
+    },
+    "2-2-13": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the normal domestic lead time for proposed departure flight plans and en route estimates between Canadian ACCs and U.S. ARTCCs?",
+          "choices": [
+            {
+              "text": "30 minutes, or as bilaterally agreed.",
+              "is_correct": true
+            },
+            {
+              "text": "15 minutes, unless traffic requires more time.",
+              "is_correct": false
+            },
+            {
+              "text": "45 minutes, unless the flight is domestic only.",
+              "is_correct": false
+            },
+            {
+              "text": "At the moment the aircraft enters the adjacent facility's area.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Domestic handling between continental U.S. and Canadian airspace uses a 30-minute lead time unless bilaterally agreed otherwise."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Any international route changes except SIDs must be forwarded to the appropriate Oceanic or Pre-oceanic ACC or ARTCC with an optimum lead time of 30 minutes or as soon as the information becomes available.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "International route changes other than SIDs are forwarded with an optimum 30-minute lead time or as soon as the information becomes available."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If a flight goes from U.S. airspace into Canadian airspace and then returns to U.S. airspace, the ACC must initially forward the flight plan data by voice transmission to the appropriate ARTCC except for flights traversing mutually agreed airways or fixes.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That return-to-U.S. case starts with ACC voice forwarding unless the flight uses mutually agreed airways or fixes."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "This lead-time and forwarding rule applies to en route flight plan data between U.S. ARTCCs and Canadian ACCs.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph is scoped to en route handling between the two countries' area control facilities."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A flight departs the U.S., enters Canadian airspace, and later returns to the U.S. Another controller assumes the Canadian ACC will always pass the returning flight plan data automatically, even though the route does not follow a mutually agreed airway or fix. At the same time, a route change other than a SID becomes known for an international leg.",
+          "para_context": "For the return-to-U.S. case, the ACC initially forwards the flight plan data by voice to the appropriate ARTCC except for flights on mutually agreed airways or fixes. International route changes other than SIDs are forwarded with an optimum 30-minute lead time or as soon as available.",
+          "choices": [
+            {
+              "text": "Treat the ACC as responsible for the initial voice forwarding in the return-to-U.S. case and pass the non-SID international route change with the required lead time or as soon as available.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume automatic forwarding covers the return-to-U.S. case and do not pass the route change until the aircraft checks in with the oceanic facility.",
+              "is_correct": false
+            },
+            {
+              "text": "Handle the route change only if it alters a SID, because other international route changes are optional.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the flight reenters U.S. airspace before taking any action on either issue.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph creates separate obligations for route-change forwarding and for the return-to-U.S. voice-forwarding case."
+        }
+      ]
+    },
+    "2-2-14": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which formats may a U.S. ARTCC use to transmit flight data to a Canadian ACC under 2-2-14?",
+          "choices": [
+            {
+              "text": "NADIN II input format, or the Transport Canada ACC Flight Strip Format when appropriate.",
+              "is_correct": true
+            },
+            {
+              "text": "Computer B only, because Canadian ACCs do not accept strip-format data.",
+              "is_correct": false
+            },
+            {
+              "text": "Service F only, because flight-plan messages require acknowledgment.",
+              "is_correct": false
+            },
+            {
+              "text": "Interphone only, unless the route contains more than 20 elements.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph gives U.S. ARTCCs two allowed outbound formats: NADIN II input format and, when suitable, the Transport Canada ACC Flight Strip Format."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "The exchange of flight plan data between Canadian ACCs and U.S. ARTCCs must be made in the formats specified in 2-2-14.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph is a format rule for the flight-data exchange between Canadian ACCs and U.S. ARTCCs."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If the data to be printed on the Canadian ACC strip form exceeds the strip-field size, controllers must use the NADIN II input format and input sequentially fields 1 through 8 from 2-2-6a.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Oversized strip-form data falls back to NADIN II input format using fields 1 through 8 from 2-2-6a."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "This format rule applies to en route exchange of flight plan data between Canadian ACCs and U.S. ARTCCs.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph is explicitly scoped to en route exchange of flight plan data between the two systems."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A U.S. ARTCC is sending flight data to a Canadian ACC, but the data is too large to fit the Canadian ACC strip-form fields. Another controller wants to truncate the printed strip fields and ignore the overflow rather than change format.",
+          "para_context": "When data to be printed on the Canadian ACC strip form exceeds field size, NADIN II input format is used and fields 1 through 8 from 2-2-6a are input sequentially.",
+          "choices": [
+            {
+              "text": "Use the NADIN II input format and send the required fields sequentially instead of truncating the strip-form data.",
+              "is_correct": true
+            },
+            {
+              "text": "Keep using the strip-form format and drop the overflow fields because only the first entries matter.",
+              "is_correct": false
+            },
+            {
+              "text": "Switch to interphone because any strip-size overflow cancels the format requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the exchange until the receiving ACC requests a different format.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Oversized strip-form data is handled by switching to the specified NADIN II fallback, not by trimming the content."
+        }
+      ]
+    },
+    "2-2-15": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When should \"NRP\" be retained in the remarks section of the flight plan?",
+          "choices": [
+            {
+              "text": "When the aircraft is moved due to weather, traffic, or other tactical reasons.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot asks for any route amendment at all.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after prior coordination with ATCSCC, regardless of why the route changed.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft has not yet entered the conterminous U.S.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Tactical moves for weather, traffic, or similar reasons keep the NRP remark in the flight plan."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If the route of flight is altered due to a pilot request, controllers must remove \"NRP\" from the remarks section of the flight plan.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A pilot-requested route change removes the NRP remark from the flight plan."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If an international flight entering the conterminous United States requests to participate in the NRP, the en route facility in whose airspace the request is made must enter \"NRP\" in the remarks section of the flight plan.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph assigns that NRP-entry responsibility to the en route facility receiving the request."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "This rule applies to how \"NRP\" is kept, removed, or entered in the remarks section of a flight plan.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph is about how the NRP remark is handled in the flight plan remarks section."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft originally in the NRP is moved off its filed route for weather. Later, the pilot requests a different route for preference, and another controller argues that the original weather move means the NRP remark should stay on the strip no matter why the route changes afterward.",
+          "para_context": "NRP is retained when the aircraft is moved for weather, traffic, or other tactical reasons. If the route is altered due to a pilot request, NRP is removed from the remarks section.",
+          "choices": [
+            {
+              "text": "Retain NRP for the tactical weather move, but remove it once the route change becomes pilot-requested.",
+              "is_correct": true
+            },
+            {
+              "text": "Keep NRP in remarks because any earlier tactical move permanently preserves the NRP remark.",
+              "is_correct": false
+            },
+            {
+              "text": "Remove NRP as soon as the aircraft leaves the original route for weather, because NRP never survives any route change.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave NRP unchanged and wait for ATCSCC to decide after the flight lands.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The reason for the route change matters: tactical moves retain NRP, but pilot-requested route changes remove it."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "2-2-11": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When does revised ETA information need to be forwarded as amended data?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Revised ETA data is forwarded only when the time differs by more than 3 minutes from the estimate already given.",
+          "choices": [
+            {
+              "text": "When the time differs by more than 3 minutes from the estimate given.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever any ETA changes at all.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the receiving facility requests it verbally.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft becomes airborne.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What fulfills the requirement for sending amended data when the appropriate input message is accepted by the computer?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Computer acceptance of the appropriate input message fulfills the sending requirement for amended data.",
+          "choices": [
+            {
+              "text": "Computer acceptance of the appropriate input message.",
+              "is_correct": true
+            },
+            {
+              "text": "A controller writing the revision in strip remarks only.",
+              "is_correct": false
+            },
+            {
+              "text": "A pilot readback of the amendment on frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "A receiving-facility request for the new data.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Complete the prescribed amended-flight-data transmission: \"AMERICAN TWO REVISED _____ LEVEL THREE THREE ZERO\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The example phraseology uses the words REVISED FLIGHT LEVEL.",
+          "choices": [
+            {
+              "text": "FLIGHT",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "If automated means are unavailable, verbal coordination alone is sufficient for a route or altitude amendment made within 30 minutes of proposed departure time.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The paragraph allows verbal coordination alone when automated means are unavailable.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must a controller do after receiving a UTM notification to an FDIO-only facility?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "The controller must manually coordinate the flight plan data and verify it to the receiving facility within 3 minutes of the transfer of control point estimate.",
+          "choices": [
+            {
+              "text": "Effect manual coordination and verify the flight plan data to the receiving facility within 3 minutes of the transfer of control point estimate.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for an automated strip before taking any action with the receiving facility.",
+              "is_correct": false
+            },
+            {
+              "text": "Verify the data only if the receiving facility first asks for it by voice.",
+              "is_correct": false
+            },
+            {
+              "text": "Forward the UTM notice to the pilot rather than the receiving facility.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "2-2-12": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Where is the information in 2-2-12 forwarded?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The information received from airborne military aircraft is forwarded to FSSs.",
+          "choices": [
+            {
+              "text": "To FSSs.",
+              "is_correct": true
+            },
+            {
+              "text": "To BASOPS only.",
+              "is_correct": false
+            },
+            {
+              "text": "To the pilot's original departure tower only.",
+              "is_correct": false
+            },
+            {
+              "text": "To the destination ramp only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which change from an airborne military aircraft is specifically forwarded even if the destination does not change?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "A change in fuel exhaustion time is independently listed for forwarding.",
+          "choices": [
+            {
+              "text": "A change in fuel exhaustion time.",
+              "is_correct": true
+            },
+            {
+              "text": "A request for the next controller's initials.",
+              "is_correct": false
+            },
+            {
+              "text": "A preference for a different company name.",
+              "is_correct": false
+            },
+            {
+              "text": "A request to suppress the ETA.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If an airborne military aircraft changes destination, remarks forwarded to FSS include any change in fuel exhaustion time.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The destination-change package includes remarks with any fuel exhaustion-time change.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Why is this military-flight information made available to FSSs?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "The note says the information is available for relay to the military bases concerned and for use by centers if two-way radio communications fail.",
+          "choices": [
+            {
+              "text": "For relay to the military bases concerned and for use by centers if two-way radio communications fail.",
+              "is_correct": true
+            },
+            {
+              "text": "Only so the military aircraft can receive civil weather broadcasts.",
+              "is_correct": false
+            },
+            {
+              "text": "Only to simplify local strip-marking procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "Only to avoid entering any data into ATC automation.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What flight-plan change category is explicitly included along with IFR flight plans from airborne military aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The paragraph explicitly includes changes from VFR to IFR flight plans.",
+          "choices": [
+            {
+              "text": "Changes from VFR to IFR flight plans.",
+              "is_correct": true
+            },
+            {
+              "text": "Changes from IFR to VFR flight plans only.",
+              "is_correct": false
+            },
+            {
+              "text": "Changes from IFR to DVFR flight plans only.",
+              "is_correct": false
+            },
+            {
+              "text": "Changes from VFR to SVFR flight plans only.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "2-2-13": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What domestic lead time is used for proposed departure flight plans and en route estimates between Canadian ACCs and U.S. ARTCCs?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Domestic handling uses a 30-minute lead time unless bilaterally agreed otherwise.",
+          "choices": [
+            {
+              "text": "30 minutes, or as bilaterally agreed.",
+              "is_correct": true
+            },
+            {
+              "text": "15 minutes only.",
+              "is_correct": false
+            },
+            {
+              "text": "45 minutes without exception.",
+              "is_correct": false
+            },
+            {
+              "text": "At radar handoff only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which route changes are excluded from the international forwarding requirement in 2-2-13?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The paragraph excludes SIDs from that route-change forwarding requirement.",
+          "choices": [
+            {
+              "text": "SIDs.",
+              "is_correct": true
+            },
+            {
+              "text": "All oceanic route changes.",
+              "is_correct": false
+            },
+            {
+              "text": "All altitude changes.",
+              "is_correct": false
+            },
+            {
+              "text": "All routes that touch Canadian airspace.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a flight goes from U.S. airspace into Canadian airspace and then returns to U.S. airspace, the ACC is initially responsible for forwarding the flight plan data by voice to the appropriate ARTCC except for flights on mutually agreed airways or fixes.",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "That return-to-U.S. case is handled by ACC voice forwarding unless the flight traverses mutually agreed airways or fixes.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When should international route changes other than SIDs be forwarded?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "They are forwarded with an optimum lead time of 30 minutes or as soon as the information becomes available.",
+          "choices": [
+            {
+              "text": "With an optimum lead time of 30 minutes or as soon as the information becomes available.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft enters oceanic airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at the first radar handoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly 15 minutes before the oceanic boundary.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What lead time is named as the optimum value for international route-change forwarding?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The paragraph names 30 minutes as the optimum lead time.",
+          "choices": [
+            {
+              "text": "30",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "2-2-14": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Which format is used if the data to be printed on the Canadian ACC strip form exceeds the strip-field size?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The fallback format is NADIN II input format.",
+          "choices": [
+            {
+              "text": "NADIN II input format.",
+              "is_correct": true
+            },
+            {
+              "text": "Computer B format.",
+              "is_correct": false
+            },
+            {
+              "text": "Service F format.",
+              "is_correct": false
+            },
+            {
+              "text": "No fallback format is provided.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which response messages to Canadian input are listed for U.S. ARTCC transmission?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "The listed response messages are acknowledgment, error, and rejection messages.",
+          "choices": [
+            {
+              "text": "Acknowledgment, error, and rejection messages.",
+              "is_correct": true
+            },
+            {
+              "text": "Acknowledgment, amendment, and strip-print messages.",
+              "is_correct": false
+            },
+            {
+              "text": "Correction, ETA, and route-summary messages.",
+              "is_correct": false
+            },
+            {
+              "text": "Only rejection messages.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When the Canadian ACC strip-form fields are too small, the NADIN II fallback uses fields 1 through 8 from 2-2-6a in sequential order.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "That sequential 1-through-8 fallback is stated directly in the paragraph.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which message category is listed for Canadian ACC transmission to FAA ARTCCs but not in the U.S. list of response messages to Canadian input?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "Canadian ACCs send correction messages in their listed NADIN II traffic.",
+          "choices": [
+            {
+              "text": "Correction messages.",
+              "is_correct": true
+            },
+            {
+              "text": "Acknowledgment messages.",
+              "is_correct": false
+            },
+            {
+              "text": "Error messages.",
+              "is_correct": false
+            },
+            {
+              "text": "Rejection messages.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How many sequential fields from 2-2-6a are used in the NADIN II strip-form fallback?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The fallback uses fields 1 through 8.",
+          "choices": [
+            {
+              "text": "8",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "2-2-15": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When should \"NRP\" remain in the remarks section of the flight plan?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "NRP remains in remarks when the aircraft is moved for weather, traffic, or other tactical reasons.",
+          "choices": [
+            {
+              "text": "When the aircraft is moved due to weather, traffic, or other tactical reasons.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot asks for a different route.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after prior ATCSCC coordination in every case.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft enters oceanic airspace.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What should happen to \"NRP\" if the route of flight is altered due to a pilot request?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Pilot-requested route changes remove NRP from the remarks section.",
+          "choices": [
+            {
+              "text": "It should be removed from the remarks section.",
+              "is_correct": true
+            },
+            {
+              "text": "It should remain unless traffic is the reason for the change.",
+              "is_correct": false
+            },
+            {
+              "text": "It should be changed to UTM instead.",
+              "is_correct": false
+            },
+            {
+              "text": "It should stay until the next center decides otherwise.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "\"NRP\" must not be entered in the remarks section of a flight plan unless prior coordination is accomplished with ATCSCC or international NRP procedures prescribe it.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "That is the restriction on entering NRP in the remarks section.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which facility enters \"NRP\" when an international flight entering the conterminous United States requests to participate in the NRP?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "The en route facility in whose airspace the request is made enters the NRP remark.",
+          "choices": [
+            {
+              "text": "The en route facility in whose airspace the request is made.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot's destination tower.",
+              "is_correct": false
+            },
+            {
+              "text": "ATCSCC only.",
+              "is_correct": false
+            },
+            {
+              "text": "The previous oceanic center only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "After a tactical move, what should controllers try to do as soon as conditions warrant?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note says every effort should be made to return the aircraft to the original filed flight plan and altitude as soon as conditions warrant.",
+          "choices": [
+            {
+              "text": "Return the aircraft to the original filed flight plan and altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Remove NRP permanently from all future coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "Keep the aircraft on the tactical route for the remainder of the flight by default.",
+              "is_correct": false
+            },
+            {
+              "text": "Rewrite the entire flight plan as a new domestic proposal.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

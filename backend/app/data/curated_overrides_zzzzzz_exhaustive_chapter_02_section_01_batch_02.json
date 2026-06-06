@@ -1,0 +1,1216 @@
+{
+  "activities": {
+    "2-1-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When must a controller issue a safety alert?",
+          "choices": [
+            {
+              "text": "When the controller is aware the aircraft's position or altitude places it in unsafe proximity to terrain, obstructions, or other aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the pilot asks whether the situation looks unsafe.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the controller is already responsible for separation from every aircraft involved.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if an automated alerting system displays the warning first.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The trigger is controller awareness that the aircraft is in unsafe proximity to terrain, obstructions, or other aircraft."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Controllers must remain vigilant for situations of unsafe aircraft proximity and issue a safety alert when the situation is recognized.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note makes vigilance part of the controller's responsibility even though not every unsafe situation can be seen immediately."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If the pilot informs you that action is being taken to resolve the unsafe situation, you may discontinue the issuance of further safety alerts.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Further alerts may stop once the pilot says action is being taken to resolve the problem."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "This safety-alert responsibility applies even when another controller has responsibility for the aircraft; you do not assume the unsafe situation has already been observed and alerted.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph specifically says not to assume someone else already saw the problem and issued the alert."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You see an aircraft descending toward terrain below a safe altitude. Another controller currently owns the track, and a trainee says the other controller probably already saw the problem. The pilot has not yet indicated any corrective action.",
+          "para_context": "Issue a safety alert when you are aware an aircraft is in unsafe proximity to terrain, obstructions, or other aircraft. Do not assume another controller has already observed the unsafe situation and issued the alert.",
+          "choices": [
+            {
+              "text": "Issue the safety alert now and inform the appropriate controller rather than assuming the other position already handled it.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for the controlling position to speak first, because responsibility for the aircraft removes your duty to alert it.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the alert until the pilot asks for help, because safety alerts are pilot-requested services.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the alert only if an automated warning appears, because controller judgment alone is insufficient.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The alert duty depends on recognizing the unsafe proximity, not on whether someone else might also be looking at the aircraft."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "An aircraft is dangerously low and you need to issue a low-altitude alert. Build the transmission.",
+          "target_phrase": "LOW ALTITUDE ALERT CESSNA THREE FOUR JULIETT CHECK YOUR ALTITUDE IMMEDIATELY"
+        }
+      ]
+    },
+    "2-1-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What should a controller determine first when a pilot reports an inflight equipment malfunction?",
+          "choices": [
+            {
+              "text": "The nature and extent of any special handling desired.",
+              "is_correct": true
+            },
+            {
+              "text": "Whether the pilot wants to cancel IFR immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Which maintenance office should receive the final report after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "Whether another sector can take the aircraft right away.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The first step is understanding the malfunction and the special handling the pilot wants."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Controllers must provide the maximum assistance possible consistent with equipment, workload, and any special handling requested when a pilot reports an inflight equipment malfunction.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Maximum assistance is required, but it remains bounded by available equipment, workload, and the specific handling requested."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If another controller or facility will subsequently handle the aircraft, controllers must relay all pertinent details about the malfunction and any special handling required or already being provided.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The information has to follow the aircraft so later controllers understand both the malfunction and the handling plan."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "This malfunction-handling rule applies to partial or complete equipment failures that may affect safety, separation, IFR continuation, or RVSM capability in the ATC system.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note defines inflight equipment malfunctions broadly enough to include those operational effects."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot reports a partial communications failure and loss of GPS capability. Another controller wants to continue normal handling without asking what kind of help is needed and plans to let the next sector discover the issue during handoff.",
+          "para_context": "When a pilot reports an inflight equipment malfunction, determine the nature and extent of any special handling desired, provide the maximum assistance possible consistent with equipment and workload, and relay all pertinent details to subsequent controllers or facilities.",
+          "choices": [
+            {
+              "text": "Determine what special handling the pilot wants, provide the maximum assistance possible, and relay the malfunction details and handling plan to the next controller or facility.",
+              "is_correct": true
+            },
+            {
+              "text": "Continue routine handling until the pilot specifically declares an emergency, then brief the next controller only if the problem becomes total communications failure.",
+              "is_correct": false
+            },
+            {
+              "text": "Ask only whether the pilot wants to cancel IFR, because the rest of the malfunction information belongs to maintenance rather than ATC.",
+              "is_correct": false
+            },
+            {
+              "text": "Keep the problem local to your sector because handing off the malfunction details might bias the next controller's normal service.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph requires both active assistance and a complete relay of pertinent details to later controllers."
+        }
+      ]
+    },
+    "2-1-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What does a pilot's use of the term \"minimum fuel\" indicate?",
+          "choices": [
+            {
+              "text": "The fuel supply has reached a state where, upon reaching destination, the pilot cannot accept any undue delay.",
+              "is_correct": true
+            },
+            {
+              "text": "An emergency already exists and traffic priority must be provided immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot is canceling IFR and requesting direct routing to the nearest airport.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft has no legal fuel reserve remaining and must land before any other traffic.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Minimum fuel is an advisory about inability to accept undue delay, not an automatic emergency declaration."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When an aircraft declares minimum fuel, controllers must inform any facility receiving control jurisdiction of the minimum-fuel problem and remain alert for any delay en route.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Both the handoff notification and delay awareness are explicit controller actions in the paragraph."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If the remaining usable fuel supply suggests the need for traffic priority to ensure a safe landing, the pilot should declare an emergency and report fuel remaining in minutes.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note distinguishes minimum fuel from the point where a pilot should move to an emergency declaration with fuel remaining in minutes."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "This minimum-fuel advisory rule applies as a warning of possible future emergency and does not by itself imply a need for traffic priority.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Minimum fuel is not itself an emergency or automatic priority request, though it warns that an emergency may develop if undue delay occurs."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft reports minimum fuel before being handed to the next sector. Another controller wants to move the aircraft ahead of all other traffic immediately but does not plan to mention the minimum-fuel advisory to the receiving facility because it is not an emergency.",
+          "para_context": "Minimum fuel is an advisory that undue delay cannot be accepted and that an emergency is possible if delay occurs. It does not by itself imply a need for traffic priority, but the minimum-fuel problem must be passed to any facility receiving control jurisdiction.",
+          "choices": [
+            {
+              "text": "Advise the receiving facility of the minimum-fuel problem and remain alert for delay, but do not treat the advisory by itself as automatic traffic priority.",
+              "is_correct": true
+            },
+            {
+              "text": "Grant emergency-style priority immediately and omit the advisory from the handoff because only declared emergencies are forwarded.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat the advisory as routine information with no operational significance unless the pilot repeats it three times.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to redeclare as minimum fuel only after entering the next sector so the receiving controller can decide from scratch.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The controller forwards the advisory and watches for delay, but minimum fuel alone does not automatically create priority handling."
+        }
+      ]
+    },
+    "2-1-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What kinds of information should be reported as soon as possible under 2-1-9?",
+          "choices": [
+            {
+              "text": "Information about NAS components or flight conditions that may have an adverse effect on air safety.",
+              "is_correct": true
+            },
+            {
+              "text": "Only equipment outages that have already been classified as a NOTAM by FSS.",
+              "is_correct": false
+            },
+            {
+              "text": "Only conditions that directly affect IFR operations, not general air safety.",
+              "is_correct": false
+            },
+            {
+              "text": "Only maintenance issues reported by technical operations personnel.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule is broad: any NAS component information or flight condition that may adversely affect air safety is reported as soon as possible."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Report as soon as possible any information concerning NAS components or flight conditions that may have an adverse effect on air safety.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That directive is the core instruction of the paragraph."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Controllers must report the information to the appropriate FSS, airport manager's office, ARTCC, approach control facility, operations office, or military operations office.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The receiving office depends on the situation, but the paragraph lists the appropriate reporting targets."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "This reporting rule applies to both NAS-component information and flight-condition information when either may adversely affect air safety.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph covers both kinds of safety-relevant information, not just one category."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You learn of a flight condition that may adversely affect air safety, but another controller suggests waiting until FSS classifies a NOTAM because only officially classified notices need to be passed onward.",
+          "para_context": "Report as soon as possible any information concerning NAS components or flight conditions that may adversely affect air safety. FSSs are responsible for classifying and disseminating NOTAMs.",
+          "choices": [
+            {
+              "text": "Report the information as soon as possible to the appropriate office rather than waiting for FSS classification to occur first.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until FSS classifies and disseminates a NOTAM, because controllers report only after that administrative step is complete.",
+              "is_correct": false
+            },
+            {
+              "text": "Hold the report unless the condition affects IFR aircraft exclusively, because other safety effects are outside the paragraph.",
+              "is_correct": false
+            },
+            {
+              "text": "Send the information only to maintenance personnel, because airport managers and operations offices are not valid reporting targets.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The controller reports the information promptly; FSS classification and dissemination happen after the report, not before it."
+        }
+      ]
+    },
+    "2-1-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What should be done first when an aircraft reports a ground-based NAVAID malfunction?",
+          "choices": [
+            {
+              "text": "Request a report from a second aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Shut the aid down immediately and advise all traffic it is unusable.",
+              "is_correct": false
+            },
+            {
+              "text": "Activate standby equipment before obtaining any corroborating report.",
+              "is_correct": false
+            },
+            {
+              "text": "Inform technical operations first and wait for instructions before doing anything else.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The first step for a reported ground-based NAVAID malfunction is obtaining a second-aircraft report."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When a GPS or WAAS anomaly is reported, controllers must record at least the aircraft make, model, and call sign; the location or position and altitude where the anomaly was observed; and the date and time of occurrence.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the minimum information items specifically listed for GPS or WAAS anomalies."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If a second aircraft confirms a reported ground-based NAVAID malfunction, or if no second report is available, controllers must activate the standby equipment or request the monitor facility to activate it.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Confirmation by a second aircraft, or the absence of one, triggers standby activation or a request to the monitor facility."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "This malfunction-handling rule applies both to reported ground-based NAVAID malfunctions and to reported GPS or WAAS anomalies, with separate follow-up actions for each.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Subparagraph a covers ground-based NAVAIDs, while subparagraphs b and c cover GPS and WAAS anomalies."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot reports the localizer is unreliable. A second aircraft then reports the same problem, and standby equipment is available. Another controller wants to continue using the aid without change until technical operations decides whether the report is serious enough to matter.",
+          "para_context": "When a second aircraft confirms a ground-based NAVAID malfunction, activate the standby equipment or request the monitor facility to activate it. If continued malfunction is reported after standby activation or standby cannot be activated, inform technical operations personnel and request advice on whether the aid should be shut down.",
+          "choices": [
+            {
+              "text": "Activate the standby equipment now and then continue the follow-up sequence based on the results reported after activation.",
+              "is_correct": true
+            },
+            {
+              "text": "Keep the aid in normal use until technical operations decides first, because a second-aircraft confirmation alone does not justify any equipment action.",
+              "is_correct": false
+            },
+            {
+              "text": "Shut the aid down immediately without using standby or gathering any further operating report.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the second report and wait for a third aircraft so the malfunction is beyond dispute.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Confirmed reports trigger the standby-equipment step first; shutdown advice comes later if the problem continues or standby is unavailable."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "GPS has been reported unreliable in the area 30 miles south of Waco VOR. Build the advisory broadcast.",
+          "target_phrase": "ATTENTION ALL AIRCRAFT GPS REPORTED UNRELIABLE IN THE AREA THIRTY MILES SOUTH OF WACO V O R"
+        }
+      ]
+    }
+  },
+  "questions": {
+    "2-1-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must a controller issue a safety alert?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "A safety alert is issued when the controller is aware the aircraft is in unsafe proximity to terrain, obstructions, or other aircraft.",
+          "choices": [
+            {
+              "text": "When the controller is aware the aircraft is in unsafe proximity to terrain, obstructions, or other aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the pilot requests one.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft has already violated a minimum altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when another controller transfers the responsibility for issuing it.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may a controller discontinue further safety alerts?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Further alerts may stop once the pilot informs the controller that action is being taken to resolve the situation.",
+          "choices": [
+            {
+              "text": "When the pilot informs the controller that action is being taken to resolve the situation.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as the alert is transmitted once, regardless of pilot response.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after technical operations confirms the terrain or conflict source.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after a different controller takes radar responsibility for the aircraft.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What source may lead to recognition of an unsafe proximity situation requiring a safety alert?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note lists several possible recognition sources, including MSAW or E-MSAW, automatic altitude readouts, conflict or Mode C intruder alerts, PAR observations, and pilot reports.",
+          "choices": [
+            {
+              "text": "Any of the listed sources, such as MSAW/E-MSAW, automatic altitude readouts, conflict or Mode C intruder alerts, PAR observations, or pilot reports.",
+              "is_correct": true
+            },
+            {
+              "text": "Only a pilot report, because automation cannot be used to recognize unsafe proximity.",
+              "is_correct": false
+            },
+            {
+              "text": "Only PAR observations, because they are the only recognized alert source in the paragraph.",
+              "is_correct": false
+            },
+            {
+              "text": "Only a conflict alert involving a target already under the controller's separation responsibility.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller may assume another position has already observed an unsafe situation and therefore does not need to issue a safety alert.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The paragraph expressly says not to assume someone else already saw the problem and issued the alert.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Complete the low-altitude alert phraseology: \"CHECK YOUR ALTITUDE _____.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The phraseology ends with the word IMMEDIATELY.",
+          "choices": [
+            {
+              "text": "IMMEDIATELY",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Who decides what course of action will be taken after a safety alert is issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Once the alert is issued, it is solely the pilot's prerogative to determine what action, if any, will be taken.",
+          "choices": [
+            {
+              "text": "The pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "The technical operations specialist monitoring the alerting system.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller who first recognized the unsafe proximity.",
+              "is_correct": false
+            },
+            {
+              "text": "The supervisor coordinating the sector response.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "2-1-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When a pilot reports an inflight equipment malfunction, what should the controller determine first?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The first step is determining the nature and extent of any special handling desired.",
+          "choices": [
+            {
+              "text": "The nature and extent of any special handling desired.",
+              "is_correct": true
+            },
+            {
+              "text": "Whether the pilot intends to cancel IFR immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Which maintenance office will own the report after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "Whether a NOTAM must be issued before the aircraft may continue.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must controllers provide after an inflight equipment malfunction is reported?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Controllers provide the maximum assistance possible, limited by equipment, workload, and any special handling requested.",
+          "choices": [
+            {
+              "text": "The maximum assistance possible consistent with equipment, workload, and any special handling requested.",
+              "is_correct": true
+            },
+            {
+              "text": "Only standard service unless the pilot declares an emergency.",
+              "is_correct": false
+            },
+            {
+              "text": "Only separation services; all other assistance is optional.",
+              "is_correct": false
+            },
+            {
+              "text": "No assistance unless the malfunction affects communications completely.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which later-handling obligation applies if another controller or facility will work the aircraft after you?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "All pertinent details and any special handling required or already being provided must be relayed onward.",
+          "choices": [
+            {
+              "text": "Relay all pertinent malfunction details and any special handling required or being provided.",
+              "is_correct": true
+            },
+            {
+              "text": "Relay only the fact that some malfunction exists, because details may bias the next controller.",
+              "is_correct": false
+            },
+            {
+              "text": "Relay the details only if the pilot specifically asks that they be passed.",
+              "is_correct": false
+            },
+            {
+              "text": "Relay nothing unless the aircraft can no longer proceed under IFR.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Inflight equipment malfunctions can include partial equipment failures that affect safety, separation standards, IFR continuation, or RVSM operations.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note explicitly includes partial or complete failures with those operational effects.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which reported equipment issue falls within the examples listed in the note to 2-1-7?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The note includes examples such as VOR, TACAN, ADF, GPS, RVSM capability, low frequency navigation receivers, air-ground communications, and other pilot-deemed equipment like airborne weather radar.",
+          "choices": [
+            {
+              "text": "Loss of GPS capability.",
+              "is_correct": true
+            },
+            {
+              "text": "A runway light outage at the destination airport.",
+              "is_correct": false
+            },
+            {
+              "text": "A broken fuel truck at the FBO.",
+              "is_correct": false
+            },
+            {
+              "text": "A revised passenger count transmitted by dispatch.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "2-1-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What does a pilot's use of the term minimum fuel indicate?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "It means the pilot cannot accept any undue delay upon reaching destination.",
+          "choices": [
+            {
+              "text": "The fuel supply has reached a state where the pilot cannot accept any undue delay upon reaching destination.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft is in an emergency and must be given immediate traffic priority.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot is canceling IFR because fuel reserves are already exhausted.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft must divert immediately regardless of traffic or weather.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must a controller do when transferring control jurisdiction of an aircraft that has reported minimum fuel?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The minimum-fuel problem is passed to the next facility, and the controller remains alert for delays.",
+          "choices": [
+            {
+              "text": "Inform the receiving facility of the minimum-fuel problem.",
+              "is_correct": true
+            },
+            {
+              "text": "Omit the advisory because it is not yet an emergency.",
+              "is_correct": false
+            },
+            {
+              "text": "Pass the advisory only if the pilot also requests priority handling.",
+              "is_correct": false
+            },
+            {
+              "text": "Convert the advisory to an emergency declaration before handoff.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Does a minimum-fuel advisory by itself imply a need for traffic priority?",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "No. The note says minimum fuel is not an emergency and does not by itself imply a need for traffic priority.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "If the remaining usable fuel suggests the need for traffic priority to ensure a safe landing, what should the pilot do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "At that point the note says the pilot should declare an emergency and report fuel remaining in minutes.",
+          "choices": [
+            {
+              "text": "Declare an emergency and report fuel remaining in minutes.",
+              "is_correct": true
+            },
+            {
+              "text": "Continue to use only minimum fuel because priority can never be requested until the tanks are nearly dry.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel IFR and self-announce to all other traffic instead.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until landing is assured, then tell ATC how much fuel remained.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the controller expected to watch for after hearing a minimum-fuel advisory?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The controller stays alert for any occurrence that might delay the aircraft en route.",
+          "choices": [
+            {
+              "text": "Any occurrence that might delay the aircraft en route.",
+              "is_correct": true
+            },
+            {
+              "text": "Only runway closures at the destination airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Only pilot requests for vectors.",
+              "is_correct": false
+            },
+            {
+              "text": "Only whether the aircraft asks to cancel IFR.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "2-1-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "If information may adversely affect air safety, what should be done with it?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The information is reported as soon as possible to the appropriate office.",
+          "choices": [
+            {
+              "text": "Report it as soon as possible to the appropriate office.",
+              "is_correct": true
+            },
+            {
+              "text": "Hold it until FSS has already issued a NOTAM.",
+              "is_correct": false
+            },
+            {
+              "text": "Pass it only if it affects IFR traffic exclusively.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for periodic maintenance to confirm it in writing.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which kind of information is explicitly covered by 2-1-9?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The paragraph covers information about NAS components and about flight conditions when either may adversely affect air safety.",
+          "choices": [
+            {
+              "text": "Information concerning NAS components or flight conditions that may adversely affect air safety.",
+              "is_correct": true
+            },
+            {
+              "text": "Only flight-plan changes requested by pilots on IFR flights.",
+              "is_correct": false
+            },
+            {
+              "text": "Only equipment reports already classified as NOTAMs by FSS.",
+              "is_correct": false
+            },
+            {
+              "text": "Only runway conditions reported by airport maintenance staff.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "FSSs are responsible for classifying and disseminating Notices to Airmen.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The note under the paragraph assigns that responsibility to FSSs.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which is one valid office to receive a report under 2-1-9?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Valid reporting targets include the appropriate FSS, airport manager's office, ARTCC, approach control facility, operations office, or military operations office.",
+          "choices": [
+            {
+              "text": "The appropriate airport manager's office.",
+              "is_correct": true
+            },
+            {
+              "text": "Only technical operations personnel, regardless of the issue.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the pilot's company dispatch office.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the flight service specialist who receives the next pilot briefing call.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the timing standard for reporting information covered by 2-1-9?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The paragraph says to report it as soon as possible.",
+          "choices": [
+            {
+              "text": "As soon as possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Only at the next scheduled coordination briefing.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after two independent confirmations are received.",
+              "is_correct": false
+            },
+            {
+              "text": "At the end of the shift unless an aircraft emergency exists.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "2-1-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What should be done when a second aircraft confirms a ground-based NAVAID malfunction, or when no second aircraft report is available?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The next step is standby activation or asking the monitor facility to activate the standby equipment.",
+          "choices": [
+            {
+              "text": "Activate the standby equipment or request the monitor facility to activate it.",
+              "is_correct": true
+            },
+            {
+              "text": "Continue use automatically and advise the first aircraft that the aid is normal.",
+              "is_correct": false
+            },
+            {
+              "text": "Shut the aid down immediately without any standby step.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the report until three aircraft have confirmed it.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the second aircraft reports normal operations after a ground-based NAVAID malfunction report, what should be done?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Continue use, inform the first aircraft, and record the incident on the appropriate form.",
+          "choices": [
+            {
+              "text": "Continue use, inform the first aircraft, and record the incident on FAA Form 7230-4 or the appropriate military form.",
+              "is_correct": true
+            },
+            {
+              "text": "Activate standby equipment anyway and suppress all pilot advisories about the aid until further notice.",
+              "is_correct": false
+            },
+            {
+              "text": "Take the aid out of service because any first report requires shutdown regardless of the second report.",
+              "is_correct": false
+            },
+            {
+              "text": "Request advice on shutdown before informing the first aircraft of the second report.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What minimum information must be recorded when a GPS or WAAS anomaly is reported?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "The minimum set is aircraft make/model/call sign, location or position and altitude where observed, and date/time of occurrence.",
+          "choices": [
+            {
+              "text": "Aircraft make, model, and call sign; the location or position and altitude where observed; and the date and time of occurrence.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the aircraft identification and the airport of intended landing.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the route of flight and fuel remaining in minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the pilot's assessment of how severe the anomaly felt in the cockpit.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When a pilot reports a WAAS anomaly, what additional determination is required beyond the recording steps in subparagraph b?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The controller determines what indications the pilot is observing, then records the information in accordance with subparagraph b.",
+          "choices": [
+            {
+              "text": "Determine from the pilot what indications he or she observes.",
+              "is_correct": true
+            },
+            {
+              "text": "Determine whether the aircraft wants to cancel IFR immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Determine whether a second aircraft already has an emergency declaration in progress.",
+              "is_correct": false
+            },
+            {
+              "text": "Determine whether the pilot wants the controller to shut down all GPS-based approaches in the area.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When a GPS or WAAS anomaly is reported, controllers should inform other aircraft of the anomaly in the affected area.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Subparagraph b directs controllers to inform other aircraft of the anomaly as applicable.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Complete the GPS/WAAS outage advisory: \"ATTENTION ALL AIRCRAFT, GPS REPORTED UNRELIABLE OR WAAS UNAVAILABLE IN VICINITY/AREA _____.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The final element is the affected position or area.",
+          "choices": [
+            {
+              "text": "POSITION",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,636 @@
+{
+  "activities": {
+    "1-1-6": {
+      "sync_replace_types": false,
+      "replace_types": [
+        "table_lookup"
+      ],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "source_kind": "table",
+          "source_label": "TBL 1-1-1",
+          "lookup_context": [
+            "Change number: 3",
+            "Question is asking for the relationship between coordination cutoff and publication effective date"
+          ],
+          "task": "Use the row for Change 3 and identify both dates in the correct roles.",
+          "instruction": "Use the publication schedule table.",
+          "question_text": "For 7110.65BB Change 3, which cutoff/effective-date pair follows from TBL 1-1-1?",
+          "choices": [
+            {
+              "text": "Cutoff January 22, 2026; effective publication July 9, 2026.",
+              "is_correct": true
+            },
+            {
+              "text": "Cutoff July 9, 2026; effective publication January 22, 2026.",
+              "is_correct": false
+            },
+            {
+              "text": "Cutoff and effective publication both July 9, 2026.",
+              "is_correct": false
+            },
+            {
+              "text": "The table gives only change numbers; it does not assign dates.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "TBL 1-1-1 separates the date coordination must be completed from the later publication effective date. For Change 3, those are January 22, 2026 and July 9, 2026."
+        }
+      ],
+      "sync_item_types_only": [
+        "table_lookup"
+      ]
+    },
+    "2-3-1": {
+      "sync_replace_types": false,
+      "replace_types": [
+        "visual_interpretation"
+      ],
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "figure",
+          "source_label": "FIG 2-3-1",
+          "lookup_context": [
+            "The controller is entering aircraft identity on a flight progress strip",
+            "The figure shows the standard hand-printed characters"
+          ],
+          "task": "Decide whether local stylized handwriting is an acceptable substitute for the depicted standard characters.",
+          "instruction": "Use the flight-strip character figure.",
+          "question_text": "A controller uses locally stylized handwriting for strip entries because the aircraft identity is obvious from context. How should that be evaluated against FIG 2-3-1?",
+          "choices": [
+            {
+              "text": "Not acceptable; the figure supports standard hand-printed characters to avoid misinterpretation.",
+              "is_correct": true
+            },
+            {
+              "text": "Acceptable whenever the controller can infer the aircraft identity from context.",
+              "is_correct": false
+            },
+            {
+              "text": "Acceptable only for numerals, but not for letters.",
+              "is_correct": false
+            },
+            {
+              "text": "Acceptable if the strip is used locally and will not be handed off.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "FIG 2-3-1 is not testing artistic style; it supports standardization so strip entries are not misread. Context is not a substitute for standard strip marking."
+        }
+      ],
+      "sync_item_types_only": [
+        "visual_interpretation"
+      ]
+    },
+    "3-7-2": {
+      "sync_replace_types": false,
+      "replace_types": [
+        "visual_interpretation"
+      ],
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "figure",
+          "source_label": "Taxi-route examples in 3-7-2",
+          "lookup_context": [
+            "Aircraft is being cleared to taxi to a runway",
+            "The route may appear obvious on the airport diagram",
+            "Runway crossings and hold-short points are operationally significant"
+          ],
+          "task": "Decide what the taxi clearance must communicate, not merely whether a diagram exists.",
+          "instruction": "Use the taxi-route examples as applied examples.",
+          "question_text": "A taxi clearance to a runway omits the specific taxi route because the airport diagram makes the route seem obvious. Which decision follows from the 3-7-2 examples?",
+          "choices": [
+            {
+              "text": "The clearance is deficient; the taxi route must be stated, including runway crossing or hold-short instructions when applicable.",
+              "is_correct": true
+            },
+            {
+              "text": "The clearance is acceptable because the diagram supplies the missing route.",
+              "is_correct": false
+            },
+            {
+              "text": "The clearance is acceptable if no other aircraft are on the movement area.",
+              "is_correct": false
+            },
+            {
+              "text": "The route may be omitted only when the aircraft is taxiing to a departure runway.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The examples reinforce the operational rule: a runway taxi clearance must communicate the specific route and any runway crossing or hold-short requirement. The diagram does not replace the clearance."
+        }
+      ],
+      "sync_item_types_only": [
+        "visual_interpretation"
+      ]
+    },
+    "3-9-6": {
+      "sync_replace_types": false,
+      "replace_types": [
+        "visual_interpretation"
+      ],
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "figure",
+          "source_label": "Same-runway departure separation figures in 3-9-6",
+          "lookup_context": [
+            "Succeeding departure is behind another aircraft on the same runway",
+            "Preceding aircraft is airborne",
+            "The prompt does not state runway-end crossing, a turn to avert conflict, or a required landmark distance"
+          ],
+          "task": "Use the figure logic to decide whether airborne status alone satisfies same-runway departure separation.",
+          "instruction": "Use the same-runway separation figures.",
+          "question_text": "A succeeding departure begins takeoff roll solely because the preceding same-runway aircraft is airborne. What does the figure logic require you to conclude?",
+          "choices": [
+            {
+              "text": "Do not treat airborne status alone as enough; one of the depicted separation conditions must be satisfied.",
+              "is_correct": true
+            },
+            {
+              "text": "Airborne status alone is enough for all same-runway departure cases.",
+              "is_correct": false
+            },
+            {
+              "text": "Airborne status is enough only if both aircraft are Category I.",
+              "is_correct": false
+            },
+            {
+              "text": "The succeeding aircraft may roll if the preceding aircraft is past midfield.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The figures distinguish specific acceptable conditions, such as crossing the runway end, turning to avert conflict, or satisfying the landmark-distance alternative. Merely being airborne is not the operative test."
+        }
+      ],
+      "sync_item_types_only": [
+        "visual_interpretation"
+      ]
+    },
+    "3-10-3": {
+      "sync_replace_types": false,
+      "replace_types": [
+        "visual_interpretation"
+      ],
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "figure",
+          "source_label": "Same-runway arrival separation figures in 3-10-3",
+          "lookup_context": [
+            "Time: between sunrise and sunset",
+            "Suitable landmarks permit distance determination",
+            "Follower: Category II arrival",
+            "Preceding aircraft: landed Category I aircraft",
+            "Measured distance from threshold: at least 4,500 feet"
+          ],
+          "task": "Decide whether the threshold-crossing condition is satisfied before the preceding aircraft is clear.",
+          "instruction": "Use the arrival-separation figure logic.",
+          "question_text": "A Category II arrival follows a landed Category I aircraft. In daylight, landmarks show at least 4,500 feet from the landing threshold. May the arrival cross the threshold before the other aircraft is clear?",
+          "choices": [
+            {
+              "text": "Yes, if the daylight and landmark conditions are met, 4,500 feet satisfies the Category II behind Category I/II alternative.",
+              "is_correct": true
+            },
+            {
+              "text": "No, the preceding aircraft must always be clear before the following aircraft crosses the threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "No, the 4,500-foot alternative applies only to Category I followers.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if radar separation is also being applied.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For a Category II arrival behind a landed Category I or II aircraft, the daylight landmark-distance alternative is 4,500 feet from the threshold."
+        }
+      ],
+      "sync_item_types_only": [
+        "visual_interpretation"
+      ]
+    },
+    "4-1-1": {
+      "sync_replace_types": false,
+      "replace_types": [
+        "visual_interpretation"
+      ],
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "figure",
+          "source_label": "FIG 4-1-1 and FIG 4-1-2",
+          "lookup_context": [
+            "ATC is specifying a route other than an established airway or route",
+            "A portion of the route lies within controlled airspace",
+            "The route uses NAVAID-based altitude and distance limits"
+          ],
+          "task": "Decide whether each controlled-airspace portion must remain within the applicable altitude/radius limits.",
+          "instruction": "Use the NAVAID-use application figures.",
+          "question_text": "When building a non-airway route, may ATC rely on the route merely touching a NAVAID service volume somewhere along the route?",
+          "choices": [
+            {
+              "text": "No. Each controlled-airspace portion of the specified route must remain within the applicable usable altitude and distance limits.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes. Any contact with a NAVAID service volume validates the entire route segment.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the aircraft is already radar identified.",
+              "is_correct": false
+            },
+            {
+              "text": "No, unless the route is below 14,500 feet.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "FIG 4-1-1 and FIG 4-1-2 illustrate application of the table limits. The limit applies to the route portion in controlled airspace, not just to an isolated point along the route."
+        }
+      ],
+      "sync_item_types_only": [
+        "visual_interpretation"
+      ]
+    },
+    "4-8-1": {
+      "sync_replace_types": false,
+      "replace_types": [
+        "visual_interpretation"
+      ],
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "figure",
+          "source_label": "Approach-clearance figures in 4-8-1",
+          "lookup_context": [
+            "Aircraft is not yet at an IAF, IF, feeder route, or published segment",
+            "Aircraft is only generally pointed toward the airport",
+            "The question is about when an approach clearance may be issued"
+          ],
+          "task": "Decide whether general alignment is enough, or whether the figure-supported entry conditions must be met.",
+          "instruction": "Use the approach-clearance figures.",
+          "question_text": "A pilot is generally pointed toward the airport but has not reached an IAF, IF, feeder route, or published segment and does not meet a stated direct-to/intercept condition. May ATC clear the aircraft for the approach?",
+          "choices": [
+            {
+              "text": "No. The aircraft must enter through one of the figure-supported published-segment, fix, feeder, direct-to, or intercept conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes. General alignment toward the airport is enough.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the pilot has the airport in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "No, unless the aircraft is on a STAR.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The approach-clearance figures support the entry rules. A general heading toward the airport is not a substitute for being established on, or cleared to properly intercept, the procedure structure."
+        }
+      ],
+      "sync_item_types_only": [
+        "visual_interpretation"
+      ]
+    },
+    "5-5-4": {
+      "sync_replace_types": false,
+      "replace_types": [
+        "table_lookup"
+      ],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "table",
+          "source_label": "TBL 5-5-2",
+          "lookup_context": [
+            "Operation: terminal aircraft on approach to the same runway",
+            "Leader wake category: C",
+            "Follower wake category: H",
+            "Apply the value when the preceding aircraft is over the landing threshold"
+          ],
+          "task": "Find the intersection of leader C and follower H in the on-approach wake table.",
+          "instruction": "Use the terminal on-approach wake turbulence table.",
+          "question_text": "For a Category H follower behind a Category C leader on approach to the same runway, what spacing does TBL 5-5-2 require?",
+          "choices": [
+            {
+              "text": "5 NM, existing when the preceding aircraft is over the landing threshold.",
+              "is_correct": true
+            },
+            {
+              "text": "3 NM, because normal terminal radar separation controls all approach wake cases.",
+              "is_correct": false
+            },
+            {
+              "text": "8 NM, because Category H followers always use the maximum table value.",
+              "is_correct": false
+            },
+            {
+              "text": "No wake minimum applies once both aircraft are established on final.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "TBL 5-5-2 gives 5 NM for a Category H follower behind a Category C leader on approach, applied when the preceding aircraft is over the landing threshold."
+        }
+      ],
+      "sync_item_types_only": [
+        "table_lookup"
+      ]
+    },
+    "5-9-2": {
+      "sync_replace_types": false,
+      "replace_types": [
+        "table_lookup"
+      ],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 5-9-1",
+          "lookup_context": [
+            "Aircraft type: non-helicopter",
+            "Intercept point: 3 miles from the approach gate",
+            "Question is asking for the maximum final-approach-course intercept angle"
+          ],
+          "task": "Use the row for interception 2 miles or more from the approach gate and avoid applying the helicopter exception.",
+          "instruction": "Use the final-approach-course interception table.",
+          "question_text": "A non-helicopter aircraft is vectored to intercept final 3 miles from the approach gate. What maximum intercept angle applies under TBL 5-9-1?",
+          "choices": [
+            {
+              "text": "30 degrees.",
+              "is_correct": true
+            },
+            {
+              "text": "20 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "45 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "60 degrees.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "TBL 5-9-1 allows 30 degrees for non-helicopter interception 2 miles or more from the approach gate. The 45-degree value is a helicopter-specific allowance."
+        }
+      ],
+      "sync_item_types_only": [
+        "table_lookup"
+      ]
+    },
+    "5-9-6": {
+      "sync_replace_types": false,
+      "replace_types": [
+        "minima_rule_check"
+      ],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "5-9-6 simultaneous dependent approach minima",
+          "lookup_context": [
+            "Runways are adjacent and 3,000 feet apart",
+            "Aircraft are successive on adjacent final approach courses",
+            "Question is about the diagonal spacing minimum after establishment on final"
+          ],
+          "task": "Choose the spacing rule that applies after both aircraft are established on adjacent final approach courses.",
+          "instruction": "Apply the simultaneous dependent approach minima.",
+          "question_text": "For simultaneous dependent approaches to adjacent runways 3,000 feet apart, what spacing rule applies between successive aircraft after they are established on adjacent final approach courses?",
+          "choices": [
+            {
+              "text": "Apply the 1 NM diagonal minimum between successive aircraft after they are established on adjacent final approach courses.",
+              "is_correct": true
+            },
+            {
+              "text": "Apply only 1,000 feet vertical separation after both aircraft are established on final.",
+              "is_correct": false
+            },
+            {
+              "text": "Use 3 miles radar separation until both aircraft land.",
+              "is_correct": false
+            },
+            {
+              "text": "No diagonal minimum applies once both aircraft are on adjacent finals.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The dependent-approach rule uses the 1 NM diagonal minimum after aircraft are established on adjacent final approach courses. The turn-on phase has separate vertical or radar separation requirements."
+        }
+      ],
+      "sync_item_types_only": [
+        "minima_rule_check"
+      ]
+    },
+    "6-5-2": {
+      "sync_replace_types": false,
+      "replace_types": [
+        "table_lookup"
+      ],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "table",
+          "source_label": "Non-DME diverging-radials table in 6-5-2",
+          "lookup_context": [
+            "Separation method: non-DME",
+            "Same NAVAID radials",
+            "Divergence: 32 degrees",
+            "The divergence value falls between two listed table rows"
+          ],
+          "task": "Use the lesser listed divergence value rather than interpolating upward.",
+          "instruction": "Use the diverging-radials distance table.",
+          "question_text": "Two aircraft use non-DME separation on same-NAVAID radials diverging 32 degrees. Which table value is used?",
+          "choices": [
+            {
+              "text": "Use the 30-degree value, requiring 8 NM.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the 35-degree value, requiring 7 NM.",
+              "is_correct": false
+            },
+            {
+              "text": "Interpolate between 30 and 35 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the 45-degree value because 32 degrees is closer to 45 than to 15.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the divergence falls between listed values, use the lesser divergence value. For the non-DME table, 30 degrees requires 8 NM."
+        }
+      ],
+      "sync_item_types_only": [
+        "table_lookup"
+      ]
+    },
+    "8-4-4": {
+      "sync_replace_types": false,
+      "replace_types": [
+        "table_lookup"
+      ],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "table",
+          "source_label": "TBL 8-4-1",
+          "lookup_context": [
+            "Same-NAVAID VOR/VORTAC/TACAN tracks",
+            "Divergence band: 26 to 35 degrees",
+            "Altitude: FL230 and below"
+          ],
+          "task": "Locate the divergence band and altitude band, then choose the flight distance before protected airspace is clear.",
+          "instruction": "Use the oceanic track-separation table.",
+          "question_text": "For same-NAVAID VOR/VORTAC/TACAN tracks diverging 26 to 35 degrees at FL230 and below, what flight distance is required before protected airspace is clear?",
+          "choices": [
+            {
+              "text": "11 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "13 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "17 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "30 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "TBL 8-4-1 gives 11 miles for same-NAVAID VOR/VORTAC/TACAN tracks diverging 26 to 35 degrees at FL230 and below."
+        }
+      ],
+      "sync_item_types_only": [
+        "table_lookup"
+      ]
+    },
+    "14-2-1": {
+      "sync_replace_types": false,
+      "replace_types": [
+        "table_lookup"
+      ],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "Domestic CPDLC message tables in 14-2",
+          "lookup_context": [
+            "Operation: domestic CPDLC",
+            "The tables define an approved message set",
+            "Immediate or expeditious clearances still require judgment about communication method"
+          ],
+          "task": "Decide how the table-defined message set interacts with voice requirements.",
+          "instruction": "Use the domestic CPDLC message-table rule.",
+          "question_text": "How should the domestic CPDLC message tables be used operationally when a clearance is immediate or expeditious?",
+          "choices": [
+            {
+              "text": "Treat the tables as the approved message set that augments voice; immediate or expeditious clearances normally remain on voice unless voice is not operationally feasible.",
+              "is_correct": true
+            },
+            {
+              "text": "Move all urgent clearances to CPDLC whenever a matching message element exists.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat the message tables as advisory examples only, with no operational effect.",
+              "is_correct": false
+            },
+            {
+              "text": "Use CPDLC tables as a full replacement for normal voice communication in domestic operations.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The domestic CPDLC tables define the available message set, but the paragraph still limits CPDLC use for critical phases and immediate or expeditious clearances."
+        }
+      ],
+      "sync_item_types_only": [
+        "table_lookup"
+      ]
+    },
+    "14-3-1": {
+      "sync_replace_types": false,
+      "replace_types": [
+        "table_lookup"
+      ],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "Oceanic CPDLC message tables in 14-3",
+          "lookup_context": [
+            "Operation: oceanic CPDLC",
+            "The table-defined message set is available",
+            "Free text may create closure and interpretation issues"
+          ],
+          "task": "Choose the operating principle for using table-defined CPDLC messages versus free text.",
+          "instruction": "Use the oceanic CPDLC message-table rule.",
+          "question_text": "What operating principle governs use of the oceanic CPDLC message tables?",
+          "choices": [
+            {
+              "text": "Use the CPDLC message set instead of free text to the extent possible because it supports proper closure of exchanges.",
+              "is_correct": true
+            },
+            {
+              "text": "Prefer free text because it avoids the constraints of the message set.",
+              "is_correct": false
+            },
+            {
+              "text": "Use CPDLC only when VHF coverage exists, then switch to free text outside VHF coverage.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the message tables only for post-event review, not live controller-pilot communications.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For oceanic CPDLC, the table-defined message set should be used instead of free text to the extent possible because it improves standardization and closure of exchanges."
+        }
+      ],
+      "sync_item_types_only": [
+        "table_lookup"
+      ]
+    }
+  }
+}

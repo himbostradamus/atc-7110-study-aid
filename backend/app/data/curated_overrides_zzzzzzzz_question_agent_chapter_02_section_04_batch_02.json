@@ -1,0 +1,172 @@
+{
+  "questions": {
+    "2-4-20": {
+      "items": [
+        {
+          "question_text": "When replying to aircraft with similar-sounding identifications, what identification should be used?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 2-4-20 requires using the full identification in replies to aircraft with similar-sounding identifications. Abbreviated or same-as-pilot identification may be used for other aircraft as allowed after communications are established.",
+          "choices": [
+            {
+              "text": "Use the full identification.",
+              "is_correct": true
+            },
+            {
+              "text": "Use only the last three characters in all replies.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the aircraft type only.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the pilot's first call exactly, even if it is abbreviated and similar-sounding traffic exists.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For initial ATC communication to a U.S. registry civil aircraft, which prefix is used before the registration characters?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "For U.S. registry civil aircraft, the controller states the prefix 'November' when establishing initial communications, followed by the ICAO phonetic pronunciation of the registration numbers and letters.",
+          "choices": [
+            {
+              "text": "Tango.",
+              "is_correct": false
+            },
+            {
+              "text": "November.",
+              "is_correct": true
+            },
+            {
+              "text": "Civil.",
+              "is_correct": false
+            },
+            {
+              "text": "United States.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How are aircraft with an ICAO three-letter designator and FAA-authorized call sign normally identified?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule states the call sign followed by the flight number in group form, while allowing single digits if clarity requires.",
+          "choices": [
+            {
+              "text": "Registration number only, without the company call sign.",
+              "is_correct": false
+            },
+            {
+              "text": "Manufacturer name followed by the route number.",
+              "is_correct": false
+            },
+            {
+              "text": "Call sign followed by the flight number in group form.",
+              "is_correct": true
+            },
+            {
+              "text": "The word 'November' followed by the flight number for all air carriers.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For air taxi or commercial operators without FAA-authorized call signs, what prefix is used on initial contact if the pilot uses it?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "For air taxi and commercial operators that do not have FAA-authorized call signs, the paragraph uses the prefix 'TANGO' on initial contact if used by the pilot, followed by the registration number.",
+          "choices": [
+            {
+              "text": "NOVEMBER.",
+              "is_correct": false
+            },
+            {
+              "text": "HEAVY.",
+              "is_correct": false
+            },
+            {
+              "text": "AIR TAXI only, never TANGO.",
+              "is_correct": false
+            },
+            {
+              "text": "TANGO.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "2-4-20": {
+      "items": [
+        {
+          "activity_type": "identification_decision",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "situation": "Two aircraft on frequency have similar-sounding identifications. One pilot uses an abbreviated registration in the initial callup.",
+          "instruction": "Which reply practice best fits 2-4-20?",
+          "explanation": "Similar-sounding identifications require full identification in reply. The controller should not rely on a shortened form that could worsen confusion.",
+          "choices": [
+            {
+              "text": "Use the full identification in replies to the similar-sounding aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Use only the abbreviated registration because the pilot used it first.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only aircraft type because similar registrations are not relevant once type is known.",
+              "is_correct": false
+            },
+            {
+              "text": "Avoid replying until one aircraft leaves the frequency.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "activity_type": "format_check",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "situation": "You are establishing initial communications with a U.S.-registered civil aircraft N1234G.",
+          "instruction": "Which identification format is appropriate?",
+          "explanation": "For initial communication to a U.S. registry civil aircraft, use 'November' followed by the ICAO phonetic pronunciation of the registration numbers and letters.",
+          "choices": [
+            {
+              "text": "Tango One Two Three Four Golf.",
+              "is_correct": false
+            },
+            {
+              "text": "November One Two Three Four Golf.",
+              "is_correct": true
+            },
+            {
+              "text": "Civil One Two Three Four Golf.",
+              "is_correct": false
+            },
+            {
+              "text": "One Two Three Four Golf only, because the November prefix is prohibited initially.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

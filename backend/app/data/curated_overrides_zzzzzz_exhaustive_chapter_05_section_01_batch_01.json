@@ -1,0 +1,1400 @@
+{
+  "activities": {
+    "5-1-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may radar services be provided?",
+          "choices": [
+            {
+              "text": "Only when the controller is personally satisfied that the radar presentation and equipment performance are adequate for the service being provided.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the radar has passed a commissioning flight check, regardless of current presentation quality.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the pilot requests radar vectors.",
+              "is_correct": false
+            },
+            {
+              "text": "Only within the exact distance and altitude values from the commissioning check.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Radar services are provided only when the controller is personally satisfied that the presentation and equipment performance are adequate for the service being delivered."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this malfunction-reporting rule correct?",
+          "question_text": "You must notify the OS/CIC of radar malfunctions or unexpected outages and advise adjacent facilities when appropriate.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph requires OS/CIC notification for radar malfunctions or unexpected outages and adjacent-facility notification when appropriate."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this responsibility statement correct?",
+          "question_text": "This rule makes the controller providing the service responsible for deciding whether the radar presentation and equipment performance are adequate.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The controller must be personally satisfied that the presentation and equipment performance are adequate before providing radar service."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which event must be reported?",
+          "question_text": "Which situation requires OS/CIC notification?",
+          "choices": [
+            {
+              "text": "An unexpected radar outage.",
+              "is_correct": true
+            },
+            {
+              "text": "A pilot asking for a lower altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "A routine frequency change to advisory service.",
+              "is_correct": false
+            },
+            {
+              "text": "A tower-runway configuration change.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Unexpected outages and radar malfunctions are specifically reportable to the OS/CIC."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "The radar display begins dropping targets intermittently, and you are no longer personally satisfied that the presentation is adequate for the service you are providing.",
+          "para_context": "Radar services are provided only when the controller is personally satisfied that the radar presentation and equipment performance are adequate. Radar malfunctions or unexpected outages are reported to the OS/CIC, and adjacent facilities are advised when appropriate.",
+          "choices": [
+            {
+              "text": "Stop relying on that radar service as adequate and notify the OS/CIC of the malfunction.",
+              "is_correct": true
+            },
+            {
+              "text": "Continue normal radar services until a pilot complains about the display quality.",
+              "is_correct": false
+            },
+            {
+              "text": "Keep using the display because earlier flight inspection results are still controlling.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the problem unless the outage lasts longer than five minutes.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Once the presentation is no longer adequate, the controller should not continue using it as if it were adequate and must report the malfunction."
+        }
+      ]
+    },
+    "5-1-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What surveillance sources should be used?",
+          "choices": [
+            {
+              "text": "Approved ATC surveillance sources.",
+              "is_correct": true
+            },
+            {
+              "text": "Any source that produces a usable target, even if not approved.",
+              "is_correct": false
+            },
+            {
+              "text": "Only primary radar, regardless of facility mode.",
+              "is_correct": false
+            },
+            {
+              "text": "Only pilot-reported position estimates.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The base rule is to use approved ATC surveillance sources."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this FUSION-mode rule correct?",
+          "question_text": "When operating in terminal FUSION mode, the standard source-use restriction does not apply unless a facility directive requires it.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "In terminal FUSION mode, the paragraph's base source-use provision is not applicable unless a facility directive makes it applicable."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this ASR-final rule correct?",
+          "question_text": "Do not use secondary-radar-only targets to conduct surveillance final approaches unless an emergency exists and the pilot concurs.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Secondary-radar-only surveillance final approaches are prohibited unless there is an emergency and the pilot concurs."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this surveillance-source capability statement correct?",
+          "question_text": "Targets derived from ADS-B and WAM may be used for all terminal services in STARS Fusion, STARS FMA, and STARS Multi-Sensor Mode, including services associated with procedures annotated \"radar required,\" but WAM targets may not be used to provide 3 NM separation in the EAS.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ADS-B and WAM targets can support those terminal services in the listed modes, but WAM targets cannot be used for 3 NM separation in the EAS."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "Primary radar is temporarily unavailable in a terminal area, and radar services remain available only for transponder- or ADS-B-equipped aircraft. Build the advisory.",
+          "target_phrase": "PRIMARY RADAR UNAVAILABLE RADAR SERVICES AVAILABLE ON TRANSPONDER OR ADS-B EQUIPPED AIRCRAFT ONLY",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct advisory is \"PRIMARY RADAR UNAVAILABLE. RADAR SERVICES AVAILABLE ON TRANSPONDER OR ADS-B EQUIPPED AIRCRAFT ONLY.\"",
+          "word_bank": [
+            "ADS-B",
+            "AIRCRAFT",
+            "AVAILABLE",
+            "AVAILABLE",
+            "EQUIPPED",
+            "ON",
+            "ONLY",
+            "OR",
+            "PRIMARY",
+            "RADAR",
+            "RADAR",
+            "SERVICES",
+            "TRANSPONDER",
+            "UNAVAILABLE"
+          ],
+          "correct_sequence": [
+            8,
+            9,
+            13,
+            10,
+            11,
+            2,
+            5,
+            12,
+            7,
+            0,
+            4,
+            1,
+            6
+          ]
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Primary radar is temporarily unavailable in the terminal area, a secondary radar system is the only source of radar data for the area of service, and the advisory is not on ATIS or otherwise noticed to pilots.",
+          "para_context": "Terminal controllers advise pilots when primary radar is unavailable and radar services are available only on transponder- or ADS-B-equipped aircraft, and also when a secondary radar system is the only source of radar data for the area of service. These advisories may be omitted when provided on ATIS or by other appropriate notice to pilots.",
+          "choices": [
+            {
+              "text": "Advise pilots of the primary-radar outage and the secondary-radar-only condition.",
+              "is_correct": true
+            },
+            {
+              "text": "Omit the advisory because temporary outages never require pilot notification.",
+              "is_correct": false
+            },
+            {
+              "text": "Continue conducting surveillance final approaches on secondary radar only without restriction.",
+              "is_correct": false
+            },
+            {
+              "text": "Use any unapproved surveillance source until primary radar returns.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Because the advisory is not already on ATIS or otherwise provided, pilots should be advised of the temporary source limitations."
+        }
+      ]
+    },
+    "5-1-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Where should all EA activity requests be referred?",
+          "choices": [
+            {
+              "text": "The appropriate center supervisor.",
+              "is_correct": true
+            },
+            {
+              "text": "The local tower directly.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft operator's dispatcher.",
+              "is_correct": false
+            },
+            {
+              "text": "Any adjacent facility with radar coverage.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "All EA activity requests are referred to the appropriate center supervisor."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this suspension directive correct?",
+          "question_text": "Request suspension of interfering terminal EA activity through the ARTCC, and if immediate cessation is required, broadcast the stop request directly to the EA aircraft on the emergency frequency.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Terminal facilities normally request suspension through the ARTCC, but may broadcast directly on the emergency frequency if immediate cessation is required."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this resume-broadcast rule correct?",
+          "question_text": "If terminal EA activity no longer interferes and you want to broadcast a resume clearance directly to the aircraft, you must obtain ARTCC approval first.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "In terminal operations, ARTCC approval is required before broadcasting a resume clearance directly to the aircraft."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which item belongs in the stop request?",
+          "question_text": "Which item is specifically included in each EA stop request?",
+          "choices": [
+            {
+              "text": "The affected radar band and, when feasible, the expected duration of suspension.",
+              "is_correct": true
+            },
+            {
+              "text": "The destination gate assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "The airport weather sequence letter.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot's requested cruising altitude only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A stop request includes the facility name, the type of EA activity, the radar band affected, and, when feasible, the expected duration of suspension."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "You are Memphis Center and need to stop buzzer activity on UHF. Build the direct transmission.",
+          "target_phrase": "BIG PHOTO MEMPHIS CENTER STOP BUZZER ON UHF",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"BIG PHOTO MEMPHIS CENTER STOP BUZZER ON UHF.\"",
+          "word_bank": [
+            "BIG",
+            "BUZZER",
+            "CENTER",
+            "MEMPHIS",
+            "ON",
+            "PHOTO",
+            "STOP",
+            "UHF"
+          ],
+          "correct_sequence": [
+            0,
+            5,
+            3,
+            2,
+            6,
+            1,
+            4,
+            7
+          ]
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "Terminal radar use is being disrupted by EA activity, immediate cessation is required, and there is no time to wait for the normal ARTCC relay path.",
+          "para_context": "When EA activity interferes with terminal radar use, suspension is normally requested through the ARTCC. If immediate cessation is required, the stop request may be broadcast directly to the EA aircraft on the emergency frequency, and the ARTCC is notified of the direct broadcast as soon as possible.",
+          "choices": [
+            {
+              "text": "Broadcast the stop request directly on the emergency frequency and notify the ARTCC as soon as possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for the ARTCC to originate every stop request, even if immediate cessation is required.",
+              "is_correct": false
+            },
+            {
+              "text": "Continue normal radar service until the military unit chooses to stop on its own.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue only a general traffic advisory to civil aircraft and take no action toward the EA aircraft.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When immediate cessation is required in terminal operations, the stop request may be broadcast directly and the ARTCC is then advised."
+        }
+      ]
+    },
+    "5-1-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which aircraft must receive merging target procedures, except while established in a holding pattern?",
+          "choices": [
+            {
+              "text": "Radar-identified aircraft at 10,000 feet and above, turbojet aircraft regardless of altitude, and presidential aircraft regardless of altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Only IFR aircraft above FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "Only turbojet aircraft above 10,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "All radar-identified aircraft regardless of altitude or type.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the listed aircraft categories that receive merging target procedures, except while established in holding."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this RVSM vectoring rule correct?",
+          "question_text": "When both aircraft are in RVSM airspace, vertically separated by 1,000 feet, and either pilot reports unable RVSM due to turbulence or mountain wave, use vectors to prevent the targets from merging.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "In that RVSM/turbulence or mountain-wave case, vectors are used to prevent the targets from merging."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this pilot-request rule correct?",
+          "question_text": "If the pilot requests a vector to avoid merging targets with previously issued traffic, vector the aircraft if able and inform the pilot if unable to provide vector service.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ATC vectors the aircraft on request if able, and if unable to provide vector service, tells the pilot."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which altitude band triggers the general rule?",
+          "question_text": "For the broad non-type-specific portion of the merging-target rule, what altitude threshold applies?",
+          "choices": [
+            {
+              "text": "10,000 feet and above.",
+              "is_correct": true
+            },
+            {
+              "text": "18,000 feet and above only.",
+              "is_correct": false
+            },
+            {
+              "text": "Below 10,000 feet only.",
+              "is_correct": false
+            },
+            {
+              "text": "Any altitude if the aircraft is propeller-driven.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The general altitude-based category is radar-identified aircraft at 10,000 feet and above."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "You are issuing a vector for merging traffic avoidance. Build the transmission.",
+          "target_phrase": "FLY HEADING TWO NINER ZERO VECTOR FOR TRAFFIC",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"FLY HEADING TWO NINER ZERO, VECTOR FOR TRAFFIC.\"",
+          "word_bank": [
+            "FLY",
+            "FOR",
+            "HEADING",
+            "NINER",
+            "TRAFFIC",
+            "TWO",
+            "VECTOR",
+            "ZERO"
+          ],
+          "correct_sequence": [
+            0,
+            2,
+            5,
+            3,
+            7,
+            6,
+            1,
+            4
+          ]
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Two RVSM aircraft are opposite direction, vertically separated by 1,000 feet, and one pilot reports unable RVSM due to turbulence while the targets appear likely to merge.",
+          "para_context": "When both aircraft are in RVSM airspace, separated by 1,000 feet, and either pilot reports being unable RVSM due to turbulence or mountain wave, vectors are used to prevent the targets from merging.",
+          "choices": [
+            {
+              "text": "Use vectors to prevent the targets from merging.",
+              "is_correct": true
+            },
+            {
+              "text": "Continue with traffic information only, because 1,000 feet is always enough in RVSM.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel RVSM for both aircraft and wait for pilot suggestions before acting.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn only the lower aircraft after the targets have already merged.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph specifically calls for vectors to prevent merging when the RVSM/turbulence or mountain-wave condition exists."
+        }
+      ]
+    },
+    "5-1-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When must radar surveillance of outer-fix holding pattern airspace areas be provided?",
+          "choices": [
+            {
+              "text": "Whenever aircraft are holding in the area or any portion of it shown on your radar scope.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when a pilot specifically requests holding-pattern surveillance.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the holding pattern is inside Class B airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when no published holding instructions exist.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Radar surveillance is provided whenever aircraft are holding in the depicted outer-fix holding pattern airspace areas or portions of them shown on the scope."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this applicability statement correct?",
+          "question_text": "This rule applies to outer-fix holding pattern airspace areas, or portions of them, that are shown on your radar scope.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule is specifically limited to the outer-fix holding pattern airspace areas or portions displayed on the scope."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this surveillance rule correct?",
+          "question_text": "If aircraft are holding in the depicted outer-fix holding area, you must attempt to detect any aircraft that stray outside the area.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The controller is directed to attempt detection of aircraft that stray outside the holding pattern airspace."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this recovery rule correct?",
+          "question_text": "If you detect an aircraft straying outside the holding pattern airspace area, you must help it return to the assigned airspace.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When a stray is detected, the controller assists the aircraft back to the assigned airspace."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which area must be watched?",
+          "question_text": "Which area receives this radar surveillance whenever aircraft are holding there?",
+          "choices": [
+            {
+              "text": "The outer-fix holding pattern airspace area shown on the radar scope.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the runway protection zone.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the en route MEA corridor.",
+              "is_correct": false
+            },
+            {
+              "text": "Only airspace below the MVA.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The surveillance requirement is for the depicted outer-fix holding pattern airspace area, or any portion of it shown on the scope."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "5-1-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When may radar services be provided?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Radar services are provided only when the controller is personally satisfied that the presentation and performance are adequate.",
+          "choices": [
+            {
+              "text": "Only when the controller is personally satisfied that the radar presentation and equipment performance are adequate.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time the radar has been flight-checked at some point in the past.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when pilots specifically request vectors.",
+              "is_correct": false
+            },
+            {
+              "text": "Any time the system is powered on.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The controller providing the radar service must be personally satisfied that the radar presentation and equipment performance are adequate.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The adequacy judgment rests with the controller providing the service.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must be done when radar malfunctions or unexpected outages occur?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The OS/CIC must be notified, and adjacent facilities are advised when appropriate.",
+          "choices": [
+            {
+              "text": "Notify the OS/CIC and advise adjacent facilities when appropriate.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the outage is resolved before reporting it.",
+              "is_correct": false
+            },
+            {
+              "text": "Notify only pilots already on frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "No report is required if the outage is temporary.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does the note clarify about commissioning flight-check distance and altitude parameters?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note says radar service is not limited to the distance and altitude parameters obtained during the commissioning flight check.",
+          "choices": [
+            {
+              "text": "Radar services are not limited to the distance and altitude parameters obtained during the commissioning flight check.",
+              "is_correct": true
+            },
+            {
+              "text": "Radar services may only be used within those parameters.",
+              "is_correct": false
+            },
+            {
+              "text": "Only en route services may exceed those parameters.",
+              "is_correct": false
+            },
+            {
+              "text": "Those parameters replace the controller's adequacy judgment.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the controller is no longer personally satisfied that the radar presentation is adequate, what is the correct response?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller should not continue providing radar service as if it were adequate and should report the malfunction.",
+          "choices": [
+            {
+              "text": "Stop relying on that radar service as adequate and notify the OS/CIC of the malfunction.",
+              "is_correct": true
+            },
+            {
+              "text": "Continue normal service until a pilot objects.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the problem if a flight inspection was previously successful.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until an adjacent facility notices the outage first.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-1-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What surveillance sources should be used?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The baseline rule is to use approved ATC surveillance sources.",
+          "choices": [
+            {
+              "text": "Approved ATC surveillance sources.",
+              "is_correct": true
+            },
+            {
+              "text": "Any source that paints a target.",
+              "is_correct": false
+            },
+            {
+              "text": "Only primary radar, regardless of mode.",
+              "is_correct": false
+            },
+            {
+              "text": "Only pilot-reported positions.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When operating in terminal FUSION mode, the standard source-use restriction does not apply unless a facility directive requires it.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is the specific terminal FUSION-mode exception.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may secondary-radar-only surveillance be used to conduct an ASR final approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "It is allowed only when an emergency exists and the pilot concurs.",
+          "choices": [
+            {
+              "text": "Only when an emergency exists and the pilot concurs.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time primary radar is down temporarily.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the aircraft is ADS-B equipped.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at airports with ATIS.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which statement about ADS-B and WAM targets is correct in terminal operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "ADS-B and WAM targets can support terminal services in the listed STARS modes, but WAM targets cannot be used for 3 NM separation in the EAS.",
+          "choices": [
+            {
+              "text": "They may support all terminal services in the listed STARS modes, but WAM targets cannot be used for 3 NM separation in the EAS.",
+              "is_correct": true
+            },
+            {
+              "text": "WAM targets are preferred for 3 NM separation in the EAS.",
+              "is_correct": false
+            },
+            {
+              "text": "ADS-B targets may not be used for procedures annotated radar required.",
+              "is_correct": false
+            },
+            {
+              "text": "Neither ADS-B nor WAM may be used in STARS Fusion.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may the terminal advisory about primary radar being unavailable be omitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The advisory may be omitted when it is on ATIS and the pilot has that information, or when other appropriate notice to pilots is being used where allowed.",
+          "choices": [
+            {
+              "text": "When it is already provided on ATIS or by other appropriate notice to pilots, as the paragraph allows.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the outage is temporary.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot is IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when primary and secondary radar are both unavailable.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which advisory reflects the temporary primary-radar outage condition?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The published advisory states that primary radar is unavailable and radar services are available only on transponder- or ADS-B-equipped aircraft.",
+          "choices": [
+            {
+              "text": "Primary radar unavailable. Radar services available on transponder or ADS-B equipped aircraft only.",
+              "is_correct": true
+            },
+            {
+              "text": "Primary radar unavailable. Vector final approaches remain unrestricted.",
+              "is_correct": false
+            },
+            {
+              "text": "Primary radar unavailable. All radar service terminated immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Primary radar unavailable. Secondary targets may be used for all ASR finals.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-1-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Where are all EA activity requests referred?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "All EA activity requests go to the appropriate center supervisor.",
+          "choices": [
+            {
+              "text": "The appropriate center supervisor.",
+              "is_correct": true
+            },
+            {
+              "text": "The local tower controller.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot's dispatcher.",
+              "is_correct": false
+            },
+            {
+              "text": "The nearest adjacent center automatically.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If EA activity interferes with terminal radar use and immediate cessation is required, may the stop request be broadcast directly to the EA aircraft on the emergency frequency?",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Yes. In terminal operations, direct emergency-frequency broadcast is allowed when immediate cessation is required.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must happen before a terminal facility broadcasts a resume clearance directly to the EA aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Terminal facilities obtain ARTCC approval before broadcasting a resume clearance directly to the aircraft.",
+          "choices": [
+            {
+              "text": "ARTCC approval must be obtained first.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft must be below 10,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot must cancel IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "An adjacent facility must issue the resume instead.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which item belongs in an EA stop request?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A stop request includes the facility name, type of EA activity, the radar band affected, and when feasible the expected duration.",
+          "choices": [
+            {
+              "text": "The affected radar band and, when feasible, the expected duration of suspension.",
+              "is_correct": true
+            },
+            {
+              "text": "The airport ATIS code only.",
+              "is_correct": false
+            },
+            {
+              "text": "The destination gate assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the aircraft's requested altitude.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "In terminal operations, what is the normal path for requesting suspension of interfering EA activity when immediate cessation is not required?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The normal terminal path is through the ARTCC.",
+          "choices": [
+            {
+              "text": "Request suspension through the ARTCC.",
+              "is_correct": true
+            },
+            {
+              "text": "Broadcast directly to the EA aircraft on every occasion.",
+              "is_correct": false
+            },
+            {
+              "text": "Route the request through the destination tower only.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for the military unit to notice the interference on its own.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which transmission fits the published stop-buzzer phraseology?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The published phraseology uses BIG PHOTO followed by the facility identification and the stop request.",
+          "choices": [
+            {
+              "text": "Big Photo Memphis Center, stop buzzer on UHF.",
+              "is_correct": true
+            },
+            {
+              "text": "Memphis Center, traffic interference, cancel radar.",
+              "is_correct": false
+            },
+            {
+              "text": "Stop jammer now, advisory approved.",
+              "is_correct": false
+            },
+            {
+              "text": "Broadcast cease electronic activity on all frequencies.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-1-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Which aircraft receive merging target procedures, except while established in a holding pattern?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The covered categories are aircraft at 10,000 feet and above, turbojet aircraft regardless of altitude, and presidential aircraft regardless of altitude.",
+          "choices": [
+            {
+              "text": "Radar-identified aircraft at 10,000 feet and above, turbojet aircraft regardless of altitude, and presidential aircraft regardless of altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Only IFR aircraft above FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "Only turbojets above 10,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "All radar targets regardless of type or altitude.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Traffic information is issued to covered aircraft whose targets appear likely to merge unless they are separated by more than the appropriate vertical separation minima.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Traffic information is required when covered targets appear likely to merge and the vertical separation exception does not apply.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When both aircraft are in RVSM airspace and vertically separated by 1,000 feet, what additional condition triggers vectoring to prevent merging?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The trigger is a report from either pilot that they are unable to maintain RVSM due to turbulence or mountain wave.",
+          "choices": [
+            {
+              "text": "Either pilot reports unable RVSM due to turbulence or mountain wave.",
+              "is_correct": true
+            },
+            {
+              "text": "Either pilot requests a visual approach.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft are at exactly the same groundspeed.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot reports moderate chop without any RVSM concern.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the pilot requests a vector to avoid merging targets with previously issued traffic, what should ATC do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "ATC vectors the aircraft if able and informs the pilot if unable to provide vector service.",
+          "choices": [
+            {
+              "text": "Vector the aircraft if able and inform the pilot if unable to provide vector service.",
+              "is_correct": true
+            },
+            {
+              "text": "Deny the request automatically because traffic information has already been issued.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the targets merge, then issue a vector.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate radar service before responding.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which altitude band triggers the general non-type-specific merging-target rule?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The general altitude threshold is 10,000 feet and above.",
+          "choices": [
+            {
+              "text": "10,000 feet and above.",
+              "is_correct": true
+            },
+            {
+              "text": "18,000 feet and above only.",
+              "is_correct": false
+            },
+            {
+              "text": "Below 10,000 feet only.",
+              "is_correct": false
+            },
+            {
+              "text": "Any altitude if the aircraft is propeller-driven.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What should be done if vector service cannot be provided after the pilot requests it to avoid merging targets?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "If vector service cannot be provided, the pilot is informed.",
+          "choices": [
+            {
+              "text": "Inform the pilot that vector service is unavailable.",
+              "is_correct": true
+            },
+            {
+              "text": "Say nothing and let the pilot infer that no vector is possible.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate radar service immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the aircraft's IFR flight plan.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-1-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must radar surveillance of outer-fix holding pattern airspace areas be provided?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The surveillance is provided whenever aircraft are holding in the depicted outer-fix holding pattern airspace areas or portions of them shown on the scope.",
+          "choices": [
+            {
+              "text": "Whenever aircraft are holding in the area or any portion of it shown on the radar scope.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the pilot requests holding surveillance.",
+              "is_correct": false
+            },
+            {
+              "text": "Only in Class A airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the holding pattern is unpublished.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "This rule applies to outer-fix holding pattern airspace areas, or portions of them, shown on the radar scope.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph is limited to the depicted outer-fix holding pattern airspace areas or portions displayed on the scope.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What should the controller attempt to detect while aircraft are holding in the depicted airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller attempts to detect aircraft that stray outside the holding pattern airspace area.",
+          "choices": [
+            {
+              "text": "Any aircraft straying outside the holding pattern airspace area.",
+              "is_correct": true
+            },
+            {
+              "text": "Only aircraft that descend below the MOCA.",
+              "is_correct": false
+            },
+            {
+              "text": "Only aircraft that change transponder code.",
+              "is_correct": false
+            },
+            {
+              "text": "Only aircraft requesting a different fix.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If an aircraft is detected straying outside the holding pattern airspace area, what should ATC do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller assists the aircraft in returning to the assigned airspace.",
+          "choices": [
+            {
+              "text": "Help the aircraft return to the assigned airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "Continue observing without taking any action unless the pilot requests help.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel holding and clear the aircraft to the destination immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate radar service because the aircraft left the protected area.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which area receives this surveillance whenever aircraft are holding there?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The surveillance is for the outer-fix holding pattern airspace area shown on the scope.",
+          "choices": [
+            {
+              "text": "The outer-fix holding pattern airspace area shown on the radar scope.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the runway safety area.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the terminal arrival corridor.",
+              "is_correct": false
+            },
+            {
+              "text": "Only airspace below the MVA.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

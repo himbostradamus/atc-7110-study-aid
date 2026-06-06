@@ -1,0 +1,523 @@
+{
+  "activities": {
+    "3-10-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What does a pilot's use of have numbers allow you to omit from landing information?",
+          "choices": [
+            {
+              "text": "Runway, wind, and altimeter.",
+              "is_correct": true
+            },
+            {
+              "text": "Any traffic pattern entry instruction.",
+              "is_correct": false
+            },
+            {
+              "text": "Any supplementary information or reports.",
+              "is_correct": false
+            },
+            {
+              "text": "The need to determine whether the pilot has the ATIS code.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Have numbers allows omission of runway, wind, and altimeter, but not all other landing information."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which item should still be used when requesting additional position reports?",
+          "question_text": "Which reporting-point method is correct?",
+          "choices": [
+            {
+              "text": "Use prominent geographical fixes that can be easily recognized from the air, preferably ones shown on sectional charts.",
+              "is_correct": true
+            },
+            {
+              "text": "Use only nonpublished local landmarks even if they are not charted.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only runway distance remaining signs because they are standardized.",
+              "is_correct": false
+            },
+            {
+              "text": "Avoid traffic-pattern legs as reporting points in all cases.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Prominent geographical fixes are preferred for extra position reports, and traffic-pattern legs may also be used."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this ATIS-omission rule correct?",
+          "question_text": "If the pilot states the appropriate ATIS code, landing information contained in the ATIS broadcast may be omitted.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ATIS-contained landing information may be omitted when the pilot states the appropriate ATIS code."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this shortened-runway arrival requirement correct?",
+          "question_text": "If the pilot does not indicate the appropriate ATIS code and the runway has been shortened, you must ensure the pilot receives the runway number combined with a shortened announcement.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That shortened-runway announcement must be ensured for arriving aircraft when the pilot does not indicate the appropriate ATIS code."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "An arriving aircraft should enter left base. Build the pattern-entry instruction.",
+          "target_phrase": "ENTER LEFT BASE"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "An arrival reports have numbers but does not give the ATIS code. The runway has been shortened. Another controller says have numbers proves the pilot has the ATIS and you can skip the shortened announcement as long as wind and altimeter are omitted.",
+          "para_context": "Have numbers allows omission of runway, wind, and altimeter, but it does not indicate receipt of the ATIS broadcast. If the pilot does not indicate the appropriate ATIS code and a runway has been shortened, the controller must ensure the pilot receives the runway number with a shortened announcement.",
+          "choices": [
+            {
+              "text": "Ensure the pilot receives the runway number with the shortened announcement because have numbers does not prove ATIS receipt.",
+              "is_correct": true
+            },
+            {
+              "text": "Omit all shortened-runway information because have numbers replaces the ATIS code requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue only the altimeter because shortened-runway information is part of the ATIS and cannot be repeated.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the landing sequence until the pilot reads back the entire ATIS broadcast from memory.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Have numbers is not proof of ATIS receipt, and shortened-runway information must be ensured when the pilot does not indicate the proper ATIS code."
+        }
+      ]
+    },
+    "3-10-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is one item a nonapproach control facility must forward, as appropriate, to the facility with IFR jurisdiction?",
+          "choices": [
+            {
+              "text": "That an arriving aircraft has been cleared for a visual approach.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft's post-landing taxi route.",
+              "is_correct": false
+            },
+            {
+              "text": "The gate assignment requested by the operator.",
+              "is_correct": false
+            },
+            {
+              "text": "The maintenance status of the runway lighting system.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Forwarded items include visual-approach clearances and several other listed pieces of arrival information."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which item is on the forwarding list for the IFR-jurisdiction facility?",
+          "question_text": "Which item belongs on the list?",
+          "choices": [
+            {
+              "text": "Information on a missed approach, unreported aircraft, or overdue aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "The preferred runway-exit taxiway for each airline.",
+              "is_correct": false
+            },
+            {
+              "text": "The sequence number of every training touch-and-go.",
+              "is_correct": false
+            },
+            {
+              "text": "The current braking action for every runway regardless of runway in use.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Missed-approach, unreported-aircraft, and overdue-aircraft information is explicitly included in the forwarding list."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this weather-update rule correct?",
+          "question_text": "If weather is below 1,000 feet or 3 miles or the highest circling minimums, whichever is greater, and it changes from the ATIS or what was previously forwarded, you must issue current weather to aircraft executing an instrument approach.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the weather-update trigger for aircraft executing an instrument approach."
+        },
+        {
+          "activity_type": "document_control_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this local-coverage rule correct?",
+          "question_text": "Items fully covered in a letter of agreement or facility directive may be omitted from the forwarded list because of local conditions or situations.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph allows elimination of items that are fully covered in an LOA or facility directive."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "You are a nonapproach control facility. An aircraft is executing an instrument approach. Weather has dropped below 1,000 feet and 3 miles and now differs from both the ATIS and the weather earlier forwarded to approach control. Another controller says the pilot can rely on the old ATIS because the runway in use has not changed.",
+          "para_context": "When weather is below 1,000 feet or 3 miles or the highest circling minimums, whichever is greater, current weather must be issued to aircraft executing an instrument approach if it differs from the ATIS or what was previously forwarded.",
+          "choices": [
+            {
+              "text": "Issue the current weather to the aircraft executing the instrument approach.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the earlier ATIS and do nothing further because runway in use did not change.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the aircraft reports the runway in sight before issuing any weather change.",
+              "is_correct": false
+            },
+            {
+              "text": "Forward the weather only after the pilot cancels IFR.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the weather drops below the stated threshold and changes from the ATIS or previously forwarded weather, the current weather must be issued to the aircraft on the instrument approach."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-10-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What does a pilot's use of have numbers allow you to omit from landing information?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Have numbers allows omission of runway, wind, and altimeter.",
+          "choices": [
+            {
+              "text": "Runway, wind, and altimeter.",
+              "is_correct": true
+            },
+            {
+              "text": "Pattern information and supplementary information.",
+              "is_correct": false
+            },
+            {
+              "text": "Landing clearance and traffic information.",
+              "is_correct": false
+            },
+            {
+              "text": "All ATIS-related information.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does a pilot's use of have numbers not indicate?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note says have numbers does not indicate receipt of the ATIS broadcast.",
+          "choices": [
+            {
+              "text": "Receipt of the ATIS broadcast.",
+              "is_correct": true
+            },
+            {
+              "text": "Readiness to land.",
+              "is_correct": false
+            },
+            {
+              "text": "Knowledge of the runway in use.",
+              "is_correct": false
+            },
+            {
+              "text": "Ability to report a traffic-pattern entry.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may landing information contained in the ATIS broadcast be omitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It may be omitted if the pilot states the appropriate ATIS code.",
+          "choices": [
+            {
+              "text": "When the pilot states the appropriate ATIS code.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot says have numbers.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot is already in the traffic pattern.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for IFR arrivals.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What kind of fixes should be used for additional position reports?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "Use prominent geographical fixes easily recognized from the air, preferably depicted on sectional charts.",
+          "choices": [
+            {
+              "text": "Prominent geographical fixes easily recognized from the air, preferably depicted on sectional charts.",
+              "is_correct": true
+            },
+            {
+              "text": "Only uncharted local landmarks used by the tower staff.",
+              "is_correct": false
+            },
+            {
+              "text": "Only runway distance remaining signs.",
+              "is_correct": false
+            },
+            {
+              "text": "Only IFR fixes regardless of whether VFR pilots can recognize them visually.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a runway has been shortened and the pilot does not indicate the appropriate ATIS code, what must the controller ensure?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "The controller must ensure the pilot receives the runway number with a shortened announcement.",
+          "choices": [
+            {
+              "text": "The pilot receives the runway number combined with a shortened announcement.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot receives only the altimeter because the shortening is charted.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot acknowledges the runway remaining distance in feet.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot is told to obtain the ATIS again before continuing the approach.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-10-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What is one item a nonapproach control facility must forward, as appropriate, to the facility with IFR jurisdiction?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Forwarded items include visual-approach clearances.",
+          "choices": [
+            {
+              "text": "That an arriving aircraft has been cleared for a visual approach.",
+              "is_correct": true
+            },
+            {
+              "text": "The arrival gate assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft's taxi route after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "The condition of airport construction barricades.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which item is on the forwarding list for the IFR-jurisdiction facility?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "The list includes information on a missed approach, unreported aircraft, or overdue aircraft.",
+          "choices": [
+            {
+              "text": "Information on a missed approach, unreported aircraft, or overdue aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "The sequence number for each touch-and-go.",
+              "is_correct": false
+            },
+            {
+              "text": "The planned parking stand for the aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "The braking action for every runway regardless of runway in use.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may forwarding items be eliminated?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Items may be eliminated when local conditions or situations are fully covered in an LOA or facility directive.",
+          "choices": [
+            {
+              "text": "When local conditions or situations are fully covered in a letter of agreement or facility directive.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the receiving facility already has radar contact.",
+              "is_correct": false
+            },
+            {
+              "text": "Only during VFR conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the arrival sequence is less than three aircraft.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When must current weather be issued to aircraft executing an instrument approach under this paragraph?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "It must be issued when weather is below 1,000 feet or 3 miles or the highest circling minimums, whichever is greater, and it changes from the ATIS or previously forwarded weather.",
+          "choices": [
+            {
+              "text": "When weather is below 1,000 feet or 3 miles or the highest circling minimums, whichever is greater, and it changes from the ATIS or previously forwarded weather.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the runway in use changes, regardless of weather conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot asks for another weather observation.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft is flying a visual approach.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What visibility or ceiling threshold is part of the weather-update trigger in this paragraph?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "The trigger includes weather below 1,000 feet or 3 miles, or the highest circling minimums if that value is greater.",
+          "choices": [
+            {
+              "text": "Below 1,000 feet or 3 miles, or the highest circling minimums if that value is greater.",
+              "is_correct": true
+            },
+            {
+              "text": "Below 500 feet or 1 mile only.",
+              "is_correct": false
+            },
+            {
+              "text": "Below basic VFR minima only.",
+              "is_correct": false
+            },
+            {
+              "text": "Any visibility less than 10 miles.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1033 @@
+{
+  "activities": {
+    "3-9-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may runway, surface wind, and altimeter be omitted from departure information?",
+          "choices": [
+            {
+              "text": "When the pilot states have the numbers.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot has the ATIS code, regardless of what information was on it.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for IFR departures.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the weather is VFR and no braking action is reported.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Runway in use, surface wind, and altimeter may be omitted if the pilot states have the numbers."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which departure item must be issued to a departing VFR aircraft when weather is below VFR conditions?",
+          "question_text": "Which item must be issued?",
+          "choices": [
+            {
+              "text": "Official ceiling and visibility.",
+              "is_correct": true
+            },
+            {
+              "text": "The departure control beacon code.",
+              "is_correct": false
+            },
+            {
+              "text": "A line up and wait clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "The wake turbulence interval from the previous departure.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For departing VFR aircraft, official ceiling and visibility are issued when the weather is below VFR conditions."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this shortened-runway advisory correct?",
+          "question_text": "Use the phrase RUNWAY TWO SEVEN SHORTENED when departure information must include a shortened-runway advisory.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The listed phraseology for departure information is RUNWAY (NUMBER) SHORTENED."
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "One word in this departure advisory is incorrect. Tap it.",
+          "original_phrase": "RUNWAY TWO SEVEN SHORTENED.",
+          "display_text": "RUNWAY TWO SEVEN LENGTHENED",
+          "tokens": ["RUNWAY", "TWO", "SEVEN", "LENGTHENED"],
+          "error_index": 3,
+          "correct_token": "SHORTENED",
+          "explanation": "The approved departure-information advisory is RUNWAY (NUMBER) SHORTENED."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "The runway is shortened and you must include that in departure information. Build the advisory.",
+          "target_phrase": "RUNWAY TWO SEVEN SHORTENED"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A VFR departure does not have the ATIS and the weather is below VFR conditions. The runway is temporarily shortened, and the aircraft still needs a taxi route to the departure runway. Another controller says runway, wind, and altimeter can all be skipped because the pilot did not ask for them.",
+          "para_context": "Departure information is issued as appropriate. Runway, surface wind, and altimeter may be omitted only if the pilot states have the numbers. Below-VFR ceiling and visibility must be issued to departing VFR aircraft, and the taxi clearance must include the specific route.",
+          "choices": [
+            {
+              "text": "Issue the applicable departure information, including below-VFR ceiling and visibility and the shortened-runway advisory, and give the specific taxi route.",
+              "is_correct": true
+            },
+            {
+              "text": "Skip runway, wind, and altimeter because the pilot did not ask for them, and omit the shortened-runway advisory until takeoff clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Give only the taxi route because the pilot can infer the rest from the weather and construction signs.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay all departure information until the aircraft reaches the hold short line.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The omission rules are specific, and this situation still requires the applicable departure information plus the specific taxi route."
+        }
+      ]
+    },
+    "3-9-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What advisory is issued when gate-hold procedures are in effect?",
+          "choices": [
+            {
+              "text": "GATE HOLD PROCEDURES ARE IN EFFECT. ALL AIRCRAFT CONTACT (position) ON (frequency) FOR ENGINE START TIME.",
+              "is_correct": true
+            },
+            {
+              "text": "EXPECT DEPARTURE CLEARANCE IN THE AIR ONLY.",
+              "is_correct": false
+            },
+            {
+              "text": "HOLD FOR WAKE TURBULENCE.",
+              "is_correct": false
+            },
+            {
+              "text": "RUNWAY TWO SEVEN SHORTENED.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the paragraph's gate-hold phraseology."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this start-up directive correct?",
+          "question_text": "Use START ENGINES ADVISE WHEN READY TO TAXI, or ADVISE WHEN READY TO TAXI, as appropriate during gate-hold procedures.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the listed phrases for advising aircraft when to start engines or when to advise ready to taxi."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this delay-area rule correct?",
+          "question_text": "If a pilot requests to hold in a delay absorbing area, you must approve the request when space and traffic conditions permit.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the stated approval rule for delay absorbing area requests."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this termination statement correct?",
+          "question_text": "Advise all aircraft on the GC or FD frequency when gate-hold procedures are no longer in effect.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "All aircraft on the GC or FD frequency are advised when gate-hold procedures end."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "Gate hold procedures are in effect and all aircraft must contact ground on point nine for engine-start time. Build the advisory.",
+          "target_phrase": "GATE HOLD PROCEDURES ARE IN EFFECT ALL AIRCRAFT CONTACT GROUND ON POINT NINE FOR ENGINE START TIME"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Gate-hold procedures are active. One pilot asks to hold in a delay absorbing area, and another controller says those requests should be denied automatically because gate hold is already in effect. A few minutes later the gate hold is terminated while several aircraft remain on the GC frequency.",
+          "para_context": "Delay absorbing area requests are approved if space and traffic conditions permit, and all aircraft on the GC or FD frequency must be advised when gate-hold procedures are no longer in effect.",
+          "choices": [
+            {
+              "text": "Approve the delay-area request if space and traffic allow it, and advise all aircraft on the GC frequency when the gate hold ends.",
+              "is_correct": true
+            },
+            {
+              "text": "Deny every delay-area request automatically and wait for pilots to ask whether the gate hold ended.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve the request only if the pilot already has taxi clearance, and announce the end of gate hold only on the local frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Keep the gate hold in effect for aircraft already on frequency until each one individually requests release.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph gives a conditional approval standard for delay areas and a broad notification requirement when gate hold ends."
+        }
+      ]
+    },
+    "3-9-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Before takeoff, what departure-control information is normally issued to departing IFR, SVFR, VFR radar-service, and TRSA VFR aircraft?",
+          "choices": [
+            {
+              "text": "The appropriate departure control frequency and beacon code.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the departure controller's call sign.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the initial heading.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the first traffic advisory after departure.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the standard pre-takeoff departure-control information, subject to the SID frequency exception."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this SID-frequency rule correct?",
+          "question_text": "If a SID has been or will be assigned and the departure control frequency is published on the SID, you may omit the departure control frequency from the pre-takeoff instruction.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The published SID frequency is the listed exception to issuing the departure control frequency separately."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this military frequency-change directive correct?",
+          "question_text": "Do not request departing military turboprop or turbojet aircraft, except transport and cargo types, to make radio frequency or beacon changes before the aircraft reaches 2,500 feet above the surface.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the stated altitude restriction for military turboprop and turbojet changes."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which aircraft are normally instructed to contact departure control when about one-half mile beyond the runway end, if further communication is not needed?",
+          "question_text": "Which aircraft are included?",
+          "choices": [
+            {
+              "text": "Civil aircraft, and military transport and cargo types.",
+              "is_correct": true
+            },
+            {
+              "text": "Only military turboprop aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Only VFR aircraft receiving no radar service.",
+              "is_correct": false
+            },
+            {
+              "text": "Only formation flights.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the aircraft normally switched to departure control about one-half mile beyond the runway end if more communication is not required."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "A departing aircraft needs its departure frequency and beacon code. Build the transmission.",
+          "target_phrase": "DEPARTURE FREQUENCY ONE TWO FOUR POINT SIX SQUAWK FOUR SIX THREE TWO"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An IFR departure is receiving a SID that already publishes the departure control frequency. Another departure is a military turboprop that has just lifted off and is still below 2,500 feet above the surface. Another controller wants to issue both a new frequency and new code to the military aircraft immediately to reduce workload.",
+          "para_context": "The departure frequency may be omitted when it is published on the assigned SID. Military turboprop and turbojet aircraft, except transport and cargo types, are not asked to make frequency or beacon changes before reaching 2,500 feet above the surface.",
+          "choices": [
+            {
+              "text": "Omit the separate departure frequency for the SID departure if appropriate, and do not request the military turboprop's frequency or beacon change before 2,500 feet above the surface.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the separate frequency anyway because SIDs never replace tower instructions, and change the military aircraft immediately after liftoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Keep both aircraft on tower until 5 miles out because no departure-control instructions are given before takeoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the military aircraft a new beacon code but wait on the frequency change, because the altitude restriction applies only to radio changes.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The SID exception and the military 2,500-foot restriction are both explicit."
+        }
+      ]
+    },
+    "3-9-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the intent of line up and wait?",
+          "choices": [
+            {
+              "text": "To position an aircraft for an imminent departure when a takeoff clearance cannot yet be issued because of traffic.",
+              "is_correct": true
+            },
+            {
+              "text": "To let an aircraft remain on the runway indefinitely until the pilot is ready.",
+              "is_correct": false
+            },
+            {
+              "text": "To allow the aircraft to begin takeoff at pilot discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "To avoid giving traffic information to a departing aircraft.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "LUAW is intended to position an aircraft for an imminent departure when traffic prevents immediate takeoff clearance."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this LUAW traffic-information rule correct?",
+          "question_text": "Issue traffic information to an aircraft authorized to line up and wait unless the omitted-traffic exception applies.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Traffic information is required for LUAW, with the listed limited exception when the traffic is another aircraft on the runway and clearly visible to the holding aircraft."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this LUAW directive correct?",
+          "question_text": "Do not use conditional phrases such as behind landing traffic or after the departing aircraft when authorizing line up and wait.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Conditional phrases of that type are explicitly prohibited with LUAW."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this LUAW visibility rule correct?",
+          "question_text": "If the departure point is not visible from the tower, you may authorize line up and wait only when the aircraft position can be verified by ASDE or the runway is used for departures only.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the stated exception to the normal requirement that the departure point be visible from the tower."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which condition is required for intersection LUAW between sunset and sunrise?",
+          "question_text": "Which condition is required?",
+          "choices": [
+            {
+              "text": "The runway must be used as a departure-only runway.",
+              "is_correct": true
+            },
+            {
+              "text": "Two aircraft may line up and wait on the same runway if both are at intersections.",
+              "is_correct": false
+            },
+            {
+              "text": "The intersection may be used even when it is not visible from the tower.",
+              "is_correct": false
+            },
+            {
+              "text": "The procedure may be used without facility-directive language as long as the tower supervisor approves it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Night intersection LUAW requires approval, a facility directive, a departure-only runway, one aircraft at a time, and documentation on FAA Form 7230-4."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "You cannot issue takeoff yet, but the aircraft can line up and wait on Runway 18 while a Boeing 737 is six-mile final. Build the transmission.",
+          "target_phrase": "RUNWAY ONE EIGHT LINE UP AND WAIT TRAFFIC A BOEING SEVEN THIRTY SEVEN SIX MILE FINAL"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "An aircraft at an intersection wants to line up and wait after sunset. The runway is not departure-only tonight, and the intersection is not visible from the tower. Another controller says it is acceptable because the traffic is light and the pilot can see the runway. At the same time, another aircraft can line up and wait full length on the same runway if needed.",
+          "para_context": "Night intersection LUAW requires approval, facility-directive coverage, departure-only runway use, one aircraft at a time on the runway, and visibility of the intersection from the tower. LUAW is not authorized when the intersection is not visible from the tower.",
+          "choices": [
+            {
+              "text": "Do not authorize the intersection LUAW because the runway is not departure-only and the intersection is not visible, and do not authorize simultaneous LUAW for another aircraft on the same runway.",
+              "is_correct": true
+            },
+            {
+              "text": "Authorize the intersection LUAW because light traffic and pilot visibility are enough, and use simultaneous LUAW if the full-length aircraft is a different type.",
+              "is_correct": false
+            },
+            {
+              "text": "Authorize the intersection LUAW only if no traffic information is issued, because that reduces runway occupancy time.",
+              "is_correct": false
+            },
+            {
+              "text": "Authorize the full-length aircraft to line up and wait behind the intersection aircraft because conditional LUAW phrasing is allowed when both aircraft are on the same runway.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph places strict night-intersection and visibility limits on LUAW and prohibits simultaneous LUAW on the same runway."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-9-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When may runway, surface wind, and altimeter be omitted from departure information?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "These items may be omitted if the pilot states have the numbers.",
+          "choices": [
+            {
+              "text": "When the pilot states have the numbers.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot has the ATIS code.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the departure is IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the runway is temporarily shortened.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When must official ceiling and visibility be issued to a departing VFR aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Official ceiling and visibility are issued when weather is below VFR conditions.",
+          "choices": [
+            {
+              "text": "When the weather is below VFR conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "On every VFR departure regardless of weather.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot asks for SVFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when braking action is poor.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What phraseology is used when departure information must include a shortened-runway advisory?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The phraseology is RUNWAY (NUMBER) SHORTENED.",
+          "choices": [
+            {
+              "text": "RUNWAY TWO SEVEN SHORTENED.",
+              "is_correct": true
+            },
+            {
+              "text": "RUNWAY TWO SEVEN FULL LENGTH REDUCED.",
+              "is_correct": false
+            },
+            {
+              "text": "RUNWAY TWO SEVEN NOTAMED SHORTER.",
+              "is_correct": false
+            },
+            {
+              "text": "RUNWAY TWO SEVEN INTERSECTION DEPARTURE ONLY.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The taxi clearance in departure information must include the specific route to follow.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The paragraph explicitly states that the taxi clearance must include the specific route to follow."
+        },
+        {
+          "question_text": "What advisory may be issued when appropriate for density altitude?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph includes an advisory to check density altitude when appropriate.",
+          "choices": [
+            {
+              "text": "Check density altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Check wake turbulence category.",
+              "is_correct": false
+            },
+            {
+              "text": "Check runway visual range.",
+              "is_correct": false
+            },
+            {
+              "text": "Check traffic pattern altitude.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-9-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What is the basic gate-hold advisory when procedures are in effect?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The gate-hold phraseology tells all aircraft to contact the specified position on the specified frequency for engine-start time.",
+          "choices": [
+            {
+              "text": "GATE HOLD PROCEDURES ARE IN EFFECT. ALL AIRCRAFT CONTACT (position) ON (frequency) FOR ENGINE START TIME.",
+              "is_correct": true
+            },
+            {
+              "text": "ADVISE WHEN READY FOR DEPARTURE CONTROL RELEASE.",
+              "is_correct": false
+            },
+            {
+              "text": "EXPECT HOLD SHORT INSTRUCTIONS ONLY.",
+              "is_correct": false
+            },
+            {
+              "text": "CONTACT CLEARANCE DELIVERY FOR WAKE TURBULENCE TIME.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What may be approved if space and traffic conditions permit during gate-hold procedures?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A request to hold in a delay absorbing area must be approved if space and traffic conditions permit.",
+          "choices": [
+            {
+              "text": "A request to hold in a delay absorbing area.",
+              "is_correct": true
+            },
+            {
+              "text": "A request to taxi without an engine-start time.",
+              "is_correct": false
+            },
+            {
+              "text": "A request to ignore the gate-hold frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "A request to bypass the GC or FD frequency entirely.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When gate-hold procedures end, who must be advised on the GC or FD frequency?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "All aircraft on the GC or FD frequency are advised when gate-hold procedures end.",
+          "choices": [
+            {
+              "text": "All aircraft on the GC or FD frequency.",
+              "is_correct": true
+            },
+            {
+              "text": "Only IFR aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Only aircraft waiting for engine-start time.",
+              "is_correct": false
+            },
+            {
+              "text": "Only aircraft already taxiing.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "START ENGINES, ADVISE WHEN READY TO TAXI is approved gate-hold phraseology.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "That phraseology is explicitly listed."
+        },
+        {
+          "question_text": "What phraseology is used when gate-hold procedures are terminated?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The phraseology is GATE HOLD PROCEDURES NO LONGER IN EFFECT.",
+          "choices": [
+            {
+              "text": "GATE HOLD PROCEDURES NO LONGER IN EFFECT.",
+              "is_correct": true
+            },
+            {
+              "text": "ENGINE START TIMES CANCELED.",
+              "is_correct": false
+            },
+            {
+              "text": "GROUND DELAY PROGRAM TERMINATED.",
+              "is_correct": false
+            },
+            {
+              "text": "ADVISE READY TO TAXI FOR NORMAL RELEASE.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-9-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Before takeoff, what is normally issued to departing IFR, SVFR, VFR radar-service, and TRSA VFR aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The standard instruction is the departure control frequency and beacon code.",
+          "choices": [
+            {
+              "text": "The departure control frequency and beacon code.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the departure controller's call sign.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the initial heading and altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the takeoff time and traffic information.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The departure control frequency may be omitted if it is published on an assigned SID.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "That is the stated SID exception."
+        },
+        {
+          "question_text": "What phraseology tells departing IFR military turboprop or turbojet aircraft, except transport and cargo types, to switch after departure?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The listed phraseology is CHANGE TO DEPARTURE.",
+          "choices": [
+            {
+              "text": "CHANGE TO DEPARTURE.",
+              "is_correct": true
+            },
+            {
+              "text": "CONTACT DEPARTURE WHEN ABLE.",
+              "is_correct": false
+            },
+            {
+              "text": "SWITCH NOW TO DEPARTURE.",
+              "is_correct": false
+            },
+            {
+              "text": "CHANGE FREQUENCY AND BEACON IMMEDIATELY.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "About when are civil aircraft, and military transport and cargo types, normally instructed to contact departure control after takeoff if further communication is not required?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph says about one-half mile beyond the runway end.",
+          "choices": [
+            {
+              "text": "When the aircraft is about 1/2 mile beyond the runway end.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as the wheels leave the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after reaching 2,500 feet AGL.",
+              "is_correct": false
+            },
+            {
+              "text": "After passing the final approach fix on departure.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Before what altitude must military turboprop or turbojet aircraft, except transport and cargo types, not be asked to make radio frequency or beacon changes?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The restriction lasts until the aircraft reaches 2,500 feet above the surface.",
+          "choices": [
+            {
+              "text": "2,500 feet above the surface.",
+              "is_correct": true
+            },
+            {
+              "text": "1,000 feet above the surface.",
+              "is_correct": false
+            },
+            {
+              "text": "3,000 feet above the surface.",
+              "is_correct": false
+            },
+            {
+              "text": "5 miles from the airport.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-9-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What is the intent of line up and wait?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "LUAW positions an aircraft for an imminent departure when takeoff clearance cannot yet be issued because of traffic.",
+          "choices": [
+            {
+              "text": "To position an aircraft for an imminent departure when takeoff clearance cannot yet be issued because of traffic.",
+              "is_correct": true
+            },
+            {
+              "text": "To let the pilot begin takeoff as soon as ready.",
+              "is_correct": false
+            },
+            {
+              "text": "To reserve the runway indefinitely.",
+              "is_correct": false
+            },
+            {
+              "text": "To replace traffic information with implied sequencing.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which conditional phrase is prohibited when authorizing line up and wait?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Conditional phrases like behind landing traffic are specifically prohibited.",
+          "choices": [
+            {
+              "text": "Behind landing traffic.",
+              "is_correct": true
+            },
+            {
+              "text": "Traffic a Boeing Seven Thirty Seven, six mile final.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway One Eight, line up and wait.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway One Eight shortened, line up and wait.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the normal maximum time an aircraft should remain in LUAW status without additional instructions?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The note says an aircraft should not be in LUAW status for more than 90 seconds without additional instructions.",
+          "choices": [
+            {
+              "text": "90 seconds.",
+              "is_correct": true
+            },
+            {
+              "text": "30 seconds.",
+              "is_correct": false
+            },
+            {
+              "text": "2 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "5 minutes.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may line up and wait be authorized if the departure point is not visible from the tower?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It may be used only when the position can be verified by ASDE or the runway is used for departures only.",
+          "choices": [
+            {
+              "text": "Only when the aircraft position can be verified by ASDE or the runway is used for departures only.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot reports holding in position.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever traffic information is issued.",
+              "is_correct": false
+            },
+            {
+              "text": "Only in daytime VFR.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What condition is required for intersection LUAW between sunset and sunrise?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "One required condition is that the runway be used as a departure-only runway.",
+          "choices": [
+            {
+              "text": "The runway must be used as a departure-only runway.",
+              "is_correct": true
+            },
+            {
+              "text": "Two aircraft may line up and wait on the same runway if they are at different intersections.",
+              "is_correct": false
+            },
+            {
+              "text": "The intersection may be used even if it is not visible from the tower.",
+              "is_correct": false
+            },
+            {
+              "text": "A facility directive is optional when the air traffic manager is present.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When a runway is shortened, what word must be included as part of the LUAW clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The word shortened must be stated immediately after the runway number.",
+          "choices": [
+            {
+              "text": "Shortened.",
+              "is_correct": true
+            },
+            {
+              "text": "Reduced.",
+              "is_correct": false
+            },
+            {
+              "text": "Temporary.",
+              "is_correct": false
+            },
+            {
+              "text": "Construction.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

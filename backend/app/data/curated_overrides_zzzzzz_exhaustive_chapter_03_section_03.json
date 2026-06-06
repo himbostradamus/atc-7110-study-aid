@@ -1,0 +1,1027 @@
+{
+  "activities": {
+    "3-3-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When a landing-area condition affects safe use of the runway, what is the controller's required handling?",
+          "choices": [
+            {
+              "text": "Relay the information to airport management or military operations, copy it verbatim with the submitter's name, confirm unauthorized reports, and issue a NOTAM if management cannot be reached.",
+              "is_correct": true
+            },
+            {
+              "text": "Close the runway immediately, summarize the condition in your own words, and wait for airport management to confirm it later.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the information only if two different pilots report the same condition, because airport management is solely responsible for unsafe-field advisories.",
+              "is_correct": false
+            },
+            {
+              "text": "Broadcast the condition on ATIS only and do not record the source unless the report came from a pilot on final approach.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Unsafe landing-area information must be relayed, recorded verbatim with the source, confirmed if it came from an unauthorized source, and publicized by NOTAM if management cannot be reached."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this landing-area directive correct?",
+          "question_text": "Relay unsafe landing-area information to airport management or military operations, copy the report verbatim and record the submitter's name, and confirm reports received from other than authorized airport or FAA personnel.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the required handling steps for landing-area condition reports."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this reporting requirement correct?",
+          "question_text": "When an updated RwyCC is received, you must verbally issue it to aircraft until the ATIS broadcast can be updated.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Updated RwyCC information is issued verbally until the ATIS reflects the change."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this unsafe-field condition rule correct?",
+          "question_text": "If you are unable to contact airport management or the operator about an unsafe condition, you must issue a NOTAM publicizing the condition and inform management or the operator as soon as practicable.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the required fallback when management or the operator cannot be reached."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this responsibility statement correct?",
+          "question_text": "Airport management or the military operations office is responsible for observing and reporting landing-area conditions, and only that office can close a runway.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph assigns the reporting role to airport management or military operations and notes that only they can close a runway."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An airport employee who is not on the authorized reporting list tells you compacted snow is covering the runway. Airport management is not answering the phone, and departures are asking for the latest field condition.",
+          "para_context": "Unsafe landing-area information from unauthorized sources must be confirmed if possible. If management or the operator cannot be contacted, publicize the unsafe condition by NOTAM and inform management as soon as practicable. In the absence of RwyCC, issue only factual runway-surface information as reported.",
+          "choices": [
+            {
+              "text": "Record the report verbatim with the source, attempt confirmation, issue a NOTAM if management still cannot be reached, and give aircraft only factual runway-surface information that has been reported.",
+              "is_correct": true
+            },
+            {
+              "text": "Close the runway yourself and tell aircraft the runway is officially closed until management calls back.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the report because it did not come from an authorized airport source and no action may be taken until management responds.",
+              "is_correct": false
+            },
+            {
+              "text": "Invent a provisional RwyCC from the snow depth so aircraft have something standardized to use immediately.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "You do not create your own RwyCC or close the runway yourself. You handle the report, publicize the condition if management cannot be reached, and issue factual runway information."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "The airport operator gives you a runway condition code report for Runway 27: codes two, two, three at 1018 zulu. Build the transmission.",
+          "target_phrase": "RUNWAY TWO SEVEN CONDITION CODES TWO TWO THREE AT ONE ZERO ONE EIGHT ZULU"
+        }
+      ]
+    },
+    "3-3-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "An aircraft requests takeoff, landing, or touch-and-go on a closed or unsafe runway. What is the first required response?",
+          "choices": [
+            {
+              "text": "Inform the pilot that the runway is closed or unsafe.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the clearance if the pilot says the aircraft can accept the risk.",
+              "is_correct": false
+            },
+            {
+              "text": "Read the full NOTAM first, then decide whether to call the runway closed.",
+              "is_correct": false
+            },
+            {
+              "text": "Ask airport management whether the pilot seems experienced enough to decide personally.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The initial step is to tell the pilot the runway is closed or unsafe."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this closed-runway directive correct?",
+          "question_text": "Inform a pilot requesting takeoff, landing, or touch-and-go on a closed or unsafe runway that the runway is closed or unsafe.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the initial required action for a closed or unsafe runway request."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this pilot-persistence rule correct?",
+          "question_text": "If the pilot persists in requesting use of a closed or unsafe runway, you must quote the applicable NOTAM information and inform the pilot that a clearance cannot be issued.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Persistence by the pilot triggers the NOTAM quotation and the statement that a clearance cannot be issued."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this closed-runway ILS-use rule correct?",
+          "question_text": "Approach control uses the ILS associated with a closed runway for approaches only when the side-step exception applies or when not using that ILS would adversely affect airport efficiency.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Closed-runway ILS use is normally avoided except for the listed side-step and efficiency exceptions."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot wants to land on a closed runway because the wind favors it. You tell the pilot the runway is closed. The pilot persists, you quote the NOTAM, and the pilot still insists. You determine the operation would not adversely affect other traffic.",
+          "para_context": "After advising that the runway is closed or unsafe, quote the applicable NOTAM and state that a clearance cannot be issued if the pilot persists. If the pilot still insists and the intended operation would not adversely affect other traffic, inform the pilot that the operation will be at the pilot's own risk.",
+          "choices": [
+            {
+              "text": "Tell the pilot the operation will be at the pilot's own risk; do not issue a landing clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue a landing clearance because the pilot accepted the risk and traffic will not be affected.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the NOTAM because the runway can be used at pilot discretion when traffic impact is minimal.",
+              "is_correct": false
+            },
+            {
+              "text": "Refuse any further response because once the NOTAM is quoted the controller may not communicate about the runway again.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The controller still does not issue a clearance. The final step is to say the operation will be at the pilot's own risk if traffic will not be adversely affected."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "Runway 27 is closed and a pilot keeps asking for a landing clearance. Build the required response.",
+          "target_phrase": "RUNWAY TWO SEVEN CLOSED UNABLE TO ISSUE LANDING CLEARANCE LANDING WILL BE AT YOUR OWN RISK"
+        }
+      ]
+    },
+    "3-3-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the controlling standard for issuing airport condition information?",
+          "choices": [
+            {
+              "text": "Issue airport condition information necessary for safe operation in time for it to be useful to the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue airport condition information only after the pilot asks for it, unless the runway is formally closed.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue airport condition information only on ATIS so that every aircraft receives the same message at the same time.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue airport condition information after takeoff or landing unless the pilot specifically requests a pre-operation briefing.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The standard is usefulness to the pilot in time for safe operation, not delay or pilot-request-only handling."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this airport-condition directive correct?",
+          "question_text": "Issue airport condition information necessary for an aircraft's safe operation in time for it to be useful to the pilot.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the governing instruction in 3-3-3."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which condition belongs in a timely airport-condition advisory?",
+          "question_text": "Which airport condition should be included as appropriate in a timely advisory to pilots?",
+          "choices": [
+            {
+              "text": "Construction work on or immediately adjacent to the movement area.",
+              "is_correct": true
+            },
+            {
+              "text": "Routine office staffing changes for the midnight shift.",
+              "is_correct": false
+            },
+            {
+              "text": "The airport manager's planned inspection time later in the day.",
+              "is_correct": false
+            },
+            {
+              "text": "A fuel-vendor schedule change that does not affect movement or safety.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Construction on or immediately adjacent to the movement area is explicitly listed as pertinent airport-condition information."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this airport-condition requirement correct?",
+          "question_text": "As appropriate, you must include irregular operation of part or all of the airport lighting system in airport condition information.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Lighting irregularities are one of the listed categories that must be issued when pertinent."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this volcanic-ash condition rule correct?",
+          "question_text": "If volcanic ash is present on an airport surface area and its condition is known, you must include whether the ash is wet or dry.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph specifically calls for stating whether volcanic ash is wet or dry, if known."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A departure is ready to taxi. You know lighting on part of the airport is operating irregularly, a rough section of movement area lies along the expected taxi route, and volcanic ash is present on the runway surface. Another controller says to wait until the pilot asks because too much information may be distracting.",
+          "para_context": "Issue airport condition information necessary for safe operation in time for it to be useful. Include rough movement areas, lighting irregularities, volcanic ash, and whether the ash is wet or dry if known.",
+          "choices": [
+            {
+              "text": "Issue the pertinent condition information now, including the rough area, lighting irregularity, and the ash condition in time for the pilot to use it.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for the pilot to ask, because airport condition information should usually be pilot-initiated unless the runway is closed.",
+              "is_correct": false
+            },
+            {
+              "text": "Mention only the volcanic ash and omit the rough area and lighting issue to keep the call shorter.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the advisory until after takeoff because surface-condition details are not useful once taxi begins.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule is about timely, useful condition information. Relevant conditions should be issued early enough to affect pilot decisions."
+        }
+      ]
+    },
+    "3-3-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "If a pilot reports braking action in a term outside the approved vocabulary, what should you do?",
+          "choices": [
+            {
+              "text": "Ask the pilot to categorize the braking action using the approved terms.",
+              "is_correct": true
+            },
+            {
+              "text": "Translate the report into whatever term seems closest without asking the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "Discard the report because only exact approved terminology may be accepted from pilots.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the report exactly as spoken and add that the phrase is unofficial.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Controllers ask the pilot to restate braking action in the approved categories."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which is an approved braking-action term?",
+          "question_text": "Which braking-action term is part of the approved vocabulary?",
+          "choices": [
+            {
+              "text": "Good to medium.",
+              "is_correct": true
+            },
+            {
+              "text": "Fair.",
+              "is_correct": false
+            },
+            {
+              "text": "Marginal.",
+              "is_correct": false
+            },
+            {
+              "text": "Severe.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Approved terms are good, good to medium, medium, medium to poor, poor, and nil."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this braking-action requirement correct?",
+          "question_text": "A braking-action advisory must include the type of aircraft from which the report was received.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Aircraft type is part of the required advisory content."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this partial-runway condition rule correct?",
+          "question_text": "If a braking-action report affects only part of the runway, you must obtain enough information to describe the affected portion in terms easily understood by other pilots.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Partial-runway reports require enough detail to describe the affected portion clearly to other pilots."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this braking-action directive correct?",
+          "question_text": "Describe partial-runway braking action with runway portions such as first half or last half rather than landmarks extraneous to the runway.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Runway portions are preferred because extraneous landmarks may be hard for landing pilots to identify."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot reports, 'Braking is really slick near the fire station.' A USAF aircraft is inbound behind that aircraft, and another civil aircraft asks whether there is an RCR available.",
+          "para_context": "Use only approved braking-action terms, ask pilots to categorize nonstandard reports, include aircraft type, describe affected runway portions in pilot-friendly terms, and issue runway surface condition and or RCR to all USAF and ANG aircraft, with RCR to others on request.",
+          "choices": [
+            {
+              "text": "Ask the pilot to restate the report in approved terms, obtain enough detail to describe the runway portion clearly, include the aircraft type, issue runway surface condition and or RCR to the USAF aircraft, and provide the RCR to the civil aircraft if requested.",
+              "is_correct": true
+            },
+            {
+              "text": "Relay 'slick near the fire station' exactly as stated because preserving the pilot's words is more important than using approved terms.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the civil aircraft that RCR may never be issued outside military operations and give the USAF aircraft only the plain-language braking report.",
+              "is_correct": false
+            },
+            {
+              "text": "Drop the aircraft type and runway location to keep the braking advisory short for the inbound traffic.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The controller standardizes the term, clarifies the affected portion, includes aircraft type, and handles RCR distribution according to the aircraft involved."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "A Boeing 757 reports poor braking on the first half of the runway. Build the braking-action advisory.",
+          "target_phrase": "BRAKING ACTION POOR FIRST HALF OF RUNWAY REPORTED BY A BOEING SEVEN FIFTY-SEVEN"
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-3-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What must a controller do with information about a condition that affects the safe use of a landing area?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller relays the information, records it verbatim with the source, confirms unauthorized reports when possible, and issues a NOTAM if management cannot be reached.",
+          "choices": [
+            {
+              "text": "Relay it to airport management or military operations, record it verbatim with the submitter's name, confirm unauthorized reports, and issue a NOTAM if management cannot be reached.",
+              "is_correct": true
+            },
+            {
+              "text": "Close the runway personally and wait for airport management to document the condition later.",
+              "is_correct": false
+            },
+            {
+              "text": "Advise only arriving aircraft because departures will learn of the condition during taxi.",
+              "is_correct": false
+            },
+            {
+              "text": "Report it only if the condition was first observed by a controller rather than an airport employee.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Only airport management or the military operations office can close a runway.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The note states that legally only airport management or military operations can close a runway."
+        },
+        {
+          "question_text": "You cannot reach airport management about an unsafe runway condition. What action is required?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "If management or the operator cannot be contacted, the condition is publicized by NOTAM and management is informed as soon as practicable.",
+          "choices": [
+            {
+              "text": "Issue a NOTAM publicizing the unsafe condition and inform management or the operator as soon as practicable.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until management responds before taking any public action on the condition.",
+              "is_correct": false
+            },
+            {
+              "text": "Create a temporary runway closure and cancel all traffic without further coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue an unofficial runway condition code based on the report so ATIS can be updated immediately.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How is a runway condition code report furnished on ATIS?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The ATIS uses the runway number, the three runway-segment condition codes, and the time of the report.",
+          "choices": [
+            {
+              "text": "State the runway number, then the three segment codes, and include the time of the report.",
+              "is_correct": true
+            },
+            {
+              "text": "State only the lowest of the three codes because the poorest section controls the entire runway.",
+              "is_correct": false
+            },
+            {
+              "text": "State the code and runway length remaining, but not the report time because ATIS is continuously updated.",
+              "is_correct": false
+            },
+            {
+              "text": "State the runway number and whether braking action is acceptable, but not the segment values.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When a RwyCC update is received, it must be issued verbally to aircraft until the ATIS is updated.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The update is verbally issued until the ATIS can be brought up to date."
+        },
+        {
+          "question_text": "If no RwyCC is available, what should be issued to aircraft about runway surface condition?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Without RwyCC, only factual runway-surface information reported by the airport operator or pilots is issued.",
+          "choices": [
+            {
+              "text": "Only factual information describing the accumulation of precipitation on the runway surface as reported.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller's best estimate of what the RwyCC would probably be.",
+              "is_correct": false
+            },
+            {
+              "text": "A generalized braking-action category without the source of the report.",
+              "is_correct": false
+            },
+            {
+              "text": "No runway-condition information at all until an official code is provided.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-3-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What is the first thing you tell a pilot who requests takeoff, landing, or touch-and-go on a closed or unsafe runway?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The first required response is to inform the pilot that the runway is closed or unsafe.",
+          "choices": [
+            {
+              "text": "That the runway is closed or unsafe.",
+              "is_correct": true
+            },
+            {
+              "text": "That the pilot may use the runway if willing to accept all risk.",
+              "is_correct": false
+            },
+            {
+              "text": "That the request will be approved after the NOTAM is read back verbatim.",
+              "is_correct": false
+            },
+            {
+              "text": "That airport management must talk directly to the pilot before ATC may respond.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the pilot persists after being told the runway is closed or unsafe, what must you do next?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Persistence triggers quoting the applicable NOTAM and informing the pilot that a clearance cannot be issued.",
+          "choices": [
+            {
+              "text": "Quote the applicable NOTAM and say that a clearance cannot be issued.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the clearance with a caution that the runway is unofficially closed.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer the aircraft to the airport manager because ATC may not discuss a closed runway further.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to land at own risk and omit the NOTAM because the pilot already knows the runway is closed.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a pilot accepts the risk of using a closed runway, you may issue the takeoff or landing clearance.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": false,
+          "explanation": "Even if the pilot insists, the controller does not issue a clearance. The controller may only state that the operation will be at the pilot's own risk if it will not adversely affect other traffic."
+        },
+        {
+          "question_text": "A pilot still insists on using the closed runway, and the intended operation would not adversely affect other traffic. What should you tell the pilot?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "In that narrow case, the controller informs the pilot that the operation will be at the pilot's own risk.",
+          "choices": [
+            {
+              "text": "That the operation will be at the pilot's own risk.",
+              "is_correct": true
+            },
+            {
+              "text": "That the runway is now available because no other traffic is affected.",
+              "is_correct": false
+            },
+            {
+              "text": "That the pilot must obtain a supervisory approval code before proceeding.",
+              "is_correct": false
+            },
+            {
+              "text": "That the controller may now cancel the NOTAM and issue a normal clearance.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may the ILS associated with a closed runway still be used for approaches?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The closed-runway ILS is generally avoided except for the side-step case or when not using it would hurt airport efficiency.",
+          "choices": [
+            {
+              "text": "Only when the side-step exception applies or when not using the ILS would adversely affect airport efficiency.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time the weather is below VFR minimums and the pilot wants the precision guidance.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the closed runway remains physically unobstructed.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when both parallel runways are closed and the pilot requests practice approaches.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A closed-runway ILS may routinely be used for approaches whenever parallel runways are available.",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": false,
+          "explanation": "The normal rule is not to use the ILS associated with the closed runway except for the listed exceptions."
+        }
+      ]
+    },
+    "3-3-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When should airport condition information be issued to pilots?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The information is issued in time for it to be useful to the pilot for safe operation.",
+          "choices": [
+            {
+              "text": "In time for it to be useful to the pilot for safe operation.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the pilot requests it.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft has begun taxiing or final approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the condition requires a NOTAM.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which condition is specifically listed as part of timely airport condition information when appropriate?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph lists items such as construction, rough areas, braking issues, snowdrifts, parked aircraft, lighting irregularities, volcanic ash, and other pertinent conditions.",
+          "choices": [
+            {
+              "text": "Parked aircraft on the movement area.",
+              "is_correct": true
+            },
+            {
+              "text": "Expected catering-truck arrival at the terminal ramp.",
+              "is_correct": false
+            },
+            {
+              "text": "Normal shift-change timing for line personnel.",
+              "is_correct": false
+            },
+            {
+              "text": "The airport manager's office hours for public inquiries.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If volcanic ash is on an airport surface area and the condition is known, the advisory should include whether the ash is wet or dry.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The paragraph specifically calls for wet-or-dry characterization when known."
+        },
+        {
+          "question_text": "Which airport-lighting issue belongs in a timely condition advisory when appropriate?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Irregular operation of part or all of the airport lighting system is one of the listed categories.",
+          "choices": [
+            {
+              "text": "Irregular operation of part or all of the airport lighting system.",
+              "is_correct": true
+            },
+            {
+              "text": "A scheduled lighting inspection later in the week.",
+              "is_correct": false
+            },
+            {
+              "text": "A request to reorder spare bulbs for the maintenance shop.",
+              "is_correct": false
+            },
+            {
+              "text": "A report that terminal building lights are bright enough to see the ramp.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Volcanic ash and braking-condition information may be delayed until after landing because pilots will already see the surface condition on short final.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": false,
+          "explanation": "The rule is to issue the information in time for it to be useful, not after the aircraft has lost decision-making value from it."
+        }
+      ]
+    },
+    "3-3-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What should you do if a pilot reports braking action in terms other than the approved vocabulary?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Controllers ask the pilot to categorize braking action using the approved terms.",
+          "choices": [
+            {
+              "text": "Ask the pilot to categorize the report using the approved braking-action terms.",
+              "is_correct": true
+            },
+            {
+              "text": "Convert the report to the closest term yourself and issue it without asking the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "Suppress the report because only exact approved terminology may be accepted.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the report exactly as spoken and explain to each pilot that the term is unofficial.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A braking-action advisory must include the type of aircraft from which the report was received.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Aircraft type is required as part of the advisory."
+        },
+        {
+          "question_text": "If braking action affects only part of the runway, how should the advisory normally describe the location?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Use runway portions or other wording easily understood by pilots rather than extraneous landmarks.",
+          "choices": [
+            {
+              "text": "Use runway portions such as first half, last half, or beyond the intersection.",
+              "is_correct": true
+            },
+            {
+              "text": "Use landmarks away from the runway because they are easier for controllers to remember.",
+              "is_correct": false
+            },
+            {
+              "text": "Avoid location detail entirely and issue only the worst braking term reported.",
+              "is_correct": false
+            },
+            {
+              "text": "Use taxiway names even if the affected area is not near that taxiway.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "It is preferable to describe partial-runway braking action with landmarks such as 'opposite the fire station' because they are more precise than runway portions.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": false,
+          "explanation": "Landmarks extraneous to the runway are normally avoided because pilots may not be able to identify them quickly, especially in low visibility or at night."
+        },
+        {
+          "question_text": "Who must receive runway surface condition and or RCR information if it is provided?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Runway surface condition and or RCR is issued to all USAF and ANG aircraft. Other aircraft receive the RCR on pilot request.",
+          "choices": [
+            {
+              "text": "All USAF and ANG aircraft, with the RCR also issued to other aircraft upon pilot request.",
+              "is_correct": true
+            },
+            {
+              "text": "Only USAF and ANG aircraft, never civilian aircraft under any circumstance.",
+              "is_correct": false
+            },
+            {
+              "text": "Only aircraft that have already reported poor or nil braking on the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "All arriving aircraft automatically, but never departures.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which of these is an approved braking-action term?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Approved terms are good, good to medium, medium, medium to poor, poor, and nil.",
+          "choices": [
+            {
+              "text": "Medium to poor.",
+              "is_correct": true
+            },
+            {
+              "text": "Fair to poor.",
+              "is_correct": false
+            },
+            {
+              "text": "Marginal.",
+              "is_correct": false
+            },
+            {
+              "text": "Severe.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

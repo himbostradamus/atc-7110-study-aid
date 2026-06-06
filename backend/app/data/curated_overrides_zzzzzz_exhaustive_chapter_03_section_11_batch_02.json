@@ -1,0 +1,857 @@
+{
+  "activities": {
+    "3-11-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may an arriving helicopter or powered-lift aircraft land behind a preceding arriving helicopter or powered-lift aircraft?",
+          "choices": [
+            {
+              "text": "When the preceding arrival has come to a stop or has taxied off the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as the preceding arrival touches down.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the preceding arrival has left the airport traffic area.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the arriving pilot reports the landing area in sight.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Behind a preceding arrival, the following helicopter or powered-lift aircraft may land once that arrival has come to a stop or taxied off the landing area."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Which condition allows landing behind a preceding departure?",
+          "question_text": "Which condition is sufficient?",
+          "choices": [
+            {
+              "text": "The preceding departing helicopter has left the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "The preceding departing helicopter is airborne but still over the landing area.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding departing helicopter has crossed midfield.",
+              "is_correct": false
+            },
+            {
+              "text": "The preceding departing helicopter has accepted a turn after departure.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Behind a preceding departure, the following helicopter or powered-lift aircraft waits until that departure has left the landing area."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this arrival-separation rule correct?",
+          "question_text": "If the preceding arriving helicopter has come to a stop on the landing area, the next arriving helicopter may land.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For a following arrival, a preceding arrival either coming to a stop or taxiing off the landing area satisfies the rule."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this arrival-separation scope statement match the rule?",
+          "question_text": "This rule applies to separation of an arriving helicopter or powered-lift aircraft from other helicopters or powered-lift aircraft.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 3-11-4 is specifically about arrival separation for helicopters and powered-lift aircraft."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this landing-release rule correct?",
+          "question_text": "If the preceding departure has lifted off but has not yet left the landing area, the next arriving helicopter may land.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ],
+          "explanation": "A preceding departure must leave the landing area before the following arrival may land."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An arriving helicopter is on short final. The preceding helicopter departed moments ago and is airborne but still over the landing area. Another controller says airborne is enough because the departure is clearly climbing away.",
+          "para_context": "A following helicopter or powered-lift arrival must wait until a preceding arrival has stopped or taxied off the landing area, or until a preceding departure has left the landing area.",
+          "choices": [
+            {
+              "text": "Delay the landing until the preceding departure has left the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "Clear the landing because airborne status alone satisfies arrival separation.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear the landing as soon as the preceding departure starts its turn.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear the landing if the arriving pilot says visual separation can be maintained.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Arrival separation behind a preceding departure requires that the departure leave the landing area, not just become airborne."
+        }
+      ]
+    },
+    "3-11-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What minimum spacing permits simultaneous helicopter or powered-lift landings or takeoffs if the courses to be flown do not conflict?",
+          "choices": [
+            {
+              "text": "At least 200 feet between the landing or takeoff points.",
+              "is_correct": true
+            },
+            {
+              "text": "At least 100 feet between the landing or takeoff points.",
+              "is_correct": false
+            },
+            {
+              "text": "At least 300 feet between the landing or takeoff points.",
+              "is_correct": false
+            },
+            {
+              "text": "Any spacing is acceptable if both aircraft are helicopters.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Simultaneous helicopter or powered-lift landings or takeoffs require at least 200 feet between the points and nonconflicting courses."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this simultaneous-operations minimum correct?",
+          "question_text": "If the courses to be flown do not conflict, simultaneous helicopter or powered-lift landings or takeoffs require at least 200 feet between the landing or takeoff points.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The required minimum distance is at least 200 feet, and the courses also must not conflict."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this simultaneous-operations rule correct?",
+          "question_text": "If the landing or takeoff points are at least 200 feet apart and the courses to be flown do not conflict, simultaneous helicopter or powered-lift operations may be authorized.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Both conditions must be met: at least 200 feet between points and nonconflicting courses."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Use surface markings to determine the 200-foot minimum, or instruct a helicopter or powered-lift aircraft to remain at least 200 feet from another helicopter or powered-lift aircraft.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph allows either using surface markings to determine the spacing or instructing the aircraft to remain at least 200 feet away."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this simultaneous-operations rule correct?",
+          "question_text": "You may authorize simultaneous helicopter or powered-lift operations solely on the basis of 200 feet between the points, even if the courses to be flown will conflict.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ],
+          "explanation": "Spacing alone is not enough. The courses to be flown also must not conflict."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Two helicopters want simultaneous departures from pads that are 220 feet apart. Their planned courses would cross immediately after liftoff. Another controller says the spacing alone is enough because both aircraft are helicopters and the 200-foot minimum is met.",
+          "para_context": "Simultaneous helicopter or powered-lift landings or takeoffs may be authorized only if the points are at least 200 feet apart and the courses to be flown do not conflict.",
+          "choices": [
+            {
+              "text": "Do not authorize simultaneous departures until the courses are nonconflicting or the operation is otherwise separated.",
+              "is_correct": true
+            },
+            {
+              "text": "Authorize simultaneous departures because 220 feet automatically satisfies the rule regardless of course conflict.",
+              "is_correct": false
+            },
+            {
+              "text": "Authorize simultaneous departures because helicopters are exempt from the nonconflicting-course requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "Authorize them only if each pilot agrees to stay below 20 knots in ground effect.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Both the distance and the nonconflicting-course condition must be satisfied before simultaneous operations may be authorized."
+        }
+      ]
+    },
+    "3-11-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When should you use 'landing at (location) will be at your own risk' instead of a normal landing clearance?",
+          "choices": [
+            {
+              "text": "When landing is requested to a non-movement area, an unauthorized area, or off the airport and the operation appears reasonable.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the helicopter is landing to an active runway from a straight-in approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the helicopter is unable to accept a runway hold-short instruction.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the tailwind exceeds 5 knots.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Reasonable landings to non-movement, unauthorized, or off-airport locations use own-risk landing phraseology instead of a normal landing clearance."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this landing rule correct?",
+          "question_text": "Unless agreed to by the pilot, do not issue a downwind landing if the tailwind exceeds 5 knots.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph prohibits downwind landings with tailwind greater than 5 knots unless the pilot agrees."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this landing-clearance rule correct?",
+          "question_text": "If a normal landing clearance can be issued instead of extended hover-taxi or air-taxi operations, you should issue the landing clearance.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Whenever possible, the landing clearance should be issued in lieu of extended hover-taxi or air-taxi operations."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which transmission fits the normal helicopter landing clearance?",
+          "question_text": "Which transmission is correct?",
+          "choices": [
+            {
+              "text": "MAKE APPROACH STRAIGHT-IN TO THE HELIPAD REMAIN SOUTH OF RUNWAY TWO SEVEN CLEARED TO LAND.",
+              "is_correct": true
+            },
+            {
+              "text": "LANDING AT THE HELIPAD WILL BE AT YOUR OWN RISK CLEARED TO LAND.",
+              "is_correct": false
+            },
+            {
+              "text": "MAKE APPROACH STRAIGHT-IN TO THE HELIPAD CLEARED FOR TAKEOFF.",
+              "is_correct": false
+            },
+            {
+              "text": "AIR-TAXI TO THE HELIPAD REMAIN SOUTH OF RUNWAY TWO SEVEN CLEARED TO LAND.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A normal landing clearance may include the approach type, destination, remain or hold-short instruction, caution, and CLEARED TO LAND."
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "One word in this phraseology is incorrect. Tap it.",
+          "original_phrase": "LANDING AT NORTH RAMP WILL BE AT YOUR OWN RISK. USE CAUTION.",
+          "display_text": "LANDING AT NORTH RAMP WILL BE AT YOUR OWN RISK USE WARNING",
+          "tokens": [
+            "LANDING",
+            "AT",
+            "NORTH",
+            "RAMP",
+            "WILL",
+            "BE",
+            "AT",
+            "YOUR",
+            "OWN",
+            "RISK",
+            "USE",
+            "WARNING"
+          ],
+          "error_index": 11,
+          "correct_token": "CAUTION",
+          "explanation": "The approved own-risk landing phrase ends with USE CAUTION, not USE WARNING."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "A helicopter should make a right-turn approach to Taxiway Bravo, hold short of Runway 18, and is cleared to land. Build the transmission.",
+          "target_phrase": "MAKE APPROACH RIGHT TURN TO TAXIWAY BRAVO HOLD SHORT OF RUNWAY ONE EIGHT CLEARED TO LAND"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A helicopter requests landing from the west to a grass area off the airport. The tailwind on that requested downwind landing direction is 6 knots, the operation appears reasonable, and another controller says you must deny it because any tailwind above 5 knots automatically prohibits the landing.",
+          "para_context": "Reasonable landings to non-movement, unauthorized, or off-airport locations use own-risk phraseology. Downwind landings with tailwind greater than 5 knots require pilot agreement, and a pilot request to land at a given point from a given direction constitutes agreement.",
+          "choices": [
+            {
+              "text": "If the off-airport landing appears reasonable, use own-risk landing phraseology; the pilot's requested point and direction constitute the agreement needed for the downwind landing.",
+              "is_correct": true
+            },
+            {
+              "text": "Deny it automatically because any tailwind greater than 5 knots prohibits helicopter downwind landings under all circumstances.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a normal landing clearance to the grass area because helicopter requests eliminate the need for own-risk phraseology.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve it only if the helicopter first accepts an extended hover-taxi instead of a landing clearance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A reasonable off-airport landing uses own-risk phraseology, and the pilot's request from a given point and direction supplies the agreement needed for a downwind landing."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-11-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When may an arriving helicopter or powered-lift aircraft land behind a preceding arrival?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Behind a preceding arrival, the following arrival may land once the preceding arrival has come to a stop or taxied off the landing area.",
+          "choices": [
+            {
+              "text": "When the preceding arrival has come to a stop or taxied off the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as the preceding arrival touches down.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the preceding arrival has left the pattern.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the landing area is visible to both pilots.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may an arriving helicopter or powered-lift aircraft land behind a preceding departure?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Behind a preceding departure, the following arrival waits until that departure has left the landing area.",
+          "choices": [
+            {
+              "text": "When the preceding departure has left the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as the preceding departure becomes airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "When the preceding departure begins a turn.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the preceding departure changes frequency.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Is a stop on the landing area enough to satisfy the preceding-arrival condition for a following helicopter arrival?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Yes. For the preceding arrival condition, either coming to a stop or taxiing off the landing area is sufficient.",
+          "choices": [
+            {
+              "text": "Yes.",
+              "is_correct": true
+            },
+            {
+              "text": "No, the arrival must taxi off every time.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the landing was a straight-in approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the departure path is clear.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What kind of operation does paragraph 3-11-4 govern?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It governs arrival separation for helicopters and powered-lift aircraft.",
+          "choices": [
+            {
+              "text": "Arrival separation for helicopters or powered-lift aircraft from other helicopters or powered-lift aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Only simultaneous takeoff spacing.",
+              "is_correct": false
+            },
+            {
+              "text": "Only off-airport landing clearances.",
+              "is_correct": false
+            },
+            {
+              "text": "Fixed-wing go-around separation only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the preceding departure is still over the landing area, may the next arriving helicopter land?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "No. The preceding departure must leave the landing area before the next arrival may land.",
+          "choices": [
+            {
+              "text": "No.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, once it is airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the arrival is a helicopter.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the departing pilot reports turning crosswind.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-11-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What minimum spacing is required between helicopter or powered-lift landing or takeoff points for simultaneous operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The minimum spacing is at least 200 feet.",
+          "choices": [
+            {
+              "text": "At least 200 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "At least 100 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "At least 500 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "No specific minimum is stated.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What second condition must be met in addition to the 200-foot minimum before simultaneous helicopter or powered-lift operations may be authorized?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The courses to be flown must not conflict.",
+          "choices": [
+            {
+              "text": "The courses to be flown must not conflict.",
+              "is_correct": true
+            },
+            {
+              "text": "Both aircraft must depart in trail.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilots must both request air-taxi after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft must be on different radio frequencies.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What may be used to determine the 200-foot minimum?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph says to refer to surface markings to determine the 200-foot minimum.",
+          "choices": [
+            {
+              "text": "Surface markings.",
+              "is_correct": true
+            },
+            {
+              "text": "Only pilot estimates.",
+              "is_correct": false
+            },
+            {
+              "text": "Only runway centerline lights.",
+              "is_correct": false
+            },
+            {
+              "text": "Only airport diagrams carried by the pilot.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If surface markings are not being used, what spacing instruction may be issued instead?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "You may instruct a helicopter or powered-lift aircraft to remain at least 200 feet from another helicopter or powered-lift aircraft.",
+          "choices": [
+            {
+              "text": "Remain at least 200 feet from the other helicopter or powered-lift aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Remain below 100 feet AGL.",
+              "is_correct": false
+            },
+            {
+              "text": "Maintain visual separation.",
+              "is_correct": false
+            },
+            {
+              "text": "Report airborne prior to crossing midfield.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the points are more than 200 feet apart but the courses to be flown would conflict, may simultaneous operations be authorized?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "No. The distance and the nonconflicting-course requirement must both be met.",
+          "choices": [
+            {
+              "text": "No.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because distance alone is enough.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if both aircraft are helicopters.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if both pilots agree.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-11-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Whenever possible, what should be issued instead of extended hover-taxi or air-taxi operations on arrival?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph says to issue a landing clearance in lieu of extended hover-taxi or air-taxi whenever possible.",
+          "choices": [
+            {
+              "text": "A landing clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "A takeoff clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "An air-taxi route only.",
+              "is_correct": false
+            },
+            {
+              "text": "A go-around instruction.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which phraseology is used for a reasonable landing to a non-movement, unauthorized, or off-airport location?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "Those landings use LANDING AT (location) WILL BE AT YOUR OWN RISK, with additional instructions and USE CAUTION if needed.",
+          "choices": [
+            {
+              "text": "Landing at (location) will be at your own risk.",
+              "is_correct": true
+            },
+            {
+              "text": "Cleared to land at (location).",
+              "is_correct": false
+            },
+            {
+              "text": "Air-taxi to (location) as requested.",
+              "is_correct": false
+            },
+            {
+              "text": "Line up and wait at (location).",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which words end the normal helicopter or powered-lift landing clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The normal landing phrase ends with CLEARED TO LAND.",
+          "choices": [
+            {
+              "text": "Cleared to land.",
+              "is_correct": true
+            },
+            {
+              "text": "Use caution.",
+              "is_correct": false
+            },
+            {
+              "text": "At your own risk.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared for takeoff.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may a downwind landing be issued if the tailwind exceeds 5 knots?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A downwind landing with tailwind greater than 5 knots requires pilot agreement.",
+          "choices": [
+            {
+              "text": "Only when the pilot agrees.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time the operation appears reasonable.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the landing is to an active runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the helicopter remains below 100 feet AGL.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What constitutes agreement to the downwind landing for this rule?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "A pilot request to land at a given point from a given direction constitutes agreement.",
+          "choices": [
+            {
+              "text": "The pilot requests landing at a given point from a given direction.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller reads back the wind.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot accepts a taxi route after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "The helicopter enters the airport traffic area.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which additional instruction may be included in the normal helicopter landing clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The landing clearance may include HOLD SHORT OF, REMAIN, and CAUTION instructions as needed.",
+          "choices": [
+            {
+              "text": "Hold short of Runway 18.",
+              "is_correct": true
+            },
+            {
+              "text": "Climb and maintain 2,000.",
+              "is_correct": false
+            },
+            {
+              "text": "Proceed direct to the VORTAC.",
+              "is_correct": false
+            },
+            {
+              "text": "Squawk emergency.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

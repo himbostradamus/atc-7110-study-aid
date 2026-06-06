@@ -1,0 +1,318 @@
+{
+  "questions": {
+    "3-4-1": {
+      "items": [
+        {
+          "question_text": "Complete: Whenever you become aware that an emergency _____ or will occur, take action to provide for the operation of all appropriate airport lighting aids as required.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The trigger covers both emergencies already in progress ('has' occurred) and those anticipated ('will' occur). A formal declaration is not required.",
+          "choices": [{"text": "has", "is_correct": true}]
+        },
+        {
+          "question_text": "A controller overhears a pilot report engine trouble but no emergency has been declared. The controller anticipates a possible emergency landing. Under 3-4-1, is action required?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The trigger is awareness that an emergency 'will occur' — formal declaration is not the threshold. The controller should act on the reasonable anticipation of an emergency, not wait for a formal declaration.",
+          "choices": [
+            {"text": "No — action is required only after a formal emergency declaration or MAYDAY call.", "is_correct": false},
+            {"text": "No — the rule applies only to emergencies currently in progress, not anticipated ones.", "is_correct": false},
+            {"text": "Yes — the controller should provide for appropriate lighting aids because the trigger is awareness that an emergency will occur.", "is_correct": true},
+            {"text": "Yes — but only after coordinating with airport management for approval.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "3-4-2": {
+      "items": [
+        {
+          "question_text": "Complete: When separate on-off controls are provided, operate REIL when the associated runway lights are _____.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "REIL are operated when the associated runway lights are 'lighted.' If the runway lights are off, REIL shouldn't normally be on.",
+          "choices": [{"text": "lighted", "is_correct": true}]
+        },
+        {
+          "question_text": "When should REIL be turned off after an arriving aircraft has landed?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "REIL must be turned off after the aircraft has landed and cleared the runway, not while it's still occupying the runway or after it reaches the gate.",
+          "choices": [
+            {"text": "Immediately upon the aircraft touching down.", "is_correct": false},
+            {"text": "After the aircraft has taxied to the gate.", "is_correct": false},
+            {"text": "After the aircraft has landed and cleared the runway.", "is_correct": true},
+            {"text": "REIL stay on continuously as long as the runway is in use.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "3-4-3": {
+      "items": [
+        {
+          "question_text": "Under 3-4-3, VASI systems with remote on-off switching must be operated when they serve the runway _____.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "VASI must be operated when they serve the 'runway in use' and intensities are controlled per the applicable table.",
+          "choices": [{"text": "in use", "is_correct": true}]
+        }
+      ]
+    },
+    "3-4-4": {
+      "items": [
+        {
+          "question_text": "PAPI systems with remote on-off switching must be operated when they serve the runway in use and intensities are controlled in accordance with which table?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "PAPI intensity settings are controlled per TBL 3-4-4. VASI uses TBL 3-4-2 and TBL 3-4-3, but PAPI has its own dedicated table.",
+          "choices": [
+            {"text": "TBL 3-4-2.", "is_correct": false},
+            {"text": "TBL 3-4-4.", "is_correct": true},
+            {"text": "TBL 3-4-3.", "is_correct": false},
+            {"text": "TBL 3-4-5.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "3-4-5": {
+      "items": [
+        {
+          "question_text": "Under 3-4-5, approach lights must be operated between sunset and sunrise when they serve the _____ runway.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The first condition is that they serve the 'landing' runway. They are also operated when serving a runway with an approach being made.",
+          "choices": [{"text": "landing", "is_correct": true}]
+        }
+      ]
+    },
+    "3-4-6": {
+      "items": [
+        {
+          "question_text": "What table controls ALS intensity settings under 3-4-6?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "ALS intensity settings are controlled per TBL 3-4-5.",
+          "choices": [{"text": "TBL 3-4-5", "is_correct": true}]
+        }
+      ]
+    },
+    "3-4-7": {
+      "items": [
+        {
+          "question_text": "Complete: SFL are a component of the ALS and _____ be operated when the ALS is off.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note says SFL 'cannot' be operated when the ALS is off. They are a subsystem, not an independent lighting system.",
+          "choices": [{"text": "cannot", "is_correct": true}]
+        },
+        {
+          "question_text": "Under 3-4-7, when must SFL be operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "SFL must be operated when the visibility is less than 3 miles AND instrument approaches are being conducted to the runway. Both conditions must be met — it's a conjunction, not either/or.",
+          "choices": [
+            {"text": "Any time visibility is less than 3 miles, regardless of whether approaches are in progress.", "is_correct": false},
+            {"text": "Only when the visibility drops below 1 mile.", "is_correct": false},
+            {"text": "When visibility is less than 3 miles and instrument approaches are being conducted to the runway.", "is_correct": true},
+            {"text": "Only between sunset and sunrise.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "3-4-8": {
+      "items": [
+        {
+          "question_text": "MALSR/ODALS with separate on-off and intensity setting controls are operated in accordance with which tables?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The paragraph references both TBL 3-4-6 and TBL 3-4-7 for MALSR/ODALS control.",
+          "choices": [{"text": "TBL 3-4-6 and TBL 3-4-7", "is_correct": true}]
+        }
+      ]
+    },
+    "3-4-9": {
+      "items": [
+        {
+          "question_text": "Complete: When the prevailing visibility is _____ mile or less or the RVR is 4,000 feet or less, operate the ALSF-2 system as requested by the pilot or as deemed necessary.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The ALSF-2 operation threshold is visibility of 3/4 mile or less or RVR 4,000 feet or less.",
+          "choices": [{"text": "3/4", "is_correct": true}]
+        }
+      ]
+    },
+    "3-4-10": {
+      "items": [
+        {
+          "question_text": "Under 3-4-10, runway edge lights serving the runway in use must be operated between sunset and sunrise and at what other times?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Runway edge lights are also operated between sunrise and sunset when the ceiling or visibility is below basic VFR minima. This daylight extension applies whenever weather degrades below VFR thresholds.",
+          "choices": [
+            {"text": "Only between sunset and sunrise — never during daylight hours.", "is_correct": false},
+            {"text": "Whenever any aircraft is on the runway, regardless of time or weather.", "is_correct": false},
+            {"text": "Between sunrise and sunset when ceiling or visibility is below basic VFR minima.", "is_correct": true},
+            {"text": "Only when specifically requested by a pilot.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "3-4-11": {
+      "items": [
+        {
+          "question_text": "High intensity runway and associated centerline and touchdown zone lights are operated in accordance with which table?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The controlling table is TBL 3-4-8, with exceptions for facility directives, pilot requests, and controller judgment.",
+          "choices": [{"text": "TBL 3-4-8", "is_correct": true}]
+        }
+      ]
+    },
+    "3-4-12": {
+      "items": [
+        {
+          "question_text": "HIRL that control the associated MALSR are operated in accordance with which table?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "HIRL associated with MALSR use TBL 3-4-9, with exceptions for pilot requests and controller judgment.",
+          "choices": [{"text": "TBL 3-4-9", "is_correct": true}]
+        }
+      ]
+    },
+    "3-4-13": {
+      "items": [
+        {
+          "question_text": "Complete: Keep the appropriate approach controller or PAR controller informed, in advance if possible, of _____ changes that affect RVR.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "HIRL changes that affect RVR must be communicated to approach or PAR controllers in advance if possible.",
+          "choices": [{"text": "HIRL", "is_correct": true}]
+        }
+      ]
+    },
+    "3-4-14": {
+      "items": [
+        {
+          "question_text": "MIRL or MIRL which control associated MALSR are operated in accordance with which table?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "MIRL uses TBL 3-4-10.",
+          "choices": [{"text": "TBL 3-4-10", "is_correct": true}]
+        }
+      ]
+    },
+    "3-4-15": {
+      "items": [
+        {
+          "question_text": "Under 3-4-15, when must high speed turnoff lights be operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "High speed turnoff lights are operated whenever the associated runway lights are used for arriving aircraft. They stay on until the aircraft enters a taxiway or passes the last turnoff — not just at night or on request.",
+          "choices": [
+            {"text": "Only during nighttime operations when visibility is below 3 miles.", "is_correct": false},
+            {"text": "Only when specifically requested by an arriving pilot.", "is_correct": false},
+            {"text": "Whenever the associated runway lights are used for arriving aircraft, until the aircraft enters a taxiway or passes the last turnoff.", "is_correct": true},
+            {"text": "Only for departures, because turnoff lights guide aircraft exiting onto taxiways.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "3-4-16": {
+      "items": [
+        {
+          "question_text": "Taxiway lights are operated in accordance with which tables under 3-4-16?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Three alternative tables control taxiway lights: TBL 3-4-11, TBL 3-4-12, or TBL 3-4-13.",
+          "choices": [{"text": "TBL 3-4-11, TBL 3-4-12, or TBL 3-4-13", "is_correct": true}]
+        }
+      ]
+    },
+    "3-4-17": {
+      "items": [
+        {
+          "question_text": "Complete: If controls are provided, turn obstruction lights on between _____ and sunrise.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Obstruction lights are operated between 'sunset' and sunrise when controls are provided.",
+          "choices": [{"text": "sunset", "is_correct": true}]
+        }
+      ]
+    },
+    "3-4-18": {
+      "items": [
+        {
+          "question_text": "Under 3-4-18, the rotating beacon must be turned on between sunrise and sunset when reported ceiling or visibility is below which threshold?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Between sunrise and sunset, the rotating beacon is operated when ceiling or visibility is below basic VFR minima. Between sunset and sunrise, it operates regardless of conditions.",
+          "choices": [
+            {"text": "Below CAT I ILS minimums.", "is_correct": false},
+            {"text": "Below basic VFR minima.", "is_correct": true},
+            {"text": "Below special VFR minima.", "is_correct": false},
+            {"text": "Below 1,000 feet ceiling or 3 miles visibility.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "3-4-19": {
+      "items": [
+        {
+          "question_text": "What are Runway Status Lights (RWSL) designed to do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "RWSL are a fully automated system that provides direct visual alerts to pilots when it is unsafe to enter, cross, or takeoff from a runway. Controllers do not directly operate them — the system acts autonomously based on surveillance data.",
+          "choices": [
+            {"text": "Serve as backup lighting when the primary runway lighting system fails.", "is_correct": false},
+            {"text": "Replace runway edge lights with a higher-intensity system for all operations.", "is_correct": false},
+            {"text": "Provide automated visual alerts to pilots indicating runway occupancy and approach conflicts.", "is_correct": true},
+            {"text": "Provide sequenced flashing guidance for departing aircraft only.", "is_correct": false}
+          ]
+        }
+      ]
+    }
+  }
+}

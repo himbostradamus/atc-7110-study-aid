@@ -1,0 +1,1943 @@
+{
+  "activities": {
+    "4-6-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "What extra route information must be issued when any part of the route beyond the clearance limit differs from the last routing cleared?",
+          "choices": [
+            {
+              "text": "The route the pilot can expect beyond the clearance limit.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the name of the delay fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the EFC time.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the destination airport.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If the route beyond the clearance limit differs from the last routing cleared, the route to expect beyond the limit must be issued."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this holding rule correct?",
+          "question_text": "If no delay is expected, you may eliminate holding instructions after informing the pilot that no delay is expected.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Holding instructions may be eliminated when the pilot is informed that no delay is expected."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this timing rule correct?",
+          "question_text": "When delay is expected, you must issue the clearance-limit, holding, and EFC items at least 5 minutes before the aircraft reaches the clearance limit, or immediately if it is already less than 5 minutes away.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those items are issued at least 5 minutes before the fix when possible, or immediately if the aircraft is already closer than that."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which omission is allowed here?",
+          "question_text": "When a charted hold is already part of the assigned route, what still has to be said?",
+          "choices": [
+            {
+              "text": "The charted holding direction and \"as published.\"",
+              "is_correct": true
+            },
+            {
+              "text": "Only the EFC time.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing may be omitted.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the turn direction.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If a charted pattern is already part of the assigned procedure or route, all holding instructions may be omitted except the charted direction and the statement \"as published.\""
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "No delay is expected at Wayne. Build the holding clearance.",
+          "target_phrase": "CLEARED TO WAYNE NO DELAY EXPECTED",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"CLEARED TO WAYNE, NO DELAY EXPECTED.\"",
+          "word_bank": [
+            "CLEARED",
+            "DELAY",
+            "EXPECTED",
+            "NO",
+            "TO",
+            "WAYNE"
+          ],
+          "correct_sequence": [
+            0,
+            4,
+            5,
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "You realize an aircraft will have to hold, but it is only 3 minutes from the clearance limit.",
+          "para_context": "When delay is expected, the clearance-limit, holding, and EFC items are normally issued at least 5 minutes before the fix. If the traffic situation requires holding an aircraft that is less than 5 minutes from the fix, issue those items immediately.",
+          "choices": [
+            {
+              "text": "Issue the required holding items immediately.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the aircraft reaches the fix, then issue the hold.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue only the EFC time and hold the rest for later.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to expect instructions from the next facility instead.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If the aircraft is already less than 5 minutes from the fix, the holding items are issued immediately."
+        }
+      ]
+    },
+    "4-6-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "If no delay is expected, when should clearance beyond the clearance limit be issued?",
+          "choices": [
+            {
+              "text": "As soon as possible and, whenever possible, at least 5 minutes before the aircraft reaches the fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft reports reaching the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly 1 minute before the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot requests further clearance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the stated timing for onward clearance when no delay is expected."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which item belongs in this onward clearance?",
+          "question_text": "Which item is part of a clearance beyond a clearance limit?",
+          "choices": [
+            {
+              "text": "A new clearance limit or approach clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "The reason for every prior delay.",
+              "is_correct": false
+            },
+            {
+              "text": "A mandatory EFC time in every case.",
+              "is_correct": false
+            },
+            {
+              "text": "A hold-short instruction for the destination runway.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A clearance beyond the limit includes the new limit or approach clearance, route of flight, and assigned altitude if different."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this route phrase rule correct?",
+          "question_text": "You may use the phrase \"via last routing cleared\" only when the most recently issued routing to the new clearance limit remains valid and doing so reduces verbiage.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That phrase is limited to cases where the prior routing is still valid and shorter wording is appropriate."
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "One word in this phraseology is incorrect. Tap it.",
+          "original_phrase": "VIA LAST ROUTING CLEARED",
+          "display_text": "VIA LAST HEADING CLEARED",
+          "tokens": [
+            "VIA",
+            "LAST",
+            "HEADING",
+            "CLEARED"
+          ],
+          "error_index": 2,
+          "correct_token": "ROUTING",
+          "explanation": "The approved reduced-verbiage phrase is \"via last routing cleared.\""
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "No delay is expected, the aircraft's previously assigned routing remains valid to the new clearance limit, and you want to keep the transmission short.",
+          "para_context": "When issuing a clearance beyond a clearance limit, you may describe the route with complete details or use the phrase \"via last routing cleared\" only when the most recently issued routing to the new clearance limit remains valid and verbiage will be reduced.",
+          "choices": [
+            {
+              "text": "Issue the onward clearance using \"via last routing cleared.\"",
+              "is_correct": true
+            },
+            {
+              "text": "Omit the route entirely because no delay is expected.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue only an EFC time.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to enter a standard hold by default.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is exactly the case where \"via last routing cleared\" may be used."
+        }
+      ]
+    },
+    "4-6-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What should you do as soon as possible when you delay or expect to delay aircraft?",
+          "choices": [
+            {
+              "text": "Advise your supervisor or flow controller.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the delay reaches 30 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "Advise only the destination tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Do nothing unless the pilot asks.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Supervisors or flow controllers should be advised as soon as possible when delays are expected."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this delay rule correct?",
+          "question_text": "If arrival delays reach or are anticipated to reach 30 minutes, the responsible center must issue total delay information as soon as possible after the aircraft enters the center's area.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For en route operations, the responsible center must issue total delay information as soon as possible after the aircraft enters its area."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this ATIS exception correct?",
+          "question_text": "Unless a pilot requests delay information, the total-delay advisories may be omitted when that information is available to pilots via ATIS.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The delay-information actions may be omitted when ATIS already provides the total delay and the pilot has not asked for it."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which facility has this duty?",
+          "question_text": "In tower en route control service, who issues the 30-minute total delay advisory?",
+          "choices": [
+            {
+              "text": "The approach control facility containing the destination airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the destination tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the departure center.",
+              "is_correct": false
+            },
+            {
+              "text": "Any adjacent facility chosen by the pilot.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For tower en route control service, the approach control facility containing the destination airport issues total delay information."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "Memphis has 30-minute arrival delays. Build the delay advisory.",
+          "target_phrase": "MEMPHIS ARRIVAL DELAYS THREE ZERO MINUTES",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"MEMPHIS ARRIVAL DELAYS THREE ZERO MINUTES.\"",
+          "word_bank": [
+            "ARRIVAL",
+            "DELAYS",
+            "MEMPHIS",
+            "MINUTES",
+            "THREE",
+            "ZERO"
+          ],
+          "correct_sequence": [
+            2,
+            0,
+            1,
+            4,
+            5,
+            3
+          ]
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Arrival delays at your destination are expected to reach 35 minutes, and the aircraft has just entered your center's area.",
+          "para_context": "When arrival delays reach or are anticipated to reach 30 minutes, the responsible center must issue total delay information as soon as possible after the aircraft enters the center's area, and whenever possible the first center controller to communicate with the aircraft should issue it.",
+          "choices": [
+            {
+              "text": "Issue total delay information as soon as possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the aircraft reaches the approach control boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "Withhold the delay unless the pilot asks first.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue only a holding clearance without total delay information.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Once the 30-minute threshold is reached or anticipated, total delay information should be issued as soon as possible."
+        }
+      ]
+    },
+    "4-6-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which item is part of complete holding instructions?",
+          "choices": [
+            {
+              "text": "The direction of holding from the fix or waypoint.",
+              "is_correct": true
+            },
+            {
+              "text": "The airport's ATIS code.",
+              "is_correct": false
+            },
+            {
+              "text": "The destination gate assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "A reason for every prior vector.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Direction from the fix, the fix itself, and the holding course or route are part of the required holding instructions."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this leg-length rule correct?",
+          "question_text": "If DME or RNAV is used, leg length is specified in miles. If the pilot requests it or you consider it necessary, leg length may be specified in minutes.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the rule for mileage and minute leg assignments."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "When must turn direction be stated?",
+          "question_text": "Which case requires you to specify the direction of turns in the holding pattern?",
+          "choices": [
+            {
+              "text": "When left turns are to be made.",
+              "is_correct": true
+            },
+            {
+              "text": "In every holding clearance, even for standard right turns.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft is above FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the hold is charted.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Turn direction is specified only for left turns, on pilot request, or when the controller considers it necessary."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "An aircraft must hold north of Drake on Victor Six. Build the holding instruction.",
+          "target_phrase": "HOLD NORTH OF DRAKE ON VICTOR SIX",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"HOLD NORTH OF DRAKE ON VICTOR SIX.\"",
+          "word_bank": [
+            "DRAKE",
+            "HOLD",
+            "NORTH",
+            "OF",
+            "ON",
+            "SIX",
+            "VICTOR"
+          ],
+          "correct_sequence": [
+            1,
+            2,
+            3,
+            0,
+            4,
+            6,
+            5
+          ]
+        },
+        {
+          "activity_type": "readback_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "The controller issued a maximum holding airspeed advisory. Which pilot readback is correct?",
+          "clearance": "MAXIMUM HOLDING AIRSPEED IS TWO ONE ZERO KNOTS.",
+          "choices": [
+            {
+              "text": "Maximum holding airspeed two one zero knots.",
+              "is_correct": true
+            },
+            {
+              "text": "Maintain two one zero until further advised.",
+              "is_correct": false
+            },
+            {
+              "text": "Leaving two one zero knots now.",
+              "is_correct": false
+            },
+            {
+              "text": "Holding speed unrestricted.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The readback should preserve the advisory that the maximum holding airspeed is 210 knots."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is approved to exceed the usual maximum holding speed, and the protected holding airspace supports that greater speed.",
+          "para_context": "When an aircraft is approved to exceed the maximum airspeed of a pattern and is cleared into a holding pattern that protects for the greater speed, ATC issues the maximum holding airspeed advisory for that holding pattern airspace area.",
+          "choices": [
+            {
+              "text": "Issue the maximum holding airspeed advisory for that protected holding pattern.",
+              "is_correct": true
+            },
+            {
+              "text": "Say nothing because the aircraft requested the higher speed.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the holding clearance and issue vectors instead.",
+              "is_correct": false
+            },
+            {
+              "text": "Require standard right turns only and omit the airspeed advisory.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Once the aircraft is cleared into a protected pattern for the greater speed, ATC issues the maximum holding airspeed advisory."
+        }
+      ]
+    },
+    "4-6-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may you use a visual holding point?",
+          "choices": [
+            {
+              "text": "When the pilot can determine the location by visual reference to the surface and is familiar with it.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the point is near the airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when radar service is unavailable.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the pilot requests any landmark.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A visual holding point may be used only if the pilot can determine it visually and is familiar with it."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this visual-point rule correct?",
+          "question_text": "You may use a visual holding fix only if the pilot can determine it by visual reference to the surface and is familiar enough with it to use it.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Both visual recognition and pilot familiarity are required."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "The pilot will hold at the water tower until 1630. Build the instruction.",
+          "target_phrase": "HOLD AT THE WATER TOWER UNTIL ONE SIX THREE ZERO",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"HOLD AT THE WATER TOWER UNTIL ONE SIX THREE ZERO.\"",
+          "word_bank": [
+            "AT",
+            "HOLD",
+            "ONE",
+            "SIX",
+            "THE",
+            "THREE",
+            "TOWER",
+            "UNTIL",
+            "WATER",
+            "ZERO"
+          ],
+          "correct_sequence": [
+            1,
+            0,
+            4,
+            8,
+            6,
+            7,
+            2,
+            3,
+            5,
+            9
+          ]
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You want to use a water tower as a holding point, but the pilot says the landmark is not familiar.",
+          "para_context": "A visual holding point may be used only when the pilot can determine the location by visual reference to the surface and is familiar with it.",
+          "choices": [
+            {
+              "text": "Do not use that visual holding point.",
+              "is_correct": true
+            },
+            {
+              "text": "Use it anyway because the landmark is obvious to ATC.",
+              "is_correct": false
+            },
+            {
+              "text": "Use it only if the pilot stays VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Replace it with \"hold as published\" even though no published hold exists there.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If the pilot is not familiar with the visual point, it may not be used as the holding fix."
+        }
+      ]
+    },
+    "4-6-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may you approve a pilot's request to deviate from the prescribed holding flight path?",
+          "choices": [
+            {
+              "text": "When obstacles and traffic conditions permit.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot asks, without further evaluation.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft is above FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "Only in visual meteorological conditions.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Obstacle and traffic conditions must permit the deviation."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this deviation rule correct?",
+          "question_text": "You may approve a pilot's request to deviate from the prescribed holding flight path if obstacles and traffic conditions permit.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the full standard in this paragraph."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which factor controls this approval?",
+          "question_text": "Which factor must permit a holding-path deviation before ATC approves it?",
+          "choices": [
+            {
+              "text": "Obstacle and traffic conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the pilot's fuel state.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the destination weather.",
+              "is_correct": false
+            },
+            {
+              "text": "Only adjacent-facility workload.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The deviation is approved only if obstacle and traffic conditions permit."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot requests a wider holding path because of turbulence, but the wider pattern would create a traffic conflict.",
+          "para_context": "A deviation from the prescribed holding flight path may be approved only if obstacles and traffic conditions permit.",
+          "choices": [
+            {
+              "text": "Do not approve the deviation.",
+              "is_correct": true
+            },
+            {
+              "text": "Approve it because turbulence always overrides traffic considerations.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve it and let the next sector resolve the conflict.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the hold automatically and clear the aircraft for the approach.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A deviation cannot be approved when traffic conditions do not permit it."
+        }
+      ]
+    },
+    "4-6-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "How must an aircraft holding at an unmonitored NAVAID be separated from other aircraft on the relevant course?",
+          "choices": [
+            {
+              "text": "Separate it from any aircraft occupying the course the holding aircraft would follow if it stopped receiving the NAVAID signal.",
+              "is_correct": true
+            },
+            {
+              "text": "Separate it only from aircraft on final approach.",
+              "is_correct": false
+            },
+            {
+              "text": "No extra separation is needed if the holding clearance was read back correctly.",
+              "is_correct": false
+            },
+            {
+              "text": "Separate it only from aircraft above the holding altitude.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The protection is tied to the course the aircraft will follow if the unmonitored NAVAID signal is lost."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this protection rule correct?",
+          "question_text": "You must separate an aircraft holding at an unmonitored NAVAID from any other aircraft occupying the course it would follow if it stopped receiving signals from that NAVAID.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the specific protection required for holds at unmonitored NAVAIDs."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which traffic matters here?",
+          "question_text": "Which other aircraft must be considered for separation from the holding aircraft?",
+          "choices": [
+            {
+              "text": "Aircraft occupying the course the holding aircraft would follow after signal loss.",
+              "is_correct": true
+            },
+            {
+              "text": "Traffic pattern aircraft near the airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Aircraft at the same altitude block regardless of the signal-loss course.",
+              "is_correct": false
+            },
+            {
+              "text": "Aircraft receiving vectors from another controller.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The protected course is the one the holding aircraft would fly if it no longer received the NAVAID signal."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is holding at an unmonitored NAVAID, and another aircraft is about to enter the course the holding aircraft would follow if the signal were lost.",
+          "para_context": "An aircraft holding at an unmonitored NAVAID must be separated from any other aircraft occupying the course the holding aircraft would follow if it does not receive signals from the NAVAID.",
+          "choices": [
+            {
+              "text": "Provide separation so the two aircraft do not occupy that course together.",
+              "is_correct": true
+            },
+            {
+              "text": "Allow it because the NAVAID is only temporarily unmonitored.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the conflict unless the pilot reports signal loss first.",
+              "is_correct": false
+            },
+            {
+              "text": "Resolve it only after the aircraft leaves the holding fix.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Separation is based on the course the holding aircraft would follow after losing the NAVAID signal."
+        }
+      ]
+    },
+    "4-6-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "When does the ILS holding restriction apply?",
+          "choices": [
+            {
+              "text": "When the official weather observation shows a ceiling below 800 feet or visibility of 2 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when both ceiling and visibility are below minimums at the same time.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when visibility is below 1 mile.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever any ILS approach is in use.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The restriction is triggered by a ceiling of less than 800 feet or visibility of 2 miles."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this localizer-protection rule correct?",
+          "question_text": "When the weather trigger exists, aircraft must not be authorized to hold below 5,000 feet AGL inbound toward the airport on or within 1 statute mile of the localizer between the OM or substitute fix and the airport.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the protected area and altitude restriction for ILS critical-area holding."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this USAF limitation correct?",
+          "question_text": "The USAF version of the holding restriction applies only when an arriving aircraft is between the OM or substitute fix and the runway.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The USAF note narrows the holding restriction to arriving aircraft between the OM or substitute fix and the runway."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which hold would violate the restriction?",
+          "question_text": "Which holding situation falls inside the prohibited ILS protection area when the weather trigger exists?",
+          "choices": [
+            {
+              "text": "Holding at 4,500 feet AGL inbound on the localizer within 1 mile between the OM and the airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Holding 6,000 feet AGL on the localizer in the same segment.",
+              "is_correct": false
+            },
+            {
+              "text": "Holding 4,500 feet AGL more than 3 miles outside the localizer corridor.",
+              "is_correct": false
+            },
+            {
+              "text": "Holding 4,500 feet AGL outbound away from the airport outside the protected segment.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The prohibited case is below 5,000 feet AGL, inbound toward the airport, on or within 1 statute mile of the localizer, between the OM or substitute fix and the airport."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "The official weather shows 600 feet and 2 miles visibility, and a hold is proposed at 4,700 feet AGL inbound on the localizer between the OM and the airport.",
+          "para_context": "When the official weather indicates a ceiling of less than 800 feet or visibility of 2 miles, aircraft must not be authorized to hold below 5,000 feet AGL inbound toward the airport on or within 1 statute mile of the localizer between the OM or substitute fix and the airport.",
+          "choices": [
+            {
+              "text": "Do not authorize the hold in that protected area.",
+              "is_correct": true
+            },
+            {
+              "text": "Authorize it because visibility is not below 2 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Authorize it if the pilot requests it.",
+              "is_correct": false
+            },
+            {
+              "text": "Authorize it if the aircraft remains on the localizer.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "With those weather conditions, that holding position is inside the prohibited protected area."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "4-6-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "If any route beyond the clearance limit differs from the last routing cleared, what must be issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The route the pilot can expect beyond the clearance limit must be issued.",
+          "choices": [
+            {
+              "text": "The route the pilot can expect beyond the clearance limit.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the destination airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the EFC time.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the fix name.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Holding instructions may be eliminated when you inform the pilot that no delay is expected.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is one of the specific omissions allowed.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When should the EFC item be omitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The EFC item is not specified if no delay is expected.",
+          "choices": [
+            {
+              "text": "When no delay is expected.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the fix is charted.",
+              "is_correct": false
+            },
+            {
+              "text": "Only below FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot is in radar contact.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When delay is expected, how early should the clearance-limit, holding, and EFC items normally be issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They are normally issued at least 5 minutes before the aircraft reaches the clearance limit.",
+          "choices": [
+            {
+              "text": "At least 5 minutes before the aircraft reaches the clearance limit.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft reaches the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly 2 minutes before the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the delay exceeds 30 minutes.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the aircraft is already less than 5 minutes from the holding fix and the traffic situation requires holding, when must those items be issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "In that case, they are issued immediately.",
+          "choices": [
+            {
+              "text": "Immediately.",
+              "is_correct": true
+            },
+            {
+              "text": "After the aircraft enters the hold.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after a supervisor approves the hold.",
+              "is_correct": false
+            },
+            {
+              "text": "At the next position report.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "If no delay is expected, when should a clearance beyond the clearance limit be issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It should be issued as soon as possible and, whenever possible, at least 5 minutes before the fix.",
+          "choices": [
+            {
+              "text": "As soon as possible and, whenever possible, at least 5 minutes before the aircraft reaches the fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft reaches the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot requests it.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly 10 minutes before the fix.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which route phrase may be used only when the most recently issued routing to the new clearance limit remains valid and verbiage will be reduced?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The reduced-verbiage phrase is \"via last routing cleared.\"",
+          "choices": [
+            {
+              "text": "Via last routing cleared.",
+              "is_correct": true
+            },
+            {
+              "text": "Via last heading cleared.",
+              "is_correct": false
+            },
+            {
+              "text": "Direct last fix cleared.",
+              "is_correct": false
+            },
+            {
+              "text": "Resume own navigation.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A clearance beyond a clearance limit includes the new clearance limit or approach clearance, the route of flight, and an assigned altitude if different from the present altitude.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Those are the required items in the onward clearance.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If no holding pattern is charted and holding instructions have not been issued, what should pilots do before reaching the fix?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Pilots should ask ATC for holding instructions prior to reaching the fix.",
+          "choices": [
+            {
+              "text": "Ask ATC for holding instructions before reaching the fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Turn outbound on any convenient heading.",
+              "is_correct": false
+            },
+            {
+              "text": "Proceed directly to the destination airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Descend at pilot's discretion without further clearance.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the pilot cannot obtain holding instructions before reaching an uncharted fix and none were issued, what hold is expected?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The expected action is a standard pattern on the course on which the aircraft approached the fix.",
+          "choices": [
+            {
+              "text": "A standard holding pattern on the course on which the aircraft approached the fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Any pattern chosen by the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "A teardrop entry on the reciprocal course only.",
+              "is_correct": false
+            },
+            {
+              "text": "An immediate approach clearance to the destination.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What should you do as soon as possible when you delay or expect to delay aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The supervisor or flow controller should be advised as soon as possible.",
+          "choices": [
+            {
+              "text": "Advise your supervisor or flow controller.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the delay reaches 30 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "Advise only the destination tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Do nothing unless the pilot requests information.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If arrival delays reach or are anticipated to reach 30 minutes, the responsible center must issue total delay information as soon as possible after the aircraft enters the center's area.",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is the en route requirement once the 30-minute threshold is reached or anticipated.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When tower en route control service is being provided and delays reach 30 minutes, which facility issues total delay information after the aircraft enters its area?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That duty belongs to the approach control facility whose area contains the destination airport.",
+          "choices": [
+            {
+              "text": "The approach control facility whose area contains the destination airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the destination tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the departure center.",
+              "is_correct": false
+            },
+            {
+              "text": "Any adjacent facility selected by the pilot.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Unless a pilot requests delay information, may the required total-delay advisories be omitted when ATIS already provides that information?",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Yes. The paragraph allows omission when ATIS already carries the total delay information and the pilot has not requested it.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the standard delay-advisory phraseology?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The standard phrase is airport arrival delays followed by the time in minutes or hours.",
+          "choices": [
+            {
+              "text": "(Airport) arrival delays (time).",
+              "is_correct": true
+            },
+            {
+              "text": "Expect further clearance (time).",
+              "is_correct": false
+            },
+            {
+              "text": "Delay indefinite, hold as published.",
+              "is_correct": false
+            },
+            {
+              "text": "Request delay information from approach control.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Which item belongs in a holding clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Direction of holding from the fix or waypoint is one of the required holding elements.",
+          "choices": [
+            {
+              "text": "Direction of holding from the fix or waypoint.",
+              "is_correct": true
+            },
+            {
+              "text": "Destination gate number.",
+              "is_correct": false
+            },
+            {
+              "text": "Reason for the delay.",
+              "is_correct": false
+            },
+            {
+              "text": "Approach light intensity setting.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When DME or RNAV is to be used, leg length is specified in miles unless the pilot requests minutes or the controller considers minutes necessary.",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Miles are standard for DME or RNAV legs, with minutes used on pilot request or when the controller considers it necessary.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When must turn direction be specified in a holding clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Turn direction is specified only for left turns, on pilot request, or when the controller considers it necessary.",
+          "choices": [
+            {
+              "text": "When left turns are to be made, when the pilot requests it, or when the controller considers it necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Only for DME holds.",
+              "is_correct": false
+            },
+            {
+              "text": "In every holding clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the clearance limit is not the holding fix.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may a maximum holding airspeed advisory be required?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "One case is when the aircraft is approved to exceed the normal maximum and the protected pattern supports that greater speed.",
+          "choices": [
+            {
+              "text": "When the aircraft is approved to exceed the normal maximum holding airspeed and the protected pattern supports it.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the pilot requests standard right turns.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the hold is on an airway.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft is below 10,000 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the approved phraseology for the advisory about the protected holding speed?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The approved phrase is maximum holding airspeed is (speed) knots.",
+          "choices": [
+            {
+              "text": "Maximum holding airspeed is (speed) knots.",
+              "is_correct": true
+            },
+            {
+              "text": "Maintain no more than (speed) knots in the hold.",
+              "is_correct": false
+            },
+            {
+              "text": "Holding speed restricted to (speed).",
+              "is_correct": false
+            },
+            {
+              "text": "Do not exceed (speed) in pattern airspace.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The holding fix itself may be omitted from the instructions if it was already included at the beginning of the transmission as the clearance limit.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The fix may be omitted from the holding-instruction element if it was already named as the clearance limit.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When may a visual holding point be used?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It may be used only when the pilot can determine the point by visual reference to the surface and is familiar with it.",
+          "choices": [
+            {
+              "text": "When the pilot can determine it by visual reference to the surface and is familiar with it.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the point is close to the airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when radar service is unavailable.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the pilot requests any landmark.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A visual holding point may be used even if the pilot is unfamiliar with the location, as long as ATC can see it.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "False. Pilot familiarity is required.",
+          "choices": [
+            {
+              "text": "False",
+              "is_correct": true
+            },
+            {
+              "text": "True",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the basic phraseology for a visual holding point?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The phraseology is hold at (location) until (time or other condition).",
+          "choices": [
+            {
+              "text": "Hold at (location) until (time or other condition).",
+              "is_correct": true
+            },
+            {
+              "text": "Proceed visually to (location), expect further clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Hold north of (location) as published.",
+              "is_correct": false
+            },
+            {
+              "text": "Visual hold approved, own navigation.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the pilot says the proposed visual holding point is not familiar, what is the correct ATC decision?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The visual holding point may not be used if the pilot is not familiar with it.",
+          "choices": [
+            {
+              "text": "Do not use that visual holding point.",
+              "is_correct": true
+            },
+            {
+              "text": "Use it anyway because ATC can describe it.",
+              "is_correct": false
+            },
+            {
+              "text": "Use it only if the pilot agrees to remain VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Substitute any nearby landmark without asking.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When may a pilot's requested deviation from the prescribed holding flight path be approved?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The request may be approved only if obstacles and traffic conditions permit.",
+          "choices": [
+            {
+              "text": "When obstacles and traffic conditions permit.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot asks for it.",
+              "is_correct": false
+            },
+            {
+              "text": "Only above FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "Only in visual conditions.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "ATC may approve a holding-flight-path deviation even if traffic conditions do not permit it, so long as obstacles are clear.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "False. Both obstacle and traffic conditions must permit the deviation.",
+          "choices": [
+            {
+              "text": "False",
+              "is_correct": true
+            },
+            {
+              "text": "True",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which factor pair controls whether a holding-path deviation may be approved?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controlling factors are obstacles and traffic conditions.",
+          "choices": [
+            {
+              "text": "Obstacles and traffic conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Weather and runway condition only.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilot preference and fuel state only.",
+              "is_correct": false
+            },
+            {
+              "text": "Holding speed and ATIS code only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a requested wider holding path would create a traffic conflict, what is the correct action?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The deviation may not be approved when traffic conditions do not permit it.",
+          "choices": [
+            {
+              "text": "Do not approve the deviation.",
+              "is_correct": true
+            },
+            {
+              "text": "Approve it because turbulence always overrides traffic concerns.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve it and let the next sector resolve the conflict.",
+              "is_correct": false
+            },
+            {
+              "text": "Automatically clear the aircraft for the approach instead.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "How must an aircraft holding at an unmonitored NAVAID be separated from other aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It must be separated from any aircraft occupying the course the holding aircraft would follow after signal loss.",
+          "choices": [
+            {
+              "text": "From any aircraft occupying the course it would follow if it stopped receiving the NAVAID signal.",
+              "is_correct": true
+            },
+            {
+              "text": "Only from final-approach traffic.",
+              "is_correct": false
+            },
+            {
+              "text": "Only from aircraft at the same altitude block.",
+              "is_correct": false
+            },
+            {
+              "text": "No extra protection is required if the hold is charted.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The required protection at an unmonitored NAVAID is based on the course the holding aircraft would follow if it stopped receiving the NAVAID signal.",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is exactly how the protected course is defined.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which other aircraft must be considered for separation from the holding aircraft at an unmonitored NAVAID?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The protected traffic is any traffic occupying the course the holding aircraft would follow after signal loss.",
+          "choices": [
+            {
+              "text": "Aircraft occupying the course the holding aircraft would follow after signal loss.",
+              "is_correct": true
+            },
+            {
+              "text": "Traffic pattern aircraft near the airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Aircraft on the same airway regardless of the signal-loss course.",
+              "is_correct": false
+            },
+            {
+              "text": "Military aircraft as a category by themselves.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If another aircraft is about to enter the course the holding aircraft would follow after losing the unmonitored NAVAID signal, what must ATC do?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "ATC must provide separation so the aircraft do not occupy that course together.",
+          "choices": [
+            {
+              "text": "Provide separation so they do not occupy that course together.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the pilot reports signal loss.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore it because the NAVAID is only unmonitored, not unusable.",
+              "is_correct": false
+            },
+            {
+              "text": "Resolve it only after the holding aircraft leaves the fix.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What weather trigger activates the ILS holding restriction?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The restriction applies when the official weather shows a ceiling below 800 feet or visibility of 2 miles.",
+          "choices": [
+            {
+              "text": "A ceiling below 800 feet or visibility of 2 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "A ceiling below 500 feet and visibility below 1 mile.",
+              "is_correct": false
+            },
+            {
+              "text": "Any time an ILS approach is published.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the localizer critical area is physically marked.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When the weather trigger exists, aircraft must not be authorized to hold below 5,000 feet AGL inbound toward the airport on or within 1 statute mile of the localizer between the OM or substitute fix and the airport.",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is the protected area and altitude restriction for the ILS critical area.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What additional limitation applies in the USAF note?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The USAF note says the restriction applies only when an arriving aircraft is between the OM or substitute fix and the runway.",
+          "choices": [
+            {
+              "text": "The restriction applies only when an arriving aircraft is between the OM or substitute fix and the runway.",
+              "is_correct": true
+            },
+            {
+              "text": "The restriction applies only to military aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "The restriction applies only above 5,000 feet AGL.",
+              "is_correct": false
+            },
+            {
+              "text": "The restriction applies only when the tower is closed.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which holding situation violates the ILS protection rule when the weather trigger exists?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The violating case is below 5,000 feet AGL, inbound toward the airport, on or within 1 statute mile of the localizer, between the OM or substitute fix and the airport.",
+          "choices": [
+            {
+              "text": "Holding at 4,500 feet AGL inbound on the localizer within 1 mile between the OM and the airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Holding at 6,000 feet AGL in the same segment.",
+              "is_correct": false
+            },
+            {
+              "text": "Holding at 4,500 feet AGL well outside the localizer corridor.",
+              "is_correct": false
+            },
+            {
+              "text": "Holding at 4,500 feet AGL outside the protected segment.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the official weather is 600 feet and 2 miles visibility, may ATC authorize a hold at 4,700 feet AGL inbound on the localizer between the OM and the airport?",
+          "question_type": "true_false",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "No. That hold is inside the prohibited protected area once the weather trigger exists.",
+          "choices": [
+            {
+              "text": "False",
+              "is_correct": true
+            },
+            {
+              "text": "True",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

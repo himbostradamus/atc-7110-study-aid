@@ -1,0 +1,828 @@
+{
+  "activities": {
+    "3-10-11": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "What determines whether a pilot request to remain in closed traffic should be approved?",
+          "choices": [
+            {
+              "text": "Local traffic conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Whether the pilot has already been cleared for the option.",
+              "is_correct": false
+            },
+            {
+              "text": "Whether the aircraft is turbine powered.",
+              "is_correct": false
+            },
+            {
+              "text": "Whether the runway has high-intensity lights.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Closed-traffic approval or disapproval is based on local traffic conditions."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this closed-traffic approval rule correct?",
+          "question_text": "If local traffic conditions permit successive operations, you may approve the pilot's request to remain in closed traffic.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Approval or disapproval of closed traffic is subject to local traffic conditions."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this local-pattern authority apply?",
+          "question_text": "This local operating authority applies to establishing segregated traffic patterns for helicopters and powered-lift aircraft by letter of agreement or other local operating procedures.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note allows segregated traffic patterns for helicopters and powered-lift aircraft to be established through LOAs or local operating procedures."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which phrase approves closed traffic?",
+          "question_text": "Which phrase approves the request?",
+          "choices": [
+            {
+              "text": "LEFT CLOSED TRAFFIC APPROVED.",
+              "is_correct": true
+            },
+            {
+              "text": "LEFT PATTERN AUTHORIZED TO CONTINUE.",
+              "is_correct": false
+            },
+            {
+              "text": "LEFT TRAFFIC STANDBY FOR SUCCESSIVE OPS.",
+              "is_correct": false
+            },
+            {
+              "text": "LEFT CLOSED PATTERN EXPECT APPROVAL.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph's approval phraseology is LEFT/RIGHT CLOSED TRAFFIC APPROVED."
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "One word in this phraseology is incorrect. Tap it.",
+          "original_phrase": "LEFT CLOSED TRAFFIC APPROVED.",
+          "display_text": "LEFT OPEN TRAFFIC APPROVED",
+          "tokens": ["LEFT", "OPEN", "TRAFFIC", "APPROVED"],
+          "error_index": 1,
+          "correct_token": "CLOSED",
+          "explanation": "The approval phrase in 3-10-11 is LEFT/RIGHT CLOSED TRAFFIC APPROVED."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "Closed traffic is approved and you want a midfield-downwind report. Build the transmission.",
+          "target_phrase": "LEFT CLOSED TRAFFIC APPROVED REPORT MIDFIELD DOWNWIND"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot requests to remain in left closed traffic for successive operations. Local traffic is light and the request fits current runway use. Another controller says closed-traffic approval should be denied automatically unless the aircraft already has an option clearance on the runway.",
+          "para_context": "Approve or disapprove requests to remain in closed traffic subject to local traffic conditions, then issue the appropriate approval or unable phraseology and any required report instruction.",
+          "choices": [
+            {
+              "text": "Approve or disapprove the request based on local traffic conditions, not on whether the pilot already has an option clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Deny the request automatically unless the aircraft already has an option clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve the request only if the pilot first accepts runway proximity separation from all other traffic.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay any response until the aircraft has completed one full stop landing.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The controlling factor is local traffic conditions, not whether the aircraft already has some other kind of landing authorization."
+        }
+      ]
+    },
+    "3-10-12": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "At what point in the overhead maneuver is the IFR flight plan canceled?",
+          "choices": [
+            {
+              "text": "When the aircraft reaches the initial point on the initial approach portion of the maneuver.",
+              "is_correct": true
+            },
+            {
+              "text": "At the break point.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after touchdown.",
+              "is_correct": false
+            },
+            {
+              "text": "When the aircraft reports high key.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "An aircraft conducting an overhead maneuver is VFR, and the IFR flight plan is canceled when it reaches the initial point."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this overhead-maneuver omission rule correct?",
+          "question_text": "If pattern altitude or traffic direction is standard, or you know the pilot is familiar with a nonstandard procedure, you may omit either or both when issuing overhead maneuver information.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Pattern altitude and traffic direction may be omitted when they are standard or the pilot is known to be familiar with the nonstandard procedure."
+        },
+        {
+          "activity_type": "document_control_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this coordination-document rule correct?",
+          "question_text": "When overhead patterns occur frequently enough that conflict prevention with departures or missed approaches warrants it, local procedures or coordination requirements should be set forth in a letter of agreement, facility directive, base flying manual, or similar document.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph says those coordination requirements should be formalized in appropriate local documentation when the frequency of occurrence warrants it."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which report request belongs to the overhead maneuver?",
+          "question_text": "Which report request is correct?",
+          "choices": [
+            {
+              "text": "REPORT INITIAL.",
+              "is_correct": true
+            },
+            {
+              "text": "REPORT HIGH KEY.",
+              "is_correct": false
+            },
+            {
+              "text": "REPORT STRAIGHT-IN FINAL.",
+              "is_correct": false
+            },
+            {
+              "text": "REPORT RUNWAY IN SIGHT.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The required initial report request for the overhead maneuver is REPORT INITIAL."
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "One word in this phraseology is incorrect. Tap it.",
+          "original_phrase": "REPORT INITIAL.",
+          "display_text": "REPORT FINAL",
+          "tokens": ["REPORT", "FINAL"],
+          "error_index": 1,
+          "correct_token": "INITIAL",
+          "explanation": "The required overhead-maneuver report request in 3-10-12 is REPORT INITIAL."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "A military aircraft is entering an overhead pattern on Runway 6 with wind 070 at 8 and pattern altitude 6,000. You want an initial report. Build the transmission.",
+          "target_phrase": "RUNWAY SIX WIND ZERO SEVEN ZERO AT EIGHT PATTERN ALTITUDE SIX THOUSAND REPORT INITIAL"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "An aircraft requests an overhead maneuver. The pattern could extend into the path of a missed approach or a departure, and another controller suggests approving it anyway because the field has a standard overhead pattern, so the aircraft should be able to work it out visually. No special coordination has been set up despite frequent use of the maneuver.",
+          "para_context": "An overhead maneuver does not eliminate the need to conform to conventional rectangular patterns when the overhead cannot be approved, and timely positive controller action is required to prevent conflicts with departures or missed approaches. Local coordination requirements should be documented when the frequency warrants it.",
+          "choices": [
+            {
+              "text": "Take timely positive action to prevent the conflict, and do not assume the existence of a standard overhead pattern removes that responsibility.",
+              "is_correct": true
+            },
+            {
+              "text": "Approve the overhead automatically because the standard pattern means missed-approach and departure conflicts are self-resolving.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the aircraft to continue the overhead no matter what because IFR cancellation already occurs at the initial point.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay all coordination until after the aircraft reports break, because that is when conflicts become relevant.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A standard overhead pattern does not remove the controller's duty to prevent conflicts with departures or missed approaches."
+        }
+      ]
+    },
+    "3-10-13": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "Before approving a military simulated flameout, ELP, or practice precautionary approach, what must be obtained from the aircraft?",
+          "choices": [
+            {
+              "text": "The high-key altitude or applicable practice precautionary maneuvering altitudes.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the number of touch-and-goes the pilot plans to make.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the destination taxi route after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "Only a request for opposite-direction traffic information.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The controller must obtain the high-key altitude or applicable maneuvering altitude before approving the approach."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this SFO or ELP approval requirement correct?",
+          "question_text": "A letter of agreement or local operating procedure must be in effect between the military flying organization and the affected ATC facility before military SFO, ELP, or practice precautionary approaches are authorized.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The first approval condition is that an LOA or local operating procedure be in effect."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which item must be included in the LOA or local operating procedure for SFO or ELP operations?",
+          "question_text": "Which item belongs in the procedure?",
+          "choices": [
+            {
+              "text": "A statement clarifying at which points SFOs or ELPs may or may not be terminated.",
+              "is_correct": true
+            },
+            {
+              "text": "A list of preferred parking stands after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "A requirement that every SFO use the same high-key altitude regardless of aircraft type.",
+              "is_correct": false
+            },
+            {
+              "text": "A guarantee that traffic information need not be exchanged during the operation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The procedure must include a termination-point clarification statement along with the other listed coordination, execution, and approval items."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this straight-in SFO timing rule correct?",
+          "question_text": "If the aircraft is conducting a straight-in simulated flameout approach, you should issue low approach clearance or alternate instructions at the appropriate position on final, normally no closer than 3 miles.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Straight-in SFO low-approach clearance or alternate instructions are issued at the appropriate position on final, normally no closer than 3 miles."
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "One word in this report request is incorrect. Tap it.",
+          "original_phrase": "REPORT LOW KEY.",
+          "display_text": "REPORT HIGH KEY",
+          "tokens": ["REPORT", "HIGH", "KEY"],
+          "error_index": 1,
+          "correct_token": "LOW",
+          "explanation": "At low key, the required report request is REPORT LOW KEY."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "A simulated flameout aircraft reaches low key. Build the required report request.",
+          "target_phrase": "REPORT LOW KEY"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A military aircraft requests an SFO or ELP approach. There is no current LOA or local operating procedure in effect, the high-key or maneuvering altitude has not been obtained, and another controller says it can still be approved because the pilot is familiar with the field and traffic is light. Other aircraft are operating within or adjacent to the flameout maneuvering area.",
+          "para_context": "SFO, ELP, and practice precautionary approaches require an LOA or local operating procedure, traffic information exchange as agreed, and the high-key or applicable maneuvering altitude before approval. Traffic information on aircraft within or adjacent to the flameout maneuvering area must be provided to the SFO or ELP aircraft and other concerned aircraft.",
+          "choices": [
+            {
+              "text": "Do not approve it until the required procedural basis and altitude information are in place, and provide the required traffic information to the SFO or ELP aircraft and other concerned aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Approve it because pilot familiarity with the field replaces the need for the LOA and altitude information when traffic is light.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve it first and gather the high-key or maneuvering altitude later once the aircraft reports low key.",
+              "is_correct": false
+            },
+            {
+              "text": "Deny traffic information to nearby aircraft because the maneuvering area belongs only to the SFO or ELP aircraft once approval is requested.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The approach cannot be approved until the required LOA or local procedure and altitude information exist, and traffic information responsibilities still apply."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-10-11": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What determines whether a pilot request to remain in closed traffic should be approved?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Closed-traffic approval or disapproval is based on local traffic conditions.",
+          "choices": [
+            {
+              "text": "Local traffic conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Whether the pilot has already been cleared for the option.",
+              "is_correct": false
+            },
+            {
+              "text": "Whether the aircraft is turbine powered.",
+              "is_correct": false
+            },
+            {
+              "text": "Whether the runway has high-intensity lighting.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which phraseology approves a request to remain in closed traffic?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The paragraph's approval phraseology is LEFT or RIGHT CLOSED TRAFFIC APPROVED.",
+          "choices": [
+            {
+              "text": "Left closed traffic approved.",
+              "is_correct": true
+            },
+            {
+              "text": "Left open traffic approved.",
+              "is_correct": false
+            },
+            {
+              "text": "Continue in traffic pattern.",
+              "is_correct": false
+            },
+            {
+              "text": "Pattern approved as filed.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which phraseology is used when closed traffic cannot be approved?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The disapproval phraseology is UNABLE CLOSED TRAFFIC, followed by additional information as required.",
+          "choices": [
+            {
+              "text": "Unable closed traffic.",
+              "is_correct": true
+            },
+            {
+              "text": "Negative pattern.",
+              "is_correct": false
+            },
+            {
+              "text": "Go around, no closed traffic.",
+              "is_correct": false
+            },
+            {
+              "text": "Continue and expect departure.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What note applies to segregated traffic patterns for helicopters and powered-lift aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Such patterns may be established by letter of agreement or other local operating procedures.",
+          "choices": [
+            {
+              "text": "They may be established by letter of agreement or other local operating procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "They require a national waiver before local use.",
+              "is_correct": false
+            },
+            {
+              "text": "They may be used only at military fields.",
+              "is_correct": false
+            },
+            {
+              "text": "They automatically replace all runway proximity rules.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What additional instruction may be included with closed-traffic approval?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "A required position report may be included with the approval.",
+          "choices": [
+            {
+              "text": "A required report position.",
+              "is_correct": true
+            },
+            {
+              "text": "An automatic low approach clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "A canceled IFR flight plan notice.",
+              "is_correct": false
+            },
+            {
+              "text": "A runway shortened announcement.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-10-12": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "At what point in the overhead maneuver is the IFR flight plan canceled?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The IFR flight plan is canceled when the aircraft reaches the initial point on the initial approach portion of the overhead maneuver.",
+          "choices": [
+            {
+              "text": "At the initial point on the initial approach portion of the maneuver.",
+              "is_correct": true
+            },
+            {
+              "text": "At the break point.",
+              "is_correct": false
+            },
+            {
+              "text": "After touchdown.",
+              "is_correct": false
+            },
+            {
+              "text": "When reporting high key.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What report request is specifically issued to aircraft conducting an overhead maneuver?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The paragraph specifically calls for REPORT INITIAL.",
+          "choices": [
+            {
+              "text": "Report initial.",
+              "is_correct": true
+            },
+            {
+              "text": "Report low key.",
+              "is_correct": false
+            },
+            {
+              "text": "Report simulated flameout final.",
+              "is_correct": false
+            },
+            {
+              "text": "Report runway in sight.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may pattern altitude or traffic direction be omitted for an overhead maneuver?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They may be omitted when standard or when the pilot is known to be familiar with the nonstandard procedure.",
+          "choices": [
+            {
+              "text": "When they are standard or when the pilot is known to be familiar with the nonstandard procedure.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the aircraft is military.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when weather is VFR and the tower is not busy.",
+              "is_correct": false
+            },
+            {
+              "text": "Never; both always have to be stated.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When is the break point specified to the aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The point of break is specified only if it is nonstandard.",
+          "choices": [
+            {
+              "text": "Only if the break point is nonstandard.",
+              "is_correct": true
+            },
+            {
+              "text": "On every overhead maneuver, regardless of standardization.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft reports initial.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot requests right turns.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What controller responsibility remains even at an airport with a standard overhead maneuver pattern?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Timely positive action is still required to prevent conflicts with departures or missed approaches.",
+          "choices": [
+            {
+              "text": "Take timely positive action to prevent conflicts with departures or missed approaches.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume the overhead pattern automatically protects missed approaches and departures.",
+              "is_correct": false
+            },
+            {
+              "text": "Allow the overhead pattern to continue even if rectangular pattern conformance would be safer.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay any conflict-prevention action until the aircraft reports break.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-10-13": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What must be in effect before military SFO, ELP, or practice precautionary approaches may be authorized?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A letter of agreement or local operating procedure must be in effect between the military flying organization and the affected ATC facility.",
+          "choices": [
+            {
+              "text": "A letter of agreement or local operating procedure between the military flying organization and the affected ATC facility.",
+              "is_correct": true
+            },
+            {
+              "text": "Only pilot familiarity with the field and maneuver area.",
+              "is_correct": false
+            },
+            {
+              "text": "Only a runway closure for other traffic.",
+              "is_correct": false
+            },
+            {
+              "text": "Only supervisor approval on the day of the operation.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What altitude information must be obtained before approving the approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The high-key altitude or applicable practice precautionary maneuvering altitude must be obtained first.",
+          "choices": [
+            {
+              "text": "The high-key altitude or applicable practice precautionary maneuvering altitudes.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the planned missed-approach altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the intended traffic pattern altitude for a rectangular pattern.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the final approach fix altitude.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What report request applies at the entry point for overhead SFO or ELP approaches?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "At the entry point, the controller requests REPORT HIGH KEY or REPORT LOW KEY as appropriate.",
+          "choices": [
+            {
+              "text": "Report high key or report low key, as appropriate.",
+              "is_correct": true
+            },
+            {
+              "text": "Report initial.",
+              "is_correct": false
+            },
+            {
+              "text": "Report break.",
+              "is_correct": false
+            },
+            {
+              "text": "Report runway in sight.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What report request applies to straight-in simulated flameout approaches?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The straight-in SFO report request is REPORT (distance) MILE SIMULATED FLAMEOUT FINAL.",
+          "choices": [
+            {
+              "text": "Report (distance) mile simulated flameout final.",
+              "is_correct": true
+            },
+            {
+              "text": "Report initial.",
+              "is_correct": false
+            },
+            {
+              "text": "Report low key.",
+              "is_correct": false
+            },
+            {
+              "text": "Report midfield break.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At what point on final are low approach clearance or alternate instructions normally issued for a straight-in simulated flameout approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They are issued at the appropriate position on final, normally no closer than 3 miles.",
+          "choices": [
+            {
+              "text": "At the appropriate position on final, normally no closer than 3 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft crosses the threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "At the initial point.",
+              "is_correct": false
+            },
+            {
+              "text": "Only once the aircraft has begun the break.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

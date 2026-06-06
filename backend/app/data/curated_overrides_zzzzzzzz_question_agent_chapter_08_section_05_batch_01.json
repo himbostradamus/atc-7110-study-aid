@@ -1,0 +1,160 @@
+{
+  "questions": {
+    "8-5-1": {
+      "items": [
+        {
+          "question_text": "Under 8-5-1, what do QNE and QNH stand for in the altitude/flight level transition context?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 8-5-1, QNE is the standard altimeter setting and QNH is the local altimeter setting.",
+          "choices": [
+            {
+              "text": "QNE is standard altimeter setting; QNH is local altimeter setting.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 8-5-1, why does the altitude/flight level transition rule apply only below FL 180?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "At and above FL180, all aircraft use standard altimeter setting (29.92/QNE), so there is no QNE/QNH difference to manage. Below FL180, some aircraft may still be on local altimeter settings.",
+          "choices": [
+            {
+              "text": "Because only lateral separation is used below FL180.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Because oceanic control areas do not exist below FL180.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Because at or above FL180 all aircraft use standard altimeter setting, so no QNE/QNH difference exists to compromise separation.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Because QNE and QNH are identical below FL180.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    "8-5-2": {
+      "items": [
+        {
+          "question_text": "Under 8-5-2, course divergence separation exists when aircraft are established on tracks diverging by at least _____ degrees and at least one aircraft is a specified distance from the point of intersection.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 8-5-2, the divergence requirement is 15 degrees for course divergence in transition airspace.",
+          "choices": [
+            {
+              "text": "15",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "8-5-3": {
+      "items": [
+        {
+          "question_text": "Under 8-5-3, opposite direction aircraft using the transition procedure must be vertically separated until they have passed each other by at least _____ miles, unless another form of separation is established earlier.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 8-5-3, opposite direction aircraft must pass each other by a specified distance before vertical separation may be discontinued.",
+          "choices": [
+            {
+              "text": "10",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "8-5-4": {
+      "items": [
+        {
+          "question_text": "Under 8-5-4, same direction aircraft in the transition area must have the applicable longitudinal minima applied based on the _____ of the two aircraft.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 8-5-4, same direction longitudinal minima in transition airspace are based on the speed of the two aircraft.",
+          "choices": [
+            {
+              "text": "speed",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "8-5-5": {
+      "items": [
+        {
+          "question_text": "Under 8-5-5, radar identification procedures from Chapter _____ may be applied in offshore/oceanic transition airspace where radar coverage exists.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 8-5-5, Chapter 5 radar identification procedures apply where coverage is adequate.",
+          "choices": [
+            {
+              "text": "5",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "8-5-1": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When two aircraft cross the offshore boundary below FL180 and one is on QNH while the other is on QNE, what separation risk can result if the altimeter-setting difference is not managed?",
+          "choices": [
+            {
+              "text": "Lateral separation is automatically substituted for vertical separation.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Nothing \u2014 QNE and QNH always produce identical altitude readings.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Vertical separation could be compromised because the same indicated altitude may represent different true altitudes.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Both aircraft will automatically adjust to the same setting upon crossing the boundary.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ],
+          "explanation": "Per 8-5-1, differences between QNE and QNH altimeter settings can compromise vertical separation, so control action must ensure separation is maintained during the transition."
+        }
+      ]
+    }
+  }
+}

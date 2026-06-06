@@ -1,0 +1,1350 @@
+{
+  "questions": {
+    "4-3-1": {
+      "items": [
+        {
+          "question_text": "The term __________ should be used only to actually clear an aircraft for takeoff or to cancel a takeoff clearance.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-1, controllers must avoid using the term 'takeoff' except to actually clear an aircraft for takeoff or to cancel a takeoff clearance. Use 'depart,' 'departure,' or 'fly' instead.",
+          "choices": [
+            {
+              "text": "takeoff",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A ground controller tells a pilot, 'After takeoff, fly runway heading.' According to 4-3-1, what is the problem with this transmission?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-1, avoid using the term 'takeoff' except to actually clear an aircraft for takeoff or to cancel a takeoff clearance. Here 'takeoff' is used in a non-clearance context. The correct alternative: 'After departure, fly runway heading.'",
+          "choices": [
+            {
+              "text": "There is no problem; the transmission is correct.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller should have specified a heading in degrees, not 'runway heading.'",
+              "is_correct": false
+            },
+            {
+              "text": "The word 'takeoff' should only be used to actually clear an aircraft for takeoff or to cancel a takeoff clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Ground controllers are not authorized to issue heading instructions.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which terms are acceptable substitutes for 'takeoff' when used in clearances per 4-3-1?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-1: Use such terms as 'depart,' 'departure,' or 'fly' in clearances when necessary.",
+          "choices": [
+            {
+              "text": "depart, departure, or fly",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-2": {
+      "items": [
+        {
+          "question_text": "When issuing a departure clearance for relay to an aircraft by an FSS or dispatcher, what must always be included?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-2a: Always include the airport of departure when issuing a departure clearance for relay to an aircraft by an FSS, dispatcher, etc.",
+          "choices": [
+            {
+              "text": "The aircraft's destination airport.",
+              "is_correct": false
+            },
+            {
+              "text": "The SID transition name.",
+              "is_correct": false
+            },
+            {
+              "text": "The airport of departure.",
+              "is_correct": true
+            },
+            {
+              "text": "The clearance void time.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When the clearance limit is an airport, what word must follow the airport name?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-2b1(a): When the clearance limit is an airport, the word 'airport' must follow the airport name. Phraseology: CLEARED TO (destination) AIRPORT.",
+          "choices": [
+            {
+              "text": "'International' for ICAO-designated airports.",
+              "is_correct": false
+            },
+            {
+              "text": "'airport'",
+              "is_correct": true
+            },
+            {
+              "text": "The three-letter airport identifier.",
+              "is_correct": false
+            },
+            {
+              "text": "No additional word is required.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When the clearance limit is a NAVAID and the NAVAID type is known, what must follow the NAVAID name?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-2b1(b): When the clearance limit is a NAVAID and the type is known, the type must follow the NAVAID name. Phraseology: CLEARED TO (NAVAID name and type).",
+          "choices": [
+            {
+              "text": "The radial and DME distance.",
+              "is_correct": false
+            },
+            {
+              "text": "The type of NAVAID.",
+              "is_correct": true
+            },
+            {
+              "text": "The frequency of the NAVAID.",
+              "is_correct": false
+            },
+            {
+              "text": "The Morse code identifier.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For Air Force One (AF1) operations, how should the destination be handled in the departure clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-2b2: For AF1 operations, do not specify the destination airport. Phraseology: DESTINATION AS FILED. Presidential detail ensures accuracy.",
+          "choices": [
+            {
+              "text": "Specify the destination airport as usual, followed by 'airport.'",
+              "is_correct": false
+            },
+            {
+              "text": "Issue 'CLEARED AS FILED' without mentioning the destination.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue 'DESTINATION AS FILED' instead of specifying the destination airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Specify the destination city only, omitting the airport name.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If an aircraft is vectored off a published SID or ODP, what happens to the departure procedure and who becomes responsible for terrain/obstruction separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "interpretation",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-2c1(a)(1): A vector off a published SID or ODP cancels the DP and ATC becomes responsible for separation from terrain/obstructions. IFR aircraft must be assigned an altitude.",
+          "choices": [
+            {
+              "text": "The DP remains in effect and the pilot retains terrain responsibility.",
+              "is_correct": false
+            },
+            {
+              "text": "The vector cancels the DP; ATC becomes responsible for terrain/obstruction separation.",
+              "is_correct": true
+            },
+            {
+              "text": "The DP is suspended temporarily and resumes after the vector.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot must request cancellation before accepting vectors.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When using a Diverse Vector Area (DVA), by when must the initial heading be given to the pilot?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-2c1(a)(2): The initial DVA heading can be given as part of the initial clearance, but must be given no later than with the takeoff clearance. Once airborne, aircraft can be vectored below MVA/MIA within the DVA but climb must not be interrupted below MVA/MIA.",
+          "choices": [
+            {
+              "text": "Before engine start.",
+              "is_correct": false
+            },
+            {
+              "text": "No later than with the takeoff clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Before the aircraft reaches 1,000 feet AGL.",
+              "is_correct": false
+            },
+            {
+              "text": "Any time after departure as long as within the DVA.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At locations without Airport Traffic Control Service but within a Class E surface area, what must the controller do before issuing a turn or heading in a clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-2c1(b): Obtain/solicit the pilot's concurrence concerning a turn or heading before issuing them in a clearance. This can be obtained directly or relayed by FSS, dispatcher, etc.",
+          "choices": [
+            {
+              "text": "Issue the turn and wait for readback confirmation.",
+              "is_correct": false
+            },
+            {
+              "text": "Obtain or solicit the pilot's concurrence before issuing.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the turn only if it exceeds 30 degrees from runway heading.",
+              "is_correct": false
+            },
+            {
+              "text": "Request clearance approval from the overlying ARTCC first.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At airports other than those with Airport Traffic Control Service or Class E surface areas, what restriction applies to specifying direction of takeoff/turn?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-2c1(c): Do not specify direction of takeoff/turn after takeoff. If an initial heading is necessary, issue it so as to apply only within controlled airspace.",
+          "choices": [
+            {
+              "text": "Specify the direction of turn for the first 1,000 feet only.",
+              "is_correct": false
+            },
+            {
+              "text": "Do not specify direction of takeoff/turn; any initial heading must apply only within controlled airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "Always specify direction of turn per published traffic pattern.",
+              "is_correct": false
+            },
+            {
+              "text": "Specify a turn only to a cardinal heading.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When a SID crossing altitude must be changed, what phraseology emphasizes the change to the pilot?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-2c4(b): Emphasize the change using '(SID name) DEPARTURE, EXCEPT CROSS (revised altitude information).'",
+          "choices": [
+            {
+              "text": "'CROSS (fix) AT (altitude) INSTEAD OF PUBLISHED.'",
+              "is_correct": false
+            },
+            {
+              "text": "'EXCEPT CROSS (revised altitude information).'",
+              "is_correct": true
+            },
+            {
+              "text": "'AMEND ALTITUDE, CROSS (fix) AT (altitude).'",
+              "is_correct": false
+            },
+            {
+              "text": "'DISREGARD SID ALTITUDE, CROSS (fix) AT (altitude).'",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When a SID does NOT contain published crossing restrictions or is a Radar Vector SID, what altitude instruction must be used instead of 'Climb via SID'?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-2e5: When a SID does not contain published crossing restrictions and/or is a Radar Vector SID, instruct 'MAINTAIN (altitude).' 'Climb via SID' is only used with published crossing restrictions.",
+          "choices": [
+            {
+              "text": "'CLIMB VIA SID' as with all SIDs.",
+              "is_correct": false
+            },
+            {
+              "text": "'MAINTAIN (altitude).'",
+              "is_correct": true
+            },
+            {
+              "text": "'CLIMB AND MAINTAIN (altitude).'",
+              "is_correct": false
+            },
+            {
+              "text": "'ASCEND AT PILOT'S DISCRETION TO (altitude).'",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What effect does 'MAINTAIN (altitude)' have on previously issued altitude restrictions including SID/STAR restrictions?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Per the note in 4-3-2e: The phraseology 'maintain (altitude)' alone cancels previously issued altitude restrictions, including SID/STAR restrictions, unless they are restated or modified.",
+          "choices": [
+            {
+              "text": "It supplements existing restrictions; all remain in force.",
+              "is_correct": false
+            },
+            {
+              "text": "It cancels previously issued altitude restrictions unless restated or modified.",
+              "is_correct": true
+            },
+            {
+              "text": "It cancels only en route restrictions, not SID/STAR restrictions.",
+              "is_correct": false
+            },
+            {
+              "text": "It requires the pilot to request confirmation of applicable restrictions.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "In a nonradar environment, which of the following must be included in a departure clearance regarding route identification?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-2h: Specify one, two, or more fixes as necessary to identify the initial route of flight. Also specify destination+airport, NAVAID type after name, and intersection/waypoint type after name.",
+          "choices": [
+            {
+              "text": "Only the destination airport with no intermediate fixes.",
+              "is_correct": false
+            },
+            {
+              "text": "Specify one, two, or more fixes as necessary to identify the initial route.",
+              "is_correct": true
+            },
+            {
+              "text": "A detailed full route clearance to the destination is always required.",
+              "is_correct": false
+            },
+            {
+              "text": "Only a radar vector heading since radar coverage is unavailable.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The detailed departure clearance procedures of paragraph 4-3-2 do NOT apply to which of the following?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-2i: Do not apply these procedures when a pilot requests a detailed clearance or to military operations within ALTRV, stereo routes, operations above FL 600, and other military operations requiring special handling.",
+          "choices": [
+            {
+              "text": "Civilian IFR departures from towered airports.",
+              "is_correct": false
+            },
+            {
+              "text": "Commercial air carrier operations at any altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Military operations within ALTRV, stereo routes, or above FL 600.",
+              "is_correct": true
+            },
+            {
+              "text": "GA departures from uncontrolled airports.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the correct phraseology when a SID contains published crossing restrictions and a top altitude IS published?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-2e4(a): Instruct aircraft to 'Climb via SID.' The full form is '(SID name) DEPARTURE, (transition) TRANSITION; then as filed. CLIMB VIA SID.'",
+          "choices": [
+            {
+              "text": "'CLIMB VIA SID.'",
+              "is_correct": true
+            },
+            {
+              "text": "'MAINTAIN (altitude).'",
+              "is_correct": false
+            },
+            {
+              "text": "'CLIMB VIA SID EXCEPT MAINTAIN (altitude).'",
+              "is_correct": false
+            },
+            {
+              "text": "'CLIMB AND MAINTAIN (published altitude).'",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "According to 4-3-2, when a departure clearance includes a SID, is concurrent use of a Diverse Vector Area (DVA) permitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Per the note in 4-3-2c1(a): When a departure clearance includes a SID, concurrent use of a diverse vector area (DVA) is not permitted.",
+          "choices": [
+            {
+              "text": "Yes, the DVA can supplement SID routing.",
+              "is_correct": false
+            },
+            {
+              "text": "Concurrent use of a DVA with a SID is not permitted.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only after the SID transition fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the SID does not contain crossing restrictions.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-3": {
+      "items": [
+        {
+          "question_text": "Which of the following is NOT a condition for issuing an abbreviated departure clearance per 4-3-3?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-3, conditions are: (1) route filed with ATC not changed before departure, (2) all ATC facilities have sufficient route info, (3) destination airport info relayed prior to departure. The assigned altitude per 4-3-2e must also be stated. An LOA is not a required condition.",
+          "choices": [
+            {
+              "text": "Route filed with ATC has not been changed before departure.",
+              "is_correct": false
+            },
+            {
+              "text": "All ATC facilities have sufficient route of flight information.",
+              "is_correct": false
+            },
+            {
+              "text": "A letter of agreement must be in place between all facilities.",
+              "is_correct": true
+            },
+            {
+              "text": "Destination airport information is relayed between facilities prior to departure.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a pilot's route of flight has been changed by the company before departure and an abbreviated clearance is offered, what must the pilot do?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Per the note in 4-3-3a1: A pilot will not accept an abbreviated clearance if the route filed with ATC has been changed. The pilot is expected to inform the control facility on initial radio contact if unable to accept.",
+          "choices": [
+            {
+              "text": "Accept the clearance and request changes after departure.",
+              "is_correct": false
+            },
+            {
+              "text": "Inform the control facility on initial contact that the abbreviated clearance cannot be accepted.",
+              "is_correct": true
+            },
+            {
+              "text": "File a new flight plan with the revised route.",
+              "is_correct": false
+            },
+            {
+              "text": "Accept the clearance but decline to read it back.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The contraction 'FRC' on a flight progress strip means what, and where must it be placed in intra-center remarks?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-3b: FRC means 'Full Route Clearance Necessary.' It must always be the first item of intra-center remarks. Used when modifying a filed route for computer acceptance due to incorrect fix/airway identification.",
+          "choices": [
+            {
+              "text": "'Flight Route Confirmed' - placed anywhere in remarks.",
+              "is_correct": false
+            },
+            {
+              "text": "'Full Route Clearance Necessary' - must be the first item of intra-center remarks.",
+              "is_correct": true
+            },
+            {
+              "text": "'Filed Route Corrected' - placed as the last item of remarks.",
+              "is_correct": false
+            },
+            {
+              "text": "'Final Route Confirmation' - placed after the altitude block.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When 'FRC' appears on a flight progress strip without a specified fix, what must the issuing controller do?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-3b: When FRC appears, issue a full route clearance to the specified fix, or if no fix is specified, for the entire route.",
+          "choices": [
+            {
+              "text": "Issue an abbreviated clearance as normal.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a full route clearance for the entire route.",
+              "is_correct": true
+            },
+            {
+              "text": "Contact the pilot to verify the filed route.",
+              "is_correct": false
+            },
+            {
+              "text": "Hold the flight until a fix can be determined.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Per 4-3-3, the assigned altitude in an abbreviated clearance must be stated per which subparagraph of 4-3-2?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-3a4: The assigned altitude per 4-3-2, Departure Clearances, subparagraph e (Altitude), is stated in the clearance.",
+          "choices": [
+            {
+              "text": "Subparagraph d (Route of Flight).",
+              "is_correct": false
+            },
+            {
+              "text": "Subparagraph e (Altitude).",
+              "is_correct": true
+            },
+            {
+              "text": "Subparagraph c (Departure Procedures).",
+              "is_correct": false
+            },
+            {
+              "text": "Subparagraph a (Airport of Departure).",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-4": {
+      "items": [
+        {
+          "question_text": "Departures from an airport without an operating control tower must be issued either a departure release, a __________, or a release time.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-4: Departures from an airport without an operating control tower must be issued either a departure release, a hold for release, or a release time.",
+          "choices": [
+            {
+              "text": "hold for release",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "What does a 'hold for release' (HFR) instruction mean for a departure clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-4b1: 'Hold for release' instructions inform a pilot or controller that a departure clearance is not valid until additional instructions are received.",
+          "choices": [
+            {
+              "text": "The aircraft must hold short of the runway until ground control releases it.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure clearance is not valid until additional instructions are received.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft is released but must hold at a fix after takeoff.",
+              "is_correct": false
+            },
+            {
+              "text": "ATC is holding the flight plan pending weather improvement.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When issuing hold for release instructions, what additional information must be included?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-4b2: When issuing HFR, include departure delay information. Phraseology: '(id) HOLD FOR RELEASE, EXPECT (time) DEPARTURE DELAY.'",
+          "choices": [
+            {
+              "text": "The reason for the hold.",
+              "is_correct": false
+            },
+            {
+              "text": "Departure delay information.",
+              "is_correct": true
+            },
+            {
+              "text": "The expected route after release.",
+              "is_correct": false
+            },
+            {
+              "text": "An alternative departure time.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The facility issuing a release time to a pilot specifying an actual clock time must also issue what?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-4c2: The facility issuing a release time must issue a time check. A release time using a specified number of minutes does not require a time check.",
+          "choices": [
+            {
+              "text": "A void time for the release.",
+              "is_correct": false
+            },
+            {
+              "text": "A time check.",
+              "is_correct": true
+            },
+            {
+              "text": "The EDCT window.",
+              "is_correct": false
+            },
+            {
+              "text": "The ground stop status.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When EDCTs are assigned through TM programs (excluding CFR operations), within what window must aircraft depart relative to the EDCT?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-4d: Flights must depart no earlier than 5 minutes before and no later than 5 minutes after the EDCT (-5/+5 minute window).",
+          "choices": [
+            {
+              "text": "From 2 minutes before to 1 minute after.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly at the EDCT time with zero deviation.",
+              "is_correct": false
+            },
+            {
+              "text": "From 5 minutes before to 5 minutes after.",
+              "is_correct": true
+            },
+            {
+              "text": "From 10 minutes before to 2 minutes after.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When Call for Release (CFR) is in effect, within what window must aircraft be airborne?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-4e: Aircraft must be airborne within a window from 2 minutes prior to 1 minute after the assigned time (-2/+1 window), unless otherwise coordinated.",
+          "choices": [
+            {
+              "text": "From 5 minutes before to 5 minutes after.",
+              "is_correct": false
+            },
+            {
+              "text": "From 2 minutes before to 1 minute after.",
+              "is_correct": true
+            },
+            {
+              "text": "Exactly at the assigned time.",
+              "is_correct": false
+            },
+            {
+              "text": "From 1 minute before to 2 minutes after.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When issuing a clearance void time at an airport without an operating control tower, by when must the pilot advise ATC of intentions if not airborne?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-4f1: Provide alternative instructions requiring pilots to advise ATC of their intentions no later than 30 minutes after the clearance void time if not airborne.",
+          "choices": [
+            {
+              "text": "No later than 15 minutes after void time.",
+              "is_correct": false
+            },
+            {
+              "text": "No later than 30 minutes after void time.",
+              "is_correct": true
+            },
+            {
+              "text": "No later than 5 minutes after void time.",
+              "is_correct": false
+            },
+            {
+              "text": "Immediately upon the void time expiring.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What happens to the departure clearance and IFR flight plan when a clearance void time expires?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Per the note in 4-3-4f: Void time expiry does not cancel the departure clearance or IFR flight plan. It withdraws the pilot's authority to depart IFR until a new departure release/release time is issued by ATC and acknowledged.",
+          "choices": [
+            {
+              "text": "The IFR flight plan is automatically canceled.",
+              "is_correct": false
+            },
+            {
+              "text": "The departure clearance is canceled entirely.",
+              "is_correct": false
+            },
+            {
+              "text": "It does not cancel clearance or flight plan, but withdraws authority to depart IFR until a new release is issued and acknowledged.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot may still depart IFR within 10 minutes of the void time.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When an aircraft requests taxi or clearance inconsistent with meeting the EDCT window, what should the controller do?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-4d2: Ask the pilot to verify the EDCT. If pilot's EDCT matches FAA EDCT, release consistent with EDCT. If different, refer to Trust & Verify procedures.",
+          "choices": [
+            {
+              "text": "Deny the request and instruct the pilot to wait for the EDCT.",
+              "is_correct": false
+            },
+            {
+              "text": "Ask the pilot to verify the EDCT.",
+              "is_correct": true
+            },
+            {
+              "text": "Automatically delay the aircraft until the EDCT window.",
+              "is_correct": false
+            },
+            {
+              "text": "Release the aircraft immediately regardless of EDCT.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-5": {
+      "items": [
+        {
+          "question_text": "When a ground stop (GS) applicable to an aircraft is in effect, under what condition may the controller release that aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-5: Do not release an aircraft if a GS applicable to that aircraft is in effect, without the approval of the originator of the GS.",
+          "choices": [
+            {
+              "text": "If the aircraft has been holding for more than 30 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "If the pilot requests release.",
+              "is_correct": false
+            },
+            {
+              "text": "Only with the approval of the originator of the ground stop.",
+              "is_correct": true
+            },
+            {
+              "text": "If the GS has been in effect for more than one hour.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-6": {
+      "items": [
+        {
+          "question_text": "When multiple aircraft elect to take delay on the ground before departure, in what order should departure clearances be issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-6: Issue departure clearances in the order in which the requests for clearance were originally made if practicable.",
+          "choices": [
+            {
+              "text": "In order of scheduled departure time.",
+              "is_correct": false
+            },
+            {
+              "text": "In the order requests for clearance were originally made, if practicable.",
+              "is_correct": true
+            },
+            {
+              "text": "In order of aircraft type, with jets first.",
+              "is_correct": false
+            },
+            {
+              "text": "First-come, first-served based on ready-for-departure call.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-7": {
+      "items": [
+        {
+          "question_text": "Who must be informed of anticipated departure delays per 4-3-7?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-7: Inform approach control facilities and/or towers of anticipated departure delays.",
+          "choices": [
+            {
+              "text": "Only the pilots of affected aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "The ARTCC only.",
+              "is_correct": false
+            },
+            {
+              "text": "Approach control facilities and/or towers.",
+              "is_correct": true
+            },
+            {
+              "text": "Flight Service Stations in the affected area.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-8": {
+      "items": [
+        {
+          "question_text": "When must coordination with the receiving facility occur before departure if the departure point is less than 15 minutes flying time from the boundary?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-8a: Coordinate before departure if less than 15 minutes flying time from boundary, unless automatic data transfer occurs, reducing to 5 minutes or mileage parameter.",
+          "choices": [
+            {
+              "text": "Coordinate after the aircraft is airborne and within 10 miles of boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate before the departure of the aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Coordinate only when less than 5 minutes flying time from boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "No coordination required if aircraft is on a SID.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "With automatic data transfer between automated systems, the 15-minute flying time coordination threshold may be reduced to how many minutes, or replaced with what?",
+          "question_type": "fill_blank",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-8a: Reduced to 5 minutes or replaced with a mileage from the boundary parameter when mutually agreeable to both facilities.",
+          "choices": [
+            {
+              "text": "5 minutes or a mileage from the boundary parameter",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "The actual departure time must be forwarded to the receiving facility unless assumed departure times are agreed upon and within what tolerance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-8b: Unless assumed departure times are within 3 minutes of the actual departure time.",
+          "choices": [
+            {
+              "text": "Within 1 minute.",
+              "is_correct": false
+            },
+            {
+              "text": "Within 3 minutes.",
+              "is_correct": true
+            },
+            {
+              "text": "Within 5 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "Within 10 minutes.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-9": {
+      "items": [
+        {
+          "question_text": "When authorizing an IFR flight planned aircraft to depart VFR, what must the pilot be informed of?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-9a: Inform the pilot of the proper frequency and, if appropriate, where or when to contact the facility responsible for issuing the clearance.",
+          "choices": [
+            {
+              "text": "The IFR clearance limit and assigned altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "The proper frequency and, if appropriate, where or when to contact the clearance facility.",
+              "is_correct": true
+            },
+            {
+              "text": "Only that VFR departure is authorized.",
+              "is_correct": false
+            },
+            {
+              "text": "The transponder code and departure procedure.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the facility responsible for the IFR clearance is unable to issue a clearance, what should the controller suggest to the pilot?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-9b: Inform the pilot and suggest that the delay be taken on the ground.",
+          "choices": [
+            {
+              "text": "Suggest the pilot cancel IFR and refile in the air.",
+              "is_correct": false
+            },
+            {
+              "text": "Suggest that the delay be taken on the ground.",
+              "is_correct": true
+            },
+            {
+              "text": "Automatically hold the flight plan until a clearance is available.",
+              "is_correct": false
+            },
+            {
+              "text": "Advise the pilot to contact FSS for an alternate clearance.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a pilot insists on departing VFR despite the clearance facility being unable to issue a clearance, what must the controller do?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-9b: Inform the facility/sector holding the flight plan of the pilot's intentions and, if possible, the VFR departure time.",
+          "choices": [
+            {
+              "text": "Deny the VFR departure request.",
+              "is_correct": false
+            },
+            {
+              "text": "Inform the facility holding the flight plan of the pilot's intentions and the VFR departure time if possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Cancel the IFR flight plan and advise the pilot to refile.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a void time for the planned departure.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the phraseology for authorizing a VFR departure for an IFR flight planned aircraft?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-9a: VFR DEPARTURE AUTHORIZED. CONTACT (facility) ON (frequency) AT (location or time if required) FOR CLEARANCE.",
+          "choices": [
+            {
+              "text": "VFR DEPARTURE AUTHORIZED. CONTACT (facility) ON (frequency) AT (location or time if required) FOR CLEARANCE.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-10": {
+      "items": [
+        {
+          "question_text": "Per 4-3-10 (TERMINAL), to which facilities must departure times be forwarded unless alternate procedures exist?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-10: Forward departure times to the facility from which you received the clearance and also to the terminal departure controller when that position is involved in the departure sequence.",
+          "choices": [
+            {
+              "text": "Only to the ARTCC.",
+              "is_correct": false
+            },
+            {
+              "text": "To the clearance facility and to the terminal departure controller when involved in departure sequence.",
+              "is_correct": true
+            },
+            {
+              "text": "To all facilities along the route.",
+              "is_correct": false
+            },
+            {
+              "text": "Only to the receiving en route center.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What do the letters 'DM' flashing in the data block signify?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Per the note in 4-3-10: 'DM' flashing in the data block signifies unsuccessful transmission of a departure message.",
+          "choices": [
+            {
+              "text": "Departure Modified - route has been changed.",
+              "is_correct": false
+            },
+            {
+              "text": "Unsuccessful transmission of a departure message.",
+              "is_correct": true
+            },
+            {
+              "text": "Departure Monitor - aircraft being tracked.",
+              "is_correct": false
+            },
+            {
+              "text": "Data Missing - flight plan incomplete.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What are two alternatives listed in the 4-3-10 note for providing equivalent procedures instead of forwarding departure times?",
+          "question_type": "fill_blank",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-10 note 1: Letters of agreement prescribing assumed departure times or mandatory radar handoff procedures are alternatives.",
+          "choices": [
+            {
+              "text": "Letters of agreement prescribing assumed departure times or mandatory radar handoff procedures",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "4-3-1": {
+      "items": [
+        {
+          "activity_type": "discrimination_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the phrase that complies with 4-3-1 departure terminology rules.",
+          "question_text": "A controller needs to instruct a pilot about the heading to fly after becoming airborne. Which phrase complies with 4-3-1?",
+          "choices": [
+            {
+              "text": "\"After takeoff, fly heading 270.\"",
+              "is_correct": false
+            },
+            {
+              "text": "\"After departure, fly heading 270.\"",
+              "is_correct": true
+            },
+            {
+              "text": "\"When taking off, fly heading 270.\"",
+              "is_correct": false
+            },
+            {
+              "text": "\"On the takeoff roll, fly heading 270.\"",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-1, avoid 'takeoff' except for clearing or canceling takeoff. 'After departure' uses the approved alternative."
+        }
+      ]
+    },
+    "4-3-2": {
+      "items": [
+        {
+          "activity_type": "discrimination_check",
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "Choose the correct clearance limit phraseology per 4-3-2b1.",
+          "question_text": "The clearance limit is the Appleton VORTAC. Which is the correct phraseology?",
+          "choices": [
+            {
+              "text": "CLEARED TO APPLETON AIRPORT",
+              "is_correct": false
+            },
+            {
+              "text": "CLEARED TO APPLETON VORTAC",
+              "is_correct": true
+            },
+            {
+              "text": "CLEARED TO APPLETON",
+              "is_correct": false
+            },
+            {
+              "text": "CLEARED TO THE APPLETON VOR",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-2b1(b): NAVAID type must follow NAVAID name: 'CLEARED TO APPLETON VORTAC.'"
+        },
+        {
+          "activity_type": "discrimination_check",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Distinguish altitude instruction for SIDs with vs. without crossing restrictions.",
+          "question_text": "A SID has a radar vector segment with no published crossing restrictions. What altitude instruction should be used?",
+          "choices": [
+            {
+              "text": "CLIMB VIA SID EXCEPT MAINTAIN 10,000.",
+              "is_correct": false
+            },
+            {
+              "text": "CLIMB VIA SID.",
+              "is_correct": false
+            },
+            {
+              "text": "MAINTAIN 10,000.",
+              "is_correct": true
+            },
+            {
+              "text": "CLIMB AND MAINTAIN 10,000.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-2e5: SID with Radar Vector segment and no published crossing restrictions uses MAINTAIN (altitude), not Climb via SID."
+        }
+      ]
+    },
+    "4-3-3": {
+      "items": [
+        {
+          "activity_type": "discrimination_check",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Identify which of the following is NOT a required condition for an abbreviated departure clearance.",
+          "question_text": "Which of the following is NOT a required condition for issuing an abbreviated departure clearance per 4-3-3?",
+          "choices": [
+            {
+              "text": "All ATC facilities concerned have sufficient route of flight information.",
+              "is_correct": false
+            },
+            {
+              "text": "Destination airport information is relayed between facilities prior to departure.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft must be a turbojet operating above FL 180.",
+              "is_correct": true
+            },
+            {
+              "text": "The assigned altitude per 4-3-2e is stated in the clearance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-3a, the required conditions are: (1) route not changed before departure, (2) all facilities have sufficient route info, (3) destination airport info relayed prior to departure, and (4) assigned altitude per 4-3-2e stated. Aircraft type or altitude is not a condition for an abbreviated clearance."
+        }
+      ]
+    },
+    "4-3-4": {
+      "items": [
+        {
+          "activity_type": "discrimination_check",
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "Match departure control mechanisms to their correct time windows.",
+          "question_text": "An aircraft has an EDCT of 1400Z. By what time must it depart under the EDCT rules (excluding CFR)?",
+          "choices": [
+            {
+              "text": "No earlier than 1355Z and no later than 1405Z.",
+              "is_correct": true
+            },
+            {
+              "text": "No earlier than 1358Z and no later than 1401Z.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly 1400Z.",
+              "is_correct": false
+            },
+            {
+              "text": "Any time between 1350Z and 1410Z.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-4d: EDCT window is -5/+5 minutes. 1400Z - 5 = 1355Z, 1400Z + 5 = 1405Z. The -2/+1 window is for CFR."
+        }
+      ]
+    },
+    "4-3-8": {
+      "items": [
+        {
+          "activity_type": "discrimination_check",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Determine if pre-departure coordination is required based on automation status.",
+          "question_text": "An aircraft departs 12 minutes flying time from the boundary. Automatic data transfer occurs. Is pre-departure coordination required?",
+          "choices": [
+            {
+              "text": "Yes, 12 minutes is less than 15 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "No, automatic data transfer reduces threshold to 5 minutes; 12 minutes exceeds that.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, coordination is always required regardless of automation.",
+              "is_correct": false
+            },
+            {
+              "text": "No, 12 minutes exceeds the 10-minute threshold for automated facilities.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-8a: With auto data transfer, threshold reduces to 5 minutes or mileage. 12 > 5, so coordination is not required."
+        }
+      ]
+    },
+    "4-3-9": {
+      "items": [
+        {
+          "activity_type": "scenario",
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "Apply VFR release of IFR departure rules.",
+          "question_text": "An IFR aircraft requests VFR departure. The clearance facility says they cannot issue a clearance for 20 minutes. The pilot insists on departing VFR now. What must you do?",
+          "choices": [
+            {
+              "text": "Deny the request and instruct pilot to wait 20 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "Inform pilot, suggest ground delay; if pilot insists, inform clearance facility of intentions and VFR departure time.",
+              "is_correct": true
+            },
+            {
+              "text": "Authorize VFR departure and instruct pilot to contact clearance facility airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the IFR flight plan.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-9b: Suggest ground delay. If pilot insists, inform the facility holding the flight plan of pilot's intentions and, if possible, the VFR departure time."
+        }
+      ]
+    }
+  }
+}

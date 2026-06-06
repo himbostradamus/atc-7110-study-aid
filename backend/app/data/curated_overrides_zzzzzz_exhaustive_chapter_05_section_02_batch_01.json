@@ -1,0 +1,1633 @@
+{
+  "activities": {
+    "5-2-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which aircraft should receive beacon code assignments under the general assignment criteria?",
+          "choices": [
+            {
+              "text": "Aircraft equipped with ADS-B and/or a transponder.",
+              "is_correct": true
+            },
+            {
+              "text": "Any aircraft receiving ATC service, even without ADS-B or a transponder.",
+              "is_correct": false
+            },
+            {
+              "text": "Only military aircraft using Mode 3/A.",
+              "is_correct": false
+            },
+            {
+              "text": "Only IFR aircraft above FL 180.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Beacon code assignments are made only to aircraft equipped with ADS-B and/or a transponder."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this code-assignment rule correct?",
+          "question_text": "Unless another rule, facility directive, or letter of agreement says otherwise, you must issue the computer-assigned beacon code and modify it only as required.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Computer-assigned codes are used unless this section, a facility directive, or a letter of agreement specifies otherwise."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this terminal-assignment rule correct?",
+          "question_text": "If an aircraft will remain within the terminal facility's delegated airspace, it must be assigned a code from the subset allocated to that terminal facility.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Aircraft remaining within the terminal facility's delegated airspace are assigned codes from that terminal facility's subset."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this automation-support statement correct?",
+          "question_text": "An ARTCC computer-assigned beacon code provides the adjacent facility advance information and supports auto-acquisition before handoff.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The ARTCC computer-assigned code is used for adjacent-facility entry in part because it provides advance information and supports auto-acquisition before handoff."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which operation fits Code 4000?",
+          "question_text": "Which operation is compatible with assigning beacon Code 4000?",
+          "choices": [
+            {
+              "text": "A flight test aircraft expected to make rapid altitude changes through more than one stratum.",
+              "is_correct": true
+            },
+            {
+              "text": "A routine arrival that can use a normal discrete code.",
+              "is_correct": false
+            },
+            {
+              "text": "A VFR pattern aircraft remaining in the local traffic pattern.",
+              "is_correct": false
+            },
+            {
+              "text": "An IFR departure whose route and altitude profile are completely standard.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Code 4000 is used for operations with frequent or rapid altitude changes across more than one stratum or other flights not compatible with a normal discrete code."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A departure will leave your terminal delegated airspace and enter the adjacent facility's delegated airspace. No local directive or LOA changes the normal code-assignment rule.",
+          "para_context": "Terminal aircraft that will remain within delegated airspace use the terminal subset. Aircraft that will enter adjacent delegated airspace normally use the ARTCC computer-assigned code unless local direction says otherwise.",
+          "choices": [
+            {
+              "text": "Assign the beacon code provided by the ARTCC computer so the adjacent facility receives advance information and auto-acquisition support.",
+              "is_correct": true
+            },
+            {
+              "text": "Always keep the aircraft on a terminal-only code even after it leaves your delegated airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay assigning any code until the adjacent facility sees a primary target.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign Code 4000 because the aircraft will change facilities.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The normal rule is to use the ARTCC computer-assigned code for aircraft entering an adjacent facility's delegated airspace."
+        }
+      ]
+    },
+    "5-2-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may you normally request an aircraft to change from the code it was squawking in the transferring facility's area?",
+          "choices": [
+            {
+              "text": "After the aircraft is within your area of responsibility, unless a directive, LOA, or handoff coordination says otherwise.",
+              "is_correct": true
+            },
+            {
+              "text": "Immediately upon accepting the handoff, even while it remains outside your area.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft lands.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the pilot requests a new code.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The normal rule is not to request a code change until the aircraft is within your area of responsibility, unless another arrangement already exists."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this handoff rule correct?",
+          "question_text": "Unless otherwise specified in a directive or letter of agreement or coordinated at handoff, you must wait until the aircraft is within your area of responsibility before requesting a beacon code change.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the default restriction on requesting code changes from the transferring facility's code."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this applicability statement correct?",
+          "question_text": "This rule applies to requests to change an aircraft from the code it was already squawking in the transferring facility's area.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph is specifically about changing the code the aircraft was already using in the transferring facility's area."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this exception rule correct?",
+          "question_text": "If the code change was coordinated at the time of handoff, you may request the aircraft to make that change before it enters your area of responsibility.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Advance code changes are allowed when the change was already specified by directive, LOA, or handoff coordination."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A handoff has been accepted, but the aircraft is still outside your area of responsibility. No directive, letter of agreement, or handoff coordination has authorized an early code change.",
+          "para_context": "Do not request a change from the transferring facility's code until the aircraft is within your area of responsibility unless a directive, LOA, or handoff coordination allows it earlier.",
+          "choices": [
+            {
+              "text": "Keep the aircraft on the transferring facility's code until it is within your area of responsibility.",
+              "is_correct": true
+            },
+            {
+              "text": "Request an immediate code change because the handoff has already been accepted.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to squawk 7600 until it enters your area.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the handoff and wait for the aircraft to call again later.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Without a specific exception, the code change waits until the aircraft is within your area of responsibility."
+        }
+      ]
+    },
+    "5-2-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When is Code 7700 assigned under the emergency code rule?",
+          "choices": [
+            {
+              "text": "When the pilot declares an emergency and the aircraft is not radar identified.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever a pilot requests direct routing during bad weather.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever an aircraft loses two-way radio communication.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft is already on a discrete code and radar identified.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Code 7700 is assigned when the pilot declares an emergency and the aircraft is not radar identified."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "situation": "A pilot has declared an emergency and the aircraft is not radar identified. Build the transponder instruction.",
+          "target_phrase": "SQUAWK MAYDAY ON 7700",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The prescribed phraseology is \"SQUAWK MAYDAY ON 7700.\"",
+          "word_bank": [
+            "MAYDAY",
+            "SQUAWK",
+            "7700",
+            "ON"
+          ],
+          "correct_sequence": [
+            1,
+            0,
+            3,
+            2
+          ]
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this post-contact code-change rule correct?",
+          "question_text": "After radio and radar contact are established, you may request aircraft other than single-piloted helicopters and single-piloted turbojet aircraft to change from 7700 to a computer-assigned discrete code.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Once contact is established, other than the excluded single-piloted helicopter and turbojet cases, ATC may request a change from 7700 to a discrete code."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this exception statement correct?",
+          "question_text": "This exception applies to requests to change from 7700 after contact is established, and single-piloted helicopters and single-piloted turbojet aircraft need not be asked to change because they may be unable to reset the transponder during the emergency.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph specifically excludes those aircraft from the normal post-contact code-change request because they may be unable to change transponder settings during an emergency."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which follow-up action fits the rule?",
+          "question_text": "For a Mode C VFR emergency aircraft no longer needing 7700, what must terminal do?",
+          "choices": [
+            {
+              "text": "Assign a beacon code that permits terminal MSAW alarm processing.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave the aircraft on 7700 permanently because MSAW cannot process any other code.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate all altitude readout processing until the emergency ends.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign 7600 so the system recognizes the emergency status.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Terminal controllers assign a beacon code that allows terminal MSAW alarm processing once 7700 is no longer needed."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this en route processing rule correct?",
+          "question_text": "For a Mode C equipped VFR emergency aircraft that no longer requires 7700, the en route controller must make the appropriate keyboard entry to ensure en route MSAW alarm processing.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The en route side of the rule is the required keyboard entry to preserve EMSAW alarm processing."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An emergency aircraft is now in radio and radar contact. It is a two-pilot turboprop, the pilot concurs, and current flight conditions make a discrete code change feasible.",
+          "para_context": "After radio and radar contact are established, ATC may request most emergency aircraft to change from 7700 to a computer-assigned discrete code when feasible, considering pilot concurrence, the emergency, and flight conditions.",
+          "choices": [
+            {
+              "text": "Request a change from 7700 to a computer-assigned discrete code if feasible.",
+              "is_correct": true
+            },
+            {
+              "text": "Never request a code change after an emergency aircraft has squawked 7700.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the aircraft to change immediately without regard to pilot concurrence or flight conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat the aircraft as a radio-failure target and switch it to 7600.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "After contact is established, a discrete-code change may be requested when feasible, taking pilot concurrence, the emergency, and flight conditions into account."
+        }
+      ]
+    },
+    "5-2-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What should you do when you observe a Code 7600 display?",
+          "choices": [
+            {
+              "text": "Apply communications-failure procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "Treat it as a hijack display.",
+              "is_correct": false
+            },
+            {
+              "text": "Assume the pilot is requesting a beacon code change.",
+              "is_correct": false
+            },
+            {
+              "text": "Immediately terminate radar service.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A Code 7600 display is handled with communications-failure procedures."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this handling rule correct?",
+          "question_text": "When you observe Code 7600, you must apply communications-failure procedures.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the required response to a 7600 display."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this expectation correct?",
+          "question_text": "If an aircraft loses two-way radio communications capability, you may expect it to squawk Code 7600.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note states that an aircraft experiencing loss of two-way radio communications can be expected to squawk 7600."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which display pairing is correct?",
+          "question_text": "Which labels correspond to a 7600 display in ERAM and in STARS/MEARTS?",
+          "choices": [
+            {
+              "text": "ERAM displays RDOF, and STARS/MEARTS displays RF.",
+              "is_correct": true
+            },
+            {
+              "text": "ERAM displays HIJK, and STARS/MEARTS displays HJ.",
+              "is_correct": false
+            },
+            {
+              "text": "ERAM displays EMRG, and STARS/MEARTS displays EM.",
+              "is_correct": false
+            },
+            {
+              "text": "ERAM displays LLNK, and STARS/MEARTS displays LL.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For Code 7600, ERAM shows RDOF and STARS/MEARTS shows RF."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A target suddenly begins displaying Code 7600, and you have no evidence of hijack or other emergency code activity.",
+          "para_context": "A 7600 display is handled as a communications-failure event, and an aircraft that loses two-way radio communications can be expected to squawk 7600.",
+          "choices": [
+            {
+              "text": "Treat the aircraft as a communications-failure aircraft and apply communications-failure procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume the pilot is declaring an emergency and switch attention to 7700 procedures instead.",
+              "is_correct": false
+            },
+            {
+              "text": "Assume the code is random and ignore it unless the pilot calls first.",
+              "is_correct": false
+            },
+            {
+              "text": "Instruct the pilot to reset the code to VFR as soon as possible.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A 7600 display is handled as a communications-failure situation."
+        }
+      ]
+    },
+    "5-2-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What should you do when you observe a Code 7500 display?",
+          "choices": [
+            {
+              "text": "Apply hijack or unlawful-interference procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "Apply communications-failure procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat it as a normal VFR beacon code.",
+              "is_correct": false
+            },
+            {
+              "text": "Assume the aircraft is asking for a discrete code assignment.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A Code 7500 display is handled as hijack or unlawful interference."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this response rule correct?",
+          "question_text": "When you observe Code 7500, you must apply hijacked-aircraft procedures.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the required response to a 7500 display."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this trigger statement correct?",
+          "question_text": "This rule applies when you observe a 7500 code display, not when you observe a 7600 or 7700 display.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph is specifically about the 7500 hijack or unlawful-interference code."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which display pairing is correct?",
+          "question_text": "Which labels correspond to a 7500 display in ERAM and in STARS/MEARTS?",
+          "choices": [
+            {
+              "text": "ERAM displays HIJK, and STARS/MEARTS displays HJ.",
+              "is_correct": true
+            },
+            {
+              "text": "ERAM displays RDOF, and STARS/MEARTS displays RF.",
+              "is_correct": false
+            },
+            {
+              "text": "ERAM displays EMRG, and STARS/MEARTS displays EM.",
+              "is_correct": false
+            },
+            {
+              "text": "ERAM displays LLNK, and STARS/MEARTS displays LL.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For Code 7500, ERAM shows HIJK and STARS/MEARTS shows HJ."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A target begins displaying Code 7500. No other special code is showing, and nothing suggests a radio-failure display instead.",
+          "para_context": "A 7500 display indicates hijack or unlawful interference and is handled with hijacked-aircraft procedures.",
+          "choices": [
+            {
+              "text": "Treat the aircraft as a hijack or unlawful-interference event and apply the corresponding procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "Treat the aircraft as a communications failure because the pilot is not talking.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for a second matching code from another aircraft before acting.",
+              "is_correct": false
+            },
+            {
+              "text": "Assume the aircraft accidentally selected the code and ignore it unless the pilot confirms it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A 7500 display is handled as hijack or unlawful interference."
+        }
+      ]
+    },
+    "5-2-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What does Code 7400 indicate when transmitted by a UAS?",
+          "choices": [
+            {
+              "text": "The control link between the aircraft and the pilot is lost.",
+              "is_correct": true
+            },
+            {
+              "text": "The UAS is requesting immediate descent through multiple strata.",
+              "is_correct": false
+            },
+            {
+              "text": "The UAS is canceling IFR and switching to VFR operations.",
+              "is_correct": false
+            },
+            {
+              "text": "The UAS is conducting a normal lost-communications test event.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Code 7400 may be transmitted by a UAS when the control link between the aircraft and the pilot is lost."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this source-document rule correct?",
+          "question_text": "When you observe a 7400 display, you must determine the lost link procedure as outlined in the Special Airworthiness Certificate or the Certificate of Waiver or Authorization.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The first required action is to determine the lost link procedure from the certificate or COA."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this coordination rule correct?",
+          "question_text": "If you observe a 7400 display, you must coordinate as required to allow the UAS to execute the lost link procedure.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ATC coordinates as required so the UAS can execute the programmed lost link procedure."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this system-behavior statement correct?",
+          "question_text": "Some UAS airframes will continue to use 7600 instead of 7400 after a lost-link event, and the same lost-link procedures still apply.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Some airframes, such as Global Hawk, may still squawk 7600 during lost link, and controllers apply the same lost-link procedures."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which item belongs in the lost-link package?",
+          "question_text": "Which item should be included at a minimum in the available lost link procedure?",
+          "choices": [
+            {
+              "text": "Lost link route of flight, orbit points, altitudes, communications procedures, and preplanned flight termination points if recovery is infeasible.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the aircraft call sign and the controller's initials.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the UAS cruise speed and wake category.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the departure runway and the destination gate number.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note lists route of flight, orbit points, altitudes, communications procedures, and preplanned termination points as minimum lost-link information."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A UAS is displaying 7400. You know its programmed lost link procedure, but the pilot in command reports the aircraft is now deviating from that programmed procedure and another anomaly is developing.",
+          "para_context": "A 7400 display indicates UAS lost link. ATC determines the lost link procedure, coordinates to allow it to be executed, and treats deviations or other anomalies as something more than routine lost-link execution.",
+          "choices": [
+            {
+              "text": "Treat the situation as an abnormal or emergency event rather than routine lost-link execution, and coordinate accordingly.",
+              "is_correct": true
+            },
+            {
+              "text": "Ignore the anomaly because any UAS displaying 7400 must be left to continue without intervention.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat the deviation as acceptable as long as the UAS remains on the same beacon code.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate all coordination because lost-link handling ends once 7400 appears.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If the UAS departs from the programmed lost-link procedure or another anomaly exists, the situation is no longer handled as routine lost-link execution alone."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "5-2-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Which aircraft should receive beacon code assignments?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Beacon code assignments are made only to aircraft equipped with ADS-B and/or a transponder.",
+          "choices": [
+            {
+              "text": "Aircraft equipped with ADS-B and/or a transponder.",
+              "is_correct": true
+            },
+            {
+              "text": "Any aircraft receiving ATC services, whether equipped or not.",
+              "is_correct": false
+            },
+            {
+              "text": "Only military aircraft using Mode 3/A.",
+              "is_correct": false
+            },
+            {
+              "text": "Only IFR aircraft above FL 180.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "ADS-B-equipped aircraft are still required to have an operable transponder.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note states that aircraft equipped with ADS-B are still required to have an operable transponder.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What code source should normally be used unless another rule, directive, or LOA says otherwise?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The default is to issue the computer-assigned beacon code unless another rule or agreement changes that.",
+          "choices": [
+            {
+              "text": "The computer-assigned beacon code.",
+              "is_correct": true
+            },
+            {
+              "text": "A locally improvised code chosen by the controller.",
+              "is_correct": false
+            },
+            {
+              "text": "Code 4000 for all aircraft needing handoff.",
+              "is_correct": false
+            },
+            {
+              "text": "The previous facility's code for the rest of the flight.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a terminal aircraft will remain within the terminal facility's delegated airspace, what code should it receive?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Aircraft remaining within the terminal facility's delegated airspace receive codes from the terminal facility's allocated subset.",
+          "choices": [
+            {
+              "text": "A code from the subset allocated to that terminal facility.",
+              "is_correct": true
+            },
+            {
+              "text": "Only an ARTCC computer-assigned code.",
+              "is_correct": false
+            },
+            {
+              "text": "Always Code 4000.",
+              "is_correct": false
+            },
+            {
+              "text": "Whatever code the pilot last used on a previous flight.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Why is an ARTCC computer-assigned code normally used when an aircraft will enter an adjacent facility's delegated airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Using the ARTCC computer-assigned code provides the adjacent facility advance information and supports auto-acquisition before handoff.",
+          "choices": [
+            {
+              "text": "It provides the adjacent facility advance information and supports auto-acquisition before handoff.",
+              "is_correct": true
+            },
+            {
+              "text": "It permanently eliminates the need for any future code change.",
+              "is_correct": false
+            },
+            {
+              "text": "It prevents the aircraft from ever receiving MSAW processing.",
+              "is_correct": false
+            },
+            {
+              "text": "It reserves Code 4000 for terminal use only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When is Code 4000 assigned?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Code 4000 is assigned when the flight involves rapid or frequent altitude changes across more than one stratum or another category not compatible with a discrete code.",
+          "choices": [
+            {
+              "text": "When the flight involves frequent or rapid altitude changes in more than one stratum or another category not compatible with a discrete code assignment.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever an aircraft enters adjacent delegated airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when an aircraft has lost all communications capability.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever all arrivals are using the same STAR.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-2-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When may you normally request an aircraft to change from the code it was squawking in the transferring facility's area?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The default rule is to wait until the aircraft is within your area of responsibility unless another arrangement already exists.",
+          "choices": [
+            {
+              "text": "After the aircraft is within your area of responsibility, unless another directive, LOA, or coordination says otherwise.",
+              "is_correct": true
+            },
+            {
+              "text": "Immediately after handoff acceptance in every case.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft lands.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot specifically asks for a new code.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Without a directive, LOA, or handoff coordination, a code change request must wait until the aircraft is within your area of responsibility.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is the basic restriction stated in the paragraph.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What can authorize a code change before the aircraft enters your area of responsibility?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A directive, letter of agreement, or coordination at the time of handoff can authorize the earlier change.",
+          "choices": [
+            {
+              "text": "A directive, a letter of agreement, or coordination at the time of handoff.",
+              "is_correct": true
+            },
+            {
+              "text": "Only a pilot request for a discrete code.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the presence of Mode C altitude data.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing; early changes are never allowed.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What code is this paragraph specifically concerned with changing?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It is the code the aircraft was already squawking in the transferring facility's area.",
+          "choices": [
+            {
+              "text": "The code the aircraft was squawking in the transferring facility's area.",
+              "is_correct": true
+            },
+            {
+              "text": "Only Code 4000.",
+              "is_correct": false
+            },
+            {
+              "text": "Only codes assigned after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "Only emergency codes.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A handoff has been accepted, but the aircraft is still outside your area and no early-change coordination exists. What is correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Without the specific exception, the aircraft stays on the transferring facility's code until it is within your area of responsibility.",
+          "choices": [
+            {
+              "text": "Do not request the code change yet.",
+              "is_correct": true
+            },
+            {
+              "text": "Request the change immediately because the handoff was accepted.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign Code 7600 instead.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the handoff and wait for a new target acquisition.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-2-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When is Code 7700 assigned under the emergency code rule?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Code 7700 is assigned when the pilot declares an emergency and the aircraft is not radar identified.",
+          "choices": [
+            {
+              "text": "When the pilot declares an emergency and the aircraft is not radar identified.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever a pilot reports turbulence.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the aircraft loses two-way radio communications.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after ATC has already established radar contact.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the prescribed phraseology when assigning 7700 to a non-radar-identified emergency aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The prescribed phraseology is \"SQUAWK MAYDAY ON 7700.\"",
+          "choices": [
+            {
+              "text": "Squawk MAYDAY on 7700.",
+              "is_correct": true
+            },
+            {
+              "text": "Squawk emergency code at your discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "Set radio failure code 7600 for emergency service.",
+              "is_correct": false
+            },
+            {
+              "text": "Mayday acknowledged, maintain VFR code.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "After radio and radar contact are established, ATC may request most emergency aircraft to change from 7700 to a computer-assigned discrete code.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is true for aircraft other than the excluded single-piloted helicopter and single-piloted turbojet cases.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which aircraft type may be unable to change transponder settings during an emergency and is therefore excluded from the normal post-contact code-change request?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note identifies single-piloted helicopters and single-piloted turbojet aircraft as the excluded cases.",
+          "choices": [
+            {
+              "text": "A single-piloted helicopter or a single-piloted turbojet aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Any multi-pilot turboprop.",
+              "is_correct": false
+            },
+            {
+              "text": "Any aircraft already radar identified.",
+              "is_correct": false
+            },
+            {
+              "text": "Any aircraft operating VFR.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For a Mode C equipped VFR aircraft still in emergency but no longer requiring 7700, what must a terminal facility do?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Terminal facilities assign a code that permits terminal MSAW alarm processing.",
+          "choices": [
+            {
+              "text": "Assign a beacon code that permits terminal MSAW alarm processing.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave the aircraft on 7700 indefinitely.",
+              "is_correct": false
+            },
+            {
+              "text": "Stop all altitude-related processing for the aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign 7600 so the emergency remains obvious.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For an en route Mode C equipped VFR aircraft still in emergency but no longer requiring 7700, what must be done?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The en route requirement is an appropriate keyboard entry to ensure EMSAW alarm processing.",
+          "choices": [
+            {
+              "text": "Make the appropriate keyboard entry to ensure en route MSAW alarm processing.",
+              "is_correct": true
+            },
+            {
+              "text": "Terminate radar service until the emergency is over.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign a new destination airport immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Switch the aircraft to 7500 for special handling.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-2-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What does a Code 7600 display indicate for controller handling purposes?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A 7600 display is handled as a communications-failure event.",
+          "choices": [
+            {
+              "text": "Communications-failure procedures apply.",
+              "is_correct": true
+            },
+            {
+              "text": "Hijack procedures apply.",
+              "is_correct": false
+            },
+            {
+              "text": "A normal discrete-code change is in progress.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft is automatically requesting 7700 treatment.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "An aircraft experiencing loss of two-way radio communications capability can be expected to squawk 7600.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "That is the expectation stated in the note.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What label does ERAM display instead of 7600?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "ERAM displays RDOF instead of 7600.",
+          "choices": [
+            {
+              "text": "RDOF.",
+              "is_correct": true
+            },
+            {
+              "text": "HIJK.",
+              "is_correct": false
+            },
+            {
+              "text": "EMRG.",
+              "is_correct": false
+            },
+            {
+              "text": "LLNK.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What label does STARS or MEARTS display instead of 7600?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "STARS and MEARTS display RF instead of 7600.",
+          "choices": [
+            {
+              "text": "RF.",
+              "is_correct": true
+            },
+            {
+              "text": "HJ.",
+              "is_correct": false
+            },
+            {
+              "text": "EM.",
+              "is_correct": false
+            },
+            {
+              "text": "LL.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A target begins displaying 7600. What is the correct handling choice?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The correct response is to apply communications-failure procedures.",
+          "choices": [
+            {
+              "text": "Handle it as a communications-failure aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Handle it as a hijack display.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore it until another aircraft confirms the problem.",
+              "is_correct": false
+            },
+            {
+              "text": "Reset it to VFR code immediately.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-2-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What does a Code 7500 display indicate for controller handling purposes?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A 7500 display is handled as hijack or unlawful interference.",
+          "choices": [
+            {
+              "text": "Hijack or unlawful-interference procedures apply.",
+              "is_correct": true
+            },
+            {
+              "text": "Communications-failure procedures apply.",
+              "is_correct": false
+            },
+            {
+              "text": "A normal code reassignment is pending.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft is simply asking to cancel IFR.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When you observe Code 7500, you must apply hijacked-aircraft procedures.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is the required response to a 7500 display.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What label does ERAM display instead of 7500?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "ERAM displays HIJK instead of 7500.",
+          "choices": [
+            {
+              "text": "HIJK.",
+              "is_correct": true
+            },
+            {
+              "text": "RDOF.",
+              "is_correct": false
+            },
+            {
+              "text": "EMRG.",
+              "is_correct": false
+            },
+            {
+              "text": "LLNK.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What label does STARS or MEARTS display instead of 7500?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "STARS and MEARTS display HJ instead of 7500.",
+          "choices": [
+            {
+              "text": "HJ.",
+              "is_correct": true
+            },
+            {
+              "text": "RF.",
+              "is_correct": false
+            },
+            {
+              "text": "EM.",
+              "is_correct": false
+            },
+            {
+              "text": "LL.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A target begins displaying 7500. What is the correct handling choice?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The correct response is to apply hijack or unlawful-interference procedures.",
+          "choices": [
+            {
+              "text": "Handle it as a hijack or unlawful-interference event.",
+              "is_correct": true
+            },
+            {
+              "text": "Handle it as a communications failure unless the pilot says otherwise.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore it until it changes to 7700.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat it as a routine VFR code selection error.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-2-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What does Code 7400 indicate when transmitted by a UAS?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Code 7400 may be transmitted when the control link between the UAS and the pilot is lost.",
+          "choices": [
+            {
+              "text": "The control link between the aircraft and the pilot is lost.",
+              "is_correct": true
+            },
+            {
+              "text": "The UAS is requesting a routine code reassignment.",
+              "is_correct": false
+            },
+            {
+              "text": "The UAS has canceled IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "The UAS is intentionally entering standby transponder mode.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Some UAS airframes may still squawk 7600 instead of 7400 during a lost-link event, and the same lost-link procedures still apply.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Some airframes continue to squawk 7600 during lost link, and ATC applies the same lost-link procedures.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When a UAS displays 7400, where do you determine the lost link procedure from?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The lost link procedure is determined from the Special Airworthiness Certificate or the Certificate of Waiver or Authorization.",
+          "choices": [
+            {
+              "text": "The Special Airworthiness Certificate or the Certificate of Waiver or Authorization.",
+              "is_correct": true
+            },
+            {
+              "text": "The current ATIS code and runway configuration.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot's most recent altitude report only.",
+              "is_correct": false
+            },
+            {
+              "text": "The nearest airport diagram.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which item belongs in the minimum lost-link information made available to ATC?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Minimum lost-link information includes route of flight, orbit points, altitudes, communications procedures, and preplanned termination points if recovery is infeasible.",
+          "choices": [
+            {
+              "text": "Lost link route of flight, orbit points, altitudes, communications procedures, and preplanned termination points if recovery is infeasible.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the aircraft registration and assigned squawk code.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the departure gate and estimated block-in time.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the UAS cruise speed and fuel remaining.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What should ATC do to support execution of the programmed lost link procedure?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "ATC coordinates as required so the UAS can execute the lost link procedure.",
+          "choices": [
+            {
+              "text": "Coordinate as required to allow the UAS to execute the lost link procedure.",
+              "is_correct": true
+            },
+            {
+              "text": "Withhold all coordination until the link is restored.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat every 7400 event as an immediate hijack indication.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the programmed procedure and wait for pilot instructions only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the UAS deviates from the programmed lost link procedure or another anomaly develops, what is the correct response?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Once the UAS is deviating from the programmed lost-link procedure or another anomaly exists, the event is no longer treated as routine lost-link execution alone.",
+          "choices": [
+            {
+              "text": "Treat it as an abnormal or emergency event and coordinate accordingly.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume the UAS will always self-correct and take no further action.",
+              "is_correct": false
+            },
+            {
+              "text": "Drop all coordination because the 7400 code already tells the whole story.",
+              "is_correct": false
+            },
+            {
+              "text": "Reset the target to VFR handling because the link is already lost.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1551 @@
+{
+  "activities": {
+    "3-4-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When must sequenced flashing lights be operated?",
+          "choices": [
+            {
+              "text": "When visibility is less than 3 miles and instrument approaches are being made to the runway served by the associated ALS, or when requested or deemed necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the ALS is on, regardless of visibility or approach type.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at night, because SFL is a nighttime aid.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the runway is closed to departures and open only to arrivals.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "SFL operation is tied to low-visibility instrument approaches, pilot request, or controller judgment, and it remains part of the ALS."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this SFL system statement correct?",
+          "question_text": "The sequenced flashing light system uses the ALS and cannot be operated when the ALS is off.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note states that SFL is part of the ALS and cannot operate independently when the ALS is off."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this SFL visibility rule correct?",
+          "question_text": "If visibility is less than 3 miles and instrument approaches are being made to the runway served by the associated ALS, operate the sequenced flashing lights.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the primary visibility-based trigger for SFL operation."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which is one listed SFL operating trigger?",
+          "question_text": "Which condition is specifically listed for SFL operation?",
+          "choices": [
+            {
+              "text": "A pilot requests SFL operation.",
+              "is_correct": true
+            },
+            {
+              "text": "Any VFR pattern aircraft enters the Class D area.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway edge lights are already at maximum intensity.",
+              "is_correct": false
+            },
+            {
+              "text": "The airport beacon is operating below basic VFR minima.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Pilot request is one of the explicit triggers for operating SFL."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Visibility is 2 miles and instrument approaches are being made to the runway served by the ALS. Another controller wants to leave the sequenced flashing lights off because the ALS itself is already on and the pilot has not asked for the flashers.",
+          "para_context": "SFL is operated when visibility is less than 3 miles and instrument approaches are being made to the runway served by the associated ALS. SFL is part of the ALS and cannot operate when the ALS is off.",
+          "choices": [
+            {
+              "text": "Operate the sequenced flashing lights because the listed visibility and approach conditions are met.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave the sequenced flashing lights off because SFL may be used only on pilot request.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the ALS off and use only the SFL because the flashes are the more important low-visibility aid.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave the SFL off because it may not be used unless visibility is below 1 mile.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "With visibility under 3 miles and instrument approaches in progress, SFL should be operated."
+        }
+      ]
+    },
+    "3-4-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How are MALSR or ODALS systems with separate on-off and intensity controls normally operated?",
+          "choices": [
+            {
+              "text": "In accordance with the applicable tables, except when facility directives, pilot request, or controller judgment call for a different setting.",
+              "is_correct": true
+            },
+            {
+              "text": "At the highest available intensity whenever the tower is open.",
+              "is_correct": false
+            },
+            {
+              "text": "At a single fixed setting after sunset and off during the day.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly like runway edge lights, with no separate table or exceptions.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "MALSR and ODALS use the applicable tables unless one of the listed exceptions applies."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this MALSR/ODALS requirement correct?",
+          "question_text": "MALSR or ODALS with separate on-off and intensity controls must be operated in accordance with the applicable table unless a facility directive, pilot request, or controller judgment changes the setting.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the core operating rule for MALSR and ODALS with separate controls."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use the MALSR/ODALS tables.",
+          "question_text": "For a three-step MALSR or ODALS system, what daytime setting applies when visibility is 2 to 5 miles inclusive?",
+          "choices": [
+            {
+              "text": "Setting 2.",
+              "is_correct": true
+            },
+            {
+              "text": "Setting 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Setting 1.",
+              "is_correct": false
+            },
+            {
+              "text": "Low, with no numbered step.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-7 assigns setting 2 for daytime visibility from 2 to 5 miles inclusive."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this tower-closed MALSR rule correct?",
+          "question_text": "If a location provides part-time tower service, duplicate controls are not provided in the associated FSS, and the tower is not staffed during darkness, the MALSR or ODALS must be set to low intensity for a two-step system.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the special nighttime rule for two-step systems at part-time towers without duplicate FSS controls."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this tower-closed three-step MALSR capability statement correct?",
+          "question_text": "A three-step MALSR or ODALS installation uses the air-to-ground radio link during darkness when the tower is unstaffed at a part-time tower if duplicate FSS controls are not provided.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note says the air-to-ground radio link must be activated during darkness when those tower-closed conditions apply."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A part-time tower closes for the night. The airport has a three-step MALSR/ODALS installation, duplicate controls are not provided in the FSS, and there is no radio air-to-ground control available. Another controller wants to leave the system at the last staffed-tower setting.",
+          "para_context": "For three-step MALSR or ODALS at a part-time tower without duplicate FSS controls, the air-to-ground radio link must be activated during darkness when the tower is unstaffed. If there is no radio air-to-ground control, the MALSR or ODALS must be set on intensity setting 2 during those hours.",
+          "choices": [
+            {
+              "text": "Set the MALSR or ODALS to intensity setting 2 for the hours of darkness when the tower is not staffed.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave the system at the last staffed-tower setting because tower closure suspends the visibility table.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the system fully off because no radio air-to-ground control is available.",
+              "is_correct": false
+            },
+            {
+              "text": "Set the system to the brightest setting so pilots can identify the airport more easily while the tower is closed.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Without radio air-to-ground control, the rule directs setting 2 during darkness when the part-time tower is unstaffed."
+        }
+      ]
+    },
+    "3-4-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When is the ALSF-2 system operated under 3-4-9?",
+          "choices": [
+            {
+              "text": "When prevailing visibility is 3/4 mile or less or RVR is 4,000 feet or less.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever prevailing visibility is 3 miles or less.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when both visibility is 3/4 mile or less and RVR is 4,000 feet or less.",
+              "is_correct": false
+            },
+            {
+              "text": "Only on pilot request, regardless of visibility or RVR.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ALSF-2 is tied to the low-visibility trigger of 3/4 mile or less visibility or 4,000 feet or less RVR."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this ALSF-2 low-visibility rule correct?",
+          "question_text": "If prevailing visibility is 3/4 mile or less, operate the ALSF-2 system.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Visibility of 3/4 mile or less is one of the listed ALSF-2 triggers."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which lighting action applies when the ALSF-2 trigger is no longer present?",
+          "question_text": "Which operating action applies once the ALSF-2 trigger condition is no longer a factor?",
+          "choices": [
+            {
+              "text": "Operate the SSALR system.",
+              "is_correct": true
+            },
+            {
+              "text": "Continue ALSF-2 until a pilot asks for SSALR.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn off all approach-light systems and use only runway edge lights.",
+              "is_correct": false
+            },
+            {
+              "text": "Use REIL only, because SSALR is not part of the same low-visibility family.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the ALSF-2 trigger condition is no longer a factor, the rule directs operation of SSALR."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this SSALR transition rule correct?",
+          "question_text": "If the prevailing visibility is greater than 3/4 mile and the RVR is more than 4,000 feet so the ALSF-2 trigger is not a factor, use the SSALR system.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Once the ALSF-2 trigger is no longer present, SSALR becomes the system to operate."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Visibility improves above 3/4 mile and RVR rises above 4,000 feet, so the ALSF-2 trigger is gone. Another controller wants to keep ALSF-2 active because it was already selected and arrivals are still inbound.",
+          "para_context": "Operate ALSF-2 when visibility is 3/4 mile or less or RVR is 4,000 feet or less. Operate SSALR when that low-visibility trigger is not a factor.",
+          "choices": [
+            {
+              "text": "Shift to operating the SSALR system because the ALSF-2 trigger is no longer a factor.",
+              "is_correct": true
+            },
+            {
+              "text": "Continue ALSF-2 until all arrivals are on the ground because it remains valid once initially selected.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn off all approach lighting until a pilot specifically requests a system.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave only the sequenced flashing lights operating because they are enough by themselves once visibility improves.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule is based on the current low-visibility trigger, not on whichever system happened to be selected earlier."
+        }
+      ]
+    },
+    "3-4-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "At night, when are runway edge lights turned on for departures?",
+          "choices": [
+            {
+              "text": "Before the aircraft taxies onto the runway and until it leaves the Class B, C, or D surface area.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft begins its takeoff roll.",
+              "is_correct": false
+            },
+            {
+              "text": "At the moment takeoff clearance is issued and only until liftoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if surface visibility is less than 2 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For nighttime departures, runway edge lights are turned on before taxi onto the runway and remain on until the aircraft leaves the surface area."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this daytime runway-edge-light rule correct?",
+          "question_text": "If it is between sunrise and sunset and surface visibility is less than 2 miles, turn runway edge lights on under the same arrival and departure timing used at night.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The daytime trigger is surface visibility less than 2 miles, using the same timing framework as the nighttime rule."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this runway-edge-light requirement correct?",
+          "question_text": "Do not turn runway edge lights on for runway-use purposes when a NOTAM closing the runway is in effect.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A closure NOTAM blocks runway-edge-light use for takeoffs, landings, and approaches."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this arrival lighting rule correct?",
+          "question_text": "If it is between sunset and sunrise and an IFR aircraft is arriving, turn the runway edge lights on before the aircraft begins final approach and leave them on until the aircraft has taxied off the landing runway.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the nighttime arrival timing for IFR aircraft."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this application statement correct?",
+          "question_text": "The closure-NOTAM restriction concerns runway-use lighting for takeoff, landing, and approach, but it does not prevent turning runway edge lights on for unaffected portions used by taxiing aircraft, surface vehicles, maintenance, or repair.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note limits the closure restriction to runway-use purposes and preserves lighting for unaffected portions used on the surface."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A runway is closed by NOTAM, but a maintenance convoy needs light on an unaffected portion for surface work and taxi movement nearby. Another controller says the closure means the runway edge lights must stay off in every circumstance.",
+          "para_context": "Do not turn on runway edge lights when a NOTAM closing the runway is in effect for runway-use purposes. That restriction does not preclude turning lights on for unaffected portions used by taxiing aircraft, surface vehicles, maintenance, or repair.",
+          "choices": [
+            {
+              "text": "Use the runway edge lights for the unaffected portion if needed for taxiing or surface work, while still not using them for takeoff, landing, or approach on the closed runway.",
+              "is_correct": true
+            },
+            {
+              "text": "Keep all runway edge lights off under every circumstance until the closure NOTAM is canceled.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the full runway-light system on for any movement once surface vehicles are involved, because the closure rule applies only to aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the lights for arriving aircraft as long as maintenance also needs them, because mixed use overrides the closure restriction.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The closure rule does not prevent using lights for unaffected portions needed by taxiing or maintenance activity."
+        }
+      ]
+    },
+    "3-4-11": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How are high intensity runway lights and associated runway centerline and touchdown zone lights normally operated?",
+          "choices": [
+            {
+              "text": "In accordance with the applicable table, except where facility directives, pilot request, or controller judgment call for a different setting.",
+              "is_correct": true
+            },
+            {
+              "text": "At maximum intensity whenever instrument approaches are being conducted.",
+              "is_correct": false
+            },
+            {
+              "text": "Only on pilot request, regardless of visibility.",
+              "is_correct": false
+            },
+            {
+              "text": "On the same settings as taxiway lights because all airfield-light tables are aligned.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "HIRL, runway centerline lights, and touchdown zone lights follow Table 3-4-8 unless an exception applies."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use the HIRL/RCLS/TDZL intensity table.",
+          "question_text": "During the day, what setting applies when visibility is 2 to but not including 3 miles?",
+          "choices": [
+            {
+              "text": "Step 3.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-8 assigns step 3 for daytime visibility from 2 to but not including 3 miles."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this HIRL intensity rule correct?",
+          "question_text": "If it is nighttime and visibility is 3 to 5 miles inclusive, use step 2 for HIRL, runway centerline lights, and touchdown zone lights.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the night table assignment for visibility from 3 to 5 miles inclusive."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this HIRL low-visibility rule correct?",
+          "question_text": "If daytime visibility is less than 1 mile or the appropriate RVR equivalent applies, use step 5 for HIRL, runway centerline lights, and touchdown zone lights.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Step 5 is the daytime assignment for visibility less than 1 mile and or the appropriate RVR equivalent."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this HIRL exception rule correct?",
+          "question_text": "Pilot request, facility directives, or controller judgment may change the normal HIRL, runway centerline light, and touchdown zone light setting.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the three listed exceptions to the standard table."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Night visibility is 4 miles. No pilot has requested a different setting and no local directive changes the standard intensity. Another controller wants to use step 4 because brighter lighting seems better for arrivals.",
+          "para_context": "HIRL, runway centerline lights, and touchdown zone lights use the table unless an exception applies. At night, visibility of 3 to 5 miles inclusive corresponds to step 2.",
+          "choices": [
+            {
+              "text": "Use step 2 because that is the standard night setting for 3 to 5 miles visibility when no exception applies.",
+              "is_correct": true
+            },
+            {
+              "text": "Use step 4 because arrivals are in progress and a brighter setting is always preferred at night.",
+              "is_correct": false
+            },
+            {
+              "text": "Use step 1 because step 2 is only for daylight operations.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the associated centerline and touchdown zone lights off because only HIRL is table-controlled at that visibility.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Without an exception, the normal table value controls."
+        }
+      ]
+    },
+    "3-4-12": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How are HIRL that control the associated MALSR normally operated?",
+          "choices": [
+            {
+              "text": "In accordance with the HIRL-associated-with-MALSR table, except as requested by the pilot or as deemed necessary if not contrary to the pilot's request.",
+              "is_correct": true
+            },
+            {
+              "text": "At the same settings as standalone HIRL, with no special table or notes.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at the setting requested by the pilot, because the table is advisory only.",
+              "is_correct": false
+            },
+            {
+              "text": "At the lowest intensity unless visibility is below one-half mile.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "HIRL associated with MALSR uses its own table, with pilot request and controller-necessity exceptions."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this HIRL-with-MALSR requirement correct?",
+          "question_text": "HIRL that control the associated MALSR must be operated in accordance with the HIRL-with-MALSR table unless a pilot request or a controller necessity determination changes the setting.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the core operating rule for HIRL associated with MALSR."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use the HIRL-with-MALSR table.",
+          "question_text": "At night, what setting applies when visibility is more than 3 miles?",
+          "choices": [
+            {
+              "text": "Step 1.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-9 assigns step 1 at night when visibility is more than 3 miles."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this HIRL-with-MALSR low-visibility rule correct?",
+          "question_text": "If it is nighttime and visibility is less than 1 mile, use step 4 for HIRL associated with MALSR unless a pilot requests a different setting.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Step 4 is the night table value for visibility less than 1 mile."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this MALSR step-down rule correct?",
+          "question_text": "If you reduce the brightness from a given setting to a lower intended step, you must rotate the brightness control below the intended setting and then back to the proper step to ensure the MALSR operates at the correct brightness.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note gives that specific control technique to ensure the MALSR ends at the intended lower brightness."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You are reducing HIRL associated with MALSR from a higher setting to a lower intended step. Another controller says you can stop directly on the desired lower number because the MALSR always tracks correctly without any extra action.",
+          "para_context": "When stepping HIRL associated with MALSR down to a lower setting, rotate below the intended step and then back to the proper step so the MALSR will operate at the correct brightness.",
+          "choices": [
+            {
+              "text": "Rotate below the intended lower step and then return to the proper step.",
+              "is_correct": true
+            },
+            {
+              "text": "Stop directly on the intended lower step because the MALSR tracks automatically without any special technique.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the MALSR off completely before selecting the lower HIRL step.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave the brighter setting in place until a pilot complains because step-down precision is not operationally important.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note gives a specific step-down technique to make sure the MALSR actually ends at the correct brightness."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-4-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When are sequenced flashing lights operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "SFL is used when visibility is less than 3 miles and instrument approaches are being made to the runway served by the associated ALS, or when otherwise requested or deemed necessary.",
+          "choices": [
+            {
+              "text": "When visibility is less than 3 miles and instrument approaches are being made to the runway served by the associated ALS, or when otherwise requested or deemed necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the ALS is on.",
+              "is_correct": false
+            },
+            {
+              "text": "Only between sunset and sunrise.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when visibility is less than 1 mile.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Sequenced flashing lights can be operated when the ALS is off as long as the pilot requests them.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": false,
+          "explanation": "SFL is a component of the ALS and cannot be operated when the ALS is off."
+        },
+        {
+          "question_text": "Which condition is one of the listed SFL operating triggers?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Pilot request is one of the listed triggers.",
+          "choices": [
+            {
+              "text": "Pilot request.",
+              "is_correct": true
+            },
+            {
+              "text": "Any VFR aircraft entering the Class D area.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway edge lights at high intensity.",
+              "is_correct": false
+            },
+            {
+              "text": "The rotating beacon being on.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If visibility is 2 miles and instrument approaches are being made to the runway served by the ALS, what should be done with SFL?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That combination of visibility and approach type calls for SFL operation.",
+          "choices": [
+            {
+              "text": "Operate the sequenced flashing lights.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave them off unless the pilot requests them.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the ALS off and use only SFL.",
+              "is_correct": false
+            },
+            {
+              "text": "Use them only if visibility drops below 1 mile.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What system relationship limits SFL operation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "SFL is part of the ALS and cannot operate if the ALS is off.",
+          "choices": [
+            {
+              "text": "SFL is part of the ALS and cannot operate when the ALS is off.",
+              "is_correct": true
+            },
+            {
+              "text": "SFL can replace the ALS entirely if visibility is below 3 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "SFL can operate independently only during daylight.",
+              "is_correct": false
+            },
+            {
+              "text": "SFL must be tied to runway edge lights rather than the ALS.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "How are MALSR or ODALS with separate on-off and intensity controls normally operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They are operated according to the applicable tables, with the listed exceptions.",
+          "choices": [
+            {
+              "text": "In accordance with the applicable tables, except when facility directives, pilot request, or controller judgment call for a different setting.",
+              "is_correct": true
+            },
+            {
+              "text": "At the highest intensity whenever the tower is staffed.",
+              "is_correct": false
+            },
+            {
+              "text": "At one fixed night setting.",
+              "is_correct": false
+            },
+            {
+              "text": "Only on pilot request.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For a three-step MALSR or ODALS system, what daytime setting applies when visibility is 2 to 5 miles inclusive?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-7 assigns setting 2 for that daytime visibility range.",
+          "choices": [
+            {
+              "text": "Setting 2.",
+              "is_correct": true
+            },
+            {
+              "text": "Setting 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Setting 1.",
+              "is_correct": false
+            },
+            {
+              "text": "Low with no numbered setting.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At a part-time tower without duplicate controls in the associated FSS, a two-step MALSR or ODALS must be set to low intensity during darkness when the tower is not staffed.",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "That is the special tower-closed rule for two-step systems at locations without duplicate FSS controls."
+        },
+        {
+          "question_text": "At a part-time tower with a three-step MALSR or ODALS and no radio air-to-ground control during darkness, what setting applies when the tower is unstaffed?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The note directs setting 2 in that tower-closed, no-radio-control case.",
+          "choices": [
+            {
+              "text": "Intensity setting 2.",
+              "is_correct": true
+            },
+            {
+              "text": "Intensity setting 1.",
+              "is_correct": false
+            },
+            {
+              "text": "Intensity setting 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Lights off.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What should be activated during darkness for a three-step MALSR or ODALS at a part-time tower when the tower is unstaffed and duplicate FSS controls are not provided?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The note requires activation of the air-to-ground radio link when those conditions exist.",
+          "choices": [
+            {
+              "text": "The air-to-ground radio link.",
+              "is_correct": true
+            },
+            {
+              "text": "The runway centerline-light override circuit.",
+              "is_correct": false
+            },
+            {
+              "text": "The REIL manual flash mode.",
+              "is_correct": false
+            },
+            {
+              "text": "The airport rotating-beacon standby selector.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Pilot request and controller judgment may change the normal MALSR or ODALS setting.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Both pilot request and controller judgment are listed exceptions."
+        }
+      ]
+    },
+    "3-4-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When is the ALSF-2 system operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "ALSF-2 is used when prevailing visibility is 3/4 mile or less or RVR is 4,000 feet or less.",
+          "choices": [
+            {
+              "text": "When prevailing visibility is 3/4 mile or less or the RVR is 4,000 feet or less.",
+              "is_correct": true
+            },
+            {
+              "text": "When prevailing visibility is 3 miles or less.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when both low visibility and low RVR occur together.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when requested by the pilot.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When the ALSF-2 trigger is no longer a factor, what system is operated instead?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The rule directs operation of SSALR once the ALSF-2 trigger is no longer present.",
+          "choices": [
+            {
+              "text": "SSALR.",
+              "is_correct": true
+            },
+            {
+              "text": "ALSF-2 at reduced intensity.",
+              "is_correct": false
+            },
+            {
+              "text": "No approach-light system.",
+              "is_correct": false
+            },
+            {
+              "text": "REIL only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "ALSF-2 is triggered only when both prevailing visibility is 3/4 mile or less and RVR is 4,000 feet or less.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": false,
+          "explanation": "The trigger is disjunctive: visibility 3/4 mile or less or RVR 4,000 feet or less."
+        },
+        {
+          "question_text": "If prevailing visibility is greater than 3/4 mile and the RVR is more than 4,000 feet, what should be done?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That means the ALSF-2 trigger is not a factor, so SSALR is operated.",
+          "choices": [
+            {
+              "text": "Operate the SSALR system.",
+              "is_correct": true
+            },
+            {
+              "text": "Continue ALSF-2 until all arrivals land.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn off all approach lights.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only runway edge lights.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What nonstandard factors can still affect ALSF-2 operation while the low-visibility trigger is active?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph lists pilot request and controller judgment so long as it is not contrary to pilot request.",
+          "choices": [
+            {
+              "text": "Pilot request or controller judgment if not contrary to pilot request.",
+              "is_correct": true
+            },
+            {
+              "text": "Only local facility directives.",
+              "is_correct": false
+            },
+            {
+              "text": "Airport management preference.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway edge-light intensity.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "At night, when are runway edge lights turned on for departures?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They are turned on before the aircraft taxies onto the runway and stay on until it leaves the Class B, C, or D surface area.",
+          "choices": [
+            {
+              "text": "Before the aircraft taxies onto the runway and until it leaves the Class B, C, or D surface area.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft begins the takeoff roll.",
+              "is_correct": false
+            },
+            {
+              "text": "Only while the aircraft is physically on the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when visibility is under 2 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For nighttime IFR arrivals, when are runway edge lights turned on?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They are turned on before the aircraft begins final approach.",
+          "choices": [
+            {
+              "text": "Before the aircraft begins final approach.",
+              "is_correct": true
+            },
+            {
+              "text": "When the aircraft crosses the runway threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after landing clearance is issued.",
+              "is_correct": false
+            },
+            {
+              "text": "When the aircraft leaves the Class D surface area inbound.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Between sunrise and sunset, runway edge lights are turned on under the same arrival and departure timing when surface visibility is less than 2 miles.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The daytime trigger is surface visibility less than 2 miles, while using the same timing framework as the nighttime rule."
+        },
+        {
+          "question_text": "What does the rule say about runway edge lights when a NOTAM closing the runway is in effect?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Runway edge lights are not turned on for runway-use purposes when a closure NOTAM is in effect.",
+          "choices": [
+            {
+              "text": "Do not turn them on for runway-use purposes while the closure NOTAM is in effect.",
+              "is_correct": true
+            },
+            {
+              "text": "Turn them on automatically for every arrival and departure anyway.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn them on only if the pilot accepts the runway at own risk.",
+              "is_correct": false
+            },
+            {
+              "text": "Use them only during daylight when visibility is less than 2 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Does the closure-NOTAM restriction preclude turning runway edge lights on for unaffected portions used by taxiing aircraft, surface vehicles, maintenance, or repair?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "No. The note says the restriction concerns takeoffs, landings, and approaches and does not preclude lighting unaffected portions for those surface uses.",
+          "choices": [
+            {
+              "text": "No. Unaffected portions may still be lighted for taxiing, surface vehicles, maintenance, or repair.",
+              "is_correct": true
+            },
+            {
+              "text": "No lighting may be used anywhere on the runway until the NOTAM is canceled.",
+              "is_correct": false
+            },
+            {
+              "text": "Only aircraft taxiing may use the unaffected portion; surface vehicles and maintenance may not.",
+              "is_correct": false
+            },
+            {
+              "text": "Only maintenance may use the unaffected portion; taxiing aircraft may not.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Runway edge lights may be turned on differently from the standard night/day rules when requested by a pilot and no other known aircraft will be adversely affected.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Pilot request with no adverse effect to other known aircraft is one of the explicit exceptions."
+        }
+      ]
+    },
+    "3-4-11": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "How are HIRL, runway centerline lights, and touchdown zone lights normally operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They follow Table 3-4-8 unless a facility directive, pilot request, or controller judgment changes the setting.",
+          "choices": [
+            {
+              "text": "In accordance with the applicable table, except where facility directives, pilot request, or controller judgment call for a different setting.",
+              "is_correct": true
+            },
+            {
+              "text": "At maximum intensity during all instrument operations.",
+              "is_correct": false
+            },
+            {
+              "text": "Only on pilot request.",
+              "is_correct": false
+            },
+            {
+              "text": "At the same settings as taxiway lights.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "During the day, what HIRL/RCLS/TDZL setting applies when visibility is 2 to but not including 3 miles?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-8 assigns step 3 for that daytime visibility range.",
+          "choices": [
+            {
+              "text": "Step 3.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At night, visibility of 3 to 5 miles inclusive corresponds to step 2 for HIRL, runway centerline lights, and touchdown zone lights.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "That is the night table assignment for visibility from 3 to 5 miles inclusive."
+        },
+        {
+          "question_text": "What daytime setting applies when visibility is less than 1 mile and or the appropriate RVR equivalent applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Step 5 is the daytime assignment for the lowest visibility band and or the appropriate RVR equivalent.",
+          "choices": [
+            {
+              "text": "Step 5.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which factors may change the normal HIRL/RCLS/TDZL table setting?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph lists local facility directives, pilot request, and controller judgment as exceptions.",
+          "choices": [
+            {
+              "text": "Facility directives, pilot request, or controller judgment.",
+              "is_correct": true
+            },
+            {
+              "text": "Only RVR changes.",
+              "is_correct": false
+            },
+            {
+              "text": "Only pilot request.",
+              "is_correct": false
+            },
+            {
+              "text": "Only airport management preference.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Night visibility is 4 miles and no exception applies. What HIRL/RCLS/TDZL setting should be used?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Visibility of 3 to 5 miles inclusive at night corresponds to step 2.",
+          "choices": [
+            {
+              "text": "Step 2.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 1.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-12": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "How are HIRL that control the associated MALSR normally operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They use the HIRL-with-MALSR table unless a pilot request or controller necessity determination changes the setting.",
+          "choices": [
+            {
+              "text": "In accordance with the HIRL-with-MALSR table, except as requested by the pilot or as deemed necessary if not contrary to the pilot's request.",
+              "is_correct": true
+            },
+            {
+              "text": "At the same settings as all standalone HIRL systems with no special note or table.",
+              "is_correct": false
+            },
+            {
+              "text": "Only on pilot request.",
+              "is_correct": false
+            },
+            {
+              "text": "At the lowest intensity unless visibility is below one-half mile.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At night, what setting applies for HIRL associated with MALSR when visibility is more than 3 miles?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-9 assigns step 1 at night for visibility more than 3 miles.",
+          "choices": [
+            {
+              "text": "Step 1.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At night, if visibility is less than 1 mile, step 4 is the normal table setting for HIRL associated with MALSR.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Step 4 is the night table value for visibility less than 1 mile."
+        },
+        {
+          "question_text": "What control technique should be used when stepping HIRL associated with MALSR down to a lower intended setting?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The note directs rotating below the intended setting and then back to it so the MALSR ends at the correct brightness.",
+          "choices": [
+            {
+              "text": "Rotate below the intended setting and then back to the appropriate step.",
+              "is_correct": true
+            },
+            {
+              "text": "Stop directly on the intended lower step with no extra action.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the MALSR fully off before selecting the lower step.",
+              "is_correct": false
+            },
+            {
+              "text": "Cycle runway edge lights instead of adjusting the HIRL brightness control.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Pilot request and controller judgment may change the normal HIRL-with-MALSR table setting.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Those are the listed exceptions in 3-4-12."
+        },
+        {
+          "question_text": "You are reducing HIRL associated with MALSR to a lower brightness. Why does the note require rotating below the intended step and then back up?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That technique ensures the MALSR operates at the correct brightness after the step-down.",
+          "choices": [
+            {
+              "text": "To ensure the MALSR operates at the appropriate brightness.",
+              "is_correct": true
+            },
+            {
+              "text": "To reset the runway edge-light memory relay.",
+              "is_correct": false
+            },
+            {
+              "text": "To force the pilot-request override to cancel automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "To keep the tower-closed radio link active.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

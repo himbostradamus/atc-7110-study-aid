@@ -1,0 +1,1153 @@
+{
+  "activities": {
+    "3-6-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When must the operational status of ASDE be determined?",
+          "choices": [
+            {
+              "text": "During the relief briefing or as soon as possible after assuming responsibility.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after visibility drops below 1 mile.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at the beginning of the midnight shift.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the first pilot reports a surface issue.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ASDE operational status must be determined during the relief briefing or as soon as possible after assuming responsibility."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this equipment-usage directive correct?",
+          "question_text": "Use the relief briefing or the first opportunity after assuming responsibility to determine ASDE operational status.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the required timing for determining ASDE operational status."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this continuous-operation rule correct?",
+          "question_text": "If an ASDE system does not have safety logic and visibility is less than the most distant point in the active movement area, you must operate the system continuously.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Reduced visibility to less than the most distant point in the active movement area is one of the listed triggers for continuous operation of a system without safety logic."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which is one listed reason to operate an ASDE system without safety logic continuously?",
+          "question_text": "Which listed condition requires continuous operation?",
+          "choices": [
+            {
+              "text": "It is between sunset and sunrise.",
+              "is_correct": true
+            },
+            {
+              "text": "The runway in use has centerline lights.",
+              "is_correct": false
+            },
+            {
+              "text": "A pilot requests a runway change.",
+              "is_correct": false
+            },
+            {
+              "text": "The ATIS code changes.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Systems without safety logic must run continuously between sunset and sunrise, in certain reduced-visibility conditions, or whenever the controller decides the system will assist performance of duties."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this radar-only-mode capability statement correct?",
+          "question_text": "Radar-only mode provides full core safety alert status after MLAT or ADS-B loss, but it does not provide automatic data block capability.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note says radar-only mode keeps full core alert status after MLAT or ADS-B loss, but without automatic data block capability."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You just relieved a surface position after sunset. The ASDE in use does not have safety logic, and visibility is still good enough to see the field. Another controller says you can leave the system idle until visibility worsens because nothing unusual is happening.",
+          "para_context": "Determine ASDE operational status during the relief briefing or as soon as possible after assuming responsibility. Systems without safety logic are operated continuously between sunset and sunrise.",
+          "choices": [
+            {
+              "text": "Confirm the ASDE status immediately and operate the system continuously because it is after sunset and the system lacks safety logic.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until visibility drops before checking the ASDE because sunset alone is not enough to require continuous operation.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the ASDE only if a pilot asks for progressive taxi because continuous use is optional at night.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the ASDE on only for departing aircraft because it does not apply to vehicles or taxiing traffic.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A system without safety logic must be run continuously between sunset and sunrise, and the controller must determine the system status during relief briefing or as soon as possible after assuming responsibility."
+        }
+      ]
+    },
+    "3-6-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which is an approved way to identify an observed target or track on ASDE?",
+          "choices": [
+            {
+              "text": "Correlate its position with a pilot or vehicle operator position report.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume the nearest moving target is the aircraft you expect.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only the target's groundspeed display.",
+              "is_correct": false
+            },
+            {
+              "text": "Identify every target by runway occupancy alone.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "An observed target or track may be identified by correlation with a pilot or vehicle operator position report, controller visual observation, or an identified ASR or CTRD target."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which source may be used to identify an observed target or track?",
+          "question_text": "Which source may identify the target?",
+          "choices": [
+            {
+              "text": "An identified ASR or CTRD target.",
+              "is_correct": true
+            },
+            {
+              "text": "The airport rotating beacon setting.",
+              "is_correct": false
+            },
+            {
+              "text": "The current ATIS code letter.",
+              "is_correct": false
+            },
+            {
+              "text": "A runway light intensity setting.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "One approved identification method is to correlate the observed target or track with an identified ASR or CTRD target."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this false-target verification rule correct?",
+          "question_text": "If the area containing a suspected false target is not visible from the tower, you may use an airport operations vehicle or pilots in the area for visual observation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the listed way to obtain visual observation when the tower cannot see the area containing the suspected false target."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this recordkeeping directive correct?",
+          "question_text": "Use FAA Form 7230-4 to record a false track that is temporarily dropped.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A notation must be made on FAA Form 7230-4 when a track is temporarily dropped after being positively verified as false."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this temporary-drop statement correct?",
+          "question_text": "After a track is positively verified as false by report or controller visual observation, the track may be temporarily dropped, removing it from the display and safety logic.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Once a track is positively verified as false, it may be temporarily dropped, which removes it from the display and from safety logic."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A surface target appears near a closed taxiway, but the area is hidden from the tower cab. Another controller wants to delete it immediately because no aircraft should be there. Airport operations is nearby and able to look at the area.",
+          "para_context": "A suspected false target may be verified by visual observation. If the area is not visible from the tower, airport operations vehicles or pilots in the area may be used. After positive verification that the track is false, it may be temporarily dropped and logged on FAA Form 7230-4.",
+          "choices": [
+            {
+              "text": "Get visual verification from airport operations, then temporarily drop the track and log it on FAA Form 7230-4 if it is positively verified as false.",
+              "is_correct": true
+            },
+            {
+              "text": "Delete the track immediately because the taxiway is closed and that alone proves the target is false.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the target and wait for a pilot complaint because ASDE false tracks do not need verification.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer the target to ground control radar because ASDE targets cannot be dropped once displayed.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The track must be positively verified as false before it is temporarily dropped, and the drop must be recorded on FAA Form 7230-4."
+        }
+      ]
+    },
+    "3-6-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which is an approved use of ASDE-derived information?",
+          "choices": [
+            {
+              "text": "Confirming a pilot-reported position on the movement area.",
+              "is_correct": true
+            },
+            {
+              "text": "Giving exact taxi headings as a normal practice.",
+              "is_correct": false
+            },
+            {
+              "text": "Replacing the pilot's responsibility to see and avoid ground traffic.",
+              "is_correct": false
+            },
+            {
+              "text": "Authorizing a departure over an unidentified runway target.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ASDE-derived information may be used to confirm pilot-reported positions and for other listed movement-area control functions."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this information-usage statement correct?",
+          "question_text": "ASDE-derived information supports movement-area clearances, location determination, compliance monitoring, and directional taxi information.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are all listed uses of ASDE-derived information."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which is a listed use of ASDE-derived information?",
+          "question_text": "Which use is listed?",
+          "choices": [
+            {
+              "text": "Monitoring compliance with runway and taxiway instructions.",
+              "is_correct": true
+            },
+            {
+              "text": "Assigning magnetic headings for routine taxi turns.",
+              "is_correct": false
+            },
+            {
+              "text": "Relieving pilots of visual navigation responsibility.",
+              "is_correct": false
+            },
+            {
+              "text": "Replacing the need for movement-area clearances.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Controllers may use ASDE-derived information to monitor compliance with instructions on taxiways and runways."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this runway-protection directive correct?",
+          "question_text": "Use runway protection and do not allow an aircraft to begin departure roll or cross the landing threshold if an unidentified target or track is displayed on the runway.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Departure roll and landing-threshold crossing are both prohibited while an unidentified target or track remains displayed on the runway."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this taxi-guidance limitation correct?",
+          "question_text": "Do not provide specific navigational guidance such as exact headings unless an emergency exists or you have mutual agreement with the pilot.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Exact headings are not provided for routine surface guidance unless an emergency exists or there is mutual agreement with the pilot."
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "One word in this phraseology is incorrect. Tap it.",
+          "original_phrase": "TURN RIGHT ON THE TAXIWAY YOU ARE APPROACHING.",
+          "display_text": "TURN RIGHT ON THE TAXIWAY YOU ARE PASSING",
+          "tokens": ["TURN", "RIGHT", "ON", "THE", "TAXIWAY", "YOU", "ARE", "PASSING"],
+          "error_index": 7,
+          "correct_token": "APPROACHING",
+          "explanation": "The approved directional taxi phrase is 'TURN (left/right) ON THE TAXIWAY/RUNWAY YOU ARE APPROACHING.'"
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "A pilot is approaching a turnoff and you need to specify the turn. Build the instruction.",
+          "target_phrase": "TURN LEFT ON THE TAXIWAY YOU ARE APPROACHING"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot is taxiing in low visibility and asks for an exact heading to reach the next turn. You can see the aircraft on ASDE and know the aircraft should turn at the next taxiway. At the same time, an unidentified target is displayed on the departure runway another aircraft is waiting to use.",
+          "para_context": "ASDE-derived information may be used for directional taxi information and position confirmation, but exact headings are not provided except in an emergency or by mutual agreement. An aircraft must not begin departure roll or cross the landing threshold if an unidentified target or track is displayed on the runway.",
+          "choices": [
+            {
+              "text": "Use directional turn phraseology rather than exact headings unless the exception applies, and do not allow the departure to begin while the unidentified runway target remains displayed.",
+              "is_correct": true
+            },
+            {
+              "text": "Give the exact taxi heading as routine surface guidance and allow the departure because the unidentified target may disappear on its own.",
+              "is_correct": false
+            },
+            {
+              "text": "Withhold all taxi guidance because ASDE cannot be used for directional turns, but allow the departure because the aircraft is already in position.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to navigate visually without any directional information and issue takeoff clearance because the target is only unidentified, not confirmed conflicting.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ASDE may support directional taxi information, but not routine exact headings, and runway use must stop while an unidentified target or track remains displayed on the runway."
+        }
+      ]
+    },
+    "3-6-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the required response when an arrival aircraft, still airborne before the landing threshold, activates a safety-logic warning alert?",
+          "choices": [
+            {
+              "text": "Issue go-around instructions.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for the pilot to advise whether the runway looks clear.",
+              "is_correct": false
+            },
+            {
+              "text": "Switch the aircraft to ground control because the alert is surface-related.",
+              "is_correct": false
+            },
+            {
+              "text": "Continue the approach if the arrival has already been cleared to land.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "An arrival aircraft that is still airborne before the landing threshold and triggers a warning alert requires a go-around instruction."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this alert-assessment directive correct?",
+          "question_text": "Use visual observation and the ASDE display immediately to assess a safety-logic alert.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The first response to a safety-logic alert is immediate assessment visually and on the ASDE display."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this taxiway-alert response correct?",
+          "question_text": "If an arrival aircraft receives a warning alert to a taxiway, you must issue a go-around.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A warning alert involving an arrival aircraft to a taxiway requires a go-around instruction."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which is the listed exception that may allow a threshold alert to be disregarded?",
+          "question_text": "Which exception is listed?",
+          "choices": [
+            {
+              "text": "A known formation flight is crossing the threshold and all other factors are acceptable.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft has already read back the landing clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "The runway appears clear on a separate surface map display.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot says the formation is in sight.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The listed exception is a known formation flight crossing the threshold when all other factors are acceptable."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this note-based statement correct?",
+          "question_text": "A side-step or circle-to-land to another runway may be used to satisfy the requirement that the aircraft not land on the alerted approach after a warning alert.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note explains that the intent is the aircraft does not land on that approach, and a side-step or circle-to-land to another runway satisfies the requirement."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Two arrivals are converging toward intersecting runways when the surface system generates an alert. Another controller suggests waiting a few more seconds because one aircraft may slow enough to make the alert disappear. In a separate case later that shift, a known formation flight crosses the threshold and activates the same kind of threshold alert while all other factors remain acceptable.",
+          "para_context": "When two arrivals, or an arrival and a departing aircraft, activate an alert, issue go-around instructions or take other appropriate action to ensure intersecting-runway separation. A threshold warning alert may be disregarded for a known formation flight crossing the threshold if all other factors are acceptable.",
+          "choices": [
+            {
+              "text": "Take immediate action to ensure intersecting-runway separation in the first case, and the known formation-flight threshold alert may be disregarded in the second case if all other factors are acceptable.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for the first alert to resolve itself, and treat the formation-flight threshold alert as an automatic go-around every time with no exception.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore both alerts unless a pilot reports traffic in sight because safety-logic alerts are advisory only.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue taxi instructions in the first case and landing clearance changes in the second case because runway alerts do not call for go-arounds or separation action.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The intersecting-runway alert requires immediate action to ensure separation, while the known formation-flight threshold alert is the one listed exception that may be disregarded if all other factors are acceptable."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-6-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must ASDE operational status be determined?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "ASDE operational status is determined during the relief briefing or as soon as possible after assuming responsibility.",
+          "choices": [
+            {
+              "text": "During the relief briefing or as soon as possible after assuming responsibility.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when reduced visibility procedures begin.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the first runway movement of the shift.",
+              "is_correct": false
+            },
+            {
+              "text": "Only during daylight operations.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Systems with safety logic must be operated continuously.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Systems with safety logic are operated continuously."
+        },
+        {
+          "question_text": "Which is one listed reason to operate an ASDE system without safety logic continuously?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Between sunset and sunrise is one of the listed continuous-operation conditions.",
+          "choices": [
+            {
+              "text": "It is between sunset and sunrise.",
+              "is_correct": true
+            },
+            {
+              "text": "The airport beacon is on.",
+              "is_correct": false
+            },
+            {
+              "text": "The ATIS has just been updated.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot requests a runway change.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If visibility is less than the most distant point in the active movement area and the ASDE does not have safety logic, what is required?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That visibility condition requires continuous operation of the system.",
+          "choices": [
+            {
+              "text": "Operate the ASDE continuously.",
+              "is_correct": true
+            },
+            {
+              "text": "Operate it only for departures.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave it off unless a pilot requests it.",
+              "is_correct": false
+            },
+            {
+              "text": "Use it only after receiving supervisor approval.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does ASDE use augment?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "ASDE is used to augment visual observation of landing and departing aircraft and movement-area traffic.",
+          "choices": [
+            {
+              "text": "Visual observation of aircraft and vehicle movement on runways, taxiways, and other movement areas.",
+              "is_correct": true
+            },
+            {
+              "text": "Only pilot reports from the local frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Only runway light controls.",
+              "is_correct": false
+            },
+            {
+              "text": "Approach radar vectoring outside the movement area.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "After MLAT or ADS-B loss, what capability is lost in ASDE-X or ASSC radar-only mode?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Radar-only mode keeps full core alert status but without automatic data block capability.",
+          "choices": [
+            {
+              "text": "Automatic data block capability.",
+              "is_correct": true
+            },
+            {
+              "text": "All core safety alert status.",
+              "is_correct": false
+            },
+            {
+              "text": "The surface display itself.",
+              "is_correct": false
+            },
+            {
+              "text": "All runway surveillance capability.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-6-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Which is an approved way to identify an observed target or track on ASDE?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "One approved identification method is to correlate the target with a pilot or vehicle operator position report.",
+          "choices": [
+            {
+              "text": "Correlate its position with a pilot or vehicle operator position report.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume the nearest track is the correct one.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only target speed information.",
+              "is_correct": false
+            },
+            {
+              "text": "Identify it by runway assignment alone.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller may identify an observed ASDE target by controller visual observation.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Controller visual observation is one of the approved identification methods."
+        },
+        {
+          "question_text": "If the area containing a suspected false target is not visible from the tower, who may be used for visual observation?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Airport operations vehicles or pilots in the area may be used for visual observation when the tower cannot see the area.",
+          "choices": [
+            {
+              "text": "Airport operations vehicles or pilots in the area.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the approach controller.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the airport beacon technician.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the previous controller on position.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "After a track is positively verified as false, what may be done?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A positively verified false track may be temporarily dropped, removing it from the display and safety logic.",
+          "choices": [
+            {
+              "text": "Temporarily drop it, removing it from the display and safety logic.",
+              "is_correct": true
+            },
+            {
+              "text": "Permanently delete it with no record.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore it but leave it in safety logic.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer it to runway status lights.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What form must be annotated when a false track is temporarily dropped?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A notation is made on FAA Form 7230-4.",
+          "choices": [
+            {
+              "text": "FAA Form 7230-4.",
+              "is_correct": true
+            },
+            {
+              "text": "FAA Form 7233-1.",
+              "is_correct": false
+            },
+            {
+              "text": "FAA Form 8020-17.",
+              "is_correct": false
+            },
+            {
+              "text": "FAA Form 7110-1.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is removed when a positively verified false track is temporarily dropped?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Temporary drop removes the track from both the display and safety logic.",
+          "choices": [
+            {
+              "text": "The track is removed from the display and safety logic.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the data block is removed while safety logic remains active.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the pilot report is removed from consideration.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing is removed; the track is only relabeled.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-6-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Which is an approved use of ASDE-derived information?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Controllers may use ASDE-derived information to confirm pilot-reported positions and for other listed movement-area control tasks.",
+          "choices": [
+            {
+              "text": "Confirm a pilot-reported position.",
+              "is_correct": true
+            },
+            {
+              "text": "Assign exact taxi headings as a routine practice.",
+              "is_correct": false
+            },
+            {
+              "text": "Replace the pilot's responsibility to navigate visually.",
+              "is_correct": false
+            },
+            {
+              "text": "Authorize runway use over an unidentified target.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "ASDE-derived information may be used to provide exact headings for routine taxi guidance.",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": false,
+          "explanation": "Specific navigational guidance such as exact headings is not provided unless an emergency exists or there is mutual agreement with the pilot."
+        },
+        {
+          "question_text": "Which phraseology is approved when directing a pilot to turn at the next taxiway?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The approved phrase is 'TURN (left/right) ON THE TAXIWAY/RUNWAY YOU ARE APPROACHING.'",
+          "choices": [
+            {
+              "text": "TURN LEFT ON THE TAXIWAY YOU ARE APPROACHING.",
+              "is_correct": true
+            },
+            {
+              "text": "TURN LEFT AT HEADING TWO SEVEN ZERO NOW.",
+              "is_correct": false
+            },
+            {
+              "text": "TURN LEFT ON THE TAXIWAY YOU ARE PASSING.",
+              "is_correct": false
+            },
+            {
+              "text": "MAKE THE NEXT LEFT WHENEVER READY.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must not be allowed when an unidentified target or track is displayed on the runway?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "An aircraft must not begin departure roll or cross the landing threshold while an unidentified target or track is displayed on the runway.",
+          "choices": [
+            {
+              "text": "An aircraft beginning departure roll or crossing the landing threshold.",
+              "is_correct": true
+            },
+            {
+              "text": "A pilot requesting progressive taxi instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "A controller confirming a reported position.",
+              "is_correct": false
+            },
+            {
+              "text": "A vehicle reporting off the runway.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Who remains responsible for visual navigation to the clearance limit and for avoiding parked or taxiing aircraft, vehicles, or persons?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The pilot remains responsible for visual navigation and avoidance.",
+          "choices": [
+            {
+              "text": "The pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "The ground controller.",
+              "is_correct": false
+            },
+            {
+              "text": "Airport operations.",
+              "is_correct": false
+            },
+            {
+              "text": "The ASDE system automatically.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under what condition may specific navigational guidance such as exact headings be provided?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Exact headings may be provided only in an emergency or by mutual agreement with the pilot.",
+          "choices": [
+            {
+              "text": "In an emergency or by mutual agreement with the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the aircraft is on the movement area.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever visibility is below 3 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the pilot asks for progressive taxi.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-6-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What is the first thing a controller does when the system generates a safety-logic alert?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller immediately assesses the alert visually and on the ASDE display.",
+          "choices": [
+            {
+              "text": "Assess it immediately visually and on the ASDE display.",
+              "is_correct": true
+            },
+            {
+              "text": "Call airport operations before looking at the display.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait to see if the alert clears by itself.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer control of the aircraft to ground.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the required response when an arrival aircraft, still airborne before the landing threshold, activates a warning alert?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That situation requires a go-around instruction.",
+          "choices": [
+            {
+              "text": "Issue go-around instructions.",
+              "is_correct": true
+            },
+            {
+              "text": "Allow the aircraft to continue if the runway looks clear.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for a pilot report from short final.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the landing clearance only after touchdown.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If an arrival aircraft receives a warning alert to a taxiway, a go-around is required.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "A warning alert involving an arrival aircraft to a taxiway requires a go-around."
+        },
+        {
+          "question_text": "If two arrivals, or an arrival and a departing aircraft, activate an alert, what action is required?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller must issue go-around instructions or take other appropriate action to ensure intersecting-runway separation.",
+          "choices": [
+            {
+              "text": "Issue go-around instructions or take other appropriate action to ensure intersecting-runway separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for the alert to clear before acting.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the alert if both aircraft have landing clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer one aircraft to departure control immediately.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may a threshold warning alert be disregarded?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The listed exception is a known formation flight crossing the threshold when all other factors are acceptable.",
+          "choices": [
+            {
+              "text": "When a known formation flight is crossing the threshold and all other factors are acceptable.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the aircraft has the runway in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever airport operations confirms no vehicles are on the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the tower supervisor is in the cab.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does the note say satisfies the requirement that the aircraft not land on the alerted approach after a warning alert?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A side-step or circle-to-land to another runway satisfies the requirement.",
+          "choices": [
+            {
+              "text": "A side-step or circle-to-land to another runway.",
+              "is_correct": true
+            },
+            {
+              "text": "Landing long on the original runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Continuing the approach after a cautionary advisory.",
+              "is_correct": false
+            },
+            {
+              "text": "Canceling the landing clearance after touchdown.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

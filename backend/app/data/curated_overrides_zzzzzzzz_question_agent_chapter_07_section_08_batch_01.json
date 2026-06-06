@@ -1,0 +1,198 @@
+{
+  "questions": {
+    "7-8-2": {
+      "items": [
+        {
+          "question_text": "Complete: Under 7-8-2a, Class C services include: sequencing of all aircraft to the primary airport, standard IFR services to IFR aircraft, and traffic advisories and _____ alerts between all aircraft.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-8-2a, Class C services include: (1) sequencing of all aircraft to the primary airport, (2) standard IFR services to IFR aircraft, and (3) traffic advisories and safety alerts between all aircraft. The word 'safety' is the key addition to traffic advisories.",
+          "choices": [
+            {
+              "text": "safety",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "7-8-3": {
+      "items": [
+        {
+          "question_text": "Under 7-8-3, what separation methods may be used to separate VFR aircraft from IFR aircraft in Class C airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-8-3, VFR aircraft must be separated from IFR aircraft by any one of: visual separation (7-2-1), pilot-applied visual separation (7-2-1), radar separation (Chapter 5), or nonradar separation (Chapter 6). This mirrors the TRSA separation options in 7-7-3.",
+          "choices": [
+            {
+              "text": "Only radar separation, because Class C is radar-controlled airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Visual separation, pilot-applied visual separation, radar separation, or nonradar separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Only visual separation between VFR and IFR aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Only nonradar separation per Chapter 6 procedures.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "7-8-4": {
+      "items": [
+        {
+          "question_text": "Under 7-8-4, what is required before entering Class C airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-8-4, pilots must establish two-way radio communications before entering Class C airspace. If the controller responds to a radio call using the aircraft's call sign, two-way communication is established.",
+          "choices": [
+            {
+              "text": "A specific clearance to enter the Class C airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Establishment of two-way radio communications.",
+              "is_correct": true
+            },
+            {
+              "text": "An IFR flight plan on file with ATC.",
+              "is_correct": false
+            },
+            {
+              "text": "A discrete transponder code assigned by approach control.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "7-8-6": {
+      "items": [
+        {
+          "question_text": "Under 7-8-6a, what is the separation exception for VFR helicopters and powered-lift aircraft in Class C airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-8-6a, VFR helicopters and powered-lift aircraft need not be separated from IFR helicopters or powered-lift aircraft. Traffic information and safety alerts must still be provided. This is a narrow exception — it only applies helicopter-to-helicopter/powered-lift, not helicopter-to-fixed-wing.",
+          "choices": [
+            {
+              "text": "VFR helicopters need not be separated from IFR helicopters or powered-lift aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "VFR helicopters need not be separated from any IFR aircraft, including fixed-wing.",
+              "is_correct": false
+            },
+            {
+              "text": "All VFR aircraft are exempt from separation requirements with IFR aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "No separation exception exists for any aircraft type in Class C airspace.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "7-8-8": {
+      "items": [
+        {
+          "question_text": "Complete: Under 7-8-8, unless aircraft are landing at secondary airports or have requested termination of service while in the outer area, provide services until the aircraft _____ Class C airspace.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 7-8-8, Class C services continue until the aircraft departs Class C airspace, unless the aircraft is landing at a secondary airport or has requested termination of service while in the outer area. The outer area is the service area beyond the charted Class C.",
+          "choices": [
+            {
+              "text": "departs",
+              "is_correct": true
+            },
+            {
+              "text": "leaves",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "7-8-5": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Under 7-8-5a, when necessary to assign altitudes to VFR aircraft in Class C, what criteria must the altitude meet?",
+          "choices": [
+            {
+              "text": "MVA, MSA, or minimum IFR altitude criteria.",
+              "is_correct": true
+            },
+            {
+              "text": "Any altitude above the airport elevation, at the pilot's discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the traffic pattern altitude for the primary runway.",
+              "is_correct": false
+            },
+            {
+              "text": "At least 500 feet above the highest obstacle within 5 NM.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-8-5a, altitude assignments to VFR aircraft in Class C must meet MVA, MSA, or minimum IFR altitude criteria, consistent with the same requirement in TRSA (7-7-5) and Class B (7-9-7)."
+        }
+      ]
+    },
+    "7-8-7": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should the controller do?",
+          "situation": "An aircraft departs a controlled airport adjacent to Class C airspace on a heading that will penetrate Class C airspace within 3 minutes after takeoff.",
+          "para_context": "Per 7-8-7a, aircraft that will penetrate Class C airspace after departing controlled airports within or adjacent to Class C airspace must be provided the same services as other Class C traffic.",
+          "question_text": "What services must be provided to this departing aircraft?",
+          "choices": [
+            {
+              "text": "The same Class C services provided to other aircraft in Class C airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "Only basic radar services, because the aircraft departed from outside the primary airport.",
+              "is_correct": false
+            },
+            {
+              "text": "No services are required because Class C services only apply to arrivals, not departures.",
+              "is_correct": false
+            },
+            {
+              "text": "Standard IFR separation only; traffic advisories are not required for adjacent airport departures.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-8-7a, aircraft from controlled airports within or adjacent to Class C must receive the same Class C services. The protection extends to aircraft whose departure will penetrate Class C airspace."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,566 @@
+{
+  "activities": {
+    "3-10-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When must taxi instructions be provided by the local controller after landing?",
+          "choices": [
+            {
+              "text": "When compliance with ATC instructions is required before the aircraft can change to ground control, or when it must enter an active runway to taxi clear of the landing runway.",
+              "is_correct": true
+            },
+            {
+              "text": "After every landing, even if the aircraft can switch to ground and taxi clear normally.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot requests progressive taxi.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when visibility is below VFR minima.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Local control must provide taxi instructions in those specific cases after landing."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Does this local-control taxi responsibility apply?",
+          "question_text": "This local-control taxi-instruction responsibility applies when compliance with ATC instructions will be required before the aircraft can change to ground control.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is one of the two listed situations where local control must provide taxi instructions after landing."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this runway-exit timing rule correct?",
+          "question_text": "If the aircraft is prior to, or immediately after, touchdown, you should not normally issue runway exiting or taxi instructions.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Runway exiting or taxi instructions should not normally be issued before or immediately after touchdown."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this readback requirement correct?",
+          "question_text": "When runway hold short instructions are not received back from the pilot, you must request a read back.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph requires a requested readback when runway hold short instructions are not received from the pilot."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which statement about clearing the runway without specific taxi instructions is correct?",
+          "question_text": "Which statement is correct?",
+          "choices": [
+            {
+              "text": "The aircraft is expected to taxi clear of the landing runway, but it must not exit onto an intersecting runway unless ATC authorizes it.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft may cross any subsequent taxiway or ramp after clearing the landing runway if that is the shortest route to parking.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft is not expected to move clear of the runway unless ground control first issues a taxi instruction.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft may enter an intersecting runway to clear the landing runway whenever no traffic is visible.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The pilot is expected to taxi clear of the landing runway, but not onto an intersecting runway unless authorized by ATC."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "After landing, you need the aircraft to turn left at Charlie and hold short of Runway 27 Right. Build the runway-exit instruction.",
+          "target_phrase": "TURN LEFT AT CHARLIE HOLD SHORT OF RUNWAY TWO SEVEN RIGHT"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "An aircraft has landed and must enter an active runway in order to taxi clear of the landing runway. Another controller says the pilot can just switch to ground and work it out there, because local control only handles runway-exit instructions if the pilot asks. The pilot also failed to read back the runway hold short instruction you already issued.",
+          "para_context": "Local control must provide taxi instructions when the aircraft must comply before changing to ground or when it must enter an active runway to taxi clear. A readback of runway hold short instructions must be requested when it is not received.",
+          "choices": [
+            {
+              "text": "Provide the taxi instructions from local control and request the readback of the runway hold short instructions.",
+              "is_correct": true
+            },
+            {
+              "text": "Switch the aircraft to ground immediately and let ground issue any needed runway-entry instructions after the pilot taxis forward.",
+              "is_correct": false
+            },
+            {
+              "text": "Assume the missing hold short readback is acceptable because the pilot is already off the runway and moving slowly.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to clear the runway by any available route, including an intersecting runway if necessary, without further ATC authorization.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Local control retains responsibility in that case, and the missing hold short readback must be requested."
+        }
+      ]
+    },
+    "3-10-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Over which traffic may an altitude-restricted low approach be authorized?",
+          "choices": [
+            {
+              "text": "Over preceding landing or taxiing aircraft, but not over an aircraft holding in position or a departing aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Over any runway traffic as long as the low approach stays above 300 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Only over aircraft holding in position because they remain stationary.",
+              "is_correct": false
+            },
+            {
+              "text": "Over personnel on the movement area without prior coordination if the pilot has them in sight.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Restricted low approaches may be authorized over preceding landing or taxiing aircraft, but not over holding or departing aircraft."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this restricted low-approach minimum correct?",
+          "question_text": "An altitude-restricted low approach may be authorized at no less than 500 feet above the airport.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph sets 500 feet above the airport as the minimum altitude restriction."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this personnel-protection directive correct?",
+          "question_text": "Do not clear aircraft for restricted altitude low approaches over personnel unless airport authorities have advised these personnel that the approaches will be conducted.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Restricted low approaches over personnel require that airport authorities have advised the personnel."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this traffic-advisory requirement correct?",
+          "question_text": "When authorizing an altitude-restricted low approach, you must advise the approaching aircraft of the location of applicable ground traffic, personnel, or equipment.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph requires the approaching aircraft to be advised of the location of applicable ground traffic, personnel, or equipment."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which case is specifically allowed under the restricted low-approach rule?",
+          "question_text": "Which case is specifically allowed?",
+          "choices": [
+            {
+              "text": "A restricted low approach over a preceding landing aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "A restricted low approach over an aircraft holding in position.",
+              "is_correct": false
+            },
+            {
+              "text": "A restricted low approach over a departing aircraft as long as wake turbulence is not a factor.",
+              "is_correct": false
+            },
+            {
+              "text": "A restricted low approach over unbriefed personnel if the pilot agrees to stay at 500 feet.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note specifically says the authorization includes restricted low approaches over preceding landing or taxiing aircraft."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "A low approach is approved, but the aircraft must stay at or above 2,000 feet because of traffic. Build the transmission.",
+          "target_phrase": "CLEARED LOW APPROACH AT OR ABOVE TWO THOUSAND TRAFFIC CESSNA ON SHORT FINAL"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A pilot requests an altitude-restricted low approach. Airport personnel are on or near the runway environment and have not been advised that the approaches will be conducted. Another aircraft is holding in position. Another controller says the request can still be approved if you keep the low approach at 500 feet and tell the pilot about the personnel and traffic.",
+          "para_context": "Restricted low approaches may not be cleared over personnel unless airport authorities have advised the personnel, and they are not authorized over an aircraft holding in position or a departing aircraft. Applicable ground traffic, personnel, or equipment locations still must be advised.",
+          "choices": [
+            {
+              "text": "Do not approve the restricted low approach over that holding aircraft or unadvised personnel.",
+              "is_correct": true
+            },
+            {
+              "text": "Approve the restricted low approach because 500 feet is the minimum and the traffic advisory replaces the personnel and holding-aircraft restrictions.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve it as long as the pilot agrees to remain at or above 1,000 feet instead of 500 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve it over the holding aircraft, but deny only the portion over personnel.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The approach may not be cleared over holding-position traffic or unbriefed personnel, regardless of whether the pilot is advised of their location."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-10-9": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must taxi instructions be provided by the local controller after landing?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Local control must provide taxi instructions when compliance is needed before switching to ground or when the aircraft must enter an active runway to taxi clear.",
+          "choices": [
+            {
+              "text": "When compliance with ATC instructions is required before changing to ground, or when the aircraft must enter an active runway to taxi clear of the landing runway.",
+              "is_correct": true
+            },
+            {
+              "text": "After every landing, regardless of whether the aircraft can taxi clear normally.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot requests progressive taxi.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the airport is below VFR minima.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When should runway exiting or taxi instructions not normally be issued to a landing aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note says they should not normally be issued prior to, or immediately after, touchdown.",
+          "choices": [
+            {
+              "text": "Prior to, or immediately after, touchdown.",
+              "is_correct": true
+            },
+            {
+              "text": "Any time after crossing the threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "Any time before changing to ground control.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft has stopped on the runway.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Without specific ATC instructions, what is the aircraft expected to do after landing?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The aircraft is expected to taxi clear of the landing runway, but not onto an intersecting runway unless authorized.",
+          "choices": [
+            {
+              "text": "Taxi clear of the landing runway, but not onto an intersecting runway unless authorized by ATC.",
+              "is_correct": true
+            },
+            {
+              "text": "Remain on the runway until ground control issues a taxi route.",
+              "is_correct": false
+            },
+            {
+              "text": "Use any intersecting runway needed to clear the landing runway quickly.",
+              "is_correct": false
+            },
+            {
+              "text": "Cross any subsequent taxiway or ramp needed to get fully clear.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must the controller do if runway hold short instructions are not read back?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A readback of runway hold short instructions must be requested when it is not received.",
+          "choices": [
+            {
+              "text": "Request the readback.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume compliance if the aircraft is taxiing slowly.",
+              "is_correct": false
+            },
+            {
+              "text": "Switch the aircraft to ground and let ground confirm it.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the taxi instructions and reissue only the turnoff point.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must local and ground control protect if an aircraft must enter it in order to clear the landing runway?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "They must protect the taxiway/runway/ramp intersection.",
+          "choices": [
+            {
+              "text": "The taxiway/runway/ramp intersection.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the landing runway centerline.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the first taxiway beyond the hold position marking.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the ground-control frequency change point.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-10-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What is the minimum altitude restriction that may be authorized for a low approach under this paragraph?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The low approach may be restricted to no less than 500 feet above the airport.",
+          "choices": [
+            {
+              "text": "No less than 500 feet above the airport.",
+              "is_correct": true
+            },
+            {
+              "text": "No less than 300 feet above the airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly 500 feet above the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "At or above traffic pattern altitude only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Over which aircraft may a restricted altitude low approach be authorized?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The authorization includes preceding landing or taxiing aircraft, but not aircraft holding in position or departing.",
+          "choices": [
+            {
+              "text": "Preceding landing or taxiing aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Aircraft holding in position.",
+              "is_correct": false
+            },
+            {
+              "text": "Departing aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Only stationary aircraft on closed runways.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may a restricted altitude low approach be cleared over personnel?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Only when airport authorities have advised the personnel that the approaches will be conducted.",
+          "choices": [
+            {
+              "text": "Only when airport authorities have advised the personnel that the approaches will be conducted.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot has the personnel in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the altitude restriction is at least 1,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the personnel are outside the runway edge markings.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What information must be given to the approaching aircraft when authorizing the restricted low approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The approaching aircraft must be advised of the location of applicable ground traffic, personnel, or equipment.",
+          "choices": [
+            {
+              "text": "The location of applicable ground traffic, personnel, or equipment.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the runway number and wind.",
+              "is_correct": false
+            },
+            {
+              "text": "The exact taxi route of all aircraft on the field.",
+              "is_correct": false
+            },
+            {
+              "text": "The likely missed-approach route if the pilot changes their mind.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does the note say about using higher altitudes than 500 feet for restricted low approaches?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The 500-foot restriction is a minimum, and higher altitudes should be used when warranted.",
+          "choices": [
+            {
+              "text": "Higher altitudes should be used when warranted, such as 1,000 feet for super or heavy aircraft over unprotected personnel or small aircraft near the runway.",
+              "is_correct": true
+            },
+            {
+              "text": "Higher altitudes may not be used because 500 feet is both the minimum and standard required altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Higher altitudes are used only when the pilot requests them.",
+              "is_correct": false
+            },
+            {
+              "text": "Higher altitudes are required only during nighttime operations.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

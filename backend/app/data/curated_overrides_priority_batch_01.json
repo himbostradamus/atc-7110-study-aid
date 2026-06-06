@@ -1,0 +1,708 @@
+{
+  "activities": {
+    "3-3-2": {
+      "replace_types": ["requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "readback_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "The controller issued this runway status transmission. Which pilot acknowledgment is correct?",
+          "clearance": "RUNWAY TWO SEVEN CLOSED. UNABLE TO ISSUE DEPARTURE CLEARANCE.",
+          "choices": [
+            {
+              "text": "Runway Two Seven closed, unable departure clearance, N123AB.",
+              "is_correct": true
+            },
+            {
+              "text": "Runway Two Seven unsafe, cleared for departure at my own risk, N123AB.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway Two Seven closed, requesting immediate takeoff clearance, N123AB.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway Two Seven open, departing now, N123AB.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-3-2, the controller advises the runway is closed or unsafe and states that a departure, landing, or touch-and-go clearance cannot be issued."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot requests a touch-and-go on a runway that is closed by NOTAM for construction. After you advise the runway is closed, the pilot persists in the request. No other traffic would be adversely affected if the aircraft used the runway anyway.",
+          "para_context": "Under 3-3-2, advise the pilot the runway is closed or unsafe. If the pilot persists, quote the appropriate NOTAM information and state that a clearance cannot be issued. If the pilot still insists and the intended operation would not adversely affect other traffic, advise that the operation will be at the pilot's own risk.",
+          "choices": [
+            {
+              "text": "Advise the runway is closed, quote the applicable NOTAM, state that a clearance cannot be issued, and only if the pilot still insists and other traffic would not be adversely affected, advise the operation will be at the pilot's own risk.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the touch-and-go clearance after quoting the NOTAM, because the pilot accepted the runway condition.",
+              "is_correct": false
+            },
+            {
+              "text": "Deny the request and terminate communications, because no further information may be provided after a runway closure is reported.",
+              "is_correct": false
+            },
+            {
+              "text": "Allow the operation at the pilot's own risk as soon as the pilot first requests the closed runway, without quoting the NOTAM or withholding the clearance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-3-2, the controller first advises the runway is closed or unsafe, then quotes the NOTAM and states that a clearance cannot be issued. The own-risk advisory comes only after the pilot insists and only when other traffic would not be adversely affected."
+        }
+      ]
+    },
+    "3-9-5": {
+      "replace_types": ["situation_action"],
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A departure is ready on the runway. The prescribed separation from preceding traffic does not exist yet, but based on the speed and position of the other aircraft you are reasonably assured the separation will exist by the time the departure actually starts takeoff roll.",
+          "para_context": "Under 3-9-5, a takeoff clearance need not be withheld until prescribed separation exists if there is reasonable assurance it will exist when the aircraft starts takeoff roll.",
+          "choices": [
+            {
+              "text": "You may issue the takeoff clearance now, because the separation does not have to exist yet as long as there is reasonable assurance it will exist when takeoff roll begins.",
+              "is_correct": true
+            },
+            {
+              "text": "You must withhold the takeoff clearance until the separation already exists before the pilot begins moving.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the takeoff clearance only after the preceding traffic is clear of the runway, regardless of the applicable separation standard.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear the aircraft for takeoff and tell the pilot to create the needed separation visually after liftoff.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 3-9-5, the takeoff clearance may be issued before the separation exists if there is reasonable assurance the prescribed separation will exist when takeoff roll starts."
+        }
+      ]
+    },
+    "4-5-1": {
+      "replace_types": ["requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this vertical separation statement match the paragraph?",
+          "question_text": "At or above FL 290, apply 2,000 feet between a non-RVSM aircraft and any other aircraft at or above FL 290.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-5-1b, apply 2,000 feet at or above FL 290 between non-RVSM aircraft and all other aircraft at or above FL 290."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "One IFR aircraft at FL 330 is non-RVSM capable. Another IFR aircraft at FL 350 will pass directly above it. A controller suggests that the normal 1,000-foot vertical separation is enough because both aircraft are below FL 410.",
+          "para_context": "Under 4-5-1, IFR aircraft are normally separated by 1,000 feet up to and including FL 410, but at or above FL 290 apply 2,000 feet between a non-RVSM aircraft and any other aircraft at or above FL 290.",
+          "choices": [
+            {
+              "text": "Do not use 1,000 feet. Because one aircraft is non-RVSM and both are at or above FL 290, provide 2,000 feet vertical separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Use 1,000 feet because the exception for non-RVSM aircraft starts only above FL 410.",
+              "is_correct": false
+            },
+            {
+              "text": "Use 500 feet because the aircraft are both in level flight and IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Authorize the pilots to maintain their own vertical separation because the aircraft are already 2,000 feet apart laterally.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-5-1b, once a non-RVSM aircraft is involved at or above FL 290, the applicable vertical separation is 2,000 feet."
+        }
+      ]
+    },
+    "4-8-5": {
+      "replace_types": ["situation_action"],
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You are clearing an aircraft for an instrument approach. The published approach altitude must be flown to keep the aircraft vertically separated from other traffic on a nearby route. Another controller says you can omit the altitude from the approach clearance because it is already printed on the chart.",
+          "para_context": "Under 4-8-5, specify in the approach clearance the altitude shown in the approach procedures when adherence to that altitude is required for separation. The altitude may be omitted only when vertical separation will be provided by pilot adherence to the prescribed maximum, minimum, or mandatory altitudes.",
+          "choices": [
+            {
+              "text": "Specify the altitude in the approach clearance, because adherence to that altitude is required for separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Omit the altitude because any altitude shown on the chart is automatically understood and never needs to be restated.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the approach clearance first and wait to assign the altitude only if the pilot asks for it.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the approach clearance and vector the aircraft visually instead, because published approach altitudes are not used for separation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-8-5, the altitude must be stated in the approach clearance whenever pilot adherence to that altitude is required for separation."
+        }
+      ]
+    },
+    "5-13-2": {
+      "replace_types": ["conditional_rule_check", "list_membership", "minima_rule_check", "scope_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this E-MSAW action statement match the paragraph?",
+          "question_text": "When an E-MSAW alert is displayed, you may delay analysis until coordination is complete.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ],
+          "explanation": "Per 5-13-2a, when an E-MSAW alert is displayed, immediately analyze the situation and take the appropriate action to resolve the alert."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this suppression statement match the paragraph?",
+          "question_text": "The indefinite alert suppression message must be used exclusively to inhibit the display of E-MSAW alerts on aircraft known to be flying at an altitude that will activate the alert feature of one or more MIA areas within an ARTCC.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-13-2b2, the indefinite alert suppression message is reserved for aircraft known to be flying at an altitude that will activate the alert feature within the ARTCC."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An E-MSAW alert appears for an aircraft near the edge of an MIA area. Another controller wants to wait until the next radar update before doing anything, and then enter suppression immediately so the alert stops flashing.",
+          "para_context": "Under 5-13-2, immediately analyze the E-MSAW alert and take appropriate action to resolve it. Use caution when reacting so adjacent MIA areas are not a factor. Suppress or inhibit alerts only with the appropriate functions and only for the circumstances described in the paragraph.",
+          "choices": [
+            {
+              "text": "Analyze the alert immediately, take the appropriate action to resolve it, and use caution so adjacent MIA areas are considered before deciding whether any suppression or inhibit function is appropriate.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for another radar hit before analyzing the alert, because E-MSAW alerts are advisory until confirmed by a second update.",
+              "is_correct": false
+            },
+            {
+              "text": "Suppress the alert first and evaluate the situation later, because removing the alert display itself counts as the required response.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the alert unless the aircraft reports terrain in sight, because pilot acknowledgment is required before controller action.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-13-2, E-MSAW alerts are analyzed immediately, the controller takes the appropriate action, and suppression or inhibit functions are used only as specifically authorized."
+        }
+      ]
+    },
+    "6-6-3": {
+      "replace_types": ["requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this pilot-maintained separation statement match the paragraph?",
+          "question_text": "When pilots of aircraft in direct radio communication with each other during climb and descent concur, you may authorize the lower aircraft, if climbing, or the upper aircraft, if descending, to maintain vertical separation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 6-6-3, that is the condition under which the controller may authorize pilot-maintained vertical separation."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Two aircraft are in direct radio communication with each other during climb and descent. Both pilots concur with maintaining their own vertical spacing while one climbs below the other. Another controller says this is not allowed unless both aircraft remain on your frequency only.",
+          "para_context": "Under 6-6-3, when pilots of aircraft in direct radio communication with each other during climb and descent concur, you may authorize the lower aircraft, if climbing, or the upper aircraft, if descending, to maintain vertical separation.",
+          "choices": [
+            {
+              "text": "You may authorize pilot-maintained vertical separation in that situation, because the pilots are in direct radio communication with each other and concur.",
+              "is_correct": true
+            },
+            {
+              "text": "You may not use the procedure unless both aircraft remain exclusively on your frequency and do not talk directly to each other.",
+              "is_correct": false
+            },
+            {
+              "text": "You must transfer separation responsibility entirely to the higher aircraft regardless of whether it is climbing or descending.",
+              "is_correct": false
+            },
+            {
+              "text": "You may use the procedure only in level flight, not during climb and descent.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 6-6-3, the key conditions are direct radio communication between the pilots during climb and descent and concurrence to maintain the vertical separation."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-3-2": {
+      "replace_types": ["multiple_choice", "true_false", "fill_blank"],
+      "items": [
+        {
+          "question_text": "Under 3-3-2, what must you do if a pilot persists in requesting takeoff, landing, or touch-and-go on a closed or unsafe runway?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-3-2a, quote the appropriate NOTAM information and inform the pilot that a clearance cannot be issued.",
+          "choices": [
+            {
+              "text": "Quote the applicable NOTAM information and inform the pilot that a clearance cannot be issued.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the requested clearance after confirming that the pilot understands the runway condition.",
+              "is_correct": false
+            },
+            {
+              "text": "Refer the pilot to airport management because ATC may not discuss runway closures.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel IFR services and let the pilot decide without any additional controller action.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-3-2, when may you advise that the operation will be at the pilot's own risk?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-3-2b, that own-risk advisory comes only after the pilot insists and only if, in your opinion, the intended operation would not adversely affect other traffic.",
+          "choices": [
+            {
+              "text": "After the pilot insists and only if the intended operation would not adversely affect other traffic.",
+              "is_correct": true
+            },
+            {
+              "text": "Immediately after the pilot first requests the closed runway, even before you quote the NOTAM.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after airport management signs a written waiver for the flight.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the pilot is operating VFR, regardless of traffic impact.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-3-2, once the applicable NOTAM is quoted, you may issue a departure, landing, or touch-and-go clearance on the closed or unsafe runway if the pilot accepts the risk.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is false. The paragraph says the clearance cannot be issued. If the pilot still insists and traffic would not be adversely affected, the controller may only advise that the operation will be at the pilot's own risk.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Complete the phraseology from 3-3-2: \"RUNWAY (runway number) _____.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "Per 3-3-2, the runway status phraseology is \"RUNWAY (runway number) CLOSED/UNSAFE.\"",
+          "choices": [
+            {
+              "text": "CLOSED/UNSAFE",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "3-9-5": {
+      "replace_types": ["true_false"],
+      "items": [
+        {
+          "question_text": "Under 3-9-5, when may a takeoff clearance be issued before prescribed separation exists?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 3-9-5, it may be issued if there is reasonable assurance the prescribed separation will exist when the aircraft starts takeoff roll.",
+          "choices": [
+            {
+              "text": "When there is reasonable assurance the separation will exist when the aircraft starts takeoff roll.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the separation already exists before the aircraft begins to move.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the preceding traffic reports airborne and clear of the departure path.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the pilot agrees to expedite the takeoff roll.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 3-9-5, a takeoff clearance must be withheld until prescribed separation actually exists, even if there is reasonable assurance it will exist when takeoff roll begins.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is false. The paragraph allows the takeoff clearance before the separation exists if there is reasonable assurance it will exist when takeoff roll starts.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-1": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 4-5-1, what vertical separation normally applies to IFR aircraft up to and including FL 410?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 4-5-1a, the normal minimum up to and including FL 410 is 1,000 feet.",
+          "choices": [
+            {
+              "text": "1,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "3,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "4,000 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 4-5-1, what vertical separation applies at or above FL 290 between a non-RVSM aircraft and all other aircraft at or above FL 290?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 4-5-1b, apply 2,000 feet in that case.",
+          "choices": [
+            {
+              "text": "2,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "1,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "500 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "4,000 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 4-5-1, above FL 600 between military aircraft, 5,000 feet vertical separation applies.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 4-5-1c2.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-5": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 4-8-5, when must the controller specify the altitude shown in the approach procedure as part of the approach clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 4-8-5, the altitude must be specified when adherence to it is required for separation.",
+          "choices": [
+            {
+              "text": "When adherence to that altitude is required for separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the pilot requests a restatement of charted altitude information.",
+              "is_correct": false
+            },
+            {
+              "text": "Only on precision approaches, never on nonprecision procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the chart shows any crossing altitude, regardless of whether it affects separation.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 4-8-5, when may the controller omit specifying the altitude in the approach clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 4-8-5, the altitude may be omitted when vertical separation will be provided by pilot adherence to the prescribed maximum, minimum, or mandatory altitudes.",
+          "choices": [
+            {
+              "text": "When vertical separation will be provided by pilot adherence to the prescribed maximum, minimum, or mandatory altitudes.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot states he or she has the approach chart in hand.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the approach is being relayed through another controller.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the altitude is published in FAA charts but not NGA charts.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 4-8-5, if the published altitude is required for separation, you may omit it from the approach clearance because the pilot can read it from the chart.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is false. If adherence to the altitude is required for separation, the altitude must be specified in the approach clearance.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "5-13-2": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-13-2, what is the controller's first duty when an E-MSAW alert is displayed?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-13-2a, immediately analyze the situation and take the appropriate action to resolve the alert.",
+          "choices": [
+            {
+              "text": "Immediately analyze the situation and take the appropriate action to resolve the alert.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for a second alert before taking any action.",
+              "is_correct": false
+            },
+            {
+              "text": "Suppress the alert first and then decide whether any action is necessary.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer the aircraft to another sector before responding to the alert.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-13-2, when is the indefinite alert suppression message used?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-13-2b2, it is used exclusively for aircraft known to be flying at an altitude that will activate the alert feature of one or more MIA areas within an ARTCC.",
+          "choices": [
+            {
+              "text": "Exclusively for aircraft known to be flying at an altitude that will activate the alert feature of one or more MIA areas within an ARTCC.",
+              "is_correct": true
+            },
+            {
+              "text": "For any aircraft that triggers more than one E-MSAW alert in the same shift.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot requests low-level route handling.",
+              "is_correct": false
+            },
+            {
+              "text": "For every flight operating below FL 180 within radar coverage.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-13-2, entering a suppression or inhibit message constitutes acknowledgment of the alert and indicates that appropriate action has or will be taken.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 5-13-2c.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-6-3": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 6-6-3, when may a controller authorize pilots to maintain vertical separation between aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 6-6-3, it is authorized when pilots of aircraft in direct radio communication with each other during climb and descent concur.",
+          "choices": [
+            {
+              "text": "When the pilots are in direct radio communication with each other during climb and descent and concur.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever both aircraft are on the same controller frequency, even if they are not talking directly to each other.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when both aircraft are level at the same altitude and visual with each other.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when one of the aircraft is VFR and accepts responsibility for the other.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-6-3, you may authorize pilot-maintained vertical separation when the aircraft are not in direct radio communication with each other as long as they are both on your frequency.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is false. The paragraph requires direct radio communication between the pilots and concurrence during climb and descent.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

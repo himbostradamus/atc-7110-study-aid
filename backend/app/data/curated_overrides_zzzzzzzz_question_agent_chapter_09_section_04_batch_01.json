@@ -1,0 +1,834 @@
+{
+  "questions": {
+    "9-4-1": {
+      "items": [
+        {
+          "question_text": "Under 9-4-1, when information is received that an aircraft plans to dump fuel, which of the following must the controller determine?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 9-4-1, the controller must determine the route and altitude the aircraft will fly AND the weather conditions in which the operation will be conducted. All three elements are required.",
+          "choices": [
+            {
+              "text": "Only the route, because altitude can be assigned later and weather is irrelevant to fuel dumping.",
+              "is_correct": false
+            },
+            {
+              "text": "The route and altitude it will fly, and the weather conditions in which the operation will be conducted.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the altitude and fuel quantity remaining, because route is presumed from the flight plan.",
+              "is_correct": false
+            },
+            {
+              "text": "The route, altitude, weather conditions, and the pilot's estimate of remaining flight time after the dump.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-1, which trigger event obligates the controller to determine route, altitude, and weather conditions?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "9-4-1 is triggered when information is received that an aircraft plans to dump fuel. It does not require the dump to have already started.",
+          "choices": [
+            {
+              "text": "When the dump actually begins and fuel is observed leaving the aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "When information is received that an aircraft plans to dump fuel.",
+              "is_correct": true
+            },
+            {
+              "text": "Only if the fuel dump will occur in IFR conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot declares an emergency and requests a fuel-dump clearance.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-1, an aircraft reports it plans to dump fuel in 10 minutes. The controller responds by asking only what altitude the aircraft will use. Is this sufficient?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "No. 9-4-1 requires determination of route, altitude, AND weather conditions. Asking only for altitude omits two required pieces of information.",
+          "choices": [
+            {
+              "text": "Yes, because altitude is the only safety-critical element for separation purposes.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because the controller must also determine the route and the weather conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because the route is already known from the flight plan and weather can be determined from ATIS.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because the controller must also determine the fuel quantity remaining and the number of persons on board.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-1, which of the three required determinations is most likely to affect whether the operation can safely proceed at all?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Weather conditions directly affect whether dumping can safely occur. Route and altitude are operational parameters that can be adjusted, but weather conditions (icing, turbulence, visibility) may make the operation unsafe. 9-4-1 requires all three.",
+          "choices": [
+            {
+              "text": "Route, because routing determines which sectors are affected.",
+              "is_correct": false
+            },
+            {
+              "text": "Altitude, because altitude determines the obstacle clearance requirements under 9-4-3.",
+              "is_correct": false
+            },
+            {
+              "text": "Weather conditions, because adverse weather may make the fuel-dumping operation unsafe regardless of route or altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "All three are equally critical because 9-4-1 does not prioritize any one over the others.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "9-4-2": {
+      "items": [
+        {
+          "question_text": "Under 9-4-2, an aircraft is dumping fuel because of a medical emergency on board. May the controller request it to fly a different route?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "No. 9-4-2 states 'Except when it is dumping fuel for emergency reasons.' A medical emergency is an emergency reason, so the aircraft may NOT be requested to fly a different route.",
+          "choices": [
+            {
+              "text": "Yes, because the rule allows route requests in all fuel-dumping situations.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the aircraft is IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because the aircraft is dumping fuel for emergency reasons.",
+              "is_correct": true
+            },
+            {
+              "text": "No, because fuel-dumping aircraft may never be rerouted regardless of reason.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-2, a VFR aircraft is dumping fuel to reduce landing weight (non-emergency). The controller wants to route it away from a populated area. Is this permitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Yes. 9-4-2 permits requesting a different route when the dump is NOT for emergency reasons, and the rule applies in both VFR and IFR conditions.",
+          "choices": [
+            {
+              "text": "No, because VFR aircraft are not covered by the rule.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because any fuel dump is treated as an emergency under 9-4-2.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because the dump is not for emergency reasons and the rule applies in either VFR or IFR conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only if the aircraft first transitions to IFR.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Fill in the blank: Under 9-4-2, except when it is dumping fuel for ________ reasons, an aircraft in either VFR or IFR conditions may be requested to fly a different route.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The key triggering condition is 'emergency.' 9-4-2's exception applies only when the fuel dump is for emergency reasons.",
+          "choices": [
+            {
+              "text": "emergency",
+              "is_correct": true
+            },
+            {
+              "text": "weight-reduction",
+              "is_correct": false
+            },
+            {
+              "text": "operational",
+              "is_correct": false
+            },
+            {
+              "text": "maintenance",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-2, a controller tells a fuel-dumping aircraft 'Fly heading 270 for traffic.' The dump is not for emergency reasons. Is this an authorized use of the rule?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Yes. 9-4-2 authorizes requesting a different route for non-emergency fuel dumps. A heading change constitutes a route modification. The rule applies regardless of whether the aircraft is VFR or IFR.",
+          "choices": [
+            {
+              "text": "No, because 9-4-2 only authorizes complete route amendments, not simple heading changes.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because heading changes require emergency authority under 9-4-2.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because a heading change is a route modification authorized for non-emergency fuel dumps under 9-4-2.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only if the aircraft is operating IFR.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "9-4-3": {
+      "items": [
+        {
+          "question_text": "Under 9-4-3, if an aircraft is dumping fuel in IFR conditions, what is the minimum altitude above the highest obstacle within 5 miles of the route or pattern being flown?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 9-4-3, the altitude assigned must be at least 2,000 feet above the highest obstacle within 5 miles of the route or pattern being flown.",
+          "choices": [
+            {
+              "text": "At least 2,000 feet above the highest obstacle within 5 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "At least 1,000 feet above the highest obstacle within 5 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly 2,000 feet above the airport elevation.",
+              "is_correct": false
+            },
+            {
+              "text": "2,000 feet above the highest obstacle within 10 miles of the dump pattern.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-3, does the IFR fuel-dumping altitude requirement apply to VFR fuel-dumping operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "No. 9-4-3 explicitly states 'If an aircraft is dumping fuel in IFR conditions.' VFR fuel-dumping altitude assignments are not governed by this paragraph.",
+          "choices": [
+            {
+              "text": "Yes, because 9-4-3 applies to all fuel-dumping operations regardless of flight conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because 9-4-3 applies only to fuel-dumping operations conducted in IFR conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but with the obstacle radius reduced to 3 miles for VFR operations.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because VFR fuel-dumping operations use a 1,000-foot obstacle clearance standard instead.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-3, an aircraft dumping fuel IFR is flying a pattern. The highest obstacle within 5 miles of that pattern is a 3,200-foot tower. What is the minimum assignable altitude?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "9-4-3 requires at least 2,000 feet above the highest obstacle. 3,200 + 2,000 = 5,200 feet MSL. The controller may assign higher, but 5,200 feet is the minimum.",
+          "choices": [
+            {
+              "text": "3,200 feet MSL, because the aircraft is above the highest obstacle.",
+              "is_correct": false
+            },
+            {
+              "text": "5,200 feet MSL.",
+              "is_correct": true
+            },
+            {
+              "text": "4,200 feet MSL, using standard IFR obstacle clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "2,000 feet MSL, because 9-4-3 sets a flat 2,000-foot minimum altitude for all fuel-dumping operations.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Fill in the blank: Under 9-4-3, if an aircraft is dumping fuel in IFR conditions, assign an altitude at least ______ feet above the highest obstacle within ______ miles of the route or pattern being flown.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The two critical numeric thresholds are 2,000 feet and 5 miles. Both must be exact — these are not general values.",
+          "choices": [
+            {
+              "text": "2,000 / 5",
+              "is_correct": true
+            },
+            {
+              "text": "1,000 / 5",
+              "is_correct": false
+            },
+            {
+              "text": "2,000 / 10",
+              "is_correct": false
+            },
+            {
+              "text": "1,000 / 3",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "9-4-4": {
+      "items": [
+        {
+          "question_text": "Under 9-4-4, which of the following is NOT a valid method for separating known IFR aircraft from an aircraft dumping fuel?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "9-4-4a lists four valid methods: 1,000 feet above (or greater per 4-5-1), 2,000 feet below, 5 miles radar, and 5 miles laterally. 3 miles is not listed.",
+          "choices": [
+            {
+              "text": "5 miles laterally.",
+              "is_correct": false
+            },
+            {
+              "text": "3 miles radar.",
+              "is_correct": true
+            },
+            {
+              "text": "2,000 feet below.",
+              "is_correct": false
+            },
+            {
+              "text": "1,000 feet above it, or in accordance with 4-5-1 if greater.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-4, when separating IFR aircraft ABOVE the aircraft dumping fuel, which paragraph governs if the standard vertical separation would be greater than 1,000 feet?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "9-4-4a1 states '1,000 feet above it; or in accordance with paragraph 4-5-1, Vertical Separation Minima, whichever is greater.' The controller must apply the larger of the two values.",
+          "choices": [
+            {
+              "text": "Paragraph 4-5-1, Vertical Separation Minima.",
+              "is_correct": true
+            },
+            {
+              "text": "Paragraph 5-6-1, Application.",
+              "is_correct": false
+            },
+            {
+              "text": "Paragraph 9-4-3, Altitude Assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "No other paragraph applies; 1,000 feet is always sufficient for above separation.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-4, what is the separation requirement for VFR radar-identified aircraft from the aircraft dumping fuel?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 9-4-4b, VFR radar-identified aircraft must be separated by 5 miles and in accordance with paragraph 5-6-1, Application.",
+          "choices": [
+            {
+              "text": "1,000 feet above and 2,000 feet below, same as IFR aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "5 miles and in accordance with paragraph 5-6-1.",
+              "is_correct": true
+            },
+            {
+              "text": "3 miles if the aircraft has an operating transponder.",
+              "is_correct": false
+            },
+            {
+              "text": "Traffic advisories only, because VFR aircraft are not subject to fuel-dump separation standards.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-4, an aircraft is dumping fuel at FL 200. An IFR aircraft at FL 210 is directly above it. Is the separation sufficient under 9-4-4?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "9-4-4a1 requires 1,000 feet above OR in accordance with 4-5-1, WHICHEVER IS GREATER. At FL 200/FL 210, 4-5-1 requires 1,000 feet above FL 290 and 2,000 feet at/above FL 290 for non-RVSM. Here at FL 200 (below FL 290), 4-5-1 requires 1,000 feet. So 1,000 feet is both the 9-4-4 minimum and the 4-5-1 minimum. FL 210 is exactly 1,000 feet above FL 200 — sufficient.",
+          "choices": [
+            {
+              "text": "Yes, because 1,000 feet above meets both the 9-4-4 minimum and the 4-5-1 standard at this altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "No, because 9-4-4 always requires at least 2,000 feet above for fuel-dumping separation.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because 4-5-1 requires 2,000 feet at FL 200 and above.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if RVSM separation is applied.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-4, an aircraft is dumping fuel. An IFR aircraft is 2,000 feet directly below it and 4 miles laterally from the dump track. Is this separation sufficient?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The aircraft is using two forms of separation that do not need to be combined. The vertical separation of 2,000 feet below meets 9-4-4a2 independently. The 4 miles lateral does not meet the 5 miles lateral requirement of 9-4-4a4, but the 2,000-foot-below vertical separation is sufficient on its own.",
+          "choices": [
+            {
+              "text": "No, because lateral separation requires 5 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because 2,000 feet below independently satisfies 9-4-4a2 regardless of lateral distance.",
+              "is_correct": true
+            },
+            {
+              "text": "No, because vertical and lateral minima must both be met simultaneously.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because 4 miles laterally is close enough to 5 miles to be acceptable.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "9-4-5": {
+      "items": [
+        {
+          "question_text": "Under 9-4-5, when you are in contact with an aircraft that starts dumping fuel, what is your first action?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 9-4-5a, inform other controllers and facilities which might be concerned. This is the first step before the broadcast cycle begins.",
+          "choices": [
+            {
+              "text": "Broadcast a fuel-dumping advisory immediately on the frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Inform other controllers and facilities which might be concerned.",
+              "is_correct": true
+            },
+            {
+              "text": "Vector all other aircraft at least 5 miles away from the dumping aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Ask the pilot how long the dump will take.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-5, at what interval must concerned facilities broadcast the fuel-dumping advisory on appropriate radio frequencies?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 9-4-5a, facilities concerned must broadcast an advisory at 3-minute intervals until the dumping stops.",
+          "choices": [
+            {
+              "text": "At 3-minute intervals until the dumping stops.",
+              "is_correct": true
+            },
+            {
+              "text": "Once at the start and once when complete, with no intermediate broadcasts.",
+              "is_correct": false
+            },
+            {
+              "text": "At 5-minute intervals until the aircraft leaves the facility's airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Every minute until all traffic has acknowledged the advisory.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-5, which of the following is the correct terminating advisory phraseology?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "Per 9-4-5b phraseology, the terminating advisory is 'ATTENTION ALL AIRCRAFT. FUEL DUMPING OVER (location) TERMINATED.' The word 'TERMINATED' is prescribed.",
+          "choices": [
+            {
+              "text": "ATTENTION ALL AIRCRAFT. FUEL DUMPING OVER (location) COMPLETE.",
+              "is_correct": false
+            },
+            {
+              "text": "ATTENTION ALL AIRCRAFT. FUEL DUMPING OVER (location) TERMINATED.",
+              "is_correct": true
+            },
+            {
+              "text": "ALL STATIONS. FUEL DUMPING OVER (location) HAS ENDED.",
+              "is_correct": false
+            },
+            {
+              "text": "ATTENTION ALL AIRCRAFT. FUEL DUMPING OVER (location) ENDED.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-5, what four elements does the in-progress fuel-dumping advisory broadcast contain?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "Per 9-4-5 phraseology: 'ATTENTION ALL AIRCRAFT. FUEL DUMPING IN PROGRESS OVER (location) AT (altitude) BY (type aircraft) (flight direction).' The four elements are location, altitude, aircraft type, and flight direction.",
+          "choices": [
+            {
+              "text": "Location, altitude, aircraft type, and flight direction.",
+              "is_correct": true
+            },
+            {
+              "text": "Location, altitude, estimated duration, and fuel quantity.",
+              "is_correct": false
+            },
+            {
+              "text": "Location, aircraft callsign, altitude, and heading.",
+              "is_correct": false
+            },
+            {
+              "text": "Location, altitude, aircraft type, and reason for dumping.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 9-4-5, who is responsible for broadcasting the fuel-dumping advisory?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 9-4-5a, 'Facilities concerned must broadcast an advisory.' This is a facility-level obligation. The controller in contact with the aircraft informs other facilities; those concerned facilities then broadcast.",
+          "choices": [
+            {
+              "text": "Only the controller in direct contact with the dumping aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Facilities concerned must broadcast the advisory on appropriate radio frequencies.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot of the dumping aircraft, as part of the fuel-dump notification.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the facility supervisor, after coordinating with the center.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Fill in the blank: Under 9-4-5, facilities concerned must broadcast an advisory on appropriate radio frequencies at ______ intervals until the dumping stops.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The prescribed interval is 3 minutes. This is a specific numeric threshold that must be exact.",
+          "choices": [
+            {
+              "text": "3-minute",
+              "is_correct": true
+            },
+            {
+              "text": "5-minute",
+              "is_correct": false
+            },
+            {
+              "text": "1-minute",
+              "is_correct": false
+            },
+            {
+              "text": "10-minute",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "9-4-1": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A B767 pilot reports plans to dump fuel to reduce landing weight. The trainee immediately begins coordinating with adjacent sectors for traffic reroutes without first asking the pilot any questions.",
+          "question_text": "What information must you obtain from the pilot before proceeding with coordination?",
+          "choices": [
+            {
+              "text": "The route and altitude the aircraft will fly during the dump, and the weather conditions in which the operation will be conducted.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the pilot's estimate of how much fuel will remain after the dump.",
+              "is_correct": false
+            },
+            {
+              "text": "Only whether the pilot prefers VFR or IFR for the dumping operation.",
+              "is_correct": false
+            },
+            {
+              "text": "No additional information is needed because the flight plan already provides the route and altitude.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-4-1, when information is received that an aircraft plans to dump fuel, determine the route and altitude it will fly and the weather conditions in which the operation will be conducted.",
+          "para_context": "INFORMATION REQUIREMENTS"
+        }
+      ]
+    },
+    "9-4-2": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "An IFR aircraft is dumping fuel to meet maximum landing weight (non-emergency). Its current route passes over a populated area. A controller says you cannot change its route because the aircraft is IFR and the 7110.65 restricts fuel-dump route changes to VFR only.",
+          "question_text": "May you request the aircraft to fly a different route?",
+          "choices": [
+            {
+              "text": "Yes, because 9-4-2 allows requesting a different route for non-emergency fuel dumps in either VFR or IFR conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "No, because 9-4-2 only authorizes route changes when the aircraft is VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because any fuel-dumping operation is treated as an emergency under 9-4-2.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only after the dump is complete and the aircraft is below 10,000 feet.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-4-2, except when dumping for emergency reasons, an aircraft in either VFR or IFR conditions may be requested to fly a different route.",
+          "para_context": "ROUTING"
+        }
+      ]
+    },
+    "9-4-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is dumping fuel IFR and flying a pattern. The highest charted obstacle within 5 miles of the pattern is a 4,500-foot peak. The trainee assigns 5,500 feet. The aircraft's standard IFR altitude assignment per 4-5-1 would be 5,000 feet.",
+          "question_text": "Is the trainee's altitude assignment of 5,500 feet correct under 9-4-3?",
+          "choices": [
+            {
+              "text": "No. 9-4-3 requires at least 2,000 feet above the highest obstacle within 5 miles (4,500 + 2,000 = 6,500 feet MSL minimum). 5,500 feet is only 1,000 feet above the obstacle.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes. 5,500 feet provides the standard 1,000-foot IFR obstacle clearance, which is sufficient.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. 5,500 feet is 1,000 feet above the peak, and 9-4-3 only requires 1,000 feet of obstacle clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "No. 9-4-3 requires exactly 2,000 feet MSL above ground level, not above the highest obstacle.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-4-3, IFR fuel-dumping aircraft must be assigned at least 2,000 feet above the highest obstacle within 5 miles of the route or pattern. 4,500 + 2,000 = 6,500 feet minimum.",
+          "para_context": "ALTITUDE ASSIGNMENT"
+        }
+      ]
+    },
+    "9-4-4": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is dumping fuel at FL 310 (above FL 290). An IFR aircraft is at FL 320, 1,000 feet directly above the dumping aircraft. A trainee says the separation is fine because 9-4-4a1 only requires 1,000 feet above.",
+          "question_text": "Is 1,000 feet above sufficient separation in this case?",
+          "choices": [
+            {
+              "text": "No, because above FL 290, 4-5-1 requires 2,000 feet vertical separation (non-RVSM), and 9-4-4a1 requires the greater of 1,000 feet or 4-5-1. So 2,000 feet is needed.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because 9-4-4a1 always uses a flat 1,000-foot above standard for fuel-dumping separation.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because at FL 310, RVSM reduces the requirement to 1,000 feet above FL 290.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because 9-4-4a1 requires 2,000 feet above regardless of altitude.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-4-4a1, separation above the dumping aircraft is '1,000 feet above it; or in accordance with paragraph 4-5-1, Vertical Separation Minima, whichever is greater.' Above FL 290, 4-5-1 requires 2,000 feet (non-RVSM). The greater value (2,000 feet) applies.",
+          "para_context": "SEPARATION MINIMA"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A VFR aircraft on flight following (radar-identified) is 4 miles from an aircraft actively dumping fuel. The trainee says advisory-only service is sufficient because the VFR aircraft is not IFR.",
+          "question_text": "Is 4 miles sufficient separation for this VFR radar-identified aircraft?",
+          "choices": [
+            {
+              "text": "No. 9-4-4b requires 5 miles for VFR radar-identified aircraft from the aircraft dumping fuel, and in accordance with 5-6-1.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because VFR aircraft only need traffic advisories regardless of distance from the dumping aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because 4 miles is close enough and the pilot can see and avoid.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because VFR aircraft must be separated by 10 miles from fuel-dumping operations.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-4-4b, VFR radar-identified aircraft must be separated by 5 miles and in accordance with paragraph 5-6-1 from the aircraft dumping fuel.",
+          "para_context": "SEPARATION MINIMA"
+        }
+      ]
+    },
+    "9-4-5": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "You are working an aircraft that begins dumping fuel over the BUCKEYE VOR at 8,000 feet, heading east. A trainee says to broadcast the advisory once and then wait for pilot reports before broadcasting again.",
+          "question_text": "How should the fuel-dumping advisory be handled?",
+          "choices": [
+            {
+              "text": "Inform other controllers and facilities that might be concerned. The concerned facilities must then broadcast 'ATTENTION ALL AIRCRAFT. FUEL DUMPING IN PROGRESS OVER BUCKEYE AT 8,000 BY (type) EASTBOUND' at 3-minute intervals until the dumping stops, then broadcast the terminating advisory.",
+              "is_correct": true
+            },
+            {
+              "text": "Broadcast one advisory and wait for further pilot reports before taking additional action.",
+              "is_correct": false
+            },
+            {
+              "text": "Only broadcast the terminating advisory when the dump ends; in-progress advisories are optional.",
+              "is_correct": false
+            },
+            {
+              "text": "Notify the supervisor and let them determine the broadcast schedule.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-4-5, inform other controllers/facilities, broadcast advisories at 3-minute intervals until the dumping stops, then broadcast the terminating advisory.",
+          "para_context": "INFORMATION DISSEMINATION"
+        },
+        {
+          "activity_type": "spot_the_error",
+          "generation_source": "question_agent",
+          "difficulty": 1,
+          "instruction": "One word in this phraseology is incorrect. Tap it.",
+          "question_text": "Identify the incorrect word in the broadcast: ATTENTION ALL AIRCRAFT. FUEL DUMPING OVER BUCKEYE COMPLETED.",
+          "original_phrase": "ATTENTION ALL AIRCRAFT. FUEL DUMPING OVER BUCKEYE TERMINATED.",
+          "display_text": "ATTENTION ALL AIRCRAFT FUEL DUMPING OVER BUCKEYE COMPLETED",
+          "tokens": [
+            "ATTENTION",
+            "ALL",
+            "AIRCRAFT",
+            "FUEL",
+            "DUMPING",
+            "OVER",
+            "BUCKEYE",
+            "COMPLETED"
+          ],
+          "error_index": 7,
+          "correct_token": "TERMINATED",
+          "explanation": "Per 9-4-5b, the prescribed terminating advisory word is 'TERMINATED,' not 'COMPLETED.'"
+        }
+      ]
+    }
+  }
+}

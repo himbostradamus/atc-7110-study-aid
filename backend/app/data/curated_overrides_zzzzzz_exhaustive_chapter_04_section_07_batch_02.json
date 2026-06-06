@@ -1,0 +1,1351 @@
+{
+  "activities": {
+    "4-7-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "When must en route weather be transmitted to an arriving aircraft prior to or as part of the approach clearance?",
+          "choices": [
+            {
+              "text": "When official weather is below the stated ceiling or visibility thresholds and the report is being sent directly to the pilot or relayed through an authorized path.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever any weather observation is available, regardless of thresholds.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft reports the airport in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot specifically asks for current weather.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The requirement applies when official weather is below the threshold ceiling or visibility values and the report is being delivered directly or through an authorized relay path."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this relay rule correct?",
+          "question_text": "When the report is relayed through a communications station other than an air carrier company radio or through a nonapproach control facility, you may satisfy the requirement by directing that station or facility to issue current weather.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is one of the authorized relay methods in this paragraph."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which relay path is authorized?",
+          "question_text": "Which method is specifically allowed here?",
+          "choices": [
+            {
+              "text": "Tell a nonapproach control facility to issue current weather.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume the pilot has the weather because the airport has ATIS.",
+              "is_correct": false
+            },
+            {
+              "text": "Rely on an air carrier company radio to satisfy the relay requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the tower reports the aircraft on final.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A nonapproach control facility may be instructed to issue current weather."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Official weather is below the threshold values for the destination, and the aircraft will receive the weather through a nonapproach control facility instead of directly from center.",
+          "para_context": "When official weather is below the stated ceiling or visibility thresholds, the report and any special observations must be transmitted prior to or as part of the approach clearance either directly to the pilot or, if relayed, through a communications station other than an air carrier company radio or through a nonapproach control facility directed to issue current weather.",
+          "choices": [
+            {
+              "text": "Direct the nonapproach control facility to issue current weather.",
+              "is_correct": true
+            },
+            {
+              "text": "Assume the pilot will get the weather from ATIS and omit it.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the weather until after the approach clearance has been completed.",
+              "is_correct": false
+            },
+            {
+              "text": "Use any relay path, including an air carrier company radio, because the weather is urgent.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the authorized relay method when the weather must be passed through a nonapproach control facility."
+        }
+      ]
+    },
+    "4-7-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "An arriving aircraft reports weather below the pilot's landing minima. What should ATC do for that aircraft?",
+          "choices": [
+            {
+              "text": "Issue appropriate instructions to hold or proceed to another airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Require the pilot to continue the approach because the runway is still available.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel IFR and terminate radar service immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue only the current altimeter and wait for the pilot's next report.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The controller responds with appropriate instructions to hold or proceed elsewhere."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this sequencing rule correct?",
+          "question_text": "If one arrival reports weather below landing minima, you must adjust the landing sequence of other aircraft desiring approaches as necessary and issue approach clearances accordingly.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Other arrivals must be resequenced as necessary once a below-minima report is received."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Who owns the landing judgment?",
+          "question_text": "Who is responsible for deciding whether existing weather or visibility is adequate for the approach and landing?",
+          "choices": [
+            {
+              "text": "The pilot or aircraft operator.",
+              "is_correct": true
+            },
+            {
+              "text": "The center controller.",
+              "is_correct": false
+            },
+            {
+              "text": "The destination tower only.",
+              "is_correct": false
+            },
+            {
+              "text": "The airport manager.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The pilot or operator is responsible for the adequacy decision."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "One arrival reports weather below its landing minima, and two more aircraft still want to make approaches.",
+          "para_context": "If an arriving aircraft reports weather below its landing minima, ATC issues appropriate instructions for that aircraft to hold or proceed elsewhere and adjusts the position in the landing sequence of other aircraft desiring approaches, issuing approach clearances accordingly.",
+          "choices": [
+            {
+              "text": "Adjust the landing sequence of the other arrivals as necessary and issue their approach clearances accordingly.",
+              "is_correct": true
+            },
+            {
+              "text": "Suspend all approach clearances automatically until the weather improves.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the below-minima report because landing adequacy is the pilot's responsibility.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear the other aircraft in the same order without change because the first report applies only to one pilot.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The sequence of other arriving aircraft must be adjusted as necessary."
+        }
+      ]
+    },
+    "4-7-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "If the destination airport has no ATIS and the pilot has not reported receiving automated weather, which items are part of the required approach-information package?",
+          "choices": [
+            {
+              "text": "Expected approach, runway if different, surface wind, threshold-limited ceiling and visibility, and altimeter setting.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the runway and tower frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the approach type and missed approach instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the weather frequency and braking action.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Without ATIS or acknowledged automated weather, the controller issues the full listed approach-information package."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this omission rule correct?",
+          "question_text": "Approach information contained in ATIS may be omitted if the pilot states the appropriate ATIS code.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ATIS-covered approach information may be omitted once the pilot states the proper code."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this airport-without-ATIS rule correct?",
+          "question_text": "If the pilot at an airport without ATIS advises receipt of the automated weather, you may omit items 3 through 5 from the approach-information package.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "At airports without ATIS, items 3 through 5 may be omitted after the pilot advises receipt of automated weather."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which item still has to be said?",
+          "question_text": "After a pilot at an airport without ATIS reports receiving automated weather, which item still remains in the approach briefing?",
+          "choices": [
+            {
+              "text": "The expected approach.",
+              "is_correct": true
+            },
+            {
+              "text": "The surface wind only.",
+              "is_correct": false
+            },
+            {
+              "text": "The altimeter setting only.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing; the entire package may be omitted.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Only items 3 through 5 may be omitted in that case, so the expected approach item still remains."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "A pilot asks for the automated weather frequency at Wichita. Build the response.",
+          "target_phrase": "WICHITA AWOS WEATHER AVAILABLE ON ONE TWO FOUR POINT SIX",
+          "instruction": "Build the controller transmission.",
+          "explanation": "The correct transmission is \"WICHITA AWOS WEATHER AVAILABLE ON ONE TWO FOUR POINT SIX.\"",
+          "word_bank": [
+            "AVAILABLE",
+            "AWOS",
+            "ON",
+            "ONE",
+            "POINT",
+            "SIX",
+            "TWO",
+            "WEATHER",
+            "WICHITA",
+            "FOUR"
+          ],
+          "correct_sequence": [
+            8,
+            1,
+            7,
+            0,
+            2,
+            3,
+            6,
+            9,
+            4,
+            5
+          ]
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A pilot requests the ASOS frequency at an uncontrolled airport, then reports being unable to receive the broadcast.",
+          "para_context": "Upon pilot request, controllers inform pilots of the frequency where automated weather data may be obtained and, if appropriate, that airport weather is not available. If the pilot cannot receive the ASOS/AWOS broadcast, controllers issue the last long-line disseminated weather.",
+          "choices": [
+            {
+              "text": "Issue the last long-line disseminated weather after providing the automated weather frequency.",
+              "is_correct": true
+            },
+            {
+              "text": "Tell the pilot no weather may be given because the airport is uncontrolled.",
+              "is_correct": false
+            },
+            {
+              "text": "Omit the weather because automated systems are trend information only.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for the destination tower to provide weather information instead.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If the pilot cannot receive the broadcast, the controller issues the last long-line disseminated weather."
+        }
+      ]
+    },
+    "4-7-11": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "When the tower and TRACON are part of the same facility, what arrival information must be forwarded to the tower?",
+          "choices": [
+            {
+              "text": "Aircraft identification, type if needed for separation, and the approach procedure and or runway if different from that in use.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the runway exit and gate assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the aircraft's ETA.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the ATIS code and braking action.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the required items forwarded to a collocated tower."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which item goes to center?",
+          "question_text": "Which arrival detail is specifically forwarded from approach control to centers?",
+          "choices": [
+            {
+              "text": "Highest altitude being used by the approach control facility at the holding fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Runway exit taxi instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "Field condition matrix only.",
+              "is_correct": false
+            },
+            {
+              "text": "The airport's ATIS code letter.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The highest altitude being used at the holding fix is one of the items forwarded to centers."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this revised-EFC rule correct?",
+          "question_text": "If the revised EFC differs by 10 minutes or more from the one issued by center, approach control must forward it to center.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A revised EFC is forwarded when it differs by 10 minutes or more."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A collocated or satellite tower has STARS data on its CTRD, and you want to use STARS modify or quick look functions to pass arrival data.",
+          "para_context": "STARS modify or quick look functions may be used to forward arrival data only where the tower has STARS data displayed on its CTRD and a facility directive or letter of agreement exists outlining procedures for using STARS to transfer this data.",
+          "choices": [
+            {
+              "text": "Use STARS for the transfer only if the required facility directive or letter of agreement exists.",
+              "is_correct": true
+            },
+            {
+              "text": "Use STARS automatically because the data is visible on the CTRD.",
+              "is_correct": false
+            },
+            {
+              "text": "Use STARS only after the local controller verbally waives the directive requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "Avoid STARS entirely because arrival data may never be transferred electronically.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The STARS transfer methods require both displayed data and the governing directive or agreement."
+        }
+      ]
+    },
+    "4-7-12": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "Before issuing an approach clearance, what destination information must be provided when known?",
+          "choices": [
+            {
+              "text": "Any abnormal operation of approach or landing aids and any airport condition that might restrict an approach or landing.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the current tower frequency and runway exit.",
+              "is_correct": false
+            },
+            {
+              "text": "Only NOTAMs that concern taxiways or aprons.",
+              "is_correct": false
+            },
+            {
+              "text": "Only cold-temperature compensation information in every case.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Approach and landing aid abnormalities and airport conditions that could restrict approach or landing must be issued when known."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this omission rule correct?",
+          "question_text": "If the restricting airport-condition information is already in ATIS and the pilot states the appropriate ATIS code, you may omit that information.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That information may be omitted when it is already in ATIS and the pilot states the correct code."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Which item is excluded?",
+          "question_text": "For en route airport-conditions information, which item is specifically excluded from the package?",
+          "choices": [
+            {
+              "text": "Taxiway, apron, or service-area NOTAMs outside the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "Abnormal approach-aid operation that could restrict landing.",
+              "is_correct": false
+            },
+            {
+              "text": "Destination airport conditions that might restrict an approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway condition code information.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Surface-environment items outside the landing area are excluded from en route airport-conditions information."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this RwyCC timing rule correct?",
+          "question_text": "RwyCC from a FICON NOTAM may be issued before or with the approach clearance, before an en route descent clearance, prior to departure in terminal operations, and as soon as possible after subsequent changes.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the listed times for issuing RwyCC information."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A pilot says, \"We already have the NOTAMs,\" but you know of a destination airport condition that could restrict the approach and it is not in the pilot's ATIS acknowledgment.",
+          "para_context": "A pilot's statement that they have the NOTAMs does not relieve the controller of the responsibility to issue airport conditions that might restrict an approach or landing. Telling the pilot to contact FSS also does not relieve that responsibility.",
+          "choices": [
+            {
+              "text": "Issue the restricting airport condition anyway.",
+              "is_correct": true
+            },
+            {
+              "text": "Rely on the pilot's statement and omit the condition.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to call FSS instead of issuing it yourself.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the tower frequency change to pass it along.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The controller still has the responsibility to issue restricting airport conditions."
+        }
+      ]
+    },
+    "4-7-13": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When a terminal facility switches from one ILS to another at an airport with multiple systems not used simultaneously, what must be done?",
+          "choices": [
+            {
+              "text": "Coordinate with facilities that use fixes formed by reference to those NAVAIDs.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the new ILS locally without coordination if the runway remains the same.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate only with the destination tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until aircraft are inside the final approach fix, then make the switch.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The switch requires coordination with facilities that use fixes formed by reference to the affected NAVAIDs."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this coordination rule correct?",
+          "question_text": "When changing from one ILS to another at an airport with multiple systems not used simultaneously, coordinate with facilities that use the fixes formed by reference to those NAVAIDs.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the direct coordination requirement in the paragraph."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Who needs coordination?",
+          "question_text": "Which facilities are the ones that must be coordinated with in this ILS switch?",
+          "choices": [
+            {
+              "text": "Facilities using fixes formed by reference to the affected NAVAIDs.",
+              "is_correct": true
+            },
+            {
+              "text": "Only facilities using the departure runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the flight service station.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the airport manager.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those are the facilities named in the coordination requirement."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "The airport is about to change from one ILS to another, and other facilities still use fixes defined by the NAVAIDs involved in that switch.",
+          "para_context": "When changing from one ILS to another at an airport with multiple systems that are not used simultaneously, the facility coordinates with other facilities that use fixes formed by reference to those NAVAIDs.",
+          "choices": [
+            {
+              "text": "Coordinate the switch with those facilities before making the change.",
+              "is_correct": true
+            },
+            {
+              "text": "Make the switch first, then advise them only if a problem develops.",
+              "is_correct": false
+            },
+            {
+              "text": "Skip coordination if the airport remains in IFR conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate only after the next arrival has been cleared for the new ILS.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The coordination is required before the change because those facilities use fixes defined by the affected NAVAIDs."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "4-7-7": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must en route weather be transmitted to an arriving aircraft before or as part of the approach clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The requirement applies when official weather is below the threshold ceiling or visibility values and the report is being sent directly or through an authorized relay path.",
+          "choices": [
+            {
+              "text": "When official weather is below the stated thresholds and the report is being sent directly or through an authorized relay path.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever any current weather observation exists.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot requests a special observation.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft is established on the approach.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When this weather rule applies, a nonapproach control facility may be told to issue current weather.",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That is one of the authorized relay methods.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which relay path is specifically authorized here?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A nonapproach control facility may be told to issue current weather.",
+          "choices": [
+            {
+              "text": "Telling a nonapproach control facility to issue current weather.",
+              "is_correct": true
+            },
+            {
+              "text": "Relying on an air carrier company radio to satisfy the relay requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "Waiting for the tower to pass the weather after approach clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Omitting the weather because the airport has ATIS.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the report is sent directly to the pilot by center controller-to-pilot communications and the threshold weather conditions exist, when is it transmitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It is transmitted prior to or as part of the approach clearance.",
+          "choices": [
+            {
+              "text": "Prior to or as part of the approach clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft reports the final approach fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after approach control accepts the handoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft asks for weather specifically.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "If an arriving aircraft reports weather below the pilot's landing minima, what instructions should ATC issue to that aircraft as appropriate?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "ATC issues appropriate instructions to hold or proceed to another airport.",
+          "choices": [
+            {
+              "text": "Instructions to hold or proceed to another airport.",
+              "is_correct": true
+            },
+            {
+              "text": "An immediate cancellation of IFR only.",
+              "is_correct": false
+            },
+            {
+              "text": "A mandatory continuation of the approach.",
+              "is_correct": false
+            },
+            {
+              "text": "No instructions because the landing decision belongs to the pilot.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When one arrival reports weather below minima, ATC should adjust the landing sequence of other aircraft desiring approaches as necessary.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Other arrivals are resequenced as necessary and approach clearances are issued accordingly.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Who is responsible for determining whether the existing weather or visibility is adequate for the approach and landing?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That determination is the pilot's or aircraft operator's responsibility.",
+          "choices": [
+            {
+              "text": "The pilot or aircraft operator.",
+              "is_correct": true
+            },
+            {
+              "text": "The approach controller.",
+              "is_correct": false
+            },
+            {
+              "text": "The destination tower.",
+              "is_correct": false
+            },
+            {
+              "text": "The airport manager.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If one arrival reports weather below minima and two more aircraft still want approaches, what should ATC do with those other aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Their place in the sequence is adjusted as necessary and approach clearances are issued accordingly.",
+          "choices": [
+            {
+              "text": "Adjust their position in the landing sequence as necessary and issue approach clearances accordingly.",
+              "is_correct": true
+            },
+            {
+              "text": "Suspend all approaches automatically until the weather improves.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the first report because it applies only to one pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear them in the same order without change because each pilot makes an independent decision.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-10": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When may approach information contained in ATIS be omitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "ATIS-covered approach information may be omitted once the pilot states the appropriate ATIS code.",
+          "choices": [
+            {
+              "text": "When the pilot states the appropriate ATIS code.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the airport has an operating ATIS, whether or not the pilot received it.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the aircraft is already on final approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when ceiling and visibility are above basic VFR minimums.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At an airport without ATIS, after the pilot advises receipt of the automated weather, which items may be omitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Items 3 through 5 may be omitted after the pilot advises receipt of the automated weather.",
+          "choices": [
+            {
+              "text": "Surface wind, threshold-triggered ceiling and visibility, and altimeter setting.",
+              "is_correct": true
+            },
+            {
+              "text": "Approach type, runway assignment, and altimeter setting.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the expected approach type.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing; the entire package must still be given.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Special weather observations need not be issued after they are included in ATIS and the pilot states the appropriate ATIS code.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Once the special observation is in ATIS and the pilot states the proper code, it need not be issued separately.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Upon pilot request, what automated-weather information must controllers provide?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "On request, controllers provide the automated weather frequency and, if appropriate, that airport weather is not available.",
+          "choices": [
+            {
+              "text": "The frequency where automated weather may be obtained and, if appropriate, that airport weather is not available.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the last altimeter setting.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the current tower frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the last pilot report from the airport vicinity.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the pilot cannot receive the ASOS or AWOS broadcast, what must ATC issue?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "ATC issues the last long-line disseminated weather.",
+          "choices": [
+            {
+              "text": "The last long-line disseminated weather.",
+              "is_correct": true
+            },
+            {
+              "text": "No weather at all because the airport is uncontrolled.",
+              "is_correct": false
+            },
+            {
+              "text": "Only trend information from the automated system without explanation.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the approach type and runway assignment.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Complete the prescribed phraseology: \"AIRPORT AWOS/ASOS WEATHER _____ ON FREQUENCY\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The prescribed phraseology uses \"AVAILABLE.\"",
+          "choices": [
+            {
+              "text": "AVAILABLE",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-11": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When the tower and TRACON are part of the same facility, what must be forwarded to the tower?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The collocated tower receives aircraft identification, type if needed for separation, and the approach procedure and or runway if different from that in use.",
+          "choices": [
+            {
+              "text": "Aircraft identification, type if needed for separation, and the approach procedure and or runway if different from that in use.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the runway exit and gate assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the ETA.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the ATIS code.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Approach control forwards a revised EFC to center only when it differs by 10 minutes or more from the one issued by center.",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "A revised EFC is forwarded only when it differs by 10 minutes or more.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which arrival detail is specifically forwarded from approach control to centers?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "One of the forwarded items is the highest altitude being used by approach control at the holding fix.",
+          "choices": [
+            {
+              "text": "Highest altitude being used by approach control at the holding fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Runway exit taxi instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "The airport's ATIS code letter.",
+              "is_correct": false
+            },
+            {
+              "text": "Gate assignment at destination.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may STARS modify or quick look functions be used to forward arrival data?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "They may be used when the tower has STARS data on its CTRD and a facility directive or letter of agreement outlines the procedures.",
+          "choices": [
+            {
+              "text": "When the tower has STARS data on its CTRD and a facility directive or letter of agreement outlines the procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the local controller verbally approves it.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at satellite towers, never at collocated towers.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when no other arrival data must be forwarded to center.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-12": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Before issuing an approach clearance, what known destination information must be provided?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Known abnormalities in approach or landing aids and known destination conditions that could restrict approach or landing must be issued.",
+          "choices": [
+            {
+              "text": "Abnormal operation of approach or landing aids and destination airport conditions that might restrict approach or landing.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the tower frequency and runway exit.",
+              "is_correct": false
+            },
+            {
+              "text": "Only taxiway or apron NOTAMs.",
+              "is_correct": false
+            },
+            {
+              "text": "Only cold-temperature compensation information in every case.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If the airport-condition information is in ATIS and the pilot states the appropriate ATIS code, may that information be omitted?",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Yes. When the information is already in ATIS and the pilot states the proper code, it may be omitted.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which item is specifically excluded from en route airport-conditions information?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Surface-environment items outside the landing area, such as taxiway or apron NOTAMs, are excluded.",
+          "choices": [
+            {
+              "text": "Taxiway, apron, or service-area NOTAMs outside the landing area.",
+              "is_correct": true
+            },
+            {
+              "text": "Abnormal operation of approach aids that could restrict landing.",
+              "is_correct": false
+            },
+            {
+              "text": "Destination conditions that might restrict the approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Runway condition code information.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may RwyCC from a FICON NOTAM be issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "RwyCC may be issued before or with approach clearance, before en route descent clearance, before departure in terminal operations, and as soon as possible after any subsequent changes.",
+          "choices": [
+            {
+              "text": "Before or with approach clearance, before en route descent clearance, before departure in terminal operations, and as soon as possible after changes.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the pilot requests the full FICON NOTAM.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft checks in with tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when braking action is poor or nil.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A pilot says, \"We have the NOTAMs.\" Does that relieve the controller of the duty to issue airport conditions that might restrict the approach or landing?",
+          "question_type": "true_false",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "No. The controller still has the responsibility to issue restricting airport conditions.",
+          "choices": [
+            {
+              "text": "False",
+              "is_correct": true
+            },
+            {
+              "text": "True",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-13": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must facilities coordinate when switching from one ILS to another at an airport with multiple systems not used simultaneously?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Coordination is required whenever such a switch is made.",
+          "choices": [
+            {
+              "text": "When the change is made from one ILS to another at that airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the first aircraft is cleared for the new ILS.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the runway number changes.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the airport is in IMC.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Coordination must be accomplished with facilities that use fixes formed by reference to the affected NAVAIDs.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Those are the facilities specifically named in the rule.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Who are the facilities that must be coordinated with during the ILS switch?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The required coordination is with facilities using fixes formed by reference to the affected NAVAIDs.",
+          "choices": [
+            {
+              "text": "Facilities using fixes formed by reference to the affected NAVAIDs.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the destination tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the flight service station.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the airport manager.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If other facilities still use fixes defined by the NAVAIDs involved in the ILS switch, when should the coordination occur?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The coordination is part of making the switch and therefore occurs before the change is executed.",
+          "choices": [
+            {
+              "text": "Before making the switch.",
+              "is_correct": true
+            },
+            {
+              "text": "After the first arrival is established on the new ILS.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after tower requests it.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the previous ILS becomes completely unusable.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

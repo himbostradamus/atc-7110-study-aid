@@ -1,0 +1,104 @@
+{
+  "questions": {
+    "5-8-1": {
+      "items": [
+        {
+          "question_text": "Under 5-8-1a, when vectoring a departing aircraft on a radar SID, concurrent use of a _____ is not permitted.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-8-1a: concurrent use of a diverse vector area (DVA) is not permitted when vectoring on a radar SID.",
+          "choices": [
+            {
+              "text": "diverse vector area (DVA)",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "5-8-2": {
+      "items": [
+        {
+          "question_text": "Under 5-8-2a, before departure, assign the initial heading consistent with either a SID being flown or _____, if applicable.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The initial heading must be consistent with a SID or a DVA (Diverse Vector Area) if applicable.",
+          "choices": [
+            {
+              "text": "DVA",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "5-8-5": {
+      "items": [
+        {
+          "question_text": "Under 5-8-5 TERMINAL, simultaneous operations are authorized between a departing aircraft and an arrival on final to another parallel or nonintersecting diverging runway, provided what two conditions are met?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-8-5 requires: (1) the runways are separated by at least 2,500 feet, or (2) a letter of agreement authorizes the operation for runways separated by less than 2,500 feet.",
+          "choices": [
+            {
+              "text": "Runways separated by at least 2,500 feet or authorized by LOA for less separation.",
+              "is_correct": true
+            },
+            {
+              "text": "All departing aircraft must use the same runway.",
+              "is_correct": false
+            },
+            {
+              "text": "The arrival must be at least 10 miles from the airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Visual separation must be provided by the tower.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "5-8-1": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A departing aircraft is following a radar SID, and you also have a published DVA covering the same area. You want to vector the aircraft for separation while it is still on the SID.",
+          "question_text": "Under 5-8-1, may you vector the aircraft using the DVA while it is on a radar SID?",
+          "choices": [
+            {
+              "text": "No, concurrent use of a DVA is not permitted when vectoring on a radar SID.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, both the SID and DVA can be used together for maximum flexibility.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only after the aircraft reaches the MVA.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the pilot requests radar vectors.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "5-8-1A explicitly prohibits concurrent use of a DVA when vectoring a departing aircraft on a radar SID.",
+          "para_context": "PROCEDURES"
+        }
+      ]
+    }
+  }
+}

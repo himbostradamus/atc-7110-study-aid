@@ -1,0 +1,966 @@
+{
+  "activities": {
+    "2-3-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the default rule for using flight progress strips?",
+          "choices": [
+            {
+              "text": "Use flight progress strips to post current data on air traffic and required clearances unless a facility directive authorizes otherwise.",
+              "is_correct": true
+            },
+            {
+              "text": "Use flight progress strips only when the sector is working nonradar traffic.",
+              "is_correct": false
+            },
+            {
+              "text": "Use flight progress strips only when the supervisor specifically directs them for each flight.",
+              "is_correct": false
+            },
+            {
+              "text": "Use flight progress strips only for departures, not for other air traffic control services.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph makes strip use the default unless a facility directive authorizes a different practice."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Use an X to delete unwanted strip items instead of erasing or overwriting them when correcting, updating, or preplanning information.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Strip corrections are made by deleting the old item with the approved method and writing the new information adjacent to it."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If the aircraft has not yet reported or been observed leaving the altitude, controllers must not draw a horizontal line through the altitude being vacated.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The horizontal line through a vacated altitude waits for the aircraft report or valid observation of leaving the altitude."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Altitude information may be written in thousands of feet only if the procedure is authorized by the facility manager and defined in a facility directive.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Thousands shorthand is not automatic; it has to be locally authorized and defined."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You need to revise a climb instruction on a strip. Another controller starts erasing the old altitude, draws a line through the vacated altitude before the aircraft reports leaving it, and says writing the new altitude nearby only makes the strip messy.",
+          "para_context": "When correcting strip information, do not erase or overwrite items. Use the approved deletion methods, write the new altitude immediately adjacent in the same space, and do not draw a horizontal line through a vacated altitude until the aircraft has reported or is observed leaving it.",
+          "choices": [
+            {
+              "text": "Delete the old altitude with the approved method, write the new altitude adjacent in the same space, and wait to line through the vacated altitude until the aircraft reports or is observed leaving it.",
+              "is_correct": true
+            },
+            {
+              "text": "Erase the old altitude entirely so only the final corrected value remains on the strip.",
+              "is_correct": false
+            },
+            {
+              "text": "Line through the vacated altitude as soon as the instruction is issued, even before the aircraft leaves it.",
+              "is_correct": false
+            },
+            {
+              "text": "Move the new altitude to any convenient empty block because strip neatness matters more than keeping it in the same space.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The strip needs an auditable correction trail and the vacated-altitude line waits until the aircraft is actually leaving the altitude."
+        }
+      ]
+    },
+    "2-3-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "On the en route flight progress strip, which block records requested altitude?",
+          "choices": [
+            {
+              "text": "Block 24.",
+              "is_correct": true
+            },
+            {
+              "text": "Block 20.",
+              "is_correct": false
+            },
+            {
+              "text": "Block 19.",
+              "is_correct": false
+            },
+            {
+              "text": "Block 28.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Requested altitude is recorded in block 24 on the en route strip."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When voice recorders are not operating and strips are being used at the facility, block 20a must be used to record reported RA events.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Block 20a becomes required for reported RA events when voice recorders are not operating and strips are in use."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Optional use of spaces 13, 14, 14a, 22, 23, 24, and 28 is authorized for point out, radar vector, speed adjustment, or transfer-of-control data when the facility air traffic manager authorizes it.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Those spaces may be used for those purposes when the facility air traffic manager authorizes the optional use."
+        },
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may latitude/longitude coordinates be substituted for a nonadapted NAVAID in space 25 of a domestic en route strip?",
+          "choices": [
+            {
+              "text": "When it is necessary to accommodate a random RNAV or GNSS route request.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot files direct between any two fixes, regardless of route type.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the strip has already been posted to the next sector.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the airway or route field is otherwise blank.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph allows latitude/longitude substitution in space 25 when it is necessary to handle a random RNAV or GNSS route request."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Voice recorders are inoperative and strips are being used at the facility. An aircraft reports an RA event, and another controller says there is no need to mark it because the event will be captured in the computer system later. At the same time, a random GNSS route request requires a nonadapted waypoint in space 25.",
+          "para_context": "On the en route strip, block 20a is required for reported RA events when voice recorders are not operating and strips are being used. Latitude/longitude coordinates may be substituted for nonadapted NAVAIDs in space 25 when necessary to accommodate a random RNAV or GNSS route request.",
+          "choices": [
+            {
+              "text": "Record the RA event in block 20a and use latitude/longitude coordinates in space 25 if needed for the random GNSS route request.",
+              "is_correct": true
+            },
+            {
+              "text": "Skip the RA marking because the system can reconstruct it later, and leave space 25 blank if the waypoint is nonadapted.",
+              "is_correct": false
+            },
+            {
+              "text": "Record the RA event only in remarks, and substitute latitude/longitude only after obtaining pilot confirmation a second time.",
+              "is_correct": false
+            },
+            {
+              "text": "Use block 24 for the RA event and place the latitude/longitude coordinates in block 20.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Both situations are specifically covered: block 20a handles RA events when voice recorders are down, and space 25 may use latitude/longitude coordinates when necessary for the random RNAV or GNSS route."
+        }
+      ]
+    },
+    "2-3-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What does ATOP do with flight progress strip information during normal operation and after a catastrophic system failure?",
+          "choices": [
+            {
+              "text": "It displays information on electronic flight progress strips and, after catastrophic failure, prints flight progress strips with data in the corresponding numbered spaces.",
+              "is_correct": true
+            },
+            {
+              "text": "It prints paper strips only during normal operation and suppresses strip information after catastrophic failure.",
+              "is_correct": false
+            },
+            {
+              "text": "It uses only handwritten strips and does not support electronic flight progress strips.",
+              "is_correct": false
+            },
+            {
+              "text": "It drops strip numbering after failure and prints free-text coordination notes only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ATOP normally displays electronic strips and prints the numbered strip data if the system fails catastrophically."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which reduced-separation flag indicates Reduced Vertical Separation Minimum on the oceanic strip?",
+          "choices": [
+            {
+              "text": "W.",
+              "is_correct": true
+            },
+            {
+              "text": "M.",
+              "is_correct": false
+            },
+            {
+              "text": "R.",
+              "is_correct": false
+            },
+            {
+              "text": "D.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The W flag indicates RVSM on the oceanic strip."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Standard annotations and abbreviations for field 22 may be specified by facility directives.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph explicitly allows facility directives to specify field 22 annotations and abbreviations."
+        },
+        {
+          "activity_type": "term_definition_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "The term W flag refers to Reduced Vertical Separation Minimum on the oceanic strip.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Within the reduced-separation indicators, W is the RVSM flag."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "ATOP has suffered a catastrophic failure, and the sector is working from printed oceanic strips. Another controller treats the printed strip as informal scratch data and says the numbered-space format no longer matters. At the same time, a trainee is unsure whether to mark a W flag aircraft as using RVSM.",
+          "para_context": "After catastrophic ATOP failure, printed oceanic strips still use the corresponding numbered spaces. Reduced-separation flags include W for Reduced Vertical Separation Minimum.",
+          "choices": [
+            {
+              "text": "Continue using the numbered strip format and treat the W flag as Reduced Vertical Separation Minimum.",
+              "is_correct": true
+            },
+            {
+              "text": "Treat the printed strip as unstructured scratch paper and reserve W for weather deviation use.",
+              "is_correct": false
+            },
+            {
+              "text": "Abandon printed strips entirely because the numbered spaces apply only to electronic displays.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the W flag only if the aircraft is also showing a Mach Number Technique flag.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Catastrophic failure changes the medium, not the strip structure, and W still means RVSM."
+        }
+      ]
+    },
+    "2-3-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When may facility managers authorize omissions or optional use of listed spaces on terminal flight progress strips?",
+          "choices": [
+            {
+              "text": "When no misunderstanding will result and the omissions or optional uses are specified in a facility directive.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever a controller prefers to shorten strip marking during low traffic.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when both arrivals and departures are being worked by the same position.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at non-FDIO locations where no revision numbers are printed.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Optional use and omissions require both no risk of misunderstanding and specification in a facility directive."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When voice recorders are not operating and strips are being used at the facility, space 8B must be used to record reported RA events.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Space 8B becomes required for RA-event recording when voice recorders are inoperative and strips are in use."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If nonradar procedures are used or radio recording equipment is inoperative, radar facility personnel must enter data in spaces 10 through 18.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Radar facility personnel need not enter that data except in those two situations."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "On arrival strips, which space may contain minimum fuel, destination airport, point out, radar vector, or speed adjustment information?",
+          "choices": [
+            {
+              "text": "Space 9A.",
+              "is_correct": true
+            },
+            {
+              "text": "Space 8B.",
+              "is_correct": false
+            },
+            {
+              "text": "Space 2A.",
+              "is_correct": false
+            },
+            {
+              "text": "Space 7.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "On arrival strips, 9A is the space used for that set of information."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A terminal radar facility is using strips while voice recorders are down. A reported RA event comes in, and another controller says to skip space 8B because the remarks area already has enough room. Later, someone suggests leaving spaces 10 through 18 blank during nonradar operations because those spaces are optional anyway.",
+          "para_context": "On terminal strips, space 8B is required for RA-event recording when voice recorders are not operating and strips are being used. Radar facility personnel need not enter data in spaces 10 through 18 except when nonradar procedures are used or radio recording equipment is inoperative.",
+          "choices": [
+            {
+              "text": "Record the RA event in space 8B and ensure spaces 10 through 18 are used when nonradar procedures or recorder outages require them.",
+              "is_correct": true
+            },
+            {
+              "text": "Skip space 8B because remarks can replace it, and leave spaces 10 through 18 blank because they are always optional.",
+              "is_correct": false
+            },
+            {
+              "text": "Use space 9A for the RA event and reserve space 8B for revision numbers only.",
+              "is_correct": false
+            },
+            {
+              "text": "Record the RA event on a separate scratch pad and enter spaces 10 through 18 only for departures, not nonradar operations.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph sets both conditions directly: space 8B for RA events during recorder outages, and data in spaces 10 through 18 when nonradar procedures or recorder outages require it."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "2-3-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must en route flight progress strips be posted?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The paragraph states the rule directly: en route flight progress strips must be posted.",
+          "choices": [
+            {
+              "text": "They must be posted.",
+              "is_correct": true
+            },
+            {
+              "text": "Only during nonradar operations.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when a facility directive specifically requires them for a single flight.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when strips are prepared manually rather than by machine.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How should an unwanted altitude or climb/descend-and-maintain entry be deleted on a strip?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "The old item is deleted with an X and the new altitude is written immediately adjacent in the same space.",
+          "choices": [
+            {
+              "text": "Use an X to delete it and write the new altitude immediately adjacent in the same space.",
+              "is_correct": true
+            },
+            {
+              "text": "Erase the old value completely and rewrite the strip cleanly.",
+              "is_correct": false
+            },
+            {
+              "text": "Draw a horizontal line through it as soon as the clearance is issued.",
+              "is_correct": false
+            },
+            {
+              "text": "Move the new altitude to a blank block elsewhere on the strip.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What color may be used for preplanning on flight progress strips?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The paragraph specifically permits preplanning in red pencil.",
+          "choices": [
+            {
+              "text": "Red pencil.",
+              "is_correct": true
+            },
+            {
+              "text": "Green ink only.",
+              "is_correct": false
+            },
+            {
+              "text": "Any color chosen by the controller.",
+              "is_correct": false
+            },
+            {
+              "text": "Blue pencil only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Altitude information may be written in thousands of feet only when authorized by the facility manager and defined in a facility directive.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Thousands shorthand is allowed only through local authorization and directive definition.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What should happen to strips when they are no longer required for control purposes?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Only necessary current data is maintained, and strips are removed when no longer required for control purposes.",
+          "choices": [
+            {
+              "text": "Remove them from the flight progress boards.",
+              "is_correct": true
+            },
+            {
+              "text": "Keep them on the board until the end of the shift.",
+              "is_correct": false
+            },
+            {
+              "text": "Erase all entries and reuse the same strip.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer them to remarks storage on another active strip.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "2-3-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "On the en route strip, which block records center-estimated time over fix or clearance information for departing aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "That entry belongs in block 15.",
+          "choices": [
+            {
+              "text": "Block 15.",
+              "is_correct": true
+            },
+            {
+              "text": "Block 18.",
+              "is_correct": false
+            },
+            {
+              "text": "Block 24.",
+              "is_correct": false
+            },
+            {
+              "text": "Block 29-30.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must be recorded in block 20a when voice recorders are not operating and strips are being used?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Block 20a records reported RA events in that circumstance, including the letters RA, the climb or descent arrow if reported, and the time.",
+          "choices": [
+            {
+              "text": "The letters RA, a climb or descent arrow if reported, and the time of the event.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the aircraft identification and beacon code.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the pilot's next-fix estimate and requested altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the previous fix and actual departure time.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When may latitude/longitude coordinates be used in space 25 of a domestic en route strip?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "They may substitute for nonadapted NAVAIDs when necessary to accommodate a random RNAV or GNSS route request.",
+          "choices": [
+            {
+              "text": "When necessary to accommodate a random RNAV or GNSS route request.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the route includes any airway change.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at FDIO locations.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the pilot amends the beacon code.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Requested altitude is recorded in block 24 on the en route strip.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Block 24 is the requested-altitude block on the en route strip.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which block contains point of origin, route as required for control and data relay, and destination?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "That set of entries belongs in block 25.",
+          "choices": [
+            {
+              "text": "Block 25.",
+              "is_correct": true
+            },
+            {
+              "text": "Block 26.",
+              "is_correct": false
+            },
+            {
+              "text": "Block 21.",
+              "is_correct": false
+            },
+            {
+              "text": "Block 27.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "2-3-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What does the oceanic strip's M flag indicate?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "M indicates Mach Number Technique.",
+          "choices": [
+            {
+              "text": "Mach Number Technique.",
+              "is_correct": true
+            },
+            {
+              "text": "Reduced Vertical Separation Minimum.",
+              "is_correct": false
+            },
+            {
+              "text": "Radar contact.",
+              "is_correct": false
+            },
+            {
+              "text": "Second flight profile.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which pair correctly matches the oceanic strip's distance-based longitudinal separation flags?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "D indicates 50 NM distance-based longitudinal separation, and 3 indicates 30 NM.",
+          "choices": [
+            {
+              "text": "D = 50 NM and 3 = 30 NM.",
+              "is_correct": true
+            },
+            {
+              "text": "D = 30 NM and 3 = 50 NM.",
+              "is_correct": false
+            },
+            {
+              "text": "D = degraded RNP and 3 = second flight profile.",
+              "is_correct": false
+            },
+            {
+              "text": "D = direct route and 3 = triple-track route.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "In what order are reported flight levels displayed in field 7 when multiple sources exist?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "Field 7 displays reports in the order of preference: Mode C, ADS, then position reports.",
+          "choices": [
+            {
+              "text": "Mode C, ADS, then position reports.",
+              "is_correct": true
+            },
+            {
+              "text": "ADS, Mode C, then position reports.",
+              "is_correct": false
+            },
+            {
+              "text": "Position reports, ADS, then Mode C.",
+              "is_correct": false
+            },
+            {
+              "text": "Position reports, Mode C, then ADS.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Facility directives may specify standard annotations and abbreviations for field 22.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The paragraph explicitly allows field 22 annotations and abbreviations to be specified by facility directives.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does the oceanic strip's W flag represent?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "W is the reduced-separation flag for RVSM.",
+          "choices": [
+            {
+              "text": "Reduced Vertical Separation Minimum.",
+              "is_correct": true
+            },
+            {
+              "text": "Reduced Mach Number Technique.",
+              "is_correct": false
+            },
+            {
+              "text": "Weather deviation.",
+              "is_correct": false
+            },
+            {
+              "text": "Waypoint crossing status.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "2-3-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "On terminal arrival strips, what information may be omitted from space 9A only if a facility directive authorizes it and no misunderstanding will result?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "The directive may authorize omission of destination airport, point out, radar vector, or speed adjustment information, but not minimum fuel.",
+          "choices": [
+            {
+              "text": "Destination airport, point out, radar vector, and speed adjustment information, but not minimum fuel.",
+              "is_correct": true
+            },
+            {
+              "text": "Minimum fuel only.",
+              "is_correct": false
+            },
+            {
+              "text": "Aircraft identification and beacon code.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordination fix and estimated time only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When is space 8B required on terminal strips?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Space 8B is required when voice recorders are not operating and strips are being used at the facility.",
+          "choices": [
+            {
+              "text": "When voice recorders are not operating and strips are being used at the facility.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever a revision number is issued at an FDIO location.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for departure strips, never for arrivals.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when RA events are reported by two aircraft at once.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is entered in block 9 on a computer-generated terminal departure strip?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Computer-generated departure block 9 contains route, destination, and remarks, with altitude or restrictions entered manually if appropriate.",
+          "choices": [
+            {
+              "text": "Route, destination, and remarks, with altitude or restrictions entered manually if appropriate.",
+              "is_correct": true
+            },
+            {
+              "text": "Only requested altitude and beacon code.",
+              "is_correct": false
+            },
+            {
+              "text": "Only departure time and runway used for takeoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Only aircraft identification and coordination fix.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Radar facility personnel need not enter data in spaces 10 through 18 except when nonradar procedures are used or radio recording equipment is inoperative.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Those are the two stated exceptions to the normal relief from entering data in spaces 10 through 18.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which space on the terminal arrival strip is used for reported RA events when voice recorders are inoperative and strips are in use?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "That RA-event entry belongs in space 8B.",
+          "choices": [
+            {
+              "text": "Space 8B.",
+              "is_correct": true
+            },
+            {
+              "text": "Space 9A.",
+              "is_correct": false
+            },
+            {
+              "text": "Space 2A.",
+              "is_correct": false
+            },
+            {
+              "text": "Space 7.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

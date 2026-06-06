@@ -1,0 +1,1505 @@
+{
+  "activities": {
+    "3-4-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When does the emergency-lighting rule require action from the controller?",
+          "choices": [
+            {
+              "text": "Whenever the controller becomes aware that an emergency has occurred or will occur.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the pilot formally declares an emergency on the frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Only during nighttime emergencies.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after airport management requests full lighting support.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The trigger is controller awareness that an emergency has or will occur, not a formal declaration or a time-of-day limit."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this emergency-lighting directive correct?",
+          "question_text": "Direct operation of all appropriate airport lighting aids as required whenever you become aware that an emergency has or will occur.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the direct operating instruction in 3-4-1."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this emergency condition rule correct?",
+          "question_text": "If you become aware that an emergency will occur, you must take action to provide the appropriate airport lighting aids.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Imminent emergencies are explicitly covered along with emergencies already in progress."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A pilot reports an imminent gear problem and says an emergency landing is likely on the next approach. Another controller says to wait until the aircraft is on short final and officially declares the emergency before changing any lighting.",
+          "para_context": "Whenever you become aware that an emergency has or will occur, take action to provide for the operation of all appropriate airport lighting aids as required.",
+          "choices": [
+            {
+              "text": "Take action now to operate the appropriate airport lighting aids for the emergency.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for a formal emergency declaration before changing any lighting.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the aircraft reaches short final because lighting changes are useful only once the runway is assured.",
+              "is_correct": false
+            },
+            {
+              "text": "Do nothing unless the airport manager specifically authorizes emergency lighting use.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The controller acts when aware that the emergency has occurred or will occur. A formal declaration is not the controlling trigger."
+        }
+      ]
+    },
+    "3-4-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When separate on-off controls are provided, when should REIL be operated?",
+          "choices": [
+            {
+              "text": "When the associated runway lights are lighted, subject to local directives, pilot request, and the REIL intensity table.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the pilot specifically asks for REIL, regardless of runway-light status.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at night, because daytime REIL use is not authorized.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for arrivals, because REIL is not used to support departures.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "REIL follows the associated runway-light use, with separate turn-off triggers, local directives, pilot request, and table-based intensity settings."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this REIL operating rule correct?",
+          "question_text": "If separate on-off controls are provided and the associated runway lights are lighted, REIL must be operated.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the base operating rule for REIL with separate controls."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which is a normal REIL turn-off condition?",
+          "question_text": "Which condition is one of the listed triggers for turning REIL off?",
+          "choices": [
+            {
+              "text": "A departing aircraft has left the traffic pattern area.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft has merely been cleared for takeoff but has not started the roll.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft has crossed the runway hold line for departure.",
+              "is_correct": false
+            },
+            {
+              "text": "Visibility has improved to more than 5 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "REIL is normally turned off after an arriving aircraft lands, after a departing aircraft leaves the traffic pattern, or when the lights are no further use to the pilot."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use the REIL intensity table.",
+          "question_text": "For a three-step REIL system, what daytime setting applies when visibility is 2 to 5 miles inclusive?",
+          "choices": [
+            {
+              "text": "Setting 2.",
+              "is_correct": true
+            },
+            {
+              "text": "Setting 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Setting 1.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilot request only; no standard daytime setting exists for that visibility range.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-1 assigns setting 2 for daytime visibility of 2 to 5 miles inclusive."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this REIL intensity requirement correct?",
+          "question_text": "REIL intensity must follow the applicable table unless a facility directive or pilot request calls for a different operation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph points to the REIL intensity table, with local-directive and pilot-request exceptions."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "REIL has been operating for Runway 18. An arrival has landed and cleared the runway. Another departure has not yet taxied out, and the lights are no longer helping the just-landed aircraft.",
+          "para_context": "Turn REIL off after an arriving aircraft has landed, after a departing aircraft has left the traffic pattern area, or when the lights are determined to be of no further use to the pilot.",
+          "choices": [
+            {
+              "text": "Turn the REIL off because the arriving aircraft has landed and the lights are no longer of use to that pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave the REIL on until the next departure is airborne, because REIL must stay on as long as any runway-lighted departure might use the runway later.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave the REIL on until the runway lights themselves are turned off, because REIL may never be turned off independently.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the runway edge lights off as well, because REIL and runway lights must always be extinguished together.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "REIL has its own normal turn-off triggers. It does not stay on indefinitely just because another aircraft may use the runway later."
+        }
+      ]
+    },
+    "3-4-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When must a remotely switched VASI system be operated?",
+          "choices": [
+            {
+              "text": "When it serves the runway in use, with intensity controlled by the applicable table unless a facility directive or pilot requirement changes it.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when an IFR aircraft requests it.",
+              "is_correct": false
+            },
+            {
+              "text": "Only between sunset and sunrise.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the rotating beacon is on and REIL is operating.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The normal rule is to operate the VASI when it serves the runway in use and use the applicable intensity table unless an exception applies."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this VASI requirement correct?",
+          "question_text": "A remotely switched VASI system must be operated when it serves the runway in use.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the base operating requirement for remotely switched VASI systems."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use the VASI intensity tables.",
+          "question_text": "For a three-step VASI system, what intensity applies during twilight?",
+          "choices": [
+            {
+              "text": "Medium.",
+              "is_correct": true
+            },
+            {
+              "text": "High.",
+              "is_correct": false
+            },
+            {
+              "text": "Low.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilot request only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-3 assigns the medium setting to twilight for a three-step VASI system."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this VASI system statement correct?",
+          "question_text": "A basic FAA-standard VASI system uses a photoelectric device for independent operation, has no on-off control feature, and is intended for continuous operation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note explains that the basic FAA-standard VASI uses photoelectric control and is intended to run continuously without an on-off switch."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which VASI intensity pairing is correct?",
+          "question_text": "Which period and setting pairing matches the VASI tables?",
+          "choices": [
+            {
+              "text": "Two-step VASI: high by day and low by night.",
+              "is_correct": true
+            },
+            {
+              "text": "Two-step VASI: low by day and high by night.",
+              "is_correct": false
+            },
+            {
+              "text": "Three-step VASI: high at night and low by day.",
+              "is_correct": false
+            },
+            {
+              "text": "Three-step VASI: medium by day and high at twilight.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The two-step table uses high in daytime and low at night. The three-step table uses high by day, medium at twilight, and low at night."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A three-step VASI serves the active runway. It is twenty minutes after sunset. Another controller suggests leaving it on high because it is technically still helping arrivals and the pilot has not said otherwise.",
+          "para_context": "Operate remotely switched VASI systems when they serve the runway in use and control intensity in accordance with the applicable table unless a local directive or pilot requirement changes it.",
+          "choices": [
+            {
+              "text": "Use the medium setting because the three-step VASI table assigns medium intensity during twilight.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the high setting because all arrival-aid lighting stays at its daytime setting until full darkness.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the low setting because anything after sunset is always treated as night for three-step VASI intensity.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the VASI off because it may not be used after sunset unless a pilot specifically requests it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Twilight has its own setting in the three-step VASI table."
+        }
+      ]
+    },
+    "3-4-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the normal operating rule for a remotely switched PAPI system?",
+          "choices": [
+            {
+              "text": "Operate it when it serves the runway in use and use the applicable intensity table unless a facility directive or pilot request changes it.",
+              "is_correct": true
+            },
+            {
+              "text": "Operate it only at night unless the runway is being used for instrument approaches.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave it off unless REIL and approach lights are operating at the same time.",
+              "is_correct": false
+            },
+            {
+              "text": "Operate it only by pilot request, because PAPI is optional unless weather is below VFR minima.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The normal rule is operation for the runway in use with table-controlled intensity, subject to the listed exceptions."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this PAPI requirement correct?",
+          "question_text": "A remotely switched PAPI system must be operated when it serves the runway in use.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the base operating requirement in 3-4-4."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use the PAPI intensity table.",
+          "question_text": "For a five-step PAPI system, what intensity applies at night from sunset to sunrise?",
+          "choices": [
+            {
+              "text": "Step 3.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 1.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-4 assigns step 3 at night."
+        },
+        {
+          "activity_type": "capability_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this PAPI system statement correct?",
+          "question_text": "A basic FAA-standard PAPI system uses a photoelectric device for independent operation, has no on-off control feature, and is intended for continuous operation.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note for PAPI describes the same basic-photoelectric, continuous-operation concept as the standard system."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which PAPI step is pilot-request only?",
+          "question_text": "Which PAPI step is used on pilot request rather than as the normal day or night setting?",
+          "choices": [
+            {
+              "text": "Step 5.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "No PAPI step may ever be set by pilot request.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "In the five-step PAPI table, steps 1, 2, and 5 are on pilot request, while step 4 is the normal day setting and step 3 is the normal night setting."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A remotely switched PAPI serves the active runway during daytime operations. No facility directive changes the normal setting, but the pilot requests a brighter intensity than the normal day setting.",
+          "para_context": "Operate remotely switched PAPI systems when they serve the runway in use and use the table unless a local directive or pilot request changes the setting.",
+          "choices": [
+            {
+              "text": "Adjust the PAPI in accordance with the pilot request because pilot request is one of the listed exceptions.",
+              "is_correct": true
+            },
+            {
+              "text": "Refuse the request because the daytime setting is always fixed at step 4.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the PAPI off because any pilot-request deviation cancels normal PAPI operation.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave the system at the night setting because any higher daytime setting would violate the table.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Pilot request is an explicit exception to the normal table setting."
+        }
+      ]
+    },
+    "3-4-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Between sunrise and sunset, when must approach lights be operated under the daytime weather trigger?",
+          "choices": [
+            {
+              "text": "When ceiling is less than 1,000 feet or prevailing visibility is 5 miles or less and approaches are being made to the applicable runway or airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when visibility is less than 1 mile and the arrival is IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever any aircraft is in the traffic pattern, regardless of weather.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot specifically requests approach lights during the day.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The daytime trigger is ceiling below 1,000 feet or visibility 5 miles or less while approaches are being made to the listed runway or airport situations."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this nighttime approach-light rule correct?",
+          "question_text": "If it is between sunset and sunrise and the approach lights serve the landing runway, you must operate the approach lights.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Serving the landing runway is one of the listed nighttime operating cases in 3-4-5."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this approach-light weather rule correct?",
+          "question_text": "If it is between sunrise and sunset, the ceiling is less than 1,000 feet, and approaches are being made to a runway served by the lights, operate the approach lights.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is one of the daytime weather-trigger cases for approach-light operation."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which daytime condition requires approach lights?",
+          "question_text": "Which daytime approach situation is one of the listed reasons to operate approach lights when the weather trigger is met?",
+          "choices": [
+            {
+              "text": "Approaches are being made to the airport and landing will be made on a runway served by the lights.",
+              "is_correct": true
+            },
+            {
+              "text": "Aircraft are only taxiing to the departure runway, with no approaches being made.",
+              "is_correct": false
+            },
+            {
+              "text": "The airport beacon is on, but no approach is being made to the airport or a served runway.",
+              "is_correct": false
+            },
+            {
+              "text": "A departure requests the lights for practice after takeoff with no arrival traffic inbound.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "One daytime case is when an approach is being made to the airport and landing will be on a runway served by the lights."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this approach-light exception correct?",
+          "question_text": "Approach lights may be operated on pilot request or when you deem it necessary, so long as that operation is not contrary to the pilot's request.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Pilot request and controller judgment are explicit exceptions in the paragraph."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "It is midday. Ceiling is 900 feet and visibility is 6 miles. Aircraft are making approaches to the airport, and landing will be on a runway served by the approach lights. Another controller argues the lights may stay off because visibility is above 5 miles.",
+          "para_context": "Between sunrise and sunset, approach lights are operated when ceiling is less than 1,000 feet or visibility is 5 miles or less and approaches are being made to the listed runway or airport situations.",
+          "choices": [
+            {
+              "text": "Operate the approach lights because the ceiling trigger is met even though visibility is above 5 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave the lights off because both the ceiling and visibility triggers must be met at the same time.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave the lights off because daytime approach-light use depends only on visibility, not ceiling.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for a pilot request because daytime weather criteria alone do not authorize approach lights.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The daytime rule is disjunctive: either ceiling less than 1,000 feet or visibility 5 miles or less."
+        }
+      ]
+    },
+    "3-4-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the normal rule for ALS intensity settings when approach lights are operating?",
+          "choices": [
+            {
+              "text": "Use the table values unless facility directives, pilot request, or controller judgment under the paragraph call for a different setting.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the highest intensity whenever the lights are on unless the pilot specifically asks for them dimmer.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only the nighttime columns because ALS is primarily an arrival aid.",
+              "is_correct": false
+            },
+            {
+              "text": "Keep the setting fixed once it is selected for the day, regardless of changing visibility.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ALS intensity follows the table, subject to local directives, pilot request, and controller judgment."
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use the ALS intensity table.",
+          "question_text": "During the day, what ALS intensity step applies when visibility is 1 to but not including 3 miles?",
+          "choices": [
+            {
+              "text": "Step 4.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 3-4-5 assigns step 4 during the day for visibility from 1 to but not including 3 miles."
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this ALS night-setting rule correct?",
+          "question_text": "At night, when visibility is 1 to 3 miles inclusive, use ALS step 2 unless a pilot requests step 4 or 5.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note under the table says step 4 or 5 is used at night only on pilot request."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this ALS exception rule correct?",
+          "question_text": "If facility directives specify other settings for local atmospheric, topographic, or twilight conditions, you may use those settings instead of the standard ALS table values.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Facility directives are one of the explicit exceptions to the standard table."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which visibility and step pairing is correct?",
+          "question_text": "Which pairing matches the ALS table?",
+          "choices": [
+            {
+              "text": "At night, step 2 applies when visibility is 1 to 3 miles inclusive.",
+              "is_correct": true
+            },
+            {
+              "text": "At night, step 5 applies whenever visibility is less than 1 mile.",
+              "is_correct": false
+            },
+            {
+              "text": "During the day, step 1 applies when visibility is 5 to but not including 7 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "During the day, step 3 applies when visibility is 1 to but not including 3 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Night step 2 corresponds to visibility from 1 to 3 miles inclusive."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "It is nighttime and visibility is 2 miles. The pilot has not asked for extra brightness. Another controller wants to use ALS step 4 because arrivals are busy and brighter lights seem safer.",
+          "para_context": "Use the ALS table unless an exception applies. At night, step 4 or 5 is used only on pilot request.",
+          "choices": [
+            {
+              "text": "Use step 2, because the night table assigns step 2 for 1 to 3 miles visibility and step 4 is reserved for pilot request.",
+              "is_correct": true
+            },
+            {
+              "text": "Use step 4, because controller traffic concerns automatically override the table at night.",
+              "is_correct": false
+            },
+            {
+              "text": "Use step 5, because any visibility below 3 miles requires the brightest available ALS setting.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the ALS off because step 4 and step 5 are unavailable without pilot request and no lower night setting exists.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Night step 2 is the normal table value for 1 to 3 miles visibility. Steps 4 and 5 are not used at night without pilot request."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-4-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must a controller take action to provide appropriate airport lighting aids for an emergency?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The trigger is awareness that an emergency has occurred or will occur.",
+          "choices": [
+            {
+              "text": "Whenever the controller becomes aware that an emergency has or will occur.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the pilot declares an emergency.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after airport management authorizes emergency-light operation.",
+              "is_correct": false
+            },
+            {
+              "text": "Only between sunset and sunrise.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The emergency-lighting rule applies when a controller becomes aware that an emergency will occur, even if it has not started yet.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The paragraph covers emergencies that have occurred and emergencies that will occur."
+        },
+        {
+          "question_text": "What lighting action is required under the emergency-lighting rule?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The controller provides for the operation of all appropriate airport lighting aids as required.",
+          "choices": [
+            {
+              "text": "Take action to provide for operation of all appropriate airport lighting aids.",
+              "is_correct": true
+            },
+            {
+              "text": "Operate only the runway edge lights and leave all other aids unchanged.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for the emergency equipment chief to select which lights should be used.",
+              "is_correct": false
+            },
+            {
+              "text": "Operate no lights until the aircraft reaches short final.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller knows an aircraft will likely need an emergency landing but the pilot has not formally declared an emergency yet. What does the rule require?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Formal declaration is not the trigger. Awareness that the emergency will occur is enough.",
+          "choices": [
+            {
+              "text": "Take action to provide the appropriate airport lighting aids now.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until a formal declaration is transmitted.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the aircraft is established on final.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay lighting changes until airport management approves them.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When separate on-off controls are provided, when are REIL normally operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "REIL is operated when the associated runway lights are lighted, subject to the listed exceptions and intensity settings.",
+          "choices": [
+            {
+              "text": "When the associated runway lights are lighted.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when a pilot specifically requests REIL.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at night.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for arriving aircraft.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which is one of the normal triggers for turning REIL off?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The listed turn-off triggers are after an arriving aircraft lands, after a departing aircraft leaves the traffic pattern, or when the lights are of no further use to the pilot.",
+          "choices": [
+            {
+              "text": "A departing aircraft has left the traffic pattern area.",
+              "is_correct": true
+            },
+            {
+              "text": "The departure has received takeoff clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Visibility improves above 5 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft starts taxiing toward the runway.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For a three-step REIL system, what daytime setting applies when visibility is 2 to 5 miles inclusive?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-1 assigns setting 2 in that daytime visibility band.",
+          "choices": [
+            {
+              "text": "Setting 2.",
+              "is_correct": true
+            },
+            {
+              "text": "Setting 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Setting 1.",
+              "is_correct": false
+            },
+            {
+              "text": "No standard setting exists for that range.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "REIL intensity follows the applicable table unless a facility directive or pilot request calls for different operation.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The paragraph points to the table and then lists the facility-directive and pilot-request exceptions."
+        },
+        {
+          "question_text": "After an arriving aircraft lands and the lights are no longer useful to that pilot, what may be done with REIL?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Landing and loss of usefulness are both normal turn-off triggers.",
+          "choices": [
+            {
+              "text": "Turn the REIL off.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave it on until the next departure is airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave it on until the runway lights are turned off.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn off the runway edge lights as well because the two systems cannot be controlled independently.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must a remotely switched VASI system be operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It is operated when it serves the runway in use, with the applicable table controlling intensity unless an exception applies.",
+          "choices": [
+            {
+              "text": "When it serves the runway in use.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when requested by IFR aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at night.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the rotating beacon is on.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For a three-step VASI, what intensity applies during twilight?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The three-step VASI table assigns medium intensity during twilight.",
+          "choices": [
+            {
+              "text": "Medium.",
+              "is_correct": true
+            },
+            {
+              "text": "High.",
+              "is_correct": false
+            },
+            {
+              "text": "Low.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilot request only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A basic FAA-standard VASI system has no on-off control feature and is intended for continuous operation.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The note describes the standard VASI as photoelectrically controlled with no on-off feature and intended for continuous operation."
+        },
+        {
+          "question_text": "Which VASI pairing is correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The two-step table is high by day and low by night. The three-step table is high by day, medium at twilight, and low by night.",
+          "choices": [
+            {
+              "text": "Two-step VASI uses high by day and low by night.",
+              "is_correct": true
+            },
+            {
+              "text": "Two-step VASI uses low by day and high by night.",
+              "is_correct": false
+            },
+            {
+              "text": "Three-step VASI uses low at twilight and high at night.",
+              "is_correct": false
+            },
+            {
+              "text": "Three-step VASI uses medium by day and high at twilight.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A three-step VASI serves the runway in use twenty minutes after sunset. With no other exception, what setting applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That period is twilight, so the three-step VASI uses medium intensity.",
+          "choices": [
+            {
+              "text": "Medium.",
+              "is_correct": true
+            },
+            {
+              "text": "High.",
+              "is_correct": false
+            },
+            {
+              "text": "Low.",
+              "is_correct": false
+            },
+            {
+              "text": "Off unless a pilot requests it.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must a remotely switched PAPI system be operated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The normal rule is operation when the PAPI serves the runway in use.",
+          "choices": [
+            {
+              "text": "When it serves the runway in use.",
+              "is_correct": true
+            },
+            {
+              "text": "Only at night.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when requested by the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "Only during precision approaches.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "For a five-step PAPI system, what is the normal night setting?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-4 assigns step 3 at night.",
+          "choices": [
+            {
+              "text": "Step 3.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Steps 1, 2, and 5 on a five-step PAPI are pilot-request settings.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Those three steps are labeled as on-pilot-request in the PAPI intensity table."
+        },
+        {
+          "question_text": "A basic FAA-standard PAPI system has no on-off control feature and is intended for continuous operation.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The note describes the standard PAPI as photoelectrically controlled and intended for continuous operation."
+        },
+        {
+          "question_text": "A pilot requests a different PAPI intensity from the normal day setting. What does the rule allow?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Pilot request is one of the paragraph's explicit exceptions to the normal setting.",
+          "choices": [
+            {
+              "text": "Adjust the PAPI according to the pilot request.",
+              "is_correct": true
+            },
+            {
+              "text": "Refuse because the day setting is fixed and cannot be changed.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn the PAPI off because any deviation cancels normal use.",
+              "is_correct": false
+            },
+            {
+              "text": "Switch to the night setting because pilot request can only select dimmer output.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "Between sunrise and sunset, when must approach lights be operated under the weather trigger?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The daytime trigger is ceiling less than 1,000 feet or visibility 5 miles or less while approaches are being made to the listed runway or airport situations.",
+          "choices": [
+            {
+              "text": "When ceiling is less than 1,000 feet or prevailing visibility is 5 miles or less and approaches are being made to the applicable runway or airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when visibility is less than 1 mile.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot requests approach lights.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever any aircraft is arriving, regardless of weather.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At night, approach lights are operated when they serve the landing runway or serve a runway to which an approach is being made while aircraft will land on another runway.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Those are the nighttime operating cases listed in the paragraph."
+        },
+        {
+          "question_text": "Which daytime situation is one of the listed reasons to operate approach lights when the ceiling or visibility trigger is met?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "One listed daytime case is approaches to the airport where the landing will be on a runway served by the lights.",
+          "choices": [
+            {
+              "text": "Approaches are being made to the airport and landing will be on a runway served by the lights.",
+              "is_correct": true
+            },
+            {
+              "text": "Aircraft are taxiing for departure but no approach is being made.",
+              "is_correct": false
+            },
+            {
+              "text": "The beacon is on even though weather and approach conditions do not meet the rule.",
+              "is_correct": false
+            },
+            {
+              "text": "A departure requests the lights after takeoff for pattern work only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Approach lights may also be operated on pilot request or when the controller deems them necessary, so long as that is not contrary to the pilot's request.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Pilot request and controller judgment are both listed exceptions."
+        },
+        {
+          "question_text": "At midday the ceiling is 900 feet and visibility is 6 miles. Approaches are being made to the airport and landing will be on a runway served by the lights. What should be done?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The ceiling trigger alone is enough to require approach-light operation during the day.",
+          "choices": [
+            {
+              "text": "Operate the approach lights.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave them off because visibility is above 5 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave them off because both the ceiling and visibility triggers must be met together.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for a pilot request.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does the note say should be done with the ALS when it is not needed for aircraft operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The note says the ALS should be turned off when not needed in the interest of energy conservation.",
+          "choices": [
+            {
+              "text": "Turn it off when it is not needed for aircraft operations.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave it on at low intensity so it is ready for the next aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn it off only after sunrise.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave it on whenever any runway light remains on.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "3-4-6": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What is the normal rule for ALS intensity settings?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Use the table unless facility directives, pilot request, or controller judgment calls for a different setting.",
+          "choices": [
+            {
+              "text": "Use the table values unless one of the listed exceptions applies.",
+              "is_correct": true
+            },
+            {
+              "text": "Always use the highest setting when the ALS is operating.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only nighttime values because ALS is an arrival aid.",
+              "is_correct": false
+            },
+            {
+              "text": "Keep one setting for the full shift regardless of visibility changes.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "During the day, what ALS step applies when visibility is 1 to but not including 3 miles?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Table 3-4-5 assigns step 4 in that daytime visibility band.",
+          "choices": [
+            {
+              "text": "Step 4.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 2.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "At night, ALS intensity step 4 or 5 is used only when requested by a pilot.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "The note under the table limits night use of steps 4 and 5 to pilot request."
+        },
+        {
+          "question_text": "At night, what ALS step applies when visibility is 1 to 3 miles inclusive and no pilot requests a brighter setting?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Night step 2 applies in the 1 to 3 miles inclusive visibility band.",
+          "choices": [
+            {
+              "text": "Step 2.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 1.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Facility directives may specify ALS settings other than the standard table to meet local atmospheric, topographic, or twilight conditions.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Facility directives are one of the explicit exceptions to the standard ALS table."
+        },
+        {
+          "question_text": "At night, visibility is 2 miles and no pilot has requested a brighter setting. What ALS intensity should be used?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Night visibility of 1 to 3 miles inclusive corresponds to step 2 unless an allowed exception applies.",
+          "choices": [
+            {
+              "text": "Step 2.",
+              "is_correct": true
+            },
+            {
+              "text": "Step 4.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 5.",
+              "is_correct": false
+            },
+            {
+              "text": "Step 3.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

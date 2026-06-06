@@ -1,0 +1,1044 @@
+{
+  "activities": {
+    "4-7-3": {
+      "replace_types": ["conditional_rule_check", "reference_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which condition is one of the listed exceptions in this paragraph?",
+          "question_text": "Under 4-7-3, which condition permits a radio frequency change after the aircraft begins approach or after initial contact during an en route descent?",
+          "choices": [
+            {
+              "text": "The pilot requests the change.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft has crossed the final approach fix inbound.",
+              "is_correct": false
+            },
+            {
+              "text": "The handoff has already been completed.",
+              "is_correct": false
+            },
+            {
+              "text": "Sector ownership would be easier to track on another frequency.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-7-3, pilot request is one of the listed exceptions that permits a frequency change during a single frequency approach."
+        },
+        {
+          "activity_type": "reference_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this citation statement match the paragraph?",
+          "question_text": "This paragraph cites FAA Order JO 7610.14, Para 7-1-5, Single Frequency Approach (SFA).",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The reference cited in 4-7-3 is FAA Order JO 7610.14, Para 7-1-5, Single Frequency Approach (SFA)."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A military single-piloted turbojet is conducting an SFA covered by a letter of agreement. The aircraft is still IFR, no emergency exists, the pilot has not requested a change, and the aircraft has not been cleared for a visual approach. Another controller wants a frequency change now for administrative convenience.",
+          "para_context": "Under 4-7-3, when SFA procedures are covered by a letter of agreement, do not require a radio frequency change after the aircraft begins approach or after initial contact during an en route descent until a landing or low approach has been completed, except under the listed conditions.",
+          "choices": [
+            {
+              "text": "Do not require the frequency change under those circumstances.",
+              "is_correct": true
+            },
+            {
+              "text": "Require the change now because controller convenience is an acceptable exception.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the change as soon as the aircraft is established on final, even without a listed exception.",
+              "is_correct": false
+            },
+            {
+              "text": "Require the change because all handoffs on single frequency approaches must include a check-in.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-7-3, the frequency stays unchanged after the approach begins or after initial contact during an en route descent unless one of the listed exceptions exists."
+        }
+      ]
+    },
+    "4-7-4": {
+      "replace_types": ["conditional_rule_check", "directive_check", "requirement_check", "scope_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this communications statement match the paragraph?",
+          "question_text": "If practicable, use a frequency common to both the GCA unit and approach control to minimize frequency changes.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-7-4c, controllers use a frequency common to both the GCA unit and approach control when practicable to minimize frequency changes."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this conditional statement match the paragraph?",
+          "question_text": "When a GCA unit is not able to communicate on a common frequency, a change to a GCA frequency may be authorized.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-7-4d, when the GCA unit cannot communicate on a common frequency, a change to a GCA frequency may be authorized."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A military single-piloted turbojet will fly an approach partly in IFR conditions at night. A frequency change is necessary. Another controller wants to wait until the aircraft is in a turn near the approach fix, then issue the change below 2,500 feet because the pilot can handle it quickly.",
+          "para_context": "Under 4-7-4, avoid radio frequency and radar beacon changes to the maximum extent practical. When changes are required, issue them early enough to allow the change before the approach fix or handoff point, keep the changes to a minimum below 2,500 feet above the surface, and avoid requiring the change while the aircraft is making a turn.",
+          "choices": [
+            {
+              "text": "Issue any required change early enough to be completed before the approach fix or handoff point, keep changes to a minimum below 2,500 feet above the surface, and avoid requiring the change during the turn.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the aircraft is in the turn near the approach fix, then issue the change because only pilot request can delay it.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue extra frequency and beacon changes below 2,500 feet so the pilot is already on the final frequency before landing.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the change until after the handoff point even if that means completing it during the turn.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-7-4a, when a change is required it is given early, kept to a minimum below 2,500 feet above the surface, and avoided while the aircraft is turning."
+        }
+      ]
+    },
+    "5-8-3": {
+      "replace_types": ["list_membership", "minima_rule_check", "scope_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Use Table 5-8-1 to answer this question.",
+          "question_text": "Under Table 5-8-1, if divergence occurs immediately after departure, what release distance stagger applies when the minimum centerline separation is 700 feet?",
+          "choices": [
+            {
+              "text": "1,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "3,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "4,000 feet.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Table 5-8-1 pairs immediate divergence with 700 feet minimum centerline separation and a 1,000 foot release distance stagger."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which category is one of the listed cases in this paragraph?",
+          "question_text": "Under 5-8-3, which is one of the departure categories specifically addressed by the paragraph?",
+          "choices": [
+            {
+              "text": "Between aircraft departing from diverging runways.",
+              "is_correct": true
+            },
+            {
+              "text": "Between aircraft taxiing to intersecting ramps.",
+              "is_correct": false
+            },
+            {
+              "text": "Between missed approaches and localizer back-course entries.",
+              "is_correct": false
+            },
+            {
+              "text": "Between crossing runway inspections and departures.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Subparagraph d of 5-8-3 addresses aircraft departing from diverging runways."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Two aircraft will depart successively from the same runway. Radar identification will be established within 1 mile of the runway end, wake turbulence separation is not required, and the courses will diverge by 15 degrees or more immediately after departure. Another controller says you must wait for 3 miles of separation before launching the second aircraft.",
+          "para_context": "Under 5-8-3a, between successive departures from the same runway, helipad, or vertipad, or from parallel runways or takeoff courses separated by less than 2,500 feet, 1 mile may be used if the courses diverge by 15 degrees or more immediately after departure.",
+          "choices": [
+            {
+              "text": "You may apply the 1 mile minimum under those conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "You must wait for 3 miles because divergence never reduces the departure minimum.",
+              "is_correct": false
+            },
+            {
+              "text": "You may use the 1 mile minimum only when the runways are at least 2,500 feet apart.",
+              "is_correct": false
+            },
+            {
+              "text": "You must delay the second departure until the first aircraft crosses the final approach fix.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-8-3a, 1 mile is authorized for those successive departures when the divergence and radar-identification conditions are met and wake turbulence separation is not required."
+        }
+      ]
+    },
+    "5-8-4": {
+      "replace_types": ["list_membership", "minima_rule_check", "requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this separation statement match the paragraph?",
+          "question_text": "Except as provided in 5-8-5, separate a departing aircraft from an arriving aircraft on final approach by a minimum of 2 miles if separation will increase to a minimum of 3 miles, or 5 miles when 40 miles or more from the antenna, within 1 minute after takeoff.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That statement is the rule in 5-8-4."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this performance statement match the paragraph?",
+          "question_text": "Controllers must consider the effect of surface conditions, such as ice, snow, and other precipitation, on aircraft performance and on the pilot's ability to commence takeoff roll in a timely manner.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per note 2 in 5-8-4, controllers consider how surface conditions can affect aircraft performance and timely commencement of takeoff roll."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A departing aircraft is ready for release while an arriving aircraft on final is 2.2 miles from the runway. The anticipated separation will increase to at least 3 miles within 1 minute after takeoff, and no exception in 5-8-5 applies. Another controller says the departure cannot be released until the arrival is 3 miles from the runway before takeoff roll begins.",
+          "para_context": "Under 5-8-4, a departure may be released while the arrival is no closer than 2 miles from the runway at the time the departing aircraft commences takeoff roll, provided separation will increase to the required value within 1 minute after takeoff.",
+          "choices": [
+            {
+              "text": "You may release the departure under those conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "You must wait until the arrival is at least 3 miles from the runway before beginning takeoff roll.",
+              "is_correct": false
+            },
+            {
+              "text": "You must wait until the arrival crosses the runway threshold because 2 miles is never enough for this procedure.",
+              "is_correct": false
+            },
+            {
+              "text": "You may ignore the 1 minute increase requirement if the pilot reports ready for immediate departure.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-8-4 and note 1, the arrival may be no closer than 2 miles from the runway at the time the departure commences takeoff roll, as long as separation increases to the required value within 1 minute after takeoff."
+        }
+      ]
+    },
+    "5-8-5": {
+      "replace_types": ["list_membership", "reference_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this divergence statement match the paragraph?",
+          "question_text": "Authorize simultaneous operations only if the departure course diverges immediately by at least 30 degrees from the missed approach course until separation is applied.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-8-5, simultaneous operations require the departure course to diverge immediately by at least 30 degrees from the missed approach course until separation is applied."
+        },
+        {
+          "activity_type": "reference_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this citation statement match the paragraph?",
+          "question_text": "This paragraph cites FAA Order JO 7110.65, Para 5-5-4, Minima, Subpara f.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "One of the references in 5-8-5 is FAA Order JO 7110.65, Para 5-5-4, Minima, Subpara f."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft will depart on one parallel runway while another aircraft is on final to the other runway. The departure course will diverge immediately by at least 30 degrees from the missed approach course until separation is applied, the parallel runway thresholds are even, and the runway centerlines are 2,600 feet apart. Another controller says simultaneous operations are not authorized because the runways are parallel.",
+          "para_context": "Under 5-8-5, simultaneous operations may be authorized between a departure and an arrival on another parallel or nonintersecting diverging runway when the departure course diverges immediately by at least 30 degrees from the missed approach course until separation is applied and one of the listed runway-spacing conditions is met.",
+          "choices": [
+            {
+              "text": "You may authorize the simultaneous operations under those conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "You may not authorize them because parallel runways are never eligible under 5-8-5.",
+              "is_correct": false
+            },
+            {
+              "text": "You may authorize them only if the departure course diverges by 15 degrees from the missed approach course.",
+              "is_correct": false
+            },
+            {
+              "text": "You must hold the departure until the arrival reaches the missed approach point because runway spacing alone is irrelevant.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-8-5a, even parallel thresholds with runway centerlines at least 2,500 feet apart satisfy one of the listed conditions when the 30 degree divergence requirement is also met."
+        }
+      ]
+    },
+    "5-13-1": {
+      "replace_types": ["conditional_rule_check", "list_membership", "reference_check", "scope_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this alert-handling statement match the paragraph?",
+          "question_text": "When a CA or MCI alert is displayed, controllers must evaluate the reason for the alert without delay and take appropriate action.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That statement appears in 5-13-1a."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which function is the one described in this paragraph?",
+          "question_text": "Under 5-13-1, which function must be applied exclusively to inhibit the display of alerts among military aircraft engaged in special military operations where standard en route separation criteria does not apply?",
+          "choices": [
+            {
+              "text": "The Group Suppression (SG) function.",
+              "is_correct": true
+            },
+            {
+              "text": "The Conflict Suppress (CO) function.",
+              "is_correct": false
+            },
+            {
+              "text": "The general inhibit function for all aircraft in the sector.",
+              "is_correct": false
+            },
+            {
+              "text": "The MSAW inhibit function.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-13-1c1(b), the Group Suppression (SG) function is used exclusively for that military special-operations case."
+        },
+        {
+          "activity_type": "reference_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this citation statement match the paragraph?",
+          "question_text": "This paragraph cites FAA Order JO 7110.65, Para 2-1-6, Safety Alert.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The reference cited in 5-13-1 is FAA Order JO 7110.65, Para 2-1-6, Safety Alert."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A CA alert involves another controller's traffic as well as yours. Another controller says you can wait on coordination because the alert itself already tells both positions what to do. Immediate evasive action is not yet dictated.",
+          "para_context": "Under 5-13-1b, if another controller is involved in the alert, initiate coordination to ensure an effective course of action. Coordination is not required when immediate action is dictated.",
+          "choices": [
+            {
+              "text": "Initiate coordination with the other controller to ensure an effective course of action.",
+              "is_correct": true
+            },
+            {
+              "text": "Skip coordination because any CA or MCI alert automatically serves as coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "Suppress the alert first and coordinate later even though immediate action is not dictated.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the aircraft reports level before deciding whether coordination is needed.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 5-13-1b, coordination is initiated when another controller is involved unless immediate action is dictated."
+        }
+      ]
+    },
+    "6-7-5": {
+      "replace_types": ["conditional_rule_check", "reference_check", "requirement_check", "situation_action"],
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this interval statement match the paragraph?",
+          "question_text": "Except as provided in subparagraph b, use a 2-minute or a 5-mile radar interval as the minimum between successive approaches.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That is the default minimum stated in 6-7-5a."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which interval is one of the listed minima in this paragraph?",
+          "question_text": "Under 6-7-5, which is one EN ROUTE minimum interval listed in the wake turbulence application section?",
+          "choices": [
+            {
+              "text": "Small behind heavy - 3 minutes or 6 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "Small behind heavy - 2 minutes or 5 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Large behind heavy - 4 minutes or 8 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Category H behind Category B - 2 minutes or 5 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 6-7-5b2, small behind heavy uses 3 minutes or 6 miles."
+        },
+        {
+          "activity_type": "reference_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this citation statement match the paragraph?",
+          "question_text": "This paragraph cites FAA Order JO 7110.65, Para 5-9-5, Approach Separation Responsibility.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "One of the references in 6-7-5 is FAA Order JO 7110.65, Para 5-9-5, Approach Separation Responsibility."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "During EN ROUTE wake turbulence application, a small aircraft will follow a heavy on successive approaches. Another controller says the default 2-minute or 5-mile interval is enough because both aircraft are IFR.",
+          "para_context": "Under 6-7-5b2, small behind heavy uses 3 minutes or 6 miles. The 2-minute or 5-mile interval in 6-7-5a applies except as provided in the wake turbulence section.",
+          "choices": [
+            {
+              "text": "Use 3 minutes or 6 miles for the small aircraft behind the heavy.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the default 2 minutes or 5 miles because wake turbulence minima do not apply to successive approaches.",
+              "is_correct": false
+            },
+            {
+              "text": "Use 4 minutes or 8 miles because all small aircraft behind larger aircraft require the largest published interval.",
+              "is_correct": false
+            },
+            {
+              "text": "Use any interval the pilot accepts because wake turbulence spacing is advisory on approaches.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 6-7-5b2, small behind heavy uses 3 minutes or 6 miles."
+        }
+      ]
+    },
+    "6-7-7": {
+      "replace_types": ["directive_check", "list_membership", "requirement_check", "sequence_steps", "situation_action"],
+      "items": [
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Does this missed-approach statement match the paragraph?",
+          "question_text": "Controllers must issue an alternative missed approach procedure to the next aircraft if weather conditions are such that an aircraft will likely miss an approach.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That requirement appears in 6-7-7a."
+        },
+        {
+          "activity_type": "sequence_steps",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Place these missed-approach actions in the correct procedural order.",
+          "steps": [
+            {
+              "id": "issue-alt-missed",
+              "text": "Issue an alternative missed approach procedure to the next aircraft when weather suggests an aircraft will likely miss."
+            },
+            {
+              "id": "allow-next-continue",
+              "text": "If an aircraft misses an approach, allow the next aircraft to continue if it has been assigned an alternative missed approach procedure."
+            },
+            {
+              "id": "retain-hold-remaining",
+              "text": "Retain radar control or hold any remaining aircraft at assigned altitudes until traffic conditions permit approach clearances."
+            }
+          ],
+          "correct_order": ["issue-alt-missed", "allow-next-continue", "retain-hold-remaining"],
+          "explanation": "The order follows 6-7-7a then 6-7-7b."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "The first aircraft in a timed-approach sequence misses the approach. The next aircraft has already been assigned an alternative missed approach procedure. Another controller says the next aircraft must break off its approach automatically because the preceding aircraft missed.",
+          "para_context": "Under 6-7-7b, if an aircraft misses an approach, allow the next aircraft to continue if it has been assigned an alternative missed approach procedure. Retain radar control or hold any remaining aircraft at assigned altitudes until traffic conditions permit approach clearances.",
+          "choices": [
+            {
+              "text": "Allow the next aircraft to continue and retain radar control or hold any remaining aircraft as required until traffic conditions permit more approach clearances.",
+              "is_correct": true
+            },
+            {
+              "text": "Break off the next aircraft automatically even though it already has an alternative missed approach procedure.",
+              "is_correct": false
+            },
+            {
+              "text": "Let all remaining aircraft continue because missed approaches do not affect the timed-approach sequence once it is established.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear the next aircraft for a visual approach regardless of weather so the sequence can continue uninterrupted.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 6-7-7b, the next aircraft may continue if it has an alternative missed approach procedure, while remaining aircraft are retained or held until traffic permits more approach clearances."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "4-7-3": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 4-7-3, which is one listed exception that permits a radio frequency change during a single frequency approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "Per 4-7-3, one listed exception is that the pilot requests the frequency change.",
+          "choices": [
+            {
+              "text": "The pilot requests the frequency change.",
+              "is_correct": true
+            },
+            {
+              "text": "The handoff has been completed.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft is inside the final approach fix.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller would prefer a different sector frequency.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 4-7-3, when SFA procedures are covered by a letter of agreement, do not require a radio frequency change after the aircraft begins approach or after initial contact during an en route descent until a landing or low approach has been completed, except under the listed conditions.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement is the rule in 4-7-3.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-4": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 4-7-4, when a GCA unit is not able to communicate on a common frequency, what may be authorized?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 4-7-4d, a change to a GCA frequency may be authorized.",
+          "choices": [
+            {
+              "text": "A change to a GCA frequency.",
+              "is_correct": true
+            },
+            {
+              "text": "Any number of extra frequency changes below 2,500 feet above the surface.",
+              "is_correct": false
+            },
+            {
+              "text": "Immediate transfer to tower frequency regardless of conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "Elimination of the need to avoid changes during turns.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 4-7-4, avoid making frequency or radar beacon changes after an aircraft begins a high altitude approach.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 4-7-4f.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-8-3": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-8-3, what does \"immediately after departure\" mean for IFR departure turning procedures in this paragraph?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The note in 5-8-3 says it is any turn that provides at least the minimum required divergence and begins no later than 2 miles from the DER.",
+          "choices": [
+            {
+              "text": "A turn that provides at least the minimum required divergence and begins no later than 2 miles from the DER.",
+              "is_correct": true
+            },
+            {
+              "text": "A turn that begins immediately at liftoff regardless of divergence.",
+              "is_correct": false
+            },
+            {
+              "text": "A turn that begins no later than 5 miles from the DER if radar identification is already established.",
+              "is_correct": false
+            },
+            {
+              "text": "Any turn that begins after the aircraft crosses 400 feet AGL, even if divergence is less than required.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-8-3, between successive departures from the same runway, helipad, or vertipad, or from parallel runways or takeoff courses separated by less than 2,500 feet, 1 mile may be used if courses diverge by 15 degrees or more immediately after departure.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That rule appears in 5-8-3a.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-8-4": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-8-4, when may a departing aircraft be released relative to an arriving aircraft on final approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "Per note 1 in 5-8-4, the departure may be released so long as the arriving aircraft is no closer than 2 miles from the runway at the time the departing aircraft commences takeoff roll.",
+          "choices": [
+            {
+              "text": "When the arriving aircraft is no closer than 2 miles from the runway at the time the departing aircraft commences takeoff roll.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the arriving aircraft is at least 3 miles from the runway before takeoff roll begins.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the arriving aircraft crosses the runway threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the pilot reports ready for immediate departure, regardless of the arrival's position.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-8-4, controllers must consider surface conditions because they can affect aircraft performance and the pilot's ability to commence takeoff roll in a timely manner.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "That statement appears in note 2 to 5-8-4.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-8-5": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-8-5, how much must the departure course diverge from the missed approach course until separation is applied?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-8-5, the departure course must diverge immediately by at least 30 degrees from the missed approach course until separation is applied.",
+          "choices": [
+            {
+              "text": "At least 30 degrees.",
+              "is_correct": true
+            },
+            {
+              "text": "At least 15 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "At least 10 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "No specific divergence is required if the runways are parallel.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-8-5, when parallel runway thresholds are even, the runway centerlines must be at least 2,500 feet apart.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 5-8-5a.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-13-1": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 5-13-1, what does computer entry of a message suppressing a CA or MCI alert constitute?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 5-13-1c2, it constitutes acknowledgment of the alert and signifies that appropriate action has or will be taken.",
+          "choices": [
+            {
+              "text": "Acknowledgment of the alert and a sign that appropriate action has or will be taken.",
+              "is_correct": true
+            },
+            {
+              "text": "A request for the pilot to verify altitude immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Authority to inhibit alerts at another control position without coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "Automatic cancellation of the need to coordinate with other controllers.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-13-1, a CA or MCI alert may not be suppressed or inhibited at or for another control position without being coordinated.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 5-13-1c3.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-7-5": {
+      "replace_types": ["multiple_choice", "true_false"],
+      "items": [
+        {
+          "question_text": "Under 6-7-5, except as provided in subparagraph b, what is the minimum interval between successive approaches?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 6-7-5a, the minimum is 2 minutes or 5 miles.",
+          "choices": [
+            {
+              "text": "2 minutes or 5 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "3 minutes or 5 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "2 minutes or 6 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "1 minute or 5 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-7-5, during EN ROUTE wake turbulence application, small behind heavy uses 3 minutes or 6 miles.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 6-7-5b2.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-7-7": {
+      "replace_types": ["multiple_choice", "true_false", "ordering"],
+      "items": [
+        {
+          "question_text": "Under 6-7-7, what should be issued to the next aircraft if weather conditions are such that an aircraft will likely miss an approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Per 6-7-7a, issue an alternative missed approach procedure to the next aircraft.",
+          "choices": [
+            {
+              "text": "An alternative missed approach procedure.",
+              "is_correct": true
+            },
+            {
+              "text": "An immediate visual approach clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "A tower frequency change regardless of weather.",
+              "is_correct": false
+            },
+            {
+              "text": "A release from all missed-approach instructions.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 6-7-7, if an aircraft misses an approach, the next aircraft may continue only if it has been assigned an alternative missed approach procedure.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "That statement appears in 6-7-7b.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Place the missed-approach actions from 6-7-7 in the correct order.",
+          "question_type": "ordering",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The order follows 6-7-7a then 6-7-7b.",
+          "choices": [
+            {
+              "text": "Issue an alternative missed approach procedure to the next aircraft when weather suggests an aircraft will likely miss.",
+              "is_correct": true
+            },
+            {
+              "text": "If an aircraft misses an approach, allow the next aircraft to continue if it has been assigned an alternative missed approach procedure.",
+              "is_correct": true
+            },
+            {
+              "text": "Retain radar control or hold any remaining aircraft at assigned altitudes until traffic conditions permit approach clearances.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

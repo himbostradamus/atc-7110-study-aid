@@ -1,0 +1,288 @@
+{
+  "activities": {
+    "3-1-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When low level wind shear or microburst is reported by pilots or detected by approved systems, who must receive the alert?",
+          "choices": [
+            {
+              "text": "All arriving and departing aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Arriving aircraft on final approach, but not departures.",
+              "is_correct": false
+            },
+            {
+              "text": "Departing aircraft that have not yet contacted departure control, but not arrivals.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilots who specifically request wind shear information, but not every arrival and departure.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The alert is issued broadly to all arrivals and departures."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this wind-shear alert statement correct?",
+          "question_text": "Controllers must issue low level wind shear or microburst alerts to all arriving and departing aircraft and continue the alert until it is on the ATIS and pilots indicate they have received the appropriate ATIS code.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The alert continues until both conditions are met: the ATIS carries it and pilots report having that code."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this no-ATIS statement correct?",
+          "question_text": "Broadcast wind shear or microburst information to all arriving and departing aircraft for 20 minutes after the last report or indication when the facility does not have ATIS.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Without ATIS, the controller keeps broadcasting the information directly for the full 20-minute window."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this LLWAS condition correct?",
+          "question_text": "If an LLWAS alert is received, you must issue the airport wind and the displayed field boundary wind.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A single LLWAS alert requires both the airport wind and the displayed field boundary wind."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Your tower does not have ATIS. A microburst alert was issued 8 minutes ago, and no new reports have come in. Another controller says the direct broadcast can stop now because everyone currently on frequency has already heard it once.",
+          "para_context": "At facilities without ATIS, wind shear or microburst information must be broadcast to all arriving and departing aircraft for 20 minutes following the last report or indication.",
+          "choices": [
+            {
+              "text": "Continue broadcasting the information to all arriving and departing aircraft until 20 minutes have passed from the last report or indication.",
+              "is_correct": true
+            },
+            {
+              "text": "Stop broadcasting it now because one complete round of advisories satisfies the rule.",
+              "is_correct": false
+            },
+            {
+              "text": "Broadcast it only to arriving aircraft for the remainder of the 20-minute period.",
+              "is_correct": false
+            },
+            {
+              "text": "Keep it off frequency unless a pilot specifically asks whether a microburst is still in effect.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Without ATIS, the controller keeps passing the alert for the full 20-minute period to all arrivals and departures."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Build the controller transmission.",
+          "situation": "LLWAS shows an arrival microburst alert for Runway 17: a forty-knot loss at the three-mile final. Build the advisory.",
+          "target_phrase": "RUNWAY ONE SEVEN ARRIVAL MICROBURST ALERT FORTY KNOT LOSS THREE MILE FINAL",
+          "word_bank": [
+            "RUNWAY",
+            "ONE",
+            "SEVEN",
+            "ARRIVAL",
+            "MICROBURST",
+            "ALERT",
+            "FORTY",
+            "KNOT",
+            "LOSS",
+            "THREE",
+            "MILE",
+            "FINAL",
+            "WIND",
+            "SHEAR"
+          ],
+          "correct_sequence": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    }
+  },
+  "questions": {
+    "3-1-8": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When low level wind shear or microburst is reported by pilots or detected by approved systems, who must receive the alert?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The alert is issued to all arriving and departing aircraft.",
+          "choices": [
+            {
+              "text": "All arriving and departing aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Arrivals already established on approach, but not departures.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilots who specifically request wind shear information, but not every arrival and departure.",
+              "is_correct": false
+            },
+            {
+              "text": "Only departures from the runway in use.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How long must a wind shear or microburst statement remain on the ATIS after the last report or indication?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The ATIS statement remains for 20 minutes after the last report or indication.",
+          "choices": [
+            {
+              "text": "20 minutes.",
+              "is_correct": true
+            },
+            {
+              "text": "10 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "Until the next hourly weather observation only.",
+              "is_correct": false
+            },
+            {
+              "text": "Until one arrival acknowledges the information.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Controllers continue a low level wind shear or microburst alert until it is on the ATIS and pilots indicate they have received the appropriate ATIS code.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "correct_answer": true,
+          "explanation": "Both the ATIS broadcast and the pilot's receipt of the code are required before the direct alert ends."
+        },
+        {
+          "question_text": "At a facility without ATIS, how long must wind shear or microburst information be broadcast to arriving and departing aircraft after the last report or indication?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "Without ATIS, the controller continues direct broadcasts for 20 minutes after the last report or indication.",
+          "choices": [
+            {
+              "text": "20 minutes.",
+              "is_correct": true
+            },
+            {
+              "text": "Until the next departure acknowledges it once.",
+              "is_correct": false
+            },
+            {
+              "text": "5 minutes unless another pilot report is received.",
+              "is_correct": false
+            },
+            {
+              "text": "For arrivals only, not departures.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If an LLWAS alert is received, what wind information must be issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "reference",
+          "generation_source": "curated",
+          "explanation": "The paragraph requires both the airport wind and the displayed field boundary wind.",
+          "choices": [
+            {
+              "text": "The airport wind and the displayed field boundary wind.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the airport wind because boundary wind is internal LLWAS data.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the field boundary wind because it is more specific than the airport wind.",
+              "is_correct": false
+            },
+            {
+              "text": "No wind information at all unless the pilot asks for it.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Complete the advisory: \"LOW LEVEL WIND SHEAR _____ IN EFFECT.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The approved phraseology is Low level wind shear advisories in effect.",
+          "choices": [
+            {
+              "text": "ADVISORIES",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

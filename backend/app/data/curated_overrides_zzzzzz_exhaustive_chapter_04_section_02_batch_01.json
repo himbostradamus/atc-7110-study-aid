@@ -1,0 +1,1195 @@
+{
+  "activities": {
+    "4-2-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What item comes immediately after aircraft identification in the listed clearance-item order?",
+          "choices": [
+            {
+              "text": "Clearance limit.",
+              "is_correct": true
+            },
+            {
+              "text": "Route of flight.",
+              "is_correct": false
+            },
+            {
+              "text": "Altitude data.",
+              "is_correct": false
+            },
+            {
+              "text": "Frequency and beacon code information.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "After aircraft identification, the next listed clearance item is the clearance limit."
+        },
+        {
+          "activity_type": "sequence_steps",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Put the front end of the IFR clearance in order.",
+          "steps": [
+            {
+              "id": "aircraft",
+              "text": "State the aircraft identification."
+            },
+            {
+              "id": "limit",
+              "text": "State the clearance limit."
+            },
+            {
+              "id": "sid",
+              "text": "State the SID or vectors, if applicable."
+            },
+            {
+              "id": "route",
+              "text": "State the route of flight."
+            },
+            {
+              "id": "altitude",
+              "text": "State altitude data in the order flown."
+            }
+          ],
+          "correct_order": [
+            "aircraft",
+            "limit",
+            "sid",
+            "route",
+            "altitude"
+          ],
+          "explanation": "The listed order begins with aircraft identification, clearance limit, SID or vectors, route, and altitude data."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this clearance-limit rule correct?",
+          "question_text": "When the clearance limit is an airport, the word airport must follow the airport name.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The clearance-limit phrase for an airport must include the word airport after the airport name."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which clearance-limit phrase is correct?",
+          "question_text": "Which clearance-limit transmission is correct?",
+          "choices": [
+            {
+              "text": "Cleared to Springfield airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Cleared to Springfield.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared airport Springfield.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared via Springfield airport.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the clearance limit is an airport, the airport name is followed by the word airport."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this USAF transmission limit correct?",
+          "question_text": "This one-item transmission limit applies when a transmission to an airborne USAF aircraft contains an altitude assignment.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "With an altitude assignment to an airborne USAF aircraft, only one of those listed extra items may be included in the same transmission."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "You are about to transmit an altitude assignment to an airborne USAF aircraft. Another controller suggests combining the new altitude with a frequency change and traffic information that includes another aircraft's altitude to save time.",
+          "para_context": "When issuing a clearance to an airborne USAF aircraft containing an altitude assignment, do not include more than one of these in the same transmission: frequency change, transponder change, heading, altimeter setting, or traffic information containing an altitude.",
+          "choices": [
+            {
+              "text": "Split the message so the altitude assignment is not combined with more than one of the listed additional items.",
+              "is_correct": true
+            },
+            {
+              "text": "Combine all of the items because the limitation applies only to departure clearances issued on the ground.",
+              "is_correct": false
+            },
+            {
+              "text": "Combine them as long as the aircraft reads back the altitude first.",
+              "is_correct": false
+            },
+            {
+              "text": "Combine them whenever the extra traffic information concerns another military aircraft.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule limits the same transmission to the altitude assignment plus no more than one of the listed extra items."
+        }
+      ]
+    },
+    "4-2-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "How must a clearance or advisory be prefaced when it is relayed through a non-ATC facility?",
+          "choices": [
+            {
+              "text": "With the appropriate ATC prefix such as ATC clears, ATC advises, or ATC requests.",
+              "is_correct": true
+            },
+            {
+              "text": "With no prefix as long as the message content is unchanged.",
+              "is_correct": false
+            },
+            {
+              "text": "With pilot discretion because the message is being relayed.",
+              "is_correct": false
+            },
+            {
+              "text": "With for information only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Messages relayed through non-ATC facilities must carry the appropriate ATC prefix."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which prefix is correct for relayed control information?",
+          "question_text": "Which opening is correct?",
+          "choices": [
+            {
+              "text": "ATC clears.",
+              "is_correct": true
+            },
+            {
+              "text": "Controller suggests.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilot may consider.",
+              "is_correct": false
+            },
+            {
+              "text": "Facility relays unofficially.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The approved relayed prefixes include ATC clears, ATC advises, and ATC requests."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this relay-prefix rule correct?",
+          "question_text": "Flight service stations and ARTCC Flight Data Units must prefix a clearance with the appropriate phrase such as ATC clears or ATC advises.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That explicit prefix requirement applies to flight service stations and ARTCC Flight Data Units."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A non-ATC facility is relaying a controller's request for information to an aircraft. Another specialist says the message can just be passed in plain language without any ATC prefix because it is only a request and not a clearance.",
+          "para_context": "When a clearance, information, or request for information is relayed through a non-ATC facility, it is prefixed with the appropriate phrase such as ATC clears, ATC advises, or ATC requests.",
+          "choices": [
+            {
+              "text": "Use the appropriate ATC prefix for the relayed request.",
+              "is_correct": true
+            },
+            {
+              "text": "Omit the prefix because only relayed clearances require it.",
+              "is_correct": false
+            },
+            {
+              "text": "Use a pilot-discretion phrase instead of the ATC prefix.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the message until an ATC facility can talk directly to the aircraft.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The prefix requirement covers clearances, information, and requests for information relayed through non-ATC facilities."
+        }
+      ]
+    },
+    "4-2-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "What should you do if specific clearance delivery instructions are appropriate?",
+          "choices": [
+            {
+              "text": "Issue the specific clearance delivery instructions.",
+              "is_correct": true
+            },
+            {
+              "text": "Omit them and let the pilot infer the intended delivery method.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until after takeoff to issue them.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue them only if the pilot requests them by name.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph is direct: issue specific clearance delivery instructions when appropriate."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Issue specific clearance delivery instructions, if appropriate.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That sentence is the full rule in paragraph 4-2-3."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Does this application statement match the rule?",
+          "question_text": "This paragraph applies when specific clearance delivery instructions are appropriate.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule is conditional on those specific delivery instructions being appropriate."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A departure requires a specific delivery instruction before the rest of the clearance can be used correctly. Another controller says to skip it because the pilot will probably figure it out from habit.",
+          "para_context": "Issue specific clearance delivery instructions, if appropriate.",
+          "choices": [
+            {
+              "text": "Issue the specific clearance delivery instruction because it is appropriate in this case.",
+              "is_correct": true
+            },
+            {
+              "text": "Skip it because the rule applies only when the pilot explicitly asks for delivery help.",
+              "is_correct": false
+            },
+            {
+              "text": "Skip it unless the instruction affects altitude or route.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the aircraft is airborne and then issue it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "If the clearance needs specific delivery instructions, the controller should issue them."
+        }
+      ]
+    },
+    "4-2-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "How must a clearance be relayed?",
+          "choices": [
+            {
+              "text": "Verbatim.",
+              "is_correct": true
+            },
+            {
+              "text": "Paraphrased as long as the intent seems unchanged.",
+              "is_correct": false
+            },
+            {
+              "text": "Shortened to the route and altitude only.",
+              "is_correct": false
+            },
+            {
+              "text": "Reworded into plain language for convenience.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-2-4 requires clearances to be relayed verbatim."
+        },
+        {
+          "activity_type": "directive_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "Relay clearances verbatim.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "That sentence is the entire requirement in paragraph 4-2-4."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which relay matches the original clearance exactly?",
+          "question_text": "Which relay is acceptable?",
+          "choices": [
+            {
+              "text": "Maintain one one thousand.",
+              "is_correct": true
+            },
+            {
+              "text": "Maintain one two thousand.",
+              "is_correct": false
+            },
+            {
+              "text": "Climb and maintain one one thousand.",
+              "is_correct": false
+            },
+            {
+              "text": "Maintain eleven hundred.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A relayed clearance must match the original clearance exactly."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A relay point wants to shorten a clearance before passing it along because the specialist believes the omitted words are obvious from context.",
+          "para_context": "Relay clearances verbatim.",
+          "choices": [
+            {
+              "text": "Relay the clearance exactly as issued.",
+              "is_correct": true
+            },
+            {
+              "text": "Relay only the parts that seem operationally important.",
+              "is_correct": false
+            },
+            {
+              "text": "Paraphrase the clearance as long as the route is preserved.",
+              "is_correct": false
+            },
+            {
+              "text": "Omit the altitude if the pilot already heard it once.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Verbatim relay means the clearance is passed exactly, not summarized or paraphrased."
+        }
+      ]
+    },
+    "4-2-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is one approved way to amend a previously issued route clearance?",
+          "choices": [
+            {
+              "text": "State the route amendment and then say the rest of the route is unchanged.",
+              "is_correct": true
+            },
+            {
+              "text": "State only the new fix and assume the pilot knows where the old route resumes.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to disregard the route and expect new routing later.",
+              "is_correct": false
+            },
+            {
+              "text": "Restate only the destination and omit the route details.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "One approved route-amendment method is to state the amendment and then say the rest of the route is unchanged."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Which phrase is an approved route-amendment method?",
+          "question_text": "Which phrase is correct?",
+          "choices": [
+            {
+              "text": "Change Victor Twenty to read Victor Forty.",
+              "is_correct": true
+            },
+            {
+              "text": "Ignore the old route and do the best you can direct Victor Forty.",
+              "is_correct": false
+            },
+            {
+              "text": "Route revised somehow, continue generally as filed.",
+              "is_correct": false
+            },
+            {
+              "text": "Stand by for a route concept change.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "An approved amendment method is to identify the portion being changed and then state what it should read."
+        },
+        {
+          "activity_type": "conditional_rule_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this direct-routing rule correct?",
+          "question_text": "If you clear an aircraft direct to a point on the previously issued route, the phrase rest of route unchanged is not required, although it may be used when necessary to clarify where the route is resumed.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Direct-to-a-point amendments do not require rest of route unchanged, but it may be used if route resumption needs clarification."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Is this amended-clearance rule correct?",
+          "question_text": "When route or altitude in a previously issued clearance is amended, all applicable altitude restrictions must be restated.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Applicable altitude restrictions are restated when route or altitude is amended."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Does this NRP application statement match the rule?",
+          "question_text": "This NRP caution applies to an aircraft participating in the North American Route Program and displaying NRP in the remarks section of the flight plan.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "ATC specialists should avoid route or altitude changes for NRP aircraft displaying NRP, while still retaining tactical conflict-resolution authority."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "An aircraft has already been cleared to cross Gordonsville VOR at 11,000. You then assign a speed reduction that the pilot says cannot be complied with while also meeting that altitude restriction. Another controller says to tell the pilot to do the best possible and leave the original altitude and speed instructions in place.",
+          "para_context": "If a speed restriction is declined because it cannot be complied with concurrently with a previously issued altitude restriction, issue an amended clearance. The phrase do the best you can is not a valid substitute.",
+          "choices": [
+            {
+              "text": "Issue an amended clearance that resolves the conflict between the speed and altitude restrictions.",
+              "is_correct": true
+            },
+            {
+              "text": "Tell the pilot to do the best possible and keep the conflicting restrictions active.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the altitude restriction silently by repeating only the speed reduction.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to choose whichever restriction seems more important.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Conflicting speed and altitude restrictions require an amended clearance; do the best you can is not valid phraseology."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "4-2-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What item comes immediately after aircraft identification in the listed clearance-item order?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "After aircraft identification, the next listed item is the clearance limit.",
+          "choices": [
+            {
+              "text": "Clearance limit.",
+              "is_correct": true
+            },
+            {
+              "text": "Route of flight.",
+              "is_correct": false
+            },
+            {
+              "text": "Altitude data.",
+              "is_correct": false
+            },
+            {
+              "text": "Frequency and beacon code information.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What word must follow the airport name when the clearance limit is an airport?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The word airport must follow the airport name.",
+          "choices": [
+            {
+              "text": "Airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Field.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminal.",
+              "is_correct": false
+            },
+            {
+              "text": "Destination.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must follow the NAVAID name when the clearance limit is a NAVAID and the type is known?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "The NAVAID type must follow the NAVAID name when known.",
+          "choices": [
+            {
+              "text": "The type of NAVAID.",
+              "is_correct": true
+            },
+            {
+              "text": "The frequency only.",
+              "is_correct": false
+            },
+            {
+              "text": "The nearest airport name.",
+              "is_correct": false
+            },
+            {
+              "text": "The word airport.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "With an altitude assignment to an airborne USAF aircraft, how many of the listed extra items may be included in the same transmission?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "No more than one of the listed extra items may be included in the same transmission.",
+          "choices": [
+            {
+              "text": "No more than one.",
+              "is_correct": true
+            },
+            {
+              "text": "Any number, as long as altitude comes first.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly two.",
+              "is_correct": false
+            },
+            {
+              "text": "None of them.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What item is listed last in the order of clearance items?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Frequency and beacon code information is the last listed item.",
+          "choices": [
+            {
+              "text": "Frequency and beacon code information.",
+              "is_correct": true
+            },
+            {
+              "text": "Holding instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "Mach number.",
+              "is_correct": false
+            },
+            {
+              "text": "Route of flight.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "How should a clearance relayed through a non-ATC facility be prefaced?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It is prefaced with the appropriate ATC phrase such as ATC clears.",
+          "choices": [
+            {
+              "text": "With the appropriate ATC prefix such as ATC clears.",
+              "is_correct": true
+            },
+            {
+              "text": "With no prefix at all.",
+              "is_correct": false
+            },
+            {
+              "text": "With pilot discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "With for information only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which phrase is an approved relay prefix?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "ATC clears is one of the approved relay prefixes.",
+          "choices": [
+            {
+              "text": "ATC clears.",
+              "is_correct": true
+            },
+            {
+              "text": "Controller suggests.",
+              "is_correct": false
+            },
+            {
+              "text": "Facility recommends.",
+              "is_correct": false
+            },
+            {
+              "text": "Advisory only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Who else must use the appropriate ATC prefix when relaying a clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The rule specifically includes flight service stations and ARTCC Flight Data Units.",
+          "choices": [
+            {
+              "text": "Flight service stations and ARTCC Flight Data Units.",
+              "is_correct": true
+            },
+            {
+              "text": "Only control towers.",
+              "is_correct": false
+            },
+            {
+              "text": "Only military command posts.",
+              "is_correct": false
+            },
+            {
+              "text": "Only airport operations offices.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Does the prefix requirement apply only to relayed clearances and not to relayed requests for information?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "No. The prefix requirement applies to clearances, information, and requests for information.",
+          "choices": [
+            {
+              "text": "No.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the request concerns altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot is IFR.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What should you do if specific clearance delivery instructions are appropriate?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Issue the specific clearance delivery instructions.",
+          "choices": [
+            {
+              "text": "Issue the specific clearance delivery instructions.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until after takeoff to issue them.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue them only if the pilot requests them.",
+              "is_correct": false
+            },
+            {
+              "text": "Omit them if the route is simple.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When does paragraph 4-2-3 apply?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It applies when specific clearance delivery instructions are appropriate.",
+          "choices": [
+            {
+              "text": "When specific clearance delivery instructions are appropriate.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the aircraft is airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when altitude restrictions are published.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the pilot asks how to depart.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the complete rule stated in paragraph 4-2-3?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The paragraph is a short directive to issue specific clearance delivery instructions when appropriate.",
+          "choices": [
+            {
+              "text": "Issue specific clearance delivery instructions, if appropriate.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue delivery instructions only by request.",
+              "is_correct": false
+            },
+            {
+              "text": "Avoid specific delivery instructions whenever possible.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay delivery instructions until a release time is known.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-4": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "How must a clearance be relayed?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "It must be relayed verbatim.",
+          "choices": [
+            {
+              "text": "Verbatim.",
+              "is_correct": true
+            },
+            {
+              "text": "Paraphrased.",
+              "is_correct": false
+            },
+            {
+              "text": "Summarized.",
+              "is_correct": false
+            },
+            {
+              "text": "Shortened if the route is unchanged.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "May a relay point change one noncritical word in a clearance if the specialist believes the meaning is preserved?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "No. Relaying verbatim does not permit paraphrase or substitution.",
+          "choices": [
+            {
+              "text": "No.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, if the altitude and route are unchanged.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the pilot has heard the original clearance before.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the relay is through a non-ATC facility.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which statement best summarizes paragraph 4-2-4?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "The entire paragraph is a short directive to relay clearances verbatim.",
+          "choices": [
+            {
+              "text": "Relay clearances verbatim.",
+              "is_correct": true
+            },
+            {
+              "text": "Relay route and altitude, but other details may be shortened.",
+              "is_correct": false
+            },
+            {
+              "text": "Relay clearances verbatim only when time permits.",
+              "is_correct": false
+            },
+            {
+              "text": "Relay clearances in plain language.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is not permitted under paragraph 4-2-4?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "curated",
+          "explanation": "Paraphrasing or summarizing a relayed clearance is not permitted.",
+          "choices": [
+            {
+              "text": "Paraphrasing the relayed clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Repeating the relayed clearance exactly.",
+              "is_correct": false
+            },
+            {
+              "text": "Reading back the full route and altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Passing the exact words onward.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-5": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What is one approved way to amend a previously issued route clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "curated",
+          "explanation": "One approved method is to state the amendment and then say the rest of the route is unchanged.",
+          "choices": [
+            {
+              "text": "State the amendment and then say the rest of the route is unchanged.",
+              "is_correct": true
+            },
+            {
+              "text": "State only the new fix and assume route resumption is obvious.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to disregard the route until further notice.",
+              "is_correct": false
+            },
+            {
+              "text": "Restate only the destination airport.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When a route or altitude in a previously issued clearance is amended, what must be restated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "example",
+          "generation_source": "curated",
+          "explanation": "All applicable altitude restrictions must be restated.",
+          "choices": [
+            {
+              "text": "All applicable altitude restrictions.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the destination altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the first crossing restriction.",
+              "is_correct": false
+            },
+            {
+              "text": "No previously issued restrictions if the pilot has them on the chart.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What happens if altitude to maintain is changed or restated and previously issued altitude restrictions are omitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "The omitted altitude restrictions are canceled, including SID or STAR altitude restrictions if any.",
+          "choices": [
+            {
+              "text": "Those previously issued altitude restrictions are canceled.",
+              "is_correct": true
+            },
+            {
+              "text": "They remain in effect unless the pilot asks whether they are canceled.",
+              "is_correct": false
+            },
+            {
+              "text": "Only crossing restrictions are canceled, but SID or STAR restrictions remain in effect.",
+              "is_correct": false
+            },
+            {
+              "text": "Only speed restrictions are canceled.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Can ATC cancel or amend crossing altitudes and speed restrictions on obstacle departure procedures?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "No. ODP crossing altitudes and speed restrictions cannot be canceled or amended by ATC.",
+          "choices": [
+            {
+              "text": "No.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, if the aircraft is radar identified.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if the pilot concurs.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only after departure.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What must you do if a speed restriction is declined because it cannot be complied with concurrently with a previously issued altitude restriction?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "example",
+          "generation_source": "curated",
+          "explanation": "You must issue an amended clearance.",
+          "choices": [
+            {
+              "text": "Issue an amended clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Tell the pilot to do the best possible.",
+              "is_correct": false
+            },
+            {
+              "text": "Let the pilot choose whether altitude or speed is more important.",
+              "is_correct": false
+            },
+            {
+              "text": "Delay the speed restriction until the next sector.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Does a direct clearance to a point on the previously issued route require the phrase rest of route unchanged?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "curated",
+          "explanation": "No. It is not required, though it may be used when needed for clarification.",
+          "choices": [
+            {
+              "text": "No, not required, though it may be used for clarification.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, always required.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only above FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because direct clearances automatically cancel the rest of the route.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

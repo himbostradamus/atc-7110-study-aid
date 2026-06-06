@@ -1,0 +1,579 @@
+{
+  "activities": {
+    "1-2-6": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "source_kind": "table",
+          "source_label": "TBL 1-2-1",
+          "lookup_context": ["Meaning to find: Approval Request", "Use the abbreviation table as a bidirectional lookup"],
+          "task": "Find the abbreviation paired with the meaning Approval Request.",
+          "instruction": "Use TBL 1-2-1 as a lookup table.",
+          "question_text": "In TBL 1-2-1, which abbreviation corresponds to Approval Request?",
+          "choices": [
+            {"text": "APREQ", "is_correct": true},
+            {"text": "APR", "is_correct": false},
+            {"text": "ATIS", "is_correct": false},
+            {"text": "ATC", "is_correct": false}
+          ],
+          "explanation": "TBL 1-2-1 pairs APREQ with Approval Request."
+        }
+      ]
+    },
+    "2-3-10": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "Clearance abbreviation table in 2-3-10",
+          "lookup_context": ["Abbreviation shown: CAF", "Context: clearance/status symbology"],
+          "task": "Use the clearance abbreviation table to decode CAF.",
+          "instruction": "Use the clearance abbreviation table.",
+          "question_text": "In the 2-3-10 clearance abbreviation table, what does CAF mean?",
+          "choices": [
+            {"text": "Cleared as filed.", "is_correct": true},
+            {"text": "Cleared approach fix.", "is_correct": false},
+            {"text": "Contact approach filed.", "is_correct": false},
+            {"text": "Coordination awaiting forward.", "is_correct": false}
+          ],
+          "explanation": "In the 2-3-10 clearance abbreviation table, CAF means cleared as filed."
+        }
+      ]
+    },
+    "2-3-2": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "En route flight progress strip block table in 2-3-2",
+          "lookup_context": ["Strip type: en route", "Field to locate: requested altitude"],
+          "task": "Find the block number assigned to requested altitude on the en route strip.",
+          "instruction": "Use the en route strip block table.",
+          "question_text": "On the 2-3-2 en route flight progress strip table, which block records requested altitude?",
+          "choices": [
+            {"text": "Block 24.", "is_correct": true},
+            {"text": "Block 20.", "is_correct": false},
+            {"text": "Block 19.", "is_correct": false},
+            {"text": "Block 28.", "is_correct": false}
+          ],
+          "explanation": "The en route strip table assigns requested altitude to block 24."
+        }
+      ]
+    },
+    "2-3-3": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "Oceanic strip reduced-separation flag table in 2-3-3",
+          "lookup_context": ["Strip type: oceanic", "Meaning to locate: Reduced Vertical Separation Minimum"],
+          "task": "Find the flag letter paired with RVSM in the oceanic data entry table.",
+          "instruction": "Use the oceanic strip reduced-separation flag table.",
+          "question_text": "Which 2-3-3 oceanic strip flag indicates Reduced Vertical Separation Minimum?",
+          "choices": [
+            {"text": "W.", "is_correct": true},
+            {"text": "M.", "is_correct": false},
+            {"text": "R.", "is_correct": false},
+            {"text": "D.", "is_correct": false}
+          ],
+          "explanation": "The oceanic strip table uses W for RVSM."
+        }
+      ]
+    },
+    "2-3-4": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "Terminal arrival strip data-entry table in 2-3-4",
+          "lookup_context": ["Strip type: terminal arrival", "Data: minimum fuel, destination airport, point out, radar vector, or speed adjustment"],
+          "task": "Identify the space assigned to that set of arrival-strip information.",
+          "instruction": "Use the terminal arrival strip data-entry table.",
+          "question_text": "On the 2-3-4 arrival strip table, which space may contain minimum fuel, destination airport, point out, radar vector, or speed adjustment information?",
+          "choices": [
+            {"text": "Space 9A.", "is_correct": true},
+            {"text": "Space 8B.", "is_correct": false},
+            {"text": "Space 2A.", "is_correct": false},
+            {"text": "Space 7.", "is_correct": false}
+          ],
+          "explanation": "The terminal arrival strip table assigns that set of information to space 9A."
+        }
+      ]
+    },
+    "3-2-1": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-2-1",
+          "lookup_context": ["Signal: steady green", "Recipient/status: aircraft on the ground"],
+          "task": "Use the correct row and column of the light-gun signal table.",
+          "instruction": "Use the ATC light-signal table.",
+          "question_text": "In TBL 3-2-1, what does a steady green signal mean for an aircraft on the ground?",
+          "choices": [
+            {"text": "Cleared for takeoff.", "is_correct": true},
+            {"text": "Cleared to taxi.", "is_correct": false},
+            {"text": "Return to starting point on the airport.", "is_correct": false},
+            {"text": "Airport unsafe. Do not land.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-2-1 shows that steady green means cleared for takeoff for an aircraft on the ground."
+        }
+      ]
+    },
+    "3-2-3": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-2-1",
+          "lookup_context": ["Signal: flashing white", "Recipient/status: vehicles, equipment, and personnel on the movement area"],
+          "task": "Use the ground-traffic column of the light-gun signal table.",
+          "instruction": "Use the ATC light-signal table.",
+          "question_text": "In TBL 3-2-1, what does a flashing white signal mean for movement of vehicles, equipment, and personnel?",
+          "choices": [
+            {"text": "Return to starting point on the airport.", "is_correct": true},
+            {"text": "Cleared to cross or proceed.", "is_correct": false},
+            {"text": "Stop.", "is_correct": false},
+            {"text": "Clear the taxiway or runway.", "is_correct": false}
+          ],
+          "explanation": "For movement-area vehicles, equipment, and personnel, TBL 3-2-1 assigns flashing white the meaning return to starting point on the airport."
+        }
+      ]
+    },
+    "3-4-11": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-4-8",
+          "lookup_context": ["Lighting system: HIRL/RCLS/TDZL", "Time: daytime", "Visibility: 2 to but not including 3 miles"],
+          "task": "Select the intensity step matching the daytime visibility band.",
+          "instruction": "Use the HIRL/RCLS/TDZL intensity table.",
+          "question_text": "Under TBL 3-4-8, what daytime setting applies when visibility is 2 to but not including 3 miles?",
+          "choices": [
+            {"text": "Step 3.", "is_correct": true},
+            {"text": "Step 4.", "is_correct": false},
+            {"text": "Step 2.", "is_correct": false},
+            {"text": "Step 5.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-8 assigns step 3 for daytime visibility from 2 to but not including 3 miles."
+        }
+      ]
+    },
+    "3-4-12": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-4-9",
+          "lookup_context": ["Lighting system: HIRL associated with MALSR", "Time: night", "Visibility: more than 3 miles"],
+          "task": "Select the night setting for the visibility band.",
+          "instruction": "Use the HIRL-with-MALSR table.",
+          "question_text": "Under TBL 3-4-9, what night setting applies when visibility is more than 3 miles?",
+          "choices": [
+            {"text": "Step 1.", "is_correct": true},
+            {"text": "Step 2.", "is_correct": false},
+            {"text": "Step 3.", "is_correct": false},
+            {"text": "Step 4.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-9 assigns step 1 at night when visibility is more than 3 miles."
+        }
+      ]
+    },
+    "3-4-14": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-4-10",
+          "lookup_context": ["Lighting system: MIRL", "Time: daytime", "Visibility: less than 2 miles"],
+          "task": "Select the MIRL setting matching the daytime visibility band.",
+          "instruction": "Use the MIRL intensity table.",
+          "question_text": "Under TBL 3-4-10, what daytime MIRL setting applies when visibility is less than 2 miles?",
+          "choices": [
+            {"text": "Step 3.", "is_correct": true},
+            {"text": "Step 2.", "is_correct": false},
+            {"text": "Step 1.", "is_correct": false},
+            {"text": "When requested only.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-10 assigns step 3 during the day when visibility is less than 2 miles."
+        }
+      ]
+    },
+    "3-4-16": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-4-11",
+          "lookup_context": ["Lighting system: three-step taxiway lights", "Time: night", "Visibility: less than 1 mile"],
+          "task": "Select the taxiway-light setting matching the night visibility band.",
+          "instruction": "Use the taxiway-light table.",
+          "question_text": "Under TBL 3-4-11, what night setting applies to a three-step taxiway-light system when visibility is less than 1 mile?",
+          "choices": [
+            {"text": "Step 2.", "is_correct": true},
+            {"text": "Step 3.", "is_correct": false},
+            {"text": "Step 1.", "is_correct": false},
+            {"text": "On request only.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-11 assigns step 2 at night when visibility is less than 1 mile."
+        }
+      ]
+    },
+    "3-4-2": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-4-1",
+          "lookup_context": ["Lighting system: three-step REIL", "Time: daytime", "Visibility: 2 to 5 miles inclusive"],
+          "task": "Select the REIL setting matching the daytime visibility band.",
+          "instruction": "Use the REIL intensity table.",
+          "question_text": "Under TBL 3-4-1, what daytime setting applies to a three-step REIL system when visibility is 2 to 5 miles inclusive?",
+          "choices": [
+            {"text": "Setting 2.", "is_correct": true},
+            {"text": "Setting 3.", "is_correct": false},
+            {"text": "Setting 1.", "is_correct": false},
+            {"text": "Pilot request only; no standard daytime setting exists for that visibility range.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-1 assigns setting 2 for daytime visibility of 2 to 5 miles inclusive."
+        }
+      ]
+    },
+    "3-4-3": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-4-3",
+          "lookup_context": ["Lighting system: three-step VASI", "Condition: twilight"],
+          "task": "Select the VASI intensity for the stated time condition.",
+          "instruction": "Use the VASI intensity table.",
+          "question_text": "Under TBL 3-4-3, what intensity applies to a three-step VASI system during twilight?",
+          "choices": [
+            {"text": "Medium.", "is_correct": true},
+            {"text": "High.", "is_correct": false},
+            {"text": "Low.", "is_correct": false},
+            {"text": "Pilot request only.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-3 assigns the medium setting to twilight for a three-step VASI system."
+        }
+      ]
+    },
+    "3-4-4": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-4-4",
+          "lookup_context": ["Lighting system: five-step PAPI", "Time: night from sunset to sunrise"],
+          "task": "Select the PAPI intensity for the stated time condition.",
+          "instruction": "Use the PAPI intensity table.",
+          "question_text": "Under TBL 3-4-4, what intensity applies to a five-step PAPI system at night from sunset to sunrise?",
+          "choices": [
+            {"text": "Step 3.", "is_correct": true},
+            {"text": "Step 4.", "is_correct": false},
+            {"text": "Step 5.", "is_correct": false},
+            {"text": "Step 1.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-4 assigns step 3 at night."
+        }
+      ]
+    },
+    "3-4-6": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-4-5",
+          "lookup_context": ["Lighting system: ALS", "Time: daytime", "Visibility: 1 to but not including 3 miles"],
+          "task": "Select the ALS intensity step matching the daytime visibility band.",
+          "instruction": "Use the ALS intensity table.",
+          "question_text": "Under TBL 3-4-5, what daytime ALS intensity step applies when visibility is 1 to but not including 3 miles?",
+          "choices": [
+            {"text": "Step 4.", "is_correct": true},
+            {"text": "Step 5.", "is_correct": false},
+            {"text": "Step 3.", "is_correct": false},
+            {"text": "Step 2.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-5 assigns step 4 during the day for visibility from 1 to but not including 3 miles."
+        }
+      ]
+    },
+    "3-4-8": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-4-7",
+          "lookup_context": ["Lighting system: three-step MALSR or ODALS", "Time: daytime", "Visibility: 2 to 5 miles inclusive"],
+          "task": "Select the MALSR/ODALS setting matching the daytime visibility band.",
+          "instruction": "Use the MALSR/ODALS table.",
+          "question_text": "Under TBL 3-4-7, what daytime setting applies to a three-step MALSR or ODALS system when visibility is 2 to 5 miles inclusive?",
+          "choices": [
+            {"text": "Setting 2.", "is_correct": true},
+            {"text": "Setting 3.", "is_correct": false},
+            {"text": "Setting 1.", "is_correct": false},
+            {"text": "Low, with no numbered step.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-7 assigns setting 2 for daytime visibility from 2 to 5 miles inclusive."
+        }
+      ]
+    },
+    "3-8-3": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "table",
+          "source_label": "TBL 3-8-1",
+          "lookup_context": ["Operation: simultaneous same-direction operations", "Condition: either aircraft is Heavy"],
+          "task": "Select the required runway centerline spacing for the stated aircraft mix.",
+          "instruction": "Use the same-direction runway spacing table.",
+          "question_text": "Under TBL 3-8-1, if either aircraft is a Heavy, what minimum runway centerline spacing is required for simultaneous same-direction operations?",
+          "choices": [
+            {"text": "700 feet.", "is_correct": true},
+            {"text": "500 feet.", "is_correct": false},
+            {"text": "300 feet.", "is_correct": false},
+            {"text": "1,400 feet.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-8-1 requires 700 feet between runway centerlines if either aircraft is a Heavy."
+        }
+      ]
+    },
+    "3-8-4": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "table",
+          "source_label": "TBL 3-8-2",
+          "lookup_context": ["Operation: simultaneous opposite-direction operations", "Time: between sunset and sunrise"],
+          "task": "Select the runway centerline spacing for the stated time condition.",
+          "instruction": "Use the opposite-direction runway spacing table.",
+          "question_text": "Under TBL 3-8-2, what minimum runway centerline spacing is required for simultaneous opposite-direction operations between sunset and sunrise?",
+          "choices": [
+            {"text": "2,800 feet.", "is_correct": true},
+            {"text": "1,400 feet.", "is_correct": false},
+            {"text": "700 feet.", "is_correct": false},
+            {"text": "500 feet.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-8-2 requires 2,800 feet between runway centerlines between sunset and sunrise."
+        }
+      ]
+    },
+    "4-1-1": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 4-1-1",
+          "lookup_context": ["NAVAID class: H VOR/VORTAC/TACAN", "Altitude band: 18,000 through FL450"],
+          "task": "Select the normal usable radius distance for the stated NAVAID class and altitude band.",
+          "instruction": "Use the VOR/VORTAC/TACAN usable-distance table.",
+          "question_text": "Under TBL 4-1-1, what normal usable radius distance applies to an H-class VOR/VORTAC/TACAN from 18,000 feet through FL450?",
+          "choices": [
+            {"text": "130 miles.", "is_correct": true},
+            {"text": "100 miles.", "is_correct": false},
+            {"text": "75 miles.", "is_correct": false},
+            {"text": "40 miles.", "is_correct": false}
+          ],
+          "explanation": "TBL 4-1-1 gives 130 miles for H-class VOR/VORTAC/TACAN from 18,000 feet through FL450."
+        }
+      ]
+    },
+    "4-5-2": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "table",
+          "source_label": "Cruising altitude/flight level assignment table in 4-5-2",
+          "lookup_context": ["Altitude: FL370 requested/considered", "Magnetic course: 250 degrees", "Course band: 180 through 359 degrees"],
+          "task": "Choose the flight level that matches the course band and altitude stratum.",
+          "instruction": "Use the altitude-assignment table.",
+          "question_text": "Using the 4-5-2 altitude-assignment table, an aircraft on magnetic course 250 degrees is at the high-altitude stratum. Which assignment follows the table?",
+          "choices": [
+            {"text": "FL380.", "is_correct": true},
+            {"text": "FL370.", "is_correct": false},
+            {"text": "FL390.", "is_correct": false},
+            {"text": "FL410 only.", "is_correct": false}
+          ],
+          "explanation": "At and below FL410, courses from 180 through 359 degrees use even cardinal flight levels, so FL380 fits the table."
+        }
+      ]
+    },
+    "4-5-4": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "Lowest usable flight level table in 4-5-4",
+          "lookup_context": ["Altimeter setting: 29.91", "Question: lowest usable flight level"],
+          "task": "Locate the altimeter-setting band and return the corresponding lowest usable flight level.",
+          "instruction": "Use the lowest-usable-flight-level table.",
+          "question_text": "Using the 4-5-4 table, what is the lowest usable flight level when the altimeter setting is 29.91?",
+          "choices": [
+            {"text": "FL190.", "is_correct": true},
+            {"text": "FL180.", "is_correct": false},
+            {"text": "FL200.", "is_correct": false},
+            {"text": "FL210.", "is_correct": false}
+          ],
+          "explanation": "An altimeter setting from 29.91 through 28.92 makes FL190 the lowest usable flight level."
+        }
+      ]
+    },
+    "4-5-5": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "Minimum flight level adjustment table in 4-5-5",
+          "lookup_context": ["Altimeter setting: 29.55", "Question: adjustment factor"],
+          "task": "Locate the altimeter-setting band and choose the required adjustment.",
+          "instruction": "Use the minimum-flight-level adjustment table.",
+          "question_text": "Using the 4-5-5 adjustment table, what adjustment factor applies when the altimeter setting is 29.55?",
+          "choices": [
+            {"text": "500 feet.", "is_correct": true},
+            {"text": "None.", "is_correct": false},
+            {"text": "1,000 feet.", "is_correct": false},
+            {"text": "1,500 feet.", "is_correct": false}
+          ],
+          "explanation": "Altimeter settings from 29.91 through 29.42 require a 500-foot adjustment."
+        }
+      ]
+    },
+    "5-8-3": {
+      "sync_replace_types": false,
+      "sync_item_types_only": ["table_lookup"],
+      "replace_types": ["table_lookup"],
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "source_kind": "table",
+          "source_label": "TBL 5-8-1",
+          "lookup_context": ["Departure divergence: immediately after departure", "Minimum runway centerline separation: 700 feet"],
+          "task": "Find the release-distance stagger paired with the divergence and centerline-separation conditions.",
+          "instruction": "Use the successive/simultaneous departure table.",
+          "question_text": "Under TBL 5-8-1, if divergence occurs immediately after departure and minimum centerline separation is 700 feet, what release distance stagger applies?",
+          "choices": [
+            {"text": "1,000 feet.", "is_correct": true},
+            {"text": "2,000 feet.", "is_correct": false},
+            {"text": "3,000 feet.", "is_correct": false},
+            {"text": "4,000 feet.", "is_correct": false}
+          ],
+          "explanation": "TBL 5-8-1 pairs immediate divergence with 700 feet minimum centerline separation and a 1,000-foot release distance stagger."
+        }
+      ]
+    }
+  }
+}

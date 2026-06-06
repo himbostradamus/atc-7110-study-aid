@@ -1,0 +1,99 @@
+{
+  "questions": {
+    "9-2-11": {
+      "items": [
+        {
+          "question_text": "A controller receives notification of a SECNOT. What is the controller's primary action under 9-2-11?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 9-2-11 requires the controller to forward all information on the subject aircraft to the OS/CIC. If information is unknown, the controller broadcasts the call sign on all frequencies and advises the OS/CIC of the response.",
+          "choices": [
+            {"text": "Issue a security NOTAM and suspend all departures until the aircraft is located.", "is_correct": false},
+            {"text": "Forward all information on the subject aircraft to the OS/CIC.", "is_correct": true},
+            {"text": "Contact law enforcement directly before notifying facility supervision.", "is_correct": false},
+            {"text": "Treat the aircraft as NORDO unless it fails to respond to two calls.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Under 9-2-11, what should the controller do if information about the SECNOT subject aircraft is not known?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "When the information is not known, 9-2-11 directs the controller to broadcast the call sign on all frequencies and advise the OS/CIC of the response.",
+          "choices": [
+            {"text": "Wait for the aircraft to check in before taking any action.", "is_correct": false},
+            {"text": "Ask only adjacent sectors whether the call sign is on frequency.", "is_correct": false},
+            {"text": "Broadcast the call sign on all frequencies and advise the OS/CIC of the response.", "is_correct": true},
+            {"text": "Cancel the SECNOT unless the aircraft is radar identified.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Fill in the blank: For a SECNOT, if information is not known, broadcast the _____ on all frequencies.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The paragraph says to broadcast the call sign on all frequencies when information about the subject aircraft is not known.",
+          "choices": [
+            {"text": "call sign", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "Which response best captures the operating principle of a SECNOT action in 9-2-11?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The operational point is rapid information flow through the OS/CIC, plus broad frequency checks when the aircraft information is not known.",
+          "choices": [
+            {"text": "SECNOT handling is mainly a pilot advisory function; ATC action is optional unless the aircraft is in distress.", "is_correct": false},
+            {"text": "The controller should keep the event local unless the aircraft enters another facility's airspace.", "is_correct": false},
+            {"text": "The controller should forward known subject-aircraft information to the OS/CIC and use all-frequency call-sign broadcasts if needed to locate or confirm a response.", "is_correct": true},
+            {"text": "The controller should stop using the aircraft call sign on frequency to avoid alerting the subject aircraft.", "is_correct": false}
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "9-2-11": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "situation": "You receive a SECNOT for an aircraft that may be in your facility's area. You have a partial call sign and no current position.",
+          "para_context": "For a SECNOT, forward subject-aircraft information to the OS/CIC; if information is not known, broadcast the call sign on all frequencies and advise the OS/CIC of the response.",
+          "instruction": "Select the action that best follows 9-2-11.",
+          "explanation": "With incomplete information, 9-2-11 still requires the controller to involve the OS/CIC and broadcast the call sign on all frequencies, then advise the OS/CIC of the response.",
+          "choices": [
+            {"text": "Broadcast the call sign on all frequencies and advise the OS/CIC of any response.", "is_correct": true},
+            {"text": "Wait until radar identification is established before notifying the OS/CIC.", "is_correct": false},
+            {"text": "Forward the partial call sign to law enforcement only; do not use ATC frequencies.", "is_correct": false},
+            {"text": "Transmit only on the last known frequency because all-frequency broadcasts are reserved for emergencies.", "is_correct": false}
+          ]
+        },
+        {
+          "activity_type": "source_use",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "source_label": "FAA Order JO 7110.65, 9-2-11, Security Notice (SECNOT)",
+          "situation": "During a security notice event, another controller says, 'We do not know enough yet. Do not bother the OS/CIC until the aircraft answers.'",
+          "instruction": "Use the source rule to decide whether that advice is correct.",
+          "explanation": "The advice is wrong. The paragraph requires forwarding all known information to the OS/CIC, and when information is not known, broadcasting the call sign on all frequencies and advising the OS/CIC of the response.",
+          "choices": [
+            {"text": "Correct; OS/CIC notification waits until the aircraft answers.", "is_correct": false},
+            {"text": "Incorrect; forward known information to the OS/CIC and broadcast the call sign on all frequencies if information is not known.", "is_correct": true},
+            {"text": "Correct only if the aircraft is outside controlled airspace.", "is_correct": false},
+            {"text": "Incorrect, but the only required action is to notify adjacent sectors.", "is_correct": false}
+          ]
+        }
+      ]
+    }
+  }
+}

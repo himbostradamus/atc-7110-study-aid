@@ -1,0 +1,872 @@
+{
+  "questions": {
+    "5-3-1": {
+      "items": [
+        {
+          "question_text": "Complete the rule: Before you provide radar service, establish and maintain _____ of the aircraft involved.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-1 requires radar identification to be established and maintained before providing radar service, except for the specific exceptions listed.",
+          "choices": [
+            {
+              "text": "radar identification",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A controller provides radar service to an aircraft that was radar identified two sectors ago but whose identification was lost during a handoff. Under 5-3-1, is this permitted without re-establishing identification?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-1 requires radar identification to be established and maintained before providing radar service. If identification was lost, it must be re-established before radar service continues, unless one of the listed exceptions applies.",
+          "choices": [
+            {
+              "text": "No, radar identification must be currently established and maintained to provide radar service.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because radar identification only needs to be established once for the entire flight.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because a previous identification is valid for 30 minutes even after loss of contact.",
+              "is_correct": false
+            },
+            {
+              "text": "No, but only if the aircraft has changed its transponder code.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-3-2": {
+      "items": [
+        {
+          "question_text": "A departing aircraft target is observed within ____ of the takeoff runway end to use departure observation as a radar identification method.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-2a specifies the target must be within 1 mile of the takeoff runway end at airports with an operating control tower.",
+          "choices": [
+            {
+              "text": "1 mile",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-3-2, departure observation identification requires the airport to have an operating control tower AND one of two coordination methods accomplished. What are the two coordination methods?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-2a lists the two required coordination methods: a verbal rolling/boundary notification or a nonverbal rolling/boundary notification for each departure.",
+          "choices": [
+            {
+              "text": "A verbal rolling/boundary notification or a nonverbal rolling/boundary notification.",
+              "is_correct": true
+            },
+            {
+              "text": "A filed flight plan activation or a clearance delivery readback.",
+              "is_correct": false
+            },
+            {
+              "text": "An altitude assignment verification or a squawk code confirmation.",
+              "is_correct": false
+            },
+            {
+              "text": "A visual sighting from the tower or a beacon code assignment.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-3-2b, when using position correlation with a fix for identification, what must hold true in addition to the target's position matching the reported position?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-2b requires that the observed track is consistent with the reported heading or route of flight, in addition to position correlation.",
+          "choices": [
+            {
+              "text": "The observed track is consistent with the reported heading or route of flight.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft squawks a discrete beacon code.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot is in communication with approach control.",
+              "is_correct": false
+            },
+            {
+              "text": "The target is within 40 miles of the radar antenna.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "If a TACAN or VORTAC is located within how many feet of the radar antenna, it may be used as a reference fix for radar identification without being on the video map or map overlay?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "5-3-2b note states that a TACAN/VORTAC within 6,000 feet of the radar antenna may be used without being displayed on the video map or map overlay.",
+          "choices": [
+            {
+              "text": "6,000",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Military TACANs that are not collocated with frequency-paired VORs may be separated by up to how many miles, complicating DME-based radar identification?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Note 1 under 5-3-2b states that some military TACANs not collocated with frequency-paired VORs might be separated by as much as 31 miles.",
+          "choices": [
+            {
+              "text": "31",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-3-2c, identifying turns must be at least how many degrees, and what three conditions must be met?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-2c specifies identifying turns of 30 degrees or more. The three conditions are: (1) a pilot position report is received assuring the aircraft is within radar coverage and the displayed area (except for lost aircraft); (2) only one aircraft is observed making these turns; (3) for IFR aircraft, issue a heading away from areas requiring increased minimum IFR altitude or have the aircraft climb to the highest minimum altitude in your area before issuing a heading.",
+          "choices": [
+            {
+              "text": "30 degrees or more, with a pilot position report, only one aircraft making the turn, and IFR altitude protection.",
+              "is_correct": true
+            },
+            {
+              "text": "45 degrees or more, with a discrete code assignment and only one aircraft observed.",
+              "is_correct": false
+            },
+            {
+              "text": "30 degrees or more, with pilot position report and any number of aircraft may make the turn.",
+              "is_correct": false
+            },
+            {
+              "text": "20 degrees or more, with the pilot reporting the turn is complete and the aircraft squawking IDENT.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the altitude protection rule in 5-3-2c for IFR aircraft when issuing a heading as part of identifying turns?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "For IFR aircraft, you must either issue a heading away from an area requiring increased minimum IFR altitude OR have the aircraft climb to the highest minimum altitude in your area before issuing a heading.",
+          "choices": [
+            {
+              "text": "Issue a heading away from areas requiring increased minimum IFR altitude or have the aircraft climb to the highest minimum altitude in your area before issuing a heading.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue any heading and then instruct the aircraft to maintain present altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a heading only toward lower terrain and assign the MVA.",
+              "is_correct": false
+            },
+            {
+              "text": "Have the aircraft climb to at least 5,000 feet above its current altitude before any heading is issued.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-3-3": {
+      "items": [
+        {
+          "question_text": "Under 5-3-3c, the standby identification method requires observing the target disappear for _____ to assure that loss of target resulted from placing the transponder/ADS-B in standby.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The controller must observe the target disappear for sufficient scans to assure the loss resulted from standby, then observe reappearance upon return to normal.",
+          "choices": [
+            {
+              "text": "sufficient scans",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A controller assigns code 4263 to an aircraft whose altitude reporting is turned off. What is the correct phraseology?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "Per the phraseology section of 5-3-3, when the aircraft's altitude reporting capability is turned off, the correct phraseology is 'SQUAWK (code), SQUAWK ALTITUDE.'",
+          "choices": [
+            {
+              "text": "SQUAWK FOUR TWO SIX THREE, SQUAWK ALTITUDE.",
+              "is_correct": true
+            },
+            {
+              "text": "SQUAWK FOUR TWO SIX THREE AND IDENT.",
+              "is_correct": false
+            },
+            {
+              "text": "SQUAWK FOUR TWO SIX THREE, STOP ALTITUDE SQUAWK.",
+              "is_correct": false
+            },
+            {
+              "text": "SQUAWK ALTITUDE, THEN SQUAWK FOUR TWO SIX THREE.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-3-3d, in en route operations an aircraft may be considered identified when the full data block is automatically associated with the target symbol of an aircraft squawking a discrete code assigned by what?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-3d states the discrete code must be assigned by the computer.",
+          "choices": [
+            {
+              "text": "the computer",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "NOTE: In ERAM, paired LDBs do not display what information?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note states that paired LDBs in ERAM do not display a beacon code.",
+          "choices": [
+            {
+              "text": "a beacon code",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A controller wants to identify an aircraft using only beacon/ADS-B methods. The pilot is instructed to squawk a new discrete code. Under 5-3-3, if the code change is required per Section 2 of this chapter, what must the controller use?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-3b states: if a code change is required in accordance with Section 2, Beacon/ADS-B Systems, use the codes specified therein.",
+          "choices": [
+            {
+              "text": "Use the codes specified in Section 2, Beacon/ADS-B Systems.",
+              "is_correct": true
+            },
+            {
+              "text": "Use any available code that is not already assigned in the sector.",
+              "is_correct": false
+            },
+            {
+              "text": "Use code 1200 until the Section 2 requirement is resolved.",
+              "is_correct": false
+            },
+            {
+              "text": "Skip the code change and use the IDENT method instead.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-3-4": {
+      "items": [
+        {
+          "question_text": "Under 5-3-4 TERMINAL, the data block is used to maintain target identity UNLESS it is in a _____ status or displaced from the appropriate target.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-4b states you use the data block to maintain target identity unless it is in a coast status or displaced from the appropriate target.",
+          "choices": [
+            {
+              "text": "coast",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Which of the following data block indicators, when present, does NOT prevent an auto-acquired aircraft from being identified through automated NAS handoff under 5-3-4?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The listed disqualifying indicators are CST, NAT, NT, AMB, OLD, AM, and TRK. Any indicator not on this list would not prevent identification.",
+          "choices": [
+            {
+              "text": "HND.",
+              "is_correct": true
+            },
+            {
+              "text": "CST.",
+              "is_correct": false
+            },
+            {
+              "text": "AMB.",
+              "is_correct": false
+            },
+            {
+              "text": "OLD.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A terminal controller sees an auto-acquired data block with the indicator 'NAT' displayed. Under 5-3-4, does the NAS automated handoff condition establish identification?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-4a2 states that the automated handoff condition requires that NONE of the listed disqualifying indicators appear in the data block. NAT is one of those disqualifying indicators.",
+          "choices": [
+            {
+              "text": "No, because NAT is one of the data block indicators that prevents automated-handoff identification.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because NAT is merely an informational indicator that does not affect identification.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because the auto-acquisition itself always establishes identification regardless of indicators.",
+              "is_correct": false
+            },
+            {
+              "text": "No, but only if the aircraft has not yet been handed off to another sector.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-3-5": {
+      "items": [
+        {
+          "question_text": "Under 5-3-5b, when identification is questionable for any reason, take immediate action to _____ or terminate radar service.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule requires immediate action to re-identify the aircraft or terminate radar service.",
+          "choices": [
+            {
+              "text": "re-identify the aircraft",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-3-5b2 in en route operations, what must you ensure when radar identification is lost or is questionable?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "In en route operations, you must ensure that all primary targets are displayed when radar identification is lost or questionable.",
+          "choices": [
+            {
+              "text": "that all primary targets are displayed",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A controller at an en route center loses radar identification on an aircraft. Under 5-3-5, which action is specifically required for en route operations during re-identification?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-5b2 requires en route controllers to ensure all primary targets are displayed when radar identification is lost or questionable, in addition to re-identifying using 5-3-2 or 5-3-3 methods.",
+          "choices": [
+            {
+              "text": "Ensure that all primary targets are displayed.",
+              "is_correct": true
+            },
+            {
+              "text": "Switch all transponder codes to a common en route code for the sector.",
+              "is_correct": false
+            },
+            {
+              "text": "Turn off all secondary radar processing until the aircraft re-acquires.",
+              "is_correct": false
+            },
+            {
+              "text": "Notify the supervisor and wait for direction before re-identifying.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-3-6": {
+      "items": [
+        {
+          "question_text": "Under 5-3-6, inform an aircraft of its position whenever radar identification is established by means of _____ or by any of the beacon identification methods in 5-3-3.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Position information is required when identification is established by identifying turns or beacon identification methods.",
+          "choices": [
+            {
+              "text": "identifying turns",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A controller identifies a departing aircraft within 1 mile of the takeoff runway end using departure observation. Must position information be given?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-6 explicitly states position information need not be given when a departing aircraft is identified within 1 mile of the takeoff runway end.",
+          "choices": [
+            {
+              "text": "No, position information is not required for departures identified within 1 mile of the runway end.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, position information is required for all radar identifications regardless of method.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the aircraft is IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "No, but only between the hours of 0600 and 2200 local time.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-3-7": {
+      "items": [
+        {
+          "question_text": "Under 5-3-7, inform an aircraft of radar contact when initial radar identification is established AND when radar identification is reestablished subsequent to _____ or terminating radar service.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-7a2 specifies radar contact is to be given when identification is reestablished after loss of radar contact or termination of radar service.",
+          "choices": [
+            {
+              "text": "loss of radar contact",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "When issuing radar contact under 5-3-7a, what additional information may be included parenthetically?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "The phraseology 'RADAR CONTACT (position if required)' indicates that position may be appended when the conditions of 5-3-6 require it.",
+          "choices": [
+            {
+              "text": "Position, if required.",
+              "is_correct": true
+            },
+            {
+              "text": "Altitude assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "Frequency for the next sector.",
+              "is_correct": false
+            },
+            {
+              "text": "Squawk code confirmation.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-3-8": {
+      "items": [
+        {
+          "question_text": "Under 5-3-8 EN ROUTE, the data block must display flight identification and _____ as a minimum.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The en route data block must display flight identification and altitude information at a minimum.",
+          "choices": [
+            {
+              "text": "altitude information",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-3-8 EN ROUTE, which of the following is acceptable as the displayed altitude in the data block?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-8 states the displayed altitude may be assigned, interim, or reported. Mode C readout alone without verification is not listed as an acceptable altitude type.",
+          "choices": [
+            {
+              "text": "Assigned, interim, or reported.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the Mode C readout if it matches the assigned altitude within 200 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the flight-plan filed altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the altitude verified by two independent sources.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-3-8 EN ROUTE, is a point-out aircraft included in the data block retention requirement?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-8 explicitly states 'including an aircraft that is a point out,' confirming that point-out aircraft are included in the retention requirement.",
+          "choices": [
+            {
+              "text": "Yes, the retention requirement includes an aircraft that is a point out.",
+              "is_correct": true
+            },
+            {
+              "text": "No, point-out aircraft are excluded from the data block retention requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the point-out has been acknowledged by the receiving controller.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the point-out aircraft is within 40 miles of the sector boundary.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "5-3-9": {
+      "items": [
+        {
+          "question_text": "Under 5-3-9 TERMINAL, during prearranged coordination, controllers who penetrate another controller's airspace must display data block information containing the position symbol and _____ at a minimum.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "5-3-9b requires the display of the position symbol and altitude information at a minimum during prearranged coordination.",
+          "choices": [
+            {
+              "text": "altitude information",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "NOTE: Under 5-3-9 TERMINAL, when may a VFR aircraft's data block be dropped when delegated airspace extends beyond Class B and/or Class C airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note states: if a VFR aircraft is clear of Class B and Class C airspace AND radar services have been terminated, then retention of the data block is no longer required.",
+          "choices": [
+            {
+              "text": "When the VFR aircraft is clear of Class B and Class C airspace and radar services have been terminated.",
+              "is_correct": true
+            },
+            {
+              "text": "As soon as the VFR aircraft squawks VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "When the VFR aircraft reports the airport in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Immediately upon the aircraft exiting the tower's airspace.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under 5-3-9 TERMINAL, the minimum data block display requirement for basic terminal operations includes what two items, and how does this differ from the prearranged coordination minimum?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "For basic terminal operations (5-3-9a), the minimum is flight identification and altitude information. For prearranged coordination penetration (5-3-9b), the minimum is position symbol and altitude information. The difference is flight identification vs. position symbol as the first element.",
+          "choices": [
+            {
+              "text": "Basic terminal: flight identification and altitude. Prearranged coordination: position symbol and altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Both require flight identification and altitude information only.",
+              "is_correct": false
+            },
+            {
+              "text": "Basic terminal: flight identification only. Prearranged coordination: position symbol only.",
+              "is_correct": false
+            },
+            {
+              "text": "Both require position symbol and altitude information only.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "5-3-2": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A non-towered airport departure appears on your radar display. The target is approximately half a mile from the departure end of the runway. No rolling or boundary notification can be accomplished because the airport has no control tower.",
+          "question_text": "Can you use departure observation to identify this aircraft under 5-3-2?",
+          "choices": [
+            {
+              "text": "No, departure observation identification requires an operating control tower and the required coordination method.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because the target is within 1 mile of the runway end regardless of tower status.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, you can self-coordinate by watching the target climb.",
+              "is_correct": false
+            },
+            {
+              "text": "No, but only because the target is half a mile rather than exactly 1 mile from the runway end.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "5-3-2A requires an operating control tower AND one of the listed coordination methods. A non-towered airport meets neither requirement.",
+          "para_context": "PRIMARY RADAR IDENTIFICATION METHODS"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You instruct an IFR aircraft to make an identifying turn of 40 degrees. The aircraft is currently at 5,000 feet, and the highest minimum IFR altitude in your area of jurisdiction is 8,000 feet. The heading you intend to issue would fly the aircraft toward an area requiring an increased minimum IFR altitude of 9,000 feet.",
+          "question_text": "Under 5-3-2c, what altitude protection action must you take before issuing the heading?",
+          "choices": [
+            {
+              "text": "Either issue a heading away from the area requiring the increased minimum IFR altitude or have the aircraft climb to the highest minimum altitude (8,000 feet) in your area before issuing the heading.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the heading and just ensure the aircraft climbs 500 feet before reaching the higher-terrain area.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the heading immediately because 5,000 feet provides adequate terrain clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Have the aircraft climb to 10,000 feet before issuing any heading.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "5-3-2C3 requires either a heading away from areas requiring increased minimum IFR altitude, or climbing to the highest minimum altitude in your area before issuing a heading.",
+          "para_context": "PRIMARY RADAR IDENTIFICATION METHODS"
+        }
+      ]
+    },
+    "5-3-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "You are using only beacon to identify a target at an en route center. The automation system has automatically associated a full data block with the target symbol. The aircraft is squawking a discrete code assigned by the computer.",
+          "question_text": "Under 5-3-3d, is this aircraft considered identified?",
+          "choices": [
+            {
+              "text": "Yes, because the full data block is automatically associated with the target symbol of an aircraft squawking a computer-assigned discrete code.",
+              "is_correct": true
+            },
+            {
+              "text": "No, the pilot still needs to activate IDENT for en route identification.",
+              "is_correct": false
+            },
+            {
+              "text": "No, automated association is only valid in terminal facilities.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the controller manually verifies the beacon code by requesting a code change.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "5-3-3D states that en route, an aircraft may be considered identified when the full data block is automatically associated with the target symbol of an aircraft squawking a discrete code assigned by the computer.",
+          "para_context": "BEACON/ADS−B IDENTIFICATION METHODS"
+        }
+      ]
+    },
+    "5-3-4": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A terminal auto-acquired target has a visible data block. You have NOT yet used any radar or beacon identification procedure on this target. The data block shows the indicator 'TRK' and no other disqualifying indicators.",
+          "question_text": "Under 5-3-4, is the aircraft considered identified by the automated NAS handoff condition?",
+          "choices": [
+            {
+              "text": "No, because TRK is one of the data block indicators that prevents automated-handoff identification.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because the data block is visible and the auto-acquisition itself establishes identification.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because TRK is merely a tracking indicator and does not prevent identification.",
+              "is_correct": false
+            },
+            {
+              "text": "No, but only because no radar or beacon identification procedure has been performed.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "5-3-4A2 lists TRK among the disqualifying indicators (CST, NAT, NT, AMB, OLD, AM, TRK). With TRK showing, the automated NAS handoff condition does not establish identification.",
+          "para_context": "TERMINAL AUTOMATION SYSTEMS IDENTIFICATION METHODS"
+        }
+      ]
+    },
+    "5-3-5": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "Two aircraft targets are in close proximity on your scope. You observe an identifying turn of approximately 35 degrees, but both targets appear to make a similar turn at nearly the same moment. You now doubt which target belongs to your aircraft.",
+          "question_text": "Under 5-3-5, what is the correct response?",
+          "choices": [
+            {
+              "text": "Use more than one method of identification immediately. If doubt remains, take immediate action to re-identify or terminate radar service.",
+              "is_correct": true
+            },
+            {
+              "text": "Continue tracking both targets until one diverges; radar identification is not affected by proximity.",
+              "is_correct": false
+            },
+            {
+              "text": "Assume the target closest to the filed route is the correct one.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate radar service on both targets and request they re-establish contact.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "5-3-5A requires using more than one method when proximity or duplication cause doubt. 5-3-5b requires immediate re-identification or termination if identification remains questionable.",
+          "para_context": "QUESTIONABLE IDENTIFICATION"
+        }
+      ]
+    },
+    "5-3-7": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "In which scenario is a radar contact advisory required?",
+          "question_text": "Radar identification on an IFR aircraft is reestablished after the aircraft had previously lost radar contact. The initial radar contact advisory was given 20 minutes ago.",
+          "choices": [
+            {
+              "text": "You must advise radar contact again because identification was reestablished after loss of radar contact.",
+              "is_correct": true
+            },
+            {
+              "text": "No advisory is needed because radar contact was already given once on this flight.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the aircraft changed frequencies during the loss of contact.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if more than 10 minutes have passed since the initial advisory.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "5-3-7A2 explicitly requires informing the aircraft of radar contact when radar identification is reestablished subsequent to loss of radar contact."
+        }
+      ]
+    },
+    "5-3-9": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "During prearranged coordination, you will penetrate another controller's airspace. You have three aircraft from that controller's sector that will be in the penetration area. One of them is a VFR aircraft that has already had radar services terminated and is clear of Class B and Class C airspace, but the delegated airspace extends beyond Class C.",
+          "question_text": "Under 5-3-9, what data block display is required for each aircraft?",
+          "choices": [
+            {
+              "text": "For the other two aircraft: position symbol and altitude information at minimum. The VFR aircraft clear of Class B/C with radar services terminated needs no data block retention.",
+              "is_correct": true
+            },
+            {
+              "text": "All three must display at least position symbol and altitude information regardless of radar service status.",
+              "is_correct": false
+            },
+            {
+              "text": "All three must display flight identification and altitude information at minimum.",
+              "is_correct": false
+            },
+            {
+              "text": "No data block display is required for any aircraft during prearranged coordination.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "5-3-9B requires position symbol and altitude information for prearranged coordination penetration. The note exempts VFR aircraft clear of Class B/C with radar services terminated where delegated airspace extends beyond those classes.",
+          "para_context": "DATA BLOCKS"
+        }
+      ]
+    }
+  }
+}

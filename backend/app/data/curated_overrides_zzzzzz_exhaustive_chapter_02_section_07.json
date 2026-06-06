@@ -1,0 +1,398 @@
+{
+  "activities": {
+    "2-7-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "From what sources must current altimeter settings be obtained?",
+          "choices": [
+            {"text": "Direct-reading instruments or directly from weather reporting stations.", "is_correct": true},
+            {"text": "Pilot reports only, as long as two aircraft agree on the setting.", "is_correct": false},
+            {"text": "The nearest airport's ATIS regardless of how old the information is.", "is_correct": false},
+            {"text": "Any adjacent sector's memory of the last reported setting.", "is_correct": false}
+          ],
+          "explanation": "Current altimeter settings come from direct-reading instruments or directly from weather reporting stations."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If a pilot requests the altimeter setting in millibars, you must ask the nearest weather reporting station for the equivalent millibar setting.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "That is the required response to a millibar request."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "When is the term Estimated Altimeter used by USAF and USA controllers?",
+          "choices": [
+            {"text": "When the altimeter setting being reported or received is estimated.", "is_correct": true},
+            {"text": "Whenever the altimeter setting is more than one hour old.", "is_correct": false},
+            {"text": "Only when the setting is expressed in millibars.", "is_correct": false},
+            {"text": "Only for departure aircraft leaving Class B airspace.", "is_correct": false}
+          ],
+          "explanation": "USAF and USA use the term Estimated Altimeter when the setting is reported or received as estimated."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A pilot requests the altimeter setting in millibars, but the controller wants to restate the inches value and let the pilot convert it independently.",
+          "para_context": "Current altimeter settings must be obtained from direct-reading instruments or directly from weather reporting stations. If a pilot requests the altimeter in millibars, ask the nearest weather reporting station for the equivalent millibar setting.",
+          "choices": [
+            {"text": "Ask the nearest weather reporting station for the equivalent millibar setting.", "is_correct": true},
+            {"text": "Give only the inches value and tell the pilot to convert it on board.", "is_correct": false},
+            {"text": "Refuse the request because altimeter settings may only be issued in inches of mercury.", "is_correct": false},
+            {"text": "Use the previous hour's millibar value without confirming the current setting.", "is_correct": false}
+          ],
+          "explanation": "A millibar request is answered by obtaining the equivalent millibar setting from the nearest reporting station."
+        }
+      ]
+    },
+    "2-7-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When must the source of an altimeter setting be identified?",
+          "choices": [
+            {"text": "On all en route altimeter settings, and in terminal when the setting is for a location other than the aircraft's departure or destination airport.", "is_correct": true},
+            {"text": "Only when the altimeter is more than one hour old.", "is_correct": false},
+            {"text": "Only for IFR departures and never for arrivals.", "is_correct": false},
+            {"text": "Only when a pilot specifically asks for the source.", "is_correct": false}
+          ],
+          "explanation": "En route always identifies the source, and terminal identifies the source when the setting is for some airport other than the aircraft's departure or destination."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If the altimeter setting is more than one hour old, the controller must state that it is more than one hour old when issuing it.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "The phraseology explicitly adds more than one hour old when applicable."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which arriving aircraft are required to receive the destination altimeter approximately 50 miles from the airport?",
+          "choices": [
+            {"text": "Arriving aircraft whose destination airport is not served by an approach control facility.", "is_correct": true},
+            {"text": "All arriving aircraft, even when approach control already serves the airport.", "is_correct": false},
+            {"text": "Only VFR arrivals below 10,000 feet.", "is_correct": false},
+            {"text": "Only arrivals executing a precision approach.", "is_correct": false}
+          ],
+          "explanation": "That 50-mile destination-altimeter requirement applies only when an approach control facility does not serve the airport."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "situation": "You need to issue an altimeter setting from Omaha that is more than one hour old. Build the phraseology.",
+          "target_phrase": "THE OMAHA ALTIMETER TWO NINER NINER TWO MORE THAN ONE HOUR OLD"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is executing a nonprecision instrument approach, and the official weather report includes the remark pressure falling rapidly. Another controller says the initial-contact altimeter was enough and no further updates are needed.",
+          "para_context": "In addition to the altimeter setting provided on initial contact, issue changes in altimeter setting to aircraft executing a nonprecision instrument approach as frequently as practical when the official weather report includes the remarks pressure falling rapidly.",
+          "choices": [
+            {"text": "Issue changes in altimeter setting as frequently as practical.", "is_correct": true},
+            {"text": "Do not issue any more updates unless the pilot specifically asks.", "is_correct": false},
+            {"text": "Switch to the nearest adjacent station's altimeter without advising the pilot.", "is_correct": false},
+            {"text": "Issue only wind updates, because pressure change is already implied by the remark.", "is_correct": false}
+          ],
+          "explanation": "Nonprecision approaches with pressure falling rapidly require repeated altimeter updates as practical."
+        }
+      ]
+    },
+    "2-7-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Under high barometric pressure procedures, what are en route and arriving pilots told to do with the altimeter setting of 31.00?",
+          "choices": [
+            {"text": "Leave the altimeter set to 31.00 until reaching the final approach fix.", "is_correct": true},
+            {"text": "Reset to the local altimeter immediately upon entering the terminal area.", "is_correct": false},
+            {"text": "Use 31.00 only until descending through FL240.", "is_correct": false},
+            {"text": "Ignore 31.00 and use the actual local setting at all times.", "is_correct": false}
+          ],
+          "explanation": "For en route and arrivals, the 31.00 setting remains in place until the final approach fix."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "During high barometric pressure procedures, departures must set 31.00 prior to reaching any mandatory or crossing altitude or 1,500 feet AGL, whichever is lower.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ],
+          "explanation": "That is the departure rule when the barometric pressure exceeds 31.00 inches mercury."
+        },
+        {
+          "activity_type": "scope_check",
+          "generation_source": "curated",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What action is required of affected ARTCCs when barometric pressure is above or forecast to be above 31.00 inches mercury?",
+          "choices": [
+            {"text": "Request through the U.S. NOTAM Office that a high barometric pressure NOTAM be issued.", "is_correct": true},
+            {"text": "Suspend all IFR arrivals until the pressure falls below 31.00.", "is_correct": false},
+            {"text": "Issue only local tower advisories and do not involve the NOTAM system.", "is_correct": false},
+            {"text": "Direct all pilots to reset to the exact local altimeter immediately after departure.", "is_correct": false}
+          ],
+          "explanation": "Affected ARTCCs request issuance of a high barometric pressure NOTAM through the USNOF."
+        },
+        {
+          "activity_type": "phraseology_builder",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "situation": "You are issuing high barometric pressure restrictions to an arriving aircraft. Build the phraseology.",
+          "target_phrase": "ALTIMETER THREE ONE ONE TWO HIGH BAROMETRIC PRESSURE RESTRICTIONS IN EFFECT SET THREE ONE ZERO ZERO UNTIL REACHING THE FINAL APPROACH FIX"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "The local barometric pressure is 31.12 inches mercury and an aircraft is inbound on an approach. Another controller wants to issue only the altimeter setting and skip the high-pressure restriction because the pilot can see the setting is above 31.00.",
+          "para_context": "When barometric pressure is greater than 31.00 inches mercury, issue the altimeter setting and the phraseology that high barometric pressure procedures are in effect. For en route and arriving aircraft, advise pilots to leave altimeter set to 31.00 until reaching the final approach fix.",
+          "choices": [
+            {"text": "Issue the setting and advise that high barometric pressure restrictions are in effect, with 31.00 set until the final approach fix.", "is_correct": true},
+            {"text": "Issue only the local setting, because the restriction is implied once the pilot hears a value above 31.00.", "is_correct": false},
+            {"text": "Delay the advisory until the aircraft is inside the final approach fix.", "is_correct": false},
+            {"text": "Issue the departure version of the phraseology instead of the arrival version.", "is_correct": false}
+          ],
+          "explanation": "The special phraseology is required when pressure is above 31.00 inches mercury."
+        }
+      ]
+    }
+  },
+  "questions": {
+    "2-7-1": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "From what sources must current altimeter settings be obtained?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "Current altimeter settings come from direct-reading instruments or directly from weather reporting stations.",
+          "choices": [
+            {"text": "Direct-reading instruments or directly from weather reporting stations.", "is_correct": true},
+            {"text": "Pilot reports only.", "is_correct": false},
+            {"text": "Any adjacent sector's memory of the value.", "is_correct": false},
+            {"text": "An old ATIS if it is still audible.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "If a pilot requests the altimeter setting in millibars, what should ATC do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Ask the nearest weather reporting station for the equivalent millibar setting.",
+          "choices": [
+            {"text": "Ask the nearest weather reporting station for the equivalent millibar setting.", "is_correct": true},
+            {"text": "Tell the pilot to convert the inches setting independently.", "is_correct": false},
+            {"text": "Refuse the request because ATC issues altimeters only in inches of mercury.", "is_correct": false},
+            {"text": "Use the previous hour's millibar setting without checking the current value.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "USAF and USA controllers use the term Estimated Altimeter when the altimeter setting being reported or received is estimated.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "That is the specific wording required for estimated altimeter settings reported or received by USAF and USA controllers.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "What special term is used by USAF and USA when the altimeter setting is estimated?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The term is Estimated Altimeter.",
+          "choices": [
+            {"text": "Estimated Altimeter.", "is_correct": true},
+            {"text": "Advisory Altimeter.", "is_correct": false},
+            {"text": "Unofficial Altimeter.", "is_correct": false},
+            {"text": "Approximate Altimeter.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-7-2": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "When must the source of an altimeter setting be identified?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "En route always identifies the source, and terminal identifies the source when the setting is for a location other than the aircraft's departure or destination airport.",
+          "choices": [
+            {"text": "On all en route altimeter settings, and in terminal when the setting is for another location.", "is_correct": true},
+            {"text": "Only when the setting is more than one hour old.", "is_correct": false},
+            {"text": "Only on departure and never on arrival.", "is_correct": false},
+            {"text": "Only if the pilot requests the source.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "If the altimeter setting is more than one hour old, complete the phraseology: \"THE (facility name) ALTIMETER (setting) MORE THAN ONE _____ OLD.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The prescribed phraseology ends with more than one hour old.",
+          "choices": [
+            {"text": "HOUR", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "En route aircraft must receive the altimeter setting at least one time while operating in your area of jurisdiction.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "En route aircraft receive the altimeter at least once in the controller's area of jurisdiction.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Which aircraft may receive the destination altimeter approximately 50 miles from the airport?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "That 50-mile destination-altimeter issuance applies to arriving aircraft when an approach control facility does not serve the airport.",
+          "choices": [
+            {"text": "Arriving aircraft whose destination airport does not have approach control service.", "is_correct": true},
+            {"text": "All arrivals, even if approach control serves the airport.", "is_correct": false},
+            {"text": "Only departures climbing through the lowest usable flight level.", "is_correct": false},
+            {"text": "Only military arrivals under a single-altimeter-setting exemption.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "When the official weather report includes the remark pressure falling rapidly, what additional action is required for aircraft executing a nonprecision instrument approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "Issue changes in altimeter setting as frequently as practical in addition to the initial-contact altimeter.",
+          "choices": [
+            {"text": "Issue changes in altimeter setting as frequently as practical.", "is_correct": true},
+            {"text": "Issue no additional updates unless the pilot requests one.", "is_correct": false},
+            {"text": "Switch automatically to the nearest adjacent station's altimeter.", "is_correct": false},
+            {"text": "Issue only wind changes because the pressure remark already covers the altimeter.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "When clearing an aircraft to descend below the lowest usable flight level, which altimeter setting must be given?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Use the weather reporting station nearest the point where the aircraft will descend below the lowest usable flight level.",
+          "choices": [
+            {"text": "The setting of the weather reporting station nearest the point where the aircraft will descend below that flight level.", "is_correct": true},
+            {"text": "The setting from the departure airport only.", "is_correct": false},
+            {"text": "Any station within 200 miles of the destination.", "is_correct": false},
+            {"text": "Only the setting currently stored in the aircraft's flight plan.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "2-7-3": {
+      "replace_all": true,
+      "items": [
+        {
+          "question_text": "What are arriving aircraft told to do when high barometric pressure restrictions are in effect?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Arrivals leave the altimeter set to 31.00 until reaching the final approach fix.",
+          "choices": [
+            {"text": "Set 31.00 and leave it there until reaching the final approach fix.", "is_correct": true},
+            {"text": "Reset to the local altimeter immediately after entering the terminal area.", "is_correct": false},
+            {"text": "Ignore 31.00 and keep the exact local setting the whole time.", "is_correct": false},
+            {"text": "Reset to standard only below 10,000 feet MSL.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "During high barometric pressure procedures, departures must set 31.00 prior to reaching any mandatory or crossing altitude or 1,500 feet AGL, whichever is lower.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "That is the departure requirement under 2-7-3b.",
+          "choices": [
+            {"text": "True", "is_correct": true},
+            {"text": "False", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "What action must affected ARTCCs take when barometric pressure is above or forecast to be above 31.00 inches mercury?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "generation_source": "curated",
+          "explanation": "Affected ARTCCs request through the USNOF that a high barometric pressure NOTAM be issued.",
+          "choices": [
+            {"text": "Request through the U.S. NOTAM Office that a high barometric pressure NOTAM be issued.", "is_correct": true},
+            {"text": "Suspend all IFR arrivals automatically.", "is_correct": false},
+            {"text": "Issue local tower advisories only and skip the NOTAM process.", "is_correct": false},
+            {"text": "Direct all pilots to use the exact local setting instead of 31.00.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Complete the high-pressure phraseology: \"SET THREE ONE ZERO ZERO UNTIL REACHING THE FINAL APPROACH _____.\"",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "generation_source": "curated",
+          "explanation": "The arrival phraseology ends with final approach fix.",
+          "choices": [
+            {"text": "FIX", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "Why does the note explain that high barometric pressure can create a difference between transponder altitude and the cockpit altimeter?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated",
+          "explanation": "The transponder sends pressure altitude, while ATC automation applies an altimeter setting to display altitude above MSL.",
+          "choices": [
+            {"text": "Because the transponder reports pressure altitude while ATC automation applies the altimeter setting to display altitude above MSL.", "is_correct": true},
+            {"text": "Because Mode C directly transmits the pilot's selected local altimeter setting.", "is_correct": false},
+            {"text": "Because the final approach fix automatically resets the transponder to local pressure.", "is_correct": false},
+            {"text": "Because airports above 31.00 inches mercury are required to shut down altitude-reporting transponders.", "is_correct": false}
+          ]
+        }
+      ]
+    }
+  }
+}

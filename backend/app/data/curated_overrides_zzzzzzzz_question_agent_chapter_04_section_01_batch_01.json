@@ -1,0 +1,1094 @@
+{
+  "questions": {
+    "4-1-1": {
+      "items": [
+        {
+          "question_text": "For a T-class VOR, VORTAC, or TACAN, the normal usable altitude band is _____ with a usable radius distance of _____ miles.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "question_agent",
+          "explanation": "TBL 4-1-1 lists T-class as 12,000 and below with a 25-mile usable radius distance. The T-class is the most restrictive VOR/VORTAC/TACAN class.",
+          "choices": [
+            {
+              "text": "12,000 and below, 25",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "For an L-class VOR, VORTAC, or TACAN, the normal usable radius distance is 40 miles. What is the altitude band?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "question_agent",
+          "explanation": "TBL 4-1-1 shows L-class applies below 18,000 feet with a 40-mile radius. The L-class covers nearly all low-altitude operations.",
+          "choices": [
+            {
+              "text": "Below 18,000",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "For an H-class VOR, VORTAC, or TACAN above FL450, what normal usable radius distance applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "reference",
+          "generation_source": "question_agent",
+          "explanation": "TBL 4-1-1 gives 100 miles for H-class above FL450. The 130-mile value applies only from 18,000 through FL450. Above FL450 the usable radius drops back to 100 miles. This is a common confusion point because the 130-mile band is the largest value in the table.",
+          "choices": [
+            {
+              "text": "130 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "100 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "75 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "40 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the normal usable radius distance for a CL-class L/MF radio beacon?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "question_agent",
+          "explanation": "TBL 4-1-2 lists CL-class radio beacons with power under 25 watts as having a usable radius of 15 miles — the smallest of all radio beacon classes.",
+          "choices": [
+            {
+              "text": "25 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "15 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "50 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "75 miles.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "An H-class radio beacon operates at _____ watts and has a usable radius distance of _____ miles for all altitudes.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "question_agent",
+          "explanation": "TBL 4-1-2 lists H-class radio beacons as 50-1,999 watts with a usable radius distance of 50 miles for all altitudes.",
+          "choices": [
+            {
+              "text": "50-1,999, 50",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "An H-class VOR below 14,500 feet has a 40-mile usable radius. An H-class radio beacon has a 50-mile usable radius. Why are these values different for the same class letter?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "reference",
+          "generation_source": "question_agent",
+          "explanation": "The class designations carry different meanings across the two tables. In TBL 4-1-1, 'H' refers to a high-altitude VOR/VORTAC/TACAN with altitude-dependent distance bands. In TBL 4-1-2, 'H' refers to radio beacon transmitter power (50-1,999 watts). The tables serve different NAVAID types and should not be cross-applied.",
+          "choices": [
+            {
+              "text": "The H-class designations refer to different criteria in each table — altitude coverage for VORs and transmitter power for radio beacons.",
+              "is_correct": true
+            },
+            {
+              "text": "H-class means the same thing in both tables; the distance difference is a typographical error.",
+              "is_correct": false
+            },
+            {
+              "text": "Radio beacons always have greater range than VORs at the same class designation.",
+              "is_correct": false
+            },
+            {
+              "text": "Controllers may use whichever table gives the most favorable distance for any NAVAID.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "According to the footnote on TBL 4-1-3, what should a controller use if the current flight check limitations differ from the published ILS height/distance table values?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "question_agent",
+          "explanation": "The TBL 4-1-3 footnote states: 'Use the current flight check height/altitude limitations if different from the above minima.' Flight check data reflects actual facility performance and takes precedence over the generic table values.",
+          "choices": [
+            {
+              "text": "The published table minima because they are the regulatory baseline.",
+              "is_correct": false
+            },
+            {
+              "text": "The current flight check height/altitude limitations.",
+              "is_correct": true
+            },
+            {
+              "text": "The higher of the two values for additional safety margin.",
+              "is_correct": false
+            },
+            {
+              "text": "The average of the two values for operational balance.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-1-2": {
+      "items": [
+        {
+          "question_text": "The GNSS-equipped aircraft exception in 4-1-2 applies to /G, /L, /S, and /V aircraft provided they are _____.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "exception",
+          "generation_source": "question_agent",
+          "explanation": "The exception specifically covers GNSS-equipped aircraft /G, /L, /S, and /V that are not on a random impromptu route. This is a critical qualifier — GNSS aircraft on random impromptu routes still fall under the normal limitation rules.",
+          "choices": [
+            {
+              "text": "not on a random impromptu route",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "How many enumerated exceptions allow altitude and distance limitations NOT to be applied under 4-1-2?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-1-2 lists three lettered exceptions: (a) ATC-initiated or pilot-requested routing with radar monitoring, (b) operational necessity with Frequency Management and Flight Inspection Offices approval, and (c) requested routing via an MTR. The GNSS-equipped aircraft note qualifies exception (a) rather than creating a fourth standalone exception.",
+          "choices": [
+            {
+              "text": "Two: radar-monitored routing and MTR routing.",
+              "is_correct": false
+            },
+            {
+              "text": "Three: radar-monitored ATC/pilot routing, operational necessity with office approval, and MTR routing.",
+              "is_correct": true
+            },
+            {
+              "text": "Four: adding GNSS-equipped aircraft as a separate standalone exception.",
+              "is_correct": false
+            },
+            {
+              "text": "Five: adding VFR-on-top and emergency deviations to the list.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "According to Note 1 of 4-1-2, RNAV aircraft operating at and below FL450 on Q routes or random RNAV routes, excluding oceanic airspace, require what type of separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Note 1 states that except for GNSS-equipped /G, /L, /S, and /V aircraft not on a random impromptu route, paragraph 5-5-1 requires radar separation be provided to RNAV aircraft operating at and below FL450 on Q routes or random RNAV routes, excluding oceanic airspace.",
+          "choices": [
+            {
+              "text": "Radar separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Non-radar separation only.",
+              "is_correct": false
+            },
+            {
+              "text": "No separation is required on random RNAV routes below FL450.",
+              "is_correct": false
+            },
+            {
+              "text": "Only pilot-reported position separation.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller proposes to exceed NAVAID altitude and distance limitations by providing radar monitoring alone, without the routing being initiated by ATC or requested by the pilot. Does this satisfy exception 4-1-2(a)?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "No. Exception (a) requires both conditions: (1) routing is initiated by ATC or requested by the pilot, AND (2) radar monitoring is provided. Radar monitoring alone, without the routing being ATC-initiated or pilot-requested, is insufficient.",
+          "choices": [
+            {
+              "text": "Yes, radar monitoring alone satisfies the exception.",
+              "is_correct": false
+            },
+            {
+              "text": "No, the routing must also be initiated by ATC or requested by the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, if the controller also obtains a verbal acknowledgment from the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because radar monitoring is never a valid basis for any exception.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When operational necessity requires exceeding altitude and distance limitations, from which two offices must approval be obtained?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "reference",
+          "generation_source": "question_agent",
+          "explanation": "Exception 4-1-2(b) requires approval from the Frequency Management Office and the Flight Inspection Office — both offices must approve before operational necessity can justify exceeding the limitations.",
+          "choices": [
+            {
+              "text": "The Frequency Management Office and the Flight Inspection Office.",
+              "is_correct": true
+            },
+            {
+              "text": "The Regional Air Traffic Division and the Service Area Office.",
+              "is_correct": false
+            },
+            {
+              "text": "The Center Weather Service Unit and the Traffic Management Unit.",
+              "is_correct": false
+            },
+            {
+              "text": "The Air Traffic Manager and the Operations Supervisor.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-1-3": {
+      "items": [
+        {
+          "question_text": "A controller clears an aircraft to cross a fix at an altitude above the MVA but outside the altitude limitations of the NAVAID defining the fix. The controller argues that MVA compliance satisfies 4-1-3. Is this correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "No. Paragraph 4-1-3 requires the crossing or holding altitude to be consistent with the limitations of the aid serving the fix. MVA ensures terrain and obstruction clearance but does not guarantee that the aircraft is within the NAVAID's service volume at that altitude. The aid's limitations are a separate constraint.",
+          "choices": [
+            {
+              "text": "No, the altitude must also be consistent with the limitations of the aid defining the fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, MVA compliance alone satisfies the crossing-altitude requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because the MVA incorporates all NAVAID limitations encountered within the sector.",
+              "is_correct": false
+            },
+            {
+              "text": "No, but only because MVA applies solely to vectoring, not to fixes.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-1-4": {
+      "items": [
+        {
+          "question_text": "A TACAN-only aircraft outside Class A airspace is expected to submit a request for VFR-on-top flight where _____.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note states that except in Class A airspace, a TACAN-only aircraft is expected to submit a VFR-on-top request where insufficient TACAN or VORTAC NAVAIDs exist to define the route. The Class A exclusion is essential because VFR-on-top does not apply in Class A airspace.",
+          "choices": [
+            {
+              "text": "insufficient TACAN or VORTAC NAVAIDs exist to define the route",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A TACAN-only aircraft is expected to define its route of flight between which NAVAID types?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note expects TACAN-only aircraft to define route of flight between TACAN or VORTAC NAVAIDs in the same manner as VOR-equipped aircraft. They cannot use standalone VORs since they lack VOR receivers, but can use VORTACs which include both TACAN and VOR components.",
+          "choices": [
+            {
+              "text": "Between any NAVAIDs including standalone VORs and NDBs.",
+              "is_correct": false
+            },
+            {
+              "text": "Between TACAN or VORTAC NAVAIDs.",
+              "is_correct": true
+            },
+            {
+              "text": "Between RNAV waypoints using GPS overlay only.",
+              "is_correct": false
+            },
+            {
+              "text": "Between NDBs and marker beacons using ADF receivers.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How does the VFR-on-top request expectation differ for a TACAN-only aircraft in Class A airspace versus outside Class A?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note explicitly says 'Except in Class A airspace.' In Class A, VFR operations are not permitted, so the VFR-on-top expectation does not apply. A TACAN-only aircraft with insufficient NAVAID coverage in Class A must be handled through other means.",
+          "choices": [
+            {
+              "text": "Inside Class A, the VFR-on-top request expectation does not apply because VFR-on-top is not available in Class A.",
+              "is_correct": true
+            },
+            {
+              "text": "The VFR-on-top expectation applies equally in all classes of airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Inside Class A, the aircraft is expected to request a special VFR clearance instead.",
+              "is_correct": false
+            },
+            {
+              "text": "Inside Class A, TACAN-only aircraft may self-navigate without any ATC-defined routing.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-1-5": {
+      "items": [
+        {
+          "question_text": "When an unpublished fix is located over 30 NM from the NAVAID generating the off-course radial, the minimum divergence angle must increase at _____ up to 45 NM.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Subparagraph 4-1-5b4(c) states the minimum divergence angle must increase 1 degree per NM for distances over 30 NM up to 45 NM. For example, at 40 NM from the off-course NAVAID, the minimum divergence is 40 degrees.",
+          "choices": [
+            {
+              "text": "1 degree per NM",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "When an unpublished fix is located beyond 45 NM from the NAVAID generating the off-course radial, the minimum divergence angle must increase at what rate?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Subparagraph 4-1-5b4(d) requires the minimum divergence angle to increase ½ degree per NM beyond 45 NM. The paragraph gives the example that 130 NM would require 88 degrees of divergence.",
+          "choices": [
+            {
+              "text": "half degree per NM",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "When holding operations are involved for an unpublished fix on an off-route radial, what is the minimum divergence angle?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Subparagraph 4-1-5b4(a) requires at least 45 degrees divergence when holding operations are involved. This is a special override to the standard 30-degree minimum, reflecting the need for greater angular precision in holding patterns.",
+          "choices": [
+            {
+              "text": "30 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "45 degrees.",
+              "is_correct": true
+            },
+            {
+              "text": "15 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "60 degrees.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How are fixes contained in the route description of MTRs classified according to 4-1-5?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Subparagraph 4-1-5c states that fixes contained in the route description of MTRs are considered filed fixes. This means they need not be treated as unpublished fixes requiring additional pilot briefing information.",
+          "choices": [
+            {
+              "text": "considered filed fixes",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "TACAN-only aircraft with type suffix M, N, or P may be assigned fixes based on what facilities?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Subparagraph 4-1-5d states that TACAN-only aircraft possess TACAN with DME but no VOR or LF navigation capability. Fixes must be assigned based on TACAN or VORTAC facilities only, since these are the only NAVAIDs they can navigate by.",
+          "choices": [
+            {
+              "text": "Any NAVAID including standalone VORs and NDBs.",
+              "is_correct": false
+            },
+            {
+              "text": "TACAN or VORTAC facilities only.",
+              "is_correct": true
+            },
+            {
+              "text": "GPS waypoints and RNAV intersections exclusively.",
+              "is_correct": false
+            },
+            {
+              "text": "VOR facilities only, since TACAN and VOR are functionally identical.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "DME fixes must not be established within the _____ of the NAVAID from which inbound holding course information would be derived.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Subparagraph 4-1-5e prohibits establishing DME fixes within the no-course signal zone of the NAVAID providing inbound holding course information. The no-course signal zone produces unreliable course guidance, making it unsuitable for DME fix placement.",
+          "choices": [
+            {
+              "text": "no-course signal zone",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "At what minimum altitude may an aircraft be held at an unpublished fix according to 4-1-5?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Subparagraph 4-1-5b3 states: do not hold aircraft at unpublished fixes below the lowest assignable altitude dictated by terrain clearance for the appropriate holding pattern airspace area (template), regardless of the MEA for the route being flown. The holding template terrain criteria override the route MEA because the template accounts for the specific holding pattern geometry.",
+          "choices": [
+            {
+              "text": "At or above the lowest assignable altitude dictated by terrain clearance for the holding pattern template, regardless of MEA.",
+              "is_correct": true
+            },
+            {
+              "text": "At or above the MEA for the route being flown.",
+              "is_correct": false
+            },
+            {
+              "text": "At or above the MVA for the sector.",
+              "is_correct": false
+            },
+            {
+              "text": "At any altitude the pilot considers safe for the aircraft type.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "According to 4-1-5, an unpublished fix is defined as one that is either approved and planned for publication but not yet on charts, or what?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The paragraph defines an unpublished fix as either: (1) one approved and planned for publication which is not yet depicted on the charts, or (2) one used in accord with the listed fix-formation and divergence criteria. Both categories have specific operational constraints.",
+          "choices": [
+            {
+              "text": "Any fix a controller creates verbally during operations.",
+              "is_correct": false
+            },
+            {
+              "text": "One used in accord with the listed fix-formation and divergence criteria.",
+              "is_correct": true
+            },
+            {
+              "text": "Any fix that has been decommissioned but temporarily reactivated.",
+              "is_correct": false
+            },
+            {
+              "text": "A fix published on low-altitude charts that a controller repurposes for high-altitude use.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "An unpublished fix is located 40 NM from the NAVAID generating the off-course radial. What is the minimum divergence angle?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-1-5b4(c), for distances over 30 NM up to 45 NM, the minimum divergence increases 1 degree per NM. At 40 NM the minimum is 40 degrees (30-degree base plus 10 degrees for the 10 NM beyond 30).",
+          "choices": [
+            {
+              "text": "30 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "45 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "40 degrees.",
+              "is_correct": true
+            },
+            {
+              "text": "35 degrees.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Waypoints filed in random RNAV routes automatically become what type of reporting points for the flight?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note to 4-1-5 states that waypoints filed in random RNAV routes automatically become compulsory reporting points for the flight unless otherwise advised by ATC. This means ATC can expect reports at these waypoints without specifically requesting them.",
+          "choices": [
+            {
+              "text": "Compulsory reporting points unless otherwise advised by ATC.",
+              "is_correct": true
+            },
+            {
+              "text": "Non-compulsory reporting points that pilots report at their discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "Advisory waypoints with no reporting expectation.",
+              "is_correct": false
+            },
+            {
+              "text": "Requested reporting points that require explicit ATC confirmation.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "4-1-1": {
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 4-1-2",
+          "lookup_context": [
+            "Radio beacon class: MH",
+            "Power rating: Under 50 watts"
+          ],
+          "task": "Select the usable radius distance for an MH-class radio beacon.",
+          "instruction": "Use the L/MF Radio Beacon (RBN) usable-distance table.",
+          "question_text": "What usable radius distance applies to an MH-class radio beacon?",
+          "choices": [
+            {
+              "text": "15 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "25 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "50 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "75 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "TBL 4-1-2 gives 25 miles for MH-class radio beacons (under 50 watts). CL gives 15 miles, H gives 50 miles, and HH gives 75 miles."
+        },
+        {
+          "activity_type": "discrimination_check",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Choose the correct H-class VOR/VORTAC/TACAN distance for each altitude band.",
+          "question_text": "For an H-class VOR, VORTAC, or TACAN from 14,500 through 17,999 feet, what normal usable radius distance applies?",
+          "choices": [
+            {
+              "text": "40 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "100 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "130 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "25 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "TBL 4-1-1 gives H-class distances: below 14,500 gets 40 NM; 14,500-17,999 gets 100 NM; 18,000-FL450 gets 130 NM; and above FL450 gets 100 NM. The 14,500-17,999 band provides 100 miles."
+        },
+        {
+          "activity_type": "source_use",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 4-1-3 footnote",
+          "lookup_context": [
+            "ILS facility with flight check data that differs from TBL 4-1-3",
+            "Current flight check shows localizer usable to 15 miles"
+          ],
+          "task": "Determine which value controls — the published table or the flight check data.",
+          "instruction": "Apply the TBL 4-1-3 footnote.",
+          "question_text": "The latest flight check for an ILS shows usable localizer coverage of 15 miles instead of the 18 miles in TBL 4-1-3. Which value controls when clearing a route?",
+          "choices": [
+            {
+              "text": "18 miles, because the published table is the controlling reference.",
+              "is_correct": false
+            },
+            {
+              "text": "15 miles, because the current flight check limitations take precedence.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for an updated publication before using either value.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the average of the two values.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The TBL 4-1-3 footnote states: 'Use the current flight check height/altitude limitations if different from the above minima.' Flight check data represents actual current facility performance."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "You are specifying a direct route for an aircraft. The route passes through controlled airspace for 60 miles, then through uncontrolled airspace for 30 miles, then back through controlled airspace for 40 miles. The first controlled-airspace segment stays within the applicable VOR usable radius limits, but the second controlled-airspace segment exceeds the 100-mile radius limit for the altitude band. Another controller says the route is acceptable because the two controlled-airspace segments average within limits.",
+          "para_context": "When specifying a route other than an established airway or route, do not exceed the limitations on any portion of the route which lies within controlled airspace.",
+          "question_text": "May the route be cleared as planned?",
+          "choices": [
+            {
+              "text": "No. Each portion of the route within controlled airspace must independently respect the applicable table limitations.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, as long as the total distance across all controlled segments averages within limits.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because the uncontrolled-airspace segment resets the limitation calculation.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if both controlled-airspace segments rely on the same NAVAID.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule applies to 'any portion of the route which lies within controlled airspace.' There is no provision for averaging across segments or treating them as a single continuous length."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Match each radio beacon power class to its distance in TBL 4-1-2.",
+          "question_text": "Which L/MF radio beacon class with what power rating provides a usable radius of 75 miles for all altitudes?",
+          "choices": [
+            {
+              "text": "CL, under 25 watts.",
+              "is_correct": false
+            },
+            {
+              "text": "MH, under 50 watts.",
+              "is_correct": false
+            },
+            {
+              "text": "H, 50-1,999 watts.",
+              "is_correct": false
+            },
+            {
+              "text": "HH, 2,000 or more watts.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "TBL 4-1-2: HH-class radio beacons with 2,000 watts or more have a usable radius of 75 miles. This is the highest-power and longest-range radio beacon class."
+        }
+      ]
+    },
+    "4-1-2": {
+      "items": [
+        {
+          "activity_type": "discrimination_check",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Which scenario satisfies an exception to the altitude and distance limitations?",
+          "question_text": "Which of these situations qualifies for an exception under 4-1-2?",
+          "choices": [
+            {
+              "text": "The pilot requests a shorter route and radar monitoring is provided.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller issues a shortcut that was not requested by the pilot and provides no radar monitoring.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot requests a shortcut but radar monitoring is unavailable.",
+              "is_correct": false
+            },
+            {
+              "text": "Radar monitoring is provided but the routing was neither ATC-initiated nor pilot-requested.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Exception (a) requires both elements: routing initiated by ATC or requested by the pilot AND radar monitoring provided. Only the first option satisfies both conditions."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A pilot of a non-GNSS aircraft requests a direct routing that exceeds NAVAID service-volume limits. You have radar monitoring available. The requested route passes through an area containing a Military Training Route, but the pilot did not request routing via the MTR. The pilot also has not requested VFR-on-top.",
+          "para_context": "Exceptions include ATC-initiated or pilot-requested routing with radar monitoring, operational necessity with office approval, and requested routing via an MTR.",
+          "question_text": "Under which exception, if any, can this routing be handled?",
+          "choices": [
+            {
+              "text": "Under exception (a) because the pilot requested the routing and radar monitoring is available.",
+              "is_correct": true
+            },
+            {
+              "text": "Under exception (c) because the route passes through an area with an MTR.",
+              "is_correct": false
+            },
+            {
+              "text": "No exception applies; the route request must be denied.",
+              "is_correct": false
+            },
+            {
+              "text": "Under exception (b) because operational necessity can be presumed.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Exception (a) applies: the pilot requested the routing and radar monitoring is available. Exception (c) requires the requested routing to BE via an MTR, not merely pass through an area containing one."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When a clearance is issued beyond NAVAID altitude and/or distance limitations under an exception, the controller must provide the aircraft with information and advice related to significant deviations from the expected flight path, in addition to maintaining separation from other aircraft and airspace.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Note 2 of 4-1-2 states that when a clearance is issued beyond the limitations, the controller must maintain separation and provide aircraft with information and advice related to significant deviations from the expected flight path."
+        },
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "For RNAV aircraft operating at and below FL450 on Q routes or random RNAV routes excluding oceanic airspace, radar separation is required unless the aircraft is what?",
+          "choices": [
+            {
+              "text": "GNSS-equipped with suffix /G, /L, /S, or /V and not on a random impromptu route.",
+              "is_correct": true
+            },
+            {
+              "text": "Any aircraft equipped with RNAV capability operating on a filed flight plan.",
+              "is_correct": false
+            },
+            {
+              "text": "Traffic operating above FL450.",
+              "is_correct": false
+            },
+            {
+              "text": "Non-GNSS aircraft operating exclusively on random RNAV routes.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Note 1 of 4-1-2 provides the exception specifically for GNSS-equipped /G, /L, /S, and /V aircraft not on a random impromptu route, referencing paragraph 5-5-1."
+        }
+      ]
+    },
+    "4-1-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You need an aircraft to hold at a fix defined by a VOR. At FL190, the H-class VOR has a usable radius of 130 NM. The fix is located 140 NM from the VOR. The MEA for the route is 8,000 feet and the lowest terrain-clearance altitude for the holding template at this fix is 6,000 feet.",
+          "para_context": "Use an altitude consistent with the limitations of the aid when clearing an aircraft to cross or hold at a fix.",
+          "question_text": "Can you hold the aircraft at FL190 at this fix?",
+          "choices": [
+            {
+              "text": "No. At FL190, the fix at 140 NM exceeds the VOR's 130 NM usable radius.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because FL190 is well above the MEA and holding template altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because holding clearances are exempt from NAVAID distance limitations.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because the route MEA is only 8,000 feet and terrain clearance is assured.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The altitude must be consistent with the aid's limitations. At FL190 the H-class VOR has a 130 NM usable radius, and a fix at 140 NM lies beyond that limit regardless of MEA or terrain clearance."
+        }
+      ]
+    },
+    "4-1-4": {
+      "items": [
+        {
+          "activity_type": "discrimination_check",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Select the correct statement for a TACAN-only aircraft with insufficient NAVAID coverage.",
+          "question_text": "A TACAN-only aircraft is operating in Class A airspace with insufficient TACAN or VORTAC NAVAIDs to define the route. What is the correct operational expectation?",
+          "choices": [
+            {
+              "text": "It should request VFR-on-top.",
+              "is_correct": false
+            },
+            {
+              "text": "The VFR-on-top expectation does not apply because it is limited to outside Class A airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "It should cancel IFR and proceed VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "ATC must provide radar vectors for the entire route.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note explicitly states 'Except in Class A airspace' for the VFR-on-top request expectation. VFR operations are not permitted in Class A, so this expectation does not apply there."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Is this controller action operationally correct?",
+          "question_text": "A TACAN-equipped aircraft may use the VFR-on-top exception for a route that does not meet service-volume limitations without the pilot requesting VFR-on-top on that route.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ],
+          "explanation": "The VFR-on-top exception in 4-1-4 requires the aircraft to request to operate VFR-on-top on that route. Being TACAN-only does not automatically activate the exception — the pilot must make the request."
+        }
+      ]
+    },
+    "4-1-5": {
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "4-1-5b4(d) divergence beyond 45 NM",
+          "lookup_context": [
+            "Unpublished fix at 105 NM from the NAVAID generating the off-course radial",
+            "No holding operations involved"
+          ],
+          "task": "Calculate the minimum divergence angle using the formula for distances beyond 45 NM.",
+          "instruction": "Apply the unpublished-fix divergence formula: 45 degrees at 45 NM, then ½ degree per NM beyond.",
+          "question_text": "An unpublished fix is located 105 NM from the NAVAID generating the off-course radial. What is the minimum divergence angle?",
+          "choices": [
+            {
+              "text": "60 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "75 degrees.",
+              "is_correct": true
+            },
+            {
+              "text": "45 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "90 degrees.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Beyond 45 NM, the minimum increases ½ degree per NM. At 105 NM: 45 + (105 − 45) × 0.5 = 45 + 30 = 75 degrees. Compare to the paragraph's example: 130 NM requires 88 degrees (45 + 85 × 0.5 = 87.5 ≈ 88)."
+        },
+        {
+          "activity_type": "list_membership",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Select the chart types used for military turbojet single-piloted aircraft fix clearance.",
+          "question_text": "Unless the pilot requests otherwise, which charts govern the fixes used when clearing military turbojet single-piloted aircraft?",
+          "choices": [
+            {
+              "text": "Low altitude en route charts, terminal procedure charts, and STAR charts.",
+              "is_correct": false
+            },
+            {
+              "text": "High altitude en route charts, high altitude instrument approach procedures charts, and SID charts.",
+              "is_correct": true
+            },
+            {
+              "text": "All available en route and approach charts regardless of altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Any chart depicting the fix, as long as the fix is published.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-1-5a specifies three chart types: high altitude en route charts, high altitude instrument approach procedures charts, and SID charts."
+        },
+        {
+          "activity_type": "discrimination_check",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Match each situation to the correct divergence minimum for an unpublished fix on an off-route radial.",
+          "question_text": "What minimum divergence angle applies when both NAVAIDs involved are within 30 NM of the unpublished fix AND holding operations are involved?",
+          "choices": [
+            {
+              "text": "30 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "45 degrees.",
+              "is_correct": true
+            },
+            {
+              "text": "1 degree per NM beyond 30 NM.",
+              "is_correct": false
+            },
+            {
+              "text": "½ degree per NM beyond 45 NM.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When holding is involved, subparagraph 4-1-5b4(a) requires at least 45 degrees regardless of distance. This overrides the 30-degree minimum from subparagraph (b) that would normally apply when both NAVAIDs are within 30 NM."
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A controller wants to assign an unpublished fix to an aircraft equipped solely with TACAN (suffix M) and plans to hold it overhead a VORTAC at 7,000 feet. The fix can be defined by DME or by an off-route radial with 25 degrees of divergence, both NAVAIDs within 30 NM. The MEA for the route is 5,000 feet.",
+          "para_context": "Aircraft equipped solely with TACAN can never be held overhead the NAVAID. DME must be used in lieu of off-route radials whenever possible. Within 30 NM the minimum divergence is 30 degrees unless holding is involved, which requires 45 degrees. Do not hold at unpublished fixes below the lowest assignable altitude dictated by terrain clearance for the holding pattern template regardless of MEA.",
+          "question_text": "Which combination of errors exists in this plan?",
+          "choices": [
+            {
+              "text": "The aircraft cannot be held overhead the VORTAC, DME should be used instead of the off-route radial, and 25 degrees of divergence is insufficient.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the holding altitude is problematic because 7,000 feet is above the MEA.",
+              "is_correct": false
+            },
+            {
+              "text": "The plan is acceptable because the aircraft is TACAN-equipped and the build uses a VORTAC.",
+              "is_correct": false
+            },
+            {
+              "text": "The DME issue is the sole problem; the divergence angle and overhead hold are fine.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Three violations: (1) aircraft equipped solely with TACAN cannot be held overhead any NAVAID; (2) DME must be used whenever possible; (3) 25 degrees is below the 30-degree minimum, and if holding 45 degrees would be required."
+        },
+        {
+          "activity_type": "requirement_check",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When determining the lowest holding altitude at an unpublished fix, the controller may use the MEA for the route being flown rather than the terrain-clearance altitude from the holding pattern template.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ],
+          "explanation": "Subparagraph 4-1-5b3 explicitly states: do not hold aircraft at unpublished fixes below the lowest assignable altitude dictated by terrain clearance for the appropriate holding pattern airspace area (template), regardless of the MEA for the route being flown. The holding template terrain criteria take precedence."
+        },
+        {
+          "activity_type": "source_use",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "source_kind": "reference",
+          "source_label": "4-1-5b2 cross-reference to 4-1-1",
+          "lookup_context": [
+            "Unpublished fix usage restrictions",
+            "NAVAID altitude and distance limitations from 4-1-1"
+          ],
+          "task": "Identify which paragraph imposes the service-volume check for unpublished fixes.",
+          "instruction": "Use the cross-reference within 4-1-5.",
+          "question_text": "According to 4-1-5b2, an unpublished fix may be used if its location does not exceed what limits?",
+          "choices": [
+            {
+              "text": "NAVAID altitude and distance limitations as specified in 4-1-1.",
+              "is_correct": true
+            },
+            {
+              "text": "The divergence-angle limits in 4-1-5b4 only.",
+              "is_correct": false
+            },
+            {
+              "text": "The holding pattern template terrain-clearance limits only.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot's aircraft performance limitations.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Subparagraph 4-1-5b2 cross-references paragraph 4-1-1, requiring unpublished fixes to also comply with NAVAID altitude and distance limitations in addition to the divergence criteria."
+        }
+      ]
+    }
+  }
+}
