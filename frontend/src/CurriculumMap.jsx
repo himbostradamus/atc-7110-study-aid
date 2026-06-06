@@ -42,11 +42,14 @@ button,a{touch-action:manipulation}
   .map-home-tabs{flex-direction:column!important}
   .map-practice-grid{grid-template-columns:1fr!important}
   .map-aircraft-workspace{grid-template-columns:1fr!important}
-  .map-aircraft-hero,.map-aircraft-controls{min-width:0!important}
+  .map-aircraft-hero,.map-aircraft-controls{min-width:0!important;width:100%!important}
+  .map-aircraft-controls{grid-template-columns:minmax(0,1fr)!important}
   .map-aircraft-hero-title{font-size:24px!important;overflow-wrap:anywhere}
   .map-aircraft-copy{max-width:none!important}
   .map-aircraft-review-grid{grid-template-columns:1fr!important}
   .map-aircraft-filter-grid{grid-template-columns:1fr!important}
+  .map-aircraft-filter-grid label{min-width:0!important;width:100%!important}
+  .map-aircraft-filter-grid select{width:100%!important;max-width:none!important}
   .map-chapter-header{align-items:flex-start!important;flex-wrap:wrap}
   .map-chapter-meta{width:100%;justify-content:flex-start!important}
 }
@@ -1540,7 +1543,7 @@ function AircraftRecognitionWorkspace({
         borderRadius: 2,
         padding: 16,
         display: "grid",
-        gridTemplateColumns: "minmax(220px, .75fr) minmax(0, 1.25fr)",
+        gridTemplateColumns: "minmax(0, 1fr)",
         gap: 18,
         alignItems: "start",
       }}>
@@ -1654,7 +1657,12 @@ function AircraftRecognitionWorkspace({
               })}
             </div>
           </div>
-          <div className="map-aircraft-filter-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 8 }}>
+          <div className="map-aircraft-filter-grid" style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))",
+            gap: 8,
+            width: "100%",
+          }}>
             {[
               ["group", "Aircraft Group"],
               ["cwt", "Consolidated Wake Turbulence"],
@@ -1692,7 +1700,12 @@ function AircraftRecognitionWorkspace({
               </label>
             ))}
           </div>
-          <div className="map-aircraft-filter-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 8 }}>
+          <div className="map-aircraft-filter-grid" style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+            gap: 8,
+            width: "100%",
+          }}>
             <label>
               <span style={labelStyle}>Order</span>
               <select value={filters.order} onChange={(event) => updateFilter("order", event.target.value)} style={selectStyle}>
