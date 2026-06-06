@@ -161,10 +161,8 @@ cd frontend
 VITE_ATC_STATIC_DEPLOY=true npm run build
 ```
 
-The GitHub Pages workflow builds and publishes `frontend/dist` when manually
-started. Enable Pages with **GitHub Actions** as the source first. The current
-private repository requires a GitHub plan that supports private Pages, or the
-repository must be made public.
+The GitHub Pages workflow builds and publishes `frontend/dist` after changes
+are pushed to `main`. Pages must use **GitHub Actions** as its source.
 
 ## Trust / Verification Roadmap
 
