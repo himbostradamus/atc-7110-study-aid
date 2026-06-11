@@ -1,0 +1,319 @@
+#!/usr/bin/env python3
+"""Validate a chapter remediation manifest against its stable-ID packet."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+from collections import Counter
+from pathlib import Path
+from typing import Any
+
+
+ACTIONS = {"replace", "remove", "split"}
+ENTITY_TYPES = {"question", "activity", "flashcard"}
+SEVERITIES = {"critical", "major", "minor", "suggestion"}
+QUESTION_TYPES = {"multiple_choice", "true_false", "fill_blank"}
+LOCATION_RE = re.compile(
+    r"\b(?:under|from|in|paragraph|para|section)\s+(?:the\s+)?"
+    r"\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\b",
+    re.IGNORECASE,
+)
+GENERIC_REFERENCE_RE = re.compile(
+    r"\b(?:this|the)\s+(?:paragraph|section|rule|material|example)\b",
+    re.IGNORECASE,
+)
+
+
+class Reporter:
+    def __init__(self) -> None:
+        self.errors: list[str] = []
+        self.warnings: list[str] = []
+
+    def error(self, location: str, message: str) -> None:
+        self.errors.append(f"{location}: {message}")
+
+    def warn(self, location: str, message: str) -> None:
+        self.warnings.append(f"{location}: {message}")
+
+
+def load_object(path: Path) -> dict[str, Any]:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as error:
+        raise SystemExit(f"Invalid JSON in {path}: {error}") from error
+    if not isinstance(payload, dict):
+        raise SystemExit(f"Top-level JSON in {path} must be an object.")
+    return payload
+
+
+def normalize(value: object) -> str:
+    return re.sub(r"\s+", " ", str(value or "")).strip()
+
+
+def packet_inventory(packet: dict[str, Any]) -> tuple[dict[str, set[str]], dict[str, tuple[str, str]]]:
+    inventory = {entity_type: set() for entity_type in ENTITY_TYPES}
+    lookup: dict[str, tuple[str, str]] = {}
+    for paragraph in packet.get("paragraphs", []):
+        para_id = str(paragraph.get("para_id") or "")
+        targets = paragraph.get("targets") or {}
+        for entity_type in ENTITY_TYPES:
+            for item in targets.get(entity_type, []):
+                item_id = str(item.get("id") or "")
+                if item_id:
+                    inventory[entity_type].add(item_id)
+                    lookup[item_id] = (entity_type, para_id)
+    return inventory, lookup
+
+
+def validate_choices(
+    reporter: Reporter,
+    location: str,
+    choices: object,
+    question_type: str,
+) -> None:
+    if not isinstance(choices, list) or not choices:
+        reporter.error(location, "replacement requires a non-empty choices array")
+        return
+    normalized = []
+    correct = 0
+    for index, choice in enumerate(choices):
+        choice_location = f"{location}.choices[{index}]"
+        if not isinstance(choice, dict):
+            reporter.error(choice_location, "choice must be an object")
+            continue
+        text = normalize(choice.get("text"))
+        if not text:
+            reporter.error(choice_location, "choice text is required")
+        normalized.append(text.lower())
+        correct += int(choice.get("is_correct") is True)
+    if len(normalized) != len(set(normalized)):
+        reporter.error(location, "replacement choices contain duplicate text")
+    if question_type == "fill_blank":
+        if correct < 1:
+            reporter.error(location, "fill_blank requires at least one accepted answer")
+    elif correct != 1:
+        reporter.error(location, f"expected exactly one correct answer, found {correct}")
+    if question_type == "true_false" and len(choices) != 2:
+        reporter.error(location, "true_false requires exactly two choices")
+    if question_type == "multiple_choice" and len(choices) < 3:
+        reporter.warn(location, "multiple_choice should normally have at least three choices")
+
+
+def validate_question(reporter: Reporter, location: str, item: object) -> None:
+    if not isinstance(item, dict):
+        reporter.error(location, "question replacement must be an object")
+        return
+    text = normalize(item.get("question_text"))
+    question_type = normalize(item.get("question_type") or "multiple_choice")
+    explanation = normalize(item.get("explanation"))
+    if not text:
+        reporter.error(location, "question_text is required")
+    if question_type not in QUESTION_TYPES:
+        reporter.error(location, f"unsupported question_type '{question_type}'")
+    if not isinstance(item.get("difficulty"), int) or not 1 <= item["difficulty"] <= 5:
+        reporter.error(location, "difficulty must be an integer from 1 to 5")
+    if len(explanation.split()) < 10:
+        reporter.error(location, "explanation must teach the controlling principle")
+    if LOCATION_RE.search(text):
+        reporter.warn(location, "replacement still uses paragraph-location scaffolding")
+    if GENERIC_REFERENCE_RE.search(text):
+        reporter.warn(location, "replacement still uses a generic document reference")
+    validate_choices(reporter, location, item.get("choices"), question_type)
+
+
+def validate_flashcard(reporter: Reporter, location: str, item: object) -> None:
+    if not isinstance(item, dict):
+        reporter.error(location, "flashcard replacement must be an object")
+        return
+    front = normalize(item.get("front"))
+    back = normalize(item.get("back"))
+    card_type = normalize(item.get("card_type"))
+    if not front or not back or not card_type:
+        reporter.error(location, "front, back, and card_type are required")
+    if LOCATION_RE.search(front) and card_type not in {"reference", "source_reference"}:
+        reporter.warn(location, "replacement still uses paragraph-location scaffolding")
+    if len(back.split()) > 60:
+        reporter.warn(location, "replacement back may contain too many retrieval targets")
+    if "reverse" in card_type.lower() and "?" not in back:
+        reporter.warn(location, "reverse card back may not function as a reverse prompt")
+
+
+def activity_choices(payload: dict[str, Any]) -> object:
+    return payload.get("choices") if "choices" in payload else payload.get("options")
+
+
+def validate_activity(reporter: Reporter, location: str, item: object) -> None:
+    if not isinstance(item, dict):
+        reporter.error(location, "activity replacement must be an object")
+        return
+    activity_type = normalize(item.get("activity_type"))
+    content = item.get("content")
+    if not activity_type:
+        reporter.error(location, "activity_type is required")
+    if not isinstance(item.get("difficulty"), int) or not 1 <= item["difficulty"] <= 5:
+        reporter.error(location, "difficulty must be an integer from 1 to 5")
+    if not isinstance(content, dict) or not content:
+        reporter.error(location, "content must be a non-empty object")
+        return
+    explanation = normalize(content.get("explanation"))
+    if len(explanation.split()) < 10:
+        reporter.error(location, "activity explanation must teach the controlling principle")
+    choices = activity_choices(content)
+    if choices is not None:
+        validate_choices(reporter, location, choices, "multiple_choice")
+
+
+def validate_replacement(
+    reporter: Reporter,
+    location: str,
+    entity_type: str,
+    replacement: object,
+    action: str,
+) -> None:
+    replacements = replacement if action == "split" else [replacement]
+    if action == "split" and (not isinstance(replacements, list) or len(replacements) < 2):
+        reporter.error(location, "split requires an array of at least two replacements")
+        return
+    if not isinstance(replacements, list):
+        reporter.error(location, "replacement shape is invalid")
+        return
+    for index, item in enumerate(replacements):
+        item_location = f"{location}[{index}]" if action == "split" else location
+        if entity_type == "question":
+            validate_question(reporter, item_location, item)
+        elif entity_type == "activity":
+            validate_activity(reporter, item_location, item)
+        elif entity_type == "flashcard":
+            validate_flashcard(reporter, item_location, item)
+
+
+def validate(packet: dict[str, Any], manifest: dict[str, Any]) -> Reporter:
+    reporter = Reporter()
+    inventory, lookup = packet_inventory(packet)
+    chapter = packet.get("chapter")
+    if manifest.get("version") != 1:
+        reporter.error("version", "expected version 1")
+    if manifest.get("audit_type") != "chapter_content_remediation":
+        reporter.error("audit_type", "expected chapter_content_remediation")
+    if manifest.get("chapter") != chapter:
+        reporter.error("chapter", f"expected chapter {chapter}")
+    if manifest.get("status") != "complete":
+        reporter.error("status", "manifest must be complete")
+
+    reviewed = manifest.get("reviewed_item_ids")
+    if not isinstance(reviewed, dict):
+        reporter.error("reviewed_item_ids", "must be an object grouped by entity type")
+        reviewed = {}
+    for entity_type in ENTITY_TYPES:
+        values = reviewed.get(entity_type)
+        if not isinstance(values, list):
+            reporter.error(f"reviewed_item_ids.{entity_type}", "must be an array")
+            values = []
+        value_set = {str(value) for value in values}
+        if len(values) != len(value_set):
+            reporter.error(f"reviewed_item_ids.{entity_type}", "contains duplicate IDs")
+        missing = inventory[entity_type] - value_set
+        foreign = value_set - inventory[entity_type]
+        if missing:
+            reporter.error(
+                f"reviewed_item_ids.{entity_type}",
+                f"missing {len(missing)} target IDs",
+            )
+        if foreign:
+            reporter.error(
+                f"reviewed_item_ids.{entity_type}",
+                f"contains {len(foreign)} foreign IDs",
+            )
+
+    decisions = manifest.get("decisions")
+    if not isinstance(decisions, list):
+        reporter.error("decisions", "must be an array")
+        decisions = []
+    seen = set()
+    action_counts = Counter()
+    for index, decision in enumerate(decisions):
+        location = f"decisions[{index}]"
+        if not isinstance(decision, dict):
+            reporter.error(location, "decision must be an object")
+            continue
+        item_id = str(decision.get("item_id") or "")
+        entity_type = str(decision.get("entity_type") or "")
+        para_id = str(decision.get("para_id") or "")
+        action = str(decision.get("action") or "")
+        if item_id in seen:
+            reporter.error(location, "duplicate decision for item_id")
+        seen.add(item_id)
+        expected = lookup.get(item_id)
+        if not expected:
+            reporter.error(location, "item_id is not a target in the assigned packet")
+        elif expected != (entity_type, para_id):
+            reporter.error(
+                location,
+                f"item identity mismatch; expected {expected[0]} in {expected[1]}",
+            )
+        if entity_type not in ENTITY_TYPES:
+            reporter.error(location, f"unsupported entity_type '{entity_type}'")
+        if action not in ACTIONS:
+            reporter.error(location, f"unsupported action '{action}'")
+        else:
+            action_counts[action] += 1
+        if decision.get("severity") not in SEVERITIES:
+            reporter.error(location, "invalid severity")
+        categories = decision.get("categories")
+        if not isinstance(categories, list) or not categories:
+            reporter.error(location, "categories must be a non-empty array")
+        if len(normalize(decision.get("problem")).split()) < 5:
+            reporter.error(location, "problem must explain the defect")
+        if len(normalize(decision.get("source_basis")).split()) < 5:
+            reporter.error(location, "source_basis must state the controlling source idea")
+        if action in {"replace", "split"}:
+            if "replacement" not in decision:
+                reporter.error(location, f"{action} requires replacement")
+            else:
+                validate_replacement(
+                    reporter,
+                    f"{location}.replacement",
+                    entity_type,
+                    decision["replacement"],
+                    action,
+                )
+        elif action == "remove" and "replacement" in decision:
+            reporter.warn(location, "remove decision ignores replacement")
+
+    summary = manifest.get("summary")
+    if not isinstance(summary, dict):
+        reporter.error("summary", "must be an object")
+    else:
+        guidance = summary.get("generation_guidance")
+        if not isinstance(guidance, list) or not guidance:
+            reporter.error("summary.generation_guidance", "must contain guidance for the next generation pass")
+
+    if decisions and action_counts["replace"] + action_counts["split"] == 0:
+        reporter.warn("decisions", "all interventions are removals; verify useful content was not discarded")
+    return reporter
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--packet", type=Path, required=True)
+    parser.add_argument("--manifest", type=Path, required=True)
+    args = parser.parse_args()
+    packet = load_object(args.packet)
+    manifest = load_object(args.manifest)
+    reporter = validate(packet, manifest)
+    for warning in reporter.warnings:
+        print(f"WARNING: {warning}")
+    for error in reporter.errors:
+        print(f"ERROR: {error}")
+    print(
+        f"Validation: {len(reporter.errors)} error(s), "
+        f"{len(reporter.warnings)} warning(s)"
+    )
+    return 1 if reporter.errors else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+

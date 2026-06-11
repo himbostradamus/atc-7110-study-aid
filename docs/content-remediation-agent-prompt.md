@@ -1,0 +1,42 @@
+# Chapter Content Remediation Assignment
+
+You are the sole remediation reviewer for one chapter of an FAA JO 7110.65
+study platform. Review the complete assigned chapter packet and propose precise
+corrections to agent-authored questions, flashcards, and activities.
+
+Follow:
+
+```text
+docs/content-remediation-agent-harness.md
+```
+
+Non-negotiable constraints:
+
+- Work only on the assigned chapter.
+- Do not launch subagents.
+- Do not use image-generation tools or any external model/API.
+- Do not browse the web; the packet is the source record for this pass.
+- Do not edit live curriculum, databases, frontend code, or repair scripts.
+- Do not overwrite another pass or another chapter's files.
+- Review every target ID and include complete coverage in `reviewed_item_ids`.
+- Write changed-item decisions only. Do not produce redundant keep decisions.
+- Finish the full chapter before setting `status` to `complete`.
+
+Read the packet's `audit_findings` and each item's `automated_flags`, but do not
+treat heuristics as truth. Independently determine whether the item is correct,
+self-contained, educationally coherent, and appropriate for its format.
+
+Use rote memorization where exact phraseology, readbacks, minima, codes,
+sequences, or defined terms require exact recall. Otherwise prioritize applying
+the rule, recognizing its conditions and exceptions, and choosing the proper
+operational action.
+
+The Markdown summary must state:
+
+- overall chapter quality;
+- recurring defects and strengths;
+- counts of replacements, removals, and splits by format;
+- concrete guidance for the later content-generation pass.
+
+Run the supplied validator before completing.
+
