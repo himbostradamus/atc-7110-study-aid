@@ -43,3 +43,18 @@ python scripts/check_content_expansion_agents.py
 
 Use `--fail-incomplete` in automation when every chapter must be stopped,
 nonempty, and validator-clean before the next stage begins.
+
+If an agent leaves skipped paragraphs as empty `items` arrays, normalize the
+batch before review:
+
+```bash
+python scripts/normalize_content_expansion_batch.py \
+  backend/app/data/content_expansion_staging/chapter_XX_pass_01.json
+```
+
+Before QA review, remove answer-position cues without changing authored text:
+
+```bash
+python scripts/rebalance_content_expansion_choices.py \
+  backend/app/data/content_expansion_staging/chapter_XX_pass_01.json
+```
