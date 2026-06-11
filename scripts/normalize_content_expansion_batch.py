@@ -20,12 +20,34 @@ def has_items(payload: Any) -> bool:
     )
 
 
+def flatten_activity_content(payload: dict[str, Any]) -> int:
+    changed = 0
+    activities = payload.get("activities")
+    if not isinstance(activities, dict):
+        return changed
+    for para_payload in activities.values():
+        if not isinstance(para_payload, dict):
+            continue
+        items = para_payload.get("items")
+        if not isinstance(items, list):
+            continue
+        for item in items:
+            if not isinstance(item, dict) or not isinstance(item.get("content"), dict):
+                continue
+            content = item.pop("content")
+            for key, value in content.items():
+                item.setdefault(key, value)
+            changed += 1
+    return changed
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("batch", type=Path)
     args = parser.parse_args()
 
     payload = json.loads(args.batch.read_text(encoding="utf-8"))
+    flattened = flatten_activity_content(payload)
     removed = 0
     for family in FAMILIES:
         container = payload.get(family)
@@ -43,7 +65,10 @@ def main() -> int:
         json.dumps(payload, indent=2, ensure_ascii=True) + "\n",
         encoding="utf-8",
     )
-    print(f"Normalized {args.batch}: removed {removed} empty paragraph branches.")
+    print(
+        f"Normalized {args.batch}: removed {removed} empty paragraph branches; "
+        f"flattened {flattened} activity wrappers."
+    )
     return 0
 
 

@@ -1,0 +1,489 @@
+{
+  "questions": {
+    "4-5-2": {
+      "items": [
+        {
+          "question_text": "An aircraft is cruising at FL400 on a magnetic course of 090 degrees when it requests and receives a climb to FL430. What altitudes are correct for each segment of this profile?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "At and below FL410, a magnetic course of 0-179 degrees (eastbound) requires odd cardinal altitudes \u2014 FL400 is incorrect; the aircraft should have been at an odd altitude such as FL390. Above FL410, eastbound courses require odd cardinal flight levels beginning with FL410, then FL450, FL490 at 4,000-foot intervals. FL430 would be incorrect above FL410 on an eastbound course. This scenario tests recognition that the hemispheric rule must be applied separately on each side of the FL410 boundary, where the interval changes from 2,000 to 4,000 feet.",
+          "choices": [
+            {
+              "text": "FL390 at/below FL410 and FL450 above FL410.",
+              "is_correct": true
+            },
+            {
+              "text": "FL390 at/below FL410 and FL430 above FL410.",
+              "is_correct": false
+            },
+            {
+              "text": "FL400 at/below FL410 and FL430 above FL410.",
+              "is_correct": false
+            },
+            {
+              "text": "FL410 at/below FL410 and FL450 above FL410.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-6": {
+      "items": [
+        {
+          "question_text": "A higher MEA begins at the RIGEL intersection and no MCA is specified at that fix. When must an aircraft on the route begin its climb to comply with the higher MEA?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "When no MCA is specified, the aircraft must be at or above the higher MEA upon crossing the fix where the higher MEA begins. The climb must therefore begin early enough that the aircraft reaches the higher MEA by the time it crosses the fix \u2014 not after crossing it. If an MCA had been specified, the aircraft would need to cross at or above that specific altitude instead.",
+          "choices": [
+            {
+              "text": "Immediately after crossing RIGEL, since the higher MEA only applies beyond the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft must be at or above the higher MEA upon crossing RIGEL, so climb must begin early enough to be level by the fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Within 5 NM after crossing RIGEL, as a standard transition buffer.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the pilot determines a climb is appropriate, since no MCA is published.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-1": {
+      "items": [
+        {
+          "question_text": "What operational factors should a controller consider when determining whether to clear an aircraft to a fix other than the destination airport?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-6-1 lists these operational factors: length of delay, holding airspace limitations, navigational aids, altitude, and meteorological conditions. These are considerations the controller weighs when selecting a holding fix. The pilot's fuel status is the pilot's responsibility to declare and manage \u2014 it is not a controller consideration for fix selection.",
+          "choices": [
+            {
+              "text": "Length of delay, pilot fuel remaining, holding airspace limitations, and altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Navigational aids, meteorological conditions, pilot experience level, and delay length.",
+              "is_correct": false
+            },
+            {
+              "text": "Length of delay, holding airspace limitations, navigational aids, altitude, and meteorological conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Altitude, meteorological conditions, aircraft equipment suffix, and holding airspace limitations.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-4": {
+      "items": [
+        {
+          "question_text": "When a published holding pattern is charted and the controller issues holding instructions, what must still be specified?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Although the holding pattern is charted, the controller must still specify the holding fix or waypoint and the direction of holding from the fix/waypoint in the clearance. The chart provides the pattern geometry but the controller's assignment determines what the pilot holds at and in which direction, which are essential for separation.",
+          "choices": [
+            {
+              "text": "Only the holding fix \u2014 direction is inherent in the charted pattern.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the direction of holding \u2014 the chart supplies the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Nothing additional \u2014 the charted pattern covers all required elements.",
+              "is_correct": false
+            },
+            {
+              "text": "The holding fix and direction of holding from the fix.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "4-5-6": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "Determine the lowest altitude that may be assigned.",
+          "situation": "An aircraft is on a route segment with an MEA of 9,000 feet and an MOCA of 6,500 feet. The floor of controlled airspace is 1,200 feet AGL over flat terrain where the surface elevation is 800 feet MSL. Radar service is being provided. The aircraft is GNSS-equipped but not within 25 NM of a VOR, VORTAC, or TACAN serving the segment.",
+          "question_text": "May the aircraft be cleared below the MEA? If so, what is the lowest assignable altitude?",
+          "choices": [
+            {
+              "text": "Yes, at or above 6,800 feet MSL \u2014 the MOCA may be used with GNSS equipment satisfying the below-MEA exception.",
+              "is_correct": true
+            },
+            {
+              "text": "No, the aircraft must remain at or above 9,000 feet because it is not within 25 NM of a VOR/VORTAC/TACAN.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, at or above 2,000 feet MSL \u2014 300 feet above the 1,200-foot AGL floor of controlled airspace plus 800 feet surface elevation.",
+              "is_correct": false
+            },
+            {
+              "text": "No, GNSS-equipped aircraft may never be cleared below MEA regardless of other conditions.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The aircraft may be cleared below the MEA but not below the MOCA when one of three conditions is met. GNSS-equipped aircraft satisfy one condition independently of the 25 NM VOR distance limit \u2014 that limit applies only to the VOR/VORTAC/TACAN-based option. The floor of controlled airspace calculation (300 feet above the floor) applies separately, but the MOCA is the binding lower limit here. The lowest assignable altitude must be at least the MOCA (6,500 feet) and at least 300 feet above the floor of controlled airspace; 6,800 feet satisfies both."
+        }
+      ]
+    },
+    "4-6-4": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You are issuing holding instructions using DME at the BOLDR intersection. The holding pattern requires 10-mile legs. The pilot requests that the leg length be specified in minutes instead of miles because the aircraft's DME display is intermittent.",
+          "question_text": "How should the leg length be specified in the holding clearance?",
+          "choices": [
+            {
+              "text": "Specify the leg length in miles as standard \u2014 DME holding always uses miles regardless of pilot request.",
+              "is_correct": false
+            },
+            {
+              "text": "Specify leg length in minutes, because the pilot has requested it and DME reliability is in question.",
+              "is_correct": true
+            },
+            {
+              "text": "Deny the holding clearance because DME is required for DME holding.",
+              "is_correct": false
+            },
+            {
+              "text": "Omit the leg length entirely since the published holding pattern already defines it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When DME or RNAV is to be used, leg length is normally specified in miles. However, the rule allows minutes when the pilot requests it or the controller considers minutes necessary. The pilot's report of intermittent DME is a valid operational reason to accommodate the request for minute-based leg lengths."
+        }
+      ]
+    },
+    "4-6-7": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What must you do?",
+          "situation": "An aircraft is holding at the CEDAR intersection, which is defined by an unmonitored VORTAC. The holding aircraft would follow the 090-degree radial outbound if it lost the VORTAC signal. Another IFR aircraft is approaching from the east and will cross the 090-degree radial at the holding altitude within 3 minutes.",
+          "question_text": "Is the approaching aircraft's position a separation concern for the holding aircraft?",
+          "choices": [
+            {
+              "text": "No, because the unmonitored NAVAID is still functioning and the aircraft is receiving valid signals.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because separation is only required between aircraft that are both holding at the same fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because the approaching aircraft will occupy the course the holding aircraft would follow if it loses the NAVAID signal \u2014 separation must be provided.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only if the holding aircraft has actually reported signal loss.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "At an unmonitored NAVAID, ATC must separate the holding aircraft from any other aircraft occupying the course the holding aircraft would follow if it does not receive signals from the NAVAID. The protection is anticipatory \u2014 it must be in place before a signal loss occurs, not after it is reported. The approaching aircraft on the 090-degree radial is on the protected course and separation must be ensured."
+        }
+      ]
+    },
+    "4-7-9": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You are working an arriving aircraft that is 3 minutes from its clearance limit. The receiving facility has not yet issued a clearance beyond the limit. The aircraft is at 8,000 feet and the clearance limit is 10 miles ahead. The receiving controller says they need 4 more minutes to resolve a conflict before clearing the aircraft further.",
+          "question_text": "What is the correct action?",
+          "choices": [
+            {
+              "text": "Transfer communications now and let the receiving facility handle the timing issue.",
+              "is_correct": false
+            },
+            {
+              "text": "Instruct the aircraft to reduce speed so it arrives after the receiving facility is ready.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear the aircraft beyond the limit yourself, since the receiving facility is not ready.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue holding instructions at the clearance limit now, since the receiving facility cannot clear the aircraft beyond the limit in time.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "Transfer of jurisdiction must occur early enough to allow the receiving facility to clear the aircraft beyond the clearance limit before the aircraft reaches it. If the receiving facility cannot do so in time, the transferring controller must take action \u2014 typically issuing holding instructions or otherwise ensuring the aircraft does not cross the clearance limit without further clearance. Simply transferring late does not solve the problem."
+        }
+      ]
+    },
+    "4-8-5": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "Determine whether the approach altitude must be restated in the clearance.",
+          "situation": "An aircraft is being cleared for the ILS Runway 27 approach. The published procedure has a mandatory altitude at GLIDE intersection of 2,200 feet. Another aircraft on a crossing airway will be at 2,000 feet, and the controller needs assurance that the approaching aircraft will remain at or above 2,200 until GLIDE. No radar service is available.",
+          "question_text": "Must the GLIDE intersection altitude be specified in the approach clearance?",
+          "choices": [
+            {
+              "text": "Yes, because adherence to that altitude is required for separation from the crossing aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "No, because the altitude is already published on the approach chart and the pilot will adhere to it.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because published mandatory altitudes provide vertical separation without controller restatement.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only because no radar service is available \u2014 the altitude would be omissible with radar.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The altitude shown in the approach procedure must be specified in the approach clearance when adherence to that altitude is required for separation. The controller may omit the altitude only when vertical separation will be provided by pilot adherence to prescribed maximum, minimum, or mandatory altitudes \u2014 but here the controller actively needs the crossing restriction for separation and cannot rely on chart adherence alone without restating it."
+        }
+      ]
+    }
+  },
+  "flashcards": {
+    "4-1-1": {
+      "items": [
+        {
+          "front": "When specifying a non-established route that passes through multiple controlled-airspace segments, how is each segment evaluated against NAVAID limitations?",
+          "back": "Each portion of the route within controlled airspace must independently respect the applicable table limitations. Segments are not averaged, and uncontrolled-airspace gaps do not reset the calculation.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-2-5": {
+      "items": [
+        {
+          "front": "What effort must be made for NRP aircraft after a route or altitude amendment tactically resolves a conflict?",
+          "back": "Return the aircraft to its original filed flight plan route and altitude as soon as conditions warrant. ATC specialists should avoid route and altitude changes for NRP aircraft in the first place.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-5-1": {
+      "items": [
+        {
+          "front": "What is the complete hierarchy of IFR vertical separation minima from the surface through above FL600?",
+          "back": "Up to FL410: 1,000 ft. At/above FL290 non-RVSM vs. all others: 2,000 ft. Above FL410 (general): 2,000 ft \u2014 except oceanic above FL450 supersonic vs. any: 4,000 ft, and above FL600 military vs. military: 5,000 ft.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-5-6": {
+      "items": [
+        {
+          "front": "When a route segment has a published MCA at the fix where a higher MEA begins, what must ATC ensure?",
+          "back": "The aircraft must cross the fix at or above the MCA. The MCA provides the minimum crossing altitude that ensures terrain and obstacle clearance during the climb to the higher MEA.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-5-7": {
+      "items": [
+        {
+          "front": "What is the effect of issuing 'MAINTAIN (altitude)' when previously issued altitude restrictions from a SID or STAR are omitted?",
+          "back": "Previous altitude restrictions are canceled, including any SID or STAR altitude restrictions. Controllers must restate all applicable restrictions when amending a clearance to avoid inadvertently deleting them.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-5-8": {
+      "items": [
+        {
+          "front": "What phraseology is used to advise an aircraft when to expect an altitude change at a specific fix?",
+          "back": "EXPECT (higher/lower) AT (fix). Example: 'EXPECT HIGHER AT FIXXX.' May also be given in miles or minutes: 'EXPECT HIGHER IN (number) MILES/MINUTES.' A time-based alternative is: 'REQUEST HIGHER FROM (facility) AT (time).'",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-6-1": {
+      "items": [
+        {
+          "front": "What operational factors must a controller consider when deciding whether to clear an aircraft to a fix other than the destination airport?",
+          "back": "Length of delay, holding airspace limitations, navigational aids, altitude, and meteorological conditions. These factors guide the selection of an appropriate holding fix when holding is necessary.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-6-4": {
+      "items": [
+        {
+          "front": "When must turn direction (left turns) be specified in holding instructions?",
+          "back": "Turn direction must be specified when left turns are to be made. Standard holding uses right turns, so left-turn patterns require explicit instruction: 'HOLD (direction) OF (fix) ON (course) LEFT TURNS.'",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-6-6": {
+      "items": [
+        {
+          "front": "What two conditions must both be satisfied to approve a pilot-requested deviation from the prescribed holding flight path?",
+          "back": "Both obstacles AND traffic conditions must permit the deviation. If either condition is not met \u2014 obstructions exist or traffic conflicts would result \u2014 the deviation must be denied. Pilot request alone is insufficient.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-6-7": {
+      "items": [
+        {
+          "front": "What is the protected course that governs separation at an unmonitored NAVAID?",
+          "back": "The course the holding aircraft will follow if it does not receive signals from the NAVAID. Any aircraft occupying this projected signal-loss course must be separated from the holding aircraft \u2014 the protection is anticipatory, not reactive.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-7-4": {
+      "items": [
+        {
+          "front": "For military single-piloted turbojet aircraft in IFR or at night, below what altitude should frequency and beacon code changes be minimized?",
+          "back": "Below 2,500 feet above the surface. Frequency and beacon changes should be avoided entirely during the turn to final, descent, and landing rollout. This minimizes cockpit workload during the most critical phase of the single-pilot approach.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "When a frequency or beacon change for a military single-pilot approach cannot be avoided, when must the instruction be given?",
+          "back": "Early enough to be completed before the approach fix or the point where procedures begin for a radar approach. The change must be finished before the aircraft enters the critical final-approach phase.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-7-8": {
+      "items": [
+        {
+          "front": "Who determines whether existing weather or visibility is adequate for an approach and landing?",
+          "back": "The pilot. If an arriving aircraft reports weather below the pilot's landing minima, ATC must issue instructions to that aircraft as appropriate and may adjust the landing sequence of other aircraft wanting approaches. A single below-minima report does not automatically prohibit remaining approaches.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-7-9": {
+      "items": [
+        {
+          "front": "What is the operational consequence if transfer of jurisdiction occurs too late?",
+          "back": "The receiving facility cannot clear the aircraft beyond the clearance limit before the aircraft reaches it, forcing the transferring controller to issue holding instructions or other delay actions to keep the aircraft from crossing its clearance limit without further clearance.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-7-10": {
+      "items": [
+        {
+          "front": "What phraseology is used to advise a pilot of an automated weather broadcast frequency?",
+          "back": "AIRPORT AWOS/ASOS WEATHER (frequency) ON FREQUENCY. Example: 'AIRPORT AWOS WEATHER ONE TWO EIGHT POINT THREE TWO ON FREQUENCY.' If the pilot cannot receive the broadcast, ATC must issue the weather information directly.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-7-11": {
+      "items": [
+        {
+          "front": "What six items must approach control forward to nonapproach control towers or FSSs for arriving aircraft?",
+          "back": "1. Aircraft identification. 2. Type of aircraft. 3. ETA. 4. Type of instrument approach procedure; or 5. For SVFR, entry direction and altitude restrictions; or 6. For contact approach, aircraft position. STARS may forward arrival data when authorized and conditions permit.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-7-13": {
+      "items": [
+        {
+          "front": "When should coordination occur when switching ILS runways at an airport with multiple systems not used simultaneously?",
+          "back": "Before or concurrent with the switch. Coordination must be accomplished with facilities that use fixes formed by reference to the NAVAIDs involved in the switch, so they can adjust their operations to the changed NAVAID configuration.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-8-4": {
+      "items": [
+        {
+          "front": "How are maximum assignable altitudes determined for military high altitude instrument approaches?",
+          "back": "Through coordination between the ATC facility and the military authority. This prevents exceeding rate-of-descent or airspeed limitations. Altitudes above the charted values may be specified when required for separation, but must not exceed these coordinated maximums.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-8-7": {
+      "items": [
+        {
+          "front": "What is the side-step maneuver and when may it be used?",
+          "back": "A side-step maneuver clears an aircraft for an approach to one runway with landing on a parallel runway. It may be used only when authorized by the published instrument approach procedure. Higher weather minima or MDA apply \u2014 these are published on the approach chart.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-8-8": {
+      "items": [
+        {
+          "front": "What phraseology is used to release an IFR aircraft to the local advisory frequency at an uncontrolled airport?",
+          "back": "CHANGE TO ADVISORY FREQUENCY APPROVED. Approve the change only when you no longer require direct communications. An expeditious frequency change allows the aircraft to receive airport advisories and broadcast its position on CTAF.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "4-8-10": {
+      "items": [
+        {
+          "front": "What five items must be specified in an approach clearance when the pilot is unfamiliar with the procedure?",
+          "back": "1. Initial approach altitude. 2. Direction and distance from the holding fix for the procedure turn. 3. Procedure turn altitude. 4. Final approach course and altitude. 5. Missed approach procedures (if considered necessary). Chart notations such as 'straight-in only' should also be called out.",
+          "card_type": "basic",
+          "generation_source": "question_agent"
+        }
+      ]
+    }
+  }
+}

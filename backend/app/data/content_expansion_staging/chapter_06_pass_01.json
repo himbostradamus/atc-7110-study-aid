@@ -1,0 +1,960 @@
+{
+  "questions": {
+    "6-5-1": {
+      "items": [
+        {
+          "question_text": "A controller clears two aircraft on different airways whose protected airspace widths have no overlap. Under the lateral separation methods, is this sufficient to establish lateral separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule lists clearing aircraft on different airways or routes whose widths or protected airspace do not overlap as an approved lateral separation method. No additional conditions beyond the non-overlap requirement are stated for this method.",
+          "choices": [
+            {
+              "text": "Yes, clearing aircraft on different airways or routes whose protected airspace does not overlap is an approved lateral separation method.",
+              "is_correct": true
+            },
+            {
+              "text": "No, the aircraft must also be separated by at least 5 miles laterally in addition to using different airways.",
+              "is_correct": false
+            },
+            {
+              "text": "No, different-airway separation requires radar contact with both aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if both aircraft are below 18,000 feet.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller laterally separates two aircraft by clearing them to hold over two different fixes. For this separation to be valid, what must be true about the holding pattern airspace areas?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule requires that the holding pattern airspace areas do not overlap each other or other airspace to be protected. If the holding patterns overlap, lateral separation does not exist.",
+          "choices": [
+            {
+              "text": "Both aircraft must hold at the same altitude to ensure vertical separation as a backup.",
+              "is_correct": false
+            },
+            {
+              "text": "The holding pattern airspace areas must not overlap each other or other airspace to be protected.",
+              "is_correct": true
+            },
+            {
+              "text": "The holding fixes must be at least 10 miles apart regardless of holding pattern size.",
+              "is_correct": false
+            },
+            {
+              "text": "The holding fixes must both be VORs, not intersections or waypoints.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller clears two aircraft to hold at the same VOR at different altitudes as a lateral separation method. Is this a valid application of the lateral separation methods?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule lists four methods: (a) different airways/routes with non-overlapping protected airspace, (b) below 18,000 proceed to different geographical locations, (c) hold over different fixes with non-overlapping airspace, (d) departing aircraft fly specified headings diverging by at least 45 degrees. Holding at the same fix at different altitudes provides vertical, not lateral, separation.",
+          "choices": [
+            {
+              "text": "Yes; holding at different altitudes at the same fix provides lateral separation because the aircraft occupy different airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "No; holding over a VOR is not permitted as a lateral separation method regardless of altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "No; holding at the same fix at different altitudes is vertical separation, not lateral separation. Lateral separation requires holding over different fixes.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only if the altitude difference is at least 2,000 feet.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-5-4": {
+      "items": [
+        {
+          "question_text": "For degree-distance fix routes used by military aircraft, what protected airspace width applies on each side of the route at and above FL180?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule specifies 10 miles on each side of the route for degree-distance fixes at FL180 to FL600 inclusive, compared to 4 miles below FL180. The wider protection at higher altitudes reflects greater navigation uncertainty and speed.",
+          "choices": [
+            {
+              "text": "4 miles on each side of the route, the same width as below FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "The same width as via NAVAIDs \u2014 4 miles expanding to 10 miles at 130 NM.",
+              "is_correct": false
+            },
+            {
+              "text": "20 miles on each side of the route.",
+              "is_correct": false
+            },
+            {
+              "text": "10 miles on each side of the route.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A GNSS-equipped RNAV aircraft flying above FL450 is operating on a degree-distance fix route. What is the protected airspace width on each side of the route?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule specifies 10 miles on each side for degree-distance fixes above FL450 for RNAV flights. This mirrors the military degree-distance fix protection for FL180-FL600.",
+          "choices": [
+            {
+              "text": "10 miles on each side of the route.",
+              "is_correct": true
+            },
+            {
+              "text": "4 miles, the same as GNSS-equipped random RNAV routes.",
+              "is_correct": false
+            },
+            {
+              "text": "The expanding wedge from 4 to 10 miles based on distance from the NAVAID.",
+              "is_correct": false
+            },
+            {
+              "text": "20 miles, double the protection at lower altitudes.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A GNSS-equipped aircraft needs to transition between two random point-to-point route segments using an impromptu route segment. A controller believes radar contact is one of the required conditions. Is this belief correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule lists three conditions: (a) the impromptu segment must not exceed the distance to the nearest available recallable fix/waypoint in the direction of flight, (b) assigned altitudes at or above highest MIA, and (c) vertical separation from other aircraft until established on the new route. Radar contact is not listed \u2014 the paragraph addresses nonradar separation and does not require radar.",
+          "choices": [
+            {
+              "text": "Yes; radar contact is required for all GNSS route transitions under nonradar procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "No; the applicable rule lists three conditions \u2014 distance to nearest recallable fix/waypoint, MIA above altitudes, and vertical separation \u2014 but does not require radar contact.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only when the impromptu segment exceeds 100 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "No; the rule requires radar contact only for the receiving sector, not the originating sector.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-6-1": {
+      "items": [
+        {
+          "question_text": "An aircraft is known to be operating at 8,000 feet MSL and the lowest usable flight level in the area is FL180. What phraseology should the controller use to request the aircraft's altitude?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule provides conditional phraseology: if the aircraft is known to be operating below the lowest usable flight level, use 'SAY ALTITUDE.' If at or above, use 'SAY FLIGHT LEVEL.' If unknown, use 'SAY ALTITUDE OR FLIGHT LEVEL.' At 8,000 feet the aircraft is below FL180, so 'SAY ALTITUDE' is correct.",
+          "choices": [
+            {
+              "text": "SAY FLIGHT LEVEL.",
+              "is_correct": false
+            },
+            {
+              "text": "SAY ALTITUDE OR FLIGHT LEVEL.",
+              "is_correct": false
+            },
+            {
+              "text": "SAY ALTITUDE.",
+              "is_correct": true
+            },
+            {
+              "text": "REPORT LEAVING 8,000.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller needs to know when an aircraft departs an assigned altitude but is unsure whether the aircraft is above or below the lowest usable flight level. What phraseology should be used to request this information?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule specifies 'SAY ALTITUDE OR FLIGHT LEVEL' when the aircraft's position relative to the lowest usable flight level is unknown. This covers both possibilities and avoids giving incorrect terminology.",
+          "choices": [
+            {
+              "text": "SAY ALTITUDE OR FLIGHT LEVEL",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A controller wants an aircraft to report each time it leaves an odd or even altitude during a climb or descent. What phraseology accomplishes this?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule provides 'REPORT LEAVING ODD/EVEN ALTITUDES/FLIGHT LEVELS' as a distinct report request from the simple 'REPORT LEAVING/REACHING (altitude/flight level).' This requests reports at each altitude change rather than at a single specified altitude.",
+          "choices": [
+            {
+              "text": "REPORT LEAVING/REACHING (altitude/flight level).",
+              "is_correct": false
+            },
+            {
+              "text": "SAY ALTITUDE.",
+              "is_correct": false
+            },
+            {
+              "text": "REPORT ALTITUDE CHANGES.",
+              "is_correct": false
+            },
+            {
+              "text": "REPORT LEAVING ODD/EVEN ALTITUDES/FLIGHT LEVELS.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "6-6-3": {
+      "items": [
+        {
+          "question_text": "Two aircraft are in direct radio communication during climb. The pilots concur to maintain their own vertical separation. Which aircraft may the controller authorize to maintain that separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule specifies that the controller may authorize the LOWER aircraft if climbing, or the UPPER aircraft if descending. The aircraft moving toward the other (closing the vertical gap) is the one authorized \u2014 this ensures the maneuvering aircraft is responsible for separation.",
+          "choices": [
+            {
+              "text": "The lower aircraft if climbing, or the upper aircraft if descending.",
+              "is_correct": true
+            },
+            {
+              "text": "Either aircraft, at the controller's discretion regardless of which is climbing or descending.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the lower aircraft, regardless of whether it is climbing or descending.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft that initiated the communication, regardless of relative position.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Pilot-maintained vertical separation during climb and descent requires direct radio communication between the pilots and their concurrence. Which aircraft is moving toward the other under the rule's assignment?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule's assignment \u2014 lower aircraft if climbing, upper if descending \u2014 always places the burden on the aircraft that is closing the vertical gap. The climbing lower aircraft is ascending toward the upper aircraft, and the descending upper aircraft is descending toward the lower aircraft.",
+          "choices": [
+            {
+              "text": "The aircraft at the higher altitude climbs, and the lower aircraft descends \u2014 both move toward each other.",
+              "is_correct": false
+            },
+            {
+              "text": "The lower aircraft climbs toward the upper aircraft, or the upper aircraft descends toward the lower aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the aircraft that filed for the altitude change is responsible for maintaining separation.",
+              "is_correct": false
+            },
+            {
+              "text": "Neither aircraft moves vertically; separation is maintained by maintaining present altitudes.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller authorizes two pilots in direct radio communication to maintain their own vertical separation during a climb. The lower aircraft is climbing and the upper aircraft is level. The pilots concur. Is this application correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule says the lower aircraft, if climbing, may be authorized to maintain vertical separation. The rule does not require both aircraft to be changing altitude \u2014 only that the authorized aircraft is the one closing the gap (lower climbing or upper descending). The other aircraft may be level.",
+          "choices": [
+            {
+              "text": "No; both aircraft must be changing altitude for pilot-maintained vertical separation to apply.",
+              "is_correct": false
+            },
+            {
+              "text": "No; pilot-maintained vertical separation is only for descent, not for climb.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes; the lower climbing aircraft is the one closing the vertical gap, consistent with the rule's assignment.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only if the upper aircraft also starts descending to meet halfway.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-7-1": {
+      "items": [
+        {
+          "question_text": "A timed-approach procedure requires specific NAVAID and instrument approach capabilities. Three capabilities are listed. Which of the following is among the actual required capabilities for an aircraft to participate in timed approaches?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule lists three required capabilities: (1) hold at a fix on the approach course or be radar vectored to the final approach course per the interval minima, (2) proceed toward the airport along the approach course crossing the holding/approach fix at a specified altitude if required, and (3) continue descent for an approach to the destination airport. Holding at the approach fix is a listed capability; being FMS-equipped is not.",
+          "choices": [
+            {
+              "text": "Be equipped with an approved flight management system.",
+              "is_correct": false
+            },
+            {
+              "text": "Be capable of simultaneous ILS and RNAV approach monitoring.",
+              "is_correct": false
+            },
+            {
+              "text": "Maintain at least 180 knots indicated airspeed throughout the procedure.",
+              "is_correct": false
+            },
+            {
+              "text": "Hold at a fix located on the approach course or be radar vectored to the final approach course in accordance with interval minima.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "When only one missed approach procedure is available and timed approaches are being conducted, the missed approach procedure must meet specific criteria. What is the operational reason course reversal is prohibited in this situation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule requires that when only one missed approach procedure is available, course reversal must not be required. A course reversal in the missed approach would turn the aircraft back toward the inbound traffic stream, creating a conflict with succeeding aircraft in the timed approach sequence.",
+          "choices": [
+            {
+              "text": "A course reversal would turn the missed-approach aircraft back toward the inbound traffic stream, creating a conflict with succeeding timed-approach aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "The missed approach procedure must be usable in both directions to accommodate wind changes.",
+              "is_correct": false
+            },
+            {
+              "text": "Course reversals are prohibited at all tower-served airports regardless of timed approach status.",
+              "is_correct": false
+            },
+            {
+              "text": "Course reversal requires an additional 2 minutes of separation that cannot be provided in a timed sequence.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-7-3": {
+      "items": [
+        {
+          "question_text": "An established timed-approach sequence is in progress with four aircraft using an ILS approach. An arriving aircraft requests a different type of approach \u2014 an RNAV (GPS) approach to a different runway. The weather is above minimums for both approaches. What should the controller do?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule states the controller must interrupt the established timed approach sequence if necessary to allow an aircraft to execute a different type of approach. The key word is 'necessary' \u2014 the interruption is not automatic but is required when the different approach type cannot be accommodated within the existing sequence.",
+          "choices": [
+            {
+              "text": "Deny the request because the sequence is already established and cannot be changed.",
+              "is_correct": false
+            },
+            {
+              "text": "Interrupt the sequence if necessary to allow the aircraft to execute the different type of approach.",
+              "is_correct": true
+            },
+            {
+              "text": "Allow the aircraft to join the existing sequence and execute the different approach without interrupting the established order.",
+              "is_correct": false
+            },
+            {
+              "text": "Interrupt the sequence only if the requested approach is to a runway served by a different NAVAID.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the controlling purpose of the timed-approach sequence interruption rule?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule exists to prevent the established timed sequence from blocking an aircraft that needs a different approach type. The purpose is operational flexibility \u2014 the sequence should not become an obstacle when an operational need for a different approach arises.",
+          "choices": [
+            {
+              "text": "To allow the controller to resequence all aircraft for efficiency whenever a new aircraft arrives.",
+              "is_correct": false
+            },
+            {
+              "text": "To give priority to aircraft requesting RNAV approaches over aircraft using ILS approaches.",
+              "is_correct": false
+            },
+            {
+              "text": "To ensure that the timed approach sequence does not prevent an aircraft from executing a different type of approach when necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "To require controllers to restart the sequence from scratch whenever any approach type changes.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-7-4": {
+      "items": [
+        {
+          "question_text": "The weather report indicates IFR conditions over the final approach fix. The controller is applying 6-7-2b (single missed approach, weather below circling minimums) so only one aircraft is on the approach at a time. How early must the second aircraft be cleared for the approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule requires the second aircraft to be cleared early enough to allow at least 1 minute of level flight before crossing the final approach fix, outer marker, or fix used in lieu of the outer marker. This gives the pilot time to stabilize the aircraft in level flight at the approach altitude before beginning the final descent.",
+          "choices": [
+            {
+              "text": "Only after the first aircraft has reported the runway in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "At the same time the first aircraft crosses the final approach fix inbound.",
+              "is_correct": false
+            },
+            {
+              "text": "Early enough to allow at least 2 minutes of level flight before the final approach fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Early enough to allow at least 1 minute of level flight before crossing the final approach fix or outer marker.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "When does the 1-minute level-flight restriction apply to the second aircraft in a timed approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule triggers the level-flight restriction only when two conditions are both present: (1) the weather report indicates IFR conditions over the final approach fix or outer marker, and (2) 6-7-2b is being applied (the restrictive single-aircraft-on-approach case when alternative missed approach is not available and weather is below circling minimums).",
+          "choices": [
+            {
+              "text": "It applies whenever 6-7-2b is applied AND the weather report indicates IFR conditions over the final approach fix or outer marker.",
+              "is_correct": true
+            },
+            {
+              "text": "It applies to all timed approaches regardless of weather conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "It applies only to precision approaches, not to nonprecision approaches.",
+              "is_correct": false
+            },
+            {
+              "text": "It applies only when the first aircraft has reported missing the approach.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "6-7-6": {
+      "items": [
+        {
+          "question_text": "A controller plans to specify a time for an aircraft to leave the approach fix inbound. The aircraft is holding at the approach fix and the controller is using nonradar procedures. What must the controller do before specifying the time?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule requires issuing a time check before specifying a time to leave the approach fix inbound, unless the aircraft is vectored to the final approach course. The time check ensures the pilot and controller share a common time reference for the precise departure time.",
+          "choices": [
+            {
+              "text": "Clear the aircraft for the approach before specifying the time.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a time check to the aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Confirm the aircraft's altitude before specifying any time.",
+              "is_correct": false
+            },
+            {
+              "text": "No special action is needed; the time can be specified directly.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "In what operational situation is a time check not required before specifying a time to leave the approach fix inbound?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The applicable rule provides one explicit exception: the time check is not required when the aircraft is vectored to the final approach course. In the radar-vectored case, the controller has positive control of the aircraft and is sequencing it directly, making the separate time synchronization step unnecessary.",
+          "choices": [
+            {
+              "text": "When the aircraft has already reported the field in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "When the aircraft is operating under VFR conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "When the aircraft is vectored to the final approach course.",
+              "is_correct": true
+            },
+            {
+              "text": "When the interval between approaches is 5 miles or greater.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "6-5-1": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Select the appropriate lateral separation method for the situation.",
+          "situation": "Two aircraft are departing from the same airport. Both are below 18,000 feet. The controller observes on the map that the aircraft will be assigned to proceed to two different VORs that are located in opposite directions from the airport, with no overlap in their routes.",
+          "question_text": "Which lateral separation method can the controller apply?",
+          "choices": [
+            {
+              "text": "Clear both aircraft to hold over different fixes \u2014 even though they are not holding but departing.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear the aircraft on specified headings diverging by at least 30 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "No lateral separation is available below 18,000 feet; radar separation must be used.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear both aircraft to proceed to and report over different geographical locations determined by reference to NAVAIDs.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "The applicable rule permits clearing aircraft below 18,000 feet to proceed to and report over different geographical locations determined visually or by reference to NAVAIDs. Two different VORs in opposite directions qualify."
+        }
+      ]
+    },
+    "6-5-4": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Determine the correct protected airspace for the course change.",
+          "situation": "An aircraft is flying a direct course via NAVAIDs at FL250. It makes a course change of 45 degrees at a waypoint. The controller needs to protect the airspace on the overflown side beginning at the point where the course changes.",
+          "question_text": "What lateral protection applies on the overflown side for this course change?",
+          "choices": [
+            {
+              "text": "17 miles on the overflown side, per the 16-90 degree rule for above FL230.",
+              "is_correct": true
+            },
+            {
+              "text": "14 miles on the overflown side, per the 16-90 degree rule for FL180 to FL230.",
+              "is_correct": false
+            },
+            {
+              "text": "28 miles on the overflown side, per the 91-180 degree rule.",
+              "is_correct": false
+            },
+            {
+              "text": "Same as subparagraph a1 (direct course protection) because 45 degrees is less than the course-change threshold.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A 45-degree course change falls under subparagraph b (16 through 90 degrees). At FL250 (above FL230 to FL600), subparagraph b3 requires 17 miles of overflown-side protection."
+        }
+      ]
+    },
+    "6-6-1": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Select the correct phraseology for the situation.",
+          "situation": "A controller needs an aircraft to report when it leaves its current cruising altitude of FL240. The aircraft is known to be operating at or above the lowest usable flight level.",
+          "question_text": "What phraseology should the controller use to request this report?",
+          "choices": [
+            {
+              "text": "SAY FLIGHT LEVEL.",
+              "is_correct": false
+            },
+            {
+              "text": "REPORT LEAVING FL240.",
+              "is_correct": true
+            },
+            {
+              "text": "REPORT LEAVING ODD/EVEN ALTITUDES.",
+              "is_correct": false
+            },
+            {
+              "text": "SAY ALTITUDE OR FLIGHT LEVEL.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The applicable rule provides 'REPORT LEAVING/REACHING (altitude/flight level)' as the phraseology for requesting a report at a specific altitude or flight level. Since the aircraft is at a flight level, 'REPORT LEAVING FL240' is the correct form. 'SAY FLIGHT LEVEL' merely asks for the current altitude, not a report when leaving it."
+        }
+      ]
+    },
+    "6-6-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Determine whether pilot-maintained vertical separation may be authorized.",
+          "situation": "Aircraft A is at FL200 and descending to FL160. Aircraft B is at FL180 and level. Both pilots are in direct radio communication with each other and concur on Aircraft A maintaining vertical separation. The controller is considering authorizing Aircraft A to maintain vertical separation from Aircraft B during the descent.",
+          "question_text": "May the controller authorize Aircraft A to maintain vertical separation?",
+          "choices": [
+            {
+              "text": "No; both aircraft must be changing altitude for the rule to apply.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only Aircraft B (the lower aircraft) can be authorized regardless of which aircraft is descending.",
+              "is_correct": false
+            },
+            {
+              "text": "No; Aircraft A is the upper aircraft descending toward Aircraft B \u2014 this matches the rule's assignment and the authorization is valid.",
+              "is_correct": true
+            },
+            {
+              "text": "No, because Aircraft B is level and cannot concurrently maintain separation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The applicable rule authorizes the upper aircraft if descending. Aircraft A is at FL200 (upper) descending toward Aircraft B at FL180 (lower). This matches the rule's assignment exactly. The rule does not require both aircraft to be moving \u2014 only the one closing the gap needs to be authorized."
+        }
+      ]
+    },
+    "6-7-1": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Determine whether timed approaches may be conducted under these conditions.",
+          "situation": "An airport served by a tower has only one published missed approach procedure. The missed approach procedure requires a climbing right turn (course reversal). The reported ceiling is 1,200 feet and visibility is 3 miles. The highest circling minimum for the approach in use is 1,100 feet. Direct communication with the aircraft will be maintained until handoff to the tower.",
+          "question_text": "May timed approaches be conducted at this airport?",
+          "choices": [
+            {
+              "text": "Yes; all conditions for a single missed approach procedure are met.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the ceiling is at least 2,000 feet above the circling minimums.",
+              "is_correct": false
+            },
+            {
+              "text": "No; the visibility is below the 5-mile minimum required for all timed approaches.",
+              "is_correct": false
+            },
+            {
+              "text": "No; the missed approach procedure requires course reversal, which is prohibited when only one missed approach procedure is available.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "The applicable rule requires that when only one missed approach procedure is available, course reversal must not be required. The climbing right turn is a course reversal, which disqualifies the procedure. The ceiling and visibility meet the circling minimums condition, but the course reversal alone prevents use of timed approaches."
+        }
+      ]
+    },
+    "6-7-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should the controller do?",
+          "situation": "An established timed approach sequence is running with three aircraft using the ILS Runway 27 approach. An inbound aircraft requests the RNAV (GPS) Runway 9 approach due to a tailwind component on Runway 27. The GPS approach uses a different final approach course and missed approach procedure. The controller determines the GPS approach cannot be integrated into the existing sequence without disrupting the timing intervals.",
+          "question_text": "What action should the controller take regarding the established sequence?",
+          "choices": [
+            {
+              "text": "Interrupt the established sequence to allow the aircraft to execute the RNAV approach, since it is necessary to accommodate the different approach type.",
+              "is_correct": true
+            },
+            {
+              "text": "Deny the request because an established timed approach sequence cannot be interrupted under any circumstances.",
+              "is_correct": false
+            },
+            {
+              "text": "Allow the aircraft to join the existing ILS sequence and switch to the RNAV approach after the final approach fix.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the timed approach procedure entirely and handle all aircraft with radar vectors.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The applicable rule requires interrupting the established sequence if necessary to allow a different type of approach. Since the GPS approach cannot be integrated into the existing ILS sequence, interruption is necessary \u2014 the controller must break the sequence, accommodate the different approach, and then reestablish."
+        }
+      ]
+    },
+    "6-7-4": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Apply the level-flight restriction correctly to the situation.",
+          "situation": "The weather report shows a 600-foot overcast ceiling at the airport. The ILS approach circling minimum is 640 feet, and ceiling plus airport elevation (800 ft MSL + 600 ft AGL = 1,400 ft MSL) meets the circling MDA of 1,360 ft MSL. Only one missed approach procedure is available. The controller is applying 6-7-2b. The FAF is at 5 miles from the runway. The preceding aircraft has just landed.",
+          "question_text": "How should the controller clear the second aircraft for the approach?",
+          "choices": [
+            {
+              "text": "Clear the second aircraft for the approach immediately since the first aircraft has landed.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear the second aircraft early enough to allow at least 1 minute of level flight before crossing the final approach fix.",
+              "is_correct": true
+            },
+            {
+              "text": "Clear the second aircraft to descend on the glideslope from the final approach fix without any level-flight requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear the second aircraft only after the first aircraft has exited the runway.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The applicable rule triggers because (1) the weather report indicates IFR conditions (600 ft overcast), and (2) 6-7-2b is being applied. The controller must clear the second aircraft early enough to allow at least 1 minute of level flight before the FAF."
+        }
+      ]
+    },
+    "6-7-6": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Determine whether a time check is required.",
+          "situation": "A controller is sequencing aircraft for timed approaches. Aircraft A is holding at the approach fix and will be given a time to leave the fix inbound. Aircraft B is being radar vectored to intercept the final approach course and will also be given a time to cross the final approach fix.",
+          "question_text": "For which aircraft must the controller issue a time check before specifying the departure time?",
+          "choices": [
+            {
+              "text": "Both aircraft \u2014 a time check is required whenever a time is specified for any approach procedure.",
+              "is_correct": false
+            },
+            {
+              "text": "Neither aircraft \u2014 time checks are never required if the controller uses a synchronized clock.",
+              "is_correct": false
+            },
+            {
+              "text": "Aircraft A only \u2014 the time check is required when specifying a time to leave the approach fix, and Aircraft A is not being vectored.",
+              "is_correct": true
+            },
+            {
+              "text": "Aircraft B only \u2014 radar-vectored aircraft require time checks to coordinate the vector timing.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The applicable rule requires a time check before specifying a time to leave the approach fix inbound, UNLESS the aircraft is vectored to the final approach course. Aircraft A is holding and not vectored \u2014 time check required. Aircraft B is vectored \u2014 the exception applies and no time check is required."
+        }
+      ]
+    }
+  },
+  "flashcards": {
+    "6-5-1": {
+      "items": [
+        {
+          "front": "What are the four approved methods for procedural lateral separation?",
+          "back": "1. Different airways/routes with non-overlapping protected airspace. 2. (Below 18,000) Proceed to and report over different geographical locations. 3. Hold over different fixes with non-overlapping holding pattern airspace. 4. Departing aircraft fly specified headings diverging by at least 45 degrees.",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "What altitude restriction applies to the lateral separation method of clearing aircraft to different geographical locations by visual reference or NAVAIDs?",
+          "back": "Below 18,000 feet only.",
+          "card_type": "concept",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "When using holding patterns for lateral separation, what must be true about the airspace areas?",
+          "back": "The holding pattern airspace areas must not overlap each other or other airspace to be protected.",
+          "card_type": "concept",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "6-5-4": {
+      "items": [
+        {
+          "front": "What protected airspace width applies to degree-distance fix routes for military aircraft at FL180 to FL600?",
+          "back": "10 miles on each side of the route.",
+          "card_type": "threshold",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "What is the maximum permitted distance between points on a GNSS random RNAV route segment under nonradar separation?",
+          "back": "500 miles between consecutive points. The points must be published NAVAIDs, waypoints, fixes, or airports recallable from the aircraft's navigation database.",
+          "card_type": "threshold",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "For a course change of 16-90 degrees at FL180-FL230, what overflown-side protection applies?",
+          "back": "14 miles on the overflown side, beginning at the point where the course changes.",
+          "card_type": "threshold",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "For a course change of 91-180 degrees at FL180-FL230, what overflown-side protection applies?",
+          "back": "28 miles (exactly double the 16-90 degree value).",
+          "card_type": "threshold",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "What conditions must be met for a GNSS aircraft to transition between random point-to-point routes via an impromptu segment?",
+          "back": "1. Impromptu segment does not exceed distance to nearest recallable fix/waypoint in direction of flight. 2. Assigned altitudes at or above highest MIA along the projected route. 3. Vertical separation from other aircraft until established on the new route.",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "6-6-1": {
+      "items": [
+        {
+          "front": "What phraseology requests an aircraft's altitude when the aircraft is known to be below the lowest usable flight level?",
+          "back": "SAY ALTITUDE. Used when the aircraft is known to be operating below the lowest usable flight level (e.g., at an altitude in feet MSL rather than a flight level).",
+          "card_type": "phraseology",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "What phraseology requests an aircraft's altitude when the aircraft is known to be at or above the lowest usable flight level?",
+          "back": "SAY FLIGHT LEVEL. Used when the aircraft is known to be operating at or above the lowest usable flight level (e.g., at FL180 or above).",
+          "card_type": "phraseology",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "What phraseology requests an aircraft's altitude when its position relative to the lowest usable flight level is unknown?",
+          "back": "SAY ALTITUDE OR FLIGHT LEVEL.",
+          "card_type": "phraseology",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "What phraseology requests reports at each odd or even altitude change during climb or descent?",
+          "back": "REPORT LEAVING ODD/EVEN ALTITUDES/FLIGHT LEVELS.",
+          "card_type": "phraseology",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "6-6-3": {
+      "items": [
+        {
+          "front": "Which aircraft is authorized to maintain vertical separation when pilots concur during climb?",
+          "back": "The lower aircraft, if climbing.",
+          "card_type": "concept",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "Which aircraft is authorized to maintain vertical separation when pilots concur during descent?",
+          "back": "The upper aircraft, if descending.",
+          "card_type": "concept",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "What two conditions must be met before pilots may maintain their own vertical separation during climb or descent?",
+          "back": "1. The pilots are in direct radio communication with each other. 2. The pilots concur.",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "6-7-1": {
+      "items": [
+        {
+          "front": "What three required capabilities must NAVAIDs and instrument approach procedures permit for an aircraft to participate in timed approaches?",
+          "back": "1. Hold at a fix on the approach course or be radar vectored to the final approach course per interval minima. 2. Proceed toward the airport along the approach course, crossing the holding/approach fix at a specified altitude if required. 3. Continue descent for an approach to the destination airport.",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "What two additional conditions apply when only one missed approach procedure is available for timed approaches?",
+          "back": "1. Course reversal is not required. 2. Reported ceiling and visibility are at or above the highest prescribed circling minimums for the instrument approach procedure in use.",
+          "card_type": "concept",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "6-7-3": {
+      "items": [
+        {
+          "front": "When must an established timed approach sequence be interrupted?",
+          "back": "When necessary to allow an aircraft to execute a different type of approach.",
+          "card_type": "rule",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "6-7-4": {
+      "items": [
+        {
+          "front": "What is the level-flight requirement when 6-7-2b is applied and IFR conditions exist over the final approach fix?",
+          "back": "Clear the second aircraft early enough to allow at least 1 minute of level flight before crossing the final approach fix, outer marker, or fix used in lieu of the outer marker.",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "What two conditions trigger the 1-minute level-flight restriction in timed approaches?",
+          "back": "1. Weather report indicates IFR conditions over the final approach fix or outer marker. 2. Paragraph 6-7-2b is being applied (single missed approach, weather below circling minimums).",
+          "card_type": "concept",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "6-7-6": {
+      "items": [
+        {
+          "front": "When must a time check be issued before specifying a time to leave the approach fix inbound?",
+          "back": "Whenever specifying a time to leave the approach fix inbound, UNLESS the aircraft is vectored to the final approach course.",
+          "card_type": "rule",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "What is the exception to the time-check requirement in timed approaches?",
+          "back": "No time check is required when the aircraft is vectored to the final approach course.",
+          "card_type": "concept",
+          "generation_source": "question_agent"
+        }
+      ]
+    }
+  }
+}

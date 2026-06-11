@@ -1,0 +1,489 @@
+{
+  "questions": {
+    "14-1-3": {
+      "items": [
+        {
+          "question_text": "A departure has no SID filed in the flight plan and no SID was assigned by EAS. The controller is considering populating Selectable Field 1 with a SID from the TAS menu that provides vertical guidance for this departure. Is this permitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-1-3(a)(1)(c) states that when no SID is filed or assigned by EAS, the controller must either select a SID or, if no SID is to be assigned, select the NO SID option. The controller has the discretion to choose and assign a SID from the TAS menu\u2014this is the first option. NO SID is the alternative, not the default.",
+          "choices": [
+            {
+              "text": "Yes, because the controller must either select a SID or, if no SID is to be assigned, select the NO SID option.",
+              "is_correct": true
+            },
+            {
+              "text": "No, because Field 1 must contain NO SID whenever none was filed or assigned by EAS.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because only EAS-assigned SIDs may be entered in Field 1; the controller cannot select one from the TAS menu.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the selected SID was previously filed for a different aircraft in the same departure push.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "14-2-1": {
+      "items": [
+        {
+          "question_text": "An aircraft is on a descend via clearance on the FYRBD2 STAR. The controller issues a heading vector that takes the aircraft off the STAR's lateral path for traffic spacing. After the vector, the controller expects the aircraft to resume the STAR. What happens to the altitude restrictions on the STAR's vertical profile?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note to 14-2-1 states that after a climb via or descend via clearance has been issued, a vector/deviation off a SID/STAR cancels the altitude restrictions on the procedure. The FMS may be unable to process crossing altitude restrictions once the aircraft leaves the SID/STAR lateral path. Without an assigned altitude, the FMS may revert to leveling off at the altitude set by the pilot, which may be the SID/STAR published top or bottom altitude.",
+          "choices": [
+            {
+              "text": "The altitude restrictions remain in effect and the FMS will continue to comply with them regardless of the vector.",
+              "is_correct": false
+            },
+            {
+              "text": "The altitude restrictions are canceled. Without an assigned altitude, the FMS may revert to leveling off at the altitude set by the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "The altitude restrictions are suspended during the vector and automatically reactivate when the aircraft rejoins the lateral path.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the bottom altitude is canceled; crossing restrictions above remain active until the aircraft reaches the cleared altitude.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller vectors an aircraft off the lateral path of a STAR on which the aircraft had a descend via clearance. The aircraft's FMS may level off at which altitude if no new altitude is assigned?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Per the note to 14-2-1, without an assigned altitude after a vector off a SID/STAR, the aircraft's FMS may revert to leveling off at the altitude set by the pilot, which may be the SID/STAR published top or bottom altitude. This creates a potential safety issue if the controller does not assign a specific altitude after the vector.",
+          "choices": [
+            {
+              "text": "The last crossing restriction altitude that the aircraft had not yet reached.",
+              "is_correct": false
+            },
+            {
+              "text": "The MEA for the route segment after the vector, selected automatically by the FMS.",
+              "is_correct": false
+            },
+            {
+              "text": "The published SID/STAR top or bottom altitude\u2014the altitude set by the pilot in the altitude window.",
+              "is_correct": true
+            },
+            {
+              "text": "The altitude the aircraft was at when the vector was issued, maintained indefinitely.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "14-2-2": {
+      "items": [
+        {
+          "question_text": "A controller has overridden a CPDLC clearance by voice and the pilot has acknowledged the new clearance. The controller now considers canceling the open CPDLC uplink from the ground system. What is the sole operational purpose for which the cancel-uplink function is provided?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Per note 3 to 14-2-2(d), the ability to cancel an uplink is only provided to allow controllers to clear open uplink indications in the FDB and ACL. Clearing these indications allows controllers to continue CPDLC operations with the affected aircraft. It is not an operational override mechanism\u2014the actual override requires the DISREGARD phraseology by voice with pilot UNABLE response.",
+          "choices": [
+            {
+              "text": "To override the clearance operationally, serving as an alternative to the voice DISREGARD phraseology.",
+              "is_correct": false
+            },
+            {
+              "text": "To notify the receiving facility that the clearance has been superseded and a new handoff is required.",
+              "is_correct": false
+            },
+            {
+              "text": "To automatically close the uplink on the flight deck without requiring the pilot to send an UNABLE response.",
+              "is_correct": false
+            },
+            {
+              "text": "To clear open uplink indications in the FDB and ACL so controllers can continue CPDLC operations with the affected aircraft.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "14-2-3": {
+      "items": [
+        {
+          "question_text": "An aircraft at FL350 requires an altimeter setting. The controller knows the CPDLC system sends automated altimeter settings only on a monitor TOC or an altitude uplink below FL180. This aircraft was handed off with a standard handoff and is cruising above FL180. What must the controller do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-2-3(a) states that if the CPDLC system fails to provide a necessary automated altimeter setting, the controller must issue an altimeter setting in accordance with Chapter 2, Section 7, Altimeter Settings. The note explains that automated altimeters are only sent in two specific circumstances. When neither applies, the controller must manually issue the altimeter\u2014the automated system's limitation does not relieve the controller of the obligation.",
+          "choices": [
+            {
+              "text": "Issue the altimeter setting manually in accordance with Chapter 2, Section 7, Altimeter Settings.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for the next monitor TOC, which will automatically trigger the altimeter setting.",
+              "is_correct": false
+            },
+            {
+              "text": "Descend the aircraft below FL180 so the automated altimeter can be triggered.",
+              "is_correct": false
+            },
+            {
+              "text": "No action is required\u2014aircraft above FL180 use standard pressure and do not need altimeter updates.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "14-2-4": {
+      "items": [
+        {
+          "question_text": "A controller composes a CPDLC free-text weather advisory reporting 'moderate occasional turbulence at flight level three five zero.' Which standard abbreviations from JO 7340.2 should replace the weather descriptors?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "14-2-4(a)(2) requires controllers to comply with JO 7340.2 when using abbreviations in weather-related CPDLC messages. The note lists the standard meteorological abbreviations: MOD for Moderate, OCNL for Occasional, and TURB for Turbulence. Controllers must use these standard abbreviations, not improvised ones.",
+          "choices": [
+            {
+              "text": "MDT OCC TBC.",
+              "is_correct": false
+            },
+            {
+              "text": "MOD OCNL TURB.",
+              "is_correct": true
+            },
+            {
+              "text": "MODTC OCNL TURBLNC.",
+              "is_correct": false
+            },
+            {
+              "text": "MDRT OCNL TRB.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "14-3-3": {
+      "items": [
+        {
+          "question_text": "After an automated CPDLC transfer fails and a manual transfer attempt also fails, the controller advises the pilot to log on to the next facility. What specific CPDLC message must the pilot also send to properly close the connection with the current sector?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-3(a) specifies the escalation procedure: if an automated transfer fails, attempt manual transfer. If unable to complete the manual transfer, advise the pilot to log on to the next facility AND send an End Service (EOS) message. The EOS message is the formal termination of the CPDLC connection with the current data authority\u2014without it, the connection remains open on the flight deck even after voice transfer.",
+          "choices": [
+            {
+              "text": "Send a DISREGARD message for the failed transfer attempt.",
+              "is_correct": false
+            },
+            {
+              "text": "Send a connection request (CR1) to the current facility before logging on to the next.",
+              "is_correct": false
+            },
+            {
+              "text": "Send an End Service (EOS) message.",
+              "is_correct": true
+            },
+            {
+              "text": "No specific message is needed; the log-on to the next facility automatically closes the previous connection.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "14-1-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A departure flight plan has no SID filed and no SID was assigned by EAS. The weather is VMC and the aircraft will depart from runway 27, which has a published obstacle departure procedure but no SID. The controller must populate Selectable Field 1. A trainee insists that Field 1 must always contain NO SID in this case.",
+          "question_text": "How should the controller handle Selectable Field 1?",
+          "choices": [
+            {
+              "text": "Select NO SID, because it is the only option when no SID was filed or assigned by EAS.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave Field 1 blank and enter the departure procedure in Field 3 instead.",
+              "is_correct": false
+            },
+            {
+              "text": "Select the ---- option, which is the standard indicator for no SID in Field 1.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller must either select a SID from the TAS menu or select NO SID\u2014the trainee is incorrect that NO SID is the only option.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "14-1-3(a)(1)(c) states the controller must either select a SID or, if no SID is to be assigned, select the NO SID option. The controller has discretion to select a SID from the TAS menu even when none was filed or assigned. The ---- option is only for Field 2 (Transition), and Field 1 cannot be left blank."
+        }
+      ]
+    },
+    "14-2-1": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is on a descend via clearance on the FYRBD2 arrival with multiple crossing restrictions at FL240, FL180, and 10,000 feet. The controller vectors the aircraft off the arrival's lateral path for spacing and intends the aircraft to rejoin after the vector. The controller does not issue a new altitude assignment. After the vector, the aircraft levels off at FL240\u2014the altitude the pilot had set in the altitude window before the vector.",
+          "question_text": "What operational principle explains the aircraft's level-off behavior, and what should the controller have done?",
+          "choices": [
+            {
+              "text": "A vector off the STAR lateral path cancels the altitude restrictions. The controller should have assigned a specific altitude after the vector.",
+              "is_correct": true
+            },
+            {
+              "text": "The FMS malfunctioned\u2014it should have continued complying with all published restrictions regardless of the lateral deviation.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot incorrectly reset the altitude window. The controller's only error was not catching the pilot's mistake.",
+              "is_correct": false
+            },
+            {
+              "text": "The restrictions are automatically suspended during a vector and reactivate upon rejoin; the controller should have instructed the pilot to re-arm VNAV.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per the note to 14-2-1, a vector/deviation off a SID/STAR cancels the altitude restrictions on the procedure. The FMS may be unable to process crossing restrictions once the aircraft leaves the lateral path. Without an assigned altitude, the FMS may revert to leveling off at the altitude set by the pilot\u2014which may be the SID/STAR published top or bottom altitude. The controller must assign a specific altitude when vectoring an aircraft off a climb/descend via clearance."
+        }
+      ]
+    },
+    "14-2-2": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is the controller's obligation regarding an IC mismatch or confirm assigned altitude (CAA) downlink time-out indicator displayed in the Full Data Block?",
+          "choices": [
+            {
+              "text": "Use CPDLC to verify the altitude, since the indicator appeared in the data link system.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller who has the aircraft on their voice frequency must use voice communication to verify the assigned altitude and acknowledge the indicator.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for the receiving sector to verify the altitude after automated transfer is completed.",
+              "is_correct": false
+            },
+            {
+              "text": "Acknowledge the indicator immediately to clear the FDB display, then verify the altitude only if the pilot reports a discrepancy.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "14-2-2(a) assigns the obligation to a specific controller: the one who has the aircraft on their voice frequency. This controller must use voice communication\u2014not CPDLC\u2014to verify the assigned altitude and acknowledge the IC mismatch or CAA downlink time-out indicator. The note adds that all sectors in the controlling ARTCC displaying an FDB will show the indicator, so other sectors may see it but the voice-frequency controller owns the response."
+        }
+      ]
+    },
+    "14-2-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A CPDLC shutdown occurs. Three aircraft have open uplinks with your sector, and one aircraft experienced an unexpected CPDLC connection loss 10 minutes ago\u2014voice communication was never established with that aircraft. A trainee wants to resolve the open uplinks by CPDLC free-text before the system goes completely dark, and suggests waiting for the disconnected aircraft to re-establish connection automatically.",
+          "question_text": "What are the controller's obligations for both the open uplinks and the aircraft with the lost connection?",
+          "choices": [
+            {
+              "text": "Resolve the open uplinks by CPDLC while it is still available, and wait for the lost-connection aircraft to reconnect.",
+              "is_correct": false
+            },
+            {
+              "text": "Broadcast the shutdown advisory by voice only\u2014the open uplinks will close automatically at shutdown, and the disconnected aircraft will re-establish on the next sector.",
+              "is_correct": false
+            },
+            {
+              "text": "Broadcast the shutdown advisory by voice, resolve open uplinks by voice with each aircraft, and establish voice communication with the aircraft that lost its CPDLC connection.",
+              "is_correct": true
+            },
+            {
+              "text": "Transfer all open uplinks to the adjacent sector and let them handle the shutdown cleanup.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "14-2-3(c)(1) requires a voice broadcast during shutdown or failure. 14-2-3(c)(2) requires resolving open or abnormally closed uplinks by voice with each aircraft. 14-2-3(b) requires establishing voice communication with an aircraft that lost its CPDLC connection when voice was not previously established. None of these obligations can be delegated or deferred."
+        }
+      ]
+    },
+    "14-2-4": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft at FL400 is en route and not established on any procedure with published speed restrictions. The controller wants to issue a speed adjustment of Mach .80 using CPDLC. A trainee objects, saying that speed adjustments above FL390 always require explicit voice concurrence from the pilot. Another controller says the WILCO response via CPDLC satisfies the concurrence requirement.",
+          "question_text": "May the speed adjustment be issued via CPDLC, and what pilot response satisfies the concurrence requirement?",
+          "choices": [
+            {
+              "text": "No, all speed adjustments above FL390 require voice concurrence under 5-7-2(b) regardless of the communication method.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, via CPDLC, but the pilot must additionally read back the speed on voice for the concurrence to be valid.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, via CPDLC with any pilot response\u2014concurrence is presumed above FL390 unless the pilot sends UNABLE.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, via CPDLC. The WILCO response satisfies the 5-7-2(b) concurrence requirement for speed assignments at or above FL390.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "14-2-4(b)(1) states that when using CPDLC to issue a speed assignment to an aircraft at or above FL390, the WILCO response satisfies the pilot concurrence requirement. The aircraft is not on a route with published speed restrictions, so 14-2-4(b)(2) does not apply. WILCO via CPDLC is sufficient\u2014a separate voice concurrence is not required."
+        }
+      ]
+    },
+    "14-3-1": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A CPDLC-connected aircraft is operating within VHF coverage and CPDLC is available. The pilot sends a route request via CPDLC. A trainee responds by voice on the VHF frequency because voice is quicker, and uses free text in the CPDLC response for the route clearance. Another controller says the response should use the standard CPDLC message set.",
+          "question_text": "What rules govern how the controller should respond to this pilot's CPDLC message?",
+          "choices": [
+            {
+              "text": "Respond via CPDLC using the standard message set to the extent possible, since the pilot initiated via CPDLC. Voice may be used if it provides operational advantage.",
+              "is_correct": true
+            },
+            {
+              "text": "Since the aircraft is within VHF coverage, the controller may freely choose between voice and CPDLC for the response.",
+              "is_correct": false
+            },
+            {
+              "text": "CPDLC is mandatory as primary means regardless of VHF coverage status\u2014voice response is never permitted.",
+              "is_correct": false
+            },
+            {
+              "text": "Respond by voice only, because within VHF coverage CPDLC is a secondary medium that should be used only when voice is unavailable.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "14-3-1(d) states that when a pilot communicates via CPDLC, the response should be via CPDLC. 14-3-1(e) requires using the message set over free text to the extent possible. 14-3-1(a) mandates CPDLC as primary only when the aircraft is outside VHF coverage\u2014when inside VHF, CPDLC is still preferred for CPDLC-initiated exchanges. 14-3-1(b) allows voice when it provides operational advantage."
+        }
+      ]
+    },
+    "14-3-3": {
+      "items": [
+        {
+          "activity_type": "knowledge_check",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When CPDLC service is to be canceled for an oceanic aircraft, what is the controller's obligation regarding notification to the pilot?",
+          "choices": [
+            {
+              "text": "The controller may cancel CPDLC without notification; the aircraft avionics will detect the termination and alert the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "Must advise the pilot as early as possible to facilitate a smooth transition. Workload permitting, should also advise the reason for termination.",
+              "is_correct": true
+            },
+            {
+              "text": "Must advise the pilot of the reason for termination in all cases. Timing of the notification is at the controller's discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "Should wait until the aircraft is within VHF coverage of the next facility before advising of the cancellation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "14-3-3(d) contains a must/should distinction: the controller MUST advise the pilot as early as possible to facilitate a smooth transition to voice communications (mandatory timing). Workload permitting, the controller SHOULD also advise the pilot of the reason for termination (discretionary content). The mandatory element is early notification; the reason is secondary."
+        }
+      ]
+    }
+  },
+  "flashcards": {
+    "14-1-1": {
+      "items": [
+        {
+          "front": "What happens to a PDC if the flight plan is revised or amended after the PDC was prepared?",
+          "back": "PDC does not permit amended or revised flight plans to be transmitted. The revised or amended clearance must be verbally issued to the flight crew. Per 14-1-1(d).",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "14-1-3": {
+      "items": [
+        {
+          "front": "When no SID is filed or assigned by EAS, what are the controller's options for DCL Field 1?",
+          "back": "The controller must either select a SID from the TAS menu OR, if no SID is to be assigned, select the NO SID option. The controller has discretion to choose either path. Per 14-1-3(a)(1)(c).",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "14-2-1": {
+      "items": [
+        {
+          "front": "What happens to altitude restrictions when an aircraft on a climb via or descend via clearance is vectored off the SID/STAR lateral path?",
+          "back": "A vector off the procedure cancels the altitude restrictions. Without an assigned altitude, the FMS may revert to leveling off at the altitude set by the pilot\u2014potentially the SID/STAR top or bottom altitude. Per note to 14-2-1.",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "14-2-2": {
+      "items": [
+        {
+          "front": "What is the sole operational purpose of the cancel-uplink function in the CPDLC ground system?",
+          "back": "To clear open uplink indications in the FDB and ACL, allowing controllers to continue CPDLC operations with the affected aircraft. It is NOT an operational override mechanism\u2014the voice DISREGARD phraseology with pilot UNABLE remains required for override. Per note 3 to 14-2-2(d).",
+          "card_type": "concept",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "14-2-4": {
+      "items": [
+        {
+          "front": "List the standard JO 7340.2 meteorological abbreviations for: Moderate, Severe, Heavy, Light, Turbulence, Continuous, Occasional, Intermittent, Extreme.",
+          "back": "Moderate = MOD, Severe = SEV, Heavy = HVY, Light = LGT, Turbulence = TURB, Continuous = CONS, Occasional = OCNL, Intermittent = INTMT, Extreme = EXTRM. Controllers must use these when composing weather-related CPDLC advisory/free text messages. Per note to 14-2-4(a).",
+          "card_type": "definition",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "14-3-3": {
+      "items": [
+        {
+          "front": "What is the End Service (EOS) message, and when is it used in oceanic CPDLC operations?",
+          "back": "EOS (End Service) terminates the CPDLC connection with the current data authority. The pilot sends it when the controller advises, after an automated transfer has failed and manual transfer cannot be completed. Per 14-3-3(a).",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        }
+      ]
+    }
+  }
+}

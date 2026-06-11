@@ -1,0 +1,511 @@
+{
+  "questions": {
+    "13-1-1": {
+      "items": [
+        {
+          "question_text": "A controller wants to know whether an aircraft will enter restricted airspace in 20 minutes. Which EDST data source enables the system to model the aircraft's future position for this prediction?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "EDST uses current plan data, forecast winds, aircraft performance characteristics, and track data together to derive expected trajectories. No single data source alone is sufficient\u2014the trajectory model requires all four inputs. Track data provides the current position, but the future trajectory also depends on the planned route, expected winds, and how the aircraft type performs at its filed speeds and altitudes.",
+          "choices": [
+            {
+              "text": "Current plan data, forecast winds, aircraft performance characteristics, and track data together\u2014the trajectory model requires all four inputs.",
+              "is_correct": true
+            },
+            {
+              "text": "Track data alone, because the current radar position is the most reliable input for trajectory predictions.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the pilot-filed route and altitude; other data sources are supplementary and not required for trajectory derivation.",
+              "is_correct": false
+            },
+            {
+              "text": "Forecast winds and aircraft performance characteristics are sufficient, because the current plan and track data are only used for conflict detection, not trajectory modeling.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "13-1-2": {
+      "items": [
+        {
+          "question_text": "A controller is evaluating a conflict probe alert between two aircraft in airspace where 3-mile reduced separation is authorized. The alert shows the aircraft will have 4 miles of separation. What must the controller recognize about this alert?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note to 13-1-2 states conflict probe alerts are based on approved radar separation and do not account for instances where reduced separation is permitted (e.g., 3 mile airspace). If the controller is authorized to apply 3-mile separation, the 4-mile alert may not actually represent a conflict that would violate the applicable minimum. However, the controller must verify that all conditions for reduced separation are met before relying on that determination.",
+          "choices": [
+            {
+              "text": "The alert is definitive and the aircraft pair requires immediate action to increase separation to the standard 5 NM regardless of whether reduced separation has been authorized.",
+              "is_correct": false
+            },
+            {
+              "text": "The alert may not reflect that reduced separation is authorized in this airspace, but the controller must still verify all conditions for the reduced minimum before concluding no conflict exists.",
+              "is_correct": true
+            },
+            {
+              "text": "The alert can be ignored entirely because the conflict probe is not authorized to generate alerts in reduced-separation airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "The alert is valid only for the standard 5 NM radar minimum and must be accepted at face value for all aircraft regardless of applicable separation standards.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "13-1-5": {
+      "items": [
+        {
+          "question_text": "While scanning the EDST display, a controller notices a new automated notification indicator has appeared but the trainee on the team has not noticed it. What duty does this trigger?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-5(b) requires the sector team to actively scan EDST to identify automated notifications that require sector team action. This is an active scanning duty\u2014notifications are not simply alerts that demand attention; the team must proactively look for them. The ACL is the primary source of flight data (13-1-5(a)), but the scanning requirement in (b) ensures notifications are identified and acted upon.",
+          "choices": [
+            {
+              "text": "No special duty applies; automated notifications are processed by the system and do not require controller identification.",
+              "is_correct": false
+            },
+            {
+              "text": "The trainee should be assigned to scan EDST for automated notifications while the qualified controller handles other duties, because only one team member needs to perform this scan.",
+              "is_correct": false
+            },
+            {
+              "text": "The sector team must actively scan EDST to identify automated notifications that require sector team action\u2014this is a team duty, not an individual one.",
+              "is_correct": true
+            },
+            {
+              "text": "The notification can wait until the automated system escalates it visually; active scanning is only required for conflict probe alerts under a different paragraph.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "An ACL entry for an aircraft shows a Remarks indication. After reviewing the Remarks, the controller discovers a subsequent change to the Remarks field has been made by the previous sector. Must this change also be reviewed?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-5(c) requires two separate actions: when an ACL or DL entry has a Remarks indication, the Remarks field must be reviewed, AND changes to the Remarks field must also be reviewed. The second requirement is independent\u2014even if the Remarks were already reviewed, the controller must review the change to ensure awareness of the updated information.",
+          "choices": [
+            {
+              "text": "No, because the Remarks indication only requires one initial review; subsequent changes are automatically tracked by the automation.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the change was made by a different sector. If the same sector made the change, no further review is required.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because changes to the Remarks field are logged by EAS and do not require controller review unless the aircraft is also nonradar.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because the requirement to review changes to the Remarks field is a separate duty from the initial review of the Remarks indication.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "13-1-8": {
+      "items": [
+        {
+          "question_text": "A controller needs to annotate an ACL Free Text entry indicating that a pilot reported a TCAS Resolution Advisory. Which abbreviation source authorizes the correct marking for this entry?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-8(c)(2) authorizes the miscellaneous abbreviations in TBL 13-1-2, which includes 'RA' for Resolution Advisory (Pilot-reported TCAS event). The clearance abbreviations in TBL 13-1-1 cover clearance-related entries; the EDST equivalents in TBL 13-1-3 cover control information symbols. The TCAS RA abbreviation falls under the miscellaneous table.",
+          "choices": [
+            {
+              "text": "TBL 13-1-2 Miscellaneous Abbreviations, where RA is defined as Resolution Advisory for a pilot-reported TCAS event.",
+              "is_correct": true
+            },
+            {
+              "text": "TBL 13-1-1 Clearance Abbreviations, because RA represents a type of clearance amendment.",
+              "is_correct": false
+            },
+            {
+              "text": "TBL 13-1-3 EDST Equivalents, because RA is a control information symbol for radar advisory.",
+              "is_correct": false
+            },
+            {
+              "text": "A locally approved abbreviation, because TCAS events are facility-specific and not covered by the standard tables.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which of the following pieces of control information may be left unrecorded because it is captured by another authorized recording method?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-1-8(a) requires manual recording only for control information 'not otherwise recorded via automation recordings or voice recordings.' If the automation or voice recording system has already captured the information, manual recording is not required. The hierarchy is: automation or voice recordings are primary; manual recording fills the gap for information those systems do not capture.",
+          "choices": [
+            {
+              "text": "A verbal point out approval, which must always be annotated manually regardless of voice recording.",
+              "is_correct": false
+            },
+            {
+              "text": "An altitude assignment issued verbally on a recorded frequency, since the voice recording captures it.",
+              "is_correct": true
+            },
+            {
+              "text": "A Free Text Area entry, because Free Text entries are a form of manual recording that replaces the automation recording requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "Any control information transmitted by CPDLC, because data link transmissions are not considered automation recordings under this paragraph.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "13-2-1": {
+      "items": [
+        {
+          "question_text": "An aircraft in ATOP oceanic airspace is approaching a known area of high terrain on an island. Can ATOP provide decision support for separation between the aircraft and this terrain?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-1(a) states ATOP provides automated decision support tools to establish, monitor, and maintain separation between aircraft, and aircraft to airspace and terrain. This terrain separation scope is broader than ERAM EDST, which predicts conflicts only with special use or designated airspace. ATOP's oceanic/remote environment includes terrain considerations that domestic en route automation typically does not address.",
+          "choices": [
+            {
+              "text": "No. ATOP, like all en route automation, only provides separation support between aircraft and other aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the terrain is within designated special use airspace. ATOP does not provide terrain separation support for uncontrolled land masses.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. ATOP includes decision support for separation between aircraft and terrain, in addition to aircraft-to-aircraft and aircraft-to-airspace separation.",
+              "is_correct": true
+            },
+            {
+              "text": "No. Terrain separation is exclusively a pilot responsibility in oceanic airspace and is not supported by ATOP automation.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "13-2-2": {
+      "items": [
+        {
+          "question_text": "A controller in ATOP airspace is using conflict probe to maintain separation between two aircraft. The controller must decide whether to rely on ADS-C position data or a more recent verbal position report from the pilot. What is the governing principle for this decision?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The introductory sentence of 13-2-2 establishes the principle: the controller must use the most accurate information available to initiate, monitor, and maintain separation. If a verbal position report is demonstrably more current and accurate than the ADS-C data, that principle directs the controller to use the more accurate information. This overarching principle applies before the specific conflict probe procedures that follow.",
+          "choices": [
+            {
+              "text": "ADS-C data must always be used because it is the automated surveillance source and the controller must assume automation is correct.",
+              "is_correct": false
+            },
+            {
+              "text": "Pilot reports always take precedence over automation data because the pilot has direct access to the aircraft's navigation instruments.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller may choose either source at personal discretion because the paragraph provides no guidance on information accuracy.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller must use the most accurate information available\u2014whether that is ADS-C data or a more current pilot report\u2014to make separation decisions.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "A controller has overridden a conflict probe alert under one of the authorized override conditions. The controller has taken action intended to resolve the conflict but the aircraft have not yet reached the point where separation will be restored. What continuing duty applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-2(a)(3)(b) states that controllers must continue to ensure that separation is maintained until the overridden conflict is resolved. Overriding the probe does not end the controller's separation responsibility\u2014it continues through the entire period until the conflict is actually resolved. Simply taking initial action is insufficient if separation has not been achieved and maintained.",
+          "choices": [
+            {
+              "text": "The controller must ensure separation is maintained until the overridden conflict is actually resolved\u2014the override does not relieve the continuing separation obligation.",
+              "is_correct": true
+            },
+            {
+              "text": "No continuing duty applies. Once the probe is overridden, the conflict is considered resolved and the controller's separation responsibility ends.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller must re-engage conflict probe immediately after taking the initial action to confirm the override was correct.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller must transfer responsibility for the overridden conflict to the operations supervisor, who assumes the continuing separation duty.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Conflict probe cannot correctly monitor separation for a specific aircraft because its flight profile has become corrupted. After verifying the flight plan data is accurate, what must the controller do until conflict probe can be utilized again?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-2(a)(7)(b) requires that after verifying flight plan data accuracy, the controller must utilize other decision support tools to establish and maintain the appropriate separation minima until conflict probe can be utilized again. The controller cannot simply wait for probe to recover\u2014active separation using alternative tools is required in the interim.",
+          "choices": [
+            {
+              "text": "Suspend all separation monitoring for that aircraft until the profile is automatically corrected by the next system update cycle.",
+              "is_correct": false
+            },
+            {
+              "text": "Utilize other decision support tools to establish and maintain the appropriate separation minima until conflict probe can function again for that aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Hand off the aircraft immediately to the next sector since the current sector's probe cannot monitor it.",
+              "is_correct": false
+            },
+            {
+              "text": "Rely solely on pilot position reports without using any automation tools, because all decision support tools are compromised when a profile is corrupted.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "13-2-4": {
+      "items": [
+        {
+          "question_text": "A CPDLC-connected aircraft sends a request to the controller via CPDLC asking for a revised altitude. The controller is considering responding by voice because it seems faster. What does the CPDLC communication procedure direct?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-4(a)(4) states that when a pilot communicates via CPDLC, the response should be via CPDLC. While voice may be used when it provides an operational advantage (13-2-4(a)(2)), the default rule is to respond via the same medium the pilot used. The word 'should' establishes the expectation, even though voice may be justified in specific circumstances.",
+          "choices": [
+            {
+              "text": "The controller must always respond by voice regardless of how the pilot initiated contact, because voice is more reliable for clearance delivery.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller may freely choose either CPDLC or voice for the response at personal discretion with no preference for either method.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller should respond via CPDLC when the pilot initiated the exchange via CPDLC, though voice may be used when it provides an operational advantage.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller must use free text CPDLC messages rather than the message set, because pilot-initiated requests require customized responses.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A controller needs to issue a routine altitude change to a CPDLC-connected aircraft. The controller drafts a free text message rather than using the predefined CPDLC message set. Is this the preferred approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "13-2-4(a)(5) states that to the extent possible, the CPDLC message set should be used in lieu of free text messages. The accompanying note explains that using the message set ensures proper 'closure' of CPDLC exchanges\u2014each predefined message has a defined response protocol that the system can track to completion. Free text messages lack this structured closure mechanism.",
+          "choices": [
+            {
+              "text": "Yes. Free text messages are preferred because they allow the controller to tailor the clearance precisely to the situation.",
+              "is_correct": false
+            },
+            {
+              "text": "Either approach is equally acceptable; the paragraph provides no preference between the message set and free text.",
+              "is_correct": false
+            },
+            {
+              "text": "Free text is required for all altitude changes because the message set only supports route-related clearances.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The CPDLC message set should be used to the extent possible rather than free text, because message set exchanges ensure proper closure of the CPDLC transaction.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "13-1-2": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A conflict probe alert fires between a standard B737 and a non-standard military formation flight. The alert shows the standard 5 NM radar separation minimum will be maintained. Another controller says the probe alert is definitive because it uses approved radar separation standards, so no additional evaluation is needed. A third controller says the probe does not account for non-standard formations, so the alert alone is insufficient and you need to determine whether greater separation is required for the formation.",
+          "question_text": "How should the alert be evaluated for the non-standard formation?",
+          "choices": [
+            {
+              "text": "Recognize that conflict probe does not account for instances where greater separation may be needed, such as for non-standard formations. Evaluate whether additional separation beyond what the probe alert shows is required.",
+              "is_correct": true
+            },
+            {
+              "text": "Accept the alert as definitive. Conflict probe uses approved radar separation and the standard 5 NM is always sufficient for all aircraft types and formations.",
+              "is_correct": false
+            },
+            {
+              "text": "Suppress the alert because it is a false indication for military formation flights, and rely on visual scanning of the radar display instead.",
+              "is_correct": false
+            },
+            {
+              "text": "Accept the alert but apply the 3-mile reduced separation minimum instead, because military formations are authorized reduced separation in all airspace.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per the note to 13-1-2, conflict probe alerts are based on approved radar separation but do not account for instances where greater separation may be needed, such as non-standard formations. The controller must evaluate the alert with awareness of this limitation and determine whether the standard minimum is adequate for the specific aircraft types and formations involved."
+        }
+      ]
+    },
+    "13-2-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An ATOP sector team is working a busy period. Several messages appear in the coordination queue: a red conflict alert, three non-conformant messages in the error queue that are more than five minutes old, and a routine coordination request from the adjacent facility. A controller wants to clear the error queue first because the messages are old and the system keeps flagging them. Another controller wants to address the routine coordination request first because it's the quickest item.",
+          "question_text": "How should the team prioritize these queue items?",
+          "choices": [
+            {
+              "text": "Clear the error queue first because the messages are the oldest and system-generated items take priority over controller-initiated actions.",
+              "is_correct": false
+            },
+            {
+              "text": "Manage all sector and coordination queues in accordance with the appropriate message priority and the controller's priority of duties\u2014the red conflict takes precedence as the highest-priority item.",
+              "is_correct": true
+            },
+            {
+              "text": "Handle the routine coordination request first because external facility requests always take priority over internal queue management.",
+              "is_correct": false
+            },
+            {
+              "text": "Process queue items in the order they were received regardless of content, because the first-in-first-out principle applies to all ATOP queues.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-2-3(d)(1) requires managing all sector and coordination queues in accordance with the appropriate message priority and the controller's priority of duties. Message priority and duty priority together determine the processing order\u2014a red conflict alert represents a higher-priority duty than aged non-conformant messages or routine coordination. The error queue messages should be processed timely (13-2-3(d)(2)) but do not displace higher-priority operational actions."
+        }
+      ]
+    },
+    "13-2-5": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "RNP distance-based longitudinal separation is being applied between two aircraft at FL350 over the ocean. The trailing aircraft requests a weather deviation that would reduce the spacing. The deviation monitor window shows a pink advisory with a zero value in the +/- column. A controller says a zero value means no additional spacing is needed and the deviation can be approved. Another controller says pink advisories never prevent deviation approval\u2014they are only informational.",
+          "question_text": "How should this pink advisory be handled before approving the weather deviation?",
+          "choices": [
+            {
+              "text": "Approve the deviation immediately because zero means the spacing is exactly at the standard minimum, which is acceptable for all weather deviation requests.",
+              "is_correct": false
+            },
+            {
+              "text": "Deny the deviation outright because any pink advisory automatically prohibits weather deviation approval regardless of the +/- value.",
+              "is_correct": false
+            },
+            {
+              "text": "Conduct further evaluation before approving. A zero value in the +/- column means the aircraft pair is at or close to the required spacing, even with the CDI buffer applied\u2014the clearance is not yet assured to be safe.",
+              "is_correct": true
+            },
+            {
+              "text": "Approve the deviation without further evaluation because pink advisories are only informational and do not affect the controller's authority to approve weather deviations.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-2-5(a) requires further evaluation of pink advisories before approving a weather deviation clearance. 13-2-5(b) specifies that a zero or positive value in the +/- column indicates the aircraft pair is either at or close to the required spacing\u2014it does not mean the spacing is safely beyond the required minimum. The pink advisory and the zero/positive value together mean the controller must evaluate further, not approve immediately. A zero value does not indicate extra spacing; it indicates the aircraft are at the boundary of what is required."
+        }
+      ]
+    }
+  },
+  "flashcards": {
+    "13-1-1": {
+      "items": [
+        {
+          "front": "EDST vs radar display: what is the fundamental operational difference in their purpose?",
+          "back": "EDST is a STRATEGIC PLANNING tool that predicts future trajectories and conflicts using current plan data, forecast winds, and aircraft performance. The radar display is a TACTICAL tool that shows actual current positions for real-time separation. EDST does not provide tactical radar separation.",
+          "card_type": "concept",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "13-1-5": {
+      "items": [
+        {
+          "front": "What three independent conditions each require posting a flight progress strip in ERAM operations?",
+          "back": "1. Any NONRADAR flight. 2. Any flight plan NOT CONTAINED in the EAS. 3. Any strip deemed necessary for SAFE OR EFFICIENT operations. Per 13-1-5(f-h). Each condition stands alone; they are not cumulative.",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "13-1-9": {
+      "items": [
+        {
+          "front": "Which automated notification codings are acknowledged on the ACL, and which on the DL?",
+          "back": "ACL: IAFDOF (Inappropriate Altitude for Direction of Flight) and UTM (Unsuccessful Transmission Message). DL: EDCT (Expect Departure Clearance Time). Each must be acknowledged only AFTER the appropriate action has been completed. Per 13-1-9(b-d).",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "13-1-13": {
+      "items": [
+        {
+          "front": "GPD: what are the three separate prohibitions in subparagraphs (b), (c), and (d), and what does each specifically forbid?",
+          "back": "(b) Do NOT use trajectory-based POSITIONS as a substitute for radar track position. (c) Do NOT use trajectory-based ALTITUDE in lieu of Mode C for altitude confirmation. (d) Do NOT use the GPD for six specific RADAR FUNCTIONS: radar identification, position information, transfer of radar ID, radar separation, correlation, or point outs. Per 13-1-13(b-d).",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "13-2-2": {
+      "items": [
+        {
+          "front": "After overriding a conflict probe alert in ATOP, what must the controller continue doing?",
+          "back": "Continue to ENSURE that separation is MAINTAINED until the overridden conflict is RESOLVED. The override is not the end of the controller's separation obligation. Per 13-2-2(a)(3)(b).",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "13-2-4": {
+      "items": [
+        {
+          "front": "CPDLC message set vs free text: which is preferred and why?",
+          "back": "The CPDLC MESSAGE SET should be used to the extent possible in lieu of free text messages. The message set ensures proper 'closure' of CPDLC exchanges\u2014each predefined message has a defined response protocol that the system tracks to completion. Free text lacks this structured closure. Per 13-2-4(a)(5) and NOTE.",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "13-2-6": {
+      "items": [
+        {
+          "front": "ATOP automated coordination: what additional coordination framework applies beyond 13-2-6?",
+          "back": "The requirements of Chapter 8, Offshore/Oceanic Procedures, Section 2, Coordination ALSO apply. 13-2-6 establishes that automated coordination constitutes complete coordination between ATOP sectors\u2014but this is IN ADDITION TO, not replacing, the Chapter 8 coordination requirements. Per 13-2-6.",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        }
+      ]
+    }
+  }
+}

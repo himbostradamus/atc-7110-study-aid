@@ -1,0 +1,202 @@
+{
+  "questions": {
+    "11-1-2": {
+      "items": [
+        {
+          "question_text": "A developing weather system is forecast to reduce arrival capacity in an OS/CIC's area of responsibility within the next hour. What does the OS/CIC need to do upon learning of this forecast?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 11-1-2b1, the OS/CIC must keep the TMU and affected sectors apprised of situations or circumstances that may cause congestion or delays. The word 'may' triggers the obligation before delays materialize \u2014 waiting for confirmed congestion violates the proactive reporting duty. The notification must reach both the TMU and the affected sectors, not just the STMCIC.",
+          "choices": [
+            {
+              "text": "Keep the TMU and affected sectors apprised, because the situation may cause congestion or delays even though delays are not yet present.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait until the weather actually reduces capacity and delays become measurable before notifying anyone.",
+              "is_correct": false
+            },
+            {
+              "text": "Notify only the STMCIC and allow them to determine who else requires the information.",
+              "is_correct": false
+            },
+            {
+              "text": "Immediately issue miles-in-trail restrictions to all affected sectors without coordinating with the TMU.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How does the TBFM duty of an ATCT differ from that of an ARTCC or TRACON?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 11-1-2d1 and e1, ARTCCs and TRACONs must support TBFM operations and monitor TBFM equipment to improve situational awareness. Per 11-1-2f1, ATCTs must monitor TBFM equipment to improve situational awareness for a system approach to TBM operations. ATCTs have a monitoring-only role; they are not required to support TBFM operations. This distinction reflects the different operational scope of terminal facilities versus en route and TRACON facilities in the traffic management system.",
+          "choices": [
+            {
+              "text": "All three facility types must both support TBFM operations and monitor TBFM equipment.",
+              "is_correct": false
+            },
+            {
+              "text": "ATCTs must monitor TBFM equipment; ARTCCs and TRACONs must both support TBFM operations and monitor TBFM equipment.",
+              "is_correct": true
+            },
+            {
+              "text": "ARTCCs must support and monitor; TRACONs and ATCTs are only required to monitor.",
+              "is_correct": false
+            },
+            {
+              "text": "ATCTs must support TBFM operations; ARTCCs and TRACONs are only required to monitor.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "The STMCIC operational briefing must cover meteorological conditions, staffing, equipment status, runways in use, AAR, TBM use, and TMIs. Which statement accurately describes the requirement for covering these topics?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 11-1-2a1, the briefing itself must be conducted at least once during the day and evening shifts, but the discussion topics are introduced with 'should include' \u2014 not 'must include.' This is a meaningful regulatory distinction: the briefing is mandatory, while the listed topics are strongly recommended but not each independently required at every briefing. Facility management may adjust the agenda based on operational relevance.",
+          "choices": [
+            {
+              "text": "Each of the listed topics must be discussed at every briefing, and failing to cover any single item violates the order.",
+              "is_correct": false
+            },
+            {
+              "text": "The topics are optional suggestions; the STMCIC may choose to cover only the items they consider relevant that day.",
+              "is_correct": false
+            },
+            {
+              "text": "The briefing must occur; the listed topics should be discussed. 'Should' indicates strong recommendation, not an absolute requirement for each topic at every briefing.",
+              "is_correct": true
+            },
+            {
+              "text": "The topics become mandatory only when the conditions they describe have changed since the previous briefing was conducted.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "11-1-3": {
+      "items": [
+        {
+          "question_text": "When TBFM metering-time accuracy is affected by factors such as vectoring outside route conformance boundaries, trajectory ground-speed calculations, or TMU resequencing, what operational precaution is required?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Per the note at 11-1-3, TBFM accuracy is predicated on several factors including vectoring outside route conformance boundaries, trajectory ground-speed calculations, and TMU resequencing. When these factors are present, controllers must use caution to minimize impact on surrounding sector traffic, complexity levels, flight efficiencies, and user preferences. Suspending metering, applying the standard more aggressively, or transferring responsibility are not the prescribed responses.",
+          "choices": [
+            {
+              "text": "Suspend all TBFM metering for the affected sector until the TMU can verify accuracy of the generated times.",
+              "is_correct": false
+            },
+            {
+              "text": "Apply the plus-or-minus-1-minute standard more strictly to compensate for the accuracy limitations.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer metering responsibility for the affected flights to an adjacent sector where TBFM accuracy is unaffected.",
+              "is_correct": false
+            },
+            {
+              "text": "Use caution to minimize impact on surrounding sector traffic, complexity levels, flight efficiencies, and user preferences.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "11-1-2": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should the OS/CIC do?",
+          "situation": "An OS/CIC at an ARTCC notices that a neighboring center has posted an advisory indicating reduced acceptance rates due to an equipment outage. Aircraft departing from airports in the OS/CIC's area routinely transit the affected center's airspace. The OS/CIC's own sectors are currently operating without congestion.",
+          "question_text": "What is the OS/CIC's obligation upon learning of this advisory?",
+          "choices": [
+            {
+              "text": "Keep the TMU and affected sectors apprised, because the situation may cause congestion or delays even though they are not yet present.",
+              "is_correct": true
+            },
+            {
+              "text": "Take no action until the OS/CIC's own sectors begin showing measurable congestion or delays.",
+              "is_correct": false
+            },
+            {
+              "text": "Notify only the STMCIC, since external facility advisories are handled at the STMCIC level.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue ground stops for all departures routing through the affected center without first coordinating with the TMU.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 11-1-2b1, the OS/CIC must keep the TMU and affected sectors apprised of situations or circumstances that may cause congestion or delays. The trigger is 'may cause' \u2014 potential impact rather than confirmed congestion. Waiting for actual delays before reporting would violate the proactive-notification duty. The notification must reach both the TMU and the affected sectors, not just the supervisory chain."
+        }
+      ]
+    },
+    "11-1-3": {
+      "items": [
+        {
+          "activity_type": "situation_action",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should the controller do?",
+          "situation": "A controller is working metering at a busy ARTCC sector. The TMU has just resequenced several flights in the arrival stream, and the TBFM-generated metering times for those flights are fluctuating significantly. The controller can still meet the displayed times for most aircraft, but the resequenced flights' metering times are uncertain. The sector is adjacent to another busy sector, and several aircraft are on user-preferred routes.",
+          "question_text": "How should the controller handle metering for the resequenced flights?",
+          "choices": [
+            {
+              "text": "Apply the displayed metering times exactly as shown for every aircraft, since TBFM-generated times must be followed within plus-or-minus-1-minute without exception.",
+              "is_correct": false
+            },
+            {
+              "text": "Use caution when applying metering times for the resequenced flights, taking care to minimize impact on surrounding sector traffic, complexity, flight efficiency, and user preferences.",
+              "is_correct": true
+            },
+            {
+              "text": "Stop metering all aircraft in the sector until the TMU confirms accurate times for the resequenced flights.",
+              "is_correct": false
+            },
+            {
+              "text": "Ignore the metering times for the resequenced flights and use miles-in-trail for the entire arrival stream for the remainder of the shift.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per the note at 11-1-3, when TBFM metering-time accuracy is affected by factors including TMU resequencing, controllers must use caution to minimize impact on surrounding sector traffic, complexity levels, flight efficiencies, and user preferences. Blindly following fluctuating metering times risks disrupting adjacent sectors. Abandoning metering entirely is not authorized; the standard requires cautious application, not suspension."
+        }
+      ]
+    }
+  },
+  "flashcards": {
+    "11-1-2": {
+      "items": [
+        {
+          "front": "Under the STMCIC, which personnel group carries out TBM operations and TMIs? Under the OS/CIC, which personnel group carries them out?",
+          "back": "STMCIC: personnel providing traffic management services (11-1-2a3). OS/CIC: personnel providing air traffic services (11-1-2b4). The enforcement groups are specific to each supervisor role and are not interchangeable.",
+          "card_type": "concept",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "11-1-3": {
+      "items": [
+        {
+          "front": "When DCT instability forces the use of MIT or MINIT in place of TBFM metering, how long should those substitute measures remain in effect?",
+          "back": "Until stability resumes. MIT or MINIT is a temporary delay-absorption measure for the specific aircraft affected by DCT instability \u2014 it is not a permanent replacement for TBFM metering. Per 11-1-3b1.",
+          "card_type": "concept",
+          "generation_source": "question_agent"
+        }
+      ]
+    }
+  }
+}
