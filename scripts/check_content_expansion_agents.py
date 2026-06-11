@@ -8,6 +8,7 @@ import json
 import os
 import subprocess
 import sys
+import re
 from pathlib import Path
 from typing import Any
 
@@ -47,6 +48,26 @@ def exit_marker(text: str) -> str | None:
     if position < 0:
         return None
     return text[position + len(marker) :].splitlines()[0].strip()
+
+
+def final_result(text: str) -> str:
+    result = ""
+    for line in text.splitlines():
+        try:
+            payload = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if payload.get("type") == "result" and isinstance(payload.get("result"), str):
+            result = payload["result"]
+    return result
+
+
+def reviewed_ids(text: str) -> set[str]:
+    result = final_result(text)
+    marker = "REVIEWED_IDS:"
+    if marker not in result:
+        return set()
+    return set(re.findall(r"\b\d+-\d+-\d+[A-Za-z0-9-]*\b", result.split(marker, 1)[1]))
 
 
 def item_count(container: Any) -> int:
@@ -148,6 +169,11 @@ def main() -> int:
         output = inspect_output(output_path, packet_path)
         counts = output["counts"]
         total = sum(counts.values())
+        reviewed = reviewed_ids(text)
+        review_complete = (
+            not agent.get("require_reviewed_ids")
+            or len(reviewed) == output["source"]
+        )
 
         validator = "pending"
         valid = False
@@ -155,6 +181,10 @@ def main() -> int:
             validator = f"invalid JSON: {output['parse_error']}"
         elif output["unknown"]:
             validator = f"foreign paragraph IDs: {','.join(output['unknown'])}"
+        elif not running and marker == "0" and not review_complete:
+            validator = (
+                f"incomplete review evidence: {len(reviewed)}/{output['source']} IDs"
+            )
         elif not running and marker == "0" and total:
             valid, validator = validate(output_path)
         elif not running:
@@ -172,6 +202,7 @@ def main() -> int:
             f"items=q{counts['questions']}/a{counts['activities']}/"
             f"c{counts['flashcards']} "
             f"paragraphs={output['covered']}/{output['source']} "
+            f"review={len(reviewed)}/{output['source']} "
             f"validation={validator}"
         )
 
