@@ -94,6 +94,14 @@ For each important concept, build a small concept family using at least two genu
 
 Synonym swaps and minor stem rewrites are duplicates, not reinforcement. A second item earns its place only when it changes what the learner must notice or reason about.
 
+Assign each format a distinct job where practical:
+
+- Flashcard: concise retrieval of the controlling fact, trigger, boundary, value, sequence, or prescribed wording.
+- Question: discriminate the rule from a plausible misconception, exception, or neighboring concept.
+- Activity: apply the same concept to operational facts, phraseology construction, sequencing, or source use.
+
+Do not copy the same stem into all three formats. A paragraph does not have broad coverage merely because the same direct-recall prompt exists as a card, question, and activity.
+
 ## Authoring Ladder
 
 Start slow and move up in complexity. For each paragraph, make several passes:
@@ -127,6 +135,23 @@ Every item should teach substance, not document trivia.
 - Every explanation must state the controlling principle and, for multiple choice, explain why the strongest plausible distractor fails.
 - Important concepts should appear in at least two retrieval modes before lower-value details receive additional paraphrases.
 - If source text is ambiguous, write a source-use or concept-boundary item instead of pretending there is a single magic answer.
+
+Flashcard-specific rules:
+
+- The front must be an explicit, independently understandable retrieval cue. Avoid labels such as "MARSA authority" or "First duty priority" when a short question would remove ambiguity.
+- Test one coherent target per card. Split large procedures and long lists unless recalling the complete set as a unit is operationally important.
+- Keep citations and paragraph numbers out of the cue and answer unless the card explicitly teaches source navigation.
+- A reverse card must actually work in reverse: one side supplies the fact or term and the other side asks a clear question. A paragraph title or label is not a reverse prompt.
+- Do not duplicate a question stem verbatim as a flashcard. Use the card for compact recall and the question for discrimination or application.
+
+Activity-specific rules:
+
+- Scenario and decision activities must contain all facts needed to choose an action without knowing the paragraph title.
+- Use activities for application, sequencing, phraseology assembly, source lookup, and misconception discrimination rather than another direct-recall wrapper.
+- Distribute correct choices across answer positions within every batch. Do not default to the first choice.
+- Keep the correct answer and distractors comparable in length, detail, grammar, and specificity. The longest option must not routinely reveal the answer.
+- Binary checks are acceptable only when true/false discrimination is educationally useful; otherwise provide at least three plausible operational choices.
+- The activity explanation must state the controlling rule and address the strongest realistic alternative.
 
 ## Recommended Density
 
@@ -221,6 +246,12 @@ python scripts/validate_question_authoring_batch.py backend/app/data/curated_fla
 ```
 
 Warnings are not automatic failures, but do not ignore warnings about underspecified stems, duplicate choices, or answer-position bias.
+
+After the database is refreshed, the main agent can audit the complete authored corpus with:
+
+```bash
+python scripts/audit_learning_content_output.py --fail-on-regression
+```
 
 ## Handoff Format
 

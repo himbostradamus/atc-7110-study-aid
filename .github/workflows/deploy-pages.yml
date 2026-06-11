@@ -33,10 +33,11 @@ jobs:
         working-directory: frontend
         run: npm ci
 
-      - name: Validate curriculum and authored-question baseline
+      - name: Validate curriculum and authored-content baselines
         run: |
           python3 scripts/validate_static_release.py
           python3 scripts/audit_question_agent_output.py --fail-on-regression
+          python3 scripts/audit_learning_content_output.py --fail-on-regression
 
       - name: Build static site
         working-directory: frontend

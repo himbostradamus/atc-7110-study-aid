@@ -42,6 +42,16 @@ NEGATIVE_STEM_PATTERN = re.compile(
     r"\b(?:not|except|false|incorrect|least appropriate|does not|doesn't)\b",
     re.IGNORECASE,
 )
+QUESTION_LEAD_PATTERN = re.compile(
+    r"^(?:what|when|where|who|which|how|why|identify|name|state|list|"
+    r"select|choose|determine|give|describe|explain)\b",
+    re.IGNORECASE,
+)
+DOCUMENT_LOCATION_PATTERN = re.compile(
+    r"\b(?:under|from|in|paragraph|para|section)\s+(?:the\s+)?"
+    r"\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\b",
+    re.IGNORECASE,
+)
 
 
 class Reporter:
@@ -275,10 +285,53 @@ def validate_activity(
             )
             if first_correct is not None:
                 first_correct_positions.append(first_correct)
+                correct_text = normalize_text(
+                    choices[first_correct].get("text")
+                    or choices[first_correct].get("choice_text")
+                )
+                distractor_lengths = [
+                    max(
+                        1,
+                        len(normalize_text(
+                            choice.get("text") or choice.get("choice_text")
+                        ).split()),
+                    )
+                    for choice_idx, choice in enumerate(choices)
+                    if isinstance(choice, dict) and choice_idx != first_correct
+                ]
+                if distractor_lengths:
+                    correct_words = len(correct_text.split())
+                    distractor_average = (
+                        sum(distractor_lengths) / len(distractor_lengths)
+                    )
+                    if correct_words >= 6 and correct_words > distractor_average * 1.8:
+                        reporter.warn(
+                            location,
+                            "correct choice is much longer than the distractors and may reveal itself",
+                        )
 
     explanation = normalize_text(item.get("explanation") or item.get("feedback"))
     if not explanation:
         reporter.warn(location, "activity has no explanation or feedback")
+
+    if activity_type not in {"source_lookup", "source_use"}:
+        if DOCUMENT_LOCATION_PATTERN.search(prompt_text):
+            reporter.warn(
+                location,
+                "activity relies on paragraph-number scaffolding outside an explicit source-use task",
+            )
+
+    if re.search(r"(?:situation|scenario|decision)", activity_type, re.IGNORECASE):
+        context = " ".join(
+            normalize_text(item.get(key))
+            for key in ("situation", "clearance", "lookup_context", "question_text")
+            if item.get(key)
+        )
+        if len(context.split()) < 12:
+            reporter.warn(
+                location,
+                "scenario/decision activity may not provide enough operational facts",
+            )
 
 
 def validate_flashcard(reporter: Reporter, para_id: str, idx: int, item: Any, seen_cards: set[tuple[str, str, str]]) -> None:
@@ -297,6 +350,30 @@ def validate_flashcard(reporter: Reporter, para_id: str, idx: int, item: Any, se
         reporter.error(location, "back is required")
     if front and back and front.lower() == back.lower():
         reporter.warn(location, "front and back are identical")
+    if front and len(front.split()) < 4 and not (
+        "?" in front or QUESTION_LEAD_PATTERN.search(front)
+    ):
+        reporter.warn(
+            location,
+            "flashcard front is a context-light label rather than an explicit retrieval cue",
+        )
+    if back and len(back.split()) < 4:
+        reporter.warn(location, "flashcard answer is very short; check whether the cue is unambiguous")
+    if back and len(back.split()) > 50:
+        reporter.warn(location, "flashcard answer may overload a single retrieval target")
+    if "reverse" in card_type.lower() and back and not (
+        "?" in back or QUESTION_LEAD_PATTERN.search(back)
+    ):
+        reporter.warn(
+            location,
+            "reverse card does not provide a clear question on the reverse side",
+        )
+    if card_type.lower() not in {"reference", "source_reference"}:
+        if DOCUMENT_LOCATION_PATTERN.search(front):
+            reporter.warn(
+                location,
+                "flashcard cue relies on paragraph-number scaffolding",
+            )
 
     key = (para_id, card_type.lower(), front.lower())
     if key in seen_cards:
