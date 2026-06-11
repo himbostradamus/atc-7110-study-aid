@@ -16,12 +16,26 @@ ENTITY_TYPES = {"question", "activity", "flashcard"}
 SEVERITIES = {"critical", "major", "minor", "suggestion"}
 QUESTION_TYPES = {"multiple_choice", "true_false", "fill_blank"}
 LOCATION_RE = re.compile(
-    r"\b(?:under|from|in|paragraph|para|section)\s+(?:the\s+)?"
-    r"\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\b",
+    r"\b(?:"
+    r"under\s+(?:the\s+)?(?:(?:paragraph|para|section)\s+)?"
+    r"|(?:from|in)\s+(?:the\s+)?(?:paragraph|para|section)\s+"
+    r"|(?:paragraph|para|section)\s+"
+    r")\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\b",
     re.IGNORECASE,
 )
 GENERIC_REFERENCE_RE = re.compile(
     r"\b(?:this|the)\s+(?:paragraph|section|rule|material|example)\b",
+    re.IGNORECASE,
+)
+DOCUMENT_TRIVIA_RE = re.compile(
+    r"^\s*item\s+\d+\b"
+    r"|\bwhich\s+(?:table|paragraph|section|item)\b"
+    r"|\bapply\s+\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\b",
+    re.IGNORECASE,
+)
+REFERENCE_RETRIEVAL_RE = re.compile(
+    r"\bwhere\s+does\s+\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\s+direct\b"
+    r"|\bwhere\s+(?:is|are)\s+.+\s+(?:standards|definitions)\s+found\b",
     re.IGNORECASE,
 )
 
@@ -117,9 +131,13 @@ def validate_question(reporter: Reporter, location: str, item: object) -> None:
     if len(explanation.split()) < 10:
         reporter.error(location, "explanation must teach the controlling principle")
     if LOCATION_RE.search(text):
-        reporter.warn(location, "replacement still uses paragraph-location scaffolding")
+        reporter.error(location, "replacement still uses paragraph-location scaffolding")
     if GENERIC_REFERENCE_RE.search(text):
         reporter.warn(location, "replacement still uses a generic document reference")
+    if DOCUMENT_TRIVIA_RE.search(text):
+        reporter.error(location, "replacement still tests document structure instead of operational substance")
+    if REFERENCE_RETRIEVAL_RE.search(text):
+        reporter.error(location, "replacement asks for a reference location instead of applying the rule")
     validate_choices(reporter, location, item.get("choices"), question_type)
 
 
@@ -133,7 +151,11 @@ def validate_flashcard(reporter: Reporter, location: str, item: object) -> None:
     if not front or not back or not card_type:
         reporter.error(location, "front, back, and card_type are required")
     if LOCATION_RE.search(front) and card_type not in {"reference", "source_reference"}:
-        reporter.warn(location, "replacement still uses paragraph-location scaffolding")
+        reporter.error(location, "replacement still uses paragraph-location scaffolding")
+    if DOCUMENT_TRIVIA_RE.search(front):
+        reporter.error(location, "replacement still tests document structure instead of operational substance")
+    if REFERENCE_RETRIEVAL_RE.search(front):
+        reporter.error(location, "replacement asks for a reference location instead of recalling the rule")
     if len(back.split()) > 60:
         reporter.warn(location, "replacement back may contain too many retrieval targets")
     if "reverse" in card_type.lower() and "?" not in back:
@@ -160,6 +182,17 @@ def validate_activity(reporter: Reporter, location: str, item: object) -> None:
     explanation = normalize(content.get("explanation"))
     if len(explanation.split()) < 10:
         reporter.error(location, "activity explanation must teach the controlling principle")
+    prompt = normalize(" ".join(
+        str(content.get(key) or "")
+        for key in (
+            "situation", "clearance", "lookup_context", "para_context",
+            "question_text", "task", "instruction",
+        )
+    ))
+    if LOCATION_RE.search(prompt):
+        reporter.error(location, "replacement still uses paragraph-location scaffolding")
+    if DOCUMENT_TRIVIA_RE.search(prompt):
+        reporter.error(location, "replacement still tests document structure instead of operational substance")
     choices = activity_choices(content)
     if choices is not None:
         validate_choices(reporter, location, choices, "multiple_choice")
@@ -316,4 +349,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -1,0 +1,2376 @@
+{
+  "version": 1,
+  "chapter": 8,
+  "target_generation_source": "question_agent",
+  "packet_sha256": "e5ae34863400ae8c552672f682b0d45cda8663f2b4bc18346492b760bad3a5c4",
+  "manifest_sha256": "52bcf46fb48afd0d1bbe3cc9dc4ad9059ffa715c9dc047e73f364c6e7d3f8e22",
+  "summary": {
+    "overall": "Chapter 8 quality is below acceptable standards. A systematic pattern of fabricated content, wrong section/chapter references, and paragraph-location trivia was found concentrated in regional sections (8-7 through 8-10) where the generation model hallucinated section numbers and invented exception mechanisms. The core operational sections (8-1 through 8-4) contain many well-constructed scenario questions but are undermined by pervasive paragraph-location scaffolding, correct-answer-first bias, and fill-blank formats that test rote recall of single words/numbers rather than operational understanding. Key strengths: Sections 3 (Longitudinal Separation) and 4 (Lateral Separation) have the most operationally sound items.",
+    "patterns": [
+      "Pervasive para-location scaffolding: ~108 question items flagged with 'Under 8-X-Y' prefixes. Fill-blank questions reduce to single-word recall.",
+      "Systematic source fidelity errors in regional sections: vertical separation cross-references teach wrong section numbers (Section 8 vs Section 5); regional application paragraphs hallucinate directive/LOA exception mechanisms not in source.",
+      "Critical fabricated content: one flashcard invents COM/MET/GREPECAS content; two questions teach fabricated minima (10 miles, speed-based); one question fabricates an ATS-authorities coordination requirement; multiple fill-blanks fabricate governing relationships.",
+      "Malformed reverse cards (4): all test recall of paragraph labels. Removed.",
+      "Correct-answer-first bias: 62 questions flagged. Many distractors are plausible but correct answer always at sort_order 0.",
+      "Answer-length cues: correct answers conspicuously longer than distractors in multiple items.",
+      "Thin explanations: ~10 items restate answer without teaching controlling rule, condition, or operational reason.",
+      "Fill-blank overuse: single-number/word recall without operational context. Appropriate for exact phraseology, inappropriate for operational minima.",
+      "Strengths: Section 3 Mach number technique items are thorough and accurate. Cross-rule comparison questions (same vs crossing tracks, VOR vs NDB divergence) are educationally sound."
+    ],
+    "generation_guidance": [
+      "NEVER generate section or paragraph numbers as answers or in question stems.",
+      "ALWAYS verify cross-reference chapter/section numbers against the actual source text. Regional sections cite Chapter 4, Section 5 (not Section 8) for vertical separation.",
+      "Do not invent exception mechanisms for regional application paragraphs. 8-7-1, 8-8-1, 8-9-1, 8-10-1 do NOT contain directive/LOA language (unlike 8-1-1 which does).",
+      "Use fill-blank format only for exact prescribed phraseology or defined terms. Convert single-number/fact fill-blanks to operational multiple-choice scenarios.",
+      "Randomize correct answer position across sort_order values 0-3.",
+      "Ensure all four choices are of comparable length.",
+      "For reverse flashcards, ask the operational concept in the reverse direction, not the paragraph label.",
+      "Explanation must teach WHY: state the controlling rule, condition, or exception and connect to the operational principle.",
+      "Use negative stems only when exclusion recognition is the actual skill being assessed.",
+      "Validate every minima value against the source before finalizing.",
+      "Generate more operational scenario items for Sections 5, 6, and the regional sections (7-10), which are currently underrepresented."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "question",
+      "para_id": "8-1-1",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "educational_coherence"
+      ],
+      "problem": "This question asks which JO 7110.65 paragraph number covers procedural LOAs. This is pure document-trivia with zero ATC operational substance. The reference is an administrative cross-reference.",
+      "source_basis": "8-1-1 reference block lists FAA Order JO 7110.65, Para 1-1-10. The paragraph number itself is not an operational concept.",
+      "match": {
+        "question_text": "Under 8-1-1, what reference paragraph covers procedural letters of agreement?",
+        "question_type": "multiple_choice"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_length_cue",
+        "distractor_quality"
+      ],
+      "problem": "The correct answer is conspicuously longer than every distractor, creating an answer-length cue that allows students to identify the correct choice without knowing the material. Distractors are implausible absolute statements (never, always).",
+      "source_basis": "8-1-1 body: ATC service in oceanic controlled airspace follows Chapter 8 except when other procedures or minima are prescribed in a directive or a letter of agreement. The controlling idea is that directives and LOAs may supersede Chapter 8 for the covered situation.",
+      "match": {
+        "question_text": "Under 8-1-1, when do the procedures in a directive or letter of agreement supersede the default Chapter 8 procedures?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An LOA between two facilities prescribes a different longitudinal minimum for a specific oceanic route than what Chapter 8 specifies. What minimum should the controller apply?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 8-1-1, when a directive or LOA prescribes different procedures or minima, those supersede the default Chapter 8 procedures for the covered situation. The controller must follow the LOA-authorized minimum.",
+          "choices": [
+            {
+              "text": "The Chapter 8 minimum, because LOAs cannot override published procedures.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Whichever minimum the pilot requests.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The larger of the two minima, for safety.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The LOA minimum, because directives and LOAs may prescribe different procedures that supersede Chapter 8.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-1-1",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "malformed_reverse",
+        "format_fit"
+      ],
+      "problem": "The reverse card tests recall of a paragraph label ('8-1-1: Oceanic ATC service default and exception rule') rather than operational knowledge. The reverse direction has no educational value because it asks students to name the paragraph rather than apply the rule.",
+      "source_basis": "8-1-1 body: Chapter 8 procedures apply except when other procedures or minima are prescribed in a directive or a letter of agreement. The reverse card substitutes a paragraph label for this operational rule.",
+      "match": {
+        "front": "Chapter 8 procedures apply unless a directive or letter of agreement prescribes different procedures or minima.",
+        "back": "8-1-1: Oceanic ATC service default and exception rule.",
+        "card_type": "concept_reverse"
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_length_cue",
+        "distractor_quality"
+      ],
+      "problem": "Correct answer dramatically longer than distractors, creating answer-length cue.",
+      "source_basis": "8-1-1 body lists both directives and LOAs as authorities that may prescribe different procedures.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which source governs when both a directive and a letter of agreement prescribe different oceanic procedures for the same traffic flow?",
+          "choices": [
+            {
+              "text": "Only the directive counts — letters of agreement are not mentioned in 8-1-1.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Both are mentioned in 8-1-1 as authorities that may supersede the default Chapter 8 procedures; the controller should follow whichever one applies to the specific operation per the directive or LOA.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Only the LOA counts because 8-1-1 lists LOAs first.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Neither counts — 8-1-1 always requires using Chapter 8 regardless of directives or LOAs.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ],
+          "explanation": "8-1-1 Lists 'a directive or a letter of agreement' as authorities that may prescribe different procedures or minima."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "A directive and an LOA both prescribe different oceanic procedures for the same traffic flow. Which takes precedence?",
+            "choices": [
+              {
+                "text": "The directive always overrides the LOA.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "The LOA always overrides the directive.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Neither applies; Chapter 8 always controls.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Both are authorities under 8-1-1 that may supersede Chapter 8; the controller follows whichever applies to the specific operation.",
+                "is_correct": true,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "Per 8-1-1, both directives and LOAs are listed as authorities that may prescribe different procedures or minima. The controller applies whichever governs the specific situation."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "educational_coherence"
+      ],
+      "problem": "Source_lookup activity asks for a paragraph number rather than where to find an operational procedure. Students are tested on recalling 'Paragraph 1-1-10' instead of knowing where to look for the rules governing directives and LOAs that supersede Chapter 8. This teaches document navigation trivia, not how to locate the controlling rule.",
+      "source_basis": "8-1-1 reference block: FAA Order JO 7110.65, Para 1-1-10, Procedural Letters of Agreement. The controlling idea is that 8-1-1 cross-references 1-1-10 for LOA procedures, but the operational skill is knowing that 8-1-1 establishes the hierarchy, not memorizing the cross-reference number.",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Where should you look for the rules on procedural letters of agreement?",
+          "question_text": "You need to understand the requirements for procedural LOAs referenced in 8-1-1. Which JO 7110.65 paragraph contains these procedures?",
+          "choices": [
+            {
+              "text": "Paragraph 5-1-1, Application of Radar.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Paragraph 2-1-29, RVSM Operations.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Paragraph 8-2-1, Coordination.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Paragraph 1-1-10, Procedural Letters of Agreement (LOAs).",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ],
+          "explanation": "Per the reference block of 8-1-1, paragraph 1-1-10 covers Procedural Letters of Agreement."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_lookup",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Where would you confirm the governing procedures?",
+            "question_text": "You are working oceanic controlled airspace. A local directive prescribes different procedures for a specific route. Where do you confirm whether the directive or Chapter 8 controls the airspace?",
+            "choices": [
+              {
+                "text": "Check 8-1-1, which states that directives and LOAs may prescribe procedures that supersede the default Chapter 8 rule.",
+                "is_correct": true,
+                "sort_order": 0
+              },
+              {
+                "text": "Check Chapter 5 radar procedures.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Check the directive alone; Chapter 8 is always subordinate to local directives.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Check 14 CFR Part 91.",
+                "is_correct": false,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "Per 8-1-1, ATC service in oceanic controlled airspace follows Chapter 8 except when a directive or LOA prescribes different procedures or minima. 8-1-1 is where the governing hierarchy is established."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-1-10",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "format_fit"
+      ],
+      "problem": "Fill-blank testing rote recall of a single word from phraseology with para scaffold. Convert to self-contained stem testing complete phraseology elements.",
+      "source_basis": "8-1-10 phraseology: UNABLE (requested deviation), TRAFFIC IS (call sign, position, altitude, direction), SAY INTENTIONS.",
+      "match": {
+        "question_text": "Under 8-1-10, the phraseology for denying a weather deviation requires telling the pilot the conflicting aircraft's call sign, position, altitude, and _____. Fill in the missing element.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "When ATC is unable to approve a weather deviation due to conflicting traffic, what four items about the conflicting aircraft must be included in the transmission after TRAFFIC IS?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-1-10 phraseology, the required elements are call sign, position, altitude, and direction. This ensures the pilot has complete situational awareness of the conflicting traffic.",
+          "choices": [
+            {
+              "text": "Call sign, aircraft type, altitude, and speed.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Call sign, position, altitude, and direction.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Position, heading, altitude, and flight plan route.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Call sign, position, speed, and destination.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-1-10",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "format_fit"
+      ],
+      "problem": "Rote fill-blank asking for 'routine' is too narrow. Convert to operational priority question.",
+      "source_basis": "8-1-10 body: weather deviation requests should take priority over routine requests.",
+      "match": {
+        "question_text": "Under 8-1-10, weather deviation requests should take priority over _____ requests.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "An aircraft in oceanic airspace requests a weather deviation at the same time another aircraft requests a routine route amendment. Which should the controller prioritize and why?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-1-10, weather deviation requests take priority over routine requests because aircraft will not fly into adverse meteorological conditions.",
+          "choices": [
+            {
+              "text": "The routine amendment, because it was received first.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Both simultaneously; neither has priority.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The routine amendment, because weather deviations are the pilot's responsibility.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The weather deviation, because such requests take priority over routine requests.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-1-10",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "correct_answer_first",
+        "paragraph_location_scaffold"
+      ],
+      "problem": "Correct answer placed first at sort_order 0.",
+      "source_basis": "8-1-10 note: pilots follow AIP ENR 7.3 and AC 91-70.",
+      "match": {
+        "question_text": "Under 8-1-10, if communications cannot be established or a revised ATC clearance is not available after a weather deviation, what procedures should pilots follow?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "After a weather deviation in oceanic airspace, the pilot cannot reestablish communications and has no revised ATC clearance. What procedures should the pilot follow?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per the 8-1-10 note, when communications cannot be established or a revised ATC clearance is not available, pilots follow AIP Section ENR 7.3 and AC 91-70 for oceanic in-flight contingencies.",
+          "choices": [
+            {
+              "text": "Standard lost-communication procedures in 14 CFR 91.185 only.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Land at the nearest suitable airport immediately.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "AIP Section ENR 7.3 and AC 91-70.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Any deviation the pilot deems necessary without further coordination.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-1-10",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "correct_answer_first",
+        "paragraph_location_scaffold"
+      ],
+      "problem": "Correct answer at sort_order 0.",
+      "source_basis": "8-1-10 body: three actions when unable to establish required separation.",
+      "match": {
+        "question_text": "Under 8-1-10, when there is conflicting traffic and ATC is unable to establish required separation for a weather deviation, what are the three actions ATC must take in order?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An aircraft in oceanic airspace requests a weather deviation. Conflicting traffic exists and the controller cannot establish required separation. What three actions must the controller take, in order?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 8-1-10, when unable to establish required separation: (a) advise unable, (b) advise of conflicting traffic, and (c) request the pilot's intentions. This ordered sequence ensures the pilot understands the denial reason before being asked to propose alternatives.",
+          "choices": [
+            {
+              "text": "Advise unable, advise of conflicting traffic, and request the pilot's intentions.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Request intentions first, then advise of traffic, then issue unable.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Issue a holding clearance, advise of traffic, then vector the aircraft.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Advise of traffic first, approve deviation if pilot accepts responsibility, then request intentions.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-1-10",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "correct_answer_first"
+      ],
+      "problem": "The correct answer ('Issue clearance to deviate from track') is placed at sort_order 0, giving it an answer-position cue that allows students to identify it without evaluating the content. The distractors are plausible but the positional bias undermines the assessment.",
+      "source_basis": "8-1-10 body: if no traffic in horizontal dimension, issue clearance to deviate.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "When no conflicting traffic exists horizontally and an aircraft requests a weather deviation, what must ATC do?",
+          "choices": [
+            {
+              "text": "Issue clearance to deviate from track.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Establish vertical separation first, then issue the deviation clearance.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Advise the pilot to request deviation from the next sector.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Deny the request because weather deviations are not permitted in oceanic airspace.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ],
+          "explanation": "Per 8-1-10, if there is no traffic in the horizontal dimension, ATC must issue clearance to deviate from track."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "An aircraft requests a weather deviation in oceanic airspace. No conflicting traffic exists in the horizontal dimension. What must ATC do?",
+            "choices": [
+              {
+                "text": "Issue clearance to deviate from track.",
+                "is_correct": true,
+                "sort_order": 0
+              },
+              {
+                "text": "Establish vertical separation first, then issue the deviation clearance.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Advise the pilot to request deviation from the next sector.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Deny the request because weather deviations require radar coverage.",
+                "is_correct": false,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "Per 8-1-10, if there is no traffic in the horizontal dimension, ATC must issue clearance to deviate from track."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-1-10",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "correct_answer_first",
+        "answer_length_cue"
+      ],
+      "problem": "Correct answer first and conspicuously longer than distractors.",
+      "source_basis": "8-1-10 note: AIP ENR 7.3 and AC 91-70.",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Where should you look?",
+          "question_text": "A pilot asks what procedures to follow if communications are lost after a weather deviation in oceanic airspace. Under 8-1-10, which publications contain these procedures?",
+          "choices": [
+            {
+              "text": "AIP Section ENR 7.3, Special Procedures for In-flight Contingencies in Oceanic Airspace, and AC 91-70, Oceanic and Remote Continental Airspace Operations.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "14 CFR 91.185, IFR operations: Two-way radio communications failure.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "FAA Order JO 7210.632, Air Traffic Organization Occurrence Reporting.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "AIM Chapter 6, Emergency Procedures Available to All Pilots.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ],
+          "explanation": "Per the note in 8-1-10, pilots follow AIP ENR 7.3 and AC 91-70 for oceanic in-flight contingencies when communications cannot be established."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_lookup",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Where would you find the procedures?",
+            "question_text": "A pilot asks what to do if communications are lost after a weather deviation in oceanic airspace. Which publications contain these contingency procedures?",
+            "choices": [
+              {
+                "text": "14 CFR 91.185, IFR operations: Two-way radio communications failure.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "AIP ENR 7.3 and AC 91-70.",
+                "is_correct": true,
+                "sort_order": 1
+              },
+              {
+                "text": "FAA Order JO 7210.632.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "AIM Chapter 6, Emergency Procedures.",
+                "is_correct": false,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "Per the 8-1-10 note, pilots follow AIP Section ENR 7.3 and AC 91-70 for oceanic in-flight contingencies when communications cannot be established."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "negative_stem",
+        "format_fit"
+      ],
+      "problem": "Fill-blank testing rote recall with negative stem and para scaffold.",
+      "source_basis": "8-1-2 body: for situations not covered by Chapter 8, the provisions in this Order apply.",
+      "match": {
+        "question_text": "Under 8-1-2, complete the hierarchy: when a situation is not covered by Chapter 8, what applies?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller in offshore airspace encounters a wake turbulence situation. Chapter 8 does not address wake turbulence criteria. What should the controller do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-1-2, when Chapter 8 does not cover a situation, the provisions elsewhere in JO 7110.65 apply. The controller should use the applicable rules from the Order.",
+          "choices": [
+            {
+              "text": "Apply ICAO procedures exclusively, disregarding the Order.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Use the provisions found elsewhere in JO 7110.65 that address the situation.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Ignore the situation since Chapter 8 does not address it.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Apply only the procedures in Chapter 8 and accept the risk.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_length_cue",
+        "paragraph_location_scaffold"
+      ],
+      "problem": "Correct answer conspicuously longer than distractors.",
+      "source_basis": "8-1-1 vs 8-1-2: 8-1-1 lists directives/LOAs as superseding; 8-1-2 does not.",
+      "match": {
+        "question_text": "Under 8-1-2, how does the offshore airspace rule differ from the oceanic controlled airspace rule in 8-1-1?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "How does the offshore airspace rule (8-1-2) differ from the oceanic controlled airspace rule (8-1-1) regarding what may supersede Chapter 8?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "8-1-1 explicitly permits directives and LOAs to supersede Chapter 8 in oceanic controlled airspace. 8-1-2, for offshore airspace, states Chapter 8 applies first and the rest of the Order fills gaps. It does not separately list directives or LOAs as superseding authorities.",
+          "choices": [
+            {
+              "text": "They are identical.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "8-1-1 permits directives and LOAs to supersede Chapter 8; 8-1-2 does not separately list them and references the rest of the Order.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "8-1-2 forbids using any part of the Order outside Chapter 8.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "8-1-2 applies only to VFR while 8-1-1 applies only to IFR.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-1-2",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "malformed_reverse",
+        "format_fit"
+      ],
+      "problem": "Reverse card tests recall of a paragraph label ('8-1-2: Offshore airspace service rule') rather than operational knowledge. Students are asked to name the paragraph instead of applying the rule about using the rest of the Order when Chapter 8 is silent.",
+      "source_basis": "8-1-2 body: ATC service in offshore airspace areas is provided in accordance with Chapter 8 procedures and minima. For situations not covered by this chapter, the provisions in the Order apply. The reverse label substitutes a paragraph reference for this operational rule.",
+      "match": {
+        "front": "Use Chapter 8 procedures and minima first. For situations not covered by Chapter 8, apply the provisions in the rest of the Order.",
+        "back": "8-1-2: Offshore airspace service rule.",
+        "card_type": "concept_reverse"
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "negative_stem"
+      ],
+      "problem": "The para_context block carries paragraph-location framing ('Under 8-1-2') that teaches document navigation rather than operational application of the rule. The framing should be neutral and describe the governing principle without a paragraph citation.",
+      "source_basis": "8-1-2 body: Provide ATC service in offshore airspace areas in accordance with procedures and minima in this chapter. For situations not covered by this chapter, the provisions in this Order must apply. The controlling idea is the hierarchy: Chapter 8 first, then rest of Order for gaps.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You are handling an offshore airspace operation involving emergency assistance procedures. Chapter 8 does not address emergency procedures for this specific offshore scenario.",
+          "para_context": "Under 8-1-2, provide ATC service in offshore airspace in accordance with Chapter 8 procedures and minima. For situations not covered by this chapter, the provisions in this Order apply.",
+          "choices": [
+            {
+              "text": "Tell the pilot to contact the nearest coastal facility only, because Chapter 8 does not authorize emergency procedures offshore.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Apply the emergency assistance procedures found elsewhere in JO 7110.65 because Chapter 8 does not cover the situation.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Use ICAO emergency procedures only and disregard JO 7110.65.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Suspend all ATC service to that aircraft because FAA procedures do not apply when Chapter 8 is silent.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ],
+          "explanation": "Per 8-1-2, when Chapter 8 does not cover a situation, the provisions in the Order apply — including emergency procedures in other chapters."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "What should you do?",
+            "situation": "You are handling an offshore airspace operation involving emergency assistance procedures. Chapter 8 does not address emergency procedures for this specific offshore scenario.",
+            "para_context": "ATC service in offshore airspace areas is provided in accordance with Chapter 8 procedures and minima. For situations not covered by this chapter, the provisions elsewhere in the Order apply.",
+            "choices": [
+              {
+                "text": "Apply the emergency assistance procedures found elsewhere in JO 7110.65 because Chapter 8 does not cover the situation.",
+                "is_correct": true,
+                "sort_order": 0
+              },
+              {
+                "text": "Tell the pilot to contact the nearest coastal facility only.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Use ICAO emergency procedures only and disregard JO 7110.65.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Suspend ATC service because FAA procedures do not apply when Chapter 8 is silent.",
+                "is_correct": false,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "When Chapter 8 does not cover a situation, the provisions in the Order apply - including emergency procedures in other chapters."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-1-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "format_fit"
+      ],
+      "problem": "Fill-blank testing rote recall of horizontal separation subtypes.",
+      "source_basis": "8-1-4 body: horizontal separation may be either longitudinal or lateral.",
+      "match": {
+        "question_text": "Under 8-1-4, horizontal separation in oceanic/offshore procedures consists of either _____ or _____ separation. Fill both blanks.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller needs to establish horizontal separation between two oceanic aircraft on the same track. What two types of horizontal separation are available under oceanic procedures?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-1-4, horizontal separation may be either longitudinal or lateral. Longitudinal uses time or distance along the track; lateral uses divergent tracks or non-overlapping protected airspace.",
+          "choices": [
+            {
+              "text": "Vertical and radar.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Visual and procedural.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Time-based and altitude-based.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Longitudinal and lateral.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-1-4",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "malformed_reverse",
+        "format_fit"
+      ],
+      "problem": "Reverse card tests recall of a paragraph label ('8-1-4: Types of separation in oceanic/offshore procedures') rather than operational knowledge. Students must recall the three separation types by paragraph number instead of applying them to an operational scenario.",
+      "source_basis": "8-1-4 body: Separation must consist of at least one of: vertical separation, horizontal separation (longitudinal or lateral), or radar separation where radar coverage is adequate. The reverse label substitutes a paragraph reference for this operational requirement.",
+      "match": {
+        "front": "Vertical, horizontal (longitudinal/lateral), or radar (where coverage adequate). At least one required.",
+        "back": "8-1-4: Types of separation in oceanic/offshore procedures.",
+        "card_type": "concept_reverse"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-1-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "format_fit"
+      ],
+      "problem": "Fill-blank testing rote recall of 29.92 as single number without operational context.",
+      "source_basis": "8-1-5 body: altitude assignment based on flight levels and standard altimeter setting of 29.92 inches Hg.",
+      "match": {
+        "question_text": "Under 8-1-5, within oceanic control areas, unless directed or charted otherwise, altitude assignment must be based on flight levels and a standard altimeter setting of _____ inches Hg.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "Within oceanic control areas, what is the standard basis for altitude assignment unless directed or charted otherwise?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-1-5, altitude assignments in oceanic control areas must be based on flight levels and a standard altimeter setting of 29.92 inches Hg, unless directed and/or charted otherwise. This ensures all aircraft use a common pressure reference above the transition level.",
+          "choices": [
+            {
+              "text": "Local altimeter setting and altitudes in feet MSL.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Pressure altitude reported by each aircraft's encoding altimeter.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "GPS-derived altitude, independent of barometric setting.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Flight levels based on a standard altimeter setting of 29.92 inches Hg.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-1-5",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "malformed_reverse",
+        "format_fit"
+      ],
+      "problem": "Reverse card tests paragraph label recall ('8-1-5: Oceanic altimeter setting rule') rather than operational knowledge. The student is asked to produce a paragraph number and title instead of applying the flight level/29.92 rule to an altitude assignment scenario.",
+      "source_basis": "8-1-5 body: Within oceanic control areas, altitude assignment must be based on flight levels and a standard altimeter setting of 29.92 inches Hg, unless directed and/or charted otherwise. The reverse label substitutes a paragraph reference for this operational standard.",
+      "match": {
+        "front": "29.92 inches Hg standard, flight levels, unless directed/charted otherwise",
+        "back": "8-1-5: Oceanic altimeter setting rule.",
+        "card_type": "concept_reverse"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-1-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "negative_stem",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with negative stem and para scaffold. Tests rote recall of 10 minutes without operational context.",
+      "source_basis": "8-1-6 body: take action no later than 10 minutes after the control estimate.",
+      "match": {
+        "question_text": "Under 8-1-6, when a position report affecting separation is not received, take action to obtain the report no later than _____ minutes after the control estimate, unless otherwise specified.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A position report affecting separation between two oceanic aircraft was due 9 minutes ago and has not been received. When must the controller take action to obtain the report?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-1-6, when a position report affecting separation is not received, action must be taken no later than 10 minutes after the control estimate. Since 9 minutes have passed, action must be taken before the deadline.",
+          "choices": [
+            {
+              "text": "Within 5 minutes of the control estimate.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "As soon as possible; the 10-minute deadline is imminent.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Only after 15 minutes have elapsed.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "No action is required; position reports are advisory only.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-1-9",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "negative_stem",
+        "thin_explanation",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with negative stem testing rote recall of approval authority. Thin explanation.",
+      "source_basis": "8-1-9a: non-RVSM aircraft must meet excepted criteria and be previously approved by operations supervisor/CIC.",
+      "match": {
+        "question_text": "Under 8-1-9, non-RVSM aircraft may not be permitted in RVSM airspace unless they meet the criteria of excepted aircraft and are previously approved by the _____.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A non-RVSM aircraft qualifies as an excepted aircraft under oceanic RVSM rules. Who must approve the aircraft before it may enter RVSM airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-1-9, non-RVSM aircraft must both meet the criteria of an excepted aircraft AND be previously approved by the operations supervisor/CIC. Both conditions must be satisfied.",
+          "choices": [
+            {
+              "text": "Any controller on duty.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The operations supervisor or CIC.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "The pilot-in-command only.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The facility manager only.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-1-9",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "correct_answer_first",
+        "paragraph_location_scaffold"
+      ],
+      "problem": "Correct answer placed at sort_order 0.",
+      "source_basis": "8-1-9b4(a): exceptions accommodated on workload or traffic-permitting basis.",
+      "match": {
+        "question_text": "A controller has a heavy workload and a non-RVSM aircraft requests entry into RVSM airspace for a mercy flight. The aircraft qualifies as excepted and has prior supervisor approval. Under 8-1-9, must the controller accommodate the exception?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A heavy workload sector has an excepted non-RVSM mercy-flight aircraft requesting RVSM airspace entry with prior supervisor approval. Must the controller accommodate this exception?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 8-1-9, non-RVSM exceptions are accommodated on a workload or traffic-permitting basis. Even an approved excepted aircraft may be declined if workload or traffic conditions do not permit safe accommodation.",
+          "choices": [
+            {
+              "text": "No, exceptions are accommodated on a workload or traffic-permitting basis.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Yes, mercy flights always take absolute priority regardless of workload.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Yes, supervisor approval makes accommodation mandatory.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "No, mercy flights are never excepted in oceanic RVSM airspace.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-1-9",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "correct_answer_first",
+        "negative_stem",
+        "paragraph_location_scaffold"
+      ],
+      "problem": "Correct answer first. Para_context carries para-loc scaffolding.",
+      "source_basis": "8-1-9: excepted aircraft include initial deliveries, require supervisor approval, workload/traffic permitting.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A non-RVSM aircraft is being delivered from the manufacturer to its first operator and requests transit through oceanic RVSM airspace. The operations supervisor has approved the exception. Traffic is light.",
+          "para_context": "Under 8-1-9, non-RVSM aircraft may not be permitted in RVSM airspace unless they meet excepted aircraft criteria and are previously approved by the operations supervisor/CIC. Initial delivery aircraft are listed as excepted. Exceptions are accommodated on a workload or traffic-permitting basis.",
+          "choices": [
+            {
+              "text": "The aircraft may be permitted because it qualifies as an excepted aircraft (initial delivery), has supervisor approval, and workload/traffic conditions permit.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Deny the request because initial delivery aircraft are never excepted in oceanic airspace.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Permit the aircraft only if it files IFR and descends below FL290.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Permit the aircraft without any approval because delivery flights are automatically exempt.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ],
+          "explanation": "Per 8-1-9, initial delivery aircraft are listed as excepted, require prior supervisor/CIC approval, and are accommodated on a workload/traffic-permitting basis."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "What should you do?",
+            "situation": "A non-RVSM aircraft is being delivered from the manufacturer to its first operator and requests transit through oceanic RVSM airspace. The operations supervisor has approved the exception. Traffic is light.",
+            "para_context": "Non-RVSM aircraft may not be permitted in RVSM airspace unless they meet excepted aircraft criteria and are previously approved by the operations supervisor/CIC. Initial delivery aircraft are listed as excepted. Exceptions are accommodated on a workload or traffic-permitting basis.",
+            "choices": [
+              {
+                "text": "Deny the request because delivery aircraft are never excepted in oceanic airspace.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "The aircraft may be permitted because it qualifies as excepted (initial delivery), has supervisor approval, and conditions permit.",
+                "is_correct": true,
+                "sort_order": 1
+              },
+              {
+                "text": "Permit only if the aircraft files IFR and descends below FL290.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Permit without any approval because delivery flights are automatically exempt.",
+                "is_correct": false,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "Per the non-RVSM exception rules: initial delivery aircraft are listed as excepted, require prior supervisor/CIC approval, and are accommodated on a workload/traffic-permitting basis. All three conditions are met here."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-1-9",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "correct_answer_first",
+        "answer_length_cue"
+      ],
+      "problem": "Correct answer first and dramatically longer than distractors.",
+      "source_basis": "8-1-9b: four oceanic non-RVSM exceptions.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which four oceanic operations are listed as excepted non-RVSM aircraft?",
+          "choices": [
+            {
+              "text": "Initial deliveries; maintenance ferry flights for failed RVSM equipment; mercy or humanitarian flights; and spare-engine-under-wing transport within Oakland, Anchorage, and Arctic FIRs.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Medical evacuation; military intercept; search and rescue; and aerial refueling.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "State aircraft; aircraft below FL290; aircraft on delivery flights; and aircraft with an inoperative transponder.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Cargo-only flights; repositioning flights; training flights; and aircraft without TCAS.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ],
+          "explanation": "Per 8-1-9b, the four oceanic non-RVSM exceptions are: initial deliveries, maintenance ferry flights for failed RVSM equipment, mercy/humanitarian flights, and spare-engine-under-wing transport in Oakland/Anchorage/Arctic FIRs."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "Choose the best answer.",
+            "question_text": "Which operations qualify as excepted non-RVSM aircraft allowed in oceanic RVSM airspace?",
+            "choices": [
+              {
+                "text": "Medical evacuation, military intercept, search and rescue, and aerial refueling.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "Initial deliveries, maintenance ferry flights for failed RVSM equipment, mercy or humanitarian flights, and spare-engine-under-wing transport within specified FIRs.",
+                "is_correct": true,
+                "sort_order": 1
+              },
+              {
+                "text": "State aircraft below FL290, aircraft on delivery flights, and aircraft with inoperative transponder.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Cargo-only flights, repositioning flights, training flights, and aircraft without TCAS.",
+                "is_correct": false,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "The four oceanic non-RVSM exceptions are: initial deliveries to State of Registry/Operator, maintenance ferry flights for failed RVSM equipment, mercy/humanitarian flights, and spare-engine-under-wing transport in Oakland/Anchorage/Arctic FIRs."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "thin_explanation",
+        "format_fit"
+      ],
+      "problem": "Fill-blank testing rote recall of 3 minutes with thin explanation.",
+      "source_basis": "8-2-1d: forward revisions of estimates of 3 minutes or more.",
+      "match": {
+        "question_text": "Under 8-2-1, ARTCCs must forward revisions of estimates of _____ minutes or more to the appropriate ATS facility.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "An ARTCC revises an oceanic flight's boundary estimate from 1420Z to 1424Z. Must this revision be forwarded to the receiving ATS facility?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-2-1d, ARTCCs must forward revisions of estimates of 3 minutes or more. The 4-minute change meets the threshold and must be forwarded.",
+          "choices": [
+            {
+              "text": "No, because only changes of 5 minutes or more must be forwarded.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "No, because all estimate revisions are optional.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Yes, because the revision is 4 minutes, which meets the 3-minute threshold.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Yes, but only if the receiving facility requests it.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "correct_answer_first",
+        "paragraph_location_scaffold"
+      ],
+      "problem": "Correct answer first. Full list dump as correct answer.",
+      "source_basis": "8-2-1: five ARTCC coordination duties.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which set of actions must ARTCCs perform under 8-2-1 when handling an oceanic flight approaching an adjacent facility?",
+          "choices": [
+            {
+              "text": "Forward current flight plan/control info; coordinate in sufficient time; coordinate boundary overlap; forward estimate revisions of 3+ minutes; coordinate IFR/VFR to ensure service continuation.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Forward only the flight plan at departure; wait for the receiving facility to request updates; coordinate after the aircraft crosses the boundary.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Forward only the initial clearance; all further coordination is handled by the pilot through position reports.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Coordinate only when the aircraft deviates; all other information is handled through AIDC automatically.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ],
+          "explanation": "Per 8-2-1, ARTCCs have five listed coordination duties covering proactive forwarding of information, timely coordination, boundary-overlap coordination, estimate revision forwarding, and IFR/VFR service continuity."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "Choose the best answer.",
+            "question_text": "An ARTCC is coordinating an oceanic flight approaching an adjacent facility. The estimate has changed by 4 minutes. Which actions are required?",
+            "choices": [
+              {
+                "text": "Forward only the initial flight plan; wait for the receiving facility to request updates.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "Only coordinate after the aircraft crosses the boundary.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Forward the revised estimate, coordinate in sufficient time for analysis, coordinate boundary overlap, and ensure IFR service continuation.",
+                "is_correct": true,
+                "sort_order": 2
+              },
+              {
+                "text": "Forward only the revised estimate; other coordination is handled by the pilot.",
+                "is_correct": false,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "Per 8-2-1, ARTCCs must forward revisions of 3+ minutes, coordinate in sufficient time, coordinate boundary overlap, and ensure continuation of air traffic services."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-2-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "format_fit"
+      ],
+      "problem": "Fill-blank testing rote recall of 5 minutes.",
+      "source_basis": "8-2-2f: communications transfer 5 minutes before boundary under nonradar.",
+      "match": {
+        "question_text": "Under 8-2-2, where nonradar separation minima are being applied, the transfer of air-ground communications must be made _____ minutes before the aircraft is estimated to reach the boundary unless otherwise agreed.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "Where nonradar separation is being applied, how long before the estimated boundary crossing must air-ground communications be transferred to the accepting facility?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-2-2f, where nonradar separation minima are applied, air-ground communications must be transferred 5 minutes before the aircraft is estimated to reach the boundary, unless otherwise agreed by the control and/or communication units concerned.",
+          "choices": [
+            {
+              "text": "At the time the aircraft crosses the boundary.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "10 minutes before the estimated boundary crossing.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "As soon as radar contact is established with the accepting facility.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "5 minutes before the estimated boundary crossing, unless otherwise agreed.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-2-2",
+      "action": "split",
+      "severity": "major",
+      "categories": [
+        "overloaded_back",
+        "format_fit"
+      ],
+      "problem": "The back contains six distinct rules for one card. Split into focused concept and procedure cards.",
+      "source_basis": "8-2-2: six rules for transfer of control and communications.",
+      "match": {
+        "front": "8-2-2: Six rules for transfer of control in oceanic ops",
+        "back": "a. One ATC unit controls at a time. b. Transfer at estimated control boundary or agreed time/point. c. Transferring unit forwards changed flight plan/control data. d. Accepting unit notifies if unable to accept; specifies required conditions. e. Accepting unit must not alter clearance before transfer point without prior approval. f. Nonradar: communications transfer 5 min before boundary unless otherwise agreed.",
+        "card_type": "list"
+      },
+      "replacements": [
+        {
+          "front": "How many ATC units may control an aircraft at any given time?",
+          "back": "Only one. Control authority must be unambiguous. Per 8-2-2a.",
+          "card_type": "rule"
+        },
+        {
+          "front": "What must the accepting unit do if unable to accept control under the specified terms?",
+          "back": "Notify the transferring unit and specify the changes or conditions required so that the aircraft can be accepted. Per 8-2-2d.",
+          "card_type": "procedure"
+        },
+        {
+          "front": "When may the accepting unit alter an aircraft's clearance before the transfer point?",
+          "back": "Only with the prior approval of the transferring unit. Per 8-2-2e.",
+          "card_type": "rule"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-2-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "format_fit"
+      ],
+      "problem": "Fill-blank testing rote recall of document name fragment.",
+      "source_basis": "8-2-3: AIDC use per regional Interface Control Documents and LOAs.",
+      "match": {
+        "question_text": "Under 8-2-3, AIDC coordination where implemented must be accomplished in accordance with regional _____ Documents and supported by letters of agreement.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "Where interfacility data communications (AIDC) capability has been implemented, what documents govern its use for ATC coordination?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-2-3, AIDC use should follow regional Interface Control Documents and be supported by letters of agreement between the facilities concerned.",
+          "choices": [
+            {
+              "text": "Only facility standard operating procedures.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "ICAO Annex 11 and regional air navigation plans only.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Regional Interface Control Documents supported by letters of agreement.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "No documents are required; AIDC has built-in governance.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-2-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "correct_answer_first",
+        "answer_length_cue"
+      ],
+      "problem": "Correct answer first and conspicuously longer than distractors.",
+      "source_basis": "8-2-3: AIDC requires capability, regional ICD, and LOA.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What is needed before two facilities may use AIDC for oceanic ATC coordination?",
+          "choices": [
+            {
+              "text": "The capability must be implemented, a regional Interface Control Document must govern its use, and a letter of agreement must support it between the facilities.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Only the hardware must be installed; no documentation or agreements are required.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "A verbal agreement between the facility managers is sufficient, regardless of regional documents.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "AIDC may not be used for ATC coordination under any circumstances per 8-2-3.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ],
+          "explanation": "Per 8-2-3, AIDC use for ATC coordination requires regional Interface Control Documents and letters of agreement between the facilities."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "What prerequisites must be satisfied before two facilities use AIDC for oceanic ATC coordination?",
+            "choices": [
+              {
+                "text": "Only the hardware must be operational.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "AIDC capability must exist, a regional Interface Control Document must govern its use, and a letter of agreement must support it between the facilities.",
+                "is_correct": true,
+                "sort_order": 1
+              },
+              {
+                "text": "A verbal agreement between facility managers is sufficient.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "AIDC may not be used for ATC coordination under any circumstances.",
+                "is_correct": false,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "Per 8-2-3, AIDC use for ATC coordination requires the capability to be implemented, regional Interface Control Documents, and letters of agreement between the facilities concerned."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-5-3",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity",
+        "unsafe_operational_implication"
+      ],
+      "problem": "The answer ('10 miles') is fabricated. 8-5-3 says vertical separation must be established (a) before the outbound crosses the boundary AND (b) 15 minutes before aircraft are estimated to pass. The paragraph says nothing about a 10-mile passing distance. This teaches a nonexistent minimum.",
+      "source_basis": "8-5-3 body: vertical separation must be established before outbound crosses boundary and 15 minutes before estimated passing.",
+      "match": {
+        "question_text": "Under 8-5-3, opposite direction aircraft using the transition procedure must be vertically separated until they have passed each other by at least _____ miles, unless another form of separation is established earlier.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "When transitioning from offshore to oceanic airspace, an outbound aircraft may climb through opposite-direction oceanic traffic. What two timing conditions must be met before the climb?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 8-5-3, the outbound aircraft may climb through opposite-direction oceanic traffic only if vertical separation above that traffic is established: (a) before the outbound crosses the offshore/oceanic boundary, and (b) 15 minutes before the aircraft are estimated to pass. Both conditions must be satisfied.",
+          "choices": [
+            {
+              "text": "After the boundary crossing and 10 minutes before estimated passing.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Before the boundary crossing and 15 minutes before estimated passing.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Before the boundary crossing and 5 minutes before estimated passing.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "After the boundary crossing when the aircraft are 10 NM apart.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-5-3",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity",
+        "unsafe_operational_implication"
+      ],
+      "problem": "Flashcard says 'Vertically separate until aircraft have passed each other by at least 10 miles.' Source says nothing about 10 miles. Teaches a fabricated distance minimum.",
+      "source_basis": "8-5-3 body: vertical separation must be established before boundary crossing and 15 minutes before estimated passing.",
+      "match": {
+        "front": "8-5-3: Opposite direction transition separation",
+        "back": "Vertically separate until aircraft have passed each other by at least 10 miles, unless another form of separation established earlier.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "When may an outbound aircraft climb through opposite-direction oceanic traffic during offshore-to-oceanic transition?",
+          "back": "Only when vertical separation above the opposite-direction traffic is established (a) before the outbound crosses the offshore/oceanic boundary, and (b) 15 minutes before the aircraft are estimated to pass. Per 8-5-3.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-5-4",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity",
+        "unsafe_operational_implication"
+      ],
+      "problem": "The answer ('speed') is fabricated. 8-5-4 prescribes a 5-minute minimum with five specific conditions. The paragraph says nothing about minima being 'based on the speed of the two aircraft.' Speed equality is only one of five conditions.",
+      "source_basis": "8-5-4: apply 5 minutes minimum when following climbs through preceding if five specific conditions are met.",
+      "match": {
+        "question_text": "Under 8-5-4, same direction aircraft in the transition area must have the applicable longitudinal minima applied based on the _____ of the two aircraft.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "When transitioning from offshore to oceanic airspace, a following aircraft on the same course requests a climb through the altitude of the preceding aircraft. What minimum longitudinal separation applies and what conditions must be met?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 8-5-4, a 5-minute minimum applies when five conditions are met: (a) preceding aircraft level with speed equal or greater; (b) 5 min spacing maintained; (c) following not more than 4000 ft below when clearance issued; (d) climb begins within 10 min after passing reporting point or radar position of preceding; (e) following in direct communication until vertical separation established.",
+          "choices": [
+            {
+              "text": "10 minutes, with no additional conditions.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "5 minutes, provided preceding aircraft is level/not slower, max 4000 ft vertical difference, climb within 10 min of passing point, and direct communication maintained.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "3 minutes, because same-direction aircraft always have reduced minima.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "15 minutes, the standard oceanic longitudinal minimum.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-5-4",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Flashcard says minima are 'Based on the speed of the two aircraft.' Fabricated. 8-5-4 has a specific 5-minute procedure with five conditions.",
+      "source_basis": "8-5-4 body: 5 minutes minimum with specific conditions.",
+      "match": {
+        "front": "8-5-4: Same direction transition longitudinal minima",
+        "back": "Based on the speed of the two aircraft.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What is the same-direction climb-through minimum and what conditions apply during offshore-to-oceanic transition?",
+          "back": "5 minutes minimum, provided: preceding aircraft level with speed equal or greater, 5 min spacing maintained, following not more than 4000 ft below when clearance issued, climb begins within 10 min after passing the reporting point/radar position of preceding, and following in direct communication until vertical separation established. Per 8-5-4.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-6-1",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Answer ('ATS authorities') is fabricated. 8-6-1 only describes two separation methods (lateral and vertical) from temporary stationary reservations. There is NO activation coordination requirement with ATS authorities in this paragraph.",
+      "source_basis": "8-6-1 body: two methods for separating aircraft from temporary stationary reservations.",
+      "match": {
+        "question_text": "Under 8-6-1, temporary stationary airspace reservations must be coordinated through appropriate _____ before activation.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller needs to separate an aircraft from a temporary stationary airspace reservation. What two separation methods are available?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-6-1, aircraft may be separated laterally (route protected airspace does not overlap the reservation area) or vertically (vertical separation within the reservation plus a perimeter buffer of one-half the lateral separation minimum).",
+          "choices": [
+            {
+              "text": "Longitudinal separation and radar separation.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Lateral separation (non-overlapping protected airspace) or vertical separation with a perimeter buffer.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Time-based separation only.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Visual separation and procedural separation.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-6-2",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity",
+        "unsafe_operational_implication"
+      ],
+      "problem": "The question asks for 'hazard' and 'request the pilot's intentions.' The source says: inform pilot of potential hazard, advise services will not be provided while in reservation, and if possible inform using agency. The source does NOT say 'request the pilot's intentions.' The question teaches the wrong controller action.",
+      "source_basis": "8-6-2 body: inform of potential hazard, advise services will not be provided in reservation, and if possible inform using agency.",
+      "match": {
+        "question_text": "Under 8-6-2, if a pilot refuses an avoidance clearance, the controller must advise the pilot of the _____ and request the pilot's intentions.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A pilot refuses to accept a clearance to avoid an active airspace reservation. What actions must the controller take?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-6-2, the controller must: (1) inform the pilot of the potential hazard, (2) advise that services will not be provided while the flight is within the reservation, and (3) if possible, inform the appropriate using agency.",
+          "choices": [
+            {
+              "text": "Advise of the hazard, advise services will not be provided within the reservation, and if possible inform the using agency.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Approve the refusal and issue a new route clearance immediately.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Advise of the hazard and request the pilot's intentions.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Only inform the using agency; no pilot advisory is needed.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-7-1",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity",
+        "paragraph_location_scaffold",
+        "generic_reference"
+      ],
+      "problem": "Fill-blank answer 'additions' is fabricated. 8-7-1 says services are with procedures/minima in this section except when noted otherwise. The word 'additions' nowhere appears. The question invents a governing relationship.",
+      "source_basis": "8-7-1 body: provide ATC services in NAT Region with procedures/minima in this section except when noted otherwise.",
+      "match": {
+        "question_text": "Under 8-7-1, the general oceanic procedures in Chapter 8 apply to the North Atlantic ICAO Region with _____ prescribed by this section.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What procedures and minima govern ATC services in the North Atlantic ICAO Region?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 8-7-1, ATC services in the North Atlantic ICAO Region are provided with the procedures and minima contained in Section 7 of Chapter 8, except when noted otherwise.",
+          "choices": [
+            {
+              "text": "Only ICAO global standards with no regional variations.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The same procedures as the Caribbean ICAO Region.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Domestic airspace procedures from Chapter 4 only.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The procedures and minima in Section 7 of Chapter 8, except when noted otherwise.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-7-1",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "Flashcard says 'Directives and letters of agreement may prescribe different procedures.' 8-7-1 does NOT mention directives or LOAs. It says procedures/minima in this section except when noted otherwise. The card invents an exception mechanism not found in the source.",
+      "source_basis": "8-7-1 body: procedures and minima contained in this section except when noted otherwise.",
+      "match": {
+        "front": "What governs ATC procedures in the NAT ICAO Region when they differ from general Chapter 8 procedures?",
+        "back": "Directives and letters of agreement may prescribe different procedures.",
+        "card_type": "procedure"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-7-2",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Stem says 'Section 8' but source says 'Chapter 4, IFR, Section 5, Altitude Assignment and Verification.' The question teaches the wrong section number for altitude assignment and verification.",
+      "source_basis": "8-7-2 body: Chapter 4, IFR, Section 5.",
+      "match": {
+        "question_text": "Under 8-7-2, vertical separation in the North Atlantic ICAO Region is provided in accordance with Chapter _____, Section 8, unless this section prescribes otherwise.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the source for vertical separation procedures in the North Atlantic ICAO Region?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-7-2, vertical separation in the North Atlantic ICAO Region is provided in accordance with Chapter 4, IFR, Section 5, Altitude Assignment and Verification.",
+          "choices": [
+            {
+              "text": "Chapter 8, Section 5 only.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Chapter 4, IFR, Section 5, Altitude Assignment and Verification.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "ICAO Annex 2 only.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "There is no vertical separation requirement in the NAT Region.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-7-2",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Flashcard says 'Chapter 4, Section 8 and Chapter 8, Section 5.' Source says 'Chapter 4, IFR, Section 5.' Two wrong section numbers taught.",
+      "source_basis": "8-7-2 body: Chapter 4, IFR, Section 5.",
+      "match": {
+        "front": "Where are vertical separation standards for the NAT ICAO Region found?",
+        "back": "Chapter 4, Section 8 and Chapter 8, Section 5.",
+        "card_type": "reference"
+      },
+      "replacements": [
+        {
+          "front": "What vertical separation rules apply in the North Atlantic ICAO Region?",
+          "back": "Apply the standard IFR altitude assignment and verification vertical separation rules.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-8-1",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity",
+        "negative_stem"
+      ],
+      "problem": "Answer ('directive') is fabricated. 8-8-1 says procedures/minima in this section except when noted otherwise. It does NOT mention directives or LOAs. The question falsely teaches a directive/LOA exception mechanism for the Caribbean region.",
+      "source_basis": "8-8-1 body: procedures and minima contained in this section except when noted otherwise.",
+      "match": {
+        "question_text": "Under 8-8-1, the Caribbean ICAO Region ATC service follows the general oceanic procedures in Chapter 8 except when different procedures are prescribed in a _____ or letter of agreement.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What procedures and minima govern ATC services in the Caribbean ICAO Region?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 8-8-1, ATC services in the Caribbean ICAO Region are provided with the procedures and minima contained in Section 8 of Chapter 8, except when noted otherwise.",
+          "choices": [
+            {
+              "text": "Only ICAO Caribbean regional standards.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The same procedures as the Pacific ICAO Region.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The procedures and minima in Section 8 of Chapter 8, except when noted otherwise.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Domestic airspace procedures only.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-8-2",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Stem says 'Section 8' but source says 'Chapter 4, IFR, Section 5.' Teaches wrong section number.",
+      "source_basis": "8-8-2 body: Chapter 4, IFR, Section 5.",
+      "match": {
+        "question_text": "Under 8-8-2, vertical separation in the Caribbean ICAO Region is provided in accordance with Chapter _____, Section 8, unless this section prescribes otherwise.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the source for vertical separation procedures in the Caribbean ICAO Region?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-8-2, vertical separation in the Caribbean ICAO Region is provided in accordance with Chapter 4, IFR, Section 5, Altitude Assignment and Verification.",
+          "choices": [
+            {
+              "text": "Chapter 8, Section 8 only.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "ICAO Doc 4444 only.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Chapter 4, IFR, Section 5, Altitude Assignment and Verification.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "No vertical separation standard is specified.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-8-2",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Flashcard says 'Chapter 4, Section 8 and Chapter 8, Section 5.' Source says 'Chapter 4, IFR, Section 5.' Two wrong section numbers.",
+      "source_basis": "8-8-2 body: Chapter 4, IFR, Section 5.",
+      "match": {
+        "front": "Where are vertical separation standards for the CAR ICAO Region found?",
+        "back": "Chapter 4, Section 8 and Chapter 8, Section 5.",
+        "card_type": "reference"
+      },
+      "replacements": [
+        {
+          "front": "What vertical separation rules apply in the Caribbean ICAO Region?",
+          "back": "Apply the standard IFR altitude assignment and verification vertical separation rules.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-8-5",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Answer ('at pilot's discretion') is fabricated. 8-8-5 says IFR flights may be cleared to climb/descend in VFR conditions only when requested by the pilot and between sunrise and sunset. It does NOT say 'at pilot's discretion.' The question invents a completely different operational rule.",
+      "source_basis": "8-8-5: IFR flights cleared to climb/descend in VFR conditions only when requested by pilot AND between sunrise and sunset.",
+      "match": {
+        "question_text": "Under 8-8-5, in the Houston, Miami, and San Juan CTAs, IFR flights may be cleared to climb or descend _____ while operating in VFR conditions.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "In the Houston, Miami, and San Juan CTAs, when may an IFR flight be cleared to climb or descend in VFR conditions?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-8-5, IFR flights may be cleared to climb and descend in VFR conditions only when requested by the pilot AND between sunrise and sunset. If VFR conditions may become impractical, issue alternative instructions and traffic information to unseparated aircraft.",
+          "choices": [
+            {
+              "text": "At any time the pilot reports VMC conditions.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Only when ATC initiates the procedure for traffic management.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "When requested by the pilot and between sunrise and sunset.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "At any time during daylight hours regardless of pilot request.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-8-5",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "Flashcard about COM/MET regulations and GREPECAS is completely fabricated. 8-8-5 only addresses VFR climb/descent in Houston/Miami/San Juan CTAs. There is no COM/MET or GREPECAS content anywhere in this paragraph. This card teaches entirely fictional material.",
+      "source_basis": "8-8-5 body: IFR climb/descent in VFR conditions only. No COM/MET or GREPECAS content exists.",
+      "match": {
+        "front": "What specific guidance applies to COM/MET regulations in the CAR ICAO Region?",
+        "back": "The CAR-SAM Planning and Implementation Regional Group (GREPECAS) may prescribe specific COM/MET regulations.",
+        "card_type": "procedure"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-9-1",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity",
+        "negative_stem"
+      ],
+      "problem": "Answer ('letter of agreement') is fabricated. 8-9-1 says procedures/minima in this section except when noted otherwise. It does NOT mention directives or LOAs. The Pacific section follows the same pattern as other regional sections.",
+      "source_basis": "8-9-1 body: procedures and minima in this section except when noted otherwise.",
+      "match": {
+        "question_text": "Under 8-9-1, the Pacific ICAO Region ATC service follows the general oceanic procedures in Chapter 8 except when different procedures are prescribed in a directive or _____.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What procedures and minima govern ATC services in the Pacific ICAO Region?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 8-9-1, ATC services in the Pacific ICAO Region are provided with the procedures and minima contained in Section 9 of Chapter 8, except when noted otherwise.",
+          "choices": [
+            {
+              "text": "The procedures and minima in Section 9 of Chapter 8, except when noted otherwise.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Only ICAO Pacific regional standards.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The same procedures as the North Atlantic ICAO Region.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The procedures in Chapter 4 only.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-9-2",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Answer is '8' for section number. Source says 'Chapter 4, IFR, Section 5' — not Section 8. Teaches wrong section number.",
+      "source_basis": "8-9-2 body: Chapter 4, IFR, Section 5.",
+      "match": {
+        "question_text": "Under 8-9-2, vertical separation in the Pacific ICAO Region follows Chapter 4, Section _____, with Pacific-specific provisions.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the source for vertical separation procedures in the Pacific ICAO Region?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 8-9-2, vertical separation in the Pacific ICAO Region is provided in accordance with Chapter 4, IFR, Section 5, Altitude Assignment and Verification.",
+          "choices": [
+            {
+              "text": "Chapter 8, Section 9 only.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "ICAO Doc 4444 only.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Chapter 4, IFR, Section 5, Altitude Assignment and Verification.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "No vertical separation standard is specified.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-9-2",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Flashcard says 'Chapter 4, Section 8 and Chapter 8, Section 5.' Source says 'Chapter 4, IFR, Section 5.' Two wrong section numbers.",
+      "source_basis": "8-9-2 body: Chapter 4, IFR, Section 5.",
+      "match": {
+        "front": "Where are vertical separation standards for the PAC ICAO Region found?",
+        "back": "Chapter 4, Section 8 and Chapter 8, Section 5.",
+        "card_type": "reference"
+      },
+      "replacements": [
+        {
+          "front": "What vertical separation rules apply in the Pacific ICAO Region?",
+          "back": "Apply the standard IFR altitude assignment and verification vertical separation rules.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-10-1",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Answer ('directives') is fabricated. 8-10-1 says 'Provide air traffic control services in the North American ICAO Region with the procedures and minima contained in this section.' It does NOT mention directives or LOAs, and unlike other regional sections, does not even include the 'except when noted otherwise' language. The section procedures apply without stated exception.",
+      "source_basis": "8-10-1 body: procedures and minima contained in this section.",
+      "match": {
+        "question_text": "Under 8-10-1, the North American ICAO Region - Arctic CTA ATC service follows general Chapter 8 procedures with exceptions prescribed by _____ or letters of agreement.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What procedures and minima govern ATC services in the North American ICAO Region?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 8-10-1, ATC services in the North American ICAO Region are provided with the procedures and minima contained in Section 10 of Chapter 8.",
+          "choices": [
+            {
+              "text": "The procedures and minima in Section 10 of Chapter 8.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "The procedures in Chapter 4 only.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The same procedures as the Pacific ICAO Region.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Only the Arctic CTA procedures from ICAO.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-10-2",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Answer is '8' for section number and references 'Chapter 8, Section 5.' Source says Chapter 4, IFR, Section 5 AND facility directives depicting transition between flight levels and metric altitudes. The question teaches wrong section numbers and omits the unique facility directive requirement.",
+      "source_basis": "8-10-2 body: (a) Chapter 4, IFR, Section 5, and (b) facility directives for flight level/metric altitude transition.",
+      "match": {
+        "question_text": "Under 8-10-2, vertical separation in the Arctic CTA is provided in accordance with Chapter 4, Section _____, and Chapter 8, Section 5.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What two sources govern vertical separation in the North American ICAO Region?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 8-10-2, vertical separation is provided per: (a) Chapter 4, IFR, Section 5, Altitude Assignment and Verification; and (b) facility directives depicting the transition between flight levels and metric altitudes. This is the only regional section requiring facility directives.",
+          "choices": [
+            {
+              "text": "Chapter 4, Section 5 only.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Chapter 8, Section 5 only.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Chapter 4, IFR, Section 5, Altitude Assignment and Verification, and facility directives for flight level/metric altitude transition.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "ICAO Annex 2 and regional air navigation plans only.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-10-2",
+      "action": "replace",
+      "severity": "critical",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Flashcard says 'Chapter 4, Section 8 and Chapter 8, Section 5.' Source says Chapter 4, Section 5 AND facility directives. Two wrong section numbers and missing the facility directive requirement.",
+      "source_basis": "8-10-2 body: Chapter 4, IFR, Section 5, and facility directives.",
+      "match": {
+        "front": "Where are vertical separation standards for the North American-Arctic CTA found?",
+        "back": "Chapter 4, Section 8 and Chapter 8, Section 5.",
+        "card_type": "reference"
+      },
+      "replacements": [
+        {
+          "front": "What vertical separation rules apply in the North American-Arctic CTA?",
+          "back": "Apply the standard IFR altitude assignment and verification vertical separation rules plus facility directives governing transitions between flight levels and metric altitudes.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-3-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back"
+      ],
+      "problem": "Back only says '10 minutes.' Too thin. Doesn't state the condition under which this minimum applies.",
+      "source_basis": "8-3-3e1: 10 minutes provided preceding aircraft maintains Mach equal to or greater than following.",
+      "match": {
+        "front": "8-3-3: Mach technique longitudinal minima when preceding equals or exceeds following Mach",
+        "back": "10 minutes.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What is the Mach technique longitudinal minimum when the preceding aircraft maintains a Mach number equal to or greater than the following aircraft?",
+          "back": "10 minutes. Per 8-3-3e1(a), this applies when the preceding aircraft maintains a Mach number equal to or greater than that maintained by the following aircraft.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-10-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "source_fidelity"
+      ],
+      "problem": "Back says only 'Directives.' Both too thin and wrong — 8-10-1 does not mention directives. The section procedures apply.",
+      "source_basis": "8-10-1 body: procedures and minima contained in this section.",
+      "match": {
+        "front": "What may prescribe ATC procedures that differ from the general Chapter 8 rules for the North American-Arctic CTA?",
+        "back": "Directives.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "What governs ATC service in the North American-Arctic CTA?",
+          "back": "The procedures and minima contained in Section 10 of Chapter 8. Per 8-10-1.",
+          "card_type": "concept"
+        }
+      ]
+    }
+  ]
+}

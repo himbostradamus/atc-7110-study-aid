@@ -1,0 +1,2530 @@
+{
+  "version": 1,
+  "chapter": 13,
+  "target_generation_source": "question_agent",
+  "packet_sha256": "594f1952680e66ca97c50201e786df6fa022c6caf4ca3e3f8e63d3fdefda9539",
+  "manifest_sha256": "1f5e7769f52d1de3852af4db5d542babe9a5f8a996c0f5526b7ac2733fe2e271",
+  "summary": {
+    "overall": "Chapter 13 (ERAM En Route and ATOP Oceanic) content is moderately strong in operational scope but weakened by pervasive paragraph-location scaffolding, over-reliance on fill-blank format for conceptual material, and systemic answer-position bias. The chapter covers two major automation systems (ERAM EDST and ATOP) with distinct operational rules, and the agent-authored items generally capture the correct source content. However, almost every question begins with 'Under 13-X-Y,' teaching paragraph-number trivia rather than operational decision-making. All 25 fill-blank questions exhibit both paragraph-location scaffolding and correct-answer-first placement, making them the weakest items in the chapter. Flashcards are generally well-constructed with a few exceptions (one overloaded with nine capabilities, three with generic 'what is the rule?' fronts). Activities are the strongest format, with good scenario-based design in most cases, though several suffer from answer-length cues where the correct choice is conspicuously longer than distractors. The remediation replaces 28 questions (25 fill-blank conversions plus 3 MC improvements), removes 2 redundant questions, splits 2 overloaded flashcards, replaces 3 flashcards with generic references, and corrects 8 activities for answer-position bias and answer-length cues.",
+    "patterns": [
+      "Pervasive paragraph-location scaffolding: 72 of 142 items (all 70 questions plus 2 flashcards) begin with 'Under 13-X-Y' or embed paragraph numbers, teaching document structure instead of operational substance. This is the single largest quality defect.",
+      "Fill-blank questions are universally weak: all 25 fill-blank questions have both paragraph-location scaffolding and correct-answer-first, making them double-tap violations. The format reduces operational concepts to verbatim sentence-completion exercises.",
+      "Correct-answer-first bias: 41 items place the correct answer in the first position. This creates a position cue that undermines fair assessment, especially when combined with other cues.",
+      "Answer-length cues: 7 activities have correct answers that are conspicuously longer than distractors, telegraphing the answer without requiring operational reasoning.",
+      "Negative-stem overuse: 26 items use negative constructions ('which is NOT,' 'does NOT apply,' 'must NOT be used') where positive operational framing would be more effective. Some negative stems are appropriate for exclusion recognition, but many are used unnecessarily.",
+      "Flashcard construction is generally strong: most flashcards have well-identified fronts and concise backs. Exceptions are one overloaded card (9 ATOP capabilities) and three cards with generic-reference fronts ('what is the rule?').",
+      "Activities excel at scenario-based design: the situation_action activities provide realistic operational scenarios with plausible distractors. The primary issues are answer-length cues and position bias, not conceptual errors.",
+      "ATOP Oceanic section (13-2-x) has fewer defects than ERAM En Route section (13-1-x), suggesting different generation patterns between sections."
+    ],
+    "generation_guidance": [
+      "NEVER begin a question stem with 'Under 13-X-Y' or any paragraph-number reference. Make every stem self-contained with the operational scenario or concept standing on its own. The student is being tested on ATC procedures, not on document navigation.",
+      "Convert all fill-blank questions to multiple choice with plausible distractors. Fill-blank is acceptable only for exact prescribed phraseology ('(Call Sign) CPDLC Failure, (message).'), exact numeric thresholds ('64 seconds'), or defined acronyms ('CDI = Converging, Diverging, and Intersecting')—and even then, MC with distractors provides better assessment.",
+      "Randomize correct answer position across choices. Never place the correct answer consistently in the first position. Use sort order randomization at generation time.",
+      "Match distractor length to correct answer length. All choices in a question should be roughly the same length. If the correct answer requires more explanation, add equivalent detail to plausible distractors rather than leaving them terse.",
+      "Prefer positive operational framing. Frame stems around what the controller SHOULD do in a situation. Reserve negative stems for situations where exclusion recognition is genuinely the skill being tested (e.g., 'Which of the following is NOT an authorized GPD use?').",
+      "Limit flashcards to one retrieval target per card. If a source paragraph lists more than 4-5 items, split the list across multiple cards. A card with 9 capabilities or 5 distinct abnormal-condition rules on one back defeats the purpose of flashcard retrieval practice.",
+      "Use generic-reference-free flashcard fronts. Fronts should identify the specific concept being recalled, not generically ask 'what is the rule?' Each front must cue exactly one retrieval target without requiring the student to guess which rule is being asked about.",
+      "For activities, ensure the question_text matches the activity_type. situation_action activities should ask 'What should you do?' not 'Is this correct?' or 'Must this be done?' Knowledge_check activities should ask for the best answer to a conceptual question, not embed paragraph citations in the stem.",
+      "Cross-reference between similar paragraphs (13-1-14 and 13-1-15) is valuable for conceptual learning but should be done through comparison activities that do not rely on paragraph numbers. Both paragraphs follow a 'continue use with recognition' pattern with different affected data.",
+      "When generating items for table-heavy paragraphs (13-1-8 with TBL 13-1-1/2/3), focus on operational application of abbreviations rather than rote memorization of tables. Ask 'Which abbreviation would a controller use to annotate that an aircraft has been cleared to the airport?' rather than 'What does abbreviation A mean in TBL 13-1-1?'",
+      "For CPDLC and data link content, exact phraseology items ('(Call Sign) CPDLC Failure, (message).') are appropriate for rote memorization. Operational decision items (when to use CPDLC vs voice, what to do when clearance delivery is uncertain) should use scenario-based formats.",
+      "The conflict probe override rules (13-2-2(a)(3)) are operationally critical and should be tested across multiple formats: scenarios testing each of the four override conditions, flashcards for rapid recall of the four conditions, and activities for application in ambiguous situations."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "question",
+      "para_id": "13-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank question with paragraph-location scaffolding ('Under 13-1-1') teaches paragraph-number trivia. The item asks for verbatim completion of a sentence fragment rather than testing operational understanding of EDST's purpose. Fill-blank format with a single accepted answer provides no distractor engagement.",
+      "source_basis": "13-1-1 states EDST is used by the sector team in performing its strategic planning responsibilities, distinguishing EDST from tactical separation tools.",
+      "match": {
+        "question_text": "Under 13-1-1, EDST is an integrated function of ERAM used by the sector team in performing its _____ responsibilities.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the primary purpose of the En Route Decision Support Tool (EDST) for a sector team?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "EDST is an integrated ERAM function used by the sector team for strategic planning. It derives expected aircraft trajectories, predicts conflicts, and provides trial planning and flight data management. It does not provide tactical radar separation—that remains the controller's responsibility using radar track data.",
+          "choices": [
+            {
+              "text": "To provide tactical radar separation between aircraft in real time.",
+              "is_correct": false
+            },
+            {
+              "text": "To support the sector team's strategic planning responsibilities using trajectory predictions and conflict probes.",
+              "is_correct": true
+            },
+            {
+              "text": "To automatically issue clearances to pilots via data link without controller input.",
+              "is_correct": false
+            },
+            {
+              "text": "To serve as the primary voice communication switching system for en route sectors.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Paragraph-location scaffolding ('Under 13-1-1 NOTE') teaches paragraph-number trivia. The stem is long-winded and embeds the answer clue in the setup. Negative-stem construction ('How does this affect...') when an operational decision format would be clearer.",
+      "source_basis": "13-1-1 NOTE states the current plan is what EAS predicts an aircraft will fly and may include clearances not yet issued to the aircraft. Controllers must understand this discrepancy.",
+      "match": {
+        "question_text": "Under 13-1-1 NOTE, the current plan used by EDST may include clearances that have not yet been issued to the aircraft. How does this affect the relationship between the current plan and what the pilot is actually flying?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller enters a planned route amendment into ERAM but has not yet issued the clearance to the pilot. Is this amendment part of the EDST current plan?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per the note to 13-1-1, the current plan for EDST use is what EAS predicts the aircraft will fly. It may include clearances that have not yet been issued to the aircraft. This means EDST trajectory modeling may not reflect what the pilot has actually been told—controllers must account for this discrepancy when using EDST predictions.",
+          "choices": [
+            {
+              "text": "No, because only clearances the pilot has acknowledged on frequency become part of the current plan.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, the current plan is what EAS predicts the aircraft will fly and may include clearances that have not yet been issued to the aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "No, unissued clearances are held in a pending queue and are excluded from EDST trajectory modeling until issued.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the amendment was entered more than five minutes before the aircraft reaches the amended route segment.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Paragraph-location scaffolding ('Under 13-1-1') teaches paragraph-number trivia. The stem asks for a literal completion of source text rather than testing operational recognition of EDST's conflict prediction scope.",
+      "source_basis": "13-1-1 states EDST predicts conflicts between aircraft and between aircraft and special use or designated airspace.",
+      "match": {
+        "question_text": "Under 13-1-1, EDST predicts conflicts between aircraft and between aircraft and what?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "In addition to predicting conflicts between aircraft, EDST also predicts conflicts between aircraft and what?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "EDST predicts conflicts between aircraft and between aircraft and special use or designated airspace. It does not predict conflicts with weather, terrain, or surface-area traffic. Understanding EDST's scope helps controllers know when to rely on the tool versus when to apply other separation methods.",
+          "choices": [
+            {
+              "text": "Forecast convective weather cells along the route.",
+              "is_correct": false
+            },
+            {
+              "text": "Class D surface areas underneath the sector.",
+              "is_correct": false
+            },
+            {
+              "text": "Terrain obstacles along the filed route.",
+              "is_correct": false
+            },
+            {
+              "text": "Special use or designated airspace.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Paragraph-location scaffolding ('Under 13-1-1') teaches paragraph-number trivia. The question only tests recall of a listed item rather than operational application.",
+      "source_basis": "13-1-1 lists three EDST capabilities: deriving expected trajectories, predicting conflicts, and providing trial planning and enhanced flight data management.",
+      "match": {
+        "question_text": "Under 13-1-1, which capability is provided by EDST in addition to conflict prediction and trajectory derivation?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which of the following is an EDST capability that the sector team uses to evaluate whether a proposed route change would create new conflicts?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "EDST provides trial planning and enhanced flight data management capabilities in addition to trajectory derivation and conflict prediction. Trial planning allows controllers to evaluate proposed changes before issuing clearances. Radar separation and voice recording are not EDST functions.",
+          "choices": [
+            {
+              "text": "Automatic radar separation between aircraft in the same sector.",
+              "is_correct": false
+            },
+            {
+              "text": "Trial planning and enhanced flight data management.",
+              "is_correct": true
+            },
+            {
+              "text": "Voice communication recording and playback for incident review.",
+              "is_correct": false
+            },
+            {
+              "text": "Automated NOTAM dissemination to all aircraft in the sector.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-10",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding ('Under 13-1-10') and correct-answer-first. This asks for verbatim recall of a four-element list in a single fill-blank, which is a poor retrieval format. The data elements should be tested through operational application.",
+      "source_basis": "13-1-10 Note 2 lists four data elements used to model an individual aircraft's trajectory: route of flight, assigned and interim altitudes, application/removal of an adapted restriction, and aircraft type.",
+      "match": {
+        "question_text": "Under 13-1-10, list the data elements used to model an individual aircraft's trajectory.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller notices that an aircraft's conflict probe trajectory appears inconsistent with the actual flight path. Which of the following data elements, if outdated, could cause this discrepancy?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-10 Note 2 lists four data elements that model an aircraft's trajectory: route of flight, assigned and interim altitudes, application/removal of an adapted restriction, and aircraft type. Any of these being outdated can cause misleading trajectory predictions. Conflict probe accuracy requires timely updates to all of these data elements.",
+          "choices": [
+            {
+              "text": "Only the aircraft's filed true airspeed and requested cruising altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the departure airport, destination airport, and filed equipment suffix.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft's route of flight, assigned and interim altitudes, application or removal of an adapted restriction, or aircraft type.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot's name, aircraft registration number, and operator call sign.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-10",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Paragraph-location scaffolding ('Under 13-1-10') and negative-stem construction. The question tests what happens when data is not current, but the stem embeds the concept in a negative frame. The correct answer is conspicuously longer than all distractors (answer_length_cue).",
+      "source_basis": "13-1-10 Note 1 warns that stale trajectory data can make aircraft entries and notification of probe results misleading for surrounding sectors and facilities as well as the subject sector.",
+      "match": {
+        "question_text": "Under 13-1-10, what is the consequence of not keeping trajectory-model data current?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A sector team has not updated an aircraft's interim altitude in the automation after issuing a climb clearance. What is the operational risk of this delay?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-10 Note 1 states that if trajectory-modeling data is not current, the aircraft entries and notification of probe results for surrounding sectors and facilities, as well as the subject sector, may be misleading. The impact of stale data extends beyond the controller's own sector.",
+          "choices": [
+            {
+              "text": "The automation automatically deletes the flight plan and requires re-filing.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the aircraft list display is affected; the conflict probe continues unaffected using radar track data.",
+              "is_correct": false
+            },
+            {
+              "text": "Aircraft entries and probe result notifications for surrounding sectors and facilities, as well as the subject sector, may be misleading.",
+              "is_correct": true
+            },
+            {
+              "text": "The EDST disables conflict probe for that aircraft and issues a system alert to the operations supervisor.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-11",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding ('Under 13-1-11') and correct-answer-first. The stem literally says 'The first operational duty listed under 13-1-11'—teaching paragraph structure rather than operational substance. Fill-blank with single word completion is the weakest retrieval format.",
+      "source_basis": "13-1-11(a) requires adherence to all applicable delay reporting directives as the foundational duty before any recording methods.",
+      "match": {
+        "question_text": "The first operational duty listed under 13-1-11 is to adhere to all applicable _____.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the foundational requirement before any delay information recording method is selected or applied?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "13-1-11(a) requires adherence to all applicable delay reporting directives. This is the foundational duty—before selecting automated or manual recording methods, the controller must know and follow the applicable directives for their facility.",
+          "choices": [
+            {
+              "text": "Select the fastest available recording method to minimize workload.",
+              "is_correct": false
+            },
+            {
+              "text": "Notify the operations supervisor before recording any delay.",
+              "is_correct": false
+            },
+            {
+              "text": "Verify the delay exceeds 10 minutes before recording it.",
+              "is_correct": false
+            },
+            {
+              "text": "Adhere to all applicable delay reporting directives.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-11",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding ('Under 13-1-11') and correct-answer-first. Tests verbatim recall of one word from a sentence rather than operational knowledge of authorized recording methods.",
+      "source_basis": "13-1-11(b) lists flight progress strips as the manual recording option alongside facility-approved worksheets. All methods must follow the facility-defined standard.",
+      "match": {
+        "question_text": "Under 13-1-11, delay information may be automatically recorded via use of the ERAM Hold Data Menu, ERAM Hold View, a hold message, or manually on _____ or facility-approved worksheets.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A facility's automation-based delay recording methods are unavailable. What manual method may be used to record delay information?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "13-1-11(b) authorizes manual recording on flight progress strips or facility-approved worksheets, in accordance with the facility-defined standard. Strips remain an approved method when electronic options like Hold Data Menu or Hold View are not in use.",
+          "choices": [
+            {
+              "text": "A personal notepad maintained by each controller independently.",
+              "is_correct": false
+            },
+            {
+              "text": "Flight progress strips or facility-approved worksheets, in accordance with the facility-defined standard.",
+              "is_correct": true
+            },
+            {
+              "text": "Verbal relay to TMU without any written record, as TMU maintains the official log.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the ERAM Hold Data Menu, which is the sole authorized recording method.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-13",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding ('Under 13-1-13') and correct-answer-first. Tests verbatim recall of two words from text rather than operational understanding of GPD's limited authorized use.",
+      "source_basis": "13-1-13(a) limits GPD use to situational awareness and strategic planning. All other applications are prohibited. This restriction is critical for preventing misuse of trajectory-based information.",
+      "match": {
+        "question_text": "Under 13-1-13, graphic depictions of flight trajectories may be used only to aid in _____ and strategic planning.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller is using the Graphic Plan Display (GPD) to assess whether a potential reroute would keep an aircraft clear of active SUA. Is this an authorized use of the GPD?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-13(a) authorizes GPD use only to aid in situational awareness and strategic planning. Evaluating whether a reroute would keep an aircraft clear of SUA falls within strategic planning. However, the GPD must not be used for radar identification, position information, transfer of radar identification, radar separation, correlation, or point outs.",
+          "choices": [
+            {
+              "text": "No, the GPD is only authorized for post-event analysis and may not be used for active traffic planning.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the operations supervisor specifically authorizes GPD use for each planning action.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, the GPD may be used to aid situational awareness and strategic planning, which includes assessing SUA avoidance in advance.",
+              "is_correct": true
+            },
+            {
+              "text": "No, the GPD is authorized only for pilot briefings and may not be used for controller planning functions.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-13",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Paragraph-location scaffolding, negative stem, and correct-answer-first. The fill-blank format with a single accepted answer provides no distractor engagement. The negative-stem construction ('must not be used in lieu of') is used here unnecessarily—a positive operational framing would be clearer.",
+      "source_basis": "13-1-13(c) prohibits substituting trajectory-based altitude for Mode C when confirming aircraft altitude. Mode C transponder data is the required source for altitude confirmation.",
+      "match": {
+        "question_text": "Under 13-1-13, trajectory-based altitude must not be used in lieu of _____ for altitude confirmation.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller is verifying an aircraft's current altitude. The GPD shows a trajectory-based altitude prediction. The Mode C readout is operational. Which altitude source must the controller use for altitude confirmation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-13(c) explicitly prohibits using trajectory-based altitude in lieu of Mode C for altitude confirmation. The GPD trajectory altitude is a prediction based on the flight plan and wind data—it may not reflect the aircraft's actual current altitude. Only Mode C provides actual altitude data for confirmation purposes.",
+          "choices": [
+            {
+              "text": "The GPD trajectory-based altitude, because it is calculated from the most recent flight plan data and is more current.",
+              "is_correct": false
+            },
+            {
+              "text": "Mode C transponder altitude readout, because trajectory-based altitude must not be used as a substitute for Mode C.",
+              "is_correct": true
+            },
+            {
+              "text": "Either source, because both Mode C and GPD trajectory altitudes are equally valid for altitude confirmation.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot's verbal report of altitude, because automation data cannot be relied upon for confirmation.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-13",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Paragraph-location scaffolding ('Under 13-1-13(d)'). The stem explicitly cites the subparagraph letter in the question text, teaching structural trivia. The question tests which use is prohibited but the operational framing could be stronger.",
+      "source_basis": "13-1-13(d) prohibits GPD use for radar identification, position information, transfer of radar identification, radar separation, correlation, or point outs. Strategic planning and situational awareness are the only authorized uses.",
+      "match": {
+        "question_text": "Under 13-1-13(d), which of the following uses of the GPD is prohibited?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A trainee suggests using the Graphic Plan Display (GPD) to determine whether two aircraft are maintaining the required 5 NM radar separation. Is this an authorized use of the GPD?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-13(d) explicitly prohibits using the GPD for radar separation. The GPD is authorized only for situational awareness and strategic planning. Radar separation must be maintained using actual radar track data, not trajectory-based positions.",
+          "choices": [
+            {
+              "text": "Yes, the GPD provides trajectory-based positions that are acceptable for monitoring radar separation between aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only when the actual radar display is temporarily unavailable.",
+              "is_correct": false
+            },
+            {
+              "text": "No, but only because the trainee is not yet qualified to use advanced EDST functions.",
+              "is_correct": false
+            },
+            {
+              "text": "No, the GPD must not be used for radar separation. It is authorized only for situational awareness and strategic planning.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-14",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Tests verbatim recall of two data type names from the paragraph text rather than operational understanding of what to do when forecast winds are unavailable.",
+      "source_basis": "13-1-14 requires continued use of conflict probe and trial planning with recognition that alert and trajectory data may be affected when forecast wind data are unavailable.",
+      "match": {
+        "question_text": "Under 13-1-14, what specific data types may be affected when current forecast wind data are unavailable?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "Current forecast wind data become unavailable at your sector. You must continue using conflict probe and trial planning. What specific recognition must you maintain while using these tools?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-14 requires continued use of conflict probe and trial planning, but with appropriate recognition that alert data and trajectory data may be affected. The tools are not suspended—they are used with heightened awareness that wind-dependent predictions may be less reliable.",
+          "choices": [
+            {
+              "text": "That conflict probe is automatically disabled and will not generate any alerts until wind data is restored.",
+              "is_correct": false
+            },
+            {
+              "text": "That only trial planning is affected; conflict probe uses radar track data exclusively and is unaffected.",
+              "is_correct": false
+            },
+            {
+              "text": "That all EDST functions should be treated as non-operational until the supervisor confirms wind data restoration.",
+              "is_correct": false
+            },
+            {
+              "text": "That alert and trajectory data may be affected, because wind data is an input to trajectory modeling.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-16",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Tests verbatim recall of three words from the paragraph. The operational question is: what can electronic flight data be used for during an outage? The fill-blank format reduces this to a word-completion exercise.",
+      "source_basis": "13-1-16 authorizes continued use of electronic flight data during a surveillance or flight data outage to support situational awareness while transitioning to alternate automation capabilities or nonradar procedures.",
+      "match": {
+        "question_text": "Under 13-1-16, during a surveillance or flight data outage, electronic flight data may be used to support situational awareness while the facility transitions to _____ or nonradar procedures.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "During a surveillance outage, electronic flight data remains available on your display. How may this data be used while the facility transitions to backup operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-16 permits electronic flight data to be used to support situational awareness while the facility transitions to alternate automation capabilities or nonradar procedures. It does not authorize using the data as a replacement for radar separation—the data supports awareness during the transition, not control functions.",
+          "choices": [
+            {
+              "text": "As a full substitute for radar separation throughout the outage period, since the data appears current.",
+              "is_correct": false
+            },
+            {
+              "text": "To support situational awareness only while the facility transitions to alternate automation capabilities or nonradar procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "Only as a post-outage historical archive; the data must not be referenced during the outage.",
+              "is_correct": false
+            },
+            {
+              "text": "To automatically control all aircraft in the affected airspace until surveillance is restored.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-17",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding, negative stem, and correct-answer-first. Tests verbatim recall of one word ('coordination'). Teaches paragraph-number trivia and uses negative construction when a positive operational question would be more effective.",
+      "source_basis": "13-1-17 NOTE states that unless otherwise covered in an LOA or facility directive, activating or scheduling SAA in the Airspace Status View does NOT constitute coordination for activation of airspace.",
+      "match": {
+        "question_text": "Under 13-1-17, activating or scheduling SAA in the Airspace Status View does NOT by itself constitute _____ for activation of airspace.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller activates a Special Activity Airspace (SAA) in the ERAM Airspace Status View. The controller then tells the using agency that the airspace is now active. What is wrong with this exchange?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per the note to 13-1-17, activating or scheduling SAA in the Airspace Status View does NOT by itself constitute coordination for activation of airspace—unless an LOA or facility directive specifically provides otherwise. The controller must complete actual coordination, not rely on the automation entry alone.",
+          "choices": [
+            {
+              "text": "Nothing is wrong; Airspace Status View activation always serves as complete coordination for SAA activation.",
+              "is_correct": false
+            },
+            {
+              "text": "Airspace Status View activation alone does not constitute coordination for airspace activation unless an LOA or facility directive provides otherwise. Separate coordination is required.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller should have waited 10 minutes between activation and notification to allow the system to propagate the status.",
+              "is_correct": false
+            },
+            {
+              "text": "The activation is incorrect because SAA can only be activated by the operations supervisor, not a controller.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Tests verbatim recall of two alert types from the paragraph. The fill-blank format with a single long accepted answer is educationally weak.",
+      "source_basis": "13-1-2(a) requires actively scanning EDST for predicted aircraft-to-aircraft and aircraft-to-airspace alerts.",
+      "match": {
+        "question_text": "Under 13-1-2, what two types of alerts must the sector team actively scan for in EDST information?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "While scanning the EDST display, a controller notices a predicted loss of separation between two aircraft at FL350. The controller also notices an indication that an aircraft will enter active restricted airspace. Which of these requires the controller's attention under EDST conflict probe scanning requirements?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "13-1-2(a) requires actively scanning for both predicted aircraft-to-aircraft and aircraft-to-airspace alerts. Both the separation loss and the airspace incursion prediction demand the controller's evaluation. EDST is a strategic planning tool and the controller must actively monitor both alert types.",
+          "choices": [
+            {
+              "text": "Only the separation loss. Aircraft-to-airspace alerts are informational and do not require controller action.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the airspace incursion. Conflict probe handles aircraft-to-aircraft separation automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "Both require attention. Controllers must actively scan for predicted aircraft-to-aircraft AND aircraft-to-airspace alerts.",
+              "is_correct": true
+            },
+            {
+              "text": "Neither requires immediate attention; both are advisory only and are handled by the automation.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding, generic reference flag, and correct-answer-first. Tests verbatim recall of a parenthetical definition. The stem contains 'what does the paragraph identify'—teaching paragraph-reading rather than operational application.",
+      "source_basis": "13-1-3(c) identifies a flight direction constraint as 'inappropriate altitude for direction of flight.' Trial planning can evaluate the feasibility of removing this constraint.",
+      "match": {
+        "question_text": "Under 13-1-3, trial planning is used to evaluate the feasibility of removing a flight direction constraint. What does the paragraph identify as an example of an inappropriate constraint on flight direction?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "An aircraft is cruising at an altitude that is inappropriate for its direction of flight (e.g., an eastbound aircraft at a westbound cruising altitude). When EDST is operational and sector priorities permit, what can the controller use trial planning to evaluate regarding this situation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-3(c) authorizes using trial planning to evaluate the feasibility of removing a flight direction constraint—specifically identified as an inappropriate altitude for direction of flight. Trial planning allows the controller to assess whether changing the aircraft to a correct altitude for its direction would create any new conflicts.",
+          "choices": [
+            {
+              "text": "Nothing. Flight direction constraints are permanent and cannot be evaluated or removed through trial planning.",
+              "is_correct": false
+            },
+            {
+              "text": "The feasibility of removing the flight direction constraint by evaluating whether a proper altitude assignment would create new conflicts.",
+              "is_correct": true
+            },
+            {
+              "text": "Whether to issue a pilot deviation for operating at the wrong altitude for direction of flight.",
+              "is_correct": false
+            },
+            {
+              "text": "Only whether the aircraft has sufficient fuel to reach its destination at the inappropriate altitude.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Tests verbatim recall of two words ('facility directives'). Provides no operational engagement or distractor reasoning.",
+      "source_basis": "13-1-5(i) requires the Drop Track Delete option to be used in accordance with facility directives. This is a locally governed function, not a blanket authorization.",
+      "match": {
+        "question_text": "Under 13-1-5, the Drop Track Delete option must be used in accordance with what?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller wants to use the Drop Track Delete option to remove an aircraft from the display after it has landed at its destination. What governs whether and how this option may be used?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "13-1-5(i) states the Drop Track Delete option must be used in accordance with facility directives. This is not a blanket function available at every controller's discretion—the facility directive specifies when and how it may be applied.",
+          "choices": [
+            {
+              "text": "Controller discretion; any controller may use it whenever an aircraft is no longer needed on the display.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot's request; Drop Track Delete is used only when the pilot asks to be removed from the system.",
+              "is_correct": false
+            },
+            {
+              "text": "Facility directives, which specify when and how the Drop Track Delete option may be used.",
+              "is_correct": true
+            },
+            {
+              "text": "The TMU supervisor's real-time authorization for each individual deletion.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Tests verbatim recall of two words ('special significance'). The concept of SPA usage is better tested through scenario-based application.",
+      "source_basis": "13-1-5(e) says the SPA should be used to group aircraft that have special significance, such as aircraft to be sequenced, air refueling missions, and formations.",
+      "match": {
+        "question_text": "Under 13-1-5, the Special Posting Area (SPA) should be used to group aircraft that have _____.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "Your sector is working two air refueling missions, a formation flight of four F-16s, and three commercial arrivals that need sequencing for the arrival meter. How should these flights be organized on the ACL?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-5(e) says the Special Posting Area (SPA) should be used to group aircraft that have special significance—with air refueling missions, formations, and aircraft to be sequenced listed as examples. Grouping these flights in the SPA helps the sector team maintain awareness of aircraft requiring special attention.",
+          "choices": [
+            {
+              "text": "Leave all flights in the standard ACL. The SPA is reserved only for emergency aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Move only the formation flight to the SPA. Refueling and sequencing flights do not qualify.",
+              "is_correct": false
+            },
+            {
+              "text": "Group them by altitude in the ACL. The SPA function is not relevant to flight organization.",
+              "is_correct": false
+            },
+            {
+              "text": "Group the refueling missions, formation, and sequencing arrivals in the SPA since they all have special significance.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-6",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding, negative stem, and correct-answer-first. Tests verbatim recall of three words. The negative-stem construction ('when automated coordination...is NOT available') adds unnecessary cognitive load.",
+      "source_basis": "13-1-6(a) provides two methods for annotating manual coordination status when automated coordination is unavailable: the Coordination Menu or a flight progress strip, in accordance with facility directives.",
+      "match": {
+        "question_text": "Under 13-1-6, when automated coordination with a facility is not available, manual coordination status may be annotated using the Coordination Menu or a _____.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "You need to coordinate with a VFR tower that has no automated coordination capability with your ERAM facility. What methods are available to annotate the manual coordination status?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "13-1-6(a) authorizes two methods for annotating manual coordination when automated coordination is unavailable: the Coordination Menu or a flight progress strip. Both must be used in accordance with facility directives. International facilities and VFR towers are cited as examples of facilities where automated coordination may not be available.",
+          "choices": [
+            {
+              "text": "Verbal confirmation only; no written annotation is required when automation is not available.",
+              "is_correct": false
+            },
+            {
+              "text": "An email to the receiving facility within 30 minutes of the coordination event.",
+              "is_correct": false
+            },
+            {
+              "text": "The Coordination Menu or a flight progress strip, in accordance with facility directives.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the Coordination Menu; flight progress strips are not authorized for coordination annotation.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-7",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Asks to 'list the five approved methods' in a single fill-blank field with a very long accepted answer string. This is a poor retrieval format for a five-item list.",
+      "source_basis": "13-1-7 lists five approved methods for annotating holding instructions: Hold View, Hold Data Menu, hold message, flight progress strip, or facility-approved worksheet. Each must be used in accordance with facility directives.",
+      "match": {
+        "question_text": "Under 13-1-7, list the five approved methods for annotating holding instructions for flights in hold.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A flight has entered holding at an en route fix. Which of the following is an approved method for annotating the holding instructions in ERAM?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-7 authorizes five methods for annotating holding instructions: Hold View, Hold Data Menu, hold message, flight progress strip, or facility-approved worksheet. All must be used in accordance with facility directives. No single method is mandatory—the facility directive specifies which method to use.",
+          "choices": [
+            {
+              "text": "The Hold View, Hold Data Menu, hold message, a flight progress strip, or a facility-approved worksheet.",
+              "is_correct": true
+            },
+            {
+              "text": "Only a paper flight progress strip with the holding clearance written in full text.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the ERAM Hold Data Menu, which is the sole automation method authorized.",
+              "is_correct": false
+            },
+            {
+              "text": "A verbal record maintained by the controller; written annotation is optional.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-8",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding, negative stem, and correct-answer-first. The stem asks about what does NOT pass on handoff and tests verbatim recall of 'it must be coordinated.' The operational importance of Free Text Area limitations is better tested through scenario-based application.",
+      "source_basis": "13-1-8 NOTE states Free Text Area information does not pass on handoff and, if necessary, must be coordinated. Controllers cannot rely on Free Text entries to convey information to the receiving sector.",
+      "match": {
+        "question_text": "Under 13-1-8 NOTE, information entered into the Free Text Area does not pass on handoff. What must be done if that information needs to reach the receiving controller?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller enters important control information in the ACL Free Text Area about an aircraft that will be handed off in five minutes. Will the receiving sector automatically see this information after the handoff?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per the note to 13-1-8, information entered into the Free Text Area does not pass on handoff. If the information needs to reach the receiving controller, it must be separately coordinated. The Free Text Area is for reference purposes only at the entering sector.",
+          "choices": [
+            {
+              "text": "Yes. All ACL data, including Free Text entries, transfers automatically with the aircraft on handoff.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Free Text Area information does not pass on handoff and must be separately coordinated if needed by the receiving sector.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only if the Free Text Area remains open and visible at the time of handoff.",
+              "is_correct": false
+            },
+            {
+              "text": "No, but the information will appear in the receiving sector's message queue for manual retrieval.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-9",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Tests verbatim recall of two words ('verbally coordinated'). The stem reads like a sentence-completion exercise with no operational context.",
+      "source_basis": "13-1-9(g) requires RAN amendment at the first control position displaying it, with two exceptions: verbal coordination or facility directive provisions. The track control requirement also applies before removing RAN coding.",
+      "match": {
+        "question_text": "Under 13-1-9, Route Action Notifications (RAN) must be amended at the first control position that displays the RAN unless _____ or as specified in appropriate facility directives.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A Route Action Notification (RAN) appears on your display indicating a route processing error for an aircraft your sector has track control for. What must you do about this RAN?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-9(g) requires Route Action Notifications to be amended at the first control position that displays the RAN, unless verbally coordinated or as specified in appropriate facility directives. Additionally, RAN coding must not be removed unless the sector has track control or it has been otherwise coordinated.",
+          "choices": [
+            {
+              "text": "Ignore the RAN. Route processing errors are handled automatically by the ERAM system without controller input.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for the next sector to handle it. Route Action Notifications are resolved at the destination facility.",
+              "is_correct": false
+            },
+            {
+              "text": "Delete the RAN coding immediately to clear the display, then investigate the route error afterward.",
+              "is_correct": false
+            },
+            {
+              "text": "Amend the RAN at your position—the first control position displaying it—unless verbally coordinated or specified otherwise in facility directives.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-9",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Tests verbatim recall of two words ('IAFDOF Manual'). The question asks 'what must remain deselected'—teaching buttonology rather than operational reasons for using automatic IAFDOF mode.",
+      "source_basis": "13-1-9(a) requires IAFDOF to be used in automatic mode (IAFDOF Manual deselected) unless otherwise authorized in a facility directive. Automatic mode ensures consistent altitude-for-direction checking.",
+      "match": {
+        "question_text": "Under 13-1-9, the IAFDOF feature must be used in automatic mode. What must remain deselected to maintain this mode?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "Why must the Inappropriate Altitude for Direction of Flight (IAFDOF) feature normally remain in automatic mode rather than manual mode?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-9(a) requires IAFDOF to be used in automatic mode (IAFDOF Manual deselected) unless a facility directive authorizes otherwise. Automatic mode ensures the system continuously monitors all flights for altitude-for-direction errors without relying on manual controller intervention to flag each case.",
+          "choices": [
+            {
+              "text": "Manual mode consumes excessive system resources and may slow down the EDST display for other functions.",
+              "is_correct": false
+            },
+            {
+              "text": "Automatic mode is faster at resolving IAFDOF conflicts without controller evaluation of each case.",
+              "is_correct": false
+            },
+            {
+              "text": "Automatic mode ensures continuous system monitoring of all flights for altitude-for-direction errors. Manual mode is authorized only when a facility directive specifically permits it.",
+              "is_correct": true
+            },
+            {
+              "text": "Manual mode was deprecated in the most recent ERAM software update and will be removed entirely.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-2-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Tests verbatim recall of one word ('accurate'). This is a foundational assumption of conflict probe use that deserves more operational context than a fill-blank.",
+      "source_basis": "13-2-2(a)(1)(a) states controllers must assume that conflict probe separation calculations are accurate. This is the baseline assumption for using conflict probe as a decision support tool in ATOP airspace.",
+      "match": {
+        "question_text": "Under 13-2-2, controllers must assume that conflict probe separation calculations are _____.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "In ATOP oceanic airspace where conflict probe is being used as a decision support tool, what assumption must controllers make about the conflict probe separation calculations?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "13-2-2(a)(1)(a) requires controllers to assume that conflict probe separation calculations are accurate. This is the foundational assumption—controllers must utilize probe results to initiate and maintain prescribed separation minima unless one of the four override conditions in 13-2-2(a)(3) applies.",
+          "choices": [
+            {
+              "text": "That the calculations are advisory only and may be disregarded at the controller's discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "That the calculations are conservative and always overstate the actual conflict risk by a safety margin.",
+              "is_correct": false
+            },
+            {
+              "text": "That the calculations are valid only when the aircraft are both ADS-C equipped with contracts active.",
+              "is_correct": false
+            },
+            {
+              "text": "That the calculations are accurate, forming the basis for using probe to initiate and maintain prescribed separation minima.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-2-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Asks to 'list the four reduced separation flags' in a single fill-blank with four code letters. The codes are operational but testing them as a four-letter string provides no operational context or distractor engagement.",
+      "source_basis": "13-2-3(c)(1)(b) lists four reduced separation flags: M (MNT), R (Reduced MNT), D (Distance-based longitudinal), and W (RVSM). Controllers must ensure these are selected appropriately for each flight.",
+      "match": {
+        "question_text": "Under 13-2-3, list the four reduced separation flags that must be selected appropriately for each flight on the electronic flight strip.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller is reviewing the electronic flight strip for an aircraft applying Mach Number Technique for longitudinal separation. Which reduced separation flag must be selected on the strip for this aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-2-3(c)(1)(b) requires four reduced separation flags to be selected appropriately: M for Mach Number Technique (MNT), R for Reduced MNT, D for Distance-based longitudinal, and W for Reduced Vertical Separation Minimum (RVSM). The M flag corresponds to standard MNT operations.",
+          "choices": [
+            {
+              "text": "R—Reduced MNT, which applies to all longitudinal separation methods.",
+              "is_correct": false
+            },
+            {
+              "text": "M—Mach Number Technique (MNT).",
+              "is_correct": true
+            },
+            {
+              "text": "D—Distance-based longitudinal, which also covers MNT operations.",
+              "is_correct": false
+            },
+            {
+              "text": "W—RVSM, because MNT is a vertical separation standard.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-2-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Tests exact CPDLC failure phraseology. This is a prescribed phraseology where exact recall is appropriate, but the fill-blank format with paragraph-location scaffolding detracts from the operational context. Converting to MC preserves the exact recall demand while adding distractor engagement.",
+      "source_basis": "13-2-4(c)(5) prescribes the exact phraseology: '(Call Sign) CPDLC Failure, (message).' This is a required preface on initial voice contact after a CPDLC interruption.",
+      "match": {
+        "question_text": "Under 13-2-4(c)(5), on initial voice contact with an aircraft after a CPDLC failure, the controller must preface the message with what phraseology?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "After a CPDLC interruption, you make initial voice contact with the affected aircraft to deliver a revised clearance. What exact phraseology must preface your transmission?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-2-4(c)(5) prescribes the exact phraseology for initial voice contact after a CPDLC failure: '(Call Sign) CPDLC Failure, (message).' This preface alerts the flight crew that data link is not functioning and that voice communications are in use. The exact wording is mandatory, not discretionary.",
+          "choices": [
+            {
+              "text": "\"(Call Sign) CPDLC Failure, (message).\"",
+              "is_correct": true
+            },
+            {
+              "text": "\"(Call Sign) Data Link Lost, (message).\"",
+              "is_correct": false
+            },
+            {
+              "text": "\"(Call Sign) Reverting to Voice, (message).\"",
+              "is_correct": false
+            },
+            {
+              "text": "\"(Call Sign) CPDLC Interrupted, (message).\"",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-2-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Tests verbatim recall of one word ('primary'). The operational conditions that trigger CPDLC as the primary means of communication are more important than the word 'primary' itself.",
+      "source_basis": "13-2-4(a)(1) mandates CPDLC as the primary means of communication when CPDLC is available and the CPDLC-connected aircraft is operating outside VHF coverage. The word 'must' makes this mandatory.",
+      "match": {
+        "question_text": "Under 13-2-4, when CPDLC is available and CPDLC-connected aircraft are operating outside of VHF coverage, CPDLC must be used as the _____ means of communication.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A CPDLC-connected aircraft is operating over the North Atlantic, well outside VHF coverage, and CPDLC is available. Which means of communication must be used as the primary method for routine ATC communications with this aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "13-2-4(a)(1) mandates CPDLC as the primary means of communication when CPDLC is available and the CPDLC-connected aircraft is operating outside VHF coverage. Voice may be used when it provides an operational advantage or when workload or equipment capabilities demand it, but CPDLC is the primary method.",
+          "choices": [
+            {
+              "text": "HF voice, because oceanic aircraft always require voice as the primary communication method.",
+              "is_correct": false
+            },
+            {
+              "text": "SATCOM voice, because satellite communications provide the most reliable oceanic coverage.",
+              "is_correct": false
+            },
+            {
+              "text": "Either CPDLC or voice at the controller's preference, because both are equally authorized as primary methods.",
+              "is_correct": false
+            },
+            {
+              "text": "CPDLC, because the aircraft is outside VHF coverage and CPDLC is available.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-2-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Tests exact numeric recall of 64 seconds—an exact value that is appropriate for rote memorization. However, the fill-blank with single answer provides no distractor engagement.",
+      "source_basis": "13-2-5 NOTE states ATOP enforces an increased ADS-C reporting rate of 64 seconds when the weather deviation tool is active.",
+      "match": {
+        "question_text": "Under 13-2-5 NOTE, what ADS-C reporting rate does ATOP enforce when the weather deviation tool is active?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "When the weather deviation tool is active in ATOP, what increased ADS-C reporting rate does the system enforce?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per the note to 13-2-5, ATOP enforces an increased ADS-C reporting rate of 64 seconds when the weather deviation tool is active. This higher reporting rate provides more frequent position updates to support the additional CDI mileage buffer applied during weather deviation operations.",
+          "choices": [
+            {
+              "text": "32 seconds.",
+              "is_correct": false
+            },
+            {
+              "text": "64 seconds.",
+              "is_correct": true
+            },
+            {
+              "text": "128 seconds.",
+              "is_correct": false
+            },
+            {
+              "text": "The standard reporting interval; no increase is enforced.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-2-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Tests acronym expansion for CDI—a defined term where exact recall is appropriate. However, fill-blank with single answer provides no distractor engagement.",
+      "source_basis": "13-2-5 defines CDI as Converging, Diverging, and Intersecting. The weather deviation tool adds this mileage buffer to required separation when RNP distance-based longitudinal separation is applied.",
+      "match": {
+        "question_text": "Under 13-2-5, CDI stands for what three types of mileage?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "The ATOP weather deviation tool adds a CDI mileage buffer to required separation calculations. What does CDI stand for?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "CDI stands for Converging, Diverging, and Intersecting. The weather deviation tool adds this additional mileage buffer to the required separation when RNP distance-based longitudinal separation is being applied. The CDI buffer is enforced by ATOP conflict probe.",
+          "choices": [
+            {
+              "text": "Course Deviation Indicator.",
+              "is_correct": false
+            },
+            {
+              "text": "Conflict Detection Interface.",
+              "is_correct": false
+            },
+            {
+              "text": "Clearance Delivery Instruction.",
+              "is_correct": false
+            },
+            {
+              "text": "Converging, Diverging, and Intersecting.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-2-7",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffolding and correct-answer-first. Tests verbatim completion of a sentence with two blanks. The operational priority-of-duties concept is better tested through scenario application.",
+      "source_basis": "13-2-7 requires ATC tasks to be completed according to priority of duties and the multiple-controller operation to be accomplished according to facility directives.",
+      "match": {
+        "question_text": "Under 13-2-7, when operating in a multiple controller operation at an ATOP workstation, ATC tasks must be completed according to their _____, and the operation must be accomplished according to _____.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "At a multiple-controller ATOP workstation, the team has a pending red conflict resolution, three non-conformant messages in the error queue, and an administrative coordination request. What must govern how the team prioritizes and accomplishes these tasks?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-2-7 requires all ATC tasks to be completed according to their priority of duties, and the multiple-controller operation itself must be accomplished according to facility directives. Priority of duties governs task ordering—higher-priority duties like conflict resolution take precedence over administrative tasks. Facility directives govern how the team operates together.",
+          "choices": [
+            {
+              "text": "Tasks may be completed in any order as long as all are done by end of shift. Facility directives for team operations are guidelines only.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the radar controller must follow duty priorities; other team members work independently.",
+              "is_correct": false
+            },
+            {
+              "text": "Tasks must be completed according to their priority of duties, and the multiple-controller operation must be accomplished according to facility directives.",
+              "is_correct": true
+            },
+            {
+              "text": "Administrative messages take precedence to keep queues clear; operational tasks are secondary.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-10",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Paragraph-location scaffolding and correct-answer-first. The stem asks 'when may an exception...be authorized' and the correct answer contains the longest text. The question tests recall of a specific authorization source.",
+      "source_basis": "13-1-10(b) provides an exception to interim altitude entry requirements only for certain ARTCC sectors if explicitly defined in an appropriate facility directive. This is not a blanket exception and not at controller discretion.",
+      "match": {
+        "question_text": "Under 13-1-10, when may an exception to the requirement to enter or update interim altitudes be authorized?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A sector team has been too busy to update an aircraft's interim altitude in the automation. One controller argues the entry can be skipped because an exception in the automation rules allows this when workload is high. Is the controller correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "13-1-10(b) provides an exception to the interim altitude entry requirement only for certain ARTCC sectors, and only if explicitly defined in an appropriate facility directive. Workload is not a basis for the exception. Unless a facility directive specifically authorizes the exception for that sector, the entry requirement remains in effect regardless of how busy the sector is.",
+          "choices": [
+            {
+              "text": "No. The exception applies only to certain ARTCC sectors, and only if explicitly defined in a facility directive. Workload alone does not authorize skipping the entry.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes. The exception applies whenever the sector team determines that the entry would interfere with higher-priority duties.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the aircraft is level at the new altitude as confirmed by Mode C for at least two radar updates.",
+              "is_correct": false
+            },
+            {
+              "text": "No. There are no exceptions to the requirement to enter interim altitudes under any circumstances.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Paragraph-location scaffolding and negative-stem construction ('does NOT account for'). The question only tests one of two gap types (greater separation needed) but ignores the second gap (reduced separation permitted). Operational framing is weak.",
+      "source_basis": "13-1-2 NOTE states conflict probe does not account for instances where greater separation may be needed (e.g., non-standard formations, A380) OR where reduced separation is permitted (e.g., 3 mile airspace).",
+      "match": {
+        "question_text": "Under 13-1-2 NOTE, conflict probe alerts are based on approved radar separation but do NOT account for which of the following?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A conflict probe alert shows standard 5 NM separation will be maintained between an A380 and a following B737. The controller knows that greater wake turbulence separation is required behind an A380. What should the controller recognize about this conflict probe alert?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per the note to 13-1-2, conflict probe alerts are based on approved radar separation but do not account for instances where greater separation may be needed—such as non-standard formations and A380 operations. The controller must apply additional wake turbulence separation beyond what the conflict probe alert shows. The probe also does not account for situations where reduced separation is permitted (e.g., 3 mile airspace).",
+          "choices": [
+            {
+              "text": "The alert may not reflect the additional separation needed for A380 wake turbulence, because conflict probe does not account for situations requiring greater separation.",
+              "is_correct": true
+            },
+            {
+              "text": "The alert is definitive and no additional separation is needed, because conflict probe accounts for all aircraft types.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller should suppress the alert because it is a false indication for heavy aircraft operations.",
+              "is_correct": false
+            },
+            {
+              "text": "The A380 should be reclassified in the system to a standard heavy category to correct the probe calculation.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Paragraph-location scaffolding and negative-stem construction ('which...is NOT one of the four uses'). Negative-stem format forces the student to reason by exclusion. A positive operational framing would be more effective.",
+      "source_basis": "13-1-3 lists four uses for trial planning: solutions to predicted conflicts, feasibility of granting user requests, removal of flight direction constraints, and removal of static restrictions. Weather deviation evaluation is not listed.",
+      "match": {
+        "question_text": "Under 13-1-3, which of the following is NOT one of the four uses for the trial plan capability when EDST is operational and sector priorities permit?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When EDST is operational and sector priorities permit, for which of the following purposes should the trial plan capability be used?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-3 authorizes trial planning for four purposes: evaluating solutions to predicted conflicts, assessing the feasibility of granting user requests, evaluating the feasibility of removing a flight direction constraint, and evaluating the feasibility of removing a static restriction. Weather deviation route evaluation is not a listed trial planning use.",
+          "choices": [
+            {
+              "text": "Evaluating the feasibility of a weather deviation route around a convective cell.",
+              "is_correct": false
+            },
+            {
+              "text": "Evaluating solutions to a predicted conflict between two aircraft at FL370.",
+              "is_correct": false
+            },
+            {
+              "text": "Evaluating the feasibility of granting a pilot's request for a more direct route.",
+              "is_correct": true
+            },
+            {
+              "text": "Evaluating whether a static restriction can be removed from an aircraft's route.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Paragraph-location scaffolding and negative-stem construction ('does NOT apply when'). The correct answer is not first but the negative framing forces exclusion reasoning when a positive operational scenario would be more effective.",
+      "source_basis": "13-1-2(e) requires Stop Probe to be restarted before transfer of control unless otherwise coordinated. The NOTE exempts aircraft entering a non-EDST facility from this requirement.",
+      "match": {
+        "question_text": "Under 13-1-2(e), the requirement to restart conflict probe before transfer of control when Stop Probe has been activated does NOT apply when:",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller has activated Stop Probe for an aircraft. The aircraft is being handed off to a non-EDST tower facility. Is the controller required to restart conflict probe before transferring control?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The note to 13-1-2(e) explicitly exempts aircraft entering a non-EDST facility from the Stop Probe restart requirement before transfer of control. For all other transfers, conflict probe must be restarted before transfer unless otherwise coordinated.",
+          "choices": [
+            {
+              "text": "Yes. Stop Probe must always be restarted before any transfer of control regardless of the receiving facility type.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the receiving controller specifically requests the restart.",
+              "is_correct": false
+            },
+            {
+              "text": "No, but only because Stop Probe deactivates automatically when the aircraft crosses the sector boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The requirement to restart conflict probe before transfer does not apply to aircraft entering a non-EDST facility.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-9",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Paragraph-location scaffolding, negative-stem construction, and correct-answer-first. Triple-flagged. The stem asks a yes/no question about ERT coding authority, which could be reframed as a positive operational scenario.",
+      "source_basis": "13-1-9(f) prohibits sending or acknowledging ERT coding unless the sector has track control for the flight or it has been otherwise coordinated. The first sector displaying ERT handles it before handoff.",
+      "match": {
+        "question_text": "Under 13-1-9, must ERT coding be sent or acknowledged by a sector that does not have track control for the flight?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A sector that does not have track control for a flight notices ERT coding on the display. Another controller at that sector wants to send the ERT route acknowledgement to clear the coding. Is this authorized?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-9(f) states do not send or acknowledge ERT coding unless the sector has track control for the flight or it has been otherwise coordinated. ERT coding must be handled by the first sector displaying it or by a sector with track control. A sector without track control that attempts to send or acknowledge ERT coding violates this requirement.",
+          "choices": [
+            {
+              "text": "No. ERT coding must not be sent or acknowledged unless the sector has track control for the flight or it has been otherwise coordinated.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes. Any sector that can see ERT coding is authorized to send or acknowledge it to clear the display.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the ERT coding has been present on the display for more than 10 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "No, but only because ERT coding must first be escalated to the operations supervisor for resolution.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-6",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Paragraph-location scaffolding, negative-stem construction ('NOT be available'), and correct-answer-first. Triple-flagged. The stem tests trivial recall of example facility types rather than operational understanding of when manual coordination is needed.",
+      "source_basis": "13-1-6(a) gives international facilities and VFR towers as examples where automated coordination may not be available. The operative point is recognizing when automated coordination is unavailable and what methods to use.",
+      "match": {
+        "question_text": "Under 13-1-6, which facilities are given as examples of where automated coordination may not be available?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When automating a handoff, you notice that the receiving facility does not appear in the automated coordination system. What types of facilities commonly lack automated coordination, and what should you use instead?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "13-1-6(a) identifies international facilities and VFR towers as examples of facilities where automated coordination may not be available. In these cases, manual coordination status must be annotated using the Coordination Menu or a flight progress strip, in accordance with facility directives.",
+          "choices": [
+            {
+              "text": "International facilities or VFR towers are examples. Use the Coordination Menu or a flight progress strip to annotate manual coordination, per facility directives.",
+              "is_correct": true
+            },
+            {
+              "text": "Any facility using a different automation platform, regardless of type. Use voice coordination only.",
+              "is_correct": false
+            },
+            {
+              "text": "Only military facilities. Use the Coordination Menu exclusively, as flight progress strips are not authorized.",
+              "is_correct": false
+            },
+            {
+              "text": "Any facility outside the ARTCC's airspace boundary. Use an LOA-prescribed verbal relay procedure.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-14",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "educational_coherence",
+        "redundancy"
+      ],
+      "problem": "This question is nearly redundant with the activity e565ae48 for the same paragraph. Both test the same operational concept (continued use of conflict probe and trial planning with recognition that data may be affected when forecast winds are unavailable). The activity provides better operational context through a scenario. Additionally, the question has paragraph-location scaffolding and negative-stem construction.",
+      "source_basis": "13-1-14 requires continued use of conflict probe and trial planning with appropriate recognition that alert and trajectory data may be affected. The concept is already adequately tested by activity e565ae48.",
+      "match": {
+        "question_text": "Under 13-1-14, when current forecast wind data are not available, what must controllers continue to do, and with what caveat?",
+        "question_type": "multiple_choice"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-7",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "educational_coherence",
+        "redundancy"
+      ],
+      "problem": "This question tests the same concept as the fill-blank question 8b4c041e for 13-1-7 (holding annotation methods). Both ask about the facility-directives requirement for holding annotation. The fill-blank has already been replaced with a better MC question above. This item adds no unique retrieval and has paragraph-location scaffolding with correct-answer-first.",
+      "source_basis": "13-1-7 requires holding instruction annotation in accordance with facility directives. This concept is adequately covered by the replacement for 8b4c041e which embeds the facility-directives requirement within the explanation and answer.",
+      "match": {
+        "question_text": "Under 13-1-7, holding instruction annotation must be performed in accordance with what?",
+        "question_type": "multiple_choice"
+      }
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "13-2-1",
+      "action": "split",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "This flashcard attempts to list all nine ATOP capabilities on the back, making it overloaded (automated_flag: overloaded_back). A single flashcard with nine distinct retrieval targets violates the principle that the back must be concise enough for one retrieval target. Additionally has paragraph-location scaffolding in the front title.",
+      "source_basis": "13-2-1(b) lists nine ATOP capabilities across surveillance, data link, weather, decision support, and flight data categories.",
+      "match": {
+        "front": "ATOP: nine capabilities listed in 13-2-1(b)",
+        "back": "1. MEARTS-based radar surveillance. 2. Conflict Prediction and Reporting. 3. ADS-B. 4. ADS-C. 5. CPDLC. 6. AIDC. 7. Weather Deviation Tool. 8. Additional Decision Support Tools (situational awareness). 9. Electronic Flight Data including Electronic Flight Strips. Per 13-2-1(b).",
+        "card_type": "definition"
+      },
+      "replacements": [
+        {
+          "front": "ATOP surveillance capabilities: what surveillance processing functions does ATOP include?",
+          "back": "MEARTS-based radar surveillance processing, ADS-B (Automatic Dependent Surveillance-Broadcast), and ADS-C (Automatic Dependent Surveillance-Contract). Per 13-2-1(b)(1,3,4).",
+          "card_type": "definition"
+        },
+        {
+          "front": "ATOP communication and decision support capabilities: what data link, coordination, weather, and flight data tools does ATOP include?",
+          "back": "CPDLC (Controller Pilot Data Link Communications), AIDC (ATS Interfacility Data Communications), Weather Deviation Tool, additional Decision Support Tools for situational awareness, and Electronic Flight Data including Electronic Flight Strips. Also includes Conflict Prediction and Reporting. Per 13-2-1(b)(2,5-9).",
+          "card_type": "definition"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "13-1-14",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Automated flag: generic_reference. Front says 'what is the rule?'—a generic reference that provides no retrieval cue. The front should identify the concept being recalled, not generically ask for 'the rule.'",
+      "source_basis": "13-1-14 requires continued use of conflict probe and trial planning with appropriate recognition that alert and trajectory data may be affected when forecast wind data are unavailable.",
+      "match": {
+        "front": "Forecast wind data unavailable: what is the rule?",
+        "back": "CONTINUE using conflict probe and trial planning, but with appropriate recognition that alert AND trajectory data may be affected. Per 13-1-14.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "Forecast wind data unavailable: what must continue and what caveat applies?",
+          "back": "CONTINUE using conflict probe and trial planning, but with appropriate recognition that alert AND trajectory data may be affected. Do not suspend the tools. Per 13-1-14.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "13-1-15",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Automated flag: generic_reference. Front says 'what is the rule?'—same generic phrasing as the 13-1-14 flashcard. The front should identify the specific operational concept being recalled.",
+      "source_basis": "13-1-15 requires continued use of EDST with appropriate recognition that alert data may be affected when connectivity to an adjacent ERAM facility is lost.",
+      "match": {
+        "front": "Loss of interfacility connectivity to adjacent ERAM facility: what is the rule?",
+        "back": "CONTINUE use of EDST, but with appropriate recognition that alert data may be affected. Per 13-1-15.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "Loss of interfacility connectivity to adjacent ERAM facility: what must continue and what caveat applies?",
+          "back": "CONTINUE use of EDST, but with appropriate recognition that alert data may be affected. Do not suspend EDST. Per 13-1-15.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "13-1-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Automated flag: generic_reference. Front asks 'what is the rule?'—too generic to cue specific recall. The front should identify the concept: what to do when a trial plan shows no alerts for a user request.",
+      "source_basis": "13-1-4 directs every effort to grant a user request when trial plan shows no alerts, unless the change is likely to adversely affect another sector.",
+      "match": {
+        "front": "Trial plan shows no alerts for a user request: what is the rule?",
+        "back": "Make EVERY EFFORT to grant the request, UNLESS the change is likely to adversely affect operations at another sector. Per 13-1-4.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "Trial plan shows no alerts for a user-requested route change: what standard of effort applies and what is the exception?",
+          "back": "Make EVERY EFFORT to grant the request, UNLESS the change is likely to adversely affect operations at another sector. Per 13-1-4.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "13-2-4",
+      "action": "split",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "This flashcard covers multiple distinct retrieval targets on one back: voice backup requirement, CPDLC failure response, service cancellation duties, lost connection actions, and uncertain clearance delivery rules. The back is overloaded with too many distinct concepts for a single retrieval target.",
+      "source_basis": "13-2-4(a)(3) requires a voice backup when CPDLC is utilized. 13-2-4(c) covers abnormal conditions including failure, lost connection, service cancellation, and uncertain clearance delivery.",
+      "match": {
+        "front": "CPDLC: required voice backup and abnormal conditions",
+        "back": "Voice backup (HF, SATCOM, Third party) MUST exist. If CPDLC fails, use voice. If service cancelled, advise pilot ASAP. Lost connection: send CR1 or advise log-on. Uncertain clearance delivery: continue protecting airspace. Per 13-2-4(a)(3), (c).",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "CPDLC voice backup requirement: when CPDLC is being utilized, what must exist?",
+          "back": "A voice backup MUST exist (e.g., HF, SATCOM, Third party). This is mandatory when CPDLC is in use. Per 13-2-4(a)(3).",
+          "card_type": "procedure"
+        },
+        {
+          "front": "CPDLC abnormal conditions: what are the controller duties when CPDLC fails, a connection is lost, or clearance delivery is uncertain?",
+          "back": "If CPDLC fails: use voice. If connection lost: send CR1 or advise pilot to log on. If cancelling service: advise pilot ASAP (reason if workload permits). If clearance delivery uncertain: CONTINUE protecting airspace until operational response received. Per 13-2-4(c).",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Automated flags: negative_stem and answer_length_cue. The correct answer is vastly longer than all distractors (a clear answer-length cue). The stem asks 'What is the correct use of EDST' in a negative framing where distractors describe wrong uses. The correct answer reads like a textbook paragraph while distractors are single sentences.",
+      "source_basis": "13-1-1 defines EDST as a strategic planning tool using current plan data. It is not a radar separation tool. The current plan may include unissued clearances, making trajectory predictions inappropriate for real-time separation decisions.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You are working a sector with EDST operational. A trainee wants to use the EDST trajectory display to provide radar separation between two aircraft that are converging at the same altitude, arguing that the predicted trajectories show them diverging before loss of separation. Another controller says EDST should not be used for current separation at all.",
+          "question_text": "What is the correct use of EDST in this situation?",
+          "choices": [
+            {
+              "text": "Use EDST trajectory predictions as the primary basis for radar separation when the automated separation minimum appears satisfied on the display.",
+              "is_correct": false
+            },
+            {
+              "text": "Use EDST for strategic planning and conflict prediction, but maintain radar separation using actual radar track data, because EDST is a strategic planning tool that predicts conflicts using current plans which may include unissued clearances.",
+              "is_correct": true
+            },
+            {
+              "text": "Ignore EDST entirely because it is only for historical analysis and post-event review of sector performance.",
+              "is_correct": false
+            },
+            {
+              "text": "Rely on EDST for separation because EDST is designed to replace the radar display for tactical control functions.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-1-1 Defines EDST as a strategic planning tool that predicts conflicts using current plan data. It is not a replacement for radar separation. The current plan may include clearances not yet issued, making it inappropriate for real-time separation decisions.",
+          "para_context": "DESCRIPTION"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "What should you do?",
+            "situation": "You are working a sector with EDST operational. A trainee wants to use the EDST trajectory display to provide radar separation between two converging aircraft at the same altitude, arguing that the predicted trajectories show them diverging before loss of separation. Another controller says EDST should not be used for current separation at all.",
+            "question_text": "What is the appropriate role of EDST in this situation?",
+            "choices": [
+              {
+                "text": "Use EDST trajectory predictions as the primary basis for radar separation when the automated separation appears satisfied on the display.",
+                "is_correct": false
+              },
+              {
+                "text": "Rely on EDST for separation because EDST is designed to replace the radar display for tactical control.",
+                "is_correct": false
+              },
+              {
+                "text": "Use EDST for strategic planning and conflict prediction, but maintain radar separation using actual radar track data. EDST is a strategic planning tool that uses current plans which may include unissued clearances.",
+                "is_correct": true
+              },
+              {
+                "text": "Ignore EDST entirely because it is only for historical analysis and post-event review.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "EDST is defined as an integrated ERAM function used for strategic planning responsibilities. It predicts conflicts using current plan data which may include clearances not yet issued to the aircraft. EDST is not a replacement for radar separation—controllers must maintain separation using actual radar track data while using EDST for planning and conflict prediction purposes."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-1-11",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Automated flags: negative_stem and answer_length_cue. The correct answer is conspicuously longer than all distractors. The activity is a situation_action but the question_text reads like a knowledge_check, not an operational decision question.",
+      "source_basis": "13-1-11 requires adherence to applicable delay reporting directives and recording of delay information. Hold View auto-records when the aircraft is cleared out of hold. Delay recording is mandatory, not conditional on TMU requests.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A flight is in holding using the ERAM Hold View. When the aircraft is cleared out of hold, another controller assumes the delay was manually recorded on a strip and does not verify whether the Hold View auto-recording captured it. A third controller says delay recording is optional because the facility has no specific TMU request for this flight's delay data.",
+          "question_text": "How should delay information be handled for this holding aircraft?",
+          "choices": [
+            {
+              "text": "Skip delay recording entirely for this flight since TMU has not specifically requested the information.",
+              "is_correct": false
+            },
+            {
+              "text": "Manually record the delay on a strip because Hold View auto-recording cannot be relied upon for official delay reporting.",
+              "is_correct": false
+            },
+            {
+              "text": "Recognize that Hold View automatically records the delay when the aircraft is cleared out of hold. Delay information must be recorded, and facility delay reporting directives must be followed regardless of whether TMU requests the data.",
+              "is_correct": true
+            },
+            {
+              "text": "Record the delay only if the total holding time exceeds 10 minutes, because shorter delays are not operationally significant.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-1-11 Requires adherence to applicable delay reporting directives and recording of delay information. The Hold Data Menu or Hold View auto-records when the aircraft is cleared out of hold. Delay recording is mandatory, not conditional on TMU requests.",
+          "para_context": "DELAY REPORTING"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "What should you do?",
+            "situation": "A flight is in holding using the ERAM Hold View. When the aircraft is cleared out of hold, another controller assumes the delay was manually recorded on a strip and does not verify whether the Hold View auto-recording captured it. A third controller says delay recording is optional because the facility has no specific TMU request for this flight's delay data.",
+            "question_text": "How should delay information be handled for this holding aircraft?",
+            "choices": [
+              {
+                "text": "Skip delay recording entirely for this flight since TMU has not specifically requested the information.",
+                "is_correct": false
+              },
+              {
+                "text": "Manually record the delay on a strip because Hold View auto-recording cannot be relied upon for official delay reporting.",
+                "is_correct": false
+              },
+              {
+                "text": "Record the delay only if the total holding time exceeds 10 minutes, because shorter delays are not operationally significant.",
+                "is_correct": false
+              },
+              {
+                "text": "Recognize that Hold View automatically records the delay when the aircraft is cleared out of hold, and ensure facility delay reporting directives are followed regardless of whether TMU requests the data.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "Delay information must be recorded per applicable delay reporting directives. When using the ERAM Hold View, delays are automatically recorded when the aircraft is cleared out of hold. Delay recording is mandatory regardless of whether TMU has specifically requested the data for that flight."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-1-7",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Automated flag: paragraph_location_scaffold. The stem explicitly cites 'Under 13-1-7' in the explanation and the activity teaches paragraph-number trivia. The stem asks 'is this sufficient by itself?' which is a knowledge_check rather than a situation_action.",
+      "source_basis": "13-1-7 lists Hold View as one of five approved methods for annotating holding instructions, each valid when used in accordance with facility directives.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "A flight is holding at an en route fix. The controller uses Hold View to annotate the holding instructions. Under 13-1-7, is this sufficient by itself?",
+          "choices": [
+            {
+              "text": "No. Hold View must always be supplemented with a facility-approved worksheet.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if used in accordance with facility directives. Hold View is one of the five approved annotation methods listed in 13-1-7.",
+              "is_correct": true
+            },
+            {
+              "text": "No. Only a flight progress strip satisfies the holding annotation requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the Hold Data Menu is also used for the same holding aircraft.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-1-7 Lists Hold View as one of five approved methods, each of which is valid when used in accordance with facility directives. No single method requires supplementation by another."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "A flight enters holding at an en route fix. The controller annotates the holding instructions using the Hold View, in accordance with the facility directive. Is this annotation method sufficient on its own?",
+            "choices": [
+              {
+                "text": "No. Hold View must always be supplemented with a facility-approved worksheet.",
+                "is_correct": false
+              },
+              {
+                "text": "Yes, if used in accordance with facility directives. Hold View is one of the five approved annotation methods, and no method requires supplementation by another.",
+                "is_correct": true
+              },
+              {
+                "text": "No. Only a flight progress strip satisfies the holding annotation requirement.",
+                "is_correct": false
+              },
+              {
+                "text": "Yes, but only if the Hold Data Menu is also used for the same holding aircraft.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Hold View is one of five approved methods listed for annotating holding instructions. Each method is independently valid when used in accordance with facility directives. No single method requires supplementation by another—the facility directive determines which method is specified for use."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-1-10",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Automated flags: negative_stem, correct_answer_first, answer_length_cue. Triple-flagged. The correct answer is conspicuously the longest choice with substantial explanatory text while distractors are short. The question_text asks 'Must the interim altitude be entered now?'—a yes/no framing that telegraphs the answer.",
+      "source_basis": "13-1-10 requires timely automation entries, notes conflict probe alert accuracy depends on interim altitude entry, and provides exception only if facility directive explicitly authorizes it.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Your sector team has been busy and an aircraft's interim altitude change has not been entered in the automation. The aircraft is level at an intermediate altitude waiting for further climb. Another controller says the entry can wait because the aircraft is showing level on radar, and the next sector will enter it on handoff. The sector has no facility directive authorizing an exception for interim altitudes.",
+          "question_text": "Must the interim altitude be entered now?",
+          "choices": [
+            {
+              "text": "Yes. The sector team must perform automation entries in a timely manner, and conflict probe accuracy in assigning alert notification is dependent upon entry/update of a flight's interim altitude. The aircraft being level on radar does not eliminate this requirement.",
+              "is_correct": true
+            },
+            {
+              "text": "No. The aircraft is level on radar, so the automation will self-correct the trajectory model based on track data alone. The entry can wait.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Interim altitude updates are always optional unless the aircraft is in a non-radar environment.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only because the sector has no facility directive exception. If the sector were busy enough, the entry could be skipped at the controller's discretion.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-1-10 Requires timely automation entries, specifically notes conflict probe alert accuracy depends on interim altitude entry/update, and provides an exception only if explicitly defined in a facility directive — which this sector does not have.",
+          "para_context": "CURRENCY OF TRAJECTORY INFORMATION"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "What should you do?",
+            "situation": "Your sector team has been busy and an aircraft's interim altitude change has not been entered in the automation. The aircraft is level at an intermediate altitude waiting for further climb. Another controller says the entry can wait because the aircraft is showing level on radar, and the next sector will enter it on handoff. The sector has no facility directive authorizing an exception for interim altitudes.",
+            "question_text": "What is required regarding the interim altitude entry?",
+            "choices": [
+              {
+                "text": "The entry can wait until the aircraft receives its final climb clearance, since interim altitudes are only relevant at the final cruising level.",
+                "is_correct": false
+              },
+              {
+                "text": "The entry is optional because the aircraft is level on radar and the automation will self-correct the trajectory model.",
+                "is_correct": false
+              },
+              {
+                "text": "The next sector will enter it on handoff, so the current sector has no responsibility to update the interim altitude.",
+                "is_correct": false
+              },
+              {
+                "text": "The sector team must enter the interim altitude now. Conflict probe accuracy in assigning alert notification depends on the entry, and no facility directive authorizes an exception.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "The sector team must perform automation entries in a timely manner. Conflict probe accuracy in assigning alert notification is dependent upon entry of a flight's interim altitude. An exception to this requirement may be authorized only for certain ARTCC sectors if explicitly defined in an appropriate facility directive—workload alone does not authorize skipping the entry."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-1-15",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Automated flag: answer_length_cue. The correct answer is significantly longer than distractors. This is a comparison question that cross-references two paragraphs—useful conceptually but the answer-length cue undermines fair assessment.",
+      "source_basis": "Both 13-1-14 and 13-1-15 follow a 'continue use with recognition' pattern. Forecast wind loss may affect both alert and trajectory data; connectivity loss may affect alert data specifically.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How does the operational response to loss of interfacility connectivity (13-1-15) compare to the response to loss of forecast winds (13-1-14)?",
+          "choices": [
+            {
+              "text": "Forecast wind loss requires complete suspension of tools; connectivity loss allows continued use with no special recognition.",
+              "is_correct": false
+            },
+            {
+              "text": "Both require continued use of the affected tools with recognition that certain data may be affected. For forecast wind loss, both alert AND trajectory data are affected. For connectivity loss, alert data may be affected.",
+              "is_correct": true
+            },
+            {
+              "text": "Both require immediate suspension of all EDST functions until the data source is restored.",
+              "is_correct": false
+            },
+            {
+              "text": "There is no operational difference; both paragraphs give identical guidance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Both 13-1-14 and 13-1-15 follow a 'continue use with recognition' pattern, but the affected data differs: wind loss may affect both alert and trajectory data; connectivity loss may affect alert data specifically. Neither requires suspension."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "How does the operational response to loss of interfacility connectivity compare to the response to loss of forecast winds?",
+            "choices": [
+              {
+                "text": "Forecast wind loss requires complete suspension of tools; connectivity loss allows continued use without any special recognition.",
+                "is_correct": false
+              },
+              {
+                "text": "Both require immediate suspension of all EDST functions until the data source is restored.",
+                "is_correct": false
+              },
+              {
+                "text": "Both require continued use of the affected tools with recognition that certain data may be affected—but the specific data that may be affected differs between the two situations.",
+                "is_correct": true
+              },
+              {
+                "text": "There is no operational difference between the two situations.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Both forecast wind loss and interfacility connectivity loss follow a 'continue use with recognition' pattern—neither requires suspending EDST. However, the affected data differs: wind loss may affect both alert and trajectory data, while connectivity loss specifically may affect alert data. Controllers must understand this distinction."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-2-6",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Automated flag: answer_length_cue. The correct answer is significantly longer than all distractors, providing a clear telegraphing cue. The question is framed as a true/false check ('Is this correct?') but uses four-choice multiple_choice format.",
+      "source_basis": "13-2-6 states automated coordination constitutes complete coordination between ATOP sectors internally and across adjacent ATOP facilities, except when the aircraft is in conflict in the receiving sector or when facility directives/LOA specify otherwise.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Two adjacent ATOP facilities are coordinating. One controller says that because both facilities use ATOP, automated coordination is always complete coordination with no exceptions. Is this correct?",
+          "choices": [
+            {
+              "text": "Yes. Between ATOP-equipped facilities, automated coordination is always complete and never needs to be supplemented.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if both facilities are using the same software version of ATOP.",
+              "is_correct": false
+            },
+            {
+              "text": "Only for internal sector transfers. Cross-facility ATOP coordination always requires additional verbal coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Automated coordination normally constitutes complete coordination between ATOP sectors, but is insufficient when the aircraft is in conflict with another in the receiving sector or when facility directives or LOA specify otherwise.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "13-2-6 States automated coordination constitutes complete coordination between ATOP sectors internally and across adjacent ATOP facilities EXCEPT when the aircraft is in conflict with another in the receiving sector or when facility directives/LOA specify otherwise."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "Two adjacent ATOP facilities are coordinating a handoff. One controller says automated coordination is always complete coordination between ATOP sectors with no exceptions. Under what circumstances is additional coordination required?",
+            "choices": [
+              {
+                "text": "Between ATOP-equipped facilities, automated coordination is always complete and never needs supplementation.",
+                "is_correct": false
+              },
+              {
+                "text": "Only when the receiving facility is using a different software version of ATOP.",
+                "is_correct": false
+              },
+              {
+                "text": "When the aircraft is in conflict with another in the receiving sector, or when facility directives or an LOA specify otherwise.",
+                "is_correct": true
+              },
+              {
+                "text": "Only for internal sector transfers. Cross-facility ATOP coordination always requires additional verbal coordination.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Automated coordination normally constitutes complete coordination between ATOP sectors, both internally and between sectors across adjacent ATOP facilities. However, two exceptions exist: when the aircraft is in conflict with another in the receiving sector, or when facility directives or an LOA specify otherwise. In these cases, additional coordination is required."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-2-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Automated flags: negative_stem and correct_answer_first. The stem frames the question negatively ('claims that ATOP is only a flight data display tool...prove this is incorrect'), which makes the student reason by refutation. A positive operational framing would be more effective.",
+      "source_basis": "13-2-1(b) lists MEARTS-based radar surveillance, ADS-B, and ADS-C as explicit surveillance capabilities alongside flight data processing functions.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "A new controller claims that ATOP is only a flight data display tool and does not include surveillance processing. Which ATOP capabilities prove this is incorrect?",
+          "choices": [
+            {
+              "text": "ATOP includes MEARTS-based radar surveillance processing, ADS-B, and ADS-C, which are all surveillance capabilities.",
+              "is_correct": true
+            },
+            {
+              "text": "ATOP's weather deviation tool is a surveillance function that replaces the need for radar processing.",
+              "is_correct": false
+            },
+            {
+              "text": "AIDC is the primary surveillance function in ATOP for oceanic airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Electronic flight strips are a surveillance mechanism in ATOP.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-2-1(B) lists MEARTS-based radar surveillance processing, ADS-B, and ADS-C as explicit ATOP surveillance capabilities, in addition to its flight data processing functions."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "Which capabilities demonstrate that ATOP includes both surveillance processing and flight data processing?",
+            "choices": [
+              {
+                "text": "MEARTS-based radar surveillance processing, ADS-B, and ADS-C are surveillance capabilities, while Electronic Flight Data including Electronic Flight Strips handles flight data processing.",
+                "is_correct": true
+              },
+              {
+                "text": "The weather deviation tool is the primary surveillance function, replacing the need for dedicated radar processing.",
+                "is_correct": false
+              },
+              {
+                "text": "AIDC provides all surveillance processing in ATOP, and flight data is handled separately by ERAM.",
+                "is_correct": false
+              },
+              {
+                "text": "Electronic flight strips are the surveillance mechanism in ATOP; there is no separate flight data processing function.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "ATOP includes both surveillance and flight data processing. The surveillance capabilities include MEARTS-based radar surveillance processing, ADS-B, and ADS-C. The flight data processing capabilities include Electronic Flight Data with Electronic Flight Strips. ATOP provides automated decision support tools to establish, monitor, and maintain separation."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-2-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Automated flags: negative_stem and correct_answer_first. The stem is framed as 'May the controller override?'—a yes/no question that forces negation reasoning. A positive operational scenario would be more effective for testing this concept.",
+      "source_basis": "13-2-2(b)(2) states under no circumstances must the controller use additional decision support tools to override probe results when the standard is supported by probe and no override conditions apply.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A red conflict appears in ATOP. A controller wants to override conflict probe using the range/bearing tool because the controller believes the aircraft will actually pass with more separation than probe predicts. The conflict involves a separation standard that conflict probe does support. No facility directive authorizes an override in this circumstance, and control has not been delegated.",
+          "question_text": "May the controller override the conflict probe in this situation?",
+          "choices": [
+            {
+              "text": "No. Additional decision support tools must never be used to override probe results when the applicable separation standard is supported by probe and none of the other override conditions apply.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because the range/bearing tool always takes precedence over conflict probe when the controller believes probe is inaccurate.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because a red conflict requires immediate action, and the range/bearing tool qualifies as an 'other situation' for override purposes.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only after running a trial probe to confirm the range/bearing calculation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-2-2(B)(2) states: 'Under no circumstances must the controller utilize any of the additional decision support tools to override probe results when the applicable separation standard is supported by probe and none of the other conditions for overriding probe apply.'",
+          "para_context": "CONFLICT DETECTION AND RESOLUTION"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 4,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 4,
+            "instruction": "What should you do?",
+            "situation": "A red conflict appears in ATOP. A controller wants to override conflict probe using the range/bearing tool because the controller believes the aircraft will actually pass with more separation than probe predicts. The conflict involves a separation standard that conflict probe supports. No facility directive authorizes an override in this circumstance, and control has not been delegated.",
+            "question_text": "What governs whether the controller may override conflict probe using an additional decision support tool?",
+            "choices": [
+              {
+                "text": "The range/bearing tool always takes precedence over conflict probe when the controller believes probe is inaccurate.",
+                "is_correct": false
+              },
+              {
+                "text": "A red conflict requires immediate action, so the range/bearing tool qualifies as an 'other situation' for override purposes.",
+                "is_correct": false
+              },
+              {
+                "text": "The controller may override after running a trial probe to confirm the range/bearing calculation.",
+                "is_correct": false
+              },
+              {
+                "text": "Additional decision support tools must never be used to override probe results when the applicable separation standard is supported by probe and none of the other override conditions apply. The controller must not override in this situation.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "Under no circumstances must the controller utilize any of the additional decision support tools to override probe results when the applicable separation standard is supported by probe and none of the other override conditions apply. The four authorized override conditions are: unrecognized separation standard, conflict resolved with separation ensured, control delegated, or facility directive authorization. Personal belief about probe accuracy is not a valid override reason."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-1-9",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "Automated flag: correct_answer_first. The correct answer is placed first in the choices list. Reordering is needed to avoid position bias. The activity is otherwise educationally sound.",
+      "source_basis": "13-1-9(f) requires the first sector displaying ERT to issue and send/acknowledge the route prior to initiating a hand-off, unless verbally coordinated or specified in facility directives.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "The first sector displaying ERT coding must issue and send/acknowledge the route. When must this be accomplished relative to handoff?",
+          "choices": [
+            {
+              "text": "Prior to initiating a hand-off, unless verbally coordinated or as specified in appropriate facility directives.",
+              "is_correct": true
+            },
+            {
+              "text": "After the hand-off has been initiated and accepted by the receiving sector.",
+              "is_correct": false
+            },
+            {
+              "text": "At any time before the aircraft physically crosses the sector boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the receiving sector specifically requests the ERT route information.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-1-9(F) explicitly states the first sector displaying ERT must issue and send/acknowledge the route PRIOR TO initiating a hand-off, unless verbally coordinated or otherwise specified in facility directives."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "The first sector displaying ERT coding must issue and send/acknowledge the route. When must this be accomplished relative to handoff?",
+            "choices": [
+              {
+                "text": "After the hand-off has been initiated and accepted by the receiving sector.",
+                "is_correct": false
+              },
+              {
+                "text": "At any time before the aircraft physically crosses the sector boundary.",
+                "is_correct": false
+              },
+              {
+                "text": "Prior to initiating a hand-off, unless verbally coordinated or as specified in appropriate facility directives.",
+                "is_correct": true
+              },
+              {
+                "text": "Only after the receiving sector specifically requests the ERT route information.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The first sector which displays Embedded Route Text (ERT) coding must issue and send/acknowledge the route prior to initiating a hand-off, unless verbally coordinated or as specified in appropriate facility directives. ERT coding must not be sent or acknowledged unless the sector has track control for the flight or it has been otherwise coordinated."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-1-9",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "Automated flag: correct_answer_first. The correct answer is placed first. Reordering is needed. The activity is otherwise a well-constructed scenario-based assessment of IAFDOF/UTM/EDCT acknowledgment timing.",
+      "source_basis": "13-1-9(e) requires IAFDOF, UTM, or EDCT coding to be acknowledged only after the appropriate action has been completed, not before.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An IAFDOF alert is displayed, an EDCT has been issued to the pilot, and a RAN warning appears for a route processing error on an aircraft your sector has track control for. A controller wants to acknowledge all three codings immediately to clean up the display before taking any action.",
+          "question_text": "When may these codings be acknowledged?",
+          "choices": [
+            {
+              "text": "Each coding must be acknowledged only after the appropriate action has been completed. IAFDOF, UTM, and EDCT coding removal before action is completed violates 13-1-9(e).",
+              "is_correct": true
+            },
+            {
+              "text": "All three may be acknowledged immediately to reduce display clutter. The actions can be completed afterward without violating any requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "EDCT may be acknowledged immediately because it was already issued, but IAFDOF and RAN must wait for action completion.",
+              "is_correct": false
+            },
+            {
+              "text": "IAFDOF and RAN may be acknowledged immediately, but EDCT requires the pilot to verbally confirm receipt before removal.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-1-9(E) is explicit: IAFDOF, UTM, or EDCT coding must be acknowledged only after the appropriate action has been completed. Acknowledging before action completion is a violation regardless of workload.",
+          "para_context": "ACKNOWLEDGEMENT OF AUTOMATED NOTIFICATION"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "What should you do?",
+            "situation": "An IAFDOF alert is displayed, an EDCT has been issued to the pilot, and a RAN warning appears for a route processing error on an aircraft your sector has track control for. A controller wants to acknowledge all three codings immediately to clean up the display before taking any action.",
+            "question_text": "When may these codings be acknowledged?",
+            "choices": [
+              {
+                "text": "All three may be acknowledged immediately to reduce display clutter. The actions can be completed afterward without violating any requirement.",
+                "is_correct": false
+              },
+              {
+                "text": "Each coding must be acknowledged only after the appropriate action has been completed. IAFDOF, UTM, and EDCT coding removal before action is completed violates 13-1-9(e).",
+                "is_correct": true
+              },
+              {
+                "text": "EDCT may be acknowledged immediately because it was already issued, but IAFDOF and RAN must wait for action completion.",
+                "is_correct": false
+              },
+              {
+                "text": "IAFDOF and RAN may be acknowledged immediately, but EDCT requires the pilot to verbally confirm receipt before removal.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "IAFDOF, UTM, or EDCT coding must be acknowledged only after the appropriate action has been completed. Acknowledging or removing coding before completing the required action—even to reduce display clutter—violates this requirement. Each coding type has a specific required action that must precede acknowledgment."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-2-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "Automated flag: correct_answer_first. The correct CPDLC failure phraseology answer is placed first. Reordering needed to avoid position bias. The activity is otherwise a well-constructed scenario testing exact prescribed phraseology.",
+      "source_basis": "13-2-4(c)(5) prescribes the exact phraseology '(Call Sign) CPDLC Failure, (message).' for initial voice contact after a CPDLC interruption.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What must the controller say?",
+          "situation": "A CPDLC failure occurs and you are making initial voice contact with the affected aircraft to deliver a revised altitude clearance. The clearance is 'climb and maintain FL370.'.",
+          "question_text": "What is the correct phraseology for the initial voice contact with this aircraft?",
+          "choices": [
+            {
+              "text": "N12345, CPDLC Failure, climb and maintain FL370.",
+              "is_correct": true
+            },
+            {
+              "text": "N12345, CPDLC has been terminated, climb and maintain FL370.",
+              "is_correct": false
+            },
+            {
+              "text": "N12345, data link is down, climb and maintain FL370.",
+              "is_correct": false
+            },
+            {
+              "text": "N12345, reverting to voice, climb and maintain FL370.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "13-2-4(C)(5) prescribes the exact phraseology: '(Call Sign) CPDLC Failure, (message).' The controller must use this exact preface on initial voice contact after a CPDLC issue.",
+          "para_context": "CONTROLLER PILOT DATA LINK COMMUNICATIONS (CPDLC)"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "What must the controller say?",
+            "situation": "A CPDLC failure occurs and you are making initial voice contact with the affected aircraft to deliver a revised altitude clearance. The clearance is 'climb and maintain FL370.'",
+            "question_text": "What is the correct phraseology for the initial voice contact with this aircraft?",
+            "choices": [
+              {
+                "text": "N12345, CPDLC Interrupted, climb and maintain FL370.",
+                "is_correct": false
+              },
+              {
+                "text": "N12345, CPDLC Failure, climb and maintain FL370.",
+                "is_correct": true
+              },
+              {
+                "text": "N12345, CPDLC has been terminated, climb and maintain FL370.",
+                "is_correct": false
+              },
+              {
+                "text": "N12345, reverting to voice communications, climb and maintain FL370.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The exact prescribed phraseology for initial voice contact after a CPDLC failure is '(Call Sign) CPDLC Failure, (message).' This phraseology is mandatory, not discretionary. The controller must say 'CPDLC Failure'—not 'CPDLC Interrupted,' 'CPDLC has been terminated,' or 'reverting to voice communications.' The prescribed wording ensures the flight crew immediately understands the data link status."
+          }
+        }
+      ]
+    }
+  ]
+}

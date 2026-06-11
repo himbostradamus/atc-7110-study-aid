@@ -1,0 +1,1573 @@
+{
+  "version": 1,
+  "chapter": 9,
+  "target_generation_source": "question_agent",
+  "packet_sha256": "73b988c22ae196904a832bc097c541276f1f0a010a103757ff36ef5c32146bb4",
+  "manifest_sha256": "c457063afdc2e2cf74a61619a736f8046ac9f45a8408c95a7c2edadb37c8b1a7",
+  "summary": {
+    "overall": "Chapter 9 content is generally source-faithful but suffers from pervasive paragraph-location scaffolding, frequent answer-position bias, and several format-inappropriate items. Of 306 items reviewed, 162 questions begin with 'Under 9-X-Y', teaching document navigation instead of operational decision-making. Correct answers appear first in 75 questions and 33 activities, creating guessing patterns. Three reverse flashcards are malformed and one flashcard is overloaded. Fill-in-the-blank items with single choices provide no discrimination. Several items test FAA Order numbers instead of controller competencies. Despite these issues, most items accurately reflect source content and cover essential Chapter 9 topics including flight inspection handling, special operations (military, security, aerial refueling, balloons), SUA separation, fuel dumping, parachute operations, and UAP reporting.",
+    "patterns": [
+      "Paragraph-location scaffolding (162 of 163 questions): Nearly every question stem begins with 'Under 9-X-Y', training students to associate answers with paragraph numbers rather than operational conditions. This is the dominant defect and affects every section.",
+      "Correct-answer-first position (75 questions, 33 activities): Correct choices are placed at sort_order 0 far more often than chance. Students quickly learn to pick the first option, undermining assessment validity.",
+      "Answer-length cues (8 questions, 8 activities): Correct answers are conspicuously longer than distractors, often because explanatory content is embedded in the answer choice rather than reserved for the explanation field.",
+      "Single-choice fill-in-the-blank (4 questions): Items with only one choice provide no discrimination and function as disguised single-word recall tests.",
+      "Malformed reverse cards (3 flashcards): These cards use concept_reverse or reverse type where one direction is a declarative statement rather than a prompt, making them unanswerable in the reverse direction.",
+      "Document trivia (4 questions): Items test FAA Order numbers, regulation citations, or paragraph cross-references rather than operational controller skills.",
+      "Negative stems where exclusion is not the skill (14 questions, 14 activities): Many flagged negatives are benign ('NOT' used in natural language), but a subset frames questions around what does NOT apply, which is a weaker pedagogical pattern than asking what DOES apply.",
+      "Flashcard scaffolding (most flashcards): Approximately 90% of flashcards begin with '9-X-Y:' on the front, mirroring the question-level paragraph-location problem in retrieval format.",
+      "Near-duplicate concept coverage: Several flashcards restate the same operational fact already tested by a corresponding question, reducing retrieval-mode diversity without adding distinct practice."
+    ],
+    "generation_guidance": [
+      "Strip ALL paragraph-location references from stems. Replace 'Under 9-X-Y' openings with operational context: conditions, aircraft types, airspace classes, phase of flight, or controller position scenarios that trigger the rule.",
+      "Randomize correct-answer position across all items. Never place the correct answer at sort_order 0 as a default. Use a shuffle that distributes correct positions evenly (approximately 25% at each position).",
+      "Keep answer choices within 20% of each other's character length. Move explanatory detail from answer choices into the explanation field. Answer choices should be terse discriminations, not mini-explanations.",
+      "Replace all single-choice fill-in-the-blank items with proper multiple-choice questions that have 4 plausible options. Fill-in-the-blank is acceptable only when the blank represents a key operational value with meaningful distractors.",
+      "For reverse cards, verify that both sides form complete, answerable prompts. A reverse card's back side must be a question, not a description or label. Use 'What is...' or 'Define...' framing.",
+      "Limit flashcard backs to 1-3 discrete facts. Split any card requiring recall of 4+ independent items. The flashcard format is for rapid retrieval, not comprehensive listing.",
+      "Replace FAA Order number items with questions about the operational procedure itself. Where a cross-reference is genuinely needed for source-use skills, use a source-use activity that asks the student to locate the information, not recall the document number.",
+      "Prefer positive stems. Use negative framing ('which of the following is NOT...') only when the operational skill genuinely requires recognizing exclusions (e.g., identifying an improper clearance, spotting a procedure that does not apply to a given airspace class).",
+      "Remove '9-X-Y:' prefixes from flashcard fronts. The front should name the concept, not its paragraph address. For example, use 'Flight inspection special handling triggers' instead of '9-1-1: Three triggers for special handling of flight inspection ops.'",
+      "Ensure every flashcard teaches a distinct retrieval target. If a flashcard and a question both test the same fact in the same recall direction, consolidate or differentiate them. Cross-format reinforcement is valuable; within-format duplication is not."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "flashcard",
+      "para_id": "9-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Malformed reverse card. The front states the three criteria as a declarative sentence and the back describes what they are, rather than posing a question in either direction. A concept_reverse card must be answerable from both sides.",
+      "source_basis": "9-1-1 Note 2: 'Flight inspection operations which require special participation of ground personnel, specific communications, or radar operation capabilities are considered to require special handling.'",
+      "match": {
+        "front": "Special participation of ground personnel, specific communications, or radar operation capabilities trigger special handling (9-1-1).",
+        "back": "Three criteria that make a flight inspection operation require special handling, per 9-1-1 Note 2.",
+        "card_type": "concept_reverse"
+      },
+      "replacements": [
+        {
+          "front": "What three conditions make a flight inspection operation require special handling?",
+          "back": "Special participation of ground personnel, specific communications, or radar operation capabilities. These flights are coordinated with appropriate facilities before departure.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "9-1-3",
+      "action": "split",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Malformed reverse card that crams two distinct facts onto one side: orbital range (6-40 NM) and altitude range (1,000 ft above antenna to MEA). The front is a data dump, not a prompt. The reverse direction is not a valid question.",
+      "source_basis": "9-1-3 Note: 'route of flight will be orbital from 6 nautical miles to a maximum of 40 nautical miles from the facility' and 'altitude assignment ranging from 1,000 feet above the antenna site up to the minimum en route altitude (MEA).'",
+      "match": {
+        "front": "6 NM to 40 NM; 1,000 feet above antenna to MEA.",
+        "back": "Route orbital range and altitude range for preplanned automatic flight checks per 9-1-3.",
+        "card_type": "concept_reverse"
+      },
+      "replacements": [
+        {
+          "front": "What is the orbital range for a preplanned automatic flight check?",
+          "back": "From 6 NM to a maximum of 40 NM from the facility, depending on the type of inspection.",
+          "card_type": "concept"
+        },
+        {
+          "front": "What is the altitude range for a preplanned automatic flight check?",
+          "back": "From 1,000 feet above the antenna site up to the minimum en route altitude (MEA).",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "9-2-11",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Malformed reverse card. The front is the procedural action and the back describes what situation it applies to. The reverse direction ('Three criteria that make...') is not a valid prompt — it describes the content rather than asking a question.",
+      "source_basis": "9-2-11: 'If the information is not known, broadcast the call sign on all frequencies and advise the OS/CIC of the response.'",
+      "match": {
+        "front": "Broadcast call sign on all frequencies and advise OS/CIC of response.",
+        "back": "9-2-11 SECNOT action when information about the subject aircraft is not known.",
+        "card_type": "reverse"
+      },
+      "replacements": [
+        {
+          "front": "What action does a controller take when SECNOT subject-aircraft information is not known?",
+          "back": "Broadcast the call sign on all frequencies and advise the OS/CIC of the response.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "9-6-1",
+      "action": "split",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Overloaded card back tries to list seven balloon flight-following transfer items on a single card. A flashcard should have one retrieval target. Seven items is an impossible recall task for a single card.",
+      "source_basis": "9-6-1e: Forward identification/type, last known position/altitude, direction/speed, ETA over boundary, other pertinent information, radar point out, and operator contact information.",
+      "match": {
+        "front": "9-6-1: Seven items to forward when transferring balloon flight following",
+        "back": "1) ID/type. 2) Last position/altitude. 3) Direction/speed. 4) ETA over boundary. 5) Other pertinent info. 6) Radar point-out if in contact. 7) Tracking location name/phone.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "What identifying and position information is forwarded when transferring balloon flight following?",
+          "back": "1. Identification and type. 2. Last known position and altitude. 3. Direction and speed of movement.",
+          "card_type": "concept"
+        },
+        {
+          "front": "What planning and contact information is forwarded when transferring balloon flight following?",
+          "back": "1. ETA over the facility boundary. 2. Other pertinent information. 3. Radar point out. 4. Operator contact information.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "Tests knowledge of FAA Order numbers (8200.1 and 8240.41) rather than operational controller duties for flight inspection aircraft. Knowing cross-reference document numbers is not a controller skill tested in training or OJT.",
+      "source_basis": "9-1-1 Reference block cites FAA Order 8200.1 and FAA Order 8240.41, but the operational content of 9-1-1 is about providing maximum assistance and maintaining direct contact.",
+      "match": {
+        "question_text": "Under 9-1-1, which FAA Orders are cross-referenced for flight inspection procedures?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When coordinating with a NAVAID flight inspection aircraft, what is the controller's primary operational responsibility?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 9-1-1, unless otherwise agreed to, the controller must maintain direct contact with the pilot and exchange information regarding known traffic in the area and the pilot's intentions. This ensures both parties share a common traffic picture.",
+          "choices": [
+            {
+              "text": "Issue IFR separation to the flight inspection aircraft as the highest priority in the sector.",
+              "is_correct": false
+            },
+            {
+              "text": "Maintain direct contact with the pilot and exchange information about known traffic and intentions.",
+              "is_correct": true
+            },
+            {
+              "text": "Clear the flight inspection aircraft direct to the fix with no traffic calls to minimize frequency congestion.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer the aircraft to a dedicated flight inspection frequency for the duration of the mission.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-1-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "Tests which FAA Order paragraph covers radar accuracy checks — pure document navigation trivia not a controller competency. Controllers need to know the procedures, not the document index.",
+      "source_basis": "9-1-3 references FAA Order JO 7210.3, but the operational content concerns avoiding route/altitude changes, not imposing delays, and protecting discrete beacon codes for flight check aircraft.",
+      "match": {
+        "question_text": "Under 9-1-3, what reference covers Special Radar Accuracy Checks and ASR Performance Checks?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A special radar accuracy flight check aircraft has been assigned discrete beacon code 0123. A supervisor suggests changing the code to resolve a duplication. What is the correct controller action?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 9-1-3d, do not change the previously assigned discrete beacon code of special radar accuracy flight check aircraft. Changing the code could disrupt the calibration data being collected.",
+          "choices": [
+            {
+              "text": "Change the code and advise the pilot of the new assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate with the flight check aircraft to determine an acceptable new code.",
+              "is_correct": false
+            },
+            {
+              "text": "Change the code only if the duplication is with an aircraft at the same altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Do not change the previously assigned discrete beacon code.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "Tests knowledge of 14 CFR section 91.319(d)(3) number rather than the operational principle that experimental aircraft operators must notify towers of the experimental nature of the flight. Regulation number recall is trivia.",
+      "source_basis": "9-2-3 Note: '14 CFR section 91.319(d)(3) requires notification of the experimental nature...' The operational principle is the notification requirement, not the section number.",
+      "match": {
+        "question_text": "Under 9-2-3, what regulation requires operators of experimental aircraft to notify the control tower of the experimental nature of the aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What must an operator of an experimental aircraft do when operating into or out of an airport with an operating control tower?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 9-2-3 Note, operators of experimental aircraft must notify the control tower of the experimental nature of the flight when operating into or out of airports with operating control towers. This ensures the tower understands the aircraft may have nonstandard performance characteristics.",
+          "choices": [
+            {
+              "text": "File a special flight plan at least 24 hours in advance.",
+              "is_correct": false
+            },
+            {
+              "text": "Notify the control tower of the experimental nature of the flight.",
+              "is_correct": true
+            },
+            {
+              "text": "Obtain a letter of agreement from the facility air traffic manager.",
+              "is_correct": false
+            },
+            {
+              "text": "Operate only under SVFR clearance when within Class D airspace.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-1-2",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "Tests paragraph-location trivia by asking where flight inspection maneuvers are 'described in detail' (FAA Order 8240.41, Appendix 1). This is a document index question with zero operational value. The controller needs to know how to protect recorded runs, not where the maneuver descriptions live.",
+      "source_basis": "9-1-2 references FAA Order 8240.41, Appendix 1 as the location where maneuvers are described, but this is a reference pointer, not an operational directive.",
+      "match": {
+        "question_text": "Under 9-1-2, where are certain flight inspection maneuvers described in detail?",
+        "question_type": "multiple_choice"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Fill-in-the-blank with a single choice ('maximum') is a disguised single-word recall test, not a meaningful multiple-choice item. The student either knows the word or doesn't — there is no discrimination between plausible alternatives. The paragraph-location scaffold ('Under 9-1-1') further weakens the item.",
+      "source_basis": "9-1-1: 'Provide aircraft engaged in the flight inspection of NAVAIDs with maximum assistance.'",
+      "match": {
+        "question_text": "Complete: Under 9-1-1, provide aircraft engaged in the flight inspection of NAVAIDs with _____ assistance.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What level of assistance must be provided to aircraft engaged in the flight inspection of NAVAIDs?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 9-1-1, controllers must provide 'maximum assistance' to flight inspection aircraft. This establishes a heightened duty of care beyond routine traffic handling.",
+          "choices": [
+            {
+              "text": "Maximum assistance — the highest level of ATC support.",
+              "is_correct": true
+            },
+            {
+              "text": "Routine assistance — the same as for any IFR aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Priority handling only when the aircraft is on a recorded run.",
+              "is_correct": false
+            },
+            {
+              "text": "Assistance limited to traffic advisories and safety alerts.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Single-choice fill-in-the-blank disguises a one-word recall as a multiple-choice item. The paragraph-location scaffold and correct-answer-first position compound the problem.",
+      "source_basis": "9-1-2: 'Issue radar advisories to the flight inspection aircraft to the extent permitted by workload.'",
+      "match": {
+        "question_text": "Complete: Under 9-1-2, issue radar advisories to the flight inspection aircraft to the extent permitted by _____.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What limits a controller's obligation to issue radar advisories to a flight inspection aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 9-1-2, radar advisories are issued to the flight inspection aircraft to the extent permitted by workload. When workload prevents full advisory service, the controller is not required to compromise other duties.",
+          "choices": [
+            {
+              "text": "The aircraft's proximity to the radar antenna.",
+              "is_correct": false
+            },
+            {
+              "text": "The type of NAVAID being inspected.",
+              "is_correct": false
+            },
+            {
+              "text": "Whether the flight is conducted under IFR or VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller's workload.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-11",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Single-choice fill-in-the-blank with correct in first position and a negative-stem flag. The item tests recall of a single word ('call sign') without any distractors to discriminate understanding.",
+      "source_basis": "9-2-11: 'If the information is not known, broadcast the call sign on all frequencies and advise the OS/CIC of the response.'",
+      "match": {
+        "question_text": "Fill in the blank: For a SECNOT, if information is not known, broadcast the _____ on all frequencies.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "When a SECNOT is received but subject-aircraft information is not known, what should be broadcast on all frequencies?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 9-2-11, when subject-aircraft information is not known, the controller broadcasts the call sign on all frequencies and advises the OS/CIC of any response. This is a broad-reach method to locate the aircraft.",
+          "choices": [
+            {
+              "text": "A general security alert advising all aircraft to ident.",
+              "is_correct": false
+            },
+            {
+              "text": "The subject aircraft's call sign.",
+              "is_correct": true
+            },
+            {
+              "text": "The SECNOT reference number and issuing agency.",
+              "is_correct": false
+            },
+            {
+              "text": "A request for any aircraft with information to contact ATC.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Single-choice fill-in-the-blank testing recall of the word 'expeditious' without meaningful distractors. The paragraph-location scaffold and correct-answer-first position further weaken the item.",
+      "source_basis": "9-2-5a: 'ATC personnel at the first facility establishing contact with a FLYNET aircraft must provide expeditious handling.'",
+      "match": {
+        "question_text": "Complete: Under 9-2-5, ATC personnel at the first facility establishing contact with a FLYNET aircraft must provide _____ handling.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What type of handling must the first ATC facility provide to a FLYNET aircraft upon establishing contact?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 9-2-5, the first facility establishing contact with a FLYNET aircraft must provide expeditious handling. FLYNET indicates an aircraft transporting a nuclear emergency support team or other disaster response teams.",
+          "choices": [
+            {
+              "text": "Standard IFR handling with no special priority.",
+              "is_correct": false
+            },
+            {
+              "text": "Emergency handling with immediate vector to destination.",
+              "is_correct": false
+            },
+            {
+              "text": "Holding until the OS/CIC authorizes further movement.",
+              "is_correct": false
+            },
+            {
+              "text": "Expeditious handling.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-12",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Correct answer (162 chars) is more than twice the length of any distractor (60-70 chars). Students can guess the answer by length alone. Also has paragraph-location scaffold and correct-answer-first position.",
+      "source_basis": "9-2-12b1: 'Sensitive government missions...include inflight identification, surveillance, interdiction, and pursuit activities conducted by government aircraft for national defense, homeland security, and law enforcement purposes.'",
+      "match": {
+        "question_text": "Under 9-2-12, what activities are included in the definition of sensitive government missions?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which activities define a sensitive government mission as described in FAA Order JO 7110.65?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 9-2-12, sensitive government missions include inflight identification, surveillance, interdiction, and pursuit activities conducted by government aircraft for national defense, homeland security, and law enforcement purposes.",
+          "choices": [
+            {
+              "text": "Inflight identification, surveillance, interdiction, and pursuit for national defense, homeland security, or law enforcement.",
+              "is_correct": true
+            },
+            {
+              "text": "Aerial refueling, formation flying, celestial navigation, and weather reconnaissance missions.",
+              "is_correct": false
+            },
+            {
+              "text": "Flight inspection of NAVAIDs, radar calibration, and instrument procedure validation.",
+              "is_correct": false
+            },
+            {
+              "text": "Search and rescue, medical evacuation, aerial firefighting, and disaster response operations.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Correct answer (173 chars) is over double the length of every distractor (69-77 chars). The conspicuous length difference creates an answer-position cue independent of content knowledge.",
+      "source_basis": "9-2-5 Note: 'The code word FLYNET indicates the aircraft is transporting a nuclear emergency support team or other disaster response teams to a potential or actual nuclear, radiological, biological, or chemical incident site.'",
+      "match": {
+        "question_text": "Under 9-2-5, what does the code word FLYNET indicate about an aircraft's mission?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What does the code word FLYNET in a flight plan indicate about the aircraft's mission?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 9-2-5, the code word FLYNET indicates the aircraft is transporting a nuclear emergency support team or other disaster response teams to a potential or actual nuclear, radiological, biological, or chemical incident site. These flights receive expeditious handling.",
+          "choices": [
+            {
+              "text": "Conducting aerial refueling operations as part of a military training mission.",
+              "is_correct": false
+            },
+            {
+              "text": "Performing law enforcement surveillance and suspect aircraft tracking.",
+              "is_correct": false
+            },
+            {
+              "text": "Flying a weather reconnaissance mission into a hurricane or tropical cyclone.",
+              "is_correct": false
+            },
+            {
+              "text": "Transporting a nuclear emergency support or disaster response team to an incident site.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Correct answer (135 chars) is nearly double the average distractor length. The conspicuously long correct answer telegraphs the answer. Paragraph-location scaffold and correct-answer-first position compound the problem.",
+      "source_basis": "9-2-6i Note: 'Pilots will: adjust transponder to Code 7700 during climb or descent...then change to Code 7600 for a period of 15 minutes...Code 7700 for 1 minute at the end of each 15-minute period...Code 7600 at all other times.'",
+      "match": {
+        "question_text": "Under 9-2-6, what transponder procedure do pilots follow after a two-way radio failure when departing an IR?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "After a two-way radio failure while departing an MTR, what transponder procedure does the pilot follow?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 9-2-6i Note, the pilot squawks 7700 during altitude changes, 7600 for 15-minute intervals, squawks 7700 for 1 minute at the end of each 15-minute period, then returns to 7600. This alternation pattern alerts ATC to the communications failure while the aircraft transits.",
+          "choices": [
+            {
+              "text": "7600 continuously from the point of radio failure until landing at the destination.",
+              "is_correct": false
+            },
+            {
+              "text": "7700 continuously for the remainder of the flight after departing the training route.",
+              "is_correct": false
+            },
+            {
+              "text": "Alternate between 7600 and 7700 every 5 minutes regardless of flight phase.",
+              "is_correct": false
+            },
+            {
+              "text": "7700 during altitude changes, 7600 for 15-minute periods, with 7700 for 1 minute at each period end.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-13",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Correct answer (127 chars) is more than double distractor lengths (~50-58 chars). Shuffling choices alone is insufficient — the content must be balanced.",
+      "source_basis": "9-2-13 Note 4: 'MARSA ends when the tanker advises ATC that the tanker and receiver aircraft are vertically positioned within the air refueling airspace and ATC advises MARSA is terminated.'",
+      "match": {
+        "question_text": "Under 9-2-13, when does MARSA end between the tanker and receiver aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When does MARSA end during an aerial refueling operation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 9-2-13 Note 4, MARSA ends when the tanker advises ATC that both aircraft are vertically positioned within the refueling airspace AND ATC advises that MARSA is terminated. Both conditions are required — the tanker's report alone does not end MARSA.",
+          "choices": [
+            {
+              "text": "When the receiver reports that fuel transfer is complete.",
+              "is_correct": false
+            },
+            {
+              "text": "When the tanker and receiver have passed the ARCP.",
+              "is_correct": false
+            },
+            {
+              "text": "When the tanker advises vertical positioning within the refueling airspace and ATC terminates MARSA.",
+              "is_correct": true
+            },
+            {
+              "text": "When all aircraft have exited the refueling track.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-3-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Correct answer (102 chars) is substantially longer than distractors (49-79 chars). Creates a length-based guessing cue.",
+      "source_basis": "9-3-2a: 'Assign an altitude at least 500 feet (above FL 290 — 1,000 feet) above or below the upper/lower limit of the airspace.'",
+      "match": {
+        "question_text": "Under 9-3-2, what altitude separation is provided between nonparticipating aircraft and active SUA, ATCAAs, or stationary ALTRVs?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What vertical separation must be provided between a nonparticipating aircraft and the boundary of active SUA, ATCAA, or stationary ALTRV airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 9-3-2a, assign at least 500 feet above or below the limit (above FL 290, use 1,000 feet). The increased buffer above FL 290 accounts for reduced vertical accuracy at higher altitudes.",
+          "choices": [
+            {
+              "text": "At least 500 feet above or below the limit; above FL 290 use 1,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "Exactly 1,000 feet at all altitudes regardless of flight level.",
+              "is_correct": false
+            },
+            {
+              "text": "At least 2,000 feet at all altitudes for all types of special-use airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Lateral separation of 3 miles only; vertical separation is not required for SUA.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-3-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Correct answer is much longer than distractors with both answer-length-cue and negative-stem flags. The negative framing ('NOT required') tests exclusion recognition but the length cue undermines validity.",
+      "source_basis": "9-3-3c: 'Some Prohibited/Restricted Areas established for security reasons or to contain hazardous activities not involving aircraft ordnance do not require the 500-foot buffer.'",
+      "match": {
+        "question_text": "Under 9-3-3, when is the added 500-foot (or 1,000-foot) buffer NOT required for a Prohibited or Restricted Area?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "For which type of Prohibited or Restricted Area is the 500-foot (or 1,000-foot above FL 290) buffer not required?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 9-3-3c, certain Prohibited/Restricted Areas established for security reasons or to contain hazardous activities not involving aircraft ordnance do not require the added buffer. For these areas, keep aircraft clear of the airspace without the vertical buffer.",
+          "choices": [
+            {
+              "text": "Warning Areas located entirely offshore beyond the 12 NM territorial limit.",
+              "is_correct": false
+            },
+            {
+              "text": "All Restricted Areas when the using agency is not actively conducting operations.",
+              "is_correct": false
+            },
+            {
+              "text": "MOAs and Alert Areas, which are not subject to separation procedures at all.",
+              "is_correct": false
+            },
+            {
+              "text": "Areas established for security reasons or hazardous activities not involving aircraft ordnance.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-6-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Correct answer (134 chars) is nearly double any distractor length. Combined with paragraph-location scaffold and correct-answer-first position, this creates multiple guessing cues.",
+      "source_basis": "9-6-2: 'Derelict balloon: A moored balloon which has slipped its mooring and becomes a hazard to air navigation, or an unmanned free balloon flight which cannot be terminated at the will of the operator.'",
+      "match": {
+        "question_text": "Under 9-6-2, what are the two conditions under which a balloon becomes derelict?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What two conditions define a balloon as derelict?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 9-6-2, a balloon becomes derelict when: (1) a moored balloon slips its mooring and becomes a hazard to air navigation, or (2) an unmanned free balloon flight cannot be terminated at the will of the operator. These conditions trigger specific controller response duties.",
+          "choices": [
+            {
+              "text": "A moored balloon that slips its mooring, or an unmanned free balloon the operator cannot terminate.",
+              "is_correct": true
+            },
+            {
+              "text": "Any balloon out of radar contact for more than 10 consecutive minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "A balloon whose operator has declared an emergency and requested derelict status.",
+              "is_correct": false
+            },
+            {
+              "text": "Any balloon that exceeds its planned flight duration by more than 2 hours.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-7-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Correct answer is substantially longer than distractors (106 vs 41-63 chars). Combined with paragraph-location scaffold and correct-answer-first position.",
+      "source_basis": "9-7-4a: 'Include aircraft type, altitude, and direction of flight of all known traffic that will transit the airspace within which the jump will be made.'",
+      "match": {
+        "question_text": "Under 9-7-4, what three elements must be included in the traffic advisory to the jump aircraft before a Class E parachute jump?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What three elements must a traffic advisory to the jump aircraft include before a Class E parachute operation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 9-7-4, the advisory must include aircraft type, altitude, and direction of flight of all known traffic that will transit the jump airspace. This gives the jump pilot situational awareness of conflicting traffic.",
+          "choices": [
+            {
+              "text": "Aircraft type, altitude, and direction of flight of all known traffic transiting the jump airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "The jump aircraft's callsign, number of jumpers, and planned exit altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Location, time, and duration of the planned parachute jump operation.",
+              "is_correct": false
+            },
+            {
+              "text": "Wind direction, cloud ceiling, and visibility at the designated drop zone.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-10",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence",
+        "answer_defensibility"
+      ],
+      "problem": "Negative stem ('which separation services do NOT apply') combined with paragraph-location scaffold and correct-answer-first. The exclusion framing asks the student to identify what is absent rather than what procedures apply. The operational skill is knowing that ATC security tracking is separate from routine separation services.",
+      "source_basis": "9-2-10a2: 'Basic separation services to aircraft (for example, IFR, SVFR, Class B, Class C, TRSA) do not apply to ATC security tracking.'",
+      "match": {
+        "question_text": "Under 9-2-10, which separation services do NOT apply to ATC security tracking?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the relationship between ATC security tracking and basic separation services in the DC SFRA?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 9-2-10, ATC security tracking is a distinct function from basic separation services. IFR, SVFR, Class B, Class C, and TRSA separation services do not apply to security tracking. Security tracking is a surveillance and reporting function, not a separation function.",
+          "choices": [
+            {
+              "text": "ATC security tracking replaces all normal separation services for aircraft under tracking.",
+              "is_correct": false
+            },
+            {
+              "text": "Security tracking uses the same separation minima as Class B airspace services.",
+              "is_correct": false
+            },
+            {
+              "text": "Basic separation services (IFR, SVFR, Class B, Class C, TRSA) do not apply to ATC security tracking.",
+              "is_correct": true
+            },
+            {
+              "text": "Only IFR separation services apply during security tracking; VFR services are suspended.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-4-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence",
+        "answer_defensibility"
+      ],
+      "problem": "Negative stem ('which is NOT a valid method') teaches by exclusion. While exclusion recognition can be valid for certain skills, the four valid separation methods from a fuel-dumping aircraft are better taught by asking the student to identify what IS required. Knowing that '3 miles radar' is wrong is less useful than knowing the correct four methods.",
+      "source_basis": "9-4-4a: IFR separation methods from fuel-dumping aircraft: 1,000 feet above (or per 4-5-1 if greater), 2,000 feet below, 5 miles radar, or 5 miles laterally.",
+      "match": {
+        "question_text": "Under 9-4-4, which of the following is NOT a valid method for separating known IFR aircraft from an aircraft dumping fuel?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which of the following is a valid method for separating a known IFR aircraft from an aircraft that is dumping fuel?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 9-4-4, valid IFR separation methods from a fuel-dumping aircraft include: 1,000 feet above (or per 4-5-1 if greater), 2,000 feet below, 5 miles radar, or 5 miles laterally. Any one method is sufficient — they do not need to be combined.",
+          "choices": [
+            {
+              "text": "3 miles radar from the aircraft dumping fuel.",
+              "is_correct": false
+            },
+            {
+              "text": "500 feet above the aircraft dumping fuel.",
+              "is_correct": false
+            },
+            {
+              "text": "5 miles laterally from the aircraft dumping fuel.",
+              "is_correct": true
+            },
+            {
+              "text": "1,000 feet below the aircraft dumping fuel.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-1-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Overloaded question asks for 'four things' controllers must avoid simultaneously. This is a recall-list question that compresses four distinct prohibitions into one item. The negative stem ('avoid or not do') and first-position correct answer compound the problem. The four prohibitions are better addressed by focused single-concept items or flashcards.",
+      "source_basis": "9-1-3b-d: Avoid changes in route or altitude; do not impose ATC delays except to preclude emergencies; do not change the discrete beacon code of special radar accuracy flight check aircraft.",
+      "match": {
+        "question_text": "Under 9-1-3, what four things must controllers avoid or not do regarding flight check aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller working a flight check aircraft wants to change its altitude to resolve a developing traffic conflict. Is this permitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 9-1-3b, controllers must avoid changes in the route or altitude from that filed by the pilot in the initial flight plan. Traffic conflicts must be resolved by moving other aircraft, not by altering the flight check aircraft's profile.",
+          "choices": [
+            {
+              "text": "Yes, but only if the pilot agrees to the altitude change before it is issued.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, traffic conflict resolution takes priority over flight check protection.",
+              "is_correct": false
+            },
+            {
+              "text": "No, but only because altitude changes always void the flight check data.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Avoid changes in route or altitude from the pilot's filed initial flight plan.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "9-2-11",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "format_fit"
+      ],
+      "problem": "Source-use activity with correct answer substantially longer than distractors, creating a length-based guessing cue. Combined with negative-stem flag.",
+      "source_basis": "9-2-11: Forward all known information on the subject aircraft to the OS/CIC. If information is not known, broadcast the call sign on all frequencies and advise the OS/CIC of the response.",
+      "match": {
+        "activity_type": "source_use",
+        "content": {
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "source_label": "FAA Order JO 7110.65, 9-2-11, Security Notice (SECNOT)",
+          "situation": "During a security notice event, another controller says, 'We do not know enough yet. Do not bother the OS/CIC until the aircraft answers.'",
+          "instruction": "Use the source rule to decide whether that advice is correct.",
+          "explanation": "The advice is wrong. The paragraph requires forwarding all known information to the OS/CIC, and when information is not known, broadcasting the call sign on all frequencies and advising the OS/CIC of the response.",
+          "choices": [
+            {
+              "text": "Correct; OS/CIC notification waits until the aircraft answers.",
+              "is_correct": false
+            },
+            {
+              "text": "Incorrect; forward known information to the OS/CIC and broadcast the call sign on all frequencies if information is not known.",
+              "is_correct": true
+            },
+            {
+              "text": "Correct only if the aircraft is outside controlled airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Incorrect, but the only required action is to notify adjacent sectors.",
+              "is_correct": false
+            }
+          ]
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_use",
+          "difficulty": 3,
+          "content": {
+            "instruction": "Use the source rule to decide whether that advice is correct.",
+            "question_text": "A trainee says: 'We don't know anything about the SECNOT aircraft yet, so I'll wait until we have radar contact to notify the OS/CIC.' Is this advice correct?",
+            "choices": [
+              {
+                "text": "Correct. OS/CIC notification should wait until the aircraft is positively identified on radar.",
+                "is_correct": false
+              },
+              {
+                "text": "Correct, but only if the aircraft is outside controlled airspace.",
+                "is_correct": false
+              },
+              {
+                "text": "Incorrect. Forward known information to the OS/CIC and, when information is not known, broadcast the call sign on all frequencies.",
+                "is_correct": true
+              },
+              {
+                "text": "Incorrect, but the only required action is to notify adjacent sectors.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 9-2-11, the controller must forward all known information to the OS/CIC. When information is not known, broadcast the call sign on all frequencies and advise the OS/CIC of the response. Waiting for radar contact is not an authorized approach."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "9-2-21",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Correct answer is much longer than distractors with answer-length-cue flag. The correct answer includes instructional content ('forward route/altitude data beyond...') that belongs in the explanation, not the answer choice.",
+      "source_basis": "9-2-21e: 'Clear aircraft operating in a nonstandard formation/cell to the breakup fix as the clearance limit. Forward route/altitude data beyond the breakup point as routine flight plan information.'",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A nonstandard formation/cell has been approved and is approaching the breakup fix in your sector. After breakup, the aircraft need individual clearances to different destinations. Another controller suggests just clearing them to their destinations now instead of to the breakup fix.",
+          "question_text": "What is the correct clearance limit for this formation?",
+          "choices": [
+            {
+              "text": "Clear the formation to the breakup fix as the clearance limit; forward route/altitude data beyond the breakup point as routine flight plan information.",
+              "is_correct": true
+            },
+            {
+              "text": "Clear each aircraft individually to its destination before the breakup occurs.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear to the ARTCC boundary and let the next center handle the breakup.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear to the first fix beyond the breakup point to minimize frequency changes.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-2-21e, clear to the breakup fix as the clearance limit. Data beyond the breakup point is forwarded as routine flight plan information to the center concerned. At breakup, issue appropriate clearances to authorize transition from formation to individual routes (9-2-21f).",
+          "para_context": "NONSTANDARD FORMATION/CELL OPERATIONS"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "instruction": "What should you do?",
+            "situation": "A nonstandard cell formation of four military aircraft is approaching its planned breakup fix in your sector. The formation's flight plan shows destinations beyond the breakup point at four separate airfields.",
+            "question_text": "What is the correct clearance limit for this formation?",
+            "choices": [
+              {
+                "text": "Clear each aircraft individually to its destination before the breakup occurs.",
+                "is_correct": false
+              },
+              {
+                "text": "Clear to the ARTCC boundary and let the next center handle the breakup.",
+                "is_correct": false
+              },
+              {
+                "text": "Clear the formation to the breakup fix as the clearance limit.",
+                "is_correct": true
+              },
+              {
+                "text": "Clear to the first fix beyond the breakup point to minimize frequency changes.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 9-2-21e, clear to the breakup fix as the clearance limit. Route and altitude data beyond the breakup point is forwarded as routine flight plan information to the center serving the destination. This keeps the formation clearance clean while ensuring downstream facilities have needed data."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "9-2-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Correct answer is much longer than distractors, creating a conspicuous length cue. The correct choice embeds the full list of data elements in the answer rather than concisely stating what to collect.",
+      "source_basis": "9-2-6e: 'Prior to entering an MTR, request the pilot's estimate for the exit/alternate exit fix, requested altitude after exit, and if applicable, the number of reentries on Strategic Training Routes.'",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is about to enter an IFR military training route (IR). You need to manage traffic on the route. Another controller suggests clearing the aircraft into the IR without obtaining the pilot's estimates because the route is short and the exit is obvious.",
+          "question_text": "What information must you obtain from the pilot prior to IR entry?",
+          "choices": [
+            {
+              "text": "The pilot's estimate for the route exit/alternate exit fix, requested altitude after exit, and if applicable, the number of reentries on the Strategic Training Range.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the pilot's requested altitude after exit; other estimates are optional.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the estimated time for the exit fix; altitude and reentry information are obtained after exit.",
+              "is_correct": false
+            },
+            {
+              "text": "No information is required; the pilot's flight plan already contains all necessary route data.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-2-6e, prior to entering an MTR, request the pilot's estimate for the exit/alternate exit fix, requested altitude after exit, and if applicable, the number of reentries on a Strategic Training Range.",
+          "para_context": "IFR MILITARY TRAINING ROUTES"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "instruction": "What should you do?",
+            "situation": "A military flight has filed an IFR flight plan that includes an MTR segment through your sector. The aircraft is approaching the entry point and will be operating under MARSA for the duration of the route.",
+            "question_text": "What information must you obtain from the pilot prior to IR entry?",
+            "choices": [
+              {
+                "text": "Only the pilot's estimate for the exit fix; other information is on the flight plan.",
+                "is_correct": false
+              },
+              {
+                "text": "Only the requested altitude after exit; the exit fix estimate is filed in the flight plan.",
+                "is_correct": false
+              },
+              {
+                "text": "Estimate for the exit/alternate exit fix, requested altitude after exit, and number of reentries if applicable.",
+                "is_correct": true
+              },
+              {
+                "text": "No additional information is needed because the flight plan contains all route data.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 9-2-6e, prior to MTR entry, request the pilot's estimate for the exit/alternate exit fix, the requested altitude after exit, and if applicable, the number of reentries on Strategic Training Routes. This ensures the controller has current intent before the aircraft enters the route."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "9-3-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Correct answer substantially longer than distractors with answer-length-cue flag. The correct choice embeds the reasoning ('so it needs FL 235 or higher') within the answer rather than in the explanation.",
+      "source_basis": "9-3-2a: 'Assign an altitude at least 500 feet (above FL 290 — 1,000 feet) above or below the upper/lower limit of the airspace.'",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An active Restricted Area has an upper limit of FL 230. A nonparticipating IFR aircraft at FL 240 needs to cross directly over the area. Another controller says FL 240 is fine because it's above the limit.",
+          "question_text": "What altitude does the nonparticipating aircraft need to maintain?",
+          "choices": [
+            {
+              "text": "The aircraft must be at least 500 feet above the upper limit, so it needs FL 235 or higher (or 1,000 feet if above FL 290).",
+              "is_correct": true
+            },
+            {
+              "text": "FL 240 is acceptable because any altitude above the area's upper limit is sufficient.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft must be at least 2,000 feet above the upper limit.",
+              "is_correct": false
+            },
+            {
+              "text": "Lateral separation of 3 miles is the only option; overflight is not permitted regardless of altitude.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-3-2a, nonparticipating aircraft must be assigned an altitude at least 500 feet above (or below) the upper/lower limit of the airspace (1,000 feet above FL 290).",
+          "para_context": "SEPARATION MINIMA"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "instruction": "What should you do?",
+            "situation": "An active Restricted Area has an upper limit of FL 230. A nonparticipating IFR aircraft at FL 220 requests to continue on its present course, which will take it over the Restricted Area.",
+            "question_text": "What altitude does the nonparticipating aircraft need to maintain for overflight?",
+            "choices": [
+              {
+                "text": "At least 500 feet above the upper limit — FL 235 or higher.",
+                "is_correct": true
+              },
+              {
+                "text": "FL 240 is acceptable because any altitude above the area's upper limit is sufficient.",
+                "is_correct": false
+              },
+              {
+                "text": "The aircraft must be at least 2,000 feet above the upper limit — FL 250 or higher.",
+                "is_correct": false
+              },
+              {
+                "text": "Lateral separation of 3 miles is the only option; overflight is not permitted.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 9-3-2a, nonparticipating aircraft must be assigned at least 500 feet above the upper limit of the airspace. With an upper limit of FL 230, the aircraft needs FL 235 or higher. Above FL 290, the buffer increases to 1,000 feet."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "9-4-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Correct answer much longer than distractors with answer-length-cue flag. The correct choice includes the calculation ('4,500 + 2,000 = 6,500') which belongs in the explanation, not the answer text.",
+      "source_basis": "9-4-3: 'If an aircraft is dumping fuel in IFR conditions, assign an altitude at least 2,000 feet above the highest obstacle within 5 miles of the route or pattern being flown.'",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An aircraft is dumping fuel IFR and flying a pattern. The highest charted obstacle within 5 miles of the pattern is a 4,500-foot peak. The trainee assigns 5,500 feet. The aircraft's standard IFR altitude assignment per 4-5-1 would be 5,000 feet.",
+          "question_text": "Is the trainee's altitude assignment of 5,500 feet correct?",
+          "choices": [
+            {
+              "text": "No. 9-4-3 requires at least 2,000 feet above the highest obstacle within 5 miles (4,500 + 2,000 = 6,500 feet MSL minimum). 5,500 feet is only 1,000 feet above the obstacle.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes. 5,500 feet provides the standard 1,000-foot IFR obstacle clearance, which is sufficient.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. 5,500 feet is 1,000 feet above the peak, and 9-4-3 only requires 1,000 feet of obstacle clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "No. 9-4-3 requires exactly 2,000 feet MSL above ground level, not above the highest obstacle.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-4-3, IFR fuel-dumping aircraft must be assigned at least 2,000 feet above the highest obstacle within 5 miles of the route or pattern. 4,500 + 2,000 = 6,500 feet minimum.",
+          "para_context": "ALTITUDE ASSIGNMENT"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "instruction": "What should you do?",
+            "situation": "An IFR aircraft is dumping fuel. The highest obstacle within 5 miles of the dump pattern is a peak at 4,500 feet MSL. A trainee assigns the aircraft 5,500 feet.",
+            "question_text": "Is the trainee's altitude assignment of 5,500 feet correct?",
+            "choices": [
+              {
+                "text": "Yes. 5,500 feet provides standard 1,000-foot IFR obstacle clearance.",
+                "is_correct": false
+              },
+              {
+                "text": "Yes. 5,500 feet is 1,000 feet above the peak, and 9-4-3 requires only 1,000 feet.",
+                "is_correct": false
+              },
+              {
+                "text": "No. 9-4-3 requires exactly 2,000 feet MSL above ground level, not above the obstacle.",
+                "is_correct": false
+              },
+              {
+                "text": "No. The minimum altitude is 6,500 feet (4,500 + 2,000).",
+                "is_correct": true
+              }
+            ],
+            "explanation": "Per 9-4-3, IFR fuel-dumping aircraft must be assigned at least 2,000 feet above the highest obstacle within 5 miles of the route or pattern. The formula is 4,500 + 2,000 = 6,500 feet MSL minimum. The trainee's 5,500 feet is 1,000 feet short."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "9-4-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Correct answer much longer than distractors with answer-length-cue flag. The correct choice embeds the full procedure detail in the answer text rather than concisely stating the action.",
+      "source_basis": "9-4-5: Controller in contact informs other controllers/facilities. Facilities concerned broadcast advisory at 3-minute intervals until dumping stops, then broadcast terminating advisory.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "You are working an aircraft that begins dumping fuel over the BUCKEYE VOR at 8,000 feet, heading east. A trainee says to broadcast the advisory once and then wait for pilot reports before broadcasting again.",
+          "question_text": "How should the fuel-dumping advisory be handled?",
+          "choices": [
+            {
+              "text": "Inform other controllers and facilities that might be concerned. The concerned facilities must then broadcast 'ATTENTION ALL AIRCRAFT. FUEL DUMPING IN PROGRESS OVER BUCKEYE AT 8,000 BY (type) EASTBOUND' at 3-minute intervals until the dumping stops, then broadcast the terminating advisory.",
+              "is_correct": true
+            },
+            {
+              "text": "Broadcast one advisory and wait for further pilot reports before taking additional action.",
+              "is_correct": false
+            },
+            {
+              "text": "Only broadcast the terminating advisory when the dump ends; in-progress advisories are optional.",
+              "is_correct": false
+            },
+            {
+              "text": "Notify the supervisor and let them determine the broadcast schedule.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-4-5, inform other controllers/facilities, broadcast advisories at 3-minute intervals until the dumping stops, then broadcast the terminating advisory.",
+          "para_context": "INFORMATION DISSEMINATION"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 2,
+          "content": {
+            "instruction": "What should you do?",
+            "situation": "You are in contact with an aircraft that has started dumping fuel while in IFR conditions. The dump route will affect two adjacent sectors.",
+            "question_text": "How should the fuel-dumping advisory be handled?",
+            "choices": [
+              {
+                "text": "Broadcast one advisory at the start and wait for further pilot reports before taking additional action.",
+                "is_correct": false
+              },
+              {
+                "text": "Only broadcast the terminating advisory when the dump ends; in-progress advisories are optional.",
+                "is_correct": false
+              },
+              {
+                "text": "Inform other controllers and facilities concerned; they broadcast advisories at 3-minute intervals.",
+                "is_correct": true
+              },
+              {
+                "text": "Notify the supervisor and let them determine the broadcast schedule.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 9-4-5, the controller in contact with the dumping aircraft informs other controllers and facilities that might be concerned. The concerned facilities then broadcast an advisory at 3-minute intervals until the dumping stops. After the dump, they broadcast the terminating advisory: 'ATTENTION ALL AIRCRAFT. FUEL DUMPING OVER (location) TERMINATED.'"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "9-6-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Correct answer much longer than distractors with answer-length-cue flag. The correct choice embeds the full rule explanation in the answer rather than concisely stating the judgment.",
+      "source_basis": "9-6-2a: 'For a moored balloon which has slipped its moorings...issue traffic advisories.' 9-6-2b: 'For a derelict unmanned free balloon...flight follow and provide separation to the extent possible.'",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A moored balloon at a local festival has slipped its moorings and is drifting into controlled airspace. A trainee begins flight following the balloon and preparing to provide separation to IFR traffic.",
+          "question_text": "Is the trainee's response correct?",
+          "choices": [
+            {
+              "text": "No. For derelict moored balloons, 9-6-2a requires only traffic advisories. Flight following and separation are for derelict unmanned free balloons under 9-6-2b.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes. All derelict balloons require flight following and separation regardless of type.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Moored balloons that slip moorings are handled under 9-6-1, not 9-6-2.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. But the trainee should also broadcast advisories at 3-minute intervals.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-6-2a, a moored balloon which has slipped its moorings requires only traffic advisories. Flight following and separation apply to derelict unmanned free balloons per 9-6-2b.",
+          "para_context": "DERELICT BALLOONS"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 2,
+          "content": {
+            "instruction": "What should you do?",
+            "situation": "A trainee tells you: 'A moored balloon slipped its moorings near the airport, so I'm going to flight follow it and provide separation like we do for unmanned free balloons.'",
+            "question_text": "Is the trainee's response correct?",
+            "choices": [
+              {
+                "text": "Yes. All derelict balloons require flight following and separation regardless of type.",
+                "is_correct": false
+              },
+              {
+                "text": "No. Moored balloons that slip moorings are handled under 9-6-1, not 9-6-2.",
+                "is_correct": false
+              },
+              {
+                "text": "No. A derelict moored balloon requires only traffic advisories per 9-6-2.",
+                "is_correct": true
+              },
+              {
+                "text": "Yes, but the trainee should also broadcast advisories at 3-minute intervals.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 9-6-2, derelict moored balloons require only traffic advisories. Flight following and separation apply to derelict unmanned free balloons. The trainee is applying the unmanned-free-balloon procedures to a moored-balloon situation — these are different response categories."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "9-7-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence",
+        "context"
+      ],
+      "problem": "Correct answer much longer than distractors with answer-length-cue and paragraph-location-scaffold flags. The stem references '9-7-4 and 14 CFR 105.13' directly, testing paragraph knowledge rather than operational application.",
+      "source_basis": "9-7-4a and 14 CFR 105.13: Radio contact must be established at least 5 minutes before jumping begins to receive traffic information. Advisories to nonparticipating aircraft include location, time, duration, and altitude.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A jump aircraft calls 2 minutes before planned exit in Class E airspace. Several aircraft will transit the area. A trainee says the jump can proceed because 2 minutes is reasonable notice, and advisories to nonparticipating aircraft can wait until after the jump.",
+          "question_text": "What issues exist with this approach under 9-7-4 and 14 CFR 105.13?",
+          "choices": [
+            {
+              "text": "14 CFR 105.13 requires radio contact at least 5 minutes before jumping to receive traffic information. 9-7-4 also requires pre-jump advisories to the jump aircraft and advisories to known nonparticipating aircraft before the jump.",
+              "is_correct": true
+            },
+            {
+              "text": "There are no issues. 2 minutes is sufficient for Class E jumps and advisories to nonparticipating traffic can follow the jump.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the 5-minute rule is an issue; advisories to nonparticipating aircraft are optional in Class E.",
+              "is_correct": false
+            },
+            {
+              "text": "Neither the 5-minute rule nor nonparticipating advisories apply — those are only for Class D operations.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-7-4a and 14 CFR 105.13, the jump aircraft must establish radio contact at least 5 minutes before jumping begins to receive traffic information, and advisories to the jump aircraft and nonparticipating aircraft are required before the jump.",
+          "para_context": "OTHER CONTROL AIRSPACE"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "instruction": "What should you do?",
+            "situation": "A jump aircraft calls you 2 minutes before the planned drop time in Class E airspace. The pilot asks for authorization to begin jumping. You have three nonparticipating aircraft that will transit the jump airspace during the operation.",
+            "question_text": "What issues exist with this approach?",
+            "choices": [
+              {
+                "text": "There are no issues. Two minutes is sufficient for Class E jumps under any conditions.",
+                "is_correct": false
+              },
+              {
+                "text": "Only the 5-minute rule is an issue; advisories to nonparticipating aircraft are optional in Class E.",
+                "is_correct": false
+              },
+              {
+                "text": "Radio contact must be established at least 5 minutes before jumping begins to receive traffic information.",
+                "is_correct": true
+              },
+              {
+                "text": "Neither the 5-minute rule nor nonparticipating advisories apply — those are only for Class D operations.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 14 CFR 105.13, radio contact must be established at least 5 minutes before jumping begins to receive traffic information. Additionally, per 9-7-4, advisories to nonparticipating aircraft must include location, time, duration, and altitude from which the jump will be made."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-6-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence",
+        "context"
+      ],
+      "problem": "The question answer ('As outlined in paragraph 9-6-1, subparagraph e') tests the student's ability to cross-reference paragraphs rather than the operational procedure for transferring balloon flight following. The student should know what information to forward, not which paragraph describes it.",
+      "source_basis": "9-6-2e: Transfer flight following responsibility as outlined in 9-6-1e, which lists seven items to forward.",
+      "match": {
+        "question_text": "Under 9-6-2, how is flight following responsibility for a derelict balloon transferred?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When transferring flight following responsibility for a derelict balloon to another facility, what information must be forwarded?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 9-6-2e, transfer flight following per 9-6-1e: forward identification/type, last known position/altitude, direction/speed, ETA over boundary, other pertinent information, radar point out, and operator contact information.",
+          "choices": [
+            {
+              "text": "Only the balloon's registration number and last reported altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "ID/type, last position/altitude, direction/speed, ETA over boundary, and other pertinent information.",
+              "is_correct": true
+            },
+            {
+              "text": "The same information as a standard IFR handoff without any balloon-specific additions.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer is not required; each facility handles derelict balloons independently.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-3-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence",
+        "context"
+      ],
+      "problem": "The question answer ('Clear the aircraft in accordance with paragraph 9-3-2, Separation Minima') tests cross-reference knowledge rather than the operational fallback: when a coordinated SUA transit cannot be completed per the using agency's instructions, treat the aircraft as a nonparticipant and apply 9-3-2 separation.",
+      "source_basis": "9-3-4b: 'If unable to comply with the using agency's instructions or clearances, clear the aircraft in accordance with paragraph 9-3-2, Separation Minima.'",
+      "match": {
+        "question_text": "Under 9-3-4, what must a controller do if unable to comply with the using agency's instructions or clearances during a coordinated transit?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "During a coordinated SUA transit, the using agency issues instructions you cannot comply with due to conflicting traffic. What is the correct controller action?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 9-3-4, if unable to comply with the using agency's instructions, treat the aircraft as a nonparticipant and apply the separation minima in 9-3-2 (500 feet vertical / 3 miles radar from the SUA boundary). Do not improvise a clearance through the area.",
+          "choices": [
+            {
+              "text": "Deny the transit and require the aircraft to circumnavigate the area.",
+              "is_correct": false
+            },
+            {
+              "text": "Apply nonparticipant separation minima from the SUA boundary.",
+              "is_correct": true
+            },
+            {
+              "text": "Request the using agency to deactivate the area for the transit.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a clearance through the area using standard IFR separation without coordination.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

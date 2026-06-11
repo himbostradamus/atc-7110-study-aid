@@ -139,7 +139,12 @@ python scripts/generate_curriculum.py \
   --source /path/to/7110.65/files \
   --out curriculum.db \
   --publish frontend/public
+
+python scripts/repair_curriculum.py --db frontend/public/curriculum.db
 ```
+
+The repair step synchronizes curated content and reapplies the tracked,
+chapter-level review decisions in `backend/app/data/content_remediation/`.
 
 If `--chapter` is omitted, the generator now auto-detects any available 7110.65 chapter PDFs/ZIPs in the source directory. It also accepts a single full-order PDF as the source input and will build chapters 1–14 from that file directly.
 

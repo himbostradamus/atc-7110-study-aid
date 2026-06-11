@@ -1,0 +1,745 @@
+{
+  "version": 1,
+  "chapter": 11,
+  "target_generation_source": "question_agent",
+  "packet_sha256": "c9856ca350a3dbe046170fc01ba2b468293d408f849b0497a3e18532a1f1e4f8",
+  "manifest_sha256": "92ae38ef9a34c7d7836a85c6c617ebb55f6bdaf3deb93dcf0e8e56c0a4ec6e3c",
+  "summary": {
+    "overall": "Chapter 11 items are generally source-faithful but suffer from pervasive format weaknesses. Eight fill-in-the-blank questions have only one choice or near-identical choices, making them recall prompts rather than assessment items. Twenty-one of 33 questions place the correct answer first, creating positional cue bias. Answer-length cues and paragraph-location scaffolding are common. One item teaches incorrect information by conflating two distinct enforcement groups, one flashcard misstates the count of coordination parties, and one activity duplicates a question. The situation-action activities are the strongest items in the packet — well-constructed with realistic operational scenarios. Flashcards are broadly well-focused, with only one overloaded card requiring a split.",
+    "patterns": [
+      "Fill-in-the-blank breakdown: 8 of 9 fill_blank questions use single-choice or near-identical dual-choice formats. These test trivial word recall (e.g., 'timely', 'those', 'situational awareness') rather than operational understanding. A fill_blank with one acceptable answer and no distractors is a recall prompt, not an assessment.",
+      "Positional cue epidemic: 21 of 33 questions place the correct answer at sort_order 0. Consistent first-position placement teaches learners to select the first option rather than evaluate all choices.",
+      "Paragraph-location scaffolding: 27 of 33 question stems embed paragraph references (e.g., 'Under 11-1-2a'). While the underlying questions often test real operational knowledge, the paragraph-number prefix trains document-navigation trivia and violates self-contained stem standards.",
+      "Answer-length cuing: In several multiple-choice items (notably baed6c3a, 4dbee376, f9b4fd7c), the correct answer is conspicuously longer than distractors because it contains the full regulatory text while distractors are simplified. Length alone signals correctness.",
+      "Situation-action strength: Both situation-action activities (17e1b67d for 11-1-1, 3b56b29c for 11-1-2, df27946e for 11-1-3) present realistic operational dilemmas, require rule application rather than recall, and include plausible distractors that represent common operational errors.",
+      "Flashcard focus: 22 of 24 flashcards have clear, single-concept retrieval targets. The exceptions are one overloaded comparison card (11bac7d8) and one card with a factual error in the front text (b50a005f says 'three parties' but the source names only two).",
+      "Cross-format duplication: The 'where to find TBM details' fact (JO 7210.3 reference) appears in a question, an activity, and a flashcard. Only the flashcard is format-appropriate for a source-reference lookup fact.",
+      "Negative stem usage: Five questions use negative stems. Two (f9b4fd7c, 332b7d82) could be rephrased positively without losing the cognitive task. Three (ec3335d0, d1e0aa67, a0cbac6d) legitimately test exclusion or distinction recognition."
+    ],
+    "generation_guidance": [
+      "Convert all fill-in-the-blank items to multiple-choice or true/false formats with plausible operational distractors. A single-acceptable-answer fill_blank is not an assessment — it is a prompted recall exercise that belongs in flashcards, not quiz questions.",
+      "Randomize correct-answer position across all items using shuffle or round-robin assignment. Never default to sort_order 0 for the correct answer.",
+      "Remove paragraph-number prefixes ('Under 11-1-2', 'Under 11-1-3b') from all question stems. Learners need to recognize and apply rules from operational context, not cite section numbers. If a section reference aids study, place it in the explanation, not the stem.",
+      "Ensure all answer choices in a multiple-choice question are comparable in length, grammatical structure, and specificity. When the correct answer is the only choice that mirrors regulatory text, length becomes a cue independent of knowledge.",
+      "Limit each question and flashcard to one retrieval target. The item 'which duty is assigned to STMCIC but not OS/CIC' tests two distinct duties. Split overloaded items before authoring new ones to maintain clean retrieval targets.",
+      "Cross-check new items against existing coverage to avoid duplication across formats. A concept that already has a well-formed multiple-choice question does not also need a knowledge-check activity testing the same fact in the same way.",
+      "Use negative stems only when the cognitive skill genuinely requires exclusion or distinction recognition (e.g., distinguishing which requirement applies to TRACONs but not ARTCCs). Otherwise rephrase to positive form.",
+      "Exact numerical and procedural recall (release windows of 2 prior / 1 after, metering tolerance of +/- 1 minute, briefing frequency of once per day and evening shifts) is appropriate for flashcards and true/false items. These facts should still be presented with operational context that explains why the number matters.",
+      "When generating situation-action activities, continue the pattern of presenting a realistic operational scenario with a clear decision point, plausible incorrect courses of action, and an explanation that connects the correct answer to the controlling principle rather than restating the rule text.",
+      "Preserve the existing curated reference items as quality benchmarks. Agent-authored replacements should match their standard: self-contained stems, balanced distractors, and explanations that teach the operational principle."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "question",
+      "para_id": "11-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "distractor_quality"
+      ],
+      "problem": "Fill-in-the-blank with two near-identical choices ('balance; demand' vs 'balance, demand') differing only in semicolon versus comma. This is not a real assessment — it tests punctuation trivia within a recall prompt rather than operational understanding of the traffic management mission.",
+      "source_basis": "Per 11-1-1a, the mission of the traffic management system is to balance air traffic demand with system capacity to ensure the maximum efficient utilization of the NAS. The item should test whether the learner understands what the mission does operationally, not whether they can fill in two adjacent words from the sentence.",
+      "match": {
+        "question_text": "Complete the traffic management mission statement: the system's mission is to _____ air traffic _____ with system capacity to ensure the maximum efficient utilization of the NAS.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the mission of the air traffic management system?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 11-1-1a, the mission of the traffic management system is to balance air traffic demand with system capacity to ensure the maximum efficient utilization of the NAS. The system does not guarantee zero delays or prioritize any single user category; it seeks equilibrium between demand and capacity.",
+          "choices": [
+            {
+              "text": "Balance air traffic demand with system capacity to ensure maximum efficient utilization of the NAS.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Guarantee on-time arrival for all scheduled commercial flights regardless of weather or volume.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Maximize sector throughput by eliminating all miles-in-trail restrictions during peak periods.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Prioritize military and national-security flight operations above all other traffic categories.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "distractor_quality",
+        "context"
+      ],
+      "problem": "Fill-in-the-blank with two near-identical choices ('the maximum efficient utilization of the NAS' vs 'maximum efficient utilization of the NAS') differing only in the word 'the'. This trivial word-distinction fill_blank tests article usage rather than the operational purpose of the traffic management mission. Stem also uses paragraph-location scaffolding ('Under 11-1-1').",
+      "source_basis": "Per 11-1-1a, the balance of demand and capacity is meant to ensure the maximum efficient utilization of the NAS. The item should test what outcome the mission achieves, not whether the learner remembers an exact phrase including the definite article.",
+      "match": {
+        "question_text": "Under 11-1-1, the traffic management mission is described as balancing demand with capacity. What is that balance meant to ensure?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "The traffic management system balances air traffic demand with system capacity. What is the intended outcome of this balance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 11-1-1a, the mission of the traffic management system is to balance air traffic demand with system capacity to ensure the maximum efficient utilization of the NAS. Efficiency here means using available airspace and airport capacity to the fullest safe extent, not eliminating all constraints.",
+          "choices": [
+            {
+              "text": "Elimination of all airborne holding across the entire NAS.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Maximum efficient utilization of the NAS.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Priority handling for aircraft operating under IFR flight plans.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Guaranteed arrival slots for all general aviation aircraft at controlled airports.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "distractor_quality",
+        "context"
+      ],
+      "problem": "Fill-in-the-blank with two near-identical choices ('day, evening' vs 'day and evening') differing only in comma versus the word 'and'. This tests punctuation rather than the operational briefing requirement. Stem also uses subparagraph-location scaffolding ('Under 11-1-2a').",
+      "source_basis": "Per 11-1-2a1, the STMCIC must ensure an operational briefing is conducted at least once during the day and evening shifts. The operational knowledge being tested is the briefing frequency and which shifts are covered, not punctuation.",
+      "match": {
+        "question_text": "Complete the STMCIC operational briefing requirement: the briefing must be conducted at least once during the _____ and _____ shifts.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "How often must the STMCIC ensure an operational briefing is conducted, and during which shifts?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 11-1-2a1, the STMCIC must ensure an operational briefing is conducted at least once during the day and evening shifts. The mid shift is not included in this minimum requirement. The briefing must include, at a minimum, the STMCIC, OSMIC/CIC, and other designated personnel.",
+          "choices": [
+            {
+              "text": "At the start of every shift including the mid shift, with all controllers on duty.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "At least once during the day and evening shifts, with minimum required participants.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Once per week or whenever the STMCIC determines that conditions have materially changed.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Only during the day shift, because the evening shift briefing is optional at the STMCIC's discretion.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "distractor_quality",
+        "context"
+      ],
+      "problem": "Fill-in-the-blank with a single choice ('all facilities'). A one-choice fill_blank is not an assessment — it is a prompted recall with no distractor analysis. Stem also embeds paragraph-location scaffolding ('Under 11-1-2').",
+      "source_basis": "Per 11-1-2d2 and e2, both ARTCCs and TRACONs must monitor arrival flow for potential metering actions or changes and, if necessary, initiate coordination with all facilities to discuss the change to the metering plan. The operational knowledge is the comprehensive scope of coordination required.",
+      "match": {
+        "question_text": "Under 11-1-2, both ARTCCs and TRACONs must monitor arrival flow for potential metering actions or changes and, if necessary, initiate coordination with _____ to discuss the change to the metering plan.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "When an ARTCC or TRACON identifies a need to change the metering plan based on arrival flow monitoring, what is the required coordination scope?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 11-1-2d2 and e2, both ARTCCs and TRACONs must monitor arrival flow for potential metering actions or changes and, if necessary, initiate coordination with all facilities to discuss the change to the metering plan. The coordination scope is comprehensive — not limited to the overlying ARTCC or the affected terminal facility.",
+          "choices": [
+            {
+              "text": "Coordinate only with the TMU at the Air Traffic Control System Command Center.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Coordinate with adjacent sectors only, since metering changes do not propagate beyond one sector boundary.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Initiate coordination with all facilities to discuss the change to the metering plan.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Notify only the overlying ARTCC regardless of which facility type initiates the coordination.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "distractor_quality",
+        "context"
+      ],
+      "problem": "Fill-in-the-blank with a single choice ('situational awareness'). A one-choice fill_blank provides no distractor reasoning and tests word recall rather than the operational reason ATCTs monitor TBFM equipment. Stem also uses paragraph-location scaffolding.",
+      "source_basis": "Per 11-1-2f1, ATCTs must monitor TBFM equipment to improve situational awareness for a system approach to TBM operations. The operational knowledge is the purpose of monitoring, not the words 'situational awareness' in isolation.",
+      "match": {
+        "question_text": "Under 11-1-2, for ATCTs, TBFM equipment monitoring improves what?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "Why must an ATCT monitor TBFM equipment during traffic management operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 11-1-2f1, ATCTs must monitor TBFM equipment to improve situational awareness for a system approach to TBM operations. The purpose is awareness and integration with the broader TBM system, not independent traffic management initiative generation.",
+          "choices": [
+            {
+              "text": "To improve situational awareness for a system approach to TBM operations.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "To generate independent traffic management initiatives without coordinating with the TMU.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "To override metering times that conflict with local departure sequencing preferences.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "To determine whether TBFM is feasible at the airport before accepting any metering assignments.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "distractor_quality",
+        "context"
+      ],
+      "problem": "Fill-in-the-blank with a single choice ('timely'). This reduces an operational implementation standard to a one-word recall exercise. The stem uses subparagraph-location scaffolding ('Under 11-1-2a'), training the learner to associate a single word with a paragraph number rather than understanding the operational standard.",
+      "source_basis": "Per 11-1-2a6, the STMCIC must ensure changes to TBM operations and TMIs are implemented in a timely manner. The operational knowledge is the standard of implementation pace — neither delayed until a shift change nor effective instantly without coordination.",
+      "match": {
+        "question_text": "Under 11-1-2a, the STMCIC must ensure changes to TBM operations and TMIs are implemented in a _____ manner.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What standard applies to the implementation of changes to TBM operations and TMIs?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 11-1-2a6, the STMCIC must ensure changes to TBM operations and TMIs are implemented in a timely manner. This means changes should take effect without unnecessary delay but with appropriate coordination. The standard is neither 'immediate upon verbal direction' nor 'next shift change only.'",
+          "choices": [
+            {
+              "text": "Changes take effect only at the start of the next operational shift after full coordination.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "A 30-minute advance notification period is required before any change becomes effective.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Changes are effective immediately upon verbal direction without further coordination requirements.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Changes must be implemented in a timely manner, without specifying a fixed delay interval.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "distractor_quality"
+      ],
+      "problem": "Fill-in-the-blank with a single choice ('2, 1'). Although the departure release window numbers are appropriate for exact recall, a single-choice fill_blank provides no distractor reasoning. The exact values should be tested against plausible numerical distractors to confirm the learner knows the correct asymmetric window.",
+      "source_basis": "Per 11-1-2f3, when departure scheduling or Call for Release is in effect, ATCTs must release aircraft so they are airborne within a window that extends from 2 minutes prior and ends 1 minute after the assigned time, unless otherwise coordinated. The window is asymmetric — wider before than after the assigned time.",
+      "match": {
+        "question_text": "When departure scheduling or Call for Release is in effect, ATCTs must release aircraft so they are airborne within a window that extends from _____ minutes prior and ends _____ minute(s) after the assigned time, unless otherwise coordinated.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "When departure scheduling or Call for Release is in effect, within what airborne window must an ATCT release an aircraft relative to its assigned time?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 11-1-2f3, the window extends from 2 minutes prior to 1 minute after the assigned time, unless otherwise coordinated. This is an asymmetric window — the aircraft may be airborne up to 2 minutes early but only up to 1 minute late. The window can be modified through coordination.",
+          "choices": [
+            {
+              "text": "From 2 minutes prior to 2 minutes after the assigned time.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "From 1 minute prior to 2 minutes after the assigned time.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Exactly at the assigned time with no tolerance before or after.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "From 2 minutes prior to 1 minute after the assigned time, unless otherwise coordinated.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "distractor_quality"
+      ],
+      "problem": "Fill-in-the-blank with a single choice ('situation display'). This reduces a mandatory display requirement to a one-word recall exercise. The operational standard — that the situation display is the required location regardless of controller preference or convenience — is not tested by a single-acceptable-answer blank.",
+      "source_basis": "Per 11-1-3a, during periods of metering, personnel providing air traffic services must display TBFM schedule information on the situation display. This is a specific display location requirement, not a controller preference item.",
+      "match": {
+        "question_text": "During periods of metering, personnel providing air traffic services must display TBFM schedule information on the _____.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "During periods of metering, where must personnel display TBFM schedule information?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 11-1-3a, during periods of metering, personnel must display TBFM schedule information on the situation display. This requirement is not conditional on compliance ability or controller preference — the schedule remains displayed on the situation display throughout the metering period.",
+          "choices": [
+            {
+              "text": "On the situation display.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "On any available display the controller finds convenient for the current sector configuration.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Only on the supervisor's console, with controllers referencing it as needed.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "On a separate TBFM-dedicated monitor if one is available, otherwise display is optional.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Negative stem ('what do TBM operations and TMIs not have priority over') asks the learner to process a double-negative cognitive frame. The source concept — that separation and sector integrity always take priority over flow management — is better tested with a positive stem. Additionally, the correct answer is placed first and is longer than every distractor.",
+      "source_basis": "Per 11-1-2c1, TBM operations and TMIs do not have priority over maintaining separation of aircraft and procedural integrity of the sector. Rephrased positively: separation and procedural integrity always take priority over TBM operations and TMIs.",
+      "match": {
+        "question_text": "Under 11-1-2, what do TBM operations and TMIs not have priority over for personnel providing air traffic services?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "For personnel providing air traffic services, what always takes priority over compliance with TBM operations and TMIs?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 11-1-2c1, TBM operations and TMIs do not have priority over maintaining separation of aircraft and procedural integrity of the sector. Safety functions — separation and sector integrity — take precedence over flow management compliance in all circumstances.",
+          "choices": [
+            {
+              "text": "Meeting the published Airport Arrival Rate target for the current hour.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Maintaining separation of aircraft and procedural integrity of the sector.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Complying with fuel-efficiency routing requested by individual operators.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Achieving facility on-time performance metrics tracked at the regional level.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "distractor_quality",
+        "answer_defensibility"
+      ],
+      "problem": "The correct answer is substantially longer than every distractor because it contains the full regulatory text while distractors are simplified single-clause statements. The length difference creates a cue independent of knowledge. The correct answer is also placed first.",
+      "source_basis": "Per 11-1-2b3, the OS/CIC must continuously review TBM operations and TMIs affecting their area of responsibility and coordinate with TMU for extensions, revisions, or cancellations. The replacement balances answer length while preserving the correct answer's specificity.",
+      "match": {
+        "question_text": "Under 11-1-2, what is the OS/CIC required to do regarding TBM operations and TMIs affecting their area of responsibility?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What must the OS/CIC do regarding TBM operations and TMIs affecting their area of responsibility?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 11-1-2b3, the OS/CIC must continuously review TBM operations and TMIs affecting their area of responsibility and coordinate with TMU for extensions, revisions, or cancellations. This review is continuous — not periodic or event-driven — and coordination is directly with the TMU.",
+          "choices": [
+            {
+              "text": "Accept TMIs as issued and only escalate when a controller reports noncompliance with a specific metering time.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Review TMIs at the start of each shift and propose any changes through the STMCIC rather than coordinating directly.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Continuously review TBM operations and TMIs, and coordinate with TMU for extensions, revisions, or cancellations.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Delegate ongoing TMI review to the affected sector controllers and consolidate their feedback at the weekly planning meeting.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "distractor_quality",
+        "answer_defensibility"
+      ],
+      "problem": "The correct answer is conspicuously longer than every distractor. The distractors are single-clause constructs while the correct answer includes the full regulatory reference to JO 7210.3 and facility directive. Length alone signals the correct choice. The correct answer is also placed at sort_order 2, which improves on the first-position pattern but the length cue remains dominant.",
+      "source_basis": "Per 11-1-2a5, b6, and c5, all three roles — STMCIC, OS/CIC, and personnel providing air traffic services — must perform assigned actions in the event of an EDST outage or degradation, in accordance with JO 7210.3 and facility directive. Additionally, per a4, b5, and c4, all three perform EDST data entries where authorized.",
+      "match": {
+        "question_text": "Under 11-1-2, which EDST-related duty is shared by the STMCIC, OS/CIC, and personnel providing air traffic services?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which EDST-related responsibility is shared by the STMCIC, the OS/CIC, and personnel providing air traffic services?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 11-1-2a5, b6, and c5, all three roles must perform assigned actions in the event of an EDST outage or degradation, in accordance with JO 7210.3 and facility directive. Additionally, per a4, b5, and c4, all three perform EDST data entries to keep airspace configuration elements current where authorized. These are the shared EDST duties across all three levels.",
+          "choices": [
+            {
+              "text": "Performing assigned EDST outage or degradation actions per JO 7210.3 and facility directive.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Declaring an EDST outage for the entire facility whenever any sector loses automation support.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Reconfiguring EDST airspace boundaries independently to match real-time traffic flow demands.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Disabling EDST automation for individual sectors when traffic complexity exceeds defined thresholds.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The question asks which group must carry out TBM operations and TMIs when the STMCIC ensures enforcement, but the marked-correct answer conflates two distinct groups: personnel providing traffic management services (the STMCIC's enforcement group per 11-1-2a3) and personnel providing air traffic services (the OS/CIC's enforcement group per 11-1-2b4). Per the source, the STMCIC ensures enforcement by personnel providing traffic management services specifically. The answer as written teaches that both groups are correct for the STMCIC, which contradicts the source.",
+      "source_basis": "Per 11-1-2a3, the STMCIC must ensure that TBM operations and TMIs are carried out by personnel providing traffic management services. Per 11-1-2b4, the OS/CIC must ensure they are carried out by personnel providing air traffic services. The enforcement group differs by supervisor role — the two are not interchangeable.",
+      "match": {
+        "question_text": "Under 11-1-2, when STMCIC ensures that TBM operations and TMIs are carried out, which group of personnel must do the carrying out?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "The STMCIC must ensure that TBM operations and TMIs are carried out. By which group of personnel must this enforcement be performed?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 11-1-2a3, the STMCIC ensures TBM operations and TMIs are carried out by personnel providing traffic management services. By contrast, per 11-1-2b4, the OS/CIC ensures they are carried out by personnel providing air traffic services. The enforcement group is specific to the supervisor role — they are not interchangeable.",
+          "choices": [
+            {
+              "text": "All facility personnel who are currently on position, regardless of their functional role.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Personnel providing air traffic services, since they are the ones working traffic directly.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The OS/CIC and affected sector controllers jointly, as a shared enforcement responsibility.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Personnel providing traffic management services.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence",
+        "context"
+      ],
+      "problem": "The stem asks 'which duty' (singular) but the correct answer lists two distinct duties: ensuring the operational briefing and assuming TMC duties when not staffed. The singular/plural mismatch undermines the stem's clarity. Additionally, the negative-stem framing ('which duty is assigned to the STMCIC but NOT directly assigned to the OS/CIC') could be tightened, though the distinction task itself is legitimate.",
+      "source_basis": "Per 11-1-2a1 and a2, the STMCIC must ensure an operational briefing is conducted and must assume responsibility for TMC duties when not staffed. These two duties are STMCIC-specific — the OS/CIC does not have these responsibilities in paragraph b. The replacement corrects the grammatical number mismatch while preserving the operational distinction being tested.",
+      "match": {
+        "question_text": "Under 11-1-2, which duty is assigned to the STMCIC but NOT directly assigned to the OS/CIC?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which of the following duties are assigned to the STMCIC but not to the OS/CIC?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 11-1-2a1 and a2, the STMCIC must ensure an operational briefing is conducted and must assume responsibility for TMC duties when not staffed. These two duties are STMCIC-specific. The OS/CIC shares several other duties with the STMCIC, such as ensuring timely implementation of TBM/TMI changes and performing EDST data entries.",
+          "choices": [
+            {
+              "text": "Keep the TMU and affected sectors apprised of situations or circumstances that may cause congestion or delays.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Continuously review TBM operations and TMIs and coordinate changes with the TMU.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Ensure an operational briefing is conducted, and assume responsibility for TMC duties when not staffed.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Ensure that changes to TBM operations and TMIs are implemented in a timely manner.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-3",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "Fill-in-the-blank for the word 'those' as the answer. The stem asks which aircraft TMIs may be used between during DCT instability, and the single accepted answer is the pronoun 'those' — referencing the specific affected aircraft. This is a trivial word-recall exercise with no educational value. The operational concept (that TMIs apply to the specific aircraft affected by DCT instability, not the entire stream) is already tested substantively in question 45830775, which asks what personnel should do in this situation with proper multiple-choice distractors.",
+      "source_basis": "Per 11-1-3b1, when TBFM-generated metering time accuracy within +/- 1 minute cannot be used for specific aircraft due to significant jumps in the DCT, TMIs such as MIT or MINIT may be used between those aircraft to assist in delay absorption until stability resumes. The operational concept is tested elsewhere in the packet with better format fit.",
+      "match": {
+        "question_text": "Under 11-1-3, when the TBFM delay countdown timer has significant jumps that prevent reliable metering-time accuracy, TMIs such as MIT or MINIT may be used between _____ aircraft to assist delay absorption until stability resumes.",
+        "question_type": "fill_blank"
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "11-1-1",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "duplication",
+        "retrieval_diversity"
+      ],
+      "problem": "This knowledge-check activity asks the same question as question 25f966d1 ('Where can complete details of TBM, traffic management initiatives, and programs be found?') with nearly identical answer choices. The same fact is also tested by flashcard ef90a47b. Three items targeting the same document-reference fact is excessive. The flashcard (source_reference type) is the most format-appropriate vehicle for a 'where to find' lookup fact; the question provides a quiz-format alternative. The activity adds no additional retrieval value.",
+      "source_basis": "Per the note at 11-1-1, complete details of TBM, traffic management initiatives and programs can be found in FAA Order JO 7210.3, Facility Operation and Administration. The fact is adequately covered by question 25f966d1 and flashcard ef90a47b.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Where can complete details of TBM, traffic management initiatives, and programs be found according to 11-1-1?",
+          "choices": [
+            {
+              "text": "FAA Order JO 7210.3, Facility Operation and Administration.",
+              "is_correct": true
+            },
+            {
+              "text": "FAA Order JO 7110.65, Chapter 11, Section 2.",
+              "is_correct": false
+            },
+            {
+              "text": "Only in local facility directives developed by each ARTCC.",
+              "is_correct": false
+            },
+            {
+              "text": "The Aeronautical Information Manual, Chapter 4.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per the note at 11-1-1, complete details of TBM, traffic management initiatives and programs can be found in FAA Order JO 7210.3, Facility Operation and Administration."
+        }
+      }
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The card front states 'Which three parties must personnel providing air traffic services coordinate with for TMI extensions, revisions, or cancellations?' but the source names only two parties: the OS/CIC and the TMU. The back correctly lists two parties. The front miscounts, which will confuse learners who try to identify a non-existent third party.",
+      "source_basis": "Per 11-1-2c3, personnel must continuously review TBM operations and TMIs affecting their area of responsibility and coordinate with OS/CIC and TMU for extensions, revisions, or cancellations. The source names exactly two coordination parties, not three.",
+      "match": {
+        "front": "Which three parties must personnel providing air traffic services coordinate with for TMI extensions, revisions, or cancellations?",
+        "back": "OS/CIC and TMU. Per 11-1-2c3.",
+        "card_type": "list"
+      },
+      "replacements": [
+        {
+          "front": "With whom must personnel providing air traffic services coordinate for TMI extensions, revisions, or cancellations?",
+          "back": "The OS/CIC and TMU. Per 11-1-2c3.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "11-1-2",
+      "action": "split",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "The card front asks the learner to 'Distinguish the ARTCC TBFM duty from the ATCT TBFM duty' and the back lists multiple duties for both facility types in a single block. This is two distinct retrieval targets forced into one card: (1) what ARTCCs must do for TBFM, and (2) what ATCTs must do for TBFM. The learner cannot easily self-grade whether they recalled the full set for both facilities. Splitting into two facility-specific cards provides cleaner retrieval targets.",
+      "source_basis": "Per 11-1-2d, ARTCCs must support TBFM operations, monitor TBFM equipment, and monitor arrival flow for potential metering actions or changes — initiating coordination with all facilities if necessary. Per 11-1-2f, ATCTs must monitor TBFM equipment to improve situational awareness, and when equipped and departure scheduling is in effect, use automation to obtain departure release times and release within the prescribed window.",
+      "match": {
+        "front": "Distinguish the ARTCC TBFM duty from the ATCT TBFM duty.",
+        "back": "ARTCCs must support TBFM operations AND monitor arrival flow for metering changes. ATCTs must monitor TBFM equipment, and when equipped with departure scheduling, use automation for departure release times and release within the prescribed window. Per 11-1-2d,f.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What TBFM-related duties are assigned to ARTCCs unless otherwise coordinated?",
+          "back": "Support TBFM operations, monitor TBFM equipment for situational awareness, and monitor arrival flow for potential metering actions or changes — initiating coordination with all facilities if necessary. Per 11-1-2d.",
+          "card_type": "procedure"
+        },
+        {
+          "front": "What TBFM-related duties are assigned to ATCTs unless otherwise coordinated?",
+          "back": "Monitor TBFM equipment to improve situational awareness for a system approach to TBM operations; when equipped and departure scheduling is in effect, use automation to obtain a departure release time; and release aircraft airborne within the window from 2 minutes prior to 1 minute after the assigned time. Per 11-1-2f.",
+          "card_type": "procedure"
+        }
+      ]
+    }
+  ]
+}

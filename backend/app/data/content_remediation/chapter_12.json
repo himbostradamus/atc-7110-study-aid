@@ -1,0 +1,1646 @@
+{
+  "version": 1,
+  "chapter": 12,
+  "target_generation_source": "question_agent",
+  "packet_sha256": "389b042d59d21928182f8e586805254ad4d8623c004e834b9c0f54e6d690165c",
+  "manifest_sha256": "ca8aa3c2c05449cdf466dadae9157ac27c78017dabc707994d652366936388e0",
+  "summary": {
+    "overall": "Chapter 12 content is fundamentally sound in source fidelity — no items teach factually wrong procedures. However, approximately 90% of question stems contain paragraph-location scaffolding ('Under 12-1-X', 'Per the note in 12-1-X') that trains students to navigate by paragraph number rather than by operational context. Removal of three pure-trivia items (the 1985 year, document-history flashcard) eliminates non-operational content. Nine malformed concept_reverse cards are removed or replaced with proper forward cards. Answer-position bias (correct answer first in ~55% of MC items) and answer-length cueing (correct answer conspicuously longer than distractors in ~25% of MC items) are pervasive. The overall chapter is educationally salvageable with systematic stem rewriting.",
+    "patterns": [
+      "Paragraph-location scaffolding: 27 of 29 question stems and 2 of 5 activity prompts reference paragraph or note numbers. This is the dominant defect. Stems must be rewritten to establish operational context without citing paragraph identifiers.",
+      "Answer-position bias: 12 of 29 questions and 4 of 5 activities place the correct answer in the first position. Shuffling answer order eliminates this cue without changing content.",
+      "Answer-length cueing: In 5 questions and 3 activities, the correct answer is conspicuously longer (2-5x) than each distractor, typically because the correct answer incorporates full source phrasing plus reasoning while distractors are terse. Correct answers should be trimmed or distractors expanded to achieve rough parity.",
+      "Malformed concept_reverse cards: 9 of 26 flashcards were flagged as malformed_reverse. The pattern is consistent: the 'front' is a full sentence or paragraph of source text and the 'back' is merely a label. These do not function as retrieval tools in either direction. Where the forward card already covers the concept, removal is appropriate. Where no forward card exists, replacement with a proper forward card preserves coverage.",
+      "True/False verbatim recognition: Several T/F items present the exact source text as a statement to be judged true. This tests recognition, not understanding or application. T/F items should test operational principles where the controller must identify a false statement or recognize a procedural error.",
+      "Trivia content: Three items (one question, two flashcards) test the year '1985' of the U.S.-Canada agreement. This historical footnote has no operational bearing on any controller action and wastes retrieval practice time.",
+      "Single-answer fill_blank: Two items (b98f35fb, 83c6ca40) use fill_blank format with a single accepted answer. These function as self-test items testing rote recall of a specific entity name or value. While narrow, both target values that matter operationally (the delegating agency and the Class A upper limit), and the stems are self-contained without paragraph references."
+    ],
+    "generation_guidance": [
+      "NEVER begin a stem with 'Under 12-X-Y' or 'Per the note in 12-X-Y.' Establish operational context instead: 'In Canadian airspace...', 'When a pilot requests...', 'A turbine aircraft loses communications...'",
+      "Shuffle answer choices so the correct answer appears in each position (first, second, third, fourth) with roughly equal frequency across the item set. Use sort_order randomization.",
+      "Match answer length across choices within each item. If the correct answer requires a longer explanation, make the distractors similarly detailed. If a short answer is sufficient, avoid padding — instead ensure all choices are comparably concise.",
+      "Avoid concept_reverse cards where the 'front' is a full paragraph of source text. Reverse cards work only when both sides are concise enough for rapid retrieval. When in doubt, use a forward concept card with a question prompt on the front.",
+      "For True/False items, test operational principles the controller must act on, not verbatim source recognition. The best T/F items present a plausible but incorrect procedural statement that tests understanding of conditions, exceptions, or responsibilities.",
+      "When generating Canadian airspace classification content, emphasize the operational differences from U.S. airspace classes (different vertical limits, CVFR category, Class F subtypes, distinct VFR entry requirements). Pure rote recall of the Canadian classification table is less valuable than understanding how it changes controller actions.",
+      "The 1000-feet-on-top procedure and the radio-failure altitude rule are good candidates for scenario-based activities because both involve multi-condition decision-making. Future generation should prioritize activities for these paragraphs.",
+      "The separation rule (12-1-4) is a single sentence but a foundational concept. Cross-reference it in CVFR and radio-failure items rather than treating it as an isolated paragraph.",
+      "The night SVFR qualification rule (pilots need not be IFR qualified, aircraft need not be IFR equipped) is a significant Canada-U.S. difference. Highlight this contrast explicitly in explanations and flashcards.",
+      "Verify that every removed concept_reverse card's content is covered by at least one remaining forward card or question. The nine removed reverse cards in this pass leave no coverage gaps because each concept has a corresponding forward card or was replaced."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "question",
+      "para_id": "12-1-1",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "This question asks for the year (1985) that the U.S.-Canada agreement was established. The year is a historical footnote with zero operational relevance to an air traffic controller. Memorizing it wastes study time and teaches paragraph-location trivia instead of ATC substance. The core operational concept (the agreement's effect on procedures) is tested elsewhere.",
+      "source_basis": "12-1-1 note mentions 1985 as the establishment year. The year itself has no controlling function; the note's operative content is the limitation on procedure use and the scope of Chapter 12 revisions.",
+      "match": {
+        "question_text": "Per the note in 12-1-1, in what year did the U.S. and Canada establish the agreement recognizing the inherent safety of each other's ATC procedures?",
+        "question_type": "multiple_choice"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "The stem opens with 'According to the note in 12-1-1' which is paragraph-location scaffolding. The correct answer is the full verbatim source text (~60 words), conspicuously longer than every distractor (~10-20 words), creating a strong answer-length cue. The distractor about 'IFR operations only' introduces a restriction not found in the source.",
+      "source_basis": "12-1-1 note: 'This agreement permits the use of ATC procedures of one country when that country is exercising ATC in the airspace over the territory of the other country insofar as they are not inconsistent with, or repugnant to, the laws and regulations or unique operational requirements of the country over whose territory such airspace is located.'",
+      "match": {
+        "question_text": "According to the note in 12-1-1, what limits the ability of one country to use its own ATC procedures in the airspace over the territory of the other country?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Under the 1985 U.S.-Canada ATC agreement, what limits one country from using its own ATC procedures while controlling traffic in the other country's airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "The controlling principle is that one country's ATC procedures may be used in the other's airspace only when they do not conflict with the host country's laws, regulations, or unique operational requirements. This is not a blanket permission — it is a conditional grant that respects the host nation's sovereignty.",
+          "choices": [
+            {
+              "text": "The procedures are limited only by the radio equipment available at the controlling facility.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "There are no restrictions; the agreement grants unconditional use of either country's procedures anywhere.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The limitation applies only when the controlling facility is staffed by controllers from both countries simultaneously.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The procedures must not be inconsistent with, or repugnant to, the host country's laws, regulations, or unique operational requirements.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "The stem references 'the note in 12-1-1' and 'the 1985 U.S.-Canada agreement' — both paragraph-location scaffolding and year trivia. The question tests a genuine operational principle (Chapter 12 includes only Canadian procedures required by Canadian regulatory or unique operational requirements, not all Canadian procedures), but the stem loads it with extraneous details that distract from the controlling rule.",
+      "source_basis": "12-1-1 note: 'Accordingly, this chapter was revised to include only those Canadian procedures that must be used because of a Canadian regulatory or unique operational requirement.'",
+      "match": {
+        "question_text": "Per the note in 12-1-1, the 1985 U.S.-Canada agreement was revised to include ALL Canadian ATC procedures, regardless of whether they conflict with U.S. regulations.",
+        "question_type": "true_false"
+      },
+      "replacements": [
+        {
+          "question_text": "Chapter 12 of JO 7110.65 includes every Canadian ATC procedure, regardless of whether it conflicts with U.S. Regulations.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "explanation": "Chapter 12 was revised to include only those Canadian procedures that must be used because of a Canadian regulatory or unique operational requirement. It does not include every Canadian procedure — only those where Canadian regulations or unique operational needs require a departure from basic FAA procedures.",
+          "choices": [
+            {
+              "text": "False",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "True",
+              "is_correct": false,
+              "sort_order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "12-1-1",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "This flashcard asks for the year (1985) of the U.S.-Canada agreement. The back is a bare '1985.' with no context — a confirmed thin_back. The year has no operational relevance. Retrieving it does not help a controller apply Canadian procedures.",
+      "source_basis": "12-1-1 note mentions 1985 as a historical fact. The year controls no operational decision.",
+      "match": {
+        "front": "What year did the U.S. and Canada establish their cross-border ATC procedures agreement?",
+        "back": "1985.",
+        "card_type": "concept"
+      }
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "12-1-1",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "The front is a dense paragraph summarizing the 1985 agreement, and the back asks 'Why Chapter 12 was revised...' — this is a document-history question, not an operational recall task. The card tests knowledge of the chapter's editorial history rather than what a controller must do in Canadian airspace. The long front text makes it ineffective as a flashcard in either direction.",
+      "source_basis": "12-1-1 note provides the historical context. The operational content (apply basic FAA procedures except for Canadian procedures in this chapter; scope is limited to Canadian regulatory/unique operational requirements) is already covered by other items.",
+      "match": {
+        "front": "1985 agreement between U.S. and Canada allowing use of each other's ATC procedures in the other's airspace, with exceptions for host-country laws and unique operational requirements.",
+        "back": "Why Chapter 12 was revised to include only Canadian procedures required by Canadian regulatory or unique operational requirements.",
+        "card_type": "concept_reverse"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "format_fit"
+      ],
+      "problem": "The stem opens with 'Under 12-1-2' — paragraph-location scaffolding. The fill_blank format with two nearly identical accepted answers ('Class F advisory or Class F restricted' and 'Class F advisory, Class F restricted') is unnecessarily fragile for a concept better tested with multiple choice.",
+      "source_basis": "12-1-2f: 'Special use airspace may be classified as Class F advisory or Class F restricted.'",
+      "match": {
+        "question_text": "Under 12-1-2, into which two sub-types may Canadian Class F airspace (special use airspace) be classified?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "Into which two sub-types may Canadian Class F airspace (special use airspace) be classified?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Class F is Canadian special use airspace. It is subdivided into Class F advisory (where activities must be confined because of their nature) and Class F restricted (where limitations are imposed on aircraft not participating in those activities). The sub-types determine how ATC interacts with the airspace.",
+          "choices": [
+            {
+              "text": "Class F controlled and Class F uncontrolled.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Class F terminal and Class F en route.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Class F warning and Class F danger.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Class F advisory and Class F restricted.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The stem opens with 'Under 12-1-2' — paragraph-location scaffolding. The question content is otherwise sound, testing the lower and upper boundaries of Canadian Class B airspace.",
+      "source_basis": "12-1-2b: 'Includes all controlled low level airspace above 12,500 feet ASL or at and above the minimum en route IFR altitude, (whichever is higher) up to but not including 18,000 feet ASL.'",
+      "match": {
+        "question_text": "Under 12-1-2, Canadian Class B airspace includes all controlled low level airspace above what lower boundary, and to what upper boundary?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What are the lower and upper vertical boundaries of Canadian Class B airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Canadian Class B airspace occupies the upper portion of controlled low level airspace. The lower boundary is the higher of 12,500 feet ASL or the minimum en route IFR altitude (MEA), and the upper boundary is 18,000 feet ASL (exclusive). Only IFR and CVFR flights are permitted within it, and IFR separation procedures apply to CVFR aircraft.",
+          "choices": [
+            {
+              "text": "Above 10,000 feet ASL up to but not including FL 180.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Above 14,500 feet MSL up to and including FL 230.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Above the transition altitude, up to but not including FL 600.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Above 12,500 feet ASL or the minimum en route IFR altitude (whichever is higher), up to but not including 18,000 feet ASL.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The stem opens with 'Under 12-1-2' — paragraph-location scaffolding. The question tests VFR entry requirements across multiple airspace classes, which is a strong operational comparison question.",
+      "source_basis": "12-1-2c: Class C — VFR flights require a clearance from ATC to enter. 12-1-2d: Class D — VFR flights must establish two-way communications prior to entering (no clearance required). 12-1-2e: Class E — no special requirements for VFR.",
+      "match": {
+        "question_text": "Under 12-1-2, what is the correct pairing of Canadian airspace class and the VFR entry requirement?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which pairing correctly matches Canadian airspace classes with their VFR entry requirements?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "The VFR entry requirements form a descending scale: Class C is most restrictive (clearance required), Class D is intermediate (two-way communications required before entry), and Class E has no special VFR requirements. Class A and B do not permit ordinary VFR at all. Confusing these requirements could lead to unauthorized airspace entry.",
+          "choices": [
+            {
+              "text": "Class D: ATC clearance required; Class E: two-way communications required.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Class C: two-way communications required; Class D: no special requirements; Class E: ATC clearance required.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Class C: no special requirements; Class D: ATC clearance required; Class E: two-way communications required.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Class C: ATC clearance required; Class D: two-way communications required; Class E: no special requirements.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The stem opens with 'Under 12-1-2' — paragraph-location scaffolding. Tests which class requires ATC clearance for VFR entry — a key operational distinction from Class D's two-way communications requirement.",
+      "source_basis": "12-1-2c: 'Class C airspace. Controlled airspace within which both IFR and VFR flights are permitted, but VFR flights require a clearance from ATC to enter.'",
+      "match": {
+        "question_text": "Under 12-1-2, which Canadian airspace classes have a requirement that VFR flights must obtain an ATC clearance to enter?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "In Canadian airspace, which class requires a VFR aircraft to obtain an ATC clearance before entering?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Only Class C requires an ATC clearance for VFR entry. Class D requires two-way communications (not a clearance). Classes A and B do not permit ordinary VFR at all — Class A is IFR-only and Class B permits only IFR and CVFR. Understanding these distinctions prevents controllers from imposing wrong requirements on VFR traffic.",
+          "choices": [
+            {
+              "text": "Classes C and D.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Classes B and C.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Class C only.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Classes A, B, and C.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The stem opens with 'Under the note in 12-1-2' — paragraph-location scaffolding. The question content about CVFR pilot responsibilities is operationally important (ATC applies IFR separation to CVFR but the pilot maintains visual responsibility).",
+      "source_basis": "12-1-2 note: 'The CVFR pilot is responsible to maintain VFR flight and visual reference to the ground at all times.'",
+      "match": {
+        "question_text": "Under the note in 12-1-2, what is the CVFR pilot responsible for maintaining at all times?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "While ATC applies IFR separation procedures to a CVFR aircraft in Canadian Class B airspace, what is the CVFR pilot responsible for maintaining at all times?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The division of responsibility is key: ATC provides IFR-equivalent separation services to CVFR aircraft, but the pilot retains responsibility for maintaining VFR flight and visual reference to the ground at all times. The pilot's visual responsibility does not relieve ATC of the separation obligation.",
+          "choices": [
+            {
+              "text": "Two-way radio communications on a discrete frequency designated by ATC.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "VFR flight and visual reference to the ground.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "A minimum of 1,000 feet vertical separation from all other IFR traffic.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The last assigned IFR altitude without deviation, regardless of cloud clearance needs.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "The stem opens with 'Under 12-1-2' and the question text is the verbatim source definition presented as a true/false statement ('Canadian Class G airspace is uncontrolled airspace within which ATC has neither the authority nor responsibility for exercising control over air traffic.') The answer is True — the student merely recognizes the source text. This tests recognition, not understanding. It also has the correct answer in first position.",
+      "source_basis": "12-1-2g: 'Class G airspace. Uncontrolled airspace within which ATC has neither the authority nor responsibility for exercising control over air traffic.'",
+      "match": {
+        "question_text": "Under 12-1-2, Canadian Class G airspace is uncontrolled airspace within which ATC has neither the authority nor responsibility for exercising control over air traffic.",
+        "question_type": "true_false"
+      },
+      "replacements": [
+        {
+          "question_text": "What is ATC's authority and responsibility in Canadian Class G airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Class G is uncontrolled airspace. Unlike Classes A through F, ATC has no authority or responsibility for controlling air traffic in Class G. This is a fundamental airspace classification concept — knowing where ATC authority begins and ends is essential for controllers operating near uncontrolled airspace boundaries.",
+          "choices": [
+            {
+              "text": "ATC must provide flight following to all aircraft on request.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "ATC controls IFR traffic but not VFR traffic.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "ATC has full control authority but exercises it only on pilot request.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "ATC has neither the authority nor responsibility for exercising control over air traffic.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "12-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "The correct answer is in the first position and is conspicuously longer (~30 words) than every distractor (~10-18 words), creating an answer-length cue. The automated negative_stem flag is a false positive — the instruction 'What should you do?' is a positive prompt. The scenario and operational content are otherwise strong.",
+      "source_basis": "12-1-2b: 'ATC procedures pertinent to IFR flights must be applied to CVFR aircraft.' 12-1-4: 'Apply a lateral, longitudinal, or vertical separation minimum between aircraft operating in accordance with an IFR or CVFR clearance, regardless of the weather conditions.'",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You have two aircraft in Canadian Class B airspace: one on an IFR clearance at 14,000 feet and one on a CVFR clearance at 13,500 feet. Another controller says you do not need to apply a separation minimum between them because the CVFR aircraft is not IFR and is responsible for maintaining visual reference to the ground.",
+          "question_text": "How should separation be handled between these two aircraft?",
+          "choices": [
+            {
+              "text": "Apply a lateral, longitudinal, or vertical separation minimum between them, because both are operating in accordance with an IFR or CVFR clearance, regardless of the weather conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Let the CVFR pilot self-separate because CVFR means the pilot is responsible for seeing and avoiding IFR traffic.",
+              "is_correct": false
+            },
+            {
+              "text": "Apply separation only if the CVFR pilot does not report the IFR traffic in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Use only 500 feet vertical separation because the CVFR status reduces the required minimum by half.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 12-1-2b, ATC procedures pertinent to IFR flights must be applied to CVFR aircraft. Per 12-1-4, a separation minimum applies to aircraft on IFR or CVFR clearances regardless of weather. The CVFR pilot's visual responsibility to the ground does not relieve ATC of the separation obligation.",
+          "para_context": "AIRSPACE CLASSIFICATION"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "What should you do?",
+            "question_text": "How should separation be handled between these two aircraft?",
+            "choices": [
+              {
+                "text": "Apply a lateral, longitudinal, or vertical separation minimum between them, because both are operating in accordance with an IFR or CVFR clearance, regardless of the weather conditions.",
+                "is_correct": true,
+                "sort_order": 0
+              },
+              {
+                "text": "Let the CVFR pilot self-separate because CVFR means the pilot is responsible for seeing and avoiding IFR traffic.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Apply separation only if the CVFR pilot does not report the IFR traffic in sight.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Use only 500 feet vertical separation because the CVFR status reduces the required minimum by half.",
+                "is_correct": false,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "Per 12-1-2b, ATC procedures pertinent to IFR flights must be applied to CVFR aircraft. Per 12-1-4, a separation minimum applies to aircraft on IFR or CVFR clearances regardless of weather. The CVFR pilot's visual responsibility to the ground does not relieve ATC of the separation obligation."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "12-1-2",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "retrieval_diversity"
+      ],
+      "problem": "The front is the full Class B description (~40 words) and the back is merely 'Canadian Class B airspace.' This is a malformed reverse card: the front is too long for rapid retrieval, and the concept is already covered by the forward concept card e3a023e9 ('Canadian Class B: vertical limits'). The reverse direction does not add retrieval value.",
+      "source_basis": "12-1-2b defines Class B airspace. The forward card e3a023e9 already covers this concept adequately.",
+      "match": {
+        "front": "Above 12,500 feet ASL or MEA (whichever higher) up to but not including 18,000 feet ASL. Only IFR and CVFR flights. IFR procedures applied to CVFR.",
+        "back": "Canadian Class B airspace.",
+        "card_type": "concept_reverse"
+      }
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "12-1-2",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "retrieval_diversity"
+      ],
+      "problem": "The front is the full Class A description (~25 words) and the back is merely 'Canadian Class A airspace.' This malformed reverse duplicates the forward concept card 37fa4208 ('Canadian Class A: vertical limits'). The reverse direction adds no independent retrieval value.",
+      "source_basis": "12-1-2a defines Class A airspace. The forward card 37fa4208 already covers this concept.",
+      "match": {
+        "front": "Base of all controlled high level airspace up to and including FL 600. Only IFR flights permitted.",
+        "back": "Canadian Class A airspace.",
+        "card_type": "concept_reverse"
+      }
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "12-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "The front is the full Class G definition (~25 words) and the back is merely 'Canadian Class G airspace.' This is a malformed reverse card. Class G has no forward concept card in the set, so removing it would leave a gap. Replacing with a proper forward concept card preserves coverage.",
+      "source_basis": "12-1-2g: 'Class G airspace. Uncontrolled airspace within which ATC has neither the authority nor responsibility for exercising control over air traffic.'",
+      "match": {
+        "front": "Uncontrolled airspace where ATC has neither the authority nor responsibility for exercising control over air traffic.",
+        "back": "Canadian Class G airspace.",
+        "card_type": "concept_reverse"
+      },
+      "replacements": [
+        {
+          "front": "What is ATC's authority in Canadian Class G airspace?",
+          "back": "ATC has neither the authority nor responsibility for exercising control over air traffic. Class G is uncontrolled airspace — unlike Classes A through F.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The stem opens with 'Under 12-1-3' — paragraph-location scaffolding. Tests that 'at least 1,000 feet-on-top' substitutes for 'VFR-on-top' in Canadian airspace, which is a phraseology-to-procedure mapping worth knowing.",
+      "source_basis": "12-1-3 body: 'Clear an aircraft to maintain \"at least 1,000 feet-on-top\" in lieu of \"VFR-on-top,\" provided: a. The pilot requests it.'",
+      "match": {
+        "question_text": "Complete: Under 12-1-3, clear an aircraft to maintain 'at least 1,000 feet-on-top' in lieu of '_____', provided the pilot requests it.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "In Canadian airspace, clear an aircraft to maintain 'at least 1,000 feet-on-top' in lieu of '_____', provided the pilot requests it and will not operate in Class A or B airspace.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "explanation": "Per 12-1-3, the 1,000-feet-on-top clearance is used in lieu of VFR-on-top in Canadian airspace. The two conditions are: (a) the pilot requests it, and (b) the pilot will not operate in Class A or Class B airspace.",
+          "choices": [
+            {
+              "text": "VFR-on-top",
+              "is_correct": true,
+              "sort_order": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The stem opens with 'Under 12-1-3' — paragraph-location scaffolding. Tests a key operational restriction: the 1,000-feet-on-top clearance cannot be used in Class A or B airspace.",
+      "source_basis": "12-1-3b: 'The pilot will not operate within Class A or Class B airspace.'",
+      "match": {
+        "question_text": "Under 12-1-3, which of the following airspace prohibitions blocks the use of the 'at least 1,000 feet-on-top' clearance?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which airspace restriction blocks the use of the 'at least 1,000 feet-on-top' clearance in Canadian airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The 1,000-feet-on-top clearance is prohibited in Class A (IFR-only) and Class B (IFR and CVFR only) airspace. These classes do not accommodate VFR-type operations. The clearance may be used in Classes C through G provided the pilot requests it and meets the weather requirements.",
+          "choices": [
+            {
+              "text": "The pilot must not operate within Class C or Class D airspace.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The pilot must not operate within Class A or Class B airspace.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "The pilot must not operate within Class A, B, or C airspace.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The pilot must not operate within any controlled airspace.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "The stem opens with 'Under the note in 12-1-3' — paragraph-location scaffolding. The correct answer is the full verbatim weather description (~25 words) versus distractors of ~10-15 words, creating a conspicuous answer-length cue.",
+      "source_basis": "12-1-3 note: 'It is the pilot's responsibility to ensure that the requested operation can be conducted at least 1,000 feet above all cloud, haze, smoke, or other formation, with a flight visibility of 3 miles or more.'",
+      "match": {
+        "question_text": "Under the note in 12-1-3, what are the two weather conditions that must be met for a 1,000-feet-on-top operation per the pilot's responsibility?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Before a pilot can accept a '1,000 feet-on-top' clearance in Canadian airspace, what weather conditions must the pilot ensure exist?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The pilot bears responsibility for weather adequacy. The two conditions are: (1) the aircraft can operate at least 1,000 feet above all cloud, haze, smoke, or other formation, and (2) flight visibility is 3 miles or more. The pilot's request for 1,000-feet-on-top serves as confirmation that these conditions are met.",
+          "choices": [
+            {
+              "text": "At least 500 feet above all cloud with flight visibility of 1 mile or more.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "At least 1,000 feet above all cloud, haze, smoke, or other formation, with flight visibility of 3 miles or more.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "At least 1,000 feet ceiling with flight visibility of 5 miles or more.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Clear of cloud with at least 2,000 feet ceiling and flight visibility of at least 1 mile.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The stem opens with 'Under 12-1-3' — paragraph-location scaffolding. Tests an important operational distinction: weather verification for 1,000-on-top is the pilot's responsibility, not the controller's.",
+      "source_basis": "12-1-3 note: 'It is the pilot's responsibility to ensure that the requested operation can be conducted at least 1,000 feet above all cloud, haze, smoke, or other formation, with a flight visibility of 3 miles or more. A pilot's request can be considered as confirmation that conditions are adequate.'",
+      "match": {
+        "question_text": "Under 12-1-3, a controller must independently verify that flight visibility is 3 miles or more before approving a 1,000-feet-on-top request.",
+        "question_type": "true_false"
+      },
+      "replacements": [
+        {
+          "question_text": "Before approving a pilot's request for 'at least 1,000 feet-on-top' in Canadian airspace, the controller must independently verify that flight visibility is 3 miles or more.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "explanation": "Weather verification for 1,000-feet-on-top is the pilot's responsibility, not the controller's. The note states that the pilot's request can be considered as confirmation that conditions are adequate. The controller's obligations are limited to confirming (a) the pilot requested it and (b) the pilot will not operate in Class A or B airspace.",
+          "choices": [
+            {
+              "text": "False",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "True",
+              "is_correct": false,
+              "sort_order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "12-1-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "The correct answer is in the first position and is ~25 words versus distractors of ~12-20 words, creating an answer-length cue. The automated negative_stem flag is a false positive — the question is a standard 'Should you approve or deny' scenario.",
+      "source_basis": "12-1-3: Clear an aircraft to maintain 'at least 1,000 feet-on-top' in lieu of 'VFR-on-top,' provided: a. The pilot requests it. b. The pilot will not operate within Class A or Class B airspace. Note: The pilot's request can be considered as confirmation that conditions are adequate.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot flying below FL 180 requests 'at least 1,000 feet-on-top.' The pilot confirms they will remain clear of Class A and Class B airspace. Another controller says to deny the request because you have not independently verified the ceiling is at least 1,000 feet or that visibility is 3 miles.",
+          "question_text": "Should you approve or deny the request based on the controller's concern?",
+          "choices": [
+            {
+              "text": "Approve it if the pilot has requested it and will not operate in Class A or B. The pilot's request serves as confirmation that weather conditions are adequate.",
+              "is_correct": true
+            },
+            {
+              "text": "Deny it because the controller must independently confirm ceiling and visibility before approving any 1,000-feet-on-top request.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve it only if the pilot additionally provides a PIREP confirming exactly 3 miles visibility.",
+              "is_correct": false
+            },
+            {
+              "text": "Deny it because 1,000-feet-on-top is never permitted below FL 180 regardless of airspace class.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 12-1-3, the two requirements are (a) the pilot requests it and (b) the pilot will not operate in Class A or B. Per the note, weather adequacy is the pilot's responsibility and the request confirms conditions are adequate.",
+          "para_context": "ONE THOUSAND−ON−TOP"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "What should you do?",
+            "question_text": "Should you approve or deny the request based on the controller's concern?",
+            "choices": [
+              {
+                "text": "Deny it because the controller must independently confirm ceiling and visibility before approving any 1,000-feet-on-top request.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "Approve it only if the pilot additionally provides a PIREP confirming exactly 3 miles visibility.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Approve it if the pilot has requested it and will not operate in Class A or B. The pilot's request serves as confirmation that weather conditions are adequate.",
+                "is_correct": true,
+                "sort_order": 2
+              },
+              {
+                "text": "Deny it because 1,000-feet-on-top is never permitted below FL 180 regardless of airspace class.",
+                "is_correct": false,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "Per 12-1-3, the two requirements are (a) the pilot requests it and (b) the pilot will not operate in Class A or B. Per the note, weather adequacy is the pilot's responsibility and the request confirms conditions are adequate. The controller does not independently verify weather."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "12-1-3",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "retrieval_diversity"
+      ],
+      "problem": "The front is a full paragraph (~40 words) of weather responsibility text and the back is 'Pilot's weather responsibility for the 1,000-feet-on-top clearance in Canada.' This is a malformed reverse card: the front is far too long for flashcard retrieval. The concept is already covered by the forward card 52524e5b ('Who is responsible for verifying weather conditions...').",
+      "source_basis": "12-1-3 note. The forward card 52524e5b already covers pilot weather responsibility adequately.",
+      "match": {
+        "front": "Pilot must ensure at least 1,000 feet above all cloud, haze, smoke, or other formation, with 3 miles or more flight visibility. Pilot's request = confirmation conditions are adequate.",
+        "back": "Pilot's weather responsibility for the 1,000-feet-on-top clearance in Canada.",
+        "card_type": "concept_reverse"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "The stem opens with 'Under 12-1-4' — paragraph-location scaffolding. The correct answer is in the first position. Tests which aircraft categories receive separation — a core operational rule.",
+      "source_basis": "12-1-4: 'Apply a lateral, longitudinal, or vertical separation minimum between aircraft operating in accordance with an IFR or CVFR clearance, regardless of the weather conditions.'",
+      "match": {
+        "question_text": "Under 12-1-4, between which categories of aircraft must a lateral, longitudinal, or vertical separation minimum be applied?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "In Canadian airspace, between which aircraft must a lateral, longitudinal, or vertical separation minimum be applied?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The separation rule applies equally to IFR and CVFR aircraft. CVFR is not a reduced-service category — ATC must apply the same lateral, longitudinal, or vertical separation minimum to CVFR aircraft as it does to IFR aircraft. This is a critical distinction from ordinary VFR operations where ATC does not provide separation.",
+          "choices": [
+            {
+              "text": "Only aircraft operating under an IFR clearance; CVFR aircraft self-separate.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Aircraft operating in accordance with an IFR or CVFR clearance.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "All aircraft regardless of clearance type, including ordinary VFR traffic.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Only turbine-powered aircraft on IFR clearances; piston aircraft on CVFR are excluded.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "The stem opens with 'Under 12-1-4' — paragraph-location scaffolding. The correct answer (~30 words) is notably longer than distractors (~12-18 words) and includes the reasoning inline. Tests the 'regardless of weather' principle.",
+      "source_basis": "12-1-4: 'Apply a lateral, longitudinal, or vertical separation minimum between aircraft operating in accordance with an IFR or CVFR clearance, regardless of the weather conditions.'",
+      "match": {
+        "question_text": "Under 12-1-4, does a CVFR aircraft in excellent VMC receive the same separation minimum as an IFR aircraft in IMC?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "In Canadian airspace, does a CVFR aircraft operating in excellent VMC receive the same separation minimum as an IFR aircraft in IMC?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Weather conditions do not affect the separation requirement. The rule is absolute: apply a separation minimum between IFR and CVFR aircraft regardless of weather. Good visibility does not convert CVFR to ordinary VFR for separation purposes — ATC must still provide one of the three separation types (lateral, longitudinal, or vertical).",
+          "choices": [
+            {
+              "text": "Yes — the separation minimum applies regardless of the weather conditions.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "No — CVFR aircraft in VMC may rely on see-and-avoid instead of ATC separation.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Yes — but only vertical separation applies to CVFR aircraft; lateral and longitudinal minima do not.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "No — CVFR aircraft are treated like ordinary VFR traffic when weather conditions permit.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The stem opens with 'Under 12-1-4' — paragraph-location scaffolding. The question uses a negative stem ('only vertical...but not lateral or longitudinal') which is justified here because the skill is recognizing a false restriction. Tests that all three separation types apply to CVFR.",
+      "source_basis": "12-1-4: 'Apply a lateral, longitudinal, or vertical separation minimum between aircraft operating in accordance with an IFR or CVFR clearance.' The 'or' establishes that any of the three types satisfies the requirement — none is excluded for CVFR.",
+      "match": {
+        "question_text": "Under 12-1-4, only vertical separation, but not lateral or longitudinal, applies to aircraft operating under a CVFR clearance.",
+        "question_type": "true_false"
+      },
+      "replacements": [
+        {
+          "question_text": "In Canadian airspace, only vertical separation — not lateral or longitudinal — applies to aircraft operating under a CVFR clearance.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "explanation": "The rule provides a choice: apply a lateral, longitudinal, or vertical separation minimum. All three types are available for both IFR and CVFR aircraft. The controller may use whichever type is appropriate for the situation. There is no restriction limiting CVFR aircraft to vertical separation only.",
+          "choices": [
+            {
+              "text": "False",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "True",
+              "is_correct": false,
+              "sort_order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "12-1-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "This concept_reverse card has a question as the front ('Does good weather eliminate the separation requirement...') and a multi-sentence answer on the back. As a reverse, the long answer-as-prompt is unwieldy. The operational concept (weather doesn't affect separation) is important but better served by a forward concept card with a clear prompt.",
+      "source_basis": "12-1-4: 'Apply a lateral, longitudinal, or vertical separation minimum between aircraft operating in accordance with an IFR or CVFR clearance, regardless of the weather conditions.'",
+      "match": {
+        "front": "Does good weather eliminate the separation requirement between IFR and CVFR aircraft in Canadian airspace?",
+        "back": "No. The separation minimum applies regardless of the weather conditions. CVFR aircraft receive IFR-equivalent separation treatment.",
+        "card_type": "concept_reverse"
+      },
+      "replacements": [
+        {
+          "front": "Does weather affect the separation requirement between IFR and CVFR aircraft in Canadian airspace?",
+          "back": "No. Separation applies regardless of weather conditions. CVFR aircraft receive the same IFR-equivalent separation treatment in VMC as in IMC.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The stem opens with 'Under 12-1-5' — paragraph-location scaffolding. Tests a specific operational value (MEA as the floor altitude during radio failure) that is appropriate for rote recall.",
+      "source_basis": "12-1-5: '...maintaining the last assigned altitude or flight level or the minimum en route IFR altitude, whichever is higher, until 10 minutes beyond the point specified in the clearance...'",
+      "match": {
+        "question_text": "Complete: Under 12-1-5, when a turbine-powered aircraft with a communication failure was cleared on departure to a point other than the destination, the pilot maintains the last assigned altitude or flight level or the _____, whichever is higher.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "For a turbine-powered aircraft in Canadian airspace that loses communications after departure and was cleared to a point other than its destination, the pilot maintains the last assigned altitude or flight level or the _____, whichever is higher, until 10 minutes beyond the clearance limit.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "explanation": "Per 12-1-5, during radio failure the pilot maintains the higher of the last assigned altitude/flight level or the minimum en route IFR altitude (MEA) until 10 minutes beyond the clearance limit.",
+          "choices": [
+            {
+              "text": "minimum en route IFR altitude",
+              "is_correct": true,
+              "sort_order": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "The stem opens with 'Under 12-1-5' — paragraph-location scaffolding. The correct answer is in the first position. Tests the critical transition point after 10 minutes beyond the clearance limit.",
+      "source_basis": "12-1-5: '...until 10 minutes beyond the point specified in the clearance (clearance limit), and then proceed at altitude(s) or flight level(s) filed in the flight plan.'",
+      "match": {
+        "question_text": "Under 12-1-5, the Canadian radio-failure procedure applies to a turbine-powered aircraft cleared on departure to a point other than the destination. What does the pilot do after the 10-minute period beyond the clearance limit?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "After maintaining altitude for 10 minutes beyond the clearance limit during a Canadian radio failure, what does a turbine-powered aircraft do next?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The Canadian radio-failure procedure has two distinct altitude phases: (1) maintain the last assigned altitude/flight level or MEA (whichever is higher) until 10 minutes beyond the clearance limit, then (2) proceed at the altitude(s) or flight level(s) filed in the flight plan. The 10-minute point is the transition — not the clearance limit and not the destination.",
+          "choices": [
+            {
+              "text": "Descend to the MEA for the remainder of the route.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Maintain the clearance-limit altitude all the way to the destination.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Climb to the highest altitude available in the flight levels for the route segment.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Proceed at the altitude(s) or flight level(s) filed in the flight plan.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The stem opens with 'Under 12-1-5' — paragraph-location scaffolding. Tests the border-crossing climb timing exception — a nuanced operational rule.",
+      "source_basis": "12-1-5: 'When the aircraft will enter U.S. airspace within 10 minutes after passing the clearance limit, the climb to the flight planned border crossing altitude is to be commenced at the estimated time of crossing the Canada/U.S. boundary.'",
+      "match": {
+        "question_text": "Under 12-1-5, when a turbine aircraft will enter U.S. airspace within 10 minutes after passing the clearance limit, when does the climb to the border-crossing altitude commence?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "During a Canadian radio failure, a turbine aircraft will enter U.S. Airspace within 10 minutes after passing the clearance limit. When does the climb to the border-crossing altitude commence?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "The border-crossing rule is a timing exception: instead of waiting the full 10 minutes beyond the clearance limit before climbing to filed altitude, the climb to the border-crossing altitude begins at the estimated time of crossing the boundary. This ensures the aircraft is at the correct altitude when it enters U.S. airspace rather than climbing through it.",
+          "choices": [
+            {
+              "text": "At the estimated time of crossing the Canada/U.S. boundary.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Immediately upon passing the clearance limit.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "10 minutes after passing the clearance limit.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Only after the aircraft has entered U.S. airspace and established communications with the receiving facility.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The stem opens with 'Under 12-1-5' — paragraph-location scaffolding. Tests which aircraft types the Canadian radio-failure altitude procedure applies to — an important scope distinction.",
+      "source_basis": "12-1-5: 'If flying a turbine-powered (turboprop or turbojet) aircraft and cleared on departure to a point other than the destination...'",
+      "match": {
+        "question_text": "Under 12-1-5, which aircraft types are subject to the Canadian radio-failure altitude procedure that requires maintaining the last assigned altitude until 10 minutes beyond the clearance limit?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "In Canadian airspace, which aircraft types are subject to the radio-failure procedure requiring the last assigned altitude or MEA to be maintained until 10 minutes beyond the clearance limit?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The Canadian radio-failure altitude procedure applies specifically to turbine-powered aircraft — both turboprop and turbojet. The source does not describe the procedure for non-turbine aircraft in this paragraph. Controllers must know this scope limitation when planning control actions for a lost-communications aircraft.",
+          "choices": [
+            {
+              "text": "All aircraft operating in Canadian airspace, regardless of engine type.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Only turbojet aircraft; turboprops follow the standard U.S. 14 CFR 91.185 rule.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Turbine-powered aircraft (turboprop or turbojet).",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "All IFR aircraft, but only when operating above FL 180.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "The stem opens with 'Under 12-1-5' — paragraph-location scaffolding. The correct answer is in the first position. Tests the exception condition — a key operational detail.",
+      "source_basis": "12-1-5: 'Except when issued alternate radio failure instructions by ATC, pilots will adhere to the following...'",
+      "match": {
+        "question_text": "Under 12-1-5, which condition overrides the standard Canadian radio-failure altitude procedure for a turbine-powered aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What condition overrides the standard Canadian radio-failure altitude procedure for a turbine-powered aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The entire radio-failure procedure is conditional: it applies only when ATC has NOT issued alternate radio failure instructions. If ATC has provided specific alternate instructions, those supersede the standard procedure. This gives controllers a tool to tailor lost-communications plans to specific operational needs.",
+          "choices": [
+            {
+              "text": "ATC has issued alternate radio failure instructions.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "The pilot has filed an alternate airport in the flight plan.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The weather is VFR at the destination.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The aircraft is equipped with a secondary radio that remains operational.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "12-1-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "The correct answer is in the first position and is a multi-sentence paragraph (~65 words) versus distractors of ~10-25 words — a severe answer-length cue. The scenario is operationally rich and tests both the 10-minute rule and the border-crossing exception simultaneously.",
+      "source_basis": "12-1-5: Maintain last assigned altitude/MEA until 10 min beyond clearance limit, then filed altitudes. If U.S. airspace within 10 min after clearance limit, climb to border-crossing altitude commences at estimated time of crossing boundary.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A turbine-powered aircraft (turbojet) loses communications in delegated Canadian airspace after departing Toronto. The aircraft was cleared to a fix 150 NM short of its destination, Winnipeg. The route continues across flat terrain before reaching U.S. airspace approximately 50 NM after the clearance limit fix. Another controller plans for the aircraft to remain at the clearance-limit altitude all the way to Winnipeg because radio-failure aircraft must hold their last altitude to destination.",
+          "question_text": "How should you plan control actions for this aircraft's altitude profile?",
+          "choices": [
+            {
+              "text": "Plan for the aircraft to maintain the last assigned altitude or MEA (whichever is higher) until 10 minutes beyond the clearance limit, then proceed at filed altitude(s) or flight level(s). Because U.S. airspace is within 10 minutes of the clearance limit (50 NM in a turbojet), the climb to border-crossing altitude will commence at the estimated time of crossing the Canada/U.S. boundary.",
+              "is_correct": true
+            },
+            {
+              "text": "Plan for the aircraft to hold the last assigned altitude all the way to Winnipeg, because all radio-failure aircraft maintain clearance-limit altitude to destination.",
+              "is_correct": false
+            },
+            {
+              "text": "Plan only for the 10 minutes beyond the clearance limit — the border-crossing rule does not apply because the destination is in Canada, not the U.S.",
+              "is_correct": false
+            },
+            {
+              "text": "Plan for immediate climb to filed altitude after the clearance limit because the terrain is flat and there is no safety concern.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 12-1-5: (1) maintain last assigned altitude or MEA (whichever higher) until 10 min beyond clearance limit, then filed altitudes; (2) if U.S. airspace is within 10 min after the clearance limit, climb to border-crossing altitude commences at the estimated time of crossing the boundary. Both rules apply here.",
+          "para_context": "DEPARTURE CLEARANCE/COMMUNICATION FAILURE"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "What should you do?",
+            "question_text": "How should you plan control actions for this aircraft's altitude profile?",
+            "choices": [
+              {
+                "text": "Plan for the aircraft to hold the last assigned altitude all the way to Winnipeg, because all radio-failure aircraft maintain clearance-limit altitude to destination.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "Plan only for the 10 minutes beyond the clearance limit — the border-crossing rule does not apply because the destination is in Canada, not the U.S.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Plan for immediate climb to filed altitude after the clearance limit because the terrain is flat and there is no safety concern.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Plan for the aircraft to maintain the last assigned altitude or MEA (whichever higher) until 10 minutes beyond the clearance limit, then proceed at filed altitudes. Because U.S. airspace is within 10 minutes of the clearance limit, the climb to the border-crossing altitude will commence at the estimated time of crossing the Canada/U.S. boundary.",
+                "is_correct": true,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "Per 12-1-5: (1) maintain last assigned altitude or MEA (whichever higher) until 10 min beyond clearance limit, then filed altitudes; (2) if U.S. airspace is within 10 min after the clearance limit, climb to border-crossing altitude commences at the estimated time of crossing the boundary. Both rules apply here — the destination being in Canada does not negate the border-crossing rule when the route transits U.S. airspace."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-6",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "The stem opens with 'Under 12-1-6' — paragraph-location scaffolding. The question is meta-textual: it asks about the relationship between the body text and the note ('What entity does the note identify as the required source...'), rather than asking the operational rule directly. The distractors compare the body and note rather than offering alternative operational interpretations. The correct answer is also notably longer than the distractors.",
+      "source_basis": "12-1-6 body: 'Do not authorize parachute jumping without prior permission from the appropriate Canadian authority.' 12-1-6 note: 'Canadian regulations require written authority from the Ministry of Transport.'",
+      "match": {
+        "question_text": "Under 12-1-6, from whom must prior permission be obtained before authorizing parachute jumping in Canadian airspace, and what specific entity does the note identify as the required source of written authority?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Before ATC may authorize parachute jumping in Canadian airspace, what must be obtained?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "The controlling rule has two layers: the body requires prior permission from the appropriate Canadian authority, and the note specifies that Canadian regulations require this to be written authority from the Ministry of Transport. Both conditions must be satisfied — ATC cannot authorize a parachute jump locally without this prior permission.",
+          "choices": [
+            {
+              "text": "Verbal confirmation from the pilot in command of the jump aircraft.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "A NOTAM filed at least 24 hours before the planned operation.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Prior permission from the appropriate Canadian authority, which Canadian regulations specify as written authority from the Ministry of Transport.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "An email from the airport manager to the controlling facility.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-6",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The stem opens with 'Under the note in 12-1-6' — paragraph-location scaffolding. Tests the specific form of authorization (written) and issuing entity (Ministry of Transport).",
+      "source_basis": "12-1-6 note: 'Canadian regulations require written authority from the Ministry of Transport.'",
+      "match": {
+        "question_text": "Under the note in 12-1-6, what form of authorization do Canadian regulations require for parachute operations?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What specific form of authorization do Canadian regulations require before parachute operations may be conducted?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Canadian regulations are specific: the authorization must be written and must come from the Ministry of Transport. Verbal, electronic, or local approval does not satisfy this requirement. Controllers must not authorize a parachute jump without confirming this written authority exists.",
+          "choices": [
+            {
+              "text": "Verbal confirmation from the pilot on frequency.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "A NOTAM filed at least 24 hours in advance.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "An email from the airport manager to the controlling facility.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Written authority from the Ministry of Transport.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "12-1-6",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "retrieval_diversity"
+      ],
+      "problem": "The front is a full sentence ('Written authority from the Ministry of Transport is required before ATC may authorize parachute jumping.') and the back is 'Canadian parachute jumping rule, per 12-1-6 and its note.' The back references paragraph numbers (scaffolding) and the card offers no retrieval value beyond the forward card 8c48187b which already covers this concept.",
+      "source_basis": "12-1-6. The forward card 8c48187b already covers the parachute authorization concept.",
+      "match": {
+        "front": "Written authority from the Ministry of Transport is required before ATC may authorize parachute jumping.",
+        "back": "Canadian parachute jumping rule, per 12-1-6 and its note.",
+        "card_type": "concept_reverse"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-7",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The stem opens with 'Under 12-1-7' — paragraph-location scaffolding. Tests the operational difference in SVFR approval criteria based on controller presence — a key decision-making rule.",
+      "source_basis": "12-1-7a (controller on duty): approve/refuse on basis of current or anticipated IFR traffic only. 12-1-7b (no controller): authorize/refuse on basis of (1) current or anticipated IFR traffic, and (2) official ceiling and visibility reports.",
+      "match": {
+        "question_text": "Under 12-1-7, how does the SVFR approval criteria differ between a control zone with an airport controller on duty versus a control zone without one?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "How do the SVFR approval criteria differ between a Canadian control zone with an airport controller on duty versus one without?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "When an airport controller is on duty, the SVFR decision is based solely on current or anticipated IFR traffic. When no controller is on duty, the decision must additionally consider official ceiling and visibility reports. The presence of a controller changes what information must be evaluated before approving or refusing SVFR.",
+          "choices": [
+            {
+              "text": "With a controller: IFR traffic only. Without a controller: IFR traffic only — the criteria are identical.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "With a controller: ceiling and visibility only. Without a controller: IFR traffic only.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "With a controller: IFR traffic only. Without a controller: both IFR traffic AND official ceiling and visibility reports.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "With a controller: IFR traffic, ceiling, and visibility. Without a controller: IFR traffic only.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-7",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "The stem opens with 'Under 12-1-7' — paragraph-location scaffolding. The correct answer is in the first position. Tests the time-period specification requirement when SVFR is approved.",
+      "source_basis": "12-1-7a: 'If approved, specify the period of time during which SVFR flight is permitted.'",
+      "match": {
+        "question_text": "Under 12-1-7, when an airport controller is on duty and SVFR is approved, what additional specification must the controller provide?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When an airport controller approves an SVFR request in a Canadian control zone, what additional specification must the controller provide?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When SVFR is approved in a control zone with an airport controller on duty, the controller must specify how long the SVFR flight is permitted. This time limitation gives ATC control over the duration of the operation and allows planning around expected IFR traffic.",
+          "choices": [
+            {
+              "text": "The maximum altitude the aircraft may reach during the SVFR operation.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The period of time during which SVFR flight is permitted.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "A discrete transponder code for the duration of the SVFR clearance.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "A mandatory reporting point at the control zone boundary.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-7",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The stem opens with 'Under 12-1-7c' — paragraph-location scaffolding that includes a subparagraph reference. Tests the SVFR visibility minimum for non-helicopter aircraft, which is a rote value worth memorizing.",
+      "source_basis": "12-1-7c1: 'Aircraft other than helicopters. Flight visibility (ground visibility when reported) 1 mile.'",
+      "match": {
+        "question_text": "Under 12-1-7c, what is the Canadian SVFR flight visibility minimum for aircraft other than helicopters?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the Canadian SVFR flight visibility minimum for fixed-wing aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "For aircraft other than helicopters, the Canadian SVFR minimum is 1 mile flight visibility, using ground visibility when it is reported. This is notably lower than the U.S. SVFR minimum of 1 mile visibility with clear of clouds (day) and the requirement for IFR-equipped aircraft and IFR-rated pilots at night — Canadian SVFR rules differ in both pilot qualification and equipment requirements.",
+          "choices": [
+            {
+              "text": "1/2 mile flight visibility.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "1 mile flight visibility (ground visibility when reported).",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "3 miles flight visibility.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "2 miles flight visibility (ground visibility when reported).",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-7",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "The stem opens with 'Under 12-1-7' — paragraph-location scaffolding. The correct answer (True) is in the first position. Tests that both IFR traffic AND ceiling/visibility must be considered when no controller is on duty.",
+      "source_basis": "12-1-7b: 'authorize or refuse an aircraft's request for SVFR on the basis of: 1. Current or anticipated IFR traffic, and 2. Official ceiling and visibility reports.'",
+      "match": {
+        "question_text": "Under 12-1-7, when no airport controller is on duty, approving an SVFR request requires considering both IFR traffic and ceiling/visibility reports together. One factor alone is insufficient.",
+        "question_type": "true_false"
+      },
+      "replacements": [
+        {
+          "question_text": "In a Canadian control zone with no airport controller on duty, an SVFR request may be refused based on IFR traffic alone, without considering the ceiling and visibility reports.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "explanation": "When no airport controller is on duty, the SVFR decision must be based on BOTH current or anticipated IFR traffic AND official ceiling and visibility reports. Neither factor alone is sufficient to make the decision — both must be evaluated together. This differs from the rule when a controller is on duty, where IFR traffic alone determines the outcome.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "False",
+              "is_correct": true,
+              "sort_order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "12-1-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "The correct answer is in the first position. The scenario content is strong, testing the dual-factor evaluation required when no airport controller is on duty.",
+      "source_basis": "12-1-7b: SVFR approval without a controller on duty must consider both current or anticipated IFR traffic AND official ceiling and visibility reports.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot requests SVFR at a Canadian control zone where no airport controller is on duty. The official weather report shows a 900-foot ceiling and 2 miles visibility. ATC currently has one IFR arrival expected in 15 minutes. Another controller says to approve the request because the ceiling and visibility are within minima and IFR traffic alone shouldn't block SVFR.",
+          "question_text": "How should the SVFR request be evaluated in this situation?",
+          "choices": [
+            {
+              "text": "Evaluate based on BOTH the current or anticipated IFR traffic AND the official ceiling and visibility reports. Both factors together determine the decision.",
+              "is_correct": true
+            },
+            {
+              "text": "Evaluate based on ceiling and visibility only, because without a controller on duty, IFR traffic is not a criterion.",
+              "is_correct": false
+            },
+            {
+              "text": "Evaluate based on IFR traffic only, because without a controller the criteria are the same as when one is present.",
+              "is_correct": false
+            },
+            {
+              "text": "Deny the request automatically because SVFR is never authorized when no airport controller is on duty.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 12-1-7b, when no airport controller is on duty, the SVFR decision must consider both current or anticipated IFR traffic AND official ceiling and visibility reports. Neither factor alone is sufficient.",
+          "para_context": "SPECIAL VFR (SVFR)"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "What should you do?",
+            "question_text": "How should the SVFR request be evaluated in this situation?",
+            "choices": [
+              {
+                "text": "Evaluate based on ceiling and visibility only, because without a controller on duty, IFR traffic is not a criterion.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "Evaluate based on IFR traffic only, because without a controller the criteria are the same as when one is present.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Deny the request automatically because SVFR is never authorized when no airport controller is on duty.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Evaluate based on BOTH the current or anticipated IFR traffic AND the official ceiling and visibility reports. Both factors together determine the decision.",
+                "is_correct": true,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "Per 12-1-7b, when no airport controller is on duty, the SVFR decision must consider both current or anticipated IFR traffic AND official ceiling and visibility reports. Neither factor alone is sufficient."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "12-1-7",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "retrieval_diversity"
+      ],
+      "problem": "The front is a bare visibility value ('1 mile flight visibility (ground visibility when reported) for SVFR.') and the back identifies the aircraft category. This is a malformed reverse: the front is too thin to serve as a meaningful retrieval prompt. The concept is already covered by the forward card d5e8ba2e ('Canadian SVFR weather minima: aircraft vs. helicopter').",
+      "source_basis": "12-1-7c1. The forward card d5e8ba2e covers both aircraft and helicopter SVFR minima.",
+      "match": {
+        "front": "1 mile flight visibility (ground visibility when reported) for SVFR.",
+        "back": "Canadian SVFR weather minimum for aircraft other than helicopters.",
+        "card_type": "concept_reverse"
+      }
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "12-1-7",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "retrieval_diversity"
+      ],
+      "problem": "Same malformed reverse pattern as cc3e0129: front is '1/2 mile flight visibility (ground visibility when available) for SVFR.' with back identifying helicopter category. Already covered by forward card d5e8ba2e.",
+      "source_basis": "12-1-7c2. The forward card d5e8ba2e covers both aircraft and helicopter SVFR minima.",
+      "match": {
+        "front": "1/2 mile flight visibility (ground visibility when available) for SVFR.",
+        "back": "Canadian SVFR weather minimum for helicopters.",
+        "card_type": "concept_reverse"
+      }
+    }
+  ]
+}

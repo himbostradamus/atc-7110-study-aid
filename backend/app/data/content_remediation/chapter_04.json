@@ -1,0 +1,2498 @@
+{
+  "version": 1,
+  "chapter": 4,
+  "target_generation_source": "question_agent",
+  "packet_sha256": "403bed95735067446f2a0458a423ea31cfb7388e2512297d240398d7cdb184c6",
+  "manifest_sha256": "fb9627fb4d31d606c087a60d4ba3dd925b4b14536a4cdb9f8c8e4309c56a2cb4",
+  "summary": {
+    "overall": "Chapter 4 content quality is mixed. Questions are largely accurate and well-structured with sound operational framing; the strongest items teach source-use skills and recognition of conditions/exceptions rather than verbatim recall. However, a critical defect affects all 34 activities: they are empty shells with no prompt, explanation, or choices — zero educational content. Flashcard quality varies from excellent operational references to bare-value cards that lack any context (e.g., backs reading only '2,000 feet.'). Paragraph-location scaffolding appears in ~13 items where stems or fronts reference 7110.65 paragraph numbers instead of operational context. Two questions test pure document structure trivia (subparagraph letter assignments, counting exceptions). The SID/STAR climb-via/descend-via items are strong; the NAVAID limitation table items are accurate but suffer from fill_blank-with-single-answer format issues on several key cards.",
+    "patterns": [
+      "CRITICAL: All 34 activities across 22 paragraphs are empty — only ID, activity_type, difficulty, and automated_flags exist with no educational content whatsoever. These appear to be placeholder stubs that were never authored.",
+      "Paragraph-location scaffolding: 8 questions and 4 flashcards embed paragraph numbers (e.g., 'in 4-1-2,' 'per 4-3-2,' 'under 4-6-5') in stems or fronts, teaching document navigation instead of ATC procedure.",
+      "Document-structure trivia: 2 questions test recall of subparagraph letter assignments or exception counts — no operational skill is assessed.",
+      "Thin flashcard backs: 18 flashcards across 4-5-1, 4-5-4, 4-5-5, 4-5-8, 4-6-3, and 4-4-3 have backs containing only a bare numeric value with zero operational context, making standalone study ineffective.",
+      "Fill_blank with single answer: 17 questions use fill_blank format with only one choice (the correct answer), functioning as flashcards rather than assessment items. This is acceptable for precise phraseology recall (e.g., 'takeoff') but weakens assessment for table-value items where distractor analysis would build classification skill.",
+      "Answer-position bias: 43 items flagged with correct_answer_first. The correct answer appears in position 0 for many multiple_choice items, creating a pattern pilots may exploit.",
+      "Cross-paragraph duplication is minimal and mostly justified: the MAINTAIN-cancels-restrictions concept appears in both 4-3-2 and 4-5-7 with different operational contexts, which constitutes legitimate cross-format reinforcement rather than harmful duplication.",
+      "STRENGTH: Operational scenario items (MVA vs. NAVAID limitation conflict, vector-off-SID consequences, VFR release with clearance-facility coordination) excel at teaching conditional judgment rather than rote recall.",
+      "STRENGTH: Holding instruction items (4-6-1 through 4-6-4) are well-constructed with realistic distractors and clear operational explanations."
+    ],
+    "generation_guidance": [
+      "NEVER generate activity stubs — if an activity cannot be authored with a complete prompt, explanation, and choices/items, do not include it in the output at all.",
+      "Strip all paragraph-number references from question stems and flashcard fronts. Source citations belong in explanations only, and even there prefer operational framing (e.g., 'Per altitude assignment rules' not 'Per 4-5-2').",
+      "Do not generate questions that ask 'how many exceptions,' 'which subparagraph,' or 'in what order do items appear in the list.' These test document structure, not ATC skill.",
+      "Every flashcard back must include enough operational context for standalone study — never output a back that is only a number or single word.",
+      "Prefer multiple_choice over fill_blank for table-value items. Use plausible distractors drawn from adjacent table rows to test classification, not just recall.",
+      "When generating VOR/VORTAC/TACAN class items, include the NAVAID type in the stem to prevent ambiguity between TBL 4-1-1 and TBL 4-1-2 class designations.",
+      "For separation minima items (4-5-1), include the altitude band and applicable aircraft types in the question stem so the item is self-contained.",
+      "Target the 10 paragraphs with zero items (4-2-2, 4-2-3, 4-2-4, 4-2-6, 4-2-7, 4-2-9, 4-2-10, 4-5-9, 4-7-11, 4-7-13) in future generation passes. These are procedural sections with important operational content that currently has no coverage.",
+      "For activities, use scenario and source_use types that reference the actual tables (TBL 4-1-1, TBL 4-1-2, TBL 4-1-3, TBL 4-5-1, TBL 4-5-2, TBL 4-5-3) and require a lookup-and-decide skill rather than isolated fact recall.",
+      "Maintain the current strength in operational-judgment scenarios and holding-clearance items. The approach of presenting a controller action and asking 'is this correct' or 'what happens next' produces educationally sound items."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-1",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-1 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Choose the correct H-class VOR/VORTAC/TACAN distance for each altitude band.",
+          "question_text": "For an H-class VOR, VORTAC, or TACAN from 14,500 through 17,999 feet, what normal usable radius distance applies?",
+          "choices": [
+            {
+              "text": "40 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "100 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "130 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "25 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "TBL 4-1-1 gives H-class distances: below 14,500 gets 40 NM; 14,500-17,999 gets 100 NM; 18,000-FL450 gets 130 NM; and above FL450 gets 100 NM. The 14,500-17,999 band provides 100 miles."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-1",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-1 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "list_membership",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Match each radio beacon power class to its distance in TBL 4-1-2.",
+          "question_text": "Which L/MF radio beacon class with what power rating provides a usable radius of 75 miles for all altitudes?",
+          "choices": [
+            {
+              "text": "CL, under 25 watts.",
+              "is_correct": false
+            },
+            {
+              "text": "MH, under 50 watts.",
+              "is_correct": false
+            },
+            {
+              "text": "H, 50-1,999 watts.",
+              "is_correct": false
+            },
+            {
+              "text": "HH, 2,000 or more watts.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "TBL 4-1-2: HH-class radio beacons with 2,000 watts or more have a usable radius of 75 miles. This is the highest-power and longest-range radio beacon class."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-1",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-1 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "You are specifying a direct route for an aircraft. The route passes through controlled airspace for 60 miles, then through uncontrolled airspace for 30 miles, then back through controlled airspace for 40 miles. The first controlled-airspace segment stays within the applicable VOR usable radius limits, but the second controlled-airspace segment exceeds the 100-mile radius limit for the altitude band. Another controller says the route is acceptable because the two controlled-airspace segments average within limits.",
+          "para_context": "When specifying a route other than an established airway or route, do not exceed the limitations on any portion of the route which lies within controlled airspace.",
+          "question_text": "May the route be cleared as planned?",
+          "choices": [
+            {
+              "text": "No. Each portion of the route within controlled airspace must independently respect the applicable table limitations.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, as long as the total distance across all controlled segments averages within limits.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because the uncontrolled-airspace segment resets the limitation calculation.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, if both controlled-airspace segments rely on the same NAVAID.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule applies to 'any portion of the route which lies within controlled airspace.' There is no provision for averaging across segments or treating them as a single continuous length."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-1",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-1 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "source_use",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 4-1-3 footnote",
+          "lookup_context": [
+            "ILS facility with flight check data that differs from TBL 4-1-3",
+            "Current flight check shows localizer usable to 15 miles"
+          ],
+          "task": "Determine which value controls — the published table or the flight check data.",
+          "instruction": "Apply the TBL 4-1-3 footnote.",
+          "question_text": "The latest flight check for an ILS shows usable localizer coverage of 15 miles instead of the 18 miles in TBL 4-1-3. Which value controls when clearing a route?",
+          "choices": [
+            {
+              "text": "18 miles, because the published table is the controlling reference.",
+              "is_correct": false
+            },
+            {
+              "text": "15 miles, because the current flight check limitations take precedence.",
+              "is_correct": true
+            },
+            {
+              "text": "Wait for an updated publication before using either value.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the average of the two values.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The TBL 4-1-3 footnote states: 'Use the current flight check height/altitude limitations if different from the above minima.' Flight check data represents actual current facility performance."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-2",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-2 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Which scenario satisfies an exception to the altitude and distance limitations?",
+          "question_text": "Which of these situations qualifies for an exception?",
+          "choices": [
+            {
+              "text": "The pilot requests a shorter route and radar monitoring is provided.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller issues a shortcut that was not requested by the pilot and provides no radar monitoring.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot requests a shortcut but radar monitoring is unavailable.",
+              "is_correct": false
+            },
+            {
+              "text": "Radar monitoring is provided but the routing was neither ATC-initiated nor pilot-requested.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Exception (a) requires both elements: routing initiated by ATC or requested by the pilot AND radar monitoring provided. Only the first option satisfies both conditions."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-2",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-2 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "For RNAV aircraft operating at and below FL450 on Q routes or random RNAV routes excluding oceanic airspace, radar separation is required unless the aircraft is what?",
+          "choices": [
+            {
+              "text": "GNSS-equipped with suffix /G, /L, /S, or /V and not on a random impromptu route.",
+              "is_correct": true
+            },
+            {
+              "text": "Any aircraft equipped with RNAV capability operating on a filed flight plan.",
+              "is_correct": false
+            },
+            {
+              "text": "Traffic operating above FL450.",
+              "is_correct": false
+            },
+            {
+              "text": "Non-GNSS aircraft operating exclusively on random RNAV routes.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Note 1 of 4-1-2 provides the exception specifically for GNSS-equipped /G, /L, /S, and /V aircraft not on a random impromptu route, referencing paragraph 5-5-1."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-2",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-2 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "requirement_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When a clearance is issued beyond NAVAID altitude and/or distance limitations under an exception, the controller must provide the aircraft with information and advice related to significant deviations from the expected flight path, in addition to maintaining separation from other aircraft and airspace.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Note 2 of 4-1-2 states that when a clearance is issued beyond the limitations, the controller must maintain separation and provide aircraft with information and advice related to significant deviations from the expected flight path."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-2",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-2 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A pilot of a non-GNSS aircraft requests a direct routing that exceeds NAVAID service-volume limits. You have radar monitoring available. The requested route passes through an area containing a Military Training Route, but the pilot did not request routing via the MTR. The pilot also has not requested VFR-on-top.",
+          "para_context": "Exceptions include ATC-initiated or pilot-requested routing with radar monitoring, operational necessity with office approval, and requested routing via an MTR.",
+          "question_text": "If any, can this routing be handled?",
+          "choices": [
+            {
+              "text": "Under exception (a) because the pilot requested the routing and radar monitoring is available.",
+              "is_correct": true
+            },
+            {
+              "text": "Under exception (c) because the route passes through an area with an MTR.",
+              "is_correct": false
+            },
+            {
+              "text": "No exception applies; the route request must be denied.",
+              "is_correct": false
+            },
+            {
+              "text": "Under exception (b) because operational necessity can be presumed.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Exception (a) applies: the pilot requested the routing and radar monitoring is available. Exception (c) requires the requested routing to BE via an MTR, not merely pass through an area containing one."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-3",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-3 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "You need an aircraft to hold at a fix defined by a VOR. At FL190, the H-class VOR has a usable radius of 130 NM. The fix is located 140 NM from the VOR. The MEA for the route is 8,000 feet and the lowest terrain-clearance altitude for the holding template at this fix is 6,000 feet.",
+          "para_context": "Use an altitude consistent with the limitations of the aid when clearing an aircraft to cross or hold at a fix.",
+          "question_text": "Can you hold the aircraft at FL190 at this fix?",
+          "choices": [
+            {
+              "text": "No. At FL190, the fix at 140 NM exceeds the VOR's 130 NM usable radius.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because FL190 is well above the MEA and holding template altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because holding clearances are exempt from NAVAID distance limitations.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because the route MEA is only 8,000 feet and terrain clearance is assured.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The altitude must be consistent with the aid's limitations. At FL190 the H-class VOR has a 130 NM usable radius, and a fix at 140 NM lies beyond that limit regardless of MEA or terrain clearance."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-4",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-4 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Select the correct statement for a TACAN-only aircraft with insufficient NAVAID coverage.",
+          "question_text": "A TACAN-only aircraft is operating in Class A airspace with insufficient TACAN or VORTAC NAVAIDs to define the route. What is the correct operational expectation?",
+          "choices": [
+            {
+              "text": "It should request VFR-on-top.",
+              "is_correct": false
+            },
+            {
+              "text": "The VFR-on-top expectation does not apply because it is limited to outside Class A airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "It should cancel IFR and proceed VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "ATC must provide radar vectors for the entire route.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note explicitly states 'Except in Class A airspace' for the VFR-on-top request expectation. VFR operations are not permitted in Class A, so this expectation does not apply there."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-4",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-4 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "requirement_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "A TACAN-equipped aircraft may use the VFR-on-top exception for a route that does not meet service-volume limitations without the pilot requesting VFR-on-top on that route.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ],
+          "explanation": "The VFR-on-top exception in 4-1-4 requires the aircraft to request to operate VFR-on-top on that route. Being TACAN-only does not automatically activate the exception — the pilot must make the request."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-5",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-5 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Match each situation to the correct divergence minimum for an unpublished fix on an off-route radial.",
+          "question_text": "What minimum divergence angle applies when both NAVAIDs involved are within 30 NM of the unpublished fix AND holding operations are involved?",
+          "choices": [
+            {
+              "text": "30 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "45 degrees.",
+              "is_correct": true
+            },
+            {
+              "text": "1 degree per NM beyond 30 NM.",
+              "is_correct": false
+            },
+            {
+              "text": "½ degree per NM beyond 45 NM.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When holding is involved, subparagraph 4-1-5b4(a) requires at least 45 degrees regardless of distance. This overrides the 30-degree minimum from subparagraph (b) that would normally apply when both NAVAIDs are within 30 NM."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-5",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-5 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "list_membership",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Select the chart types used for military turbojet single-piloted aircraft fix clearance.",
+          "question_text": "Unless the pilot requests otherwise, which charts govern the fixes used when clearing military turbojet single-piloted aircraft?",
+          "choices": [
+            {
+              "text": "Low altitude en route charts, terminal procedure charts, and STAR charts.",
+              "is_correct": false
+            },
+            {
+              "text": "High altitude en route charts, high altitude instrument approach procedures charts, and SID charts.",
+              "is_correct": true
+            },
+            {
+              "text": "All available en route and approach charts regardless of altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Any chart depicting the fix, as long as the fix is published.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-1-5a specifies three chart types: high altitude en route charts, high altitude instrument approach procedures charts, and SID charts."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-5",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-5 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "requirement_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "When determining the lowest holding altitude at an unpublished fix, the controller may use the MEA for the route being flown rather than the terrain-clearance altitude from the holding pattern template.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false
+            },
+            {
+              "text": "False",
+              "is_correct": true
+            }
+          ],
+          "explanation": "Subparagraph 4-1-5b3 explicitly states: do not hold aircraft at unpublished fixes below the lowest assignable altitude dictated by terrain clearance for the appropriate holding pattern airspace area (template), regardless of the MEA for the route being flown. The holding template terrain criteria take precedence."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-5",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-5 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "A controller wants to assign an unpublished fix to an aircraft equipped solely with TACAN (suffix M) and plans to hold it overhead a VORTAC at 7,000 feet. The fix can be defined by DME or by an off-route radial with 25 degrees of divergence, both NAVAIDs within 30 NM. The MEA for the route is 5,000 feet.",
+          "para_context": "Aircraft equipped solely with TACAN can never be held overhead the NAVAID. DME must be used in lieu of off-route radials whenever possible. Within 30 NM the minimum divergence is 30 degrees unless holding is involved, which requires 45 degrees. Do not hold at unpublished fixes below the lowest assignable altitude dictated by terrain clearance for the holding pattern template regardless of MEA.",
+          "question_text": "Which combination of errors exists in this plan?",
+          "choices": [
+            {
+              "text": "The aircraft cannot be held overhead the VORTAC, DME should be used instead of the off-route radial, and 25 degrees of divergence is insufficient.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the holding altitude is problematic because 7,000 feet is above the MEA.",
+              "is_correct": false
+            },
+            {
+              "text": "The plan is acceptable because the aircraft is TACAN-equipped and the build uses a VORTAC.",
+              "is_correct": false
+            },
+            {
+              "text": "The DME issue is the sole problem; the divergence angle and overhead hold are fine.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Three violations: (1) aircraft equipped solely with TACAN cannot be held overhead any NAVAID; (2) DME must be used whenever possible; (3) 25 degrees is below the 30-degree minimum, and if holding 45 degrees would be required."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-1-5",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-1-5 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "source_use",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "source_kind": "reference",
+          "source_label": "4-1-5b2 cross-reference to 4-1-1",
+          "lookup_context": [
+            "Unpublished fix usage restrictions",
+            "NAVAID altitude and distance limitations from 4-1-1"
+          ],
+          "task": "Identify which paragraph imposes the service-volume check for unpublished fixes.",
+          "instruction": "Use the cross-reference within 4-1-5.",
+          "question_text": "According to 4-1-5b2, an unpublished fix may be used if its location does not exceed what limits?",
+          "choices": [
+            {
+              "text": "NAVAID altitude and distance limitations as specified in 4-1-1.",
+              "is_correct": true
+            },
+            {
+              "text": "The divergence-angle limits in 4-1-5b4 only.",
+              "is_correct": false
+            },
+            {
+              "text": "The holding pattern template terrain-clearance limits only.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot's aircraft performance limitations.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Subparagraph 4-1-5b2 cross-references paragraph 4-1-1, requiring unpublished fixes to also comply with NAVAID altitude and distance limitations in addition to the divergence criteria."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-2-1",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-2-1 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Select the correctly formatted clearance limit for each type.",
+          "question_text": "Which clearance-limit phrase is correct for a clearance limit of the RENO intersection when the type is known?",
+          "choices": [
+            {
+              "text": "Cleared to RENO.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared intersection RENO.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared to RENO intersection.",
+              "is_correct": true
+            },
+            {
+              "text": "Cleared to RENO waypoint airport.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the clearance limit is an intersection and the type is known, the type must follow the name: 'Cleared to RENO intersection.'"
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-2-1",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-2-1 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "list_membership",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Match the clearance item to its position in the standard order.",
+          "question_text": "What appears as item (d) in the standard clearance-item order, between SID/vectors and altitude data?",
+          "choices": [
+            {
+              "text": "Mach number, if applicable.",
+              "is_correct": false
+            },
+            {
+              "text": "Route of flight including ADR/ADAR/AAR when applied.",
+              "is_correct": true
+            },
+            {
+              "text": "Holding instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "Frequency and beacon code information.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The order in 4-2-1 is: (a) Aircraft ID, (b) Clearance limit, (c) SID or vectors, (d) Route of flight including ADR/ADAR/AAR, (e) Altitude data, (f) Mach number, (g) USAF limit, (h) Holding, (i) Special info."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-2-5",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-2-5 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Select the statement that correctly reflects the amendment rules.",
+          "question_text": "When a controller restates 'maintain' altitude in an amended clearance and omits previously issued altitude restrictions, what is the effect?",
+          "choices": [
+            {
+              "text": "Those previously issued altitude restrictions are canceled, including SID/STAR altitude restrictions if any.",
+              "is_correct": true
+            },
+            {
+              "text": "The restrictions remain in effect because the pilot has them on the chart.",
+              "is_correct": false
+            },
+            {
+              "text": "Only speed restrictions are canceled, but altitude crossing restrictions remain.",
+              "is_correct": false
+            },
+            {
+              "text": "Only SID restrictions are canceled, but STAR restrictions remain.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Note 1 of 4-2-5b: restating maintain altitude and omitting previously issued altitude restrictions cancels them, including any SID/STAR altitude restrictions. This is why controllers must restate all applicable restrictions when amending."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-2-5",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-2-5 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "What should you do?",
+          "situation": "An NRP aircraft displaying 'NRP' in its flight plan remarks has an amended clearance with a different route and altitude to tactically resolve a potential conflict. The conflict has been resolved and the original flight plan route is now available.",
+          "para_context": "ATC specialists should avoid route and/or altitude changes for NRP aircraft. Every effort should be made to ensure the aircraft is returned to the original filed flight plan/altitude as soon as conditions warrant.",
+          "question_text": "After the conflict is resolved, what is the appropriate action?",
+          "choices": [
+            {
+              "text": "Keep the aircraft on the amended clearance for the rest of the flight to avoid confusion.",
+              "is_correct": false
+            },
+            {
+              "text": "Return the aircraft to its original filed flight plan route and altitude as soon as conditions warrant.",
+              "is_correct": true
+            },
+            {
+              "text": "Ask the pilot whether they prefer the original or amended route.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer NRP handling to the next sector without restoring the original clearance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note to 4-2-5d directs controllers to make every effort to return the NRP aircraft to the original filed flight plan and altitude as soon as conditions warrant after conflict resolution."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-3-1",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-3-1 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the phrase that complies with 4-3-1 departure terminology rules.",
+          "question_text": "A controller needs to instruct a pilot about the heading to fly after becoming airborne. Which phrase complies with 4-3-1?",
+          "choices": [
+            {
+              "text": "\"After takeoff, fly heading 270.\"",
+              "is_correct": false
+            },
+            {
+              "text": "\"After departure, fly heading 270.\"",
+              "is_correct": true
+            },
+            {
+              "text": "\"When taking off, fly heading 270.\"",
+              "is_correct": false
+            },
+            {
+              "text": "\"On the takeoff roll, fly heading 270.\"",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-1, avoid 'takeoff' except for clearing or canceling takeoff. 'After departure' uses the approved alternative."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-3-2",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-3-2 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Distinguish altitude instruction for SIDs with vs. without crossing restrictions.",
+          "question_text": "A SID has a radar vector segment with no published crossing restrictions. What altitude instruction should be used?",
+          "choices": [
+            {
+              "text": "CLIMB VIA SID EXCEPT MAINTAIN 10,000.",
+              "is_correct": false
+            },
+            {
+              "text": "CLIMB VIA SID.",
+              "is_correct": false
+            },
+            {
+              "text": "MAINTAIN 10,000.",
+              "is_correct": true
+            },
+            {
+              "text": "CLIMB AND MAINTAIN 10,000.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-2e5: SID with Radar Vector segment and no published crossing restrictions uses MAINTAIN (altitude), not Climb via SID."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-3-3",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-3-3 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Identify which of the following is NOT a required condition for an abbreviated departure clearance.",
+          "question_text": "Which of the following is NOT a required condition for issuing an abbreviated departure clearance per 4-3-3?",
+          "choices": [
+            {
+              "text": "All ATC facilities concerned have sufficient route of flight information.",
+              "is_correct": false
+            },
+            {
+              "text": "Destination airport information is relayed between facilities prior to departure.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft must be a turbojet operating above FL 180.",
+              "is_correct": true
+            },
+            {
+              "text": "The assigned altitude per 4-3-2e is stated in the clearance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-3a, the required conditions are: (1) route not changed before departure, (2) all facilities have sufficient route info, (3) destination airport info relayed prior to departure, and (4) assigned altitude per 4-3-2e stated. Aircraft type or altitude is not a condition for an abbreviated clearance."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-3-4",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-3-4 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "Match departure control mechanisms to their correct time windows.",
+          "question_text": "An aircraft has an EDCT of 1400Z. By what time must it depart under the EDCT rules (excluding CFR)?",
+          "choices": [
+            {
+              "text": "No earlier than 1355Z and no later than 1405Z.",
+              "is_correct": true
+            },
+            {
+              "text": "No earlier than 1358Z and no later than 1401Z.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly 1400Z.",
+              "is_correct": false
+            },
+            {
+              "text": "Any time between 1350Z and 1410Z.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-4d: EDCT window is -5/+5 minutes. 1400Z - 5 = 1355Z, 1400Z + 5 = 1405Z. The -2/+1 window is for CFR."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-3-8",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-3-8 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Determine if pre-departure coordination is required based on automation status.",
+          "question_text": "An aircraft departs 12 minutes flying time from the boundary. Automatic data transfer occurs. Is pre-departure coordination required?",
+          "choices": [
+            {
+              "text": "Yes, 12 minutes is less than 15 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "No, automatic data transfer reduces threshold to 5 minutes; 12 minutes exceeds that.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, coordination is always required regardless of automation.",
+              "is_correct": false
+            },
+            {
+              "text": "No, 12 minutes exceeds the 10-minute threshold for automated facilities.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-8a: With auto data transfer, threshold reduces to 5 minutes or mileage. 12 > 5, so coordination is not required."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-3-9",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-3-9 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "scenario",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "Apply VFR release of IFR departure rules.",
+          "question_text": "An IFR aircraft requests VFR departure. The clearance facility says they cannot issue a clearance for 20 minutes. The pilot insists on departing VFR now. What must you do?",
+          "choices": [
+            {
+              "text": "Deny the request and instruct pilot to wait 20 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "Inform pilot, suggest ground delay; if pilot insists, inform clearance facility of intentions and VFR departure time.",
+              "is_correct": true
+            },
+            {
+              "text": "Authorize VFR departure and instruct pilot to contact clearance facility airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the IFR flight plan.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-9b: Suggest ground delay. If pilot insists, inform the facility holding the flight plan of pilot's intentions and, if possible, the VFR departure time."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-4-1",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-4-1 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "Distinguish between random impromptu and point-to-point route types.",
+          "question_text": "An RNAV aircraft is airborne and ATC clears it from its present position direct to the Modesto VORTAC. What type of random route is this?",
+          "choices": [
+            {
+              "text": "Point-to-point route.",
+              "is_correct": false
+            },
+            {
+              "text": "Designated ATS route.",
+              "is_correct": false
+            },
+            {
+              "text": "Random impromptu route.",
+              "is_correct": true
+            },
+            {
+              "text": "DME arc route.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-4-1c2: A random impromptu routing is a direct course from present position to a fix, initiated during flight. Point-to-point routes begin and end with published fixes on both ends."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-5-2",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-5-2 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Apply TBL 4-5-1 altitude assignment rules.",
+          "question_text": "An aircraft at FL 310 is flying a magnetic course of 270 degrees. Is this altitude correct per TBL 4-5-1?",
+          "choices": [
+            {
+              "text": "Yes, FL 310 is correct for a 270-degree course at/below FL 410.",
+              "is_correct": false
+            },
+            {
+              "text": "No, a 270-degree course (180-359) at/below FL 410 requires an even altitude such as FL 320.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, any altitude is valid below FL 410.",
+              "is_correct": false
+            },
+            {
+              "text": "No, above FL 290 only Westbound altitudes differ.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per TBL 4-5-1: At/below FL 410, courses 180-359 require even cardinal altitudes. FL 310 is odd and incorrect for 270 degrees; FL 320 would be correct."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-5-7",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-5-7 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "instruction": "Distinguish correct climb via / descend via phraseology.",
+          "question_text": "An aircraft on the Eagul Five Arrival has been cleared 'descend via.' ATC needs the aircraft to cross Geeno at 10,000 instead of the published restriction. What is the correct phraseology?",
+          "choices": [
+            {
+              "text": "'Cross Geeno at 10,000, disregard published restriction.'",
+              "is_correct": false
+            },
+            {
+              "text": "'Descend via the Eagul Five Arrival, except cross Geeno at 10,000.'",
+              "is_correct": true
+            },
+            {
+              "text": "'Maintain 10,000 at Geeno.'",
+              "is_correct": false
+            },
+            {
+              "text": "'Amend Eagul Five, cross Geeno at 10,000.'",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-5-7h9: 'DESCEND VIA (STAR) ARRIVAL, EXCEPT CROSS (fix), (revised altitude).'"
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-5-8",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-5-8 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "requirement_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "If practicable, inform an aircraft when to expect climb or descent clearance, or when to request an altitude change from another facility.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "This is the directive of paragraph 4-5-8, qualified by 'if practicable.'"
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-6-6",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-6-6 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "A pilot holding in a published pattern requests a deviation from the prescribed holding flight path to avoid building cumulus clouds. The deviation would keep the aircraft clear of all known obstacles and no other traffic is on the holding course.",
+          "para_context": "Approve a pilot's request to deviate from the prescribed holding flight path if obstacles and traffic conditions permit.",
+          "question_text": "Should the deviation be approved?",
+          "choices": [
+            {
+              "text": "Yes, because obstacles and traffic conditions permit the deviation.",
+              "is_correct": true
+            },
+            {
+              "text": "No, because holding patterns are never deviated from.",
+              "is_correct": false
+            },
+            {
+              "text": "No, the pilot should cancel IFR and navigate around weather VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only after the pilot declares an emergency.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 4-6-6 directs approval of pilot-requested holding flight path deviations when obstacles and traffic conditions permit."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-6-7",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-6-7 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Select the correct separation requirement for an unmonitored NAVAID hold.",
+          "question_text": "Which separation action is specifically required by 4-6-7 for an aircraft holding at an unmonitored NAVAID?",
+          "choices": [
+            {
+              "text": "Separate the holding aircraft from other aircraft occupying the course it would follow if NAVAID signals are lost.",
+              "is_correct": true
+            },
+            {
+              "text": "Separate the holding aircraft from all aircraft within the NAVAID service volume.",
+              "is_correct": false
+            },
+            {
+              "text": "Separate the holding aircraft from aircraft at adjacent flight levels only.",
+              "is_correct": false
+            },
+            {
+              "text": "No special separation is required if the aircraft is in radar contact.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule specifically requires separation from any other aircraft occupying the course the holding aircraft will follow if it does not receive signals from the NAVAID."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-8-2",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-8-2 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "discrimination_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Select the correctly formatted approach clearance.",
+          "question_text": "Which approach clearance format is correct for an uncontrolled airport?",
+          "choices": [
+            {
+              "text": "Cleared for the approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared ILS approach to Centerville airport.",
+              "is_correct": true
+            },
+            {
+              "text": "Cleared ILS runway 27 approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared approach, airport is Centerville.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "At an airport without an operating control tower, the airport name must be stated: 'Cleared (type) Approach to (airport name).'"
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "4-8-4",
+      "action": "remove",
+      "severity": "critical",
+      "categories": [
+        "empty_shell"
+      ],
+      "problem": "Activity has no prompt, no explanation, and no choices. Only placeholders for id, activity_type, and automated_flags exist. It contains zero educational content.",
+      "source_basis": "Packet paragraph 4-8-4 source text exists but no activity content was authored.",
+      "match": {
+        "activity_type": "requirement_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Is this statement operationally correct?",
+          "question_text": "For military high altitude instrument approaches, the maximum assignable altitudes must be determined through coordination between the ATC facility and the military authority to avoid exceeding rate-of-descent or airspeed limitations.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note to 4-8-4 states maximum altitudes are determined through coordination with the military authority specifically to prevent exceeding rate-of-descent or airspeed limitations."
+        }
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-3-3",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "educational_coherence"
+      ],
+      "problem": "Question asks which subparagraph letter (a/b/c/d/e) of 4-3-2 the assigned altitude is stated per. This tests recall of document sub-structure rather than operational knowledge of how to issue an abbreviated departure clearance. The subparagraph letter assignment is irrelevant to a controller's job.",
+      "source_basis": "4-3-3a4 states the assigned altitude per 4-3-2e is stated in the clearance. The operational concept is that altitude must be stated - the subparagraph letter is pure document trivia.",
+      "match": {
+        "question_text": "Per 4-3-3, the assigned altitude in an abbreviated clearance must be stated per which subparagraph of 4-3-2?",
+        "question_type": "multiple_choice"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-1-2",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "educational_coherence"
+      ],
+      "problem": "Question asks how many enumerated exceptions are listed in paragraph 4-1-2. This tests counting paragraph structure rather than understanding when altitude/distance limitations need not be applied. The operational skill is recognizing whether a given situation qualifies for an exception, not enumerating how many exist.",
+      "source_basis": "4-1-2 lists three exceptions: (a) ATC-initiated/pilot-requested routing with radar monitoring, (b) operational necessity with office approval, (c) MTR routing. The count is document trivia; controllers need to recognize exception conditions, not count them.",
+      "match": {
+        "question_text": "How many enumerated exceptions allow altitude and distance limitations NOT to be applied under 4-1-2?",
+        "question_type": "multiple_choice"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "context"
+      ],
+      "problem": "Question stem includes 'in 4-1-2' teaching paragraph-location trivia. Also fill_blank with single answer provides no distractor challenge.",
+      "source_basis": "Packet paragraph 4-1-2 source text. Original stem contained paragraph-number reference; replaced with operational framing.",
+      "match": {
+        "question_text": "The GNSS-equipped aircraft exception in 4-1-2 applies to /G, /L, /S, and /V aircraft provided they are _____.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "The GNSS-equipped aircraft altitude/distance limitation exception applies to /G, /L, /S, and /V aircraft provided they are _____.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "explanation": "The exception covers GNSS-equipped aircraft /G, /L, /S, and /V that are not on a random impromptu route. GNSS aircraft on random impromptu routes remain subject to the normal NAVAID altitude and distance limitations.",
+          "choices": [
+            {
+              "text": "not on a random impromptu route",
+              "is_correct": true,
+              "sort_order": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-2-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "context"
+      ],
+      "problem": "Question stem references 'listed in 4-2-1' and asks about sequence position rather than operational content. Teaches order trivia instead of clearance composition skill.",
+      "source_basis": "Packet paragraph 4-2-1 source text. Original stem contained paragraph-number reference; replaced with operational framing.",
+      "match": {
+        "question_text": "In the clearance-item order listed in 4-2-1, what appears between altitude data and holding instructions?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When issuing an IFR clearance, what item appears between altitude data and holding instructions in the standard clearance-item sequence?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The standard clearance-item order places altitude data (item e) before Mach number (item f, if applicable), followed by USAF transmission limitations (item g), then holding instructions (item h). Between altitude data and holding instructions, Mach number, if applicable, is next in the sequence.",
+          "choices": [
+            {
+              "text": "Mach number, if applicable.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Holding instructions come directly after altitude data.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Frequency and beacon code information.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Any special information or NOTAMs.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-3-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "context"
+      ],
+      "problem": "Stem references 'paragraph 4-3-2' teaching paragraph trivia. Combined with negative stem construction.",
+      "source_basis": "Packet paragraph 4-3-2 source text. Original stem contained paragraph-number reference; replaced with operational framing.",
+      "match": {
+        "question_text": "The detailed departure clearance procedures of paragraph 4-3-2 do NOT apply to which of the following?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "The detailed departure clearance procedures do NOT apply to which of the following operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "explanation": "Do not apply detailed departure clearance procedures when a pilot requests a detailed clearance or to military operations within ALTRV, stereo routes, operations above FL 600, and other military operations requiring special handling.",
+          "choices": [
+            {
+              "text": "Civilian IFR departures from towered airports.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Commercial air carrier operations at any altitude.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Military operations within ALTRV, stereo routes, or above FL 600.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "GA departures from uncontrolled airports.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-3-10",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "context"
+      ],
+      "problem": "Stem references '4-3-10 note' teaching paragraph trivia. Fill_blank with single answer.",
+      "source_basis": "Packet paragraph 4-3-10 source text. Original stem contained paragraph-number reference; replaced with operational framing.",
+      "match": {
+        "question_text": "What are two alternatives listed in the 4-3-10 note for providing equivalent procedures instead of forwarding departure times?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What two alternatives may be used instead of forwarding departure times between facilities?",
+          "question_type": "fill_blank",
+          "difficulty": 3,
+          "explanation": "Alternatives to forwarding departure times include: (1) letters of agreement prescribing assumed departure times, or (2) mandatory radar handoff procedures. Both provide equivalent procedural coverage without manual time forwarding.",
+          "choices": [
+            {
+              "text": "Letters of agreement prescribing assumed departure times or mandatory radar handoff procedures",
+              "is_correct": true,
+              "sort_order": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-4-6",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "context"
+      ],
+      "problem": "Stem references 'note in 4-4-6' teaching paragraph trivia.",
+      "source_basis": "Packet paragraph 4-4-6 source text. Original stem contained paragraph-number reference; replaced with operational framing.",
+      "match": {
+        "question_text": "What does the note in 4-4-6 clarify about LOA/SOP routing clearances?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When a routing clearance conforms to an LOA or SOP, is required to maintain separation, or complies with traffic flow management initiatives, does the direct-clearance restriction apply?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "The direct-clearance restrictions do not preclude a controller from issuing routing clearances that conform to a LOA or SOP, are required to maintain separation, or comply with traffic flow management initiatives. These are valid operational exceptions.",
+          "choices": [
+            {
+              "text": "No, LOA/SOP-conforming, separation-required, and TM flow compliance clearances are not precluded.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Yes, LOA/SOP routing clearances are always prohibited by the direct-clearance restriction.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Only separation-related routing changes are permitted.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "LOAs override all other routing restrictions regardless of conditions.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-6-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "context"
+      ],
+      "problem": "Stem references 'Under 4-6-5' teaching paragraph trivia.",
+      "source_basis": "Packet paragraph 4-6-5 source text. Original stem contained paragraph-number reference; replaced with operational framing.",
+      "match": {
+        "question_text": "Under 4-6-5, a visual holding point may be used as a holding fix only if what condition is met regarding the pilot?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When may a visual holding point be used as a holding fix?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "A controller may use as a holding fix a location which the pilot can determine by visual reference to the surface if he/she is familiar with it. Pilot familiarity with the visual location is the key condition.",
+          "choices": [
+            {
+              "text": "Only when the pilot is on an IFR flight plan and the location is charted.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "When the location has a published GPS waypoint.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "When the pilot is familiar with the location and can determine it visually.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Only when the holding point is a prominent geographical feature on a sectional chart.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-7-9",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "context"
+      ],
+      "problem": "Stem references 'under 4-7-9' teaching paragraph trivia.",
+      "source_basis": "Packet paragraph 4-7-9 source text. Original stem contained paragraph-number reference; replaced with operational framing.",
+      "match": {
+        "question_text": "What is the required timing for transferring radio communications and control responsibility under 4-7-9?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When must radio communications and control responsibility be transferred to the receiving facility?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Transfer radio communications and control responsibility early enough to allow the receiving facility to clear an aircraft beyond the clearance limit before the aircraft reaches it. The timing should enable the receiving controller to issue a clearance beyond the limit before the aircraft arrives.",
+          "choices": [
+            {
+              "text": "At the moment the aircraft reaches the clearance limit boundary.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "At any time before the aircraft reaches the destination airport, at controller discretion.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Only after the aircraft has reported level at the clearance limit.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Early enough to allow the receiving facility to clear the aircraft beyond the clearance limit before the aircraft reaches it.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "context"
+      ],
+      "problem": "Stem references 'according to 4-1-5' teaching paragraph trivia.",
+      "source_basis": "Packet paragraph 4-1-5 source text. Original stem contained paragraph-number reference; replaced with operational framing.",
+      "match": {
+        "question_text": "How are fixes contained in the route description of MTRs classified according to 4-1-5?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "How should a controller classify fixes contained in the route description of MTRs?",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "explanation": "Fixes contained in the route description of MTRs are considered filed fixes. They need not be treated as unpublished fixes requiring additional pilot briefing information.",
+          "choices": [
+            {
+              "text": "considered filed fixes",
+              "is_correct": true,
+              "sort_order": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "context"
+      ],
+      "problem": "Original explanation references subparagraph '4-1-5b4(c)' which is paragraph-location scaffolding in explanation text.",
+      "source_basis": "Packet paragraph 4-1-5 source text. Original stem contained paragraph-number reference; replaced with operational framing.",
+      "match": {
+        "question_text": "When an unpublished fix is located over 30 NM from the NAVAID generating the off-course radial, the minimum divergence angle must increase at _____ up to 45 NM.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "When an unpublished fix is located over 30 NM from the NAVAID generating the off-course radial, at what rate must the minimum divergence angle increase up to 45 NM?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "explanation": "For distances over 30 NM up to 45 NM from the off-course NAVAID, the minimum divergence angle must increase 1 degree per NM. For example, at 40 NM the minimum divergence is 40 degrees (30-degree base plus 10 for the additional 10 NM).",
+          "choices": [
+            {
+              "text": "1 degree per NM",
+              "is_correct": true,
+              "sort_order": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "context"
+      ],
+      "problem": "Original explanation references '4-1-5e' which is paragraph-location scaffolding in explanation text.",
+      "source_basis": "Packet paragraph 4-1-5 source text. Original stem contained paragraph-number reference; replaced with operational framing.",
+      "match": {
+        "question_text": "DME fixes must not be established within the _____ of the NAVAID from which inbound holding course information would be derived.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "DME fixes must not be established within which zone of the NAVAID from which inbound holding course information would be derived?",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "explanation": "DME fixes must not be established within the no-course signal zone of the NAVAID providing inbound holding course information. This zone produces unreliable course guidance, making it unsuitable for DME fix placement.",
+          "choices": [
+            {
+              "text": "no-course signal zone",
+              "is_correct": true,
+              "sort_order": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "context"
+      ],
+      "problem": "Front references 'in 4-1-2' and uses 'lettered' which teaches paragraph structure instead of operational content.",
+      "source_basis": "Packet paragraph 4-1-2 source text. Original flashcard front contained paragraph-number reference; replaced with operational framing.",
+      "match": {
+        "front": "What are the three lettered exceptions to altitude and distance limitations in 4-1-2?",
+        "back": "(a) ATC-initiated or pilot-requested routing with radar monitoring. (b) Operational necessity with Frequency Management and Flight Inspection Offices approval. (c) Requested routing via an MTR.",
+        "card_type": "list"
+      },
+      "replacements": [
+        {
+          "front": "What are the three exceptions to NAVAID altitude and distance limitations?",
+          "back": "(a) ATC-initiated or pilot-requested routing with radar monitoring. (b) Operational necessity with Frequency Management and Flight Inspection Offices approval. (c) Requested routing via an MTR.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "context"
+      ],
+      "problem": "Front references 'from 4-1-5' teaching paragraph location trivia.",
+      "source_basis": "Packet paragraph 4-1-5 source text. Original flashcard front contained paragraph-number reference; replaced with operational framing.",
+      "match": {
+        "front": "Unpublished fix: two definitions from 4-1-5",
+        "back": "1. One approved and planned for publication but not yet on charts. 2. One used in accord with fix-formation and divergence criteria.",
+        "card_type": "definition"
+      },
+      "replacements": [
+        {
+          "front": "What are the two definitions of an unpublished fix?",
+          "back": "1. One approved and planned for publication but not yet on charts. 2. One used in accord with the listed fix-formation and divergence criteria.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-2-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "context"
+      ],
+      "problem": "Front references 'in 4-2-1 order (a through j)' teaching paragraph structure rather than operational knowledge of clearance composition.",
+      "source_basis": "Packet paragraph 4-2-1 source text. Original flashcard front contained paragraph-number reference; replaced with operational framing.",
+      "match": {
+        "front": "List all 10 clearance items in 4-2-1 order (a through j)",
+        "back": "(a) Aircraft ID, (b) Clearance limit, (c) SID or vectors, (d) Route of flight, (e) Altitude data, (f) Mach number, (g) USAF transmission limit, (h) Holding, (i) Special info, (j) Frequency and beacon code.",
+        "card_type": "list"
+      },
+      "replacements": [
+        {
+          "front": "List the IFR clearance items in standard sequence order.",
+          "back": "(1) Aircraft ID, (2) Clearance limit, (3) SID or vectors, (4) Route of flight, (5) Altitude data, (6) Mach number (if applicable), (7) USAF transmission limitations, (8) Holding instructions, (9) Special information, (10) Frequency and beacon code.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-7-9",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "context"
+      ],
+      "problem": "Front references 'under 4-7-9' teaching paragraph location trivia.",
+      "source_basis": "Packet paragraph 4-7-9 source text. Original flashcard front contained paragraph-number reference; replaced with operational framing.",
+      "match": {
+        "front": "When must transfer of jurisdiction occur under 4-7-9?",
+        "back": "Early enough to allow the receiving facility to clear the aircraft beyond the clearance limit before the aircraft reaches it.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "When must transfer of jurisdiction occur?",
+          "back": "Early enough to allow the receiving facility to clear the aircraft beyond the clearance limit before the aircraft reaches it.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-5-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (2,000 feet.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-5-1 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "IFR vertical separation: FL 290+ non-RVSM vs all",
+        "back": "2,000 feet.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "IFR vertical separation: FL 290 and above — non-RVSM aircraft vs. All other aircraft",
+          "back": "2,000 feet vertical separation. This applies between any non-RVSM aircraft and all other aircraft at or above FL 290.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-5-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (2,000 feet.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-5-1 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "IFR vertical separation: above FL 410 (general)",
+        "back": "2,000 feet.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "IFR vertical separation: above FL 410 (general minimum)",
+          "back": "2,000 feet vertical separation generally applies above FL 410. Exceptions: 4,000 ft oceanic supersonic above FL 450; 5,000 ft military above FL 600.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-5-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (5,000 feet.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-5-1 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "IFR vertical separation: above FL 600 military vs military",
+        "back": "5,000 feet.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "IFR vertical separation: above FL 600 — military aircraft vs. Military aircraft",
+          "back": "5,000 feet vertical separation applies between military aircraft above FL 600. This is the largest standard vertical separation minimum.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-5-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (4,000 feet.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-5-1 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "IFR vertical separation: oceanic >FL 450 supersonic vs any",
+        "back": "4,000 feet.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "IFR vertical separation: oceanic airspace above FL 450 — supersonic vs. Any other aircraft",
+          "back": "4,000 feet vertical separation in oceanic airspace above FL 450 between a supersonic aircraft and any other aircraft.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-5-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (1,000 feet.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-5-1 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "IFR vertical separation: up to FL 410",
+        "back": "1,000 feet.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "IFR vertical separation: up to and including FL 410 (standard minimum)",
+          "back": "1,000 feet vertical separation between IFR aircraft up to and including FL 410. This is the basic vertical separation minimum.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-5-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (FL 200.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-5-4 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "TBL 4-5-2: 28.91\"-27.92\" lowest usable FL",
+        "back": "FL 200.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "Lowest usable flight level when altimeter setting is between 28.91 and 27.92 inches",
+          "back": "FL 200 is the lowest usable flight level when altimeter setting is 28.91\" to 27.92\". Use TBL 4-5-2 to look up the lowest usable FL by altimeter setting range.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-5-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (FL 190.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-5-4 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "TBL 4-5-2: 29.91\"-28.92\" lowest usable FL",
+        "back": "FL 190.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "Lowest usable flight level when altimeter setting is between 29.91 and 28.92 inches",
+          "back": "FL 190 is the lowest usable flight level when altimeter setting is 29.91\" to 28.92\". Use TBL 4-5-2 to look up the lowest usable FL by altimeter setting range.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-5-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (FL 180.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-5-4 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "TBL 4-5-2: 29.92\"+ lowest usable FL",
+        "back": "FL 180.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "Lowest usable flight level when altimeter setting is 29.92 inches or higher",
+          "back": "FL 180 is the lowest usable flight level when altimeter setting is 29.92\" or higher. Use TBL 4-5-2 to look up the lowest usable FL by altimeter setting range.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-5-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (2,000 feet.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-5-5 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "TBL 4-5-3: 28.41\"-27.92\" adjustment",
+        "back": "2,000 feet.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "Adjusted minimum flight level: adjustment factor when altimeter setting is between 28.41 and 27.92 inches",
+          "back": "2,000 feet adjustment factor. Add this to the flight level equivalent of the minimum IFR altitude when pressure is 28.41\" to 27.92\". Use TBL 4-5-3.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-5-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (1,500 feet.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-5-5 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "TBL 4-5-3: 28.91\"-28.42\" adjustment",
+        "back": "1,500 feet.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "Adjusted minimum flight level: adjustment factor when altimeter setting is between 28.91 and 28.42 inches",
+          "back": "1,500 feet adjustment factor. Add this to the flight level equivalent of the minimum IFR altitude when pressure is 28.91\" to 28.42\". Use TBL 4-5-3.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-5-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (1,000 feet.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-5-5 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "TBL 4-5-3: 29.41\"-28.92\" adjustment",
+        "back": "1,000 feet.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "Adjusted minimum flight level: adjustment factor when altimeter setting is between 29.41 and 28.92 inches",
+          "back": "1,000 feet adjustment factor. Add this to the flight level equivalent of the minimum IFR altitude when pressure is 29.41\" to 28.92\". Use TBL 4-5-3.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-5-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (500 feet.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-5-5 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "TBL 4-5-3: 29.91\"-29.42\" adjustment",
+        "back": "500 feet.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "Adjusted minimum flight level: adjustment factor when altimeter setting is between 29.91 and 29.42 inches",
+          "back": "500 feet adjustment factor. Add this to the flight level equivalent of the minimum IFR altitude when pressure is 29.91\" to 29.42\". Use TBL 4-5-3.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-5-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (None.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-5-5 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "TBL 4-5-3: 29.92\"+ adjustment",
+        "back": "None.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "Adjusted minimum flight level: adjustment factor when altimeter setting is 29.92 inches or higher",
+          "back": "No adjustment factor needed when altimeter setting is 29.92\" or higher. The prescribed minimum IFR altitude converts directly to its flight level equivalent.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-5-8",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (If practicable.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-5-8 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "4-5-8: When should you inform an aircraft when to expect climb or descent clearance?",
+        "back": "If practicable.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "When should a controller inform an aircraft about when to expect a climb or descent clearance?",
+          "back": "If practicable. The controller should inform an aircraft when to expect climb/descent clearance or to request an altitude change from another facility, workload permitting.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-6-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (30 minutes.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-6-3 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "Arrival delay threshold for mandatory info issuance",
+        "back": "30 minutes.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What is the arrival delay threshold that triggers mandatory total delay information issuance?",
+          "back": "30 minutes. When arrival delays reach or are anticipated to reach 30 minutes, total delay information must be issued to affected aircraft and specific coordination actions taken.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-4-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (500 miles.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-4-1 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "Random RNAV nonradar: max distance between points",
+        "back": "500 miles.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "Random RNAV nonradar routes: maximum distance between points",
+          "back": "500 miles maximum distance between points, with 4 miles of protected airspace either side of the route centerline.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-4-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (260 miles.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-4-3 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "Military degree-distance: max distance between fixes FL 180 and above",
+        "back": "260 miles.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "Military degree-distance routes: maximum distance between fixes at FL 180 and above",
+          "back": "260 miles maximum distance between fixes at FL 180 and above. Below FL 180 the maximum is reduced to 80 miles.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "4-4-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "thin_back",
+        "context"
+      ],
+      "problem": "Flashcard back contains only a bare value (80 miles.) without operational context, making it ineffective for retrieval practice. The learner sees just a number rather than understanding when and why that value applies.",
+      "source_basis": "Packet paragraph 4-4-3 source text confirms the value is correct but the flashcard back lacked sufficient context for standalone study.",
+      "match": {
+        "front": "Military degree-distance: max distance between fixes below FL 180",
+        "back": "80 miles.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "Military degree-distance routes: maximum distance between fixes below FL 180",
+          "back": "80 miles maximum distance between fixes below FL 180. At FL 180 and above, the maximum increases to 260 miles.",
+          "reverse": false,
+          "card_type": "basic"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-1-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "answer_defensibility"
+      ],
+      "problem": "Fill_blank with a single long answer provides no distractor challenge. The concept (when TACAN-only must request VFR-on-top) is important enough for multiple_choice assessment.",
+      "source_basis": "Packet paragraph 4-1-4 source text. Content is correct but fill_blank format with single/long answer provides no distractor challenge for assessment purposes.",
+      "match": {
+        "question_text": "A TACAN-only aircraft outside Class A airspace is expected to submit a request for VFR-on-top flight where _____.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "Where is a TACAN-only aircraft outside Class A airspace expected to request VFR-on-top flight?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Except in Class A airspace, a TACAN-only aircraft is expected to submit a VFR-on-top request where insufficient TACAN or VORTAC NAVAIDs exist to define the route. The Class A exclusion is essential because VFR-on-top does not apply in Class A airspace.",
+          "choices": [
+            {
+              "text": "At all times regardless of NAVAID availability.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Where insufficient TACAN or VORTAC NAVAIDs exist to define the route.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Only when operating above FL 180 in RVSM airspace.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Whenever the aircraft cannot receive VOR signals.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "answer_defensibility"
+      ],
+      "problem": "Fill_blank with two blanks and a single answer. Poor format for testing both values simultaneously. Split into multiple_choice with plausible distractors that exercise NAVAID-class knowledge.",
+      "source_basis": "Packet paragraph 4-1-1 source text. Content is correct but fill_blank format with single/long answer provides no distractor challenge for assessment purposes.",
+      "match": {
+        "question_text": "For a T-class VOR, VORTAC, or TACAN, the normal usable altitude band is _____ with a usable radius distance of _____ miles.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "For a T-class VOR, VORTAC, or TACAN, what is the normal usable altitude band and radius distance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "TBL 4-1-1 lists T-class VOR/VORTAC/TACAN as having an altitude band of 12,000 feet and below with a 25-mile usable radius distance. The T-class is the most restrictive VOR/VORTAC/TACAN class.",
+          "choices": [
+            {
+              "text": "Below 18,000 feet, 40 miles.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Below 14,500 feet, 40 miles.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "12,000 feet and below, 25 miles.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Above FL 450, 100 miles.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "answer_defensibility"
+      ],
+      "problem": "Fill_blank with two blanks and a single answer. Poor format for testing both values — should use multiple_choice with plausible distractors that test recognition of correct class-to-power/distance mapping.",
+      "source_basis": "Packet paragraph 4-1-1 source text. Content is correct but fill_blank format with single/long answer provides no distractor challenge for assessment purposes.",
+      "match": {
+        "question_text": "An H-class radio beacon operates at _____ watts and has a usable radius distance of _____ miles for all altitudes.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "An H-class L/MF radio beacon operates at what power level and has what usable radius distance for all altitudes?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "TBL 4-1-2 lists H-class radio beacons as operating at 50 to 1,999 watts with a usable radius distance of 50 miles for all altitudes. This distinguishes them from CL (under 25W/15mi), MH (under 50W/25mi), and HH (2,000+W/75mi) classes.",
+          "choices": [
+            {
+              "text": "Under 25 watts, 15 miles.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "50 to 1,999 watts, 50 miles.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Under 50 watts, 25 miles.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "2,000 or more watts, 75 miles.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "4-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "answer_defensibility"
+      ],
+      "problem": "Fill_blank with single answer — no distractor challenge. Convert to multiple_choice with plausible altitude-band distractors to test recognition rather than pure recall.",
+      "source_basis": "Packet paragraph 4-1-1 source text. Content is correct but fill_blank format with single/long answer provides no distractor challenge for assessment purposes.",
+      "match": {
+        "question_text": "For an L-class VOR, VORTAC, or TACAN, the normal usable radius distance is 40 miles. What is the altitude band?",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "For an L-class VOR, VORTAC, or TACAN with a 40-mile usable radius distance, what is the normal usable altitude band?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "TBL 4-1-1 shows L-class applies below 18,000 feet with a 40-mile radius. L-class covers nearly all low-altitude IFR operations below FL 180.",
+          "choices": [
+            {
+              "text": "12,000 feet and below.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Below 18,000 feet.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Below 14,500 feet.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "18,000 through FL 450.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

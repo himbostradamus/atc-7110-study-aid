@@ -1,0 +1,3558 @@
+{
+  "version": 1,
+  "chapter": 1,
+  "target_generation_source": "question_agent",
+  "packet_sha256": "c968839aa5b4d6ed13c5e1c9e5f17e390b123fd2afbb873584aac04770db02b4",
+  "manifest_sha256": "f50a469c8e68eb471c11509fa1792cae1a84cfd3f33f3f293f22606910bade75",
+  "summary": {
+    "overall": "Chapter 1 (Introduction and Terms of Reference) quality is moderate with systemic defects driven by generation heuristics rather than content errors. The source material is faithfully represented across most items, but the agent-authored output consistently embeds paragraph-location scaffolding ('Under 1-1-XX'), uses fill-blank format for concepts better tested via application, places correct answers disproportionately in the first position, and creates excessive same-format duplication within short paragraphs. Section 2 (Terms of Reference) items are stronger because they test defined conventions at the appropriate specificity level. The remediation pass produced 78 decisions: approximately 51 questions with 38 replacements + 5 removals, 22 activities with 16 replacements + 1 removal, and 45 flashcards with 12 replacements + 1 split.",
+    "patterns": [
+      "Paragraph-location scaffolding is the dominant defect — approximately 43 of 51 questions begin with 'Under 1-1-XX' or 'Under 1-2-XX', teaching paragraph-number trivia rather than operational substance. Every such item was replaced with a self-contained stem that tests the rule, not its location.",
+      "Fill-blank format is overused (15 questions). Single-word recall items were converted to multiple-choice questions that test the operational principle behind the defined term. Where exact recall of a threshold value is essential (e.g., course classification angles), the replacement uses a multiple-choice stem that embeds the value in application context.",
+      "Correct-answer-first bias is pervasive — approximately 37 items place the correct answer in the first position. All replaced items randomize answer position so the correct answer is not consistently first.",
+      "Answer-length cues appear in 6 activities where the correct answer is conspicuously longer than distractors. Replacements balance answer lengths so no answer is identifiable by size alone.",
+      "Same-format duplication within short paragraphs is common — single-sentence paragraphs like 1-1-2, 1-1-3, and 1-1-4 each had 2-3 questions and 1-2 activities testing identical content. Five items were removed where coverage is maintained by a stronger replacement in the same paragraph.",
+      "Malformed reverse cards (2 flashcards) had fronts that read as answer statements and backs that were meta-commentary about the paragraph rather than operational content. Both were replaced with proper bidirectional construction.",
+      "Thin-back flashcards (3 total) provided single-word or short-phrase answers with no operational context. Replacements provide complete retrieval targets that stand alone.",
+      "Section 2 items (1-2-1, 1-2-2, 1-2-5) are generally stronger — the defined-term nature of the content means exact thresholds and definitions are legitimate retrieval targets. Remediation focused on removing paragraph-location scaffolding and converting fill-blanks to applied-understanding questions while preserving necessary exact values.",
+      "Activities with negative-stem question text (e.g., 'Does 1-1-2 limit applicability to only FAA employees?') were converted to positive-framing where the operational decision is the same. Where exclusion recognition is the genuine skill (e.g., identifying which channel is NOT a valid SMS information source), the negative framing was preserved but embedded in a positive operational context.",
+      "Several source_lookup activities duplicated the factual content of co-located questions. Where the lookup task added genuine source-use skill practice, the activity was retained with corrected answer placement. Where it merely re-asked the same fact, the question coverage was preferred."
+    ],
+    "generation_guidance": [
+      "Never embed paragraph numbers ('Under 1-1-XX') in question stems, activity instructions, or flashcard fronts. Use self-contained operational framing: 'According to FAA Order JO 7110.65...' or scenario-based context.",
+      "Default to multiple-choice format for all questions. Use fill-blank only when the exact word or phrase is itself a required recall target (e.g., prescribed phraseology, defined terms where the precise wording carries legal significance). Even then, prefer multiple-choice unless the blank tests something a controller must produce from memory without cues.",
+      "Randomize correct-answer position across items. Do not consistently place the correct answer first, second, or last. Within a single item, ensure all distractors are approximately the same length as the correct answer.",
+      "Limit to 2-3 items per paragraph maximum unless the paragraph is exceptionally content-rich (like 1-2-1 or 1-2-5). For single-sentence paragraphs, one well-constructed question and one activity or flashcard is sufficient. Cross-format reinforcement should test different retrieval angles, not the same fact with different furniture.",
+      "For Chapter 1 specifically: Section 1 paragraphs are administrative/procedural — test operational decisions (what to do, who to notify, which path to follow) rather than document trivia. Section 2 paragraphs are definitional — test application of defined terms in operational context rather than verbatim recitation of definitions.",
+      "Flashcard fronts must be complete questions. Backs must be self-contained retrieval targets with enough context to stand alone — not 'AIRAC dates.' but 'AIRAC dates — the international aeronautical information publication cycle to which the order and its changes are synchronized.'",
+      "Reverse cards must be valid questions in both directions. The front should read as a prompt that elicits the back, and vice versa. Do not use meta-commentary ('Catch-all rule for controllers from 1-1-1') as back content.",
+      "For activities: knowledge_check items should test the same quality standards as questions. situation_action items need realistic operational scenarios with plausible incorrect actions. source_lookup items must genuinely require consulting the order's references, not just recalling which order number was mentioned.",
+      "Distractors must represent plausible operational mistakes a controller might actually make. Avoid absurd options ('Apply any procedure published in a foreign ATC manual') that teach nothing.",
+      "When an item tests a boundary value or threshold (e.g., 45 degrees for same courses, 135 for opposite/reciprocal), include the boundary case explicitly to test inclusive vs. exclusive understanding. The boundary-value classification is a common source of operational error."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "question",
+      "para_id": "1-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Fill-blank tests verbatim word recall ('procedures') rather than operational understanding of what the order prescribes. The single-word answer provides no discrimination between competent and superficial reading.",
+      "source_basis": "Per 1-1-1 body: This order prescribes air traffic control procedures and phraseology for use by persons providing air traffic control services.",
+      "match": {
+        "question_text": "Complete: This order prescribes air traffic control _____ and phraseology for use by persons providing air traffic control services.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What does FAA Order JO 7110.65 prescribe for persons providing air traffic control services?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-1, the order prescribes both air traffic control procedures and phraseology. Knowing it prescribes both (not just one) is foundational to understanding the order's scope.",
+          "choices": [
+            {
+              "text": "Only air traffic control procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "Only standard ATC phraseology.",
+              "is_correct": false
+            },
+            {
+              "text": "Air traffic control procedures and phraseology.",
+              "is_correct": true
+            },
+            {
+              "text": "Staffing minimums and equipment maintenance schedules.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Stem teaches paragraph-location trivia ('Under 1-1-1') instead of operational substance. Distractor 'Apply any procedure published in a foreign ATC manual' introduces an implausible option that teaches nothing about FAA operational context.",
+      "source_basis": "Per 1-1-1: Controllers are required to exercise their best judgment if they encounter situations that are not covered by it.",
+      "match": {
+        "question_text": "Under 1-1-1, what are controllers required to do if they encounter situations not covered by this order?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller encounters a traffic situation that is not addressed anywhere in FAA Order JO 7110.65. What is the controller required to do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-1, controllers must exercise their best judgment when encountering situations not covered by the order. They are not required to stop providing service or wait for a supervisor to draft guidance.",
+          "choices": [
+            {
+              "text": "Refuse to provide any further ATC service until a supervisor creates a written procedure.",
+              "is_correct": false
+            },
+            {
+              "text": "Continue providing service using best judgment to handle the situation safely.",
+              "is_correct": true
+            },
+            {
+              "text": "Apply the most similar procedure in the order even if it contradicts the actual situation.",
+              "is_correct": false
+            },
+            {
+              "text": "Delegate all decision-making to the pilot-in-command for that flight only.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Stem opens with paragraph-location trivia. The operational rule (familiarity with provisions pertaining to one's responsibilities) is sound but the framing encourages paragraph-number recall over substance.",
+      "source_basis": "Per 1-1-1: Controllers are required to be familiar with the provisions of this order that pertain to their operational responsibilities.",
+      "match": {
+        "question_text": "Under 1-1-1, which provisions of this order are controllers required to be familiar with?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An en route controller is studying FAA Order JO 7110.65. Which provisions must a controller be familiar with under this order?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-1, controllers are required to be familiar with the provisions that pertain to their operational responsibilities — not every provision of every chapter.",
+          "choices": [
+            {
+              "text": "Those provisions that pertain to their operational responsibilities.",
+              "is_correct": true
+            },
+            {
+              "text": "Every provision in every chapter, regardless of relevance to their position.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the phraseology sections because procedures are managed by supervisors.",
+              "is_correct": false
+            },
+            {
+              "text": "Only provisions that mention their specific facility by name.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-1",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "duplication"
+      ],
+      "problem": "This knowledge_check asks the same question as the replacement for question 8051e6c5 (What does the order prescribe?) with nearly identical choices. Chapter 1-1-1 is a single-sentence paragraph; two formats testing the same fact produce retrieval-mode duplication without adding distinct reinforcement value.",
+      "source_basis": "Per 1-1-1 body. The knowledge_check duplicates the question item's operational coverage of what the order prescribes.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What two things does FAA Order JO 7110.65 prescribe for persons providing ATC services?",
+          "choices": [
+            {
+              "text": "Air traffic control procedures and phraseology.",
+              "is_correct": true
+            },
+            {
+              "text": "Air traffic control procedures and staffing levels.",
+              "is_correct": false
+            },
+            {
+              "text": "Only phraseology; procedures are prescribed in JO 7210.3.",
+              "is_correct": false
+            },
+            {
+              "text": "Staffing levels and equipment maintenance schedules.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-1, the order prescribes both air traffic control procedures and phraseology."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "Question text embeds paragraph reference ('What does 1-1-1 require...') and correct answer is placed first. The scenario itself is well-constructed for operational reasoning.",
+      "source_basis": "Per 1-1-1: Controllers exercise their best judgment when they encounter situations not covered by the order.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should the controller do?",
+          "situation": "A controller encounters an unusual traffic scenario not described anywhere in FAA Order JO 7110.65. A co-worker suggests the controller must stop providing service entirely until a supervisor writes a local procedure.",
+          "question_text": "What does 1-1-1 require the controller to do when a situation is not covered by the order?",
+          "choices": [
+            {
+              "text": "Exercise best judgment to handle the situation while continuing to provide service.",
+              "is_correct": true
+            },
+            {
+              "text": "Refuse to provide any further service until a new procedure is drafted and approved.",
+              "is_correct": false
+            },
+            {
+              "text": "Apply whichever procedure feels most similar, even if it contradicts the order.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer all affected aircraft to another frequency immediately.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-1, controllers exercise their best judgment when they encounter situations not covered by the order.",
+          "para_context": "PURPOSE OF THIS ORDER"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "What should the controller do?",
+            "situation": "A controller encounters an unusual traffic scenario not described anywhere in FAA Order JO 7110.65. A co-worker suggests the controller must stop providing service entirely until a supervisor writes a local procedure.",
+            "question_text": "What does FAA Order JO 7110.65 require the controller to do when a situation is not covered by the order?",
+            "choices": [
+              {
+                "text": "Refuse to provide any further service until a new procedure is drafted and approved.",
+                "is_correct": false
+              },
+              {
+                "text": "Exercise best judgment to handle the situation while continuing to provide service.",
+                "is_correct": true
+              },
+              {
+                "text": "Transfer all affected aircraft to another frequency immediately.",
+                "is_correct": false
+              },
+              {
+                "text": "Apply whichever procedure feels most similar, even if it contradicts the order.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 1-1-1, controllers exercise their best judgment when they encounter situations not covered by the order. They are not required to cease operations or apply contradictory procedures.",
+            "para_context": "PURPOSE OF THIS ORDER"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "1-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "Back is a three-word fragment ('Exercise best judgment.') with no context about when this applies or why. A flashcard back should be a complete retrieval target that stands alone.",
+      "source_basis": "Per 1-1-1: Controllers are required to exercise their best judgment if they encounter situations that are not covered by it.",
+      "match": {
+        "front": "What must a controller do when a situation is not covered by this order?",
+        "back": "Exercise best judgment.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What must a controller do when a situation is not covered by FAA Order JO 7110.65?",
+          "back": "Exercise best judgment. The order cannot anticipate every operational scenario; controllers must apply sound judgment to handle uncovered situations safely while continuing to provide ATC service.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "1-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Malformed reverse card. The current front reads like an answer statement, not a question prompt, and the back ('Catch-all rule for controllers from 1-1-1') is a meta-commentary about the paragraph rather than operational content. A proper reverse card must be a valid question in both directions.",
+      "source_basis": "Per 1-1-1: Controllers are required to exercise their best judgment if they encounter situations that are not covered by it.",
+      "match": {
+        "front": "Exercise best judgment when a situation is not covered by the order.",
+        "back": "Catch-all rule for controllers from 1-1-1.",
+        "card_type": "concept_reverse"
+      },
+      "replacements": [
+        {
+          "front": "Exercise best judgment when encountering a situation not covered by the order.",
+          "back": "What is the controller's responsibility under FAA Order JO 7110.65 when a situation is not addressed in the order?",
+          "card_type": "concept_reverse"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-10",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Fill-blank tests single-word verbatim recall ('supplement') rather than the operational principle that LOAs cannot override or replace the order. A controller needs to know the legal relationship, not parrot one adjective.",
+      "source_basis": "Per 1-1-10: LOAs only supplement this order. Any minima they specify must not be less than that specified herein unless appropriate military authority has authorized application of reduced separation between military aircraft.",
+      "match": {
+        "question_text": "Complete: LOAs only _____ this order.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "How do Letters of Agreement (LOAs) relate to FAA Order JO 7110.65?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-10, LOAs only supplement the order — they do not replace or override it. Their minima may not be less than the order's unless appropriate military authority authorizes reduced separation between military aircraft.",
+          "choices": [
+            {
+              "text": "LOAs replace the order for the facilities that sign them.",
+              "is_correct": false
+            },
+            {
+              "text": "LOAs may set any minima the signing facilities agree to, even if lower than the order.",
+              "is_correct": false
+            },
+            {
+              "text": "LOAs only supplement the order and cannot specify lower minima except when military authority authorizes reduced separation between military aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "LOAs are advisory only and create no binding procedural obligations.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-10",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Stem opens with 'Under 1-1-10' — paragraph trivia. The underlying question (LOA/minima relationship) is important operational knowledge.",
+      "source_basis": "Per 1-1-10: Any minima they specify must not be less than that specified herein unless appropriate military authority has authorized application of reduced separation between military aircraft.",
+      "match": {
+        "question_text": "Under 1-1-10, which of the following correctly describes the relationship between an LOA and FAA Order JO 7110.65 minima?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Two facilities want to document joint procedures in a Letter of Agreement (LOA). Which statement correctly describes what an LOA may do regarding separation minima?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-10, LOAs may not specify minima less than the order's minima unless appropriate military authority has authorized reduced separation between military aircraft. Civilian facilities cannot self-authorize lower minima through an LOA.",
+          "choices": [
+            {
+              "text": "An LOA may reduce minima below the order whenever both facilities agree the reduction is safe.",
+              "is_correct": false
+            },
+            {
+              "text": "An LOA may reduce minima below the order for any aircraft type if the reduction is published in a NOTAM.",
+              "is_correct": false
+            },
+            {
+              "text": "An LOA may always set lower minima because it is a binding agreement between facilities.",
+              "is_correct": false
+            },
+            {
+              "text": "An LOA may not reduce minima below the order unless appropriate military authority has authorized reduced separation between military aircraft.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-10",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The underlying question about LOA trigger conditions (joint application or multi-facility cooperation) is operationally relevant.",
+      "source_basis": "Per 1-1-10: Procedures/minima which are applied jointly or otherwise require the cooperation or concurrence of more than one facility/organization must be documented in a letter of agreement.",
+      "match": {
+        "question_text": "Under 1-1-10, which procedures or minima trigger the requirement for a letter of agreement?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An ARTCC and an adjacent TRACON develop a new procedure for arrival handoffs that requires both facilities to coordinate. Does this procedure need to be documented in a Letter of Agreement (LOA)?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-10, procedures or minima applied jointly or requiring cooperation or concurrence of more than one facility or organization must be documented in an LOA. Multi-facility coordination triggers the LOA requirement.",
+          "choices": [
+            {
+              "text": "Yes, because the procedure is applied jointly and requires cooperation between more than one facility.",
+              "is_correct": true
+            },
+            {
+              "text": "No, because LOAs are only required for military-civilian coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because each facility can document the procedure in its own internal directives.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the procedure involves reduced separation minima.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-10",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "Correct answer in first position creates position bias. The activity itself is well-scaffolded with a realistic operational scenario.",
+      "source_basis": "Per 1-1-10: LOAs only supplement the order and may not specify minima less than the order's minima except when appropriate military authority authorizes reduced separation between military aircraft.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "Two civilian facilities have been using joint arrival procedures based on a verbal understanding, and one supervisor wants to formalize the arrangement with reduced separation minima below the order's values, arguing that a signed LOA between the two facilities is sufficient to authorize the reduction.",
+          "question_text": "Can two civilian facilities use an LOA to authorize separation minima below those in the order?",
+          "choices": [
+            {
+              "text": "No; LOAs only supplement the order and may not specify minima less than the order's minima except when appropriate military authority authorizes reduced separation between military aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes; any two facilities may agree to lower minima as long as the agreement is documented in an LOA.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the LOA is also approved by the service area office.",
+              "is_correct": false
+            },
+            {
+              "text": "No; LOAs may never address minima — that is reserved for waivers under 1-1-11.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-10, LOAs only supplement the order and may not specify minima less than the order's minima unless appropriate military authority has authorized reduced separation between military aircraft. Civilian facilities cannot self-authorize lower minima through an LOA.",
+          "para_context": "PROCEDURAL LETTERS OF AGREEMENT (LOAs)"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "What should you do?",
+            "situation": "Two civilian facilities have been using joint arrival procedures based on a verbal understanding. One supervisor wants to formalize the arrangement with reduced separation minima below the order's values, arguing that a signed LOA between the two facilities is sufficient to authorize the reduction.",
+            "question_text": "Can two civilian facilities use an LOA to authorize separation minima below those in FAA Order JO 7110.65?",
+            "choices": [
+              {
+                "text": "Yes; any two facilities may agree to lower minima as long as the agreement is documented in an LOA.",
+                "is_correct": false
+              },
+              {
+                "text": "Yes, but only if the LOA is also approved by the service area office.",
+                "is_correct": false
+              },
+              {
+                "text": "No; LOAs may never address minima — that is reserved for waivers under JO 7210.3.",
+                "is_correct": false
+              },
+              {
+                "text": "No; LOAs only supplement the order and may not specify minima less than the order's except when appropriate military authority authorizes reduced separation between military aircraft.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "Per 1-1-10, LOAs only supplement the order and may not specify minima less than the order's minima unless appropriate military authority has authorized reduced separation between military aircraft. Civilian facilities cannot self-authorize lower minima through an LOA.",
+            "para_context": "PROCEDURAL LETTERS OF AGREEMENT (LOAs)"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-10",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "Correct answer in first position. The source_lookup type is appropriate for this reference-location task.",
+      "source_basis": "Per 1-1-10 reference: Procedures for LOA development, review, and approval are covered in FAA Order JO 7210.3, Chapter 4, Section 3.",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 1,
+          "source_kind": "reference",
+          "source_label": "FAA Order JO 7210.3, Chapter 4, Section 3",
+          "lookup_context": [
+            "Paragraph 1-1-10 references LOA development, review, and approval procedures"
+          ],
+          "task": "Identify which FAA order covers LOA development, review, and approval.",
+          "instruction": "Use the references in 1-1-10.",
+          "question_text": "To find procedures for developing, reviewing, and approving a letter of agreement, which order and section does 1-1-10 point to?",
+          "choices": [
+            {
+              "text": "FAA Order JO 7210.3, Chapter 4, Section 3.",
+              "is_correct": true
+            },
+            {
+              "text": "FAA Order JO 7110.65, Chapter 2, Section 1.",
+              "is_correct": false
+            },
+            {
+              "text": "FAA Order JO 1000.37, ATO Safety Management System.",
+              "is_correct": false
+            },
+            {
+              "text": "FAA Order JO 7000.5, Procedures for Submitting Changes.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-10, procedures for LOA development, review, and approval are covered in FAA Order JO 7210.3, Chapter 4, Section 3."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_lookup",
+          "difficulty": 1,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 1,
+            "source_kind": "reference",
+            "source_label": "FAA Order JO 7210.3, Chapter 4, Section 3",
+            "lookup_context": [
+              "FAA Order JO 7110.65 references LOA development, review, and approval procedures"
+            ],
+            "task": "Identify which FAA order covers LOA development, review, and approval.",
+            "instruction": "Use the reference in FAA Order JO 7110.65.",
+            "question_text": "To find procedures for developing, reviewing, and approving a letter of agreement, which order and section does FAA Order JO 7110.65 point to?",
+            "choices": [
+              {
+                "text": "FAA Order JO 7110.65, Chapter 2, Section 1.",
+                "is_correct": false
+              },
+              {
+                "text": "FAA Order JO 7210.3, Chapter 4, Section 3.",
+                "is_correct": true
+              },
+              {
+                "text": "FAA Order JO 1000.37, ATO Safety Management System.",
+                "is_correct": false
+              },
+              {
+                "text": "FAA Order JO 7000.5, Procedures for Submitting Changes.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 1-1-10, procedures for LOA development, review, and approval are covered in FAA Order JO 7210.3, Chapter 4, Section 3."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "1-1-10",
+      "action": "split",
+      "severity": "minor",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "The back lists three artificial 'conditions' but the source only establishes one conditional element (military authority authorization for reduced separation between military aircraft). The 'three conditions' framing decomposes a single rule into artificial sub-parts, creating retrieval targets the source does not support as distinct items.",
+      "source_basis": "Per 1-1-10: Any minima they specify must not be less than that specified herein unless appropriate military authority has authorized application of reduced separation between military aircraft.",
+      "match": {
+        "front": "Three conditions that must be met before an LOA can specify minima below the order.",
+        "back": "1) Appropriate military authority must authorize it; 2) It must involve reduced separation; 3) It must be between military aircraft. Civilian facilities may never use an LOA to lower minima below the order.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "When may an LOA specify separation minima lower than those in FAA Order JO 7110.65?",
+          "back": "Only when appropriate military authority has authorized reduced separation between military aircraft. Civilian facilities may never use an LOA to lower the order's minima.",
+          "card_type": "concept"
+        },
+        {
+          "front": "What is the default rule for LOA minima relative to FAA Order JO 7110.65?",
+          "back": "LOA minima must not be less than the minima specified in the order. The LOA supplements — it does not override — the order.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-11",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Fill-blank tests single-word recall ('Exceptional') rather than the operational standard for when waivers are justified. Controllers need to know what qualifies for a waiver, not recall one adjective.",
+      "source_basis": "Per 1-1-11a: Exceptional or unusual requirements may dictate procedural deviations or supplementary procedures to this order.",
+      "match": {
+        "question_text": "Complete: _____ or unusual requirements may dictate procedural deviations or supplementary procedures to this order.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What type of requirements may justify a waiver (procedural deviation or supplementary procedure) to FAA Order JO 7110.65?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-11a, waivers are justified by exceptional or unusual requirements — not routine preferences, convenience, or staffing issues. The bar is intentionally high.",
+          "choices": [
+            {
+              "text": "Exceptional or unusual requirements that dictate procedural deviations or supplementary procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "Any requirement a facility manager considers operationally convenient.",
+              "is_correct": false
+            },
+            {
+              "text": "Routine staffing shortages that temporarily affect shift schedules.",
+              "is_correct": false
+            },
+            {
+              "text": "Any procedure a military unit requests, regardless of justification.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-11",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "Paragraph-location scaffold and correct-answer-first bias. The question tests an important operational rule (military prior approval sequencing) but frames it as paragraph trivia.",
+      "source_basis": "Per 1-1-11b: If military operations or facilities are involved, prior approval by the appropriate headquarters is required for subsequent interface with FAA.",
+      "match": {
+        "question_text": "Under 1-1-11, a waiver request involves military operations. The facility supervisor obtains FAA regional approval first, then notifies the military headquarters after the waiver is approved. Is this the correct sequence?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A facility is processing a waiver request that involves military operations. The facility supervisor obtains FAA regional approval first, planning to notify the military headquarters afterward. Is this the correct sequence?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 1-1-11b, prior approval by the appropriate military headquarters is required for subsequent interface with FAA. Military approval must come first, not after FAA coordination.",
+          "choices": [
+            {
+              "text": "No, because waivers involving military operations require prior military headquarters approval before FAA processes the waiver.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because FAA coordination must precede military notification in all cases.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because the military notification is only for record-keeping after the waiver is approved.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because waivers with military involvement are prohibited entirely under any circumstances.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-11",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Stem embeds both paragraph reference and note-type reference ('Under the Terminal note in 1-1-11'), teaching document-navigation trivia rather than the operational approval authority.",
+      "source_basis": "Per 1-1-11 Terminal note: Headquarters Air Force Flight Standards Agency is the approval authority for any USAF procedures or minima that differ from those specified herein and that involve military aircraft only.",
+      "match": {
+        "question_text": "Under the Terminal note in 1-1-11, who approves USAF procedures or minima differing from the order and involving military aircraft only?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A U.S. Air Force unit proposes procedures that differ from FAA Order JO 7110.65 and involve only military aircraft. Who is the approval authority for these USAF-specific deviations?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-11 Terminal note, Headquarters Air Force Flight Standards Agency (HQ AFFSA) is the approval authority for any USAF procedures or minima that differ from the order and involve military aircraft only.",
+          "choices": [
+            {
+              "text": "The local facility Air Force liaison officer.",
+              "is_correct": false
+            },
+            {
+              "text": "AJV-P acting as the sole authority for all military-related procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "The Department of Defense Inspector General office.",
+              "is_correct": false
+            },
+            {
+              "text": "Headquarters Air Force Flight Standards Agency (HQ AFFSA).",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-11",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "source_fidelity"
+      ],
+      "problem": "Answer-length cue: the correct answer is substantially longer than all distractors. The question asks about a comparison (waiver vs. procedural change paths) that the source paragraph does not directly address; it extrapolates beyond the source.",
+      "source_basis": "Per 1-1-11a: waiver approval is covered in JO 7210.3, Ch 19, Sec 7. The existing question fabricated a comparison the source does not make.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How does the approval path for a waiver differ from the approval path for a standard procedural change?",
+          "choices": [
+            {
+              "text": "Both follow the same path through facility management, then AJV-P correspondence.",
+              "is_correct": false
+            },
+            {
+              "text": "Waivers always go directly to AJV-P; procedural changes go through facility management.",
+              "is_correct": false
+            },
+            {
+              "text": "Waiver approval is governed by FAA Order JO 7210.3, Chapter 19, Section 7, which is a different order and chapter from the 1-1-8 change process.",
+              "is_correct": true
+            },
+            {
+              "text": "Waivers require only local facility concurrence; procedural changes require headquarters approval.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-11, waiver approval is covered in FAA Order JO 7210.3, Chapter 19, Section 7, which is a separate order from the 1-1-8 procedural change process that goes through JO 7000.5. These are distinct administrative paths."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "Where are waiver approval procedures for FAA Order JO 7110.65 located?",
+            "choices": [
+              {
+                "text": "FAA Order JO 7210.3, Chapter 19, Section 7.",
+                "is_correct": true
+              },
+              {
+                "text": "FAA Order JO 7110.65, Chapter 1, Section 1.",
+                "is_correct": false
+              },
+              {
+                "text": "FAA Order JO 7000.5, Procedures for Submitting Changes.",
+                "is_correct": false
+              },
+              {
+                "text": "FAA Order JO 1000.37, ATO Safety Management System.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 1-1-11, waiver approval is covered in FAA Order JO 7210.3, Facility Operation and Administration, Chapter 19, Section 7."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-11",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "Correct answer placed first and is noticeably longer than all distractors. The scenario content is educationally sound.",
+      "source_basis": "Per 1-1-11b: prior military headquarters approval is required. Terminal note: HQ AFFSA approves USAF procedures/minima differing from the order and involving military aircraft only.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should you do?",
+          "situation": "An Air Force unit wants USAF-specific procedures that differ from the order for operations involving only military aircraft. The request is routed directly to AJV-P without coordination through the appropriate Air Force headquarters.",
+          "question_text": "Is this routing correct for USAF-only procedural deviations?",
+          "choices": [
+            {
+              "text": "No; military operations require prior approval by the appropriate military headquarters, and for USAF procedures involving military aircraft only, HQ Air Force Flight Standards Agency is the approval authority.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes; the local Air Force unit can approve its own deviations without higher headquarters coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes; as long as AJV-P receives the request, military chain-of-command review is optional.",
+              "is_correct": false
+            },
+            {
+              "text": "No; only the Department of the Army can approve procedures for any military aircraft.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-11b, prior military headquarters approval is required. The Terminal note specifies HQ AFFSA as the approval authority for USAF procedures or minima that differ from the order and involve military aircraft only.",
+          "para_context": "WAIVERS TO THIS ORDER"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "What should you do?",
+            "situation": "An Air Force unit wants USAF-specific procedures that differ from the order for operations involving only military aircraft. The request is routed directly to AJV-P without coordination through the appropriate Air Force headquarters.",
+            "question_text": "Is this routing correct for USAF-only procedural deviations?",
+            "choices": [
+              {
+                "text": "Yes; the local Air Force unit can approve its own deviations without higher headquarters coordination.",
+                "is_correct": false
+              },
+              {
+                "text": "Yes; as long as AJV-P receives the request, military chain-of-command review is optional.",
+                "is_correct": false
+              },
+              {
+                "text": "No; only the Department of the Army can approve procedures for any military aircraft.",
+                "is_correct": false
+              },
+              {
+                "text": "No; military operations require prior approval by the appropriate military headquarters, and for USAF-only procedures HQ AFFSA is the approval authority.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "Per 1-1-11b, prior military headquarters approval is required. The Terminal note specifies HQ AFFSA as the approval authority for USAF procedures or minima that differ from the order and involve military aircraft only.",
+            "para_context": "WAIVERS TO THIS ORDER"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-12",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The SMS continuous-improvement duty is an important operational principle that should be tested without paragraph-number framing.",
+      "source_basis": "Per 1-1-12: All ATO employees must strive not only to maintain safety in the NAS for those services they provide but also to continuously improve the ATO SMS.",
+      "match": {
+        "question_text": "Under 1-1-12, what are all ATO employees expected to do beyond simply maintaining safety in the NAS?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "According to FAA Order JO 7110.65, what are all ATO employees expected to do beyond simply maintaining safety in the NAS?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-12, all ATO employees must strive to continuously improve the ATO SMS. SMS ownership is assigned to all employees at all levels, not just safety specialists.",
+          "choices": [
+            {
+              "text": "Continuously improve the ATO Safety Management System.",
+              "is_correct": true
+            },
+            {
+              "text": "Submit one SMS suggestion per calendar year at minimum.",
+              "is_correct": false
+            },
+            {
+              "text": "Complete SMS training only if designated as an SMS practitioner.",
+              "is_correct": false
+            },
+            {
+              "text": "Report safety data only to their immediate supervisor.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-12",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold combined with a negative stem. While exclusion recognition can be valid for identifying incorrect channels, the negative framing is unnecessary — asking which channel IS correct teaches the same content positively.",
+      "source_basis": "Per 1-1-12: Additional SMS information can be obtained by visiting the SMS Toolbox, emailing AJI at 9-AJI-SMS@faa.gov, or contacting the service center Quality Control Group.",
+      "match": {
+        "question_text": "Under 1-1-12, which of the following is NOT listed as a way to obtain additional ATO SMS information?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller wants to learn more about the ATO Safety Management System. Which method does FAA Order JO 7110.65 identify as a proper channel for obtaining additional SMS information?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-12, SMS information channels include: visiting the SMS Toolbox, emailing AJI at 9-AJI-SMS@faa.gov, or contacting the service center Quality Control Group. Filing a UCR through the facility QA program is not listed as an SMS information channel.",
+          "choices": [
+            {
+              "text": "Filing a UCR through the facility quality assurance program.",
+              "is_correct": false
+            },
+            {
+              "text": "Visiting the SMS Toolbox.",
+              "is_correct": true
+            },
+            {
+              "text": "Submitting a written request through the facility security office.",
+              "is_correct": false
+            },
+            {
+              "text": "Calling the ATO regional administrator directly.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-12",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "Correct answer in first position. The question content is otherwise sound.",
+      "source_basis": "Per 1-1-12: SMS training is available for all employees via eLMS.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Where can all ATO employees access SMS training?",
+          "choices": [
+            {
+              "text": "Via eLMS.",
+              "is_correct": true
+            },
+            {
+              "text": "Only at the Mike Monroney Aeronautical Center in person.",
+              "is_correct": false
+            },
+            {
+              "text": "Only through the service center Quality Control Group.",
+              "is_correct": false
+            },
+            {
+              "text": "SMS training is only for designated SMS practitioners.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-12, SMS training is available for all employees via eLMS."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "Where can all ATO employees access SMS training?",
+            "choices": [
+              {
+                "text": "Via eLMS.",
+                "is_correct": true
+              },
+              {
+                "text": "Only at the Mike Monroney Aeronautical Center in person.",
+                "is_correct": false
+              },
+              {
+                "text": "Only through the service center Quality Control Group.",
+                "is_correct": false
+              },
+              {
+                "text": "SMS training is only for designated SMS practitioners.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 1-1-12, SMS training is available for all employees via eLMS. Additional courses and Technical Training for SMS Practitioners and SMS Facilitators are available from AJI."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-13",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Fill-blank tests verbatim word recall ('physically') rather than the operational rule. The physical-location-vs-service-area distinction is an important procedural rule that deserves a multiple-choice question testing understanding, not a one-word recall.",
+      "source_basis": "Per 1-1-13: the facility should contact the FAA region where the facility is physically located—not the region where the facility's service area office is located.",
+      "match": {
+        "question_text": "Complete: When references are made to non-ATO regional organizations, the facility should contact the FAA region where the facility is _____ located.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A facility needs to contact a Flight Standards regional office (a non-ATO organization). Which FAA region should the facility contact?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-13, when contacting non-ATO regional organizations, the facility contacts the FAA region where it is physically located — not the region where its service area office is located. Physical location governs, regardless of organizational alignment.",
+          "choices": [
+            {
+              "text": "The region where the facility's service area office is located.",
+              "is_correct": false
+            },
+            {
+              "text": "The region that covers the airspace where most of the facility's traffic operates.",
+              "is_correct": false
+            },
+            {
+              "text": "The region where the facility is physically located.",
+              "is_correct": true
+            },
+            {
+              "text": "Any FAA region at the facility's discretion.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-13",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Stem opens with paragraph-location trivia. The scenario-based content (Eastern vs. Central region) is a strong operational application but the paragraph reference undermines it.",
+      "source_basis": "Per 1-1-13: the facility should contact the FAA region where the facility is physically located—not the region where the facility's service area office is located.",
+      "match": {
+        "question_text": "Under 1-1-13, a facility is physically located in the Eastern region but its service area office is in the Central region. The facility needs to contact a non-ATO FAA office. Which region is correct?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A facility is physically located in the Eastern region but its service area office is in the Central region. The facility needs to contact a non-ATO FAA regional office. Which region is correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-13, the facility contacts the region where it is physically located — not the service area office region. Physical location governs over organizational alignment for these non-ATO contacts.",
+          "choices": [
+            {
+              "text": "The Central region, because that is where the service area office is located.",
+              "is_correct": false
+            },
+            {
+              "text": "Either region, at the facility's discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "The Eastern region, because the facility is physically located there.",
+              "is_correct": true
+            },
+            {
+              "text": "Neither; the facility must contact Washington headquarters directly.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-13",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "duplication"
+      ],
+      "problem": "Paragraph-location scaffold. This is near-duplicate of the 2cb263aa replacement — both ask 'which region determines the correct contact.' Redirecting to the organization-examples content from Q14 avoids duplication while preserving coverage of both operative rules in 1-1-13.",
+      "source_basis": "Per 1-1-13: the paragraph lists Communications Center, Flight Standards, and Airport offices as examples of non-ATO regional organizations.",
+      "match": {
+        "question_text": "Under 1-1-13, when contacting a non-ATO FAA regional office, which region determines the correct contact?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When FAA Order JO 7110.65 references a non-ATO FAA regional office organization, which of the following are explicitly listed as examples?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-13, the order lists Communications Center, Flight Standards, and Airport offices as examples of non-ATO regional organizations. Recognizing these categories helps controllers determine when the physical-location rule applies.",
+          "choices": [
+            {
+              "text": "Technical Operations, Safety, and Training offices.",
+              "is_correct": false
+            },
+            {
+              "text": "Air Traffic Services, System Operations, and Mission Support offices.",
+              "is_correct": false
+            },
+            {
+              "text": "AJV-P, AJI, and AJT offices.",
+              "is_correct": false
+            },
+            {
+              "text": "Communications Center, Flight Standards, and Airport offices.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-13",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "duplication"
+      ],
+      "problem": "This item tests the same factual content (examples of non-ATO organizations) as the replacement for af968f2f. Paragraph 1-1-13 is a two-sentence paragraph; four questions testing it produce excessive duplication. Removing this leaves Q11 (physical-location rule) and Q13 (organization examples) covering both operative rules.",
+      "source_basis": "Per 1-1-13: Communications Center, Flight Standards, Airport offices are listed as examples. Coverage maintained through af968f2f and 2cb263aa replacements.",
+      "match": {
+        "question_text": "Under 1-1-13, which examples are given of FAA regional office organizations that are not part of the Air Traffic Organization?",
+        "question_type": "multiple_choice"
+      }
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "1-1-13",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "format_fit"
+      ],
+      "problem": "Front contains paragraph-location scaffolding ('listed in 1-1-13'). The operational content (what are examples of non-ATO organizations) is appropriate for a definition card.",
+      "source_basis": "Per 1-1-13: Communications Center, Flight Standards, and Airport offices are listed as non-ATO examples.",
+      "match": {
+        "front": "Three examples of non-ATO FAA regional office organizations listed in 1-1-13.",
+        "back": "Communications Center, Flight Standards, and Airport offices.",
+        "card_type": "definition"
+      },
+      "replacements": [
+        {
+          "front": "What are examples of FAA regional office organizations that are NOT part of the Air Traffic Organization?",
+          "back": "Communications Center, Flight Standards, and Airport offices.",
+          "card_type": "definition"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-14",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Fill-blank tests verbatim recall of 'subscribing' rather than the operational responsibility. The three-part duty (view, download, subscribe) is an important operational principle deserving a multiple-choice question.",
+      "source_basis": "Per 1-1-14b: All organizations are responsible for viewing, downloading, and subscribing to receive email notifications when changes occur to this order.",
+      "match": {
+        "question_text": "Complete: All organizations are responsible for viewing, downloading, and _____ to receive email notifications when changes occur to this order.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "When FAA Order JO 7110.65 is changed, what responsibilities does each organization have regarding the changes?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-14b, all organizations are responsible for viewing, downloading, and subscribing to receive email notifications when changes occur. Passive awareness is insufficient — organizations must actively monitor and obtain changes.",
+          "choices": [
+            {
+              "text": "Wait for a printed copy to arrive by mail before taking any action.",
+              "is_correct": false
+            },
+            {
+              "text": "Only download changes when a supervisor specifically directs it.",
+              "is_correct": false
+            },
+            {
+              "text": "View, download, and subscribe to receive email notifications of changes.",
+              "is_correct": true
+            },
+            {
+              "text": "Rely on word-of-mouth from adjacent facilities for change awareness.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-14",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The original asked 'which of the following is listed as a recipient' — an enumeration recall question testing whether the student remembers one named center, with low educational value.",
+      "source_basis": "Per 1-1-14a: order is distributed to selected offices in Washington headquarters, regional offices, service area offices, the William J. Hughes Technical Center, the Mike Monroney Aeronautical Center, and to all air traffic field facilities and international aviation field offices.",
+      "match": {
+        "question_text": "Under 1-1-14a, which of the following is listed as a recipient of this order distribution?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An FAA employee needs to determine whether their office should receive FAA Order JO 7110.65. Which of the following is listed as an intended distribution recipient of this order?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-14a, the order is distributed to selected offices in Washington headquarters, regional offices, service area offices, the William J. Hughes Technical Center, the Mike Monroney Aeronautical Center, and to all air traffic field facilities and international aviation field offices.",
+          "choices": [
+            {
+              "text": "Foreign civil aviation authorities.",
+              "is_correct": false
+            },
+            {
+              "text": "Every FAA regional counsel office.",
+              "is_correct": false
+            },
+            {
+              "text": "All air traffic field facilities.",
+              "is_correct": true
+            },
+            {
+              "text": "All airport sponsors under an FAA grant agreement.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-14",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "Correct answer in first position. The question tests recognition of two named centers, which is low-level factual recall.",
+      "source_basis": "Per 1-1-14a: distributed to selected offices including the William J. Hughes Technical Center and the Mike Monroney Aeronautical Center.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which two FAA centers are named as specific recipients of this order's distribution?",
+          "choices": [
+            {
+              "text": "The William J. Hughes Technical Center and the Mike Monroney Aeronautical Center.",
+              "is_correct": true
+            },
+            {
+              "text": "The William J. Hughes Technical Center and the FAA Academy.",
+              "is_correct": false
+            },
+            {
+              "text": "The Mike Monroney Aeronautical Center and the Air Traffic Control System Command Center.",
+              "is_correct": false
+            },
+            {
+              "text": "The FAA Technical Center and the National Aeronautical Charting Office.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-14a, the order is distributed to selected offices including the William J. Hughes Technical Center and the Mike Monroney Aeronautical Center."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "Which two FAA centers are named as specific recipients of FAA Order JO 7110.65 distribution?",
+            "choices": [
+              {
+                "text": "The William J. Hughes Technical Center and the Mike Monroney Aeronautical Center.",
+                "is_correct": true
+              },
+              {
+                "text": "The William J. Hughes Technical Center and the FAA Academy.",
+                "is_correct": false
+              },
+              {
+                "text": "The Mike Monroney Aeronautical Center and the Air Traffic Control System Command Center.",
+                "is_correct": false
+              },
+              {
+                "text": "The FAA Technical Center and the National Aeronautical Charting Office.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 1-1-14a, the order is distributed to selected offices including the William J. Hughes Technical Center and the Mike Monroney Aeronautical Center."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "1-1-14",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity",
+        "format_fit"
+      ],
+      "problem": "Front says 'five distribution targets' but the back lists seven items, creating a count mismatch. The full distribution list is too long for a single flashcard retrieval target.",
+      "source_basis": "Per 1-1-14a: order is distributed to selected offices in Washington headquarters, regional offices, service area offices, WJHTC, MMAC, all air traffic field facilities, and international aviation field offices.",
+      "match": {
+        "front": "Which five distribution targets does 1-1-14a list for this order?",
+        "back": "Washington headquarters, regional offices, service area offices, William J. Hughes Technical Center, Mike Monroney Aeronautical Center, all air traffic field facilities, and international aviation field offices.",
+        "card_type": "definition"
+      },
+      "replacements": [
+        {
+          "front": "What categories of offices and facilities receive distribution of FAA Order JO 7110.65?",
+          "back": "Washington headquarters (selected offices), regional offices, service area offices, William J. Hughes Technical Center, Mike Monroney Aeronautical Center, all air traffic field facilities, and international aviation field offices.",
+          "card_type": "definition"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Fill-blank tests verbatim recall of 'personnel' rather than the operational scope of who the order applies to. A controller needs to know the order covers 'all ATO personnel and anyone using ATO directives' — not just recall one word.",
+      "source_basis": "Per 1-1-2: This order applies to all ATO personnel and anyone using ATO directives.",
+      "match": {
+        "question_text": "Complete: This order applies to all ATO _____ and anyone using ATO directives.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "Who does FAA Order JO 7110.65 apply to?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-2, the order applies to all ATO personnel and anyone using ATO directives. This second category captures contractors, military personnel, and others who rely on ATO directives regardless of employment status.",
+          "choices": [
+            {
+              "text": "All ATO personnel and anyone using ATO directives.",
+              "is_correct": true
+            },
+            {
+              "text": "Only FAA-certified air traffic controllers.",
+              "is_correct": false
+            },
+            {
+              "text": "Only FAA employees with a facility badge.",
+              "is_correct": false
+            },
+            {
+              "text": "Only facility managers and supervisors designated in writing.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold plus near-duplication with Q17 replacement. Redirected to test the contractor/non-FAA applicability edge case, which is the more operationally interesting aspect of 1-1-2.",
+      "source_basis": "Per 1-1-2: This order applies to all ATO personnel and anyone using ATO directives.",
+      "match": {
+        "question_text": "Under 1-1-2, which of the following is true about who this order applies to?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A contractor performing work for the ATO relies on FAA Order JO 7110.65 directives but claims the order does not apply because they are not an FAA employee. Is the contractor correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-2, the order applies to all ATO personnel AND anyone using ATO directives. The second category ('anyone using ATO directives') captures contractors, military personnel, and others regardless of employment relationship.",
+          "choices": [
+            {
+              "text": "No; the order applies to anyone using ATO directives, including contractors.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes; the order applies only to direct FAA employees with an active ATC certification.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the contract does not explicitly reference the order.",
+              "is_correct": false
+            },
+            {
+              "text": "No, but the contractor must follow the order only when in FAA-controlled facilities.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "Question text includes paragraph reference ('Does 1-1-2 limit...') and correct answer is first. The scenario is well-constructed with a realistic contractor situation.",
+      "source_basis": "Per 1-1-2: This order applies to all ATO personnel and anyone using ATO directives.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A contractor performing work for the ATO is relying on ATO directives but claims the order does not apply because they are not an FAA employee.",
+          "question_text": "Does 1-1-2 limit applicability to only FAA employees?",
+          "choices": [
+            {
+              "text": "No; it applies to all ATO personnel and anyone using ATO directives, regardless of employment status.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes; only direct FAA employees are covered by the order.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes; contractors must follow their own company manuals instead.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the contractor's contract explicitly references the order.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-2, the order applies to all ATO personnel and anyone using ATO directives. The second category captures anyone who relies on ATO directives, regardless of their employment relationship.",
+          "para_context": "AUDIENCE"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "What should you do?",
+            "situation": "A contractor performing work for the ATO is relying on ATO directives but claims the order does not apply because they are not an FAA employee.",
+            "question_text": "Does FAA Order JO 7110.65 apply only to FAA employees?",
+            "choices": [
+              {
+                "text": "Yes; only direct FAA employees are covered by the order.",
+                "is_correct": false
+              },
+              {
+                "text": "Yes; contractors must follow their own company manuals instead.",
+                "is_correct": false
+              },
+              {
+                "text": "Only if the contractor's contract explicitly references the order.",
+                "is_correct": false
+              },
+              {
+                "text": "No; it applies to all ATO personnel and anyone using ATO directives, regardless of employment status.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "Per 1-1-2, the order applies to all ATO personnel and anyone using ATO directives. The second category captures anyone who relies on ATO directives, regardless of employment relationship.",
+            "para_context": "AUDIENCE"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffold tests recall of 'Orders and Notices'. The operational skill is knowing where to find the order, not remembering the exact name of one website.",
+      "source_basis": "Per 1-1-3: This order is available on the FAA's Air Traffic Plans and Publications website and Orders & Notices website.",
+      "match": {
+        "question_text": "Under 1-1-3, the order is available on the FAA's Air Traffic Plans and Publications website and the FAA _____ website.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "Where is FAA Order JO 7110.65 available online?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-3, the order is available on two public FAA websites: the Air Traffic Plans and Publications website and the Orders and Notices website. It is not restricted to an internal employee portal.",
+          "choices": [
+            {
+              "text": "Only on the MyFAA employee portal.",
+              "is_correct": false
+            },
+            {
+              "text": "Only through the GovDelivery subscription system.",
+              "is_correct": false
+            },
+            {
+              "text": "On the FAA Air Traffic Plans and Publications website and the FAA Orders and Notices website.",
+              "is_correct": true
+            },
+            {
+              "text": "Only in printed form at regional offices.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Paragraph-location scaffold plus negative-stem framing. The question constructs a false claim and asks if it's correct — a double-negative logical structure that tests reading comprehension more than operational knowledge. Nearly duplicates the 162cd151 replacement's content.",
+      "source_basis": "Per 1-1-3: order available on two public FAA websites. The MyFAA portal hosts interpretations per 1-1-9g, not the order text.",
+      "match": {
+        "question_text": "A user claims this order can be found on the MyFAA employee portal but not on any public website. Is that correct under 1-1-3?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller wants to access FAA Order JO 7110.65 from home. Is the order available on a public website or only through FAA internal systems?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-3, the order is available on two public FAA websites accessible without an FAA login. Published interpretations are available on the MyFAA employee portal (per 1-1-9g), but the order itself is publicly accessible.",
+          "choices": [
+            {
+              "text": "The order is only available on the internal MyFAA employee portal.",
+              "is_correct": false
+            },
+            {
+              "text": "The order is available on public FAA websites accessible without an FAA login.",
+              "is_correct": true
+            },
+            {
+              "text": "The order is only distributed in printed form to facility managers.",
+              "is_correct": false
+            },
+            {
+              "text": "The order is only accessible through the GovDelivery subscription email system.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-3",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "duplication"
+      ],
+      "problem": "This question asks identical factual content as the 162cd151 replacement (name the two websites). Paragraph 1-1-3 is a single-sentence paragraph; three questions covering 'where to find the order' is excessive. The 162cd151 and 9effdd1f replacements together cover both factual recall and operational application.",
+      "source_basis": "Per 1-1-3: two public FAA websites. Coverage maintained through 162cd151 and 9effdd1f replacements.",
+      "match": {
+        "question_text": "Under 1-1-3, which two websites make this order available online?",
+        "question_type": "multiple_choice"
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "Correct answer in first position and is substantially longer than all distractors. The source_lookup activity duplicates the question coverage for website locations.",
+      "source_basis": "Per 1-1-3: order available on FAA Air Traffic Plans and Publications website and Orders and Notices website.",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 1,
+          "source_kind": "reference",
+          "source_label": "FAA Air Traffic Plans and Publications website",
+          "lookup_context": [
+            "A user needs to find the current text of FAA Order JO 7110.65 online"
+          ],
+          "task": "Identify which FAA websites host the order text.",
+          "instruction": "Use the references in 1-1-3.",
+          "question_text": "A controller needs to pull up the current JO 7110.65 text online. Which websites does 1-1-3 identify as hosting the order?",
+          "choices": [
+            {
+              "text": "The FAA Air Traffic Plans and Publications website, and the FAA Orders and Notices website.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the GovDelivery subscription portal.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the MyFAA employee portal.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the AJV-P correspondence mailbox archive.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-3, the order is available on two public FAA websites: Air Traffic Plans and Publications, and Orders and Notices."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_lookup",
+          "difficulty": 1,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 1,
+            "source_kind": "reference",
+            "source_label": "FAA Air Traffic Plans and Publications website / FAA Orders and Notices website",
+            "lookup_context": [
+              "A controller needs to find the current text of FAA Order JO 7110.65 online"
+            ],
+            "task": "Identify which FAA websites host the order text.",
+            "instruction": "Use the information in FAA Order JO 7110.65, Chapter 1.",
+            "question_text": "A controller needs to pull up the current JO 7110.65 text online. Which websites host the order?",
+            "choices": [
+              {
+                "text": "The FAA Air Traffic Plans and Publications website, and the FAA Orders and Notices website.",
+                "is_correct": true
+              },
+              {
+                "text": "Only the GovDelivery subscription portal.",
+                "is_correct": false
+              },
+              {
+                "text": "Only the MyFAA employee portal.",
+                "is_correct": false
+              },
+              {
+                "text": "Only the AJV-P correspondence mailbox archive.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 1-1-3, the order is available on two public FAA websites: Air Traffic Plans and Publications, and Orders and Notices."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Fill-blank tests verbatim recall of a specific date ('April 20, 2023'). Knowing the prior edition's date is low-value trivia; the operational principle is that the current edition cancels the prior edition and all its changes.",
+      "source_basis": "Per 1-1-4: FAA Order JO 7110.65AA, Air Traffic Control, dated April 20, 2023, and all changes to it are canceled.",
+      "match": {
+        "question_text": "Complete: FAA Order JO 7110.65AA, Air Traffic Control, dated _____, and all changes to it are canceled.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What happens to FAA Order JO 7110.65AA and all its changes when JO 7110.65BB is issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-4, JO 7110.65AA and all changes to it are canceled when JO 7110.65BB is issued. The prior edition and its changes do not survive independently — controllers must use the current edition.",
+          "choices": [
+            {
+              "text": "JO 7110.65AA changes remain in effect independently until individually reviewed.",
+              "is_correct": false
+            },
+            {
+              "text": "JO 7110.65AA and all changes to it are canceled.",
+              "is_correct": true
+            },
+            {
+              "text": "JO 7110.65AA continues in effect alongside JO 7110.65BB until the next AIRAC date.",
+              "is_correct": false
+            },
+            {
+              "text": "Only JO 7110.65AA is canceled; its changes are incorporated into JO 7110.65BB automatically.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. Tests the same concept as the fd8d08d5 replacement (what was canceled) with different wording. Remove paragraph reference and sharpen distinction from the fill-blank replacement.",
+      "source_basis": "Per 1-1-4: JO 7110.65AA and all changes to it are canceled.",
+      "match": {
+        "question_text": "Under 1-1-4, when JO 7110.65BB was issued, what happened to JO 7110.65AA changes?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When a new edition of FAA Order JO 7110.65 is issued, what is the status of the prior edition's changes?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-4, when a new basic edition is issued, the prior edition AND all changes to it are canceled. Changes do not survive as standalone guidance.",
+          "choices": [
+            {
+              "text": "They remain in effect independently of the canceled basic order.",
+              "is_correct": false
+            },
+            {
+              "text": "They are canceled along with the prior basic order.",
+              "is_correct": true
+            },
+            {
+              "text": "They are incorporated automatically into the new edition without review.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the most recent change survives; earlier changes are canceled.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-4",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "duplication"
+      ],
+      "problem": "This true_false question tests the identical concept as the 12f2b37d and fd8d08d5 replacements — that prior edition changes do not survive. Three items testing the same single-sentence paragraph is excessive duplication. The two multiple-choice replacements provide sufficient coverage.",
+      "source_basis": "Per 1-1-4: JO 7110.65AA, Air Traffic Control, dated April 20, 2023, and all changes to it are canceled. Coverage maintained through fd8d08d5 and 12f2b37d replacements.",
+      "match": {
+        "question_text": "Under 1-1-4, when JO 7110.65BB was issued, the changes to JO 7110.65AA remained in effect as standalone guidance until individually reviewed and re-issued.",
+        "question_type": "true_false"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Fill-blank tests verbatim recall of 'Explanation of Changes' — essentially asking the student to name the page they're reading about. The operational skill is knowing how long to retain those pages and what they contain.",
+      "source_basis": "Per 1-1-5: significant changes to this order are identified in the Explanation of Changes page(s). It is advisable to retain the page(s) throughout the duration of the basic order.",
+      "match": {
+        "question_text": "Complete: The significant changes to this order are identified in the _____ page(s).",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "Where are significant changes to FAA Order JO 7110.65 identified, and how long should those pages be retained?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-5, significant changes are identified in the Explanation of Changes pages, and it is advisable to retain them throughout the duration of the basic order — not discard them after a quick read.",
+          "choices": [
+            {
+              "text": "In a separate email notification; retain until the next change is published.",
+              "is_correct": false
+            },
+            {
+              "text": "In the table of contents margins; discard after reading once.",
+              "is_correct": false
+            },
+            {
+              "text": "In an annual summary publication; retain for one calendar year.",
+              "is_correct": false
+            },
+            {
+              "text": "In the Explanation of Changes pages; retain throughout the duration of the basic order.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. Tests only retention duration, which the 0e037606 replacement now covers more comprehensively (where + how long).",
+      "source_basis": "Per 1-1-5: it is advisable to retain the page(s) throughout the duration of the basic order.",
+      "match": {
+        "question_text": "Under 1-1-5, for how long is it advisable to retain the Explanation of Changes pages?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A new change to FAA Order JO 7110.65 is published. A trainee asks whether the Explanation of Changes pages from the original basic order should be kept or discarded now that Change 1 has arrived. What is the correct guidance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-5, it is advisable to retain the Explanation of Changes pages throughout the duration of the basic order — not just until the next change arrives. The pages document the full change history for the basic order's life.",
+          "choices": [
+            {
+              "text": "Discard the original Explanation of Changes pages; only the most recent change's pages matter.",
+              "is_correct": false
+            },
+            {
+              "text": "Retain the Explanation of Changes pages throughout the duration of the basic order.",
+              "is_correct": true
+            },
+            {
+              "text": "Each facility decides independently how long to retain them.",
+              "is_correct": false
+            },
+            {
+              "text": "Keep them only if the change affects your specific facility type.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-5",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "duplication"
+      ],
+      "problem": "Tests the same operational content (Explanation of Changes pages vs. order body distinction) as the 0e037606 and ff93bec0 replacements. The paragraph has limited substantive content; three questions is excessive. The two replacements cover both 'what and where' and 'how long' aspects.",
+      "source_basis": "Per 1-1-5. Coverage maintained through 0e037606 and ff93bec0 replacements.",
+      "match": {
+        "question_text": "Under 1-1-5, what is the difference between where changes are identified and where the full order text lives?",
+        "question_type": "multiple_choice"
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "Correct answer in first position. The question content is otherwise sound.",
+      "source_basis": "Per 1-1-5: it is advisable to retain the Explanation of Changes pages throughout the duration of the basic order.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 1,
+          "instruction": "Choose the best answer.",
+          "question_text": "How long should the Explanation of Changes pages be retained?",
+          "choices": [
+            {
+              "text": "Throughout the duration of the basic order.",
+              "is_correct": true
+            },
+            {
+              "text": "Only until the next change is published.",
+              "is_correct": false
+            },
+            {
+              "text": "They should be discarded after the first reading.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if a local supplement references them.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-5, it is advisable to retain the Explanation of Changes pages throughout the duration of the basic order."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 1,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 1,
+            "instruction": "Choose the best answer.",
+            "question_text": "How long should the Explanation of Changes pages be retained?",
+            "choices": [
+              {
+                "text": "Only until the next change is published.",
+                "is_correct": false
+              },
+              {
+                "text": "Throughout the duration of the basic order.",
+                "is_correct": true
+              },
+              {
+                "text": "They should be discarded after the first reading.",
+                "is_correct": false
+              },
+              {
+                "text": "Only if a local supplement references them.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 1-1-5, it is advisable to retain the Explanation of Changes pages throughout the duration of the basic order."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffold tests verbatim recall of 'coordinated'. The operational concept (cutoff date requires full coordination and signature) is important but is better tested through application.",
+      "source_basis": "Per 1-1-6b: The 'Cutoff Date for Completion' refers to the deadline for a proposed change to be fully coordinated and signed.",
+      "match": {
+        "question_text": "Complete: Under 1-1-6, the cutoff date for completion is the deadline for a proposed change to be fully _____ and signed.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "In the FAA Order JO 7110.65 publication schedule, what does the 'Cutoff Date for Completion' represent?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-6b, the Cutoff Date for Completion is the deadline for a proposed change to be fully coordinated and signed. Change initiators must submit well in advance of this date because the review and coordination process often takes several months.",
+          "choices": [
+            {
+              "text": "The date by which facilities must have printed and distributed the change.",
+              "is_correct": false
+            },
+            {
+              "text": "The date after which no new changes may be proposed for the current edition.",
+              "is_correct": false
+            },
+            {
+              "text": "The date controllers must complete training on the new procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "The deadline for a proposed change to be fully coordinated and signed.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-6",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The question about AIRAC date synchronization is important operational context.",
+      "source_basis": "Per 1-1-6a: This order and its changes are scheduled to be published to coincide with AIRAC dates.",
+      "match": {
+        "question_text": "Under 1-1-6, this order and its changes are scheduled to be published to coincide with what dates?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "FAA Order JO 7110.65 and its changes are published on a regular schedule. What international publication cycle are they synchronized with?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-6a, the order and its changes are scheduled to coincide with AIRAC dates — the international aeronautical information regulation and control cycle. This synchronization ensures the order aligns with global aeronautical information publication cycles.",
+          "choices": [
+            {
+              "text": "The first business day of each calendar quarter.",
+              "is_correct": false
+            },
+            {
+              "text": "The publication date of each NOTAM cycle.",
+              "is_correct": false
+            },
+            {
+              "text": "AIRAC dates.",
+              "is_correct": true
+            },
+            {
+              "text": "The anniversary of the order's original issue date.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-6",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The timing rule (submit well in advance) is operationally important for anyone involved in the change process.",
+      "source_basis": "Per 1-1-6b: Change initiators must submit their proposed changes well in advance of this cutoff date to meet the publication effective date. The process to review and coordinate changes often takes several months after the change is initially submitted.",
+      "match": {
+        "question_text": "Under 1-1-6, what must a change initiator do to meet the publication effective date?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A facility wants to propose a change to FAA Order JO 7110.65. The cutoff date for completion is six months from now. When should the change initiator submit the proposal?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-6b, change initiators must submit proposed changes well in advance of the cutoff date because review and coordination often take several months. Waiting until near the cutoff date risks missing the publication cycle.",
+          "choices": [
+            {
+              "text": "Submit on the cutoff date itself; the review is automatic and immediate.",
+              "is_correct": false
+            },
+            {
+              "text": "Submit after the cutoff date; late submissions are always accepted for the next cycle.",
+              "is_correct": false
+            },
+            {
+              "text": "Submit any time before the effective date; the cutoff date only applies to printing.",
+              "is_correct": false
+            },
+            {
+              "text": "Submit well in advance of the cutoff date, because review and coordination often take several months.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "1-1-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "Back is two words ('AIRAC dates.') with no operational context. A flashcard back should provide enough context for the retrieval target to stand alone.",
+      "source_basis": "Per 1-1-6a: This order and its changes are scheduled to be published to coincide with AIRAC dates. (See TBL 1-1-1.)",
+      "match": {
+        "front": "What publication cycle are order changes synchronized with?",
+        "back": "AIRAC dates.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What publication cycle are FAA Order JO 7110.65 changes synchronized with?",
+          "back": "AIRAC dates (Aeronautical Information Regulation and Control). The order and all its changes are scheduled to coincide with this international aeronautical information publication cycle.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "1-1-6",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Malformed reverse card. The front ('AIRAC dates for order publication.') reads as a topic label, not a question or statement that prompts retrieval. The back is a meta-reference to a table rather than the operational concept.",
+      "source_basis": "Per 1-1-6a: order and changes published to coincide with AIRAC dates. TBL 1-1-1 lists the specific dates.",
+      "match": {
+        "front": "AIRAC dates for order publication.",
+        "back": "The schedule to which JO 7110.65 and its changes are published; listed in TBL 1-1-1.",
+        "card_type": "concept_reverse"
+      },
+      "replacements": [
+        {
+          "front": "AIRAC dates — the international aeronautical information publication cycle.",
+          "back": "What schedule determines when FAA Order JO 7110.65 and its changes are published?",
+          "card_type": "concept_reverse"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-7",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "format_fit"
+      ],
+      "problem": "Paragraph-location scaffold plus negative-stem flag (the scenario is about NOT receiving the order — a negative condition that is appropriate for testing the notification requirement). The table reference in the stem is also unnecessary document navigation trivia.",
+      "source_basis": "Per 1-1-7c: If a military facility has not received the order/changes at least 30 days before the above effective dates, the facility must notify its appropriate military headquarters. (See TBL 1-1-2.)",
+      "match": {
+        "question_text": "Under 1-1-7, if a military facility has not received the order or changes at least 30 days before the effective date, what must it do and which table provides the contact information?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A military facility discovers 20 days before the effective date that it has not received the FAA Order JO 7110.65 change package. What must the facility do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-7c, military facilities that have not received the order at least 30 days before the effective date must notify their appropriate military headquarters. TBL 1-1-2 provides Military Distribution Contacts for each service branch.",
+          "choices": [
+            {
+              "text": "Notify its service area office distribution officer.",
+              "is_correct": false
+            },
+            {
+              "text": "Notify AJV-P directly using the GovDelivery subscription link.",
+              "is_correct": false
+            },
+            {
+              "text": "Download the order from the FAA website and take no further action.",
+              "is_correct": false
+            },
+            {
+              "text": "Notify its appropriate military headquarters.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-7",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The 30-day threshold is a consistent pattern across all three subparagraphs of 1-1-7 and deserves testing as an operational rule.",
+      "source_basis": "Per 1-1-7a, b, c: All three provisions use a 30-day threshold before the effective date.",
+      "match": {
+        "question_text": "Under 1-1-7, what is the common time threshold that applies to website availability, FAA facility notification, and military facility notification?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "FAA Order JO 7110.65 specifies a common time threshold for three activities: website availability before the effective date, FAA facility notification of non-receipt, and military facility notification of non-receipt. What is this threshold?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-7, all three provisions use the same 30-day threshold before the effective date: the order is available on the FAA website 30 days prior, FAA facilities notify the service area distribution officer if not received 30 days prior, and military facilities notify their headquarters if not received 30 days prior.",
+          "choices": [
+            {
+              "text": "30 days before the effective date.",
+              "is_correct": true
+            },
+            {
+              "text": "14 days before the effective date.",
+              "is_correct": false
+            },
+            {
+              "text": "60 days before the effective date.",
+              "is_correct": false
+            },
+            {
+              "text": "45 days before the effective date.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "Question text includes paragraph reference and correct answer is first. The scenario is educationally sound.",
+      "source_basis": "Per 1-1-7c: military facility must notify its appropriate military headquarters. TBL 1-1-2 lists contacts.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A military facility using the order discovers 20 days before the effective date that it has not received the change package. Someone suggests waiting until after the effective date to report it, since the order will be available on the FAA website anyway.",
+          "question_text": "What does 1-1-7 require the military facility to do in this situation?",
+          "choices": [
+            {
+              "text": "Notify its appropriate military headquarters, using TBL 1-1-2 for contact information.",
+              "is_correct": true
+            },
+            {
+              "text": "Download the order from the FAA website and take no further action.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the effective date passes, then report the late receipt.",
+              "is_correct": false
+            },
+            {
+              "text": "Contact the nearest FAA service area office distribution officer.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-7c, military facilities that have not received the order at least 30 days before the effective date must notify their appropriate military headquarters. TBL 1-1-2 lists the contacts.",
+          "para_context": "DELIVERY DATES"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "What should you do?",
+            "situation": "A military facility using the order discovers 20 days before the effective date that it has not received the change package. Someone suggests waiting until after the effective date to report it, since the order will be available on the FAA website anyway.",
+            "question_text": "What does FAA Order JO 7110.65 require the military facility to do in this situation?",
+            "choices": [
+              {
+                "text": "Download the order from the FAA website and take no further action.",
+                "is_correct": false
+              },
+              {
+                "text": "Notify its appropriate military headquarters, using TBL 1-1-2 for contact information.",
+                "is_correct": true
+              },
+              {
+                "text": "Wait until the effective date passes, then report the late receipt.",
+                "is_correct": false
+              },
+              {
+                "text": "Contact the nearest FAA service area office distribution officer.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 1-1-7c, military facilities that have not received the order at least 30 days before the effective date must notify their appropriate military headquarters. TBL 1-1-2 lists the contacts.",
+            "para_context": "DELIVERY DATES"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "1-1-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "format_fit"
+      ],
+      "problem": "Front contains paragraph-location scaffolding ('under 1-1-7') and the back is a dense run-on sentence listing three separate rules. A flashcard should test a single retrieval target.",
+      "source_basis": "Per 1-1-7a, b, c: 30-day rule applies to website availability and both FAA and military notification requirements.",
+      "match": {
+        "front": "30-day rule under 1-1-7.",
+        "back": "Order available on FAA website 30 days prior to effective date; FAA facility notifies service area distribution officer if not received; military facility notifies headquarters if not received.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What common time threshold applies to website availability, FAA non-receipt notification, and military non-receipt notification for FAA Order JO 7110.65?",
+          "back": "30 days before the effective date. The order must be available online 30 days prior, and both FAA and military facilities must notify if not received at least 30 days before the effective date.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-8",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The reference to JO 7000.5 is document-navigation trivia rather than operational substance. Redirect to test the change-submission chain or the software-adaptation rule instead.",
+      "source_basis": "Per 1-1-8 note: For details on the submission process as well as additional AJV-P processing responsibilities, please see FAA Order JO 7000.5.",
+      "match": {
+        "question_text": "Under 1-1-8, which FAA order contains additional details on the submission process and AJV-P processing responsibilities?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller at a facility wants to recommend a change to FAA Order JO 7110.65 procedures. Where should the recommendation be submitted first?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-1-8a, personnel should submit recommended changes in procedures to facility management. From there, the proposal follows the formal submission chain through appropriate channels to AJV-P.",
+          "choices": [
+            {
+              "text": "To facility management.",
+              "is_correct": true
+            },
+            {
+              "text": "Directly to AJV-P at 9-AJV-P-HQ-Correspondence@faa.gov.",
+              "is_correct": false
+            },
+            {
+              "text": "To the nearest Flight Standards District Office.",
+              "is_correct": false
+            },
+            {
+              "text": "To the FAA Administrator's office for direct review.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-8",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The software-adaptation prerequisite is an important operational rule that should be tested without paragraph-number framing.",
+      "source_basis": "Per 1-1-8d: Procedural changes will not be made to this order until the operational system software has been adapted to accomplish the revised procedures.",
+      "match": {
+        "question_text": "Under 1-1-8d, when will procedural changes be made to this order?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A proposed procedural change for FAA Order JO 7110.65 has been fully coordinated, signed, and approved. However, the operational system software has not yet been updated to support the new procedure. Can the change be published in the order?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-8d, procedural changes will not be made to the order until the operational system software has been adapted to accomplish the revised procedures. Software readiness is a prerequisite, not an afterthought.",
+          "choices": [
+            {
+              "text": "No; procedural changes are not made to the order until the operational system software has been adapted.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes; once coordinated and signed, the change can be published immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if a waiver under the waiver process has also been approved.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes; software adaptation is advisory only and does not block publication.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-8",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "format_fit"
+      ],
+      "problem": "Correct answer placed first with negative-stem framing. The question content testing the software-adaptation prerequisite is operationally important.",
+      "source_basis": "Per 1-1-8d: procedural changes will not be made until operational system software has been adapted.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "A proposed procedural change is fully coordinated and signed. The operational system software has not yet been updated to support the new procedure. Can the change be published in the order?",
+          "choices": [
+            {
+              "text": "No; procedural changes will not be made until the operational system software has been adapted.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes; once coordinated and signed, the change can be published immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if a waiver under 1-1-11 has also been approved.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes; software adaptation is advisory only and does not block publication.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-8d, procedural changes will not be made to the order until the operational system software has been adapted to accomplish the revised procedures."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "A proposed procedural change for FAA Order JO 7110.65 is fully coordinated and signed, but the operational system software has not yet been updated to support the new procedure. Can the change be published in the order?",
+            "choices": [
+              {
+                "text": "No; procedural changes will not be made until the operational system software has been adapted.",
+                "is_correct": true
+              },
+              {
+                "text": "Yes; once coordinated and signed, the change can be published immediately.",
+                "is_correct": false
+              },
+              {
+                "text": "Yes, but only if a waiver has also been approved.",
+                "is_correct": false
+              },
+              {
+                "text": "Yes; software adaptation is advisory only and does not block publication.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 1-1-8d, procedural changes will not be made to the order until the operational system software has been adapted to accomplish the revised procedures."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-9",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The routing comparison (DoD vs. non-FAA/DoD) is operationally relevant for anyone submitting an interpretation request.",
+      "source_basis": "Per 1-1-9d and 1-1-9e: DoD personnel must route through chain of command to Military Service Headquarters; non-FAA/DoD may go directly to AJV-P.",
+      "match": {
+        "question_text": "Under 1-1-9, how does the routing for DoD personnel requests differ from the routing for non-FAA/DoD requests?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A DoD controller and a non-FAA industry representative both want to request an interpretation of FAA Order JO 7110.65. How do their routing paths differ?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-9d and 1-1-9e, DoD personnel must route requests through the chain of command to the respective Military Service Headquarters first; non-FAA/DoD requests may be submitted directly to AJV-P. The chain-of-command requirement applies only to DoD personnel.",
+          "choices": [
+            {
+              "text": "DoD must route through chain of command to Military Service Headquarters first; non-FAA/DoD may go directly to AJV-P.",
+              "is_correct": true
+            },
+            {
+              "text": "Both may submit directly to AJV-P without any intermediate review.",
+              "is_correct": false
+            },
+            {
+              "text": "DoD requests go directly to AJV-P; non-FAA/DoD must route through the chain of command.",
+              "is_correct": false
+            },
+            {
+              "text": "Both must go through the chain of command before reaching AJV-P.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-9",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The interpretation-vs-clarification determination is an important administrative concept.",
+      "source_basis": "Per 1-1-9a2: The Service Area Director of Air Traffic Operations must review the submission to determine if an interpretation or a clarification is required.",
+      "match": {
+        "question_text": "Under 1-1-9a2, what two-outcome determination must the Service Area Director make for an AJT field interpretation request?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An AJT field request for interpretation of FAA Order JO 7110.65 arrives at the Service Area Director's office. What determination must the Service Area Director make?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-1-9a2, the Service Area Director must determine whether an interpretation or a clarification is required. Interpretation requests go to AJV-P; clarification requests are returned to the OSG for a written response.",
+          "choices": [
+            {
+              "text": "Whether an interpretation or a clarification is required.",
+              "is_correct": true
+            },
+            {
+              "text": "Whether the order paragraph has been superseded by a waiver.",
+              "is_correct": false
+            },
+            {
+              "text": "Whether the request should be forwarded to the Military Service Headquarters.",
+              "is_correct": false
+            },
+            {
+              "text": "Whether the request originates from an FAA or a military facility.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-9",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "Correct answer in first position. The question testing routing differences between AJR and AJT is operationally relevant.",
+      "source_basis": "Per 1-1-9b: AJR goes through Systems Operations Services Director. Per 1-1-9a: AJT goes through DGM and OSG.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How do AJR personnel requests differ from AJT field personnel requests in routing?",
+          "choices": [
+            {
+              "text": "AJR requests go through the Systems Operations Services Director; AJT goes through DGM and OSG.",
+              "is_correct": true
+            },
+            {
+              "text": "Both follow the same path through DGM and OSG.",
+              "is_correct": false
+            },
+            {
+              "text": "AJR requests skip all intermediate levels and go directly to AJV-P.",
+              "is_correct": false
+            },
+            {
+              "text": "AJR requests are handled exclusively by the nearest service area office.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-9b, AJR requests follow a separate routing path through the Systems Operations Services Director."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "How do AJR personnel requests differ from AJT field personnel requests in their routing for interpretations of FAA Order JO 7110.65?",
+            "choices": [
+              {
+                "text": "AJR requests go through the Systems Operations Services Director; AJT requests go through DGM and OSG.",
+                "is_correct": true
+              },
+              {
+                "text": "Both follow the same path through DGM and OSG.",
+                "is_correct": false
+              },
+              {
+                "text": "AJR requests skip all intermediate levels and go directly to AJV-P.",
+                "is_correct": false
+              },
+              {
+                "text": "AJR requests are handled exclusively by the nearest service area office.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 1-1-9a and 1-1-9b, AJT requests follow a path through DGM and OSG to the Service Area Director, while AJR requests go through appropriate channels to the Systems Operations Services Director."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffold tests verbatim recall of 'minima'. For a defined term like 'approved separation,' the exact definition matters, but a one-word blank teaches a single vocabulary item rather than the complete operational definition.",
+      "source_basis": "Per 1-2-1i: 'Approved separation' means separation in accordance with the applicable minima in this order.",
+      "match": {
+        "question_text": "Complete: Under 1-2-1i, \"approved separation\" means separation in accordance with the applicable _____ in this order.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What does 'approved separation' mean as used in FAA Order JO 7110.65?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-2-1i, approved separation means separation in accordance with the applicable minima in this order — not any separation a controller subjectively believes is safe. The term refers to objective minima compliance.",
+          "choices": [
+            {
+              "text": "Any separation the controller believes is safe under the circumstances.",
+              "is_correct": false
+            },
+            {
+              "text": "The minimum separation required for aircraft of different weight classes.",
+              "is_correct": false
+            },
+            {
+              "text": "Separation in accordance with the applicable minima in this order.",
+              "is_correct": true
+            },
+            {
+              "text": "Separation approved verbally by a supervisor for a specific operation.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffold tests verbatim recall of 'magnetic'. The magnetic-default rule for courses and bearings is a critical operational convention; testing it via application rather than one-word recall is better.",
+      "source_basis": "Per 1-2-1l: Course, bearing, azimuth, heading, and wind direction information must always be magnetic unless specifically stated otherwise.",
+      "match": {
+        "question_text": "Under 1-2-1l, course, bearing, azimuth, heading, and wind direction information must always be _____ unless specifically stated otherwise.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller issues a heading of 270 degrees to an aircraft. Unless specifically stated otherwise, is this heading magnetic or true?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-2-1l, course, bearing, azimuth, heading, and wind direction information must always be magnetic unless specifically stated otherwise. The magnetic-default convention applies to all directional information.",
+          "choices": [
+            {
+              "text": "Magnetic, because all directional information defaults to magnetic unless stated otherwise.",
+              "is_correct": true
+            },
+            {
+              "text": "True, because all navigational headings default to true north.",
+              "is_correct": false
+            },
+            {
+              "text": "It depends on whether the aircraft is operating above FL180.",
+              "is_correct": false
+            },
+            {
+              "text": "True for heading, magnetic for course — they default differently.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The miles/nautical-vs-statute distinction is important for separation and visibility applications.",
+      "source_basis": "Per 1-2-1k: 'Miles' means nautical miles unless otherwise specified, and means statute miles in conjunction with visibility.",
+      "match": {
+        "question_text": "Under 1-2-1k, when is \"miles\" interpreted as statute miles rather than nautical miles?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A paragraph in FAA Order JO 7110.65 states that visibility must be at least 3 miles. Another paragraph requires 5 miles of separation. In each case, what kind of miles are referenced by default?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-2-1k, 'miles' means nautical miles unless otherwise specified, and means statute miles in conjunction with visibility. So visibility uses statute miles; separation uses nautical miles.",
+          "choices": [
+            {
+              "text": "Both use nautical miles by default.",
+              "is_correct": false
+            },
+            {
+              "text": "Both use statute miles by default.",
+              "is_correct": false
+            },
+            {
+              "text": "It depends on whether the facility is domestic or oceanic.",
+              "is_correct": false
+            },
+            {
+              "text": "Visibility uses statute miles; separation uses nautical miles.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "Paragraph-location scaffold, correct-answer-first, and answer-length cue. The time-check-vs-standard-time distinction is a commonly tested operational detail.",
+      "source_basis": "Per 1-2-1m: Change to the next minute is made at the minute plus 30 seconds, except time checks are given to the nearest quarter minute.",
+      "match": {
+        "question_text": "Under 1-2-1m, how are time checks given, and how does this differ from the standard time convention for ATC operational activities?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller checks the time at 14:35:42 UTC. Under FAA Order JO 7110.65 conventions, what time should be recorded for ATC operational purposes, and how would a time check be given?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 1-2-1m, standard ATC operational time changes at the minute + 30 seconds (so 14:35:42 records as 14:35). Time checks are given to the nearest quarter minute (14:35:42 would be given as 14:35 and three-quarters). Both use UTC.",
+          "choices": [
+            {
+              "text": "Record 14:36 for operations; time check given as 1435 and three-quarters.",
+              "is_correct": false
+            },
+            {
+              "text": "Record 14:36 for operations; time check given to the nearest whole minute.",
+              "is_correct": false
+            },
+            {
+              "text": "Record 14:35 for operations; time check given in local time, not UTC.",
+              "is_correct": false
+            },
+            {
+              "text": "Record 14:35 for operations; time check given to the nearest quarter minute.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The minute-plus-30-seconds rule is an exact operational convention that controllers must know precisely.",
+      "source_basis": "Per 1-2-1m: Change to the next minute is made at the minute plus 30 seconds.",
+      "match": {
+        "question_text": "Under 1-2-1m, when does the change to the next minute occur for ATC operational time?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "For ATC operational timekeeping, when does the change to the next minute occur?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-2-1m, the change to the next minute is made at the minute plus 30 seconds. For example, 1435:30 becomes 1436. Time checks are an exception — they are given to the nearest quarter minute.",
+          "choices": [
+            {
+              "text": "At exactly the top of the minute (minute + 00 seconds).",
+              "is_correct": false
+            },
+            {
+              "text": "At the minute plus 30 seconds.",
+              "is_correct": true
+            },
+            {
+              "text": "At the minute plus 15 seconds.",
+              "is_correct": false
+            },
+            {
+              "text": "At the minute plus 45 seconds.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "Paragraph-location scaffold and correct-answer-first. The runway-vs-helipad distinction is important for facility application of procedures.",
+      "source_basis": "Per 1-2-1n: 'Runway' means the runway used by aircraft and, unless otherwise specified, does not include helipads and/or their accompanying takeoff/landing courses.",
+      "match": {
+        "question_text": "Under 1-2-1n, a procedure references \"the runway.\" The facility has both a concrete runway and a helipad with a takeoff course. Does the procedure apply to the helipad unless otherwise specified?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A procedure in FAA Order JO 7110.65 references 'the runway.' The facility has both a concrete runway and a helipad with a takeoff course. Does the procedure apply to the helipad unless otherwise specified?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-2-1n, 'runway' does not include helipads and/or their accompanying takeoff/landing courses unless otherwise specified. The default definition excludes helipads.",
+          "choices": [
+            {
+              "text": "Yes; helipads are a subset of runways and are always included.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the helipad has a paved surface.",
+              "is_correct": false
+            },
+            {
+              "text": "No; 'runway' does not include helipads or their takeoff/landing courses unless otherwise specified.",
+              "is_correct": true
+            },
+            {
+              "text": "It depends on whether the helipad is co-located on the same physical surface as the runway.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "Correct answer placed first, negative-stem framing, and answer-length cue. The 'will = futurity not mandatory' distinction is one of the most commonly misunderstood definitions in the order.",
+      "source_basis": "Per 1-2-1e: 'Will' means futurity, not a requirement for the application of a procedure.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A controller reads a paragraph that says controllers 'will issue a clearance' and interprets 'will' as mandatory. A supervisor says 'will' means the action is mandatory. The controller re-reads 1-2-1 and sees that 'will' means futurity, not a requirement.",
+          "question_text": "Does 'will' in this order mean a procedure is mandatory?",
+          "choices": [
+            {
+              "text": "No; 'will' means futurity, not a requirement for the application of a procedure. 'Must' is the term that means mandatory.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes; 'will' and 'must' are interchangeable in this order.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes; 'will' always means mandatory in FAA publications.",
+              "is_correct": false
+            },
+            {
+              "text": "It depends on whether the section is annotated TERMINAL.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-2-1e, 'will' means futurity, not a requirement for the application of a procedure. This is one of the most commonly misunderstood definitions in the order.",
+          "para_context": "WORD MEANINGS"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "What should you do?",
+            "situation": "A controller reads a paragraph that says controllers 'will issue a clearance' and interprets 'will' as mandatory, meaning the clearance must be issued in all cases. A supervisor agrees. The controller re-reads the word meanings section and sees that 'will' means futurity, not a requirement.",
+            "question_text": "Does 'will' in FAA Order JO 7110.65 mean a procedure is mandatory?",
+            "choices": [
+              {
+                "text": "Yes; 'will' and 'must' are interchangeable in this order.",
+                "is_correct": false
+              },
+              {
+                "text": "Yes; 'will' always means mandatory in FAA publications.",
+                "is_correct": false
+              },
+              {
+                "text": "No; 'will' means futurity, not a requirement. 'Must' is the term that means mandatory.",
+                "is_correct": true
+              },
+              {
+                "text": "It depends on whether the section is annotated TERMINAL.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 1-2-1e, 'will' means futurity, not a requirement for the application of a procedure. This is one of the most commonly misunderstood definitions in the order. 'Must' is the term that indicates a mandatory procedure.",
+            "para_context": "WORD MEANINGS"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "1-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "format_fit"
+      ],
+      "problem": "Front contains paragraph-location scaffolding ('under 1-2-1m'). The time convention content is operationally important.",
+      "source_basis": "Per 1-2-1m: Change to the next minute at minute + 30 seconds; time checks to nearest quarter minute; both in UTC.",
+      "match": {
+        "front": "ATC time convention vs. time check convention under 1-2-1m.",
+        "back": "Standard: change to next minute at minute + 30 seconds. Time checks: given to the nearest quarter minute. Both in UTC.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "How does the ATC operational time convention differ from the time check convention?",
+          "back": "Standard ATC time: change to the next minute at the minute + 30 seconds. Time checks: given to the nearest quarter minute. Both use Coordinated Universal Time (UTC).",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffold tests verbatim recall of the number 45. Course classification thresholds are exact values that controllers must know for separation application, but a one-number blank is too narrow.",
+      "source_basis": "Per 1-2-2a: SAME COURSES are courses whose protected airspaces are coincident, overlap, or intersect and whose angular difference is less than 45 degrees.",
+      "match": {
+        "question_text": "Complete: Under 1-2-2a, same courses have an angular difference of less than _____ degrees.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the angular difference threshold for same courses under FAA Order JO 7110.65?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-2-2a, same courses have an angular difference of less than 45 degrees. Same courses also require that protected airspaces are coincident, overlap, or intersect — angular difference alone is insufficient.",
+          "choices": [
+            {
+              "text": "Less than 30 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "Less than 45 degrees.",
+              "is_correct": true
+            },
+            {
+              "text": "Less than 90 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "45 through 135 degrees inclusive.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffold tests verbatim recall of the number 135. The opposite/reciprocal threshold is an exact value essential for separation application.",
+      "source_basis": "Per 1-2-2c: OPPOSITE/RECIPROCAL COURSES have angular difference greater than 135 degrees through 180 degrees inclusive.",
+      "match": {
+        "question_text": "Complete: Under 1-2-2c, opposite/reciprocal courses have an angular difference greater than _____ degrees through 180 degrees inclusive.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "At what angular difference do courses become classified as opposite/reciprocal under FAA Order JO 7110.65?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-2-2c, opposite/reciprocal courses have an angular difference greater than 135 degrees through 180 degrees inclusive. Crossing courses cover 45-135 inclusive, so 135 degrees is crossing, not opposite.",
+          "choices": [
+            {
+              "text": "Greater than 90 degrees through 180 degrees inclusive.",
+              "is_correct": false
+            },
+            {
+              "text": "Greater than 150 degrees through 180 degrees inclusive.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly 180 degrees only.",
+              "is_correct": false
+            },
+            {
+              "text": "Greater than 135 degrees through 180 degrees inclusive.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The boundary-value classification (135 degrees = crossing) is important for understanding inclusive vs. exclusive thresholds.",
+      "source_basis": "Per 1-2-2b and 1-2-2c: Crossing includes 45-135 inclusive; opposite/reciprocal is greater than 135 through 180.",
+      "match": {
+        "question_text": "Under 1-2-2, two aircraft have intersecting protected airspaces with an angular difference of exactly 135 degrees. How are they classified?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Two aircraft have intersecting protected airspaces with an angular difference of exactly 135 degrees. How are their courses classified under FAA Order JO 7110.65?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-2-2b, crossing courses include 45 through 135 degrees inclusive. The opposite/reciprocal range begins above 135 degrees (greater than 135). So exactly 135 degrees is classified as crossing.",
+          "choices": [
+            {
+              "text": "Crossing courses, because crossing includes 45 through 135 degrees inclusive.",
+              "is_correct": true
+            },
+            {
+              "text": "Opposite/reciprocal courses, because 135 marks the start of that range.",
+              "is_correct": false
+            },
+            {
+              "text": "Same courses, because the angle is less than 180 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "The classification is ambiguous because 135 is a boundary value.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The protected-airspace coincidence requirement is a critical qualifier — angular difference alone does not determine same/opposite classification.",
+      "source_basis": "Per 1-2-2a, c: Same and opposite/reciprocal both require protected airspaces to be coincident, overlap, or intersect.",
+      "match": {
+        "question_text": "Under 1-2-2, what condition must also be met beyond angular difference for courses to be classified as same or opposite/reciprocal?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Two aircraft are on courses with an angular difference of only 20 degrees, but their protected airspaces do not overlap, coincide, or intersect. Under FAA Order JO 7110.65, are they on same courses?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 1-2-2a, same courses require BOTH an angular difference of less than 45 degrees AND protected airspaces that are coincident, overlap, or intersect. Angular difference alone is insufficient — the protected-airspace condition must also be met.",
+          "choices": [
+            {
+              "text": "Yes, because the angular difference is less than 45 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because same courses also require protected airspaces to be coincident, overlap, or intersect.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because 20 degrees is well within the same-course threshold regardless of airspace geometry.",
+              "is_correct": false
+            },
+            {
+              "text": "No, they would be classified as crossing courses instead.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-2-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility",
+        "format_fit"
+      ],
+      "problem": "Correct answer placed first with unnecessary negative-stem framing. The protected-airspace non-overlap rule is a key operational shortcut — if airspace doesn't overlap, lateral separation is ensured without needing to classify the course relationship.",
+      "source_basis": "Per 1-2-2 note: If the protected airspace of two aircraft does not overlap, applicable lateral separation is ensured.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "What does it mean if the protected airspace of two aircraft does not overlap?",
+          "choices": [
+            {
+              "text": "Applicable lateral separation is ensured.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft must be on crossing courses.",
+              "is_correct": false
+            },
+            {
+              "text": "Vertical separation must immediately be applied.",
+              "is_correct": false
+            },
+            {
+              "text": "The course classification defaults to opposite/reciprocal.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per the 1-2-2 note, if the protected airspace of two aircraft does not overlap, applicable lateral separation is ensured. This is a key shortcut for the controller — no need to classify the course relationship."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "The protected airspace of two aircraft does not overlap. What does this mean for lateral separation under FAA Order JO 7110.65?",
+            "choices": [
+              {
+                "text": "Applicable lateral separation is ensured.",
+                "is_correct": true
+              },
+              {
+                "text": "The aircraft are automatically on crossing courses.",
+                "is_correct": false
+              },
+              {
+                "text": "Vertical separation must immediately be applied since lateral separation is lost.",
+                "is_correct": false
+              },
+              {
+                "text": "The course classification defaults to opposite/reciprocal.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per the 1-2-2 note, if the protected airspace of two aircraft does not overlap, applicable lateral separation is ensured. This is a key operational shortcut — the controller does not need to classify the course relationship further."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-2-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "Correct answer in first position. The scenario tests application of the same-course threshold with protected airspace intersection.",
+      "source_basis": "Per 1-2-2a: same courses have angular difference less than 45 degrees and protected airspaces coincident, overlap, or intersect.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Classify the course relationship.",
+          "situation": "Two aircraft are on courses whose protected airspaces intersect. The angular difference between their courses is approximately 30 degrees. A trainee wants to classify them as crossing courses because the paths intersect.",
+          "question_text": "What is the correct course classification for intersecting protected airspaces with a 30-degree angular difference?",
+          "choices": [
+            {
+              "text": "Same courses, because the angular difference is less than 45 degrees and the protected airspaces intersect.",
+              "is_correct": true
+            },
+            {
+              "text": "Crossing courses, because any intersecting paths are crossing courses.",
+              "is_correct": false
+            },
+            {
+              "text": "Opposite/reciprocal courses, because the angle is too small to be crossing.",
+              "is_correct": false
+            },
+            {
+              "text": "No classification applies because the protected airspaces also need to overlap in a specific way.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-2-2a, same courses are courses whose protected airspaces are coincident, overlap, or intersect and whose angular difference is less than 45 degrees. Intersection at 30 degrees satisfies both conditions for same courses.",
+          "para_context": "COURSE DEFINITIONS"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 3,
+            "instruction": "Classify the course relationship.",
+            "situation": "Two aircraft are on courses whose protected airspaces intersect. The angular difference between their courses is approximately 30 degrees. A trainee wants to classify them as crossing courses because the paths intersect.",
+            "question_text": "What is the correct course classification for intersecting protected airspaces with a 30-degree angular difference?",
+            "choices": [
+              {
+                "text": "Crossing courses, because any intersecting paths are crossing courses.",
+                "is_correct": false
+              },
+              {
+                "text": "Same courses, because the angular difference is less than 45 degrees and the protected airspaces intersect.",
+                "is_correct": true
+              },
+              {
+                "text": "Opposite/reciprocal courses, because the angle is too small to be crossing.",
+                "is_correct": false
+              },
+              {
+                "text": "No classification applies because the protected airspaces also need to overlap in a specific way.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 1-2-2a, same courses are courses whose protected airspaces are coincident, overlap, or intersect and whose angular difference is less than 45 degrees. Intersection plus < 45 degrees satisfies both conditions for same courses.",
+            "para_context": "COURSE DEFINITIONS"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "format_fit"
+      ],
+      "problem": "Fill-blank with paragraph-location scaffold tests verbatim recall of 'substantive'. The distinction between substantive and minor revisions is important for change review.",
+      "source_basis": "Per 1-2-5c: Bold vertical lines in the margin indicate the location of substantive revisions to the order.",
+      "match": {
+        "question_text": "Complete: Under 1-2-5c, bold vertical lines in the margin of changed pages indicate the location of _____ revisions to the order.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "What do bold vertical lines in the margin of changed pages of FAA Order JO 7110.65 indicate?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-2-5c, bold vertical lines in the margin indicate the location of substantive revisions — not minor formatting changes. When adjacent to a title, they indicate extensive changes to that chapter, section, or paragraph.",
+          "choices": [
+            {
+              "text": "Minor formatting corrections such as spelling and punctuation fixes.",
+              "is_correct": false
+            },
+            {
+              "text": "Paragraphs that have been deleted from the previous edition.",
+              "is_correct": false
+            },
+            {
+              "text": "The location of substantive revisions to the order.",
+              "is_correct": true
+            },
+            {
+              "text": "Procedures that are pending further review by AJV-P.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "Paragraph-location scaffold. The distinction between bold lines in body-text margin vs. adjacent to titles is important for change review efficiency.",
+      "source_basis": "Per 1-2-5c: Bold vertical lines adjacent to the title of a chapter, section, or paragraph means that extensive changes have been made to that chapter, section, or paragraph.",
+      "match": {
+        "question_text": "Under 1-2-5c, what does a bold vertical line adjacent to the title of a chapter, section, or paragraph indicate that differs from a bold line in the margin adjacent to body text?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "While reviewing a changed page of FAA Order JO 7110.65, you notice a bold vertical line in the margin next to body text, and a different bold vertical line adjacent to a section title. What is the difference?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-2-5c, bold lines adjacent to body text indicate individual substantive revisions at that location. Bold lines adjacent to a title mean extensive changes have been made to that entire chapter, section, or paragraph — a much broader scope of revision.",
+          "choices": [
+            {
+              "text": "There is no difference; both indicate the same level of revision.",
+              "is_correct": false
+            },
+            {
+              "text": "Adjacent to a title, it means only the title text itself was changed.",
+              "is_correct": false
+            },
+            {
+              "text": "Adjacent to a title, it means only the numbering was changed, not the content.",
+              "is_correct": false
+            },
+            {
+              "text": "Adjacent to a title, it means extensive changes have been made to that entire chapter, section, or paragraph.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "answer_defensibility"
+      ],
+      "problem": "Paragraph-location scaffold and correct-answer-first. The facility-type annotation rule is important for controllers to know which paragraphs apply to them.",
+      "source_basis": "Per 1-2-5d: Paragraphs/sections annotated with EN ROUTE, OCEANIC, or TERMINAL are only to be applied by the designated type facility. When not so designated, they apply to all types of facilities.",
+      "match": {
+        "question_text": "Under 1-2-5d, a paragraph is annotated TERMINAL. An en route controller reads it and wonders if it applies. What does the annotation mean?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An en route controller reads a procedure annotated TERMINAL in FAA Order JO 7110.65. Does the annotated procedure apply to the en route controller?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 1-2-5d, paragraphs annotated with EN ROUTE, OCEANIC, or TERMINAL apply only to the designated type facility. The TERMINAL annotation means en route controllers do not apply that paragraph. Without any such annotation, paragraphs apply to all facility types.",
+          "choices": [
+            {
+              "text": "Yes, but only if the en route facility has a terminal radar function.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes; facility-type annotations are advisory, not restrictive.",
+              "is_correct": false
+            },
+            {
+              "text": "No; TERMINAL annotation means only terminal facilities apply that paragraph.",
+              "is_correct": true
+            },
+            {
+              "text": "No, but the en route controller may apply it if the terminal facility concurs.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "format_fit"
+      ],
+      "problem": "Paragraph-location scaffold, generic_reference flag, and negative-stem framing. The EXAMPLE annotation rule (mandatory when preceded by prescribed phraseology; suggested when not) is important for phraseology use.",
+      "source_basis": "Per 1-2-5h and its note: When the preceding paragraph lacks specific prescribed phraseology, the EXAMPLE text is not mandatory verbatim but wording should approximate the example to the extent practical.",
+      "match": {
+        "question_text": "Under 1-2-5h, an EXAMPLE is provided but the preceding paragraph does not include specific prescribed phraseology. How must a controller treat the example text?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An EXAMPLE annotation appears in FAA Order JO 7110.65, but the preceding paragraph does not include any specific prescribed phraseology. How must a controller treat wording shown in an EXAMPLE under these conditions?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 1-2-5h and its note, when the preceding paragraph does not include specific prescribed phraseology, EXAMPLE text is not mandatory verbatim. However, controllers are expected to approximate the wording to the extent practical using good judgment.",
+          "choices": [
+            {
+              "text": "The exact text is mandatory and must be used verbatim.",
+              "is_correct": false
+            },
+            {
+              "text": "EXAMPLE text may be ignored entirely since no phraseology is prescribed.",
+              "is_correct": false
+            },
+            {
+              "text": "EXAMPLE text is not mandatory verbatim, but wording should approximate it to the extent practical.",
+              "is_correct": true
+            },
+            {
+              "text": "EXAMPLE text applies only when the paragraph is also annotated TERMINAL.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-2-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "Correct answer in first position. The scenario testing service-specific annotation exclusivity is educationally sound.",
+      "source_basis": "Per 1-2-5e: USAF for U.S. Air Force, USN for U.S. Navy, and USA for U.S. Army — each annotation means the procedure applies only to the designated service.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "What should you do?",
+          "situation": "A paragraph annotated USAF describes a military procedure. An Army controller at a joint-use facility reads it and assumes it also applies to Army aircraft since they are also military.",
+          "question_text": "Does a paragraph annotated USAF apply to Army aircraft?",
+          "choices": [
+            {
+              "text": "No; USAF annotation means the procedure applies only to the U.S. Air Force.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes; all military annotations apply to any U.S. military service.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only at joint-use facilities.",
+              "is_correct": false
+            },
+            {
+              "text": "It depends on whether the Army facility has a letter of agreement with the Air Force unit.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-2-5e, USAF denotes the procedure applies only to the U.S. Air Force. USN applies only to Navy, and USA only to Army. Each service annotation is exclusive to that service.",
+          "para_context": "ANNOTATIONS"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "question_agent",
+            "difficulty": 2,
+            "instruction": "What should you do?",
+            "situation": "A paragraph annotated USAF describes a military procedure. An Army controller at a joint-use facility reads it and assumes it also applies to Army aircraft since they are also military.",
+            "question_text": "Does a paragraph annotated USAF apply to Army aircraft?",
+            "choices": [
+              {
+                "text": "Yes; all military annotations apply to any U.S. military service.",
+                "is_correct": false
+              },
+              {
+                "text": "No; USAF annotation means the procedure applies only to the U.S. Air Force.",
+                "is_correct": true
+              },
+              {
+                "text": "Yes, but only at joint-use facilities.",
+                "is_correct": false
+              },
+              {
+                "text": "It depends on whether the Army facility has a letter of agreement with the Air Force unit.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Per 1-2-5e, USAF denotes the procedure applies only to the U.S. Air Force. USN applies only to Navy, and USA only to Army. Each service annotation is exclusive to that service.",
+            "para_context": "ANNOTATIONS"
+          }
+        }
+      ]
+    }
+  ]
+}

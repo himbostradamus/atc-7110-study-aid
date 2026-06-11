@@ -20,8 +20,11 @@ DEFAULT_OUT = (
 )
 TARGET_SOURCE = "question_agent"
 LOCATION_RE = re.compile(
-    r"\b(?:under|from|in|paragraph|para|section)\s+(?:the\s+)?"
-    r"\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\b",
+    r"\b(?:"
+    r"under\s+(?:the\s+)?(?:(?:paragraph|para|section)\s+)?"
+    r"|(?:from|in)\s+(?:the\s+)?(?:paragraph|para|section)\s+"
+    r"|(?:paragraph|para|section)\s+"
+    r")\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\b",
     re.IGNORECASE,
 )
 GENERIC_REFERENCE_RE = re.compile(

@@ -1,0 +1,1162 @@
+{
+  "version": 1,
+  "chapter": 7,
+  "target_generation_source": "question_agent",
+  "packet_sha256": "e094a2aab91e7d0d6625a19afeb16946b07de0ff9ce924f0794e524221be39ba",
+  "manifest_sha256": "57ddd640c8d03edd0c498117e9c5f4e8deb6bc4c54137a03fdbe10ad4146801e",
+  "summary": {
+    "overall": "Chapter 7 content is factually accurate against source material with no unsafe operational implications found. However, pervasive paragraph-location scaffolding ('Under 7-X-Y' prefixes on nearly every question stem) substitutes document-structure trivia for self-contained operational knowledge. About 5 items explicitly test paragraph-number or section-number recall and must be removed. Approximately one-third of multiple-choice items exhibit correct-answer-first position bias. A single malformed reverse flashcard and several context-light reference flashcards need replacement. The chapter has only 57 source paragraphs covering an unusually broad range of airspace types and service levels (Class A through Class B, plus TRSA), which leads to some redundancy when the same rule structure recurs across sections. Overall quality is moderate: content is correct but format issues and scaffolding are systemic.",
+    "patterns": [
+      "Paragraph-location scaffold: 92 question stems (98%) begin with 'Under 7-X-Y,' making items dependent on paragraph-number recall rather than self-contained operational reasoning. This is the chapter's dominant defect and must be addressed in the next generation pass by rewriting stems to present the operational situation without paragraph labels.",
+      "Correct-answer-first position bias: 48 questions (51%) and 20 activities (49%) place the correct answer at sort_order 0. The bias creates a detectable pattern that undermines assessment validity. The next pass must shuffle correct answers across positions.",
+      "Paragraph-number trivia: a handful of items (#24, #32, #27, #75, #168) explicitly ask which paragraph or section numbers are cross-referenced rather than testing operational knowledge. These must be removed entirely.",
+      "Answer-length cues: a small number of items (5 questions, 4 activities) have correct answers conspicuously longer than distractors. The next pass should match distractor lengths to the correct answer.",
+      "Flashcard defects: one malformed reverse card (#8) puts source text on the front and a paragraph label on the back. Several reference-type flashcards (#30, #41) have context-light fronts that fail to identify the concept being recalled. Two concept-reverse cards are notably weak.",
+      "Redundancy: paragraphs with very short source text (e.g., 7-1-1 has one sentence) generate up to 8 items covering the same prohibition from different angles. While some diversity is healthy, the fill-blank, multiple-choice, true/false, activity, and two flashcard formats mostly restate the same fact. The next pass should consolidate or differentiate more clearly.",
+      "Fill-blank items: many are verbatim quotation completions that test exact wording recall more than operational understanding. Prescribed phraseology items are appropriate; verbatim body-text blanks are less so.",
+      "Negative-stem usage: 15 questions and 12 activities use 'NOT' or negative phrasing. Several are justified (testing exclusion recognition) but others could be rephrased positively."
+    ],
+    "generation_guidance": [
+      "Rewrite ALL question stems to be self-contained without 'Under 7-X-Y' or similar paragraph labels. Present the operational situation or rule condition and ask about the correct action, condition, or limitation.",
+      "Shuffle correct answer positions: no more than 25% of correct answers should appear in any one sort_order position. Use the position 2-3 slots more heavily than positions 0-1.",
+      "Match distractor length to correct-answer length within ±30%. Long correct answers surrounded by short distractors create a readability cue that undermines assessment validity.",
+      "Remove all items that test paragraph-number, section-number, or cross-reference-number recall. Replace them with items that test the operational rule those cross-references point to.",
+      "For flashcards, ensure every front identifies a retrievable concept. Replace bare '7-X-Y cross-references' fronts with concept-oriented prompts. Fix malformed reverse cards by ensuring both directions form valid standalone questions.",
+      "Consolidate redundant coverage of very short paragraphs (one-sentence sources). A single well-constructed multiple-choice question plus one flashcard is sufficient for a one-sentence rule; the remaining formats can be reallocated to underrepresented source statements.",
+      "Preserve fill-blank items that test prescribed phraseology (readback-critical words like 'ADVISE', 'TRAFFIC', 'merge', 'ABOVE', 'requested'). Remove or convert fill-blanks that test exact wording of body text rather than phraseology.",
+      "When generating the next pass, produce 2–3 formats per source statement rather than 4–8. Prioritize: (1) a multiple-choice question testing recognition of the rule's conditions and exceptions, (2) a scenario activity testing application, (3) one flashcard for rapid recall. Add more formats only for high-priority, operationally dense paragraphs.",
+      "For negative stems: reserve them for testing the ability to recognize what is NOT authorized or NOT required — a genuine exclusion-recognition skill. Otherwise use positive phrasing.",
+      "Ensure every activity has a complete operational context (situation, conditions, decision point). Readback-check activities must provide the controller transmission for the pilot to respond to. Source-lookup activities must ask for an operational lookup decision, not a paragraph number."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "question",
+      "para_id": "7-1-3",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "educational_coherence"
+      ],
+      "problem": "This item asks which paragraph numbers 7-1-3 cross-references (answer: 7-6-1 and 7-6-2). Knowing paragraph-number cross-references is document-structure trivia, not an operational ATC skill. The item teaches students to memorize the numbering scheme of the .65 rather than the operational rules those cross-referenced paragraphs contain.",
+      "source_basis": "7-1-3 source references point to 7-6-1 (Application) and 7-6-2 (Service Availability) for additional approach control procedures. The operational content of those paragraphs is separately tested elsewhere in this chapter; testing the cross-reference numbers themselves is not educationally valuable.",
+      "match": {
+        "question_text": "Under 7-1-3, which paragraphs are referenced for approach control service availability and application?",
+        "question_type": "multiple_choice"
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-1-4",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "educational_coherence"
+      ],
+      "problem": "This item asks which FAA Order paragraph covers visual holding points (answer: 4-6-5). This is pure paragraph-number trivia. A controller needs to know the operational procedures for visual holding, not which paragraph number describes them. The item's cross-references are for ATC reference use, not for rote memorization.",
+      "source_basis": "7-1-4 reference line cites FAA Order JO 7110.65, Para 4-6-5 (Visual Holding Points) and 7-6-5 (Holding). The operational content of visual holding procedures is tested in other 7-1-4 items.",
+      "match": {
+        "question_text": "Under 7-1-4, what FAA Order paragraph covers visual holding points, as referenced in the note?",
+        "question_type": "multiple_choice"
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-1-3",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "educational_coherence"
+      ],
+      "problem": "This source_lookup activity asks 'Which paragraphs does 7-1-3 reference for approach control application and service availability?' The answer is paragraph numbers (7-6-1 and 7-6-2). A source_lookup activity should ask the student to use the source to find an operational rule, condition, or procedure — not to recite paragraph numbers. This item is essentially a duplicate of the removed question 9e79be87 in activity format.",
+      "source_basis": "7-1-3 references 7-6-1 and 7-6-2. The operational rules in those paragraphs are covered elsewhere in the chapter.",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "source_kind": "reference",
+          "source_label": "FAA Order JO 7110.65, Paragraph 7-6-1 and 7-6-2",
+          "lookup_context": [
+            "Paragraph 7-1-3 references these paragraphs for additional approach control procedures"
+          ],
+          "task": "Identify the referenced paragraphs covering application and service availability for approach control services.",
+          "instruction": "Use the references in 7-1-3.",
+          "question_text": "Which paragraphs does 7-1-3 reference for approach control application and service availability?",
+          "choices": [
+            {
+              "text": "7-4-1 and 7-4-2.",
+              "is_correct": false
+            },
+            {
+              "text": "7-6-1 and 7-6-2.",
+              "is_correct": true
+            },
+            {
+              "text": "5-9-1 and 5-9-2.",
+              "is_correct": false
+            },
+            {
+              "text": "3-7-1 and 3-7-2.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-1-3 references, the paragraph points to 7-6-1 for Application and 7-6-2 for Service Availability regarding approach control services."
+        }
+      }
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-3-1",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "educational_coherence"
+      ],
+      "problem": "This source_lookup activity asks 'Which paragraph does 7-3-1 reference for additional VFR-on-top information?' The answer is a paragraph number (9-3-3). The question teaches students to navigate the .65's numbering system rather than teaching the operational content of paragraph 9-3-3. A proper source_lookup for this paragraph would ask the student to find a specific operational rule or procedure in 9-3-3.",
+      "source_basis": "7-3-1 references paragraph 9-3-3 (VFR-On-Top) for additional procedures. The operational content is separately addressed.",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 1,
+          "source_kind": "reference",
+          "source_label": "FAA Order JO 7110.65, Paragraph 9-3-3",
+          "lookup_context": [
+            "Paragraph 7-3-1 references 9-3-3 for additional VFR-on-top procedures"
+          ],
+          "task": "Identify the referenced paragraph for additional VFR-on-top procedures.",
+          "instruction": "Use the references in 7-3-1.",
+          "question_text": "Which paragraph does 7-3-1 reference for additional VFR-on-top information?",
+          "choices": [
+            {
+              "text": "Paragraph 9-4-5.",
+              "is_correct": false
+            },
+            {
+              "text": "Paragraph 7-1-1.",
+              "is_correct": false
+            },
+            {
+              "text": "Paragraph 9-3-3.",
+              "is_correct": true
+            },
+            {
+              "text": "Paragraph 5-1-4.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-3-1 references, the paragraph points to 9-3-3 VFR-On-Top for additional procedures."
+        }
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-7-1",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "educational_coherence"
+      ],
+      "problem": "This fill-blank item asks which Section number of Chapter 7 contains basic radar services (answer: Section 6). Knowing that 'basic services are in Section 6' is chapter-structure trivia. The operational relationship — that TRSA procedures are applied IN ADDITION to basic radar services, not instead of them — is the valuable concept. This item reduces that concept to a section-number blank.",
+      "source_basis": "7-7-1 states TRSA procedures are applied 'in addition to the basic services described in Chapter 7, Visual, Section 6, Basic Radar Service to VFR Aircraft - Terminal.' The important operational rule is the overlay relationship, not the section number.",
+      "match": {
+        "question_text": "Complete: Under 7-7-1, apply TRSA procedures within the designated TRSA in addition to the basic services described in Chapter 7, Section _____.",
+        "question_type": "fill_blank"
+      }
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "7-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "malformed_reverse",
+        "educational_coherence"
+      ],
+      "problem": "This concept_reverse card has the verbatim source text ('Do not apply visual separation or issue VFR or VFR-on-top clearances in Class A airspace.') as the front and a paragraph label ('7-1-1: Class A airspace restrictions — three prohibitions.') as the back. A reverse card must be a valid question in both directions. The current front is a complete prohibition statement, not a question prompt. The back merely names the paragraph — it does not ask the student to recall anything. Neither direction works as a flashcard.",
+      "source_basis": "7-1-1 body: 'Do not apply visual separation or issue VFR or \"VFR-on-top\" clearances in Class A airspace.'",
+      "match": {
+        "front": "Do not apply visual separation or issue VFR or VFR-on-top clearances in Class A airspace.",
+        "back": "7-1-1: Class A airspace restrictions — three prohibitions.",
+        "card_type": "concept_reverse"
+      },
+      "replacements": [
+        {
+          "front": "What three things are prohibited in Class A airspace?",
+          "back": "Visual separation, VFR clearances, and VFR-on-top clearances.",
+          "card_type": "concept",
+          "reverse_front": "Name the airspace class where visual separation, VFR, and VFR-on-top are all prohibited.",
+          "reverse_back": "Class A airspace."
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "7-1-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "This reference-type flashcard has a context-light front reading '7-1-3 cross-references' which fails to identify the concept being recalled. The back lists paragraph numbers (7-6-1 and 7-6-2) with their titles. A flashcard front should prompt recall of a concept, not a paragraph label. This card also reinforces the paragraph-number trivia pattern.",
+      "source_basis": "7-1-3 references 7-6-1 (Application) and 7-6-2 (Service Availability) for approach control service procedures. The operational value is knowing where to find additional procedures for VFR aircraft handling, not the paragraph numbers per se.",
+      "match": {
+        "front": "7-1-3 cross-references",
+        "back": "Paragraphs 7-6-1 (Application) and 7-6-2 (Service Availability) for additional approach control service procedures.",
+        "card_type": "reference"
+      },
+      "replacements": [
+        {
+          "front": "For an arriving VFR aircraft using approach control, what landing information must be issued before the aircraft contacts the tower?",
+          "back": "Issue wind, runway, and altimeter information unless properly covered by ATIS or the pilot reports having the numbers; traffic information as workload permits; and the time or place to contact the tower.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "7-1-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "This reference-type flashcard has a context-light front reading '7-1-4 cross-references' which fails to identify the concept being recalled. The back lists paragraph numbers (4-6-5 and 7-6-5) with parenthetical titles. Same pattern as the 7-1-3 reference card.",
+      "source_basis": "7-1-4 references 4-6-5 (Visual Holding Points) and 7-6-5 (Holding) for additional holding-related procedures.",
+      "match": {
+        "front": "7-1-4 cross-references",
+        "back": "Paragraph 4-6-5 (Visual Holding Points) and Paragraph 7-6-5 (Holding).",
+        "card_type": "reference"
+      },
+      "replacements": [
+        {
+          "front": "When VFR aircraft must hold at the same visual holding fix, what must the controller provide?",
+          "back": "Use a prominent, easily recognized geographical fix, preferably a charted VFR checkpoint, and issue traffic information about the other aircraft holding there.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "correct_answer_first"
+      ],
+      "problem": "The stem asks 'What are the three things that paragraph 7-1-1 prohibits in Class A airspace?' This makes the paragraph number part of the question. The correct answer is first (sort_order 0). The stem also uses the word 'paragraph' which cues document navigation rather than operational knowledge.",
+      "source_basis": "7-1-1 body: 'Do not apply visual separation or issue VFR or \"VFR-on-top\" clearances in Class A airspace.'",
+      "match": {
+        "question_text": "What are the three things that paragraph 7-1-1 prohibits in Class A airspace?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller is working traffic in Class A airspace. Which of the following actions is prohibited?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 7-1-1, Class A airspace is exclusively IFR. Visual separation, VFR clearances, and VFR-on-top clearances are all prohibited. Any clearance or separation method that relies on visual conditions is inconsistent with the IFR-only nature of Class A airspace.",
+          "choices": [
+            {
+              "text": "Issuing a VFR clearance to allow a pilot to climb above a cloud layer.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Issuing an IFR altitude change to maintain vertical spacing.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Applying IFR radar separation between two aircraft on converging courses.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Assigning a Mach number technique to IFR aircraft at or above FL240.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold"
+      ],
+      "problem": "The stem ends with 'under 7-1-1' which is unnecessary paragraph scaffolding. The item itself is otherwise sound — it tests whether the student can identify which listed action is prohibited in Class A airspace by applying the rule rather than reciting it. Removing the paragraph label makes the stem self-contained.",
+      "source_basis": "7-1-1 body: 'Do not apply visual separation or issue VFR or \"VFR-on-top\" clearances in Class A airspace.'",
+      "match": {
+        "question_text": "Which of the following is prohibited in Class A airspace under 7-1-1?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which of the following is prohibited in Class A airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 7-1-1, visual separation, VFR, and VFR-on-top clearances are all prohibited in Class A airspace. IFR speed adjustments and altitude assignments remain standard IFR control actions that are not prohibited.",
+          "choices": [
+            {
+              "text": "Issuing an IFR speed adjustment to maintain longitudinal spacing.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Assigning a Mach number to an IFR aircraft at or above FL240.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Issuing a revised IFR route amendment.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Applying visual separation between two IFR aircraft.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "correct_answer_first",
+        "answer_length_cue",
+        "educational_coherence"
+      ],
+      "problem": "The correct answer ('7-1-1 is a blanket prohibition against all VFR operations in Class A airspace; 7-1-2 permits VFR-conditions clearances only outside Class A under specific conditions.') is 2-4x longer than every distractor, creating a conspicuous answer-length cue. The stem asks 'How does 7-1-1 differ from the VFR-conditions clearance allowed?' which references paragraph numbers and is unclear ('the VFR-conditions clearance allowed' — allowed where?). The correct answer is also first (sort_order 0).",
+      "source_basis": "7-1-1 prohibits all VFR operations in Class A. 7-1-2 authorizes VFR-conditions clearances outside Class A under specific conditions (pilot-requested climb/descent or terminal noise abatement).",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "How does 7-1-1 differ from the VFR-conditions clearance allowed?",
+          "choices": [
+            {
+              "text": "7-1-1 is a blanket prohibition against all VFR operations in Class A airspace; 7-1-2 permits VFR-conditions clearances only outside Class A under specific conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "7-1-1 and 7-1-2 are identical; both allow VFR-on-top in all airspace with pilot agreement.",
+              "is_correct": false
+            },
+            {
+              "text": "7-1-1 permits VFR conditions in Class A; 7-1-2 permits VFR-on-top in all airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Both paragraphs prohibit visual separation, but only 7-1-1 prohibits IFR separation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "7-1-1 Is an absolute prohibition in Class A airspace: no visual separation, no VFR, no VFR-on-top. 7-1-2 allows VFR-conditions clearances under specific conditions, but these clearances are not available in Class A due to 7-1-1."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "instruction": "Choose the best answer.",
+            "question_text": "A pilot on an IFR flight plan at FL200 requests a VFR climb to FL220 to avoid icing. How does the controller's response differ from a similar request made by a pilot at 8,000 feet outside Class A airspace?",
+            "choices": [
+              {
+                "text": "The FL200 request must be denied because VFR clearances are prohibited in Class A airspace; the 8,000-foot request may be approved if conditions in 7-1-2 are met.",
+                "is_correct": true
+              },
+              {
+                "text": "Both requests can be approved identically, because VFR-conditions clearances are permitted at any altitude.",
+                "is_correct": false
+              },
+              {
+                "text": "Both requests must be denied, because VFR climbs are only permitted in Class G airspace.",
+                "is_correct": false
+              },
+              {
+                "text": "The FL200 request may be approved as VFR-on-top; the 8,000-foot request may only be approved as special VFR.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Class A airspace (FL180-FL600) operates exclusively under IFR. Per 7-1-1, no VFR clearances, VFR-on-top, or visual separation may be applied in Class A. A pilot at FL200 is in Class A and must remain on an IFR clearance. Per 7-1-2, VFR-conditions clearances may be issued at lower altitudes when the pilot requests a VFR climb/descent or for terminal noise-abatement purposes — but these are unavailable in Class A."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold"
+      ],
+      "problem": "The true/false stem ends with 'This action violates paragraph 7-1-1.' The operational scenario is well-constructed — it tests application of the Class A VFR prohibition to a realistic controller decision. But the stem should present the scenario and ask whether the action is correct without naming the paragraph.",
+      "source_basis": "7-1-1: 'Do not apply visual separation or issue VFR or \"VFR-on-top\" clearances in Class A airspace.'",
+      "match": {
+        "question_text": "A controller working Class A airspace receives a pilot request to alter altitude under VFR conditions to get above a cloud layer. The controller issues a clearance to 'maintain VFR conditions above FL350.' This action violates paragraph 7-1-1.",
+        "question_type": "true_false"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller working Class A airspace receives a pilot request to alter altitude under VFR conditions to get above a cloud layer. The controller issues a clearance to 'maintain VFR conditions above FL350.' Is this action correct?",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "explanation": "False — this action is not correct. Per 7-1-1, VFR clearances may not be issued in Class A airspace. A clearance to maintain VFR conditions is a type of VFR clearance and is prohibited regardless of the reason. The controller should have kept the aircraft on its IFR clearance or issued an IFR altitude change.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "False",
+              "is_correct": true,
+              "sort_order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "negative_stem",
+        "correct_answer_first",
+        "educational_coherence"
+      ],
+      "problem": "This fill-blank item begins 'Complete: Do not apply visual separation or issue _____ or VFR-on-top clearances in Class A airspace.' The stem is a verbatim quotation of the source with a blank, which is a negative stem ('Do not...') and tests rote memorization of exact wording rather than operational understanding. The two accepted answers ('VFR' and 'VFR clearances') are both at the top. The item would be more valuable as a multiple-choice or true/false testing the operational rule.",
+      "source_basis": "7-1-1 body: 'Do not apply visual separation or issue VFR or \"VFR-on-top\" clearances in Class A airspace.'",
+      "match": {
+        "question_text": "Complete: Do not apply visual separation or issue _____ or VFR-on-top clearances in Class A airspace.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "In Class A airspace, a controller may apply visual separation between IFR aircraft if both pilots report each other in sight.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "explanation": "False. Per 7-1-1, visual separation may not be applied in Class A airspace, nor may VFR or VFR-on-top clearances be issued. Class A is exclusively IFR; all separation must be IFR-approved separation.",
+          "choices": [
+            {
+              "text": "False",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "True",
+              "is_correct": false,
+              "sort_order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "correct_answer_first"
+      ],
+      "problem": "The stem 'Complete: Under 7-1-2b phraseology...' embeds a paragraph label. The phraseology 'IF UNABLE, (alternative procedure), AND ADVISE' is prescribed and worth testing as exact recall, but the stem should identify the operational trigger rather than the paragraph number.",
+      "source_basis": "7-1-2b phraseology: 'IF UNABLE, (alternative procedure), AND ADVISE.'",
+      "match": {
+        "question_text": "Complete: Under 7-1-2b phraseology, when VFR conditions may become impractical, the controller states: IF UNABLE, (alternative procedure), AND _____.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "When a controller determines that flight in VFR conditions may become impractical for an aircraft cleared to maintain VFR conditions, what phraseology does the controller use to prompt the pilot to report inability to comply?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 7-1-2b, when the controller judges that VFR conditions may become impractical, the phraseology is: 'IF UNABLE, (alternative procedure), AND ADVISE.' The 'AND ADVISE' component requires the pilot to report back if unable to comply with the alternative.",
+          "choices": [
+            {
+              "text": "IF UNABLE, (alternative procedure), SAY INTENTIONS.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "IF UNABLE, ADVISE AND STANDBY FOR NEW CLEARANCE.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "UNABLE VFR CONDITIONS, (alternative procedure) APPROVED.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "IF UNABLE, (alternative procedure), AND ADVISE.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "correct_answer_first"
+      ],
+      "problem": "Fill-blank with 'Under 7-1-2' paragraph scaffold. The operational concept (pilot must be on IFR flight plan AND must request the VFR climb/descent) is important but the format should test recognition of the condition rather than verbatim completion.",
+      "source_basis": "7-1-2a1: 'The pilot of an aircraft on an IFR flight plan requests a VFR climb/descent.'",
+      "match": {
+        "question_text": "Under 7-1-2, a controller may clear an aircraft to maintain VFR conditions when the pilot on an IFR flight plan requests a VFR _____.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller is considering clearing an aircraft to maintain VFR conditions. Which of the following must be true before this clearance can be issued?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 7-1-2a, a controller may clear an aircraft to maintain VFR conditions if either: (1) the pilot on an IFR flight plan requests a VFR climb or descent, or (2) TERMINAL only — the clearance will result in noise-abatement benefits where the IFR departure route does not conform to an FAA-approved noise-abatement route or altitude.",
+          "choices": [
+            {
+              "text": "The aircraft must be in Class G airspace at the time of the request.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The controller must have radar contact with the aircraft for at least 5 minutes.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The pilot requests a VFR climb or descent while on an IFR flight plan, or the terminal noise-abatement condition is met.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "The aircraft must be above FL180 and in VMC.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "negative_stem",
+        "answer_length_cue",
+        "educational_coherence"
+      ],
+      "problem": "The stem asks 'Is the clearance valid under 7-1-2a2?' This embeds the paragraph number in the question. The correct answer 'No, because the condition requires that the IFR departure route does not conform to an FAA-approved noise-abatement route or altitude...' is much longer than all distractors. The negative stem pairs with a negative correct answer ('No...'), creating a double-negative reading burden. The situation in the context field is well-constructed and should be moved into the main stem.",
+      "source_basis": "7-1-2a2: TERMINAL — the clearance will result in noise abatement benefits where part of the IFR departure route does not conform to an FAA-approved noise abatement route or altitude.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "What should the controller do?",
+          "situation": "A terminal controller clears an IFR departure to maintain VFR conditions for noise-abatement reasons, but the IFR departure route published in the facility SOP already conforms to the FAA-approved noise-abatement route. A trainee questions whether the clearance is valid under 7-1-2a2.",
+          "para_context": "Per 7-1-2a2 (TERMINAL), the clearance must result in noise-abatement benefits where part of the IFR departure route does not conform to an FAA-approved noise-abatement route or altitude.",
+          "question_text": "Is the clearance valid under 7-1-2a2?",
+          "choices": [
+            {
+              "text": "Yes, because any noise-abatement concern justifies the clearance regardless of conformity.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because the condition requires that the IFR departure route does not conform to an FAA-approved noise-abatement route or altitude. A route that already conforms does not meet this condition.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, because the terminal noise-abatement condition applies at all facilities, not just terminal.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because VFR-conditions clearances for noise abatement can only be issued by en route facilities.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-1-2a2, the noise-abatement condition applies only when the IFR departure route does not conform to an FAA-approved noise-abatement route or altitude. Since this route already conforms, the condition is not met, and the clearance should not have been issued under this provision."
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 3,
+          "content": {
+            "instruction": "What should the controller conclude?",
+            "question_text": "A terminal controller clears an IFR departure to maintain VFR conditions for noise-abatement reasons. A trainee questions the clearance because the IFR departure route published in the facility SOP already conforms to the FAA-approved noise-abatement route. Is the clearance valid, and why?",
+            "choices": [
+              {
+                "text": "Yes, because any noise-abatement concern justifies the clearance regardless of whether the route conforms.",
+                "is_correct": false
+              },
+              {
+                "text": "Yes, because the terminal noise-abatement condition applies regardless of route conformity.",
+                "is_correct": false
+              },
+              {
+                "text": "No, because VFR-conditions clearances for noise abatement may only be issued by en route facilities.",
+                "is_correct": false
+              },
+              {
+                "text": "No, because the noise-abatement condition requires that the IFR departure route does NOT conform to an FAA-approved noise-abatement route or altitude. If the route already conforms, the condition is not met.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "Per 7-1-2a2, the noise-abatement condition requires that 'part of the IFR departure route does not conform to an FAA-approved noise-abatement route or altitude.' If the route already conforms, this condition is not satisfied and the clearance cannot be issued under this provision."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "correct_answer_first"
+      ],
+      "problem": "The stem begins 'Under 7-2-1' and the correct answer (Approach/Departure/En Route facility) is at sort_order 2 — but this is an exception; most items have correct at 0. The paragraph scaffold should be removed to make the stem self-contained.",
+      "source_basis": "7-2-1 note: separation of IFR aircraft before and after application of visual separation is an IFR control function that must be applied by the Approach/Departure/En Route facility.",
+      "match": {
+        "question_text": "Under 7-2-1, who is responsible for IFR separation before and after the application of visual separation when a nonapproach control tower accepts visual separation authorization?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A nonapproach control tower accepts visual separation authorization for two IFR arrivals. Who retains responsibility for IFR separation before and after the visual separation is applied?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 7-2-1, while the nonapproach tower becomes responsible for the visual separation itself, separation of IFR aircraft before and after the application of visual separation is an IFR control function. This responsibility remains with the Approach/Departure/En Route facility.",
+          "choices": [
+            {
+              "text": "The nonapproach control tower, because accepting visual separation transfers all separation responsibility.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The Approach/Departure/En Route facility.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "The pilot, because visual separation shifts responsibility to the flight crew.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Both the tower and radar facility share IFR separation jointly.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "correct_answer_first"
+      ],
+      "problem": "Stem begins 'Under 7-2-1b EN ROUTE' and correct answer is first. The question tests a real operational difference (en route converging-course phraseology includes 'ON CONVERGING COURSE') but the paragraph label should be removed.",
+      "source_basis": "7-2-1b en route phraseology includes 'ON CONVERGING COURSE'; 7-2-1a2 terminal phraseology does not include those words.",
+      "match": {
+        "question_text": "Under 7-2-1b EN ROUTE, how does the traffic advisory for converging course traffic differ from the terminal version?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An en route controller and a terminal controller each apply pilot-applied visual separation for aircraft on converging courses. How does the en route traffic advisory differ from the terminal version?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Per 7-2-1, the en route converging-course advisory includes the explicit words 'ON CONVERGING COURSE' in the transmission — e.g., '(ACID) TRAFFIC, (position), (direction)-BOUND, (type), ON CONVERGING COURSE, HAS YOU IN SIGHT AND WILL MAINTAIN VISUAL SEPARATION.' The terminal version does not include the 'ON CONVERGING COURSE' element.",
+          "choices": [
+            {
+              "text": "The en route version omits aircraft type; the terminal version includes it.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The en route version includes 'ON CONVERGING COURSE' in the transmission; the terminal version does not.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "The en route version requires a vector; the terminal version does not.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "There is no difference; both use identical phraseology.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-3-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location_scaffold",
+        "correct_answer_first",
+        "answer_length_cue"
+      ],
+      "problem": "Stem begins 'Under 7-3-1' with correct answer first AND answer_length_cue — the correct answer is much longer than all distractors. This creates a strong cuing effect: students can pick the right answer without understanding the difference between VFR-on-top and VFR conditions.",
+      "source_basis": "7-3-1 VFR-on-top: IFR flight plan remains, IFR separation suspended, pilot complies with both VFR visibility/cloud criteria and applicable IFR rules. 7-1-2 VFR conditions: clearance limited by time/fix/altitude, ATC specifies altitude.",
+      "match": {
+        "question_text": "Under 7-3-1, how does VFR-on-top differ from a VFR conditions clearance under 7-1-2?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An aircraft is cleared to maintain VFR-on-top at the pilot's request. Which of the following correctly describes the pilot's obligations compared to a VFR-conditions clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "VFR-on-top (7-3-1) keeps the aircraft on its IFR flight plan. The pilot must: select an appropriate VFR cruising altitude per 91.159, comply with VFR visibility and cloud clearance criteria, see and avoid other aircraft, and comply with applicable IFR rules (e.g., adhere to ATC clearances). IFR separation is suspended but traffic advisories and safety alerts continue. VFR conditions (7-1-2) is a time/altitude-limited clearance with ATC-specified altitudes — it does not transfer altitude selection to the pilot.",
+          "choices": [
+            {
+              "text": "Both are identical; 'VFR-on-top' and 'VFR conditions' are interchangeable ATC terms.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "VFR-on-top keeps the aircraft on an IFR flight plan; the pilot selects altitude per 91.159 and must comply with both VFR visibility/cloud criteria and applicable IFR rules.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "VFR conditions cancels the IFR flight plan; VFR-on-top keeps it IFR but waives all IFR rule compliance.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "VFR-on-top can only be used in Class A airspace; VFR conditions can only be used below FL180.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-3-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "answer_length_cue"
+      ],
+      "problem": "Stem begins 'Under 7-3-1 note 1' with answer_length_cue — the correct answer is a long compound sentence while distractors are short single-sentence items. Replace to remove paragraph scaffold and balance answer lengths.",
+      "source_basis": "7-3-1 note 1: pilot is responsible to fly at appropriate VFR altitude, comply with VFR visibility and cloud distance criteria, see and avoid other aircraft, and comply with instrument flight rules applicable to the flight.",
+      "match": {
+        "question_text": "Under 7-3-1 note 1, what responsibilities does a pilot retain after being cleared VFR-on-top?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "After being cleared VFR-on-top, a pilot selects 5,500 feet on a magnetic course of 090 while complying with cloud clearance requirements and monitoring for traffic on TCAS. What additional responsibility does the pilot retain?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 7-3-1 note 1, the pilot retains four responsibilities: fly an appropriate VFR altitude, comply with VFR visibility and cloud distance criteria, see and avoid other aircraft, and comply with applicable IFR rules including adherence to ATC clearances. VFR-on-top does not cancel the IFR flight plan; all applicable IFR rules remain in effect.",
+          "choices": [
+            {
+              "text": "No additional responsibility; the pilot is now operating under standard VFR rules.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Only the responsibility to report reaching VFR-on-top conditions to ATC.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Compliance with applicable IFR rules including adherence to ATC clearances.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "The pilot must cancel IFR and file a new VFR flight plan within 30 minutes.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-4-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "negative_stem",
+        "correct_answer_first"
+      ],
+      "problem": "Fill-blank with negative stem ('It is not a standard instrument approach procedure and has no _____ segment'). This is verbatim source completion. The operational concept — that a visual approach has no missed approach segment — is important enough to test as a multiple-choice question rather than a fill-blank.",
+      "source_basis": "7-4-1: 'A visual approach is not a standard instrument approach procedure and has no missed approach segment.'",
+      "match": {
+        "question_text": "Complete: A visual approach is an ATC authorization for an aircraft on an IFR flight plan to proceed visually and clear of clouds to the airport of intended landing. It is not a standard instrument approach procedure and has no _____ segment.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "An aircraft on a visual approach executes a go-around at 200 feet AGL. The pilot expects to fly the published missed approach. Why is this expectation incorrect?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 7-4-1, a visual approach is not a standard instrument approach procedure and has no missed approach segment. A go-around from a visual approach must be handled as any go-around — appropriate IFR separation must be provided until the aircraft lands or the pilot cancels their IFR flight plan.",
+          "choices": [
+            {
+              "text": "A visual approach has no missed approach segment; the go-around is handled as any go-around with IFR separation provided.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Visual approaches use a different missed approach point than instrument approaches.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The published missed approach applies only when the ceiling is below 500 feet.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Go-arounds from visual approaches always result in cancellation of IFR.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-5-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "answer_length_cue"
+      ],
+      "problem": "Stem begins 'Under 7-5-4' with answer_length_cue — the correct answer is much longer than the three distractors, making it identifiable by length alone. The paragraph scaffold should also be removed.",
+      "source_basis": "7-5-4: 'Do not assign a fixed altitude when applying vertical separation, but clear the SVFR aircraft at or below an altitude which is at least 500 feet below any conflicting IFR traffic but not below the MSA.' Note: 'SVFR aircraft are not assigned fixed altitudes to maintain because of the clearance from clouds requirement.'",
+      "match": {
+        "question_text": "Under 7-5-4, when applying vertical separation, why is an SVFR aircraft not assigned a fixed altitude to maintain?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When applying vertical separation between an SVFR aircraft and IFR traffic, why is the SVFR aircraft not assigned a fixed altitude to maintain?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 7-5-4, SVFR aircraft must remain clear of clouds. A fixed altitude could force the aircraft into a cloud layer. Instead, the controller clears the SVFR aircraft at or below an altitude at least 500 feet below conflicting IFR traffic but not below the MSA, giving the pilot flexibility to maneuver around clouds.",
+          "choices": [
+            {
+              "text": "SVFR aircraft lack Mode C transponders, making fixed altitudes impossible to verify.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Fixed altitudes are reserved for IFR traffic only.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Tower controllers, not approach controllers, assign SVFR altitudes.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The cloud-clearance requirement means a fixed altitude could force the aircraft into a cloud. The aircraft is cleared at or below an altitude instead.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-3-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "negative_stem",
+        "correct_answer_first"
+      ],
+      "problem": "Fill-blank with paragraph scaffold and negative stem ('inform a VFR-on-top aircraft when a report indicates the pilot is not complying...'). This is verbatim source completion testing exact recall of '91.159(a)' — a CFR citation number. While CFR references are operationally important, testing the exact citation form as a fill-blank is less valuable than testing understanding of the altitude rules themselves.",
+      "source_basis": "7-3-2: 'Inform an aircraft maintaining \"VFR-on-top\" when a report indicates the pilot is not complying with 14 CFR section 91.159(a).'",
+      "match": {
+        "question_text": "Complete: Under 7-3-2, inform a VFR-on-top aircraft when a report indicates the pilot is not complying with 14 CFR section _____.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "A radar report indicates a VFR-on-top aircraft at 5,500 feet on a magnetic course of 270 degrees above 3,000 feet AGL. What action should the controller take?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 7-3-2 and 14 CFR 91.159(a), VFR-on-top cruising altitudes for magnetic courses 180-359 are EVEN altitudes plus 500 feet (e.g., 4,500, 6,500). At 5,500 feet (odd+500) on a 270-degree course, the aircraft is at an incorrect altitude. The controller must inform the pilot using the phraseology: 'VFR-ON-TOP CRUISING LEVELS FOR YOUR DIRECTION OF FLIGHT ARE: EVEN ALTITUDES PLUS FIVE HUNDRED FEET.'",
+          "choices": [
+            {
+              "text": "No action; 5,500 feet is always an appropriate VFR cruising altitude.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Inform the pilot that VFR-on-top cruising levels for a 270-degree course are even altitudes plus 500 feet.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Issue a safety alert because the altitude deviation creates an immediate collision hazard.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Instruct the aircraft to climb to FL180 where VFR-on-top cruising altitudes no longer apply.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "7-1-2",
+      "action": "split",
+      "severity": "minor",
+      "categories": [
+        "overloaded"
+      ],
+      "problem": "The back of this procedure flashcard contains two distinct conditions plus detail about the terminal noise-abatement condition. When the complete list of conditions is itself the retrieval target, a summary card is appropriate. But the card front asks for 'two conditions' while the back also includes the detailed TERMINAL noise-abatement criterion, making this card overloaded for single-target retrieval. Split into one card per condition.",
+      "source_basis": "7-1-2a: two conditions for VFR-conditions clearances.",
+      "match": {
+        "front": "Two conditions for clearing aircraft to maintain VFR conditions per 7-1-2",
+        "back": "1. Pilot on IFR flight plan requests VFR climb/descent. 2. TERMINAL — clearance results in noise-abatement benefit where IFR departure route does not conform to FAA-approved noise-abatement route or altitude.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "What pilot action must precede a VFR-conditions clearance?",
+          "back": "The pilot on an IFR flight plan must request a VFR climb or descent.",
+          "card_type": "procedure"
+        },
+        {
+          "front": "What noise-abatement condition allows a terminal facility to issue a VFR-conditions clearance?",
+          "back": "TERMINAL only. The clearance results in noise-abatement benefits where part of the IFR departure route does NOT conform to an FAA-approved noise-abatement route or altitude.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "7-1-3",
+      "action": "split",
+      "severity": "minor",
+      "categories": [
+        "overloaded"
+      ],
+      "problem": "The back of this procedure flashcard contains four distinct items (a-d) plus a note about 'have numbers'. This is too much for a single retrieval target. The student should be able to recall each component individually. Split into separate cards for the mandatory items and the 'have numbers' concept.",
+      "source_basis": "7-1-3a-d: four items approach control issues to VFR arriving aircraft.",
+      "match": {
+        "front": "Four items approach control issues to VFR arriving aircraft per 7-1-3",
+        "back": "a. Wind, runway, altimeter (omit if ATIS code stated or 'have numbers'). b. Traffic info (workload permitting). c. Time/place to contact tower. d. Aircraft may be instructed to contact approach upon initial tower contact. Note: 'have numbers' does not indicate ATIS receipt.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "What landing information must approach control issue to arriving VFR aircraft?",
+          "back": "Wind, runway, and altimeter setting. May be omitted if contained in ATIS and pilot states ATIS code, or if pilot uses the phrase 'have numbers'.",
+          "card_type": "procedure"
+        },
+        {
+          "front": "When may an aircraft be instructed to contact approach control for landing and traffic information?",
+          "back": "Upon initial contact with the tower (7-1-3d). This allows tower to redirect VFR arrivals to approach when procedures have been established.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-6-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "correct_answer_first"
+      ],
+      "problem": "Stem begins 'Under 7-6-4' with correct answer first. The rule 'identify the aircraft before positioning it in the approach sequence' is simple but fundamental. Remove paragraph label.",
+      "source_basis": "7-6-4: 'Identify the aircraft before taking action to position it in the approach sequence.'",
+      "match": {
+        "question_text": "Under 7-6-4, what must be done before taking action to position an aircraft in the approach sequence?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Before a controller takes any action to position a VFR aircraft in the approach sequence, what must be accomplished first?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 7-6-4, the aircraft must be identified before the controller takes action to position it in the approach sequence. This is a fundamental safety principle: you cannot sequence what you cannot identify.",
+          "choices": [
+            {
+              "text": "Coordinate with the tower for landing sequence assignment.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Identify the aircraft.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Confirm the pilot has received the current ATIS broadcast.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Obtain a pilot report of the airport or preceding traffic in sight.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-7-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "educational_coherence"
+      ],
+      "problem": "Stem begins 'Under 7-7-6' asking who specifies the approach interval. This is a very thin paragraph (one sentence) producing a very thin question. The answer ('the tower') is obvious from the fact that towers control the runway. The question should be strengthened to test understanding of WHY the tower specifies the interval or how approach control uses that interval.",
+      "source_basis": "7-7-6: 'The tower must specify the approach interval.'",
+      "match": {
+        "question_text": "Under 7-7-6, who specifies the approach interval in TRSA operations?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "In TRSA operations, the tower specifies a 3-mile approach interval. When approach control vectors successive VFR arrivals, what is the controller's responsibility regarding this interval?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Per 7-7-6, the tower specifies the approach interval. Approach control must sequence arriving aircraft to meet that interval. The tower determines the spacing needed; approach control is responsible for delivering aircraft at that spacing.",
+          "choices": [
+            {
+              "text": "Approach control may disregard the interval if radar separation is being applied.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Negotiate a different interval with each pilot before issuing the approach clearance.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The interval is advisory only; pilots maintain their own spacing on visual approaches.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Sequence aircraft to meet the interval specified by the tower.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-9-8",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "paragraph_location_scaffold",
+        "correct_answer_first"
+      ],
+      "problem": "Fill-blank with paragraph scaffold asking which entity specifies the approach interval in Class B. This is essentially the same concept as 7-7-6 (TRSA approach interval) and tests exact wording rather than operational understanding. Replace with a question about the operational role.",
+      "source_basis": "7-9-8: 'The tower must specify the approach interval.'",
+      "match": {
+        "question_text": "Complete: Under 7-9-8, the _____ must specify the approach interval for Class B operations.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "In Class B operations, the tower specifies an approach interval of 4 miles due to wake turbulence. Approach control has two VFR arrivals to sequence. What must approach control do?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Per 7-9-8, the tower must specify the approach interval in Class B operations. Approach control sequences aircraft to deliver them at the specified interval. The tower determines the needed spacing based on runway occupancy, wake turbulence, and other local factors.",
+          "choices": [
+            {
+              "text": "Deliver the arrivals at the 4-mile interval specified by the tower.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Reduce the interval to 3 miles since the aircraft are VFR.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Have the pilots coordinate their own spacing on the visual approach.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Hand off both aircraft to tower for sequencing.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

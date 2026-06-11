@@ -58,6 +58,10 @@ from backend.app.services.question_generator import (
     question_text_errors,
     validate_generated_question,
 )
+from scripts.apply_content_remediation import (
+    apply_content_remediation,
+    reset_content_remediation_log,
+)
 
 
 SELF_CONTAINED_STATEMENT_TYPES = {
@@ -1936,6 +1940,7 @@ def main() -> None:
     db = sqlite3.connect(db_path)
     db.row_factory = sqlite3.Row
     try:
+        reset_content_remediation_log(db)
         replace_all_paragraphs, replace_all_deleted, replace_all_inserted = sync_replace_all_curated_activities(db)
         replace_type_paragraphs, replace_type_deleted, replace_type_inserted = sync_replace_type_curated_activities(db)
         item_type_paragraphs, item_type_deleted, item_type_inserted = sync_item_type_curated_activities(db)
@@ -2004,6 +2009,7 @@ def main() -> None:
         flashcard_targets, flashcards_deleted, flashcards_inserted = sync_curated_flashcards(db)
         question_targets, questions_inserted = backfill_missing_questions(db)
         curated_question_targets, curated_questions_deleted, curated_questions_inserted = sync_curated_questions(db)
+        remediation_stats = apply_content_remediation(db)
         db.commit()
         unresolved_questions = [
             (para_id, message)
@@ -2118,6 +2124,10 @@ def main() -> None:
         print(f"Curated flashcard paragraphs synced: {flashcard_targets}")
         print(f"Curated flashcards deleted: {flashcards_deleted}")
         print(f"Curated flashcards inserted: {flashcards_inserted}")
+        print(f"Content remediation operations: {remediation_stats.operations}")
+        print(f"Content remediation targets removed: {remediation_stats.removed}")
+        print(f"Content remediation replacements inserted: {remediation_stats.inserted}")
+        print(f"Content remediation operations already applied: {remediation_stats.already_applied}")
         print(f"Question target paragraphs: {question_targets}")
         print(f"Questions inserted: {questions_inserted}")
         print(f"Remaining True/False questions without choices: {remaining_missing_true_false}")
