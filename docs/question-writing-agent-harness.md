@@ -70,6 +70,30 @@ python scripts/export_question_authoring_packet.py --para-id 2-1-1
 
 The packet includes paragraph text, existing questions, activities, flashcards, and current counts. Use it to avoid duplicating existing stems and to understand what is already thin.
 
+## Essential-Element Map
+
+Before writing any item, make a private concept map for the paragraph. Identify:
+
+- The operational purpose or controlling principle.
+- Each obligation and prohibition.
+- Each trigger, prerequisite, and termination condition.
+- Each exception, boundary, and workload qualification.
+- Each number, minimum, sequence, or list whose exact value matters.
+- Any prescribed phraseology whose wording must be recalled faithfully.
+- The most plausible operational misconception.
+
+Do not turn every sentence into a question. Prioritize the elements that change a controller's decision, transmission, coordination, separation, or source lookup.
+
+For each important concept, build a small concept family using at least two genuinely different retrieval modes:
+
+- Direct recall of the controlling rule.
+- Condition or exception discrimination.
+- Short scenario application.
+- Contrast with a nearby concept or realistic misconception.
+- Exact recall only when wording, order, or a value is prescribed.
+
+Synonym swaps and minor stem rewrites are duplicates, not reinforcement. A second item earns its place only when it changes what the learner must notice or reason about.
+
 ## Authoring Ladder
 
 Start slow and move up in complexity. For each paragraph, make several passes:
@@ -90,6 +114,7 @@ The goal is not one question per paragraph. The goal is repeated contact with th
 Every item should teach substance, not document trivia.
 
 - Do not test whether a learner memorized that a section title maps to a paragraph number.
+- Do not begin ordinary questions with "Under 2-1-1," or similar paragraph-number scaffolding. Paragraph numbers belong in citations, not in the learner's reasoning context, unless the task explicitly teaches source navigation.
 - Do not ask "Does this scope or responsibility statement match the paragraph?" without enough operational context.
 - Do not ask "Is this an approved example?" using a thin quoted phrase with no topic or source-use context.
 - Do not manufacture a phraseology error when a different value is operationally acceptable. Example frequencies, squawk codes, runway numbers, headings, and callsigns may be arbitrary unless the paragraph requires a specific value.
@@ -97,8 +122,10 @@ Every item should teach substance, not document trivia.
 - Use rote memorization only where exact wording, exact sequence, exact phraseology, or exact minima matter.
 - Distractors must be plausible operational mistakes, not obviously absurd choices.
 - Multiple-choice answers must not always put the correct answer first.
+- Prefer positive operational decisions. Use `NOT` or `EXCEPT` only when identifying an exclusion is itself the required skill.
 - Every scenario must include enough facts to decide the answer without guessing the source title.
-- Every explanation must ground the answer in the paragraph substance and, when possible, identify the operative rule or exception.
+- Every explanation must state the controlling principle and, for multiple choice, explain why the strongest plausible distractor fails.
+- Important concepts should appear in at least two retrieval modes before lower-value details receive additional paraphrases.
 - If source text is ambiguous, write a source-use or concept-boundary item instead of pretending there is a single magic answer.
 
 ## Recommended Density

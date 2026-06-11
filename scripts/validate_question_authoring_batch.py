@@ -27,11 +27,20 @@ UNDERSPECIFIED_PATTERNS = (
     re.compile(r"match(?:es)? the paragraph", re.IGNORECASE),
     re.compile(r"what is correct about\b", re.IGNORECASE),
     re.compile(r"\bthis paragraph\b", re.IGNORECASE),
+    re.compile(
+        r"^\s*(?:under|from|in)\s+(?:the\s+)?(?:paragraph\s+)?"
+        r"\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\b",
+        re.IGNORECASE,
+    ),
 )
 ARBITRARY_VALUE_PATTERNS = (
     re.compile(r"\bone word\b.*\bincorrect\b", re.IGNORECASE),
     re.compile(r"\bspot the error\b", re.IGNORECASE),
     re.compile(r"\bapproved example\b", re.IGNORECASE),
+)
+NEGATIVE_STEM_PATTERN = re.compile(
+    r"\b(?:not|except|false|incorrect|least appropriate|does not|doesn't)\b",
+    re.IGNORECASE,
 )
 
 
@@ -155,6 +164,11 @@ def validate_question(
         reporter.error(location, "explanation is required")
     elif len(explanation.split()) < 8:
         reporter.warn(location, "explanation is too thin to teach the rule")
+    elif question_type == "multiple_choice" and len(explanation.split()) < 16:
+        reporter.warn(
+            location,
+            "multiple-choice explanation may not identify the controlling principle and strongest distractor",
+        )
 
     stem_key = text.lower()
     if stem_key:
@@ -173,6 +187,12 @@ def validate_question(
         if pattern.search(text):
             reporter.warn(location, "check that this is not manufacturing an error from arbitrary example values")
             break
+
+    if NEGATIVE_STEM_PATTERN.search(text):
+        reporter.warn(
+            location,
+            "negative stem; use NOT/EXCEPT only when recognizing the exclusion is the intended skill",
+        )
 
     choices = item.get("choices")
     if question_type == "fill_blank":

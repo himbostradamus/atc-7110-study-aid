@@ -7,7 +7,7 @@ Designed so content can be updated independently of user progress, quiz banks, a
 
 This is an unofficial educational study aid. It is not affiliated with or endorsed by the FAA, and it is not operational guidance, legal guidance, or a substitute for current FAA orders, facility directives, LOAs, training materials, or instructor/supervisor direction.
 
-Generated and curated activities, questions, and flashcards may contain errors or omit context. Learners should use the in-app source links to verify material against current official FAA sources. Aircraft recognition material is derived from FAA JO 7360.1J as supporting reference material, not JO 7110.65 paragraph content.
+Generated and curated activities, questions, and flashcards may contain errors or omit context. Learners should use the in-app source links to verify material against current official FAA sources. Aircraft recognition material is derived from FAA JO 7360.1K as supporting reference material, not JO 7110.65 paragraph content.
 
 Aircraft images are treated as candidates until a human verifies aircraft identity, recognition usefulness, and reuse metadata. Do not publish learner-facing image-recognition cards from unreviewed image candidates.
 

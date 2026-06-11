@@ -155,7 +155,7 @@ def _load_aircraft_designator_overrides() -> dict[str, dict]:
             f"Mfr {row['manufacturer']}" if row["manufacturer"] else "",
             f"CWT {row['cwt']}" if row["cwt"] else "",
             f"SRS {row['srs']}" if row["srs"] else "",
-            "JO 7360.1J Appendix A",
+            "JO 7360.1K Appendix A",
         ]
         _append_aircraft_card(
             type_items,
@@ -171,7 +171,7 @@ def _load_aircraft_designator_overrides() -> dict[str, dict]:
                 srs_items,
                 seen_cards,
                 f"{row['icao']} · SRS",
-                f"{row['srs']} · {row['spoken']} · JO 7360.1J Appendix A",
+                f"{row['srs']} · {row['spoken']} · JO 7360.1K Appendix A",
                 "aircraft_srs",
                 generation_source,
             )
@@ -189,7 +189,7 @@ def _load_aircraft_designator_overrides() -> dict[str, dict]:
             type_items,
             seen_cards,
             spoken,
-            f"{'; '.join(entries)} · JO 7360.1J Appendix A",
+            f"{'; '.join(entries)} · JO 7360.1K Appendix A",
             "aircraft_designator",
             generation_source,
         )
@@ -381,7 +381,7 @@ def _weighted_back(row: dict, include_models: bool = True) -> str:
         parts.append(f"LAHSO {row['lahso']}")
     if row.get("makers"):
         parts.append(f"Mfr {' / '.join(row['makers'])}")
-    parts.append("JO 7360.1J Appendix A")
+    parts.append("JO 7360.1K Appendix A")
     return " · ".join(_clean_aircraft_value(part) for part in parts if _clean_aircraft_value(part))
 
 
@@ -441,7 +441,7 @@ def _load_weighted_aircraft_designator_overrides() -> dict[str, dict]:
                 row["srs"],
                 row["model_label"],
                 f"Mfr {' / '.join(row['makers'])}" if row.get("makers") else "",
-                "JO 7360.1J Appendix A",
+                "JO 7360.1K Appendix A",
             ]
             _append_aircraft_card(
                 srs_items,

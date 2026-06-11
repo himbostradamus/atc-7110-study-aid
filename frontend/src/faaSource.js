@@ -1,8 +1,8 @@
 export const FAA_7110_PDF_URL =
   "https://www.faa.gov/documentLibrary/media/Order/7110.65BB_Bsc_w_Chg_1_and_2_dtd_1-22-26_Final.pdf";
 
-export const FAA_JO_7360_1J_PDF_URL =
-  "https://www.faa.gov/documentLibrary/media/Order/2024-04-29_FAA_Order_JO_7360.1J_Aircraft_Type_Designators--post.pdf";
+export const FAA_JO_7360_1K_PDF_URL =
+  "https://www.faa.gov/documentLibrary/media/Order/FAA_Order_JO_7360.1K_Aircraft_Type_Designators.pdf";
 
 const SOURCE_BLOCK_PRIORITY = [
   "phraseology",
@@ -59,8 +59,8 @@ export function buildFaaSourceRef(paraId, page, options = {}) {
 
   return {
     source_label: numericPage
-      ? `FAA JO 7110.65BB · ${paraId} · PDF page ${numericPage}`
-      : `FAA JO 7110.65BB · ${paraId}`,
+      ? `FAA JO 7110.65BB Change 2 · ${paraId} · PDF page ${numericPage}`
+      : `FAA JO 7110.65BB Change 2 · ${paraId}`,
     source_url: numericPage
       ? `${FAA_7110_PDF_URL}#page=${numericPage}`
       : FAA_7110_PDF_URL,
@@ -68,7 +68,7 @@ export function buildFaaSourceRef(paraId, page, options = {}) {
     source_heading: heading,
     source_locator: numericPage
       ? `Look for ${heading} on PDF page ${numericPage}.`
-      : `Look for ${heading} in FAA JO 7110.65BB.`,
+      : `Look for ${heading} in FAA JO 7110.65BB Change 2.`,
     source_excerpt: sourceExcerpt,
     source_blocks: buildSourceBlocks(options.blocks),
     source_block_type: sourceBlockType,
@@ -77,12 +77,12 @@ export function buildFaaSourceRef(paraId, page, options = {}) {
 
 export function buildJo7360SourceRef() {
   return {
-    source_label: "FAA JO 7360.1J · Appendix A",
-    source_url: `${FAA_JO_7360_1J_PDF_URL}#page=11`,
+    source_label: "FAA JO 7360.1K · Appendix A",
+    source_url: `${FAA_JO_7360_1K_PDF_URL}#page=11`,
     source_page: 11,
-    source_heading: "JO 7360.1J Appendix A. Aircraft Type Designators",
-    source_locator: "Use Appendix A in FAA Order JO 7360.1J for aircraft type designators, wake/CWT categories, and same-runway-separation category data.",
-    source_excerpt: "Aircraft recognition cards are JO 7360.1J-derived supporting material, not JO 7110.65 paragraph content.",
+    source_heading: "JO 7360.1K Appendix A. Aircraft Type Designators",
+    source_locator: "Use Appendix A in FAA Order JO 7360.1K for aircraft type designators, wake/CWT categories, and same-runway-separation category data.",
+    source_excerpt: "Aircraft recognition cards are JO 7360.1K-derived supporting material, not JO 7110.65 paragraph content.",
     source_blocks: [],
     source_block_type: "appendix",
   };

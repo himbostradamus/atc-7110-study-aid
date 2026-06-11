@@ -1760,6 +1760,8 @@ function HeaderUtilities({
   onOpenFocus,
   onOpenReview,
   onResetProgress,
+  onExportProgress,
+  onImportProgress,
 }) {
   const [open, setOpen] = useState(false);
   return (
@@ -1812,6 +1814,22 @@ function HeaderUtilities({
               style={utilityMenuButtonStyle()}
             >
               QA Review{flaggedItemCount ? ` (${flaggedItemCount})` : ""}
+            </button>
+          )}
+          {onExportProgress && (
+            <button
+              onClick={() => { setOpen(false); onExportProgress(); }}
+              style={utilityMenuButtonStyle()}
+            >
+              Export Progress
+            </button>
+          )}
+          {onImportProgress && (
+            <button
+              onClick={() => { setOpen(false); onImportProgress(); }}
+              style={utilityMenuButtonStyle()}
+            >
+              Import Progress
             </button>
           )}
           {onResetProgress && (
@@ -2055,6 +2073,8 @@ export default function CurriculumMap({
   onOpenFocus,
   onOpenReview,
   onResetProgress,
+  onExportProgress,
+  onImportProgress,
   aircraftCardCount = 0,
   aircraftCards = [],
   aircraftImageCandidateCount = 0,
@@ -2160,7 +2180,7 @@ export default function CurriculumMap({
               fontWeight: 700, letterSpacing: ".04em", color: MAP_THEME.amber,
             }}>ATC 7110.65</div>
             <div style={{ fontSize: 12, color: MAP_THEME.faint, marginTop: 2 }}>
-              JO 7110.65BB · Study Platform
+              JO 7110.65BB Change 2 · Study Platform
             </div>
           </div>
           <div className="map-actions" style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", justifyContent: "flex-end" }}>
@@ -2170,13 +2190,15 @@ export default function CurriculumMap({
               onOpenFocus={onOpenFocus}
               onOpenReview={onOpenReview}
               onResetProgress={onResetProgress}
+              onExportProgress={onExportProgress}
+              onImportProgress={onImportProgress}
             />
             <div style={{
               background: MAP_THEME.amber, color: "#090a08", fontFamily: "'Share Tech Mono', ui-monospace, monospace",
               fontWeight: 700, fontSize: 11, letterSpacing: ".08em",
               padding: "4px 10px", borderRadius: 2, textTransform: "uppercase",
             }}>
-              BB CHG 1
+              BB CHG 2
             </div>
           </div>
         </div>

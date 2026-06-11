@@ -30,11 +30,24 @@ jobs:
         working-directory: frontend
         run: npm ci
 
+      - name: Validate curriculum and authored-question baseline
+        run: |
+          python3 scripts/validate_static_release.py
+          python3 scripts/audit_question_agent_output.py --fail-on-regression
+
       - name: Build static site
         working-directory: frontend
         env:
           VITE_ATC_STATIC_DEPLOY: "true"
         run: npm run build
+
+      - name: Install mobile test browser
+        working-directory: frontend
+        run: npx playwright install --with-deps chromium
+
+      - name: Run mobile smoke tests
+        working-directory: frontend
+        run: npm run test:mobile
 
       - uses: actions/configure-pages@v5
 

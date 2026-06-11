@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { rmSync } from "node:fs";
+import { readFileSync, rmSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 function pruneStaticDeployAssets() {
@@ -13,7 +13,19 @@ function pruneStaticDeployAssets() {
   };
 }
 
+function stampServiceWorker() {
+  return {
+    name: "stamp-service-worker",
+    closeBundle() {
+      const path = resolve(process.cwd(), "dist", "sw.js");
+      const buildId = process.env.GITHUB_SHA || Date.now().toString(36);
+      const content = readFileSync(path, "utf8").replaceAll("__BUILD_ID__", buildId);
+      writeFileSync(path, content);
+    },
+  };
+}
+
 export default defineConfig({
   base: process.env.VITE_BASE || "./",
-  plugins: [react(), pruneStaticDeployAssets()],
+  plugins: [react(), stampServiceWorker(), pruneStaticDeployAssets()],
 });

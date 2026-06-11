@@ -4,7 +4,7 @@ This repository contains an unofficial educational study aid. It is not affiliat
 
 ## FAA Source Material
 
-Learner-facing 7110 content is intended to cite FAA JO 7110.65 source locations so users can verify generated or curated study material against the current official order. Aircraft type-designator material is supporting reference material derived from FAA JO 7360.1J, not JO 7110.65 paragraph content.
+Learner-facing 7110 content is intended to cite FAA JO 7110.65 source locations so users can verify generated or curated study material against the current official order. Aircraft type-designator material is supporting reference material derived from FAA JO 7360.1K, not JO 7110.65 paragraph content.
 
 This project must not represent generated explanations, questions, flashcards, or activities as operational guidance. Current FAA orders, facility directives, LOAs, training materials, and instructor or supervisor direction control.
 

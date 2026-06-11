@@ -1,6 +1,6 @@
 # Aircraft Image Search Agent Harness
 
-This harness coordinates DeepSeek running through Claude Code to find serviceable aircraft recognition images for JO 7360.1J aircraft cards.
+This harness coordinates DeepSeek running through Claude Code to find serviceable aircraft recognition images for JO 7360.1K aircraft cards.
 
 ## Purpose
 
@@ -134,4 +134,3 @@ python scripts/collect_aircraft_images.py \
 ```
 
 Agents can do multiple passes with different type lists or higher `--max-queries-per-type` for hard targets. They should not increase concurrency against Wikimedia.
-

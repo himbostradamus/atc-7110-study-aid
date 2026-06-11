@@ -34,6 +34,7 @@ const LEARNER_PROGRESS_KEYS = [
   "atc_mistake_queue_v1",
   FLASHCARD_MEMORY_KEY,
 ];
+const LEARNER_PROGRESS_EXPORT_TYPE = "atc-7110-study-progress";
 
 function loadMapViewState() {
   try {
@@ -270,7 +271,7 @@ function buildAircraftImageCards(images, reviewState, aircraftCards) {
       const facts = replaceWeakAircraftModelFact(aircraftCard?.back || image.manufacturer_model || "", modelLabel);
       return {
         id: `aircraft-image:${aircraftImageKey(image)}`,
-        para_id: "JO 7360.1J",
+        para_id: "JO 7360.1K",
         para_title: "Aircraft Image Recognition",
         front: "Identify this aircraft type/designator.",
         back: `${image.type_designator}\n${facts}`,
@@ -483,7 +484,7 @@ function parseAircraftFacts(card) {
     imageTitle: cleanAircraftFact((factPieces.find((piece) => /^image:/i.test(piece)) || "").replace(/^image:\s*/i, "")),
     license: cleanAircraftFact((factPieces.find((piece) => /^license:/i.test(piece)) || "").replace(/^license:\s*/i, "")),
     credit: cleanAircraftFact((factPieces.find((piece) => /^credit:/i.test(piece)) || "").replace(/^credit:\s*/i, "")),
-    source: factPieces.find((piece) => /^jo\s*7360/i.test(piece)) || "JO 7360.1J Appendix A",
+    source: factPieces.find((piece) => /^jo\s*7360/i.test(piece)) || "JO 7360.1K Appendix A",
   };
 }
 
@@ -554,7 +555,7 @@ function aircraftFlagPayload(card, promptMode) {
     activityId: `flashcard:${card?.id || `${facts.identifier}:${promptMode}`}`,
     activityType: "aircraft_flashcard",
     activityLabel: "Aircraft flashcard",
-    paraId: card?.para_id || "JO 7360.1J",
+    paraId: card?.para_id || "JO 7360.1K",
     paraTitle: card?.para_title || "Aircraft Type Designators",
     itemText: `${promptMode}: ${promptMode === "spoken" ? facts.spokenName : promptMode === "image" ? card?.image_alt || "aircraft image" : facts.identifier}`,
     correctAnswer: [
@@ -564,7 +565,7 @@ function aircraftFlagPayload(card, promptMode) {
       facts.cwt ? `CWT ${facts.cwt}` : null,
       facts.srs ? `SRS ${facts.srs}` : null,
     ].filter(Boolean).join(" · "),
-    explanation: "Aircraft recognition flashcard sourced from JO 7360.1J metadata.",
+    explanation: "Aircraft recognition flashcard sourced from JO 7360.1K metadata.",
     sourceUrl: card?.source_url || null,
     flaggedAt: new Date().toISOString(),
   };
@@ -1161,7 +1162,7 @@ function FlashcardDeck({ cards, sectionLabel, onBack, initialOptions = {} }) {
                 letterSpacing: ".04em",
               }}
             >
-              {displayCard.source_label?.startsWith("FAA JO 7360") ? "JO 7360.1J ↗" : "FAA Source ↗"}
+              {displayCard.source_label?.startsWith("FAA JO 7360") ? "JO 7360.1K ↗" : "FAA Source ↗"}
             </a>
           )}
         </span>
@@ -2519,6 +2520,67 @@ export default function App() {
     window.location.reload();
   }
 
+  function handleExportLearnerProgress() {
+    const data = {};
+    LEARNER_PROGRESS_KEYS.forEach((key) => {
+      const value = localStorage.getItem(key);
+      if (value !== null) data[key] = value;
+    });
+    const payload = {
+      type: LEARNER_PROGRESS_EXPORT_TYPE,
+      version: 1,
+      exported_at: new Date().toISOString(),
+      data,
+    };
+    const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], {
+      type: "application/json",
+    });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = `atc-study-progress-${new Date().toISOString().slice(0, 10)}.json`;
+    anchor.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function handleImportLearnerProgress() {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = "application/json,.json";
+    input.onchange = async () => {
+      const file = input.files?.[0];
+      if (!file) return;
+      try {
+        const payload = JSON.parse(await file.text());
+        if (
+          payload?.type !== LEARNER_PROGRESS_EXPORT_TYPE
+          || payload?.version !== 1
+          || !payload?.data
+          || typeof payload.data !== "object"
+          || Array.isArray(payload.data)
+        ) {
+          throw new Error("This is not a supported ATC Study Aid progress export.");
+        }
+        const confirmed = window.confirm(
+          "Import this learner progress and replace progress currently stored in this browser?",
+        );
+        if (!confirmed) return;
+        LEARNER_PROGRESS_KEYS.forEach((key) => localStorage.removeItem(key));
+        LEARNER_PROGRESS_KEYS.forEach((key) => {
+          const value = payload.data[key];
+          if (typeof value === "string") {
+            JSON.parse(value);
+            localStorage.setItem(key, value);
+          }
+        });
+        window.location.reload();
+      } catch (error) {
+        window.alert(error?.message || "Could not import learner progress.");
+      }
+    };
+    input.click();
+  }
+
   function resolveReturnScreen() {
     if (activeOrigin === "focus") return "focus";
     if (activeOrigin === "section") return "section";
@@ -2735,6 +2797,8 @@ export default function App() {
       onOpenFocus={() => handleOpenFocus("map")}
       onOpenReview={staticDeploy ? null : () => setScreen("review")}
       onResetProgress={handleResetLearnerProgress}
+      onExportProgress={handleExportLearnerProgress}
+      onImportProgress={handleImportLearnerProgress}
       aircraftCardCount={aircraftRecognitionCards.length}
       aircraftCards={aircraftRecognitionCards}
       aircraftImageCandidateCount={staticDeploy ? 0 : aircraftImages.length}
