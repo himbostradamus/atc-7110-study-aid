@@ -34,3 +34,12 @@ python scripts/validate_question_authoring_batch.py \
 Warnings require judgment; errors must be resolved. The main process will audit
 cross-format duplication, answer cues, source fidelity, and coverage before
 publishing staged content.
+
+Monitor the complete run with:
+
+```bash
+python scripts/check_content_expansion_agents.py
+```
+
+Use `--fail-incomplete` in automation when every chapter must be stopped,
+nonempty, and validator-clean before the next stage begins.
