@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "audit_type": "content_expansion_chapter_quality",
+  "chapter": 12,
+  "pass": 1,
+  "verdict": "safe_with_fixes",
+  "source_batch": "backend/app/data/content_expansion_staging/chapter_12_pass_01.json",
+  "reviewed_item_paths": [
+    "questions.12-1-1.items[0]",
+    "questions.12-1-2.items[0]",
+    "questions.12-1-2.items[1]",
+    "questions.12-1-2.items[2]",
+    "questions.12-1-2.items[3]",
+    "questions.12-1-3.items[0]",
+    "questions.12-1-4.items[0]",
+    "questions.12-1-5.items[0]",
+    "questions.12-1-5.items[1]",
+    "questions.12-1-6.items[0]",
+    "questions.12-1-7.items[0]",
+    "questions.12-1-7.items[1]",
+    "activities.12-1-1.items[0]",
+    "activities.12-1-2.items[0]",
+    "activities.12-1-3.items[0]",
+    "activities.12-1-4.items[0]",
+    "activities.12-1-5.items[0]",
+    "activities.12-1-7.items[0]",
+    "flashcards.12-1-1.items[0]",
+    "flashcards.12-1-2.items[0]",
+    "flashcards.12-1-2.items[1]",
+    "flashcards.12-1-3.items[0]",
+    "flashcards.12-1-5.items[0]",
+    "flashcards.12-1-6.items[0]",
+    "flashcards.12-1-7.items[0]"
+  ],
+  "summary": {
+    "overall": "The Chapter 12 staging batch is well-executed: source fidelity is consistently correct across all 25 items, the prior remediation guidance (paragraph-location scaffolding removal, answer shuffling, trivia elimination) has been applied thoroughly, and no item teaches a false or unsafe procedure. One major finding flags a fill_blank item whose answer is grammatically forced ('not'), which fails to test operational knowledge. Several minor findings address answer-length cueing, ambiguous distractor labeling, and cross-format duplication within the batch. The batch is safe to publish once the major finding is resolved.",
+    "strengths": [
+      "No paragraph-location scaffolding remains in any stem — all stems establish operational context as required by remediation guidance.",
+      "All answer keys are source-faithful with correct minima, phraseology, and procedural conditions.",
+      "MC answer positions are well-distributed across the question set (positions 1-4 all represented).",
+      "Explanations consistently address the strongest misconception rather than merely restating the correct answer.",
+      "Canadian-U.S. procedural differences are prominently highlighted in explanations where applicable (night SVFR, Class F, 1,000-on-top).",
+      "Scenario-based activities test multi-condition decision-making (Class B airspace restriction on 1,000-on-top; alternate radio-failure instructions override; helicopter SVFR minimum with controller-on-duty criteria)."
+    ],
+    "patterns": [
+      "Single-word fill_blank items for operationally significant terms ('formally,' 'IFR,' 'prior,' 'higher,' '10') are narrow but justified for prescribed minima and procedural keywords. One exception: the 'not' fill_blank is grammatically forced and fails to test understanding.",
+      "One MC item exhibits answer-length cueing where the correct answer is verbatim source text conspicuously longer than all distractors.",
+      "Two items within the staging batch test the same fact (SVFR time-period specification) in different formats, creating weak internal duplication.",
+      "One activity has two answer choices with identical labels ('Vertical separation') distinguished only by implementation details in trailing clauses.",
+      "Flashcard scope is consistently well-bounded — each card targets one coherent concept except where the border-crossing card legitimately pairs trigger and timing as a required sequence."
+    ]
+  },
+  "findings": [
+    {
+      "item_path": "questions.12-1-6.items[0]",
+      "para_id": "12-1-6",
+      "severity": "major",
+      "category": "educational_value",
+      "problem": "The fill_blank stem reads 'In Canadian airspace, do _____ authorize parachute jumping without prior permission from the appropriate Canadian authority.' The blank is grammatically forced: 'not' is the only word that completes 'do _____ authorize' as a grammatical English sentence. A student with zero knowledge of Canadian parachute-jumping rules can fill in 'not' from English grammar alone. The item tests grammar, not the absolute prohibition, the non-waivable nature of the prior-permission requirement, or the Ministry of Transport's role. This is a meaningless rote task.",
+      "source_basis": "12-1-6 body: 'Do not authorize parachute jumping without prior permission from the appropriate Canadian authority.' The word 'not' carries the prohibition but the fill_blank format with a grammatically predetermined answer nullifies the item's testing value.",
+      "recommended_action": "Rewrite as a multiple_choice question testing the operational rule: e.g., 'A pilot requests parachute-jumping approval in delegated Canadian airspace. No prior permission from any Canadian authority exists. What must the controller do?' with distractors representing plausible but incorrect local-authorization responses. Alternatively, convert to a true_false item that presents a plausible but incorrect statement about when parachute jumping may be authorized locally."
+    },
+    {
+      "item_path": "questions.12-1-2.items[2]",
+      "para_id": "12-1-2",
+      "severity": "minor",
+      "category": "answer_defensibility",
+      "problem": "The correct answer is the full verbatim Class F definition (~36 words): 'Airspace of defined dimensions within which activities must be confined because of their nature, or within which limitations are imposed upon aircraft operations that are not a part of those activities, or both.' Each distractor is 12-21 words. The correct answer is approximately 1.7x longer than the next-longest distractor and 3x longer than the shortest, creating a conspicuous answer-length cue that allows test-wise students to identify the correct answer without understanding the Class F concept.",
+      "source_basis": "12-1-2f defines Class F airspace. The definition is inherently longer than the simplified-but-plausible distractor statements.",
+      "recommended_action": "Trim the correct answer to match distractor length (e.g., 'Airspace of defined dimensions for specific activities, where limitations may be imposed on non-participating aircraft, or both.') while preserving the operational essence. Alternatively, expand the three shorter distractors to comparable length."
+    },
+    {
+      "item_path": "activities.12-1-4.items[0]",
+      "para_id": "12-1-4",
+      "severity": "minor",
+      "category": "answer_defensibility",
+      "problem": "Two answer choices begin with the label 'Vertical separation' — choice 1 ('Vertical separation — hold the climbing aircraft at FL 200 until the other aircraft is no longer a factor, then approve the climb') and choice 4 ('Vertical separation — ensure at least 1,000 feet vertical separation exists between the aircraft throughout the climb by coordinating the timing with the aircraft at FL 210'). Both are labeled as the same separation type, distinguished only by their implementation clauses. Choice 1's implementation (deny the climb) does not actually exercise vertical separation to resolve the request — it defers the climb entirely. The overlapping labels create ambiguity about what the item is actually testing.",
+      "source_basis": "12-1-4: 'Apply a lateral, longitudinal, or vertical separation minimum between aircraft operating in accordance with an IFR or CVFR clearance, regardless of the weather conditions.' The source gives the controller discretion to select any of the three types but does not prescribe implementation details for vertical separation during a climb.",
+      "recommended_action": "Rename the two 'Vertical separation' choices to distinguish them by action: e.g., 'Deny the climb request and maintain the existing vertical separation of 1,000 ft at FL 200 and FL 210' versus 'Manage the climb to FL 220 while ensuring 1,000 ft vertical separation is maintained throughout by sequencing the higher aircraft first.' Avoid identical lead labels."
+    },
+    {
+      "item_path": "flashcards.12-1-7.items[0]",
+      "para_id": "12-1-7",
+      "severity": "minor",
+      "category": "duplication",
+      "problem": "This flashcard ('What additional element must an airport controller include when approving an SVFR request in a Canadian control zone?') tests the same fact as questions.12-1-7.items[0] ('When an airport controller on duty approves an SVFR request in a Canadian control zone, the controller must specify the _____ during which SVFR flight is permitted.') within the same staging batch. The flashcard front is a near paraphrase of the fill_blank stem. Both items test recall of 'period of time' as the required specification. While cross-format testing of the same concept can reinforce learning, having both items in the same pass means the learner encounters two nearly identical prompts targeting the same atomic fact, reducing the marginal learning value of the second encounter.",
+      "source_basis": "12-1-7a: 'If approved, specify the period of time during which SVFR flight is permitted.' Both items test this single-sentence requirement.",
+      "recommended_action": "Retain the fill_blank question (it tests exact recall of a required procedural element) and either remove or re-scope the flashcard to test a different SVFR concept (e.g., the dual-factor approval criterion when no controller is on duty, or the helicopter 1/2-mile minimum)."
+    },
+    {
+      "item_path": "questions.12-1-2.items[1]",
+      "para_id": "12-1-2",
+      "severity": "suggestion",
+      "category": "educational_value",
+      "problem": "The fill_blank tests a single preposition ('prior') in the Class D two-way communications rule. While the timing requirement (prior to entry vs. after entry) is operationally significant, the fill_blank format for a single grammatical function word risks becoming a vocabulary-recognition task rather than a test of understanding the operational timing requirement.",
+      "source_basis": "12-1-2d: 'they must establish two-way communications with the appropriate ATC agency prior to entering the airspace.'",
+      "recommended_action": "Consider converting to a multiple_choice question contrasting Class C, Class D, and Class E VFR entry requirements, or a scenario where a pilot enters Class D airspace before establishing communications and the student must identify the procedural violation."
+    },
+    {
+      "item_path": "questions.12-1-1.items[0]",
+      "para_id": "12-1-1",
+      "severity": "suggestion",
+      "category": "educational_value",
+      "problem": "The fill_blank tests the adverb 'formally' as a qualifier on delegation. The concept (delegation must be formal, not informal) is worth testing, but the single-word blank format provides minimal retrieval depth. The explanation does good work justifying why 'formally' matters operationally, but the item itself is narrow.",
+      "source_basis": "12-1-1 body: 'Where control responsibility within Canadian airspace has been formally delegated to the FAA...'",
+      "recommended_action": "Acceptable as-is if the item set needs a low-difficulty fill_blank for this paragraph. Consider a companion question testing what happens when delegation has NOT been formally made, to test the contrapositive."
+    },
+    {
+      "item_path": "flashcards.12-1-1.items[0]",
+      "para_id": "12-1-1",
+      "severity": "suggestion",
+      "category": "duplication",
+      "problem": "This flashcard ('What Canadian entity formally delegates control responsibility to the FAA for Canadian airspace?' → 'The Transport Canada Aviation Group') tests the same entity name as existing database questions.12-1-1[0] ('Where control responsibility within Canadian airspace has been formally delegated to the FAA by the _____, apply basic FAA procedures...'). The flashcard front is a clean prompt, but the entity name is already tested by a fill_blank question in the database.",
+      "source_basis": "12-1-1 body names the Transport Canada Aviation Group as the delegating entity.",
+      "recommended_action": "Consider replacing with a flashcard that tests a less-redundant retrieval target from 12-1-1, such as the relationship between the exception clause and Canadian-specific procedures ('When FAA procedures conflict with a Chapter 12 Canadian procedure in delegated airspace, which takes precedence and why?')."
+    }
+  ]
+}

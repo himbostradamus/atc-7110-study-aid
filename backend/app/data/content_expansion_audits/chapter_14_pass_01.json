@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "audit_type": "content_expansion_chapter_quality",
+  "chapter": 14,
+  "pass": 1,
+  "verdict": "safe_to_publish",
+  "source_batch": "backend/app/data/content_expansion_staging/chapter_14_pass_01.json",
+  "reviewed_item_paths": [
+    "questions.14-1-3.items[0]",
+    "questions.14-2-1.items[0]",
+    "questions.14-2-1.items[1]",
+    "questions.14-2-2.items[0]",
+    "questions.14-2-3.items[0]",
+    "questions.14-2-4.items[0]",
+    "questions.14-3-3.items[0]",
+    "activities.14-1-3.items[0]",
+    "activities.14-2-1.items[0]",
+    "activities.14-2-2.items[0]",
+    "activities.14-2-3.items[0]",
+    "activities.14-2-4.items[0]",
+    "activities.14-3-1.items[0]",
+    "activities.14-3-3.items[0]",
+    "flashcards.14-1-1.items[0]",
+    "flashcards.14-1-3.items[0]",
+    "flashcards.14-2-1.items[0]",
+    "flashcards.14-2-2.items[0]",
+    "flashcards.14-2-4.items[0]",
+    "flashcards.14-3-3.items[0]"
+  ],
+  "summary": {
+    "overall": "Chapter 14 pass 1 staged batch is source-faithful, well-constructed, and free of critical or major defects. All 20 items use operational scenarios without paragraph-location scaffolding, avoid fill-blank format, and distribute correct-answer positions reasonably across choices. Source fidelity is high across all items — rule citations, minima, phraseology, and procedural sequences match the source packet. The batch covers seven paragraph IDs (14-1-1, 14-1-3, 14-2-1, 14-2-2, 14-2-3, 14-2-4, 14-3-1, 14-3-3) with appropriate breadth across DCL selectable fields, domestic CPDLC operations, and oceanic procedures. Three minor findings and one suggestion are noted; none block publication.",
+    "strengths": [
+      "All stems are operationally self-contained — no paragraph-location scaffolding ('Under 14-X-Y') remains.",
+      "All items use multiple-choice format with plausible, structurally parallel distractors; no fill-blank items are present.",
+      "Source fidelity is uniformly high — rule citations, phraseology, minima, and procedural sequences match the source packet exactly.",
+      "Situation-action activities (A 14-2-3, A 14-3-1, A 14-2-1) integrate multiple sub-paragraphs into realistic multi-factor decision scenarios.",
+      "Flashcards use clear, targeted fronts and include source citations on the back rather than the front.",
+      "Answer-position distribution is reasonably balanced: correct answers appear at positions 0–3 with counts 5, 4, 4, 3 across 14 Q+A items.",
+      "The batch tests both domestic (14-2-x) and oceanic (14-3-x) CPDLC procedures, providing cross-sectional coverage.",
+      "Distractors for phraseology items (Q 14-2-4, Q 14-3-3) use phonetically and structurally similar alternatives, testing precise recall effectively."
+    ],
+    "patterns": [
+      "Cross-format reinforcement: several operational rules appear in question, activity, and flashcard formats (e.g., 14-1-3 SID/NO SID, 14-2-1 vector-off-STAR). While each format serves a distinct purpose, some question-activity pairs test substantially similar decision points with overlapping distractors.",
+      "Scenario quality is consistently high — all items ground abstract rules in concrete operational contexts (named procedures, weather conditions, aircraft state, crew discussions).",
+      "The batch favors difficulty levels 2–3, appropriate for en route CPDLC content that requires operational judgment rather than rote recall.",
+      "No items test 14-2-1(j) (weather deviation PID with climb/descend via), 14-3-1(c) (voice backup requirement), or 14-3-3(b) (CPDLC failure fallback to voice) — these are coverage gaps, not defects."
+    ]
+  },
+  "findings": [
+    {
+      "item_path": "activities.14-2-4.items[0]",
+      "para_id": "14-2-4",
+      "severity": "minor",
+      "category": "scenario_cue",
+      "problem": "The scenario preamble states 'Another controller says the WILCO response via CPDLC satisfies the concurrence requirement,' which directly voices the correct answer. The student only needs to identify which choice matches the preamble rather than reason from the source rule. This reduces the assessment value of an otherwise well-constructed scenario.",
+      "source_basis": "14-2-4(b)(1): the WILCO response satisfies the 5-7-2(b) concurrence requirement for speed assignments at or above FL390.",
+      "recommended_action": "Rephrase the second controller's position more neutrally — e.g., 'Another controller says CPDLC responses are treated as equivalent to voice acknowledgments for concurrence purposes' — so the student must evaluate both positions rather than matching words."
+    },
+    {
+      "item_path": "questions.14-2-3.items[0]",
+      "para_id": "14-2-3",
+      "severity": "minor",
+      "category": "duplication",
+      "problem": "The staged question tests the same operational rule as the existing curated question 'Under 14-2-3, what must a controller do if the CPDLC system fails to provide a necessary automated altimeter setting to an aircraft?' The staged version adds operational context (FL350, standard handoff, above FL180) and removes paragraph scaffolding, which is a quality improvement. However, both items test the identical decision point (controller must manually issue altimeter per Chapter 2, Section 7), and publishing both would create near-duplicate coverage.",
+      "source_basis": "14-2-3(a): if CPDLC system fails to provide automated altimeter, controller must issue altimeter per Chapter 2, Section 7.",
+      "recommended_action": "Either retire the older curated question in favor of this improved staged version, or differentiate the staged item by testing a related but distinct aspect (e.g., the FDB abnormal indication notification, or the two specific trigger conditions for automated altimeters)."
+    },
+    {
+      "item_path": "activities.14-1-3.items[0]",
+      "para_id": "14-1-3",
+      "severity": "minor",
+      "category": "duplication",
+      "problem": "The staged activity and staged question for 14-1-3 both test the same rule (controller must either select a SID or NO SID when none is filed/assigned). The question asks 'Is this permitted?' (knowledge) and the activity asks 'How should the controller handle Selectable Field 1?' (application). While the cognitive level differs, the correct answers are semantically equivalent and two of four distractors in the activity closely mirror distractors in the question.",
+      "source_basis": "14-1-3(a)(1)(c): controller must either select a SID or select NO SID option.",
+      "recommended_action": "Consider consolidating into a single item, or revise the activity to test a different 14-1-3 sub-paragraph (e.g., Field 2 Transition options, Field 3 Climb Out constraints, or Field 4 CLIMB VIA conditions) to improve paragraph coverage within the batch."
+    },
+    {
+      "item_path": "flashcards.14-2-4.items[0]",
+      "para_id": "14-2-4",
+      "severity": "suggestion",
+      "category": "card_load",
+      "problem": "The card asks students to recall nine meteorological abbreviations from JO 7340.2 in a single retrieval. While these abbreviations form a coherent set and are appropriately tested together (controllers must know them as a group for weather advisory composition), nine items is a high cognitive load for a single flashcard review pass.",
+      "source_basis": "Note to 14-2-4(a): lists Extreme, Severe, Heavy, Moderate, Light, Turbulence, Continuous, Occasional, Intermittent with their abbreviations.",
+      "recommended_action": "Consider splitting into two cards (e.g., severity descriptors and character descriptors) or accepting the current card as-is given the coherent-set justification. No change required before publication."
+    }
+  ]
+}

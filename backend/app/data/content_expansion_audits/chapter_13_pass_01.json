@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "audit_type": "content_expansion_chapter_quality",
+  "chapter": 13,
+  "pass": 1,
+  "verdict": "safe_with_fixes",
+  "source_batch": "backend/app/data/content_expansion_staging/chapter_13_pass_01.json",
+  "reviewed_item_paths": [
+    "questions.13-1-1.items[0]",
+    "questions.13-1-2.items[0]",
+    "questions.13-1-5.items[0]",
+    "questions.13-1-5.items[1]",
+    "questions.13-1-8.items[0]",
+    "questions.13-1-8.items[1]",
+    "questions.13-2-1.items[0]",
+    "questions.13-2-2.items[0]",
+    "questions.13-2-2.items[1]",
+    "questions.13-2-2.items[2]",
+    "questions.13-2-4.items[0]",
+    "questions.13-2-4.items[1]",
+    "activities.13-1-2.items[0]",
+    "activities.13-2-3.items[0]",
+    "activities.13-2-5.items[0]",
+    "flashcards.13-1-1.items[0]",
+    "flashcards.13-1-5.items[0]",
+    "flashcards.13-1-9.items[0]",
+    "flashcards.13-1-13.items[0]",
+    "flashcards.13-2-2.items[0]",
+    "flashcards.13-2-4.items[0]",
+    "flashcards.13-2-6.items[0]"
+  ],
+  "summary": {
+    "overall": "Chapter 13 pass 1 staging is source-accurate with no critical rule or phraseology errors. All 22 items correctly reflect FAA JO 7110.65BB content. The batch successfully incorporates prior remediation guidance: no paragraph-location scaffolding appears, no fill-blank format persists, and correct-answer position randomization is well distributed. The primary quality issues are an answer-length cue in one activity, a minor citation omission in one flashcard, and close cross-format duplication for the CPDLC message-set preference that adds little beyond the existing flashcard. One activity has a conspicuous answer-length disparity (correct answer approximately double the distractor length) that warrants shortening. One flashcard (13-1-13 GPD prohibitions) is dense with nine distinct recall elements across three subparagraphs on a single back. All other items are publication-ready.",
+    "strengths": [
+      "Zero paragraph-location scaffolding across all 22 items—prior remediation guidance was fully adopted",
+      "No fill-blank format remains; all items use multiple choice with plausible distractors",
+      "Correct-answer position distribution is well randomized (positions 1–4: 4, 4, 4, 3 for questions+activities)",
+      "All operational facts match source text; no rule, phraseology, minimum, or threshold errors",
+      "Scenario-based framing is used effectively—most questions embed operational context rather than bare fact queries",
+      "Conflicting team-member dialogue in activities provides realistic ambiguous-situational tension",
+      "Explanations consistently cite the correct paragraph and address the strongest misconception in distractor reasoning",
+      "ATOP vs ERAM EDST scope distinctions (terrain, reduced-separation gaps) are correctly tested",
+      "Flashcard fronts are specific retrieval cues with no generic-reference flags ('what is the rule?')",
+      "Prior remediation split of overloaded flashcards and replacement of fill-blank questions was properly applied"
+    ],
+    "patterns": [
+      "Answer-length cues in activities persist as the main format-fit concern: 1 of 3 activities shows conspicuous length disparity (correct ~48 words vs. ~21–23 for distractors)",
+      "Cross-format duplication between questions and flashcards occurs for CPDLC message-set preference (13-2-4) and conflict probe continuing duty (13-2-2)—acceptable for the latter per remediation guidance but thin for the former",
+      "Question stems generally frame operational decisions positively; no negative-stem overuse detected",
+      "Flashcard content density is generally good except for 13-1-13 which packs three subparagraphs and a six-item list on one back",
+      "Existing-content gaps are well targeted: most staged items test concepts not already covered in the existing curriculum for that paragraph"
+    ]
+  },
+  "findings": [
+    {
+      "item_path": "activities.13-1-2.items[0]",
+      "para_id": "13-1-2",
+      "severity": "major",
+      "category": "format_fit",
+      "problem": "Answer-length cue: the correct answer is approximately 48 words across two sentences while all three distractors are single sentences of 21–23 words each. The correct choice reads like a mini-explanation embedded in the answer text rather than a distractor-length choice. This telegraphs the answer independent of operational reasoning.",
+      "source_basis": "13-1-2 NOTE: 'Conflict probe does not account for instances in which greater separation may be needed (e.g., non-standard formations, A380).' The correct answer content is faithfully sourced but the presentation format creates an assessment fairness concern.",
+      "recommended_action": "Trim the correct answer to a single sentence matching distractor length, such as: 'Recognize that conflict probe does not account for non-standard formations requiring greater separation beyond the alert.' Move the operational evaluation clause to the explanation."
+    },
+    {
+      "item_path": "flashcards.13-1-13.items[0]",
+      "para_id": "13-1-13",
+      "severity": "minor",
+      "category": "format_fit",
+      "problem": "Overloaded back: the card front asks for three separate subparagraph prohibitions, and the back lists each with its forbidden applications—including subparagraph (d) which enumerates six specific radar functions. The total retrieval load is approximately nine distinct facts on a single card (3 prohibitions + 6 radar functions), exceeding the 4–5 item guideline.",
+      "source_basis": "13-1-13(b-d) contains three prohibitions: (b) trajectory positions for radar track, (c) trajectory altitude for Mode C, (d) GPD for six radar functions.",
+      "recommended_action": "Split into two cards: (1) GPD position and altitude prohibitions (b-c), and (2) GPD radar function prohibitions (d) with the six-item list. Alternatively, keep as one card but compress the (d) list to a summary phrase like 'six radar functions: ID, position, transfer, separation, correlation, point outs.'"
+    },
+    {
+      "item_path": "flashcards.13-1-9.items[0]",
+      "para_id": "13-1-9",
+      "severity": "minor",
+      "category": "source_fidelity",
+      "problem": "The flashcard cites 'Per 13-1-9(b-d)' for the source reference, but the acknowledgment-timing rule on the back ('Each must be acknowledged only AFTER the appropriate action has been completed') comes from subparagraph (e), not (b-d). The (b-d) reference correctly covers the ACL/DL location mapping but omits the timing rule's source.",
+      "source_basis": "13-1-9(b): IAFDOF acknowledged on ACL. 13-1-9(c): UTM acknowledged on ACL. 13-1-9(d): EDCT acknowledged on DL. 13-1-9(e): 'IAFDOF, UTM, or EDCT coding must be acknowledged only after the appropriate action has been completed.'",
+      "recommended_action": "Change citation to 'Per 13-1-9(b-e).' to include the acknowledgment-timing source paragraph."
+    },
+    {
+      "item_path": "questions.13-2-4.items[1]",
+      "para_id": "13-2-4",
+      "severity": "minor",
+      "category": "educational_coherence",
+      "problem": "This question and flashcard 'flashcards.13-2-4.items[0]' test the identical concept (CPDLC message set preferred over free text because of closure) with nearly identical framing. The question asks 'Is this the preferred approach?' and the flashcard asks 'which is preferred and why?' Both answers state the message set should be used to the extent possible because it ensures proper closure. The question adds little beyond the flashcard's retrieval cue except a minor operational wrapper (routine altitude change).",
+      "source_basis": "13-2-4(a)(5) and NOTE: message set preferred, ensures proper closure of CPDLC exchanges.",
+      "recommended_action": "Consider reframing the question to test a different aspect of CPDLC operations (e.g., when voice is authorized despite CPDLC availability, or the transfer-of-communications procedures in 13-2-4(b)) rather than restating the flashcard's message-set preference."
+    },
+    {
+      "item_path": "questions.13-1-1.items[0]",
+      "para_id": "13-1-1",
+      "severity": "minor",
+      "category": "educational_coherence",
+      "problem": "The question asks 'Which EDST data source enables...' using the singular 'source,' but the correct answer is a compound of four data sources. The singular phrasing could momentarily confuse a student expecting a single answer, though the correct choice resolves this by listing all four together. Minor stem–answer agreement issue.",
+      "source_basis": "13-1-1 body: EDST uses current plan data, forecast winds, aircraft performance characteristics, and track data to derive expected aircraft trajectories.",
+      "recommended_action": "Revise stem to plural: 'Which EDST data sources together enable the system to model the aircraft's future position for this prediction?' or 'What combination of EDST data sources...'"
+    },
+    {
+      "item_path": "activities.13-2-3.items[0]",
+      "para_id": "13-2-3",
+      "severity": "minor",
+      "category": "format_fit",
+      "problem": "Mild answer-length cue: the correct answer is approximately 30 words while distractors are 17–20 words each. Less extreme than the 13-1-2 activity but still introduces a minor telegraphing risk.",
+      "source_basis": "13-2-3(d)(1): queue management by message priority and priority of duties.",
+      "recommended_action": "Trim the correct answer to match distractor length, e.g., 'Prioritize by message priority and duty priority—the red conflict takes precedence as the highest-priority item.'"
+    },
+    {
+      "item_path": "activities.13-2-5.items[0]",
+      "para_id": "13-2-5",
+      "severity": "minor",
+      "category": "format_fit",
+      "problem": "Mild answer-length cue: the correct answer is approximately 35 words while distractors are 20–22 words. The correct answer adds explanatory clauses beyond what is needed for the choice text.",
+      "source_basis": "13-2-5(a-b): pink advisories require further evaluation; zero/positive value means at or close to required spacing.",
+      "recommended_action": "Trim to: 'Conduct further evaluation before approving. A zero value means the aircraft pair is at or close to the required spacing—the clearance is not yet assured to be safe.'"
+    },
+    {
+      "item_path": "flashcards.13-2-2.items[0]",
+      "para_id": "13-2-2",
+      "severity": "suggestion",
+      "category": "educational_coherence",
+      "problem": "This flashcard and 'questions.13-2-2.items[1]' test the same operational concept (continuing separation duty after conflict probe override). Cross-format duplication is explicitly endorsed for 13-2-2(a)(3) content by prior remediation guidance, so this is noted for awareness rather than as a defect.",
+      "source_basis": "13-2-2(a)(3)(b): controllers must continue to ensure separation until overridden conflict is resolved.",
+      "recommended_action": "No action required—cross-format testing of override duties aligns with remediation guidance item 31."
+    },
+    {
+      "item_path": "questions.13-1-5.items[1]",
+      "para_id": "13-1-5",
+      "severity": "suggestion",
+      "category": "educational_coherence",
+      "problem": "The question and existing question 'Under 13-1-5, what must be reviewed when an ACL or DL entry has a Remarks indication?' test the same knowledge point (Remarks field must be reviewed, changes must also be reviewed). The staged version adds an operational wrapper (previous sector made the change) but the retrieval target is identical. Consider whether both questions are needed or whether one can be retired.",
+      "source_basis": "13-1-5(c): Remarks field must be reviewed; changes to Remarks field must also be reviewed.",
+      "recommended_action": "Retain if the staged question replaces the existing simpler version; otherwise flag for deduplication review in the next pass."
+    }
+  ]
+}

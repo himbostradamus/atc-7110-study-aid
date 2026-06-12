@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "audit_type": "content_expansion_chapter_quality",
+  "chapter": 4,
+  "pass": 1,
+  "verdict": "block_publication_pending_fixes",
+  "source_batch": "backend/app/data/content_expansion_staging/chapter_04_pass_01.json",
+  "reviewed_item_paths": [
+    "questions.4-5-2.items[0]",
+    "questions.4-5-6.items[0]",
+    "questions.4-6-1.items[0]",
+    "questions.4-6-4.items[0]",
+    "activities.4-5-6.items[0]",
+    "activities.4-6-4.items[0]",
+    "activities.4-6-7.items[0]",
+    "activities.4-7-9.items[0]",
+    "activities.4-8-5.items[0]",
+    "flashcards.4-1-1.items[0]",
+    "flashcards.4-2-5.items[0]",
+    "flashcards.4-5-1.items[0]",
+    "flashcards.4-5-6.items[0]",
+    "flashcards.4-5-7.items[0]",
+    "flashcards.4-5-8.items[0]",
+    "flashcards.4-6-1.items[0]",
+    "flashcards.4-6-4.items[0]",
+    "flashcards.4-6-6.items[0]",
+    "flashcards.4-6-7.items[0]",
+    "flashcards.4-7-4.items[0]",
+    "flashcards.4-7-4.items[1]",
+    "flashcards.4-7-8.items[0]",
+    "flashcards.4-7-9.items[0]",
+    "flashcards.4-7-10.items[0]",
+    "flashcards.4-7-11.items[0]",
+    "flashcards.4-7-13.items[0]",
+    "flashcards.4-8-4.items[0]",
+    "flashcards.4-8-7.items[0]",
+    "flashcards.4-8-8.items[0]",
+    "flashcards.4-8-10.items[0]"
+  ],
+  "summary": {
+    "overall": "Pass 01 is dramatically improved from pass 00: all activities have full content (zero empty shells), paragraph-location scaffolding is absent from all stems/fronts, flashcard backs carry operational context rather than bare values, and answer-position bias has been corrected. Three blocking findings remain: one critical phraseology error in 4-7-10, and two major source-fidelity errors in questions that misrepresent operative rule text from 4-5-6 and 4-6-4. The 27 clean items are publication-ready; the three flagged items are fixable with targeted text edits.",
+    "strengths": [
+      "All activities have complete prompts, choices, and explanations — the zero-empty-shell defect from pass 00 is fully resolved.",
+      "No paragraph-location references appear in any question stem or flashcard front — the scaffolding pattern is eliminated.",
+      "Flashcard backs include operational context throughout; no bare-value (number-only) backs survive from pass 00.",
+      "Correct answers are distributed across positions — no systematic first-position bias.",
+      "Activity scenarios are operationally rich with specific altitudes, fixes, and multi-factor situations requiring conditional judgment.",
+      "Question 4-5-2 tests the cross-FL410 hemispheric-rule boundary with realistic altitude values, an advanced integration skill.",
+      "Activity 4-6-7 (unmonitored NAVAID) correctly captures the anticipatory-protection concept and tests it with a concrete radial/intrusion scenario."
+    ],
+    "patterns": [
+      "CRITICAL: Flashcard 4-7-10 uses wrong phraseology — \"(frequency) ON FREQUENCY\" instead of the prescribed \"AVAILABLE ON (frequency)\" per 4-7-10b.",
+      "MAJOR: Question 4-5-6 incorrectly states aircraft must be at/above higher MEA upon crossing a fix when no MCA is specified. Source 4-5-6c1 allows climb to begin \"prior to or immediately after passing the fix\" — being level at crossing is not required.",
+      "MAJOR: Question 4-6-4 conflates 4-6-4 general holding-instruction requirements with the 4-6-1b2 charted-pattern exception. For charted patterns, 4-6-1b2 requires only direction and \"as published\" — the fix is omitted from holding instructions when already stated as the clearance limit.",
+      "MINOR pattern: Three flashcards carry imprecise trigger/resource language — 4-6-4 omits two of three trigger conditions for specifying turn direction; 4-7-4 item 0 adds operational restrictions not in the source text; 4-8-10 labels its content as \"five items\" when the fifth is conditional.",
+      "MINOR pattern: Activity 4-5-6 and flashcard 4-5-1 have precision issues — the activity's answer is slightly conservative (6,800 vs. absolute lowest MOCA 6,500), and the flashcard packs the entire vertical-separation hierarchy into one retrieval target.",
+      "Duplication is minimal and constructive: flashcard 4-6-1 is a cross-format reinforcement of the question at 4-6-1 (same concept, different retrieval format), and flashcard 4-7-9 correctly replaces the earlier paragraph-scaffolded version per remediation guidance."
+    ]
+  },
+  "findings": [
+    {
+      "item_path": "flashcards.4-7-10.items[0]",
+      "para_id": "4-7-10",
+      "severity": "critical",
+      "category": "source_fidelity",
+      "problem": "The prescribed phraseology in the flashcard back is wrong. It states \"AIRPORT AWOS/ASOS WEATHER (frequency) ON FREQUENCY\" but the source phraseology at 4-7-10b is \"(Airport) AWOS/ASOS WEATHER AVAILABLE ON (frequency).\" The card uses \"(frequency) ON FREQUENCY\" instead of the prescribed \"AVAILABLE ON (frequency).\" The example in the back — \"AIRPORT AWOS WEATHER ONE TWO EIGHT POINT THREE TWO ON FREQUENCY\" — also omits AVAILABLE and would be non-standard if spoken by a controller.",
+      "source_basis": "Paragraph 4-7-10b phraseology block: \"(Airport) AWOS/ASOS WEATHER AVAILABLE ON (frequency).\" The word AVAILABLE is part of the prescribed phraseology. The card's construction drops AVAILABLE and inserts the frequency value before \"ON FREQUENCY\" instead of after \"AVAILABLE ON.\"",
+      "recommended_action": "Correct the back to: \"AIRPORT AWOS/ASOS WEATHER AVAILABLE ON (frequency). Example: 'AIRPORT AWOS WEATHER AVAILABLE ON ONE TWO EIGHT POINT THREE TWO.'\" This matches the source phraseology exactly."
+    },
+    {
+      "item_path": "questions.4-5-6.items[0]",
+      "para_id": "4-5-6",
+      "severity": "major",
+      "category": "source_fidelity",
+      "problem": "The correct answer and explanation state that the aircraft \"must be at or above the higher MEA upon crossing\" the fix and that \"climb must begin early enough to be level by the fix.\" This contradicts paragraph 4-5-6c1, which states that when no MCA is specified the aircraft must be cleared to begin climb \"prior to or immediately after passing the fix.\" The source explicitly permits beginning the climb immediately after crossing; it does not require the aircraft to already be at the higher MEA when crossing. The answer eliminates the \"immediately after\" option and imposes a more restrictive requirement.",
+      "source_basis": "Paragraph 4-5-6c1: \"If no MCA is specified, prior to or immediately after passing the fix where the higher MEA is designated.\" See FIG 4-5-1. The operative phrase is 'begin climb' — the aircraft starts climbing near the fix, not arrives level at the higher altitude.",
+      "recommended_action": "Revise the correct answer to reflect the source: 'The climb must begin prior to or immediately after crossing RIGEL — the aircraft is not required to be at the higher MEA exactly upon crossing.' Adjust the incorrect distractors accordingly. The explanation should clarify the distinction between 'begin climb' (no-MCA case) and 'cross at or above MCA' (MCA-specified case)."
+    },
+    {
+      "item_path": "questions.4-6-4.items[0]",
+      "para_id": "4-6-4",
+      "severity": "major",
+      "category": "source_fidelity",
+      "problem": "The question asks what must still be specified when a published holding pattern is charted, but the correct answer ('The holding fix and direction of holding from the fix') contradicts paragraph 4-6-1b2, which states that when a charted pattern exists on the assigned procedure or route, controllers \"may omit all holding instructions except the charted holding direction and the statement 'as published.'\" The holding fix is among the elements that may be omitted from the holding instructions for charted patterns. The item conflates 4-6-4's general holding-instruction requirements with 4-6-1b2's charted-pattern exception, producing an answer key that is wrong for the stated scenario.",
+      "source_basis": "Paragraph 4-6-1b2: \"When the assigned procedure or route being flown includes a charted pattern, you may omit all holding instructions except the charted holding direction and the statement 'as published.'\" The fix is the clearance limit and is not part of the holding instructions when a charted pattern exists.",
+      "recommended_action": "Either change the scenario to a non-charted holding pattern (keeping the current answer), or change the correct answer to 'The charted holding direction and the statement \"as published\"' per 4-6-1b2. If the current answer is kept, the para_id should be 4-6-4 alone and the question stem must drop the charted-pattern reference. Alternatively, recognize that the fix is stated as the clearance limit in operations and re-scope the question to ask about what appears in the holding-instruction portion specifically."
+    },
+    {
+      "item_path": "flashcards.4-7-4.items[0]",
+      "para_id": "4-7-4",
+      "severity": "minor",
+      "category": "source_fidelity",
+      "problem": "The back adds operational restrictions not present in the source text: 'Frequency and beacon changes should be avoided entirely during the turn to final, descent, and landing rollout.' Source paragraph 4-7-4a3 only says avoid changes 'during the time the aircraft is making a turn,' and 4-7-4f says avoid after 'an aircraft begins a high altitude approach.' The card combines and extrapolates these into a broader restriction that is not a direct quotation of any single provision.",
+      "source_basis": "Paragraph 4-7-4a3: 'Avoid requiring frequency/radar beacon changes during the time the aircraft is making a turn.' Paragraph 4-7-4f: 'Avoid making frequency/radar beacon changes after an aircraft begins a high altitude approach.' The card back synthesizes these into language about 'turn to final, descent, and landing rollout' which is plausible operationally but not sourced text.",
+      "recommended_action": "Restrict the back to the sourced provisions: 'Below 2,500 feet above the surface. Avoid frequency/beacon changes during turns and after a high altitude approach begins. Changes should be completed before the approach fix or handoff point.'"
+    },
+    {
+      "item_path": "flashcards.4-6-4.items[0]",
+      "para_id": "4-6-4",
+      "severity": "minor",
+      "category": "source_fidelity",
+      "problem": "The back lists only one trigger condition for specifying turn direction ('left turns are to be made') but omits the other two conditions from 4-6-4e: the pilot requests it, or the controller considers it necessary. The front asks 'When must turn direction (left turns) be specified' which focuses the response on left turns, but the back should at minimum acknowledge the full rule.",
+      "source_basis": "Paragraph 4-6-4e: 'Direction of holding pattern turns only if left turns are to be made, the pilot requests it, or you consider it necessary.' The card only covers the first condition.",
+      "recommended_action": "Expand the back to include all three triggers, e.g.: 'Specify direction when left turns are to be made, when the pilot requests it, or when the controller considers it necessary. Standard holding uses right turns, so left-turn patterns require explicit instruction: HOLD (direction) OF (fix) ON (course) LEFT TURNS.'"
+    },
+    {
+      "item_path": "activities.4-5-6.items[0]",
+      "para_id": "4-5-6",
+      "severity": "minor",
+      "category": "answer_defensibility",
+      "problem": "The correct answer states 'at or above 6,800 feet MSL' as the lowest assignable altitude. The absolute regulatory minimum is the MOCA at 6,500 feet MSL (since 300 feet above the floor of controlled airspace computes to 2,300 feet MSL, and the MOCA of 6,500 is the binding constraint). 6,800 feet is an operationally safe assignment but is not the lowest assignable altitude. A controller who correctly calculates the minimum as 6,500 may be confused by the answer, and a student who selects the precise calculation may mark themselves wrong.",
+      "source_basis": "Paragraph 4-5-6a: 'may be cleared below the MEA but not below the MOCA.' MOCA = 6,500. Floor of controlled airspace = 1,200 AGL + 800 MSL = 2,000 MSL; 300 above = 2,300 MSL. Maximum of (MOCA, floor+300) = 6,500. The answer uses 6,800 which is above the absolute minimum.",
+      "recommended_action": "Either change the correct answer to 'at or above 6,500 feet MSL' and adjust the answer text, or rephrase the question to ask for a 'safe and practical' rather than 'lowest' altitude. The explanation should still note that 6,500 is the MOCA (absolute lower limit) and that operational assignments are typically rounded to convenient cardinal values."
+    },
+    {
+      "item_path": "flashcards.4-5-1.items[0]",
+      "para_id": "4-5-1",
+      "severity": "minor",
+      "category": "format_fit",
+      "problem": "The card front asks for the 'complete hierarchy of IFR vertical separation minima from the surface through above FL600.' The back attempts to cover five distinct minima bands in one retrieval target (up to FL410, FL290+ non-RVSM, above FL410 general, oceanic supersonic, military above FL600). This is overloaded for a single flashcard — effective retrieval practice requires one coherent target. Each exception within the hierarchy deserves its own card, or the card should focus on the default minima with cross-references to the exceptions.",
+      "source_basis": "Paragraph 4-5-1 provides five distinct minima across four subparagraphs. Flashcard retrieval practice is most effective when each card targets one operational concept.",
+      "recommended_action": "Split into at least two cards: one for the standard minima (up to FL410: 1,000 ft; above FL410: 2,000 ft; FL290+ non-RVSM: 2,000 ft) and one for the exceptions (oceanic supersonic above FL450: 4,000 ft; military above FL600: 5,000 ft)."
+    },
+    {
+      "item_path": "flashcards.4-5-8.items[0]",
+      "para_id": "4-5-8",
+      "severity": "minor",
+      "category": "source_fidelity",
+      "problem": "The back's phrasing 'EXPECT (higher/lower) AT (fix). Example: \"EXPECT HIGHER AT FIXXX.\" May also be given in miles or minutes...' inverts the source phraseology order. Source 4-5-8 has 'EXPECT HIGHER/LOWER IN (number of miles or minutes) MILES/MINUTES, or AT (fix).' The primary form in the source is distance/time-based, with AT (fix) as the alternative. The card presents AT (fix) as primary.",
+      "source_basis": "Paragraph 4-5-8 phraseology: 'EXPECT HIGHER/LOWER IN (number of miles or minutes) MILES/MINUTES, or AT (fix).' The IN form comes first in the source.",
+      "recommended_action": "Reorder to present the distance/time form first: 'EXPECT HIGHER/LOWER IN (number) MILES/MINUTES, or EXPECT HIGHER/LOWER AT (fix).'"
+    },
+    {
+      "item_path": "flashcards.4-8-10.items[0]",
+      "para_id": "4-8-10",
+      "severity": "minor",
+      "category": "answer_defensibility",
+      "problem": "The front asks for 'five items' but item (e) — missed approach procedures — is conditional ('if considered necessary'). Counting it as a mandatory fifth item is imprecise. The card front would be more accurate asking for the items to specify 'when the pilot is unfamiliar with the procedure' without fixing a count.",
+      "source_basis": "Paragraph 4-8-10 lists items a through e, with item e qualified as 'Missed approach procedures if considered necessary.'",
+      "recommended_action": "Change front to: 'What must be specified in an approach clearance when the pilot is unfamiliar with the procedure?' removing the 'five items' count. The back should note the conditional status of item e."
+    },
+    {
+      "item_path": "flashcards.4-5-6.items[0]",
+      "para_id": "4-5-6",
+      "severity": "suggestion",
+      "category": "explanation_quality",
+      "problem": "The back states the MCA 'provides the minimum crossing altitude that ensures terrain and obstacle clearance during the climb to the higher MEA.' This is operationaly accurate but the card front asks what ATC must ensure, and 'the aircraft must cross the fix at or above the MCA' would be a more direct answer. The terrain-clearance explanation could be part of the back but should follow the operational requirement statement.",
+      "source_basis": "Paragraph 4-5-6c2: 'If a MCA is specified, prior to the fix so as to cross the fix at or above the MCA.'",
+      "recommended_action": "Keep current content but consider restructuring the back to lead with the clear operational requirement and follow with the rationale."
+    },
+    {
+      "item_path": "flashcards.4-2-5.items[0]",
+      "para_id": "4-2-5",
+      "severity": "suggestion",
+      "category": "explanation_quality",
+      "problem": "The front asks 'What effort must be made' but the back states what should be done (return to original route), not what specific effort is involved. The source says 'Every effort should be made' — the key operational point is that effort is required, not just that the outcome should occur. The card would be stronger if it distinguished the obligation to make the effort from the desired outcome.",
+      "source_basis": "Paragraph 4-2-5d note: 'Every effort should be made to ensure the aircraft is returned to the original filed flight plan/altitude as soon as conditions warrant.'",
+      "recommended_action": "Minor front-back alignment: change front to 'After a tactical route/altitude amendment resolves a conflict for an NRP aircraft, what should ATC do?' and keep the current back."
+    },
+    {
+      "item_path": "flashcards.4-7-11.items[0]",
+      "para_id": "4-7-11",
+      "severity": "suggestion",
+      "category": "format_fit",
+      "problem": "The card front asks for 'six items' but items 4, 5, and 6 in the source are alternatives depending on operation type (instrument approach, SVFR, or contact approach). Only items 1-3 are universal. Treating them as a flat six-item list blurs the conditional structure of the source. A student asked to recall 'six items' would not know when to use item 4 vs. 5 vs. 6.",
+      "source_basis": "Paragraph 4-7-11a: items 1-3 are universal, item 4 is for instrument approaches, item 5 is for SVFR, item 6 is for contact approaches. The structure is 3 universal items plus one of three condition-dependent items.",
+      "recommended_action": "Restructure the card to reflect the conditional structure: '1-3: Aircraft ID, type, ETA. Plus, depending on operation: instrument approach type, or SVFR entry direction/restrictions, or contact approach position.'"
+    }
+  ]
+}

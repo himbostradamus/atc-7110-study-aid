@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "audit_type": "content_expansion_chapter_quality",
+  "chapter": 9,
+  "pass": 1,
+  "verdict": "safe_with_fixes",
+  "source_batch": "backend/app/data/content_expansion_staging/chapter_09_pass_01.json",
+  "reviewed_item_paths": [
+    "questions.9-1-1.items[0]",
+    "questions.9-1-2.items[0]",
+    "questions.9-2-1.items[0]",
+    "questions.9-2-12.items[0]",
+    "questions.9-2-14.items[0]",
+    "questions.9-2-16.items[0]",
+    "questions.9-2-17.items[0]",
+    "questions.9-3-2.items[0]",
+    "questions.9-3-4.items[0]",
+    "questions.9-5-1.items[0]",
+    "questions.9-7-2.items[0]",
+    "activities.9-1-2.items[0]",
+    "activities.9-2-14.items[0]",
+    "activities.9-2-15.items[0]",
+    "activities.9-2-21.items[0]",
+    "activities.9-3-1.items[0]",
+    "activities.9-6-1.items[0]",
+    "activities.9-7-4.items[0]",
+    "flashcards.9-1-1.items[0]",
+    "flashcards.9-1-1.items[1]",
+    "flashcards.9-1-2.items[0]",
+    "flashcards.9-1-2.items[1]",
+    "flashcards.9-1-3.items[0]",
+    "flashcards.9-2-1.items[0]",
+    "flashcards.9-2-12.items[0]",
+    "flashcards.9-2-14.items[0]",
+    "flashcards.9-2-15.items[0]",
+    "flashcards.9-2-18.items[0]",
+    "flashcards.9-2-20.items[0]",
+    "flashcards.9-2-21.items[0]",
+    "flashcards.9-2-3.items[0]",
+    "flashcards.9-3-1.items[0]",
+    "flashcards.9-3-3.items[0]",
+    "flashcards.9-4-3.items[0]",
+    "flashcards.9-6-1.items[0]",
+    "flashcards.9-7-3.items[0]"
+  ],
+  "summary": {
+    "overall": "The batch is substantially clean following prior remediation. Paragraph-location scaffolding has been fully removed from all question stems and flashcard fronts. Correct-answer position is reasonably distributed across items. Answer-length cues are absent from questions and mild in a few activities. No single-choice fill-in-the-blanks, no reverse-card malformations, and no regulation-number trivia appear. Source fidelity is high across all 36 items. One major finding requires attention: an activity has two answer choices that are operationally near-identical, differing only in appended rationale, creating genuine ambiguity for the student. Several minor findings cover cross-format duplications, interpretive glosses on flashcard backs, and an instruction-question mismatch on one activity.",
+    "strengths": [
+      "All paragraph-location scaffolding ('Under 9-X-Y') stripped from stems and flashcard fronts — every item opens with an operational scenario or concept-driven prompt.",
+      "Source fidelity is accurate across all 36 items; no factual misrepresentations of minima, lists, triggers, exceptions, or prescribed phraseology.",
+      "Answer positions are reasonably shuffled — correct answers appear in all four positions for both questions (3/3/3/2) and activities (2/2/1/2).",
+      "No single-choice fill-in-the-blank items, no regulation-number trivia questions, and no malformed reverse flashcards in the batch.",
+      "Flashcard backs are concise with 1–3 discrete facts; no overloaded cards with seven-item recall lists."
+    ],
+    "patterns": [
+      "Cross-format duplication: two flashcard items (9-2-14, 9-2-15) test the exact same operational fact as their corresponding question or activity without adding a distinct retrieval direction.",
+      "Flashcard-back glosses: several flashcard backs add interpretive or comparative commentary that extends beyond strict source text (9-1-2[0], 9-2-20[0], 9-3-3[0], 9-7-3[0]). While pedagogically reasonable, these glosses are not source-attributed and could drift from the regulation's precise language.",
+      "Instruction-question mismatch: activity 9-2-14 uses the generic instruction 'What should you do?' but the actual question is 'Was the trainee's vectoring action appropriate?' — the instruction frame doesn't match the judgment question."
+    ]
+  },
+  "findings": [
+    {
+      "item_path": "activities.9-1-2.items[0]",
+      "para_id": "9-1-2",
+      "severity": "major",
+      "category": "answer_defensibility",
+      "problem": "Two answer choices are operationally near-identical and create genuine ambiguity. Choice A ('Ask the flight inspection aircraft to deviate from its planned approach to avoid the emergency aircraft') describes the same operational action as Choice D ('Ask the flight inspection aircraft to deviate from the planned action, because an emergency situation requires it'). The only distinction is that D appends the emergency-justification language while A describes the specific maneuver. A student who understands that the emergency exception applies can rationally select either choice — both describe asking the flight inspection aircraft to deviate. The marked-correct choice includes rationale language rather than a different operational action, making this a wording-pattern cue rather than a knowledge discriminator.",
+      "source_basis": "9-1-2a: 'Do not ask the pilot to deviate from his/her planned action except to preclude an emergency situation.' Both choices A and D describe asking the pilot to deviate in the context of an emergency — they differ only in appended rationale.",
+      "recommended_action": "Rewrite choices so they test genuinely different operational actions. Example distractors: (a) 'Allow the recorded run to continue and vector the emergency aircraft around the flight inspection path' (correct if radar and altitude permit; test against 9-1-2c flight path adjustment authority), (b) 'Terminate the recorded run without pilot coordination', (c) 'Vector the flight inspection aircraft off the approach without pilot consultation.' The correct choice should describe the controller action concisely without embedded justification: 'Ask the flight inspection aircraft to deviate because an emergency requires it.'"
+    },
+    {
+      "item_path": "flashcards.9-2-14.items[0]",
+      "para_id": "9-2-14",
+      "severity": "minor",
+      "category": "duplication",
+      "problem": "This flashcard ('What authority does the originating ARTCC have regarding the 16-hour advance supersonic flight plan requirement?') tests the identical operational fact as question 9-2-14 ('Can the originating ARTCC waive the 16-hour advance filing requirement?'). Both items ask about the originating ARTCC's waiver authority with no difference in retrieval direction or depth. Cross-format reinforcement is valuable, but verbatim concept overlap without a distinct retrieval angle reduces the learning value of having both items.",
+      "source_basis": "9-2-14a: 'The originating ARTCC, where the flight plan is first filed, may waive the 16-hour advance filing requirement.'",
+      "recommended_action": "Differentiate the flashcard's retrieval target. The question already tests the yes/no waiver authority. The flashcard could test a different aspect such as the advance filing time itself ('What is the minimum advance filing time for supersonic flight plans?') or the route fix requirement ('How many high altitude fixes must a supersonic flight plan include per ARTCC area?')."
+    },
+    {
+      "item_path": "flashcards.9-2-15.items[0]",
+      "para_id": "9-2-15",
+      "severity": "minor",
+      "category": "duplication",
+      "problem": "This flashcard ('When must the special use frequency NOT be assigned to single-pilot jet formations at night or in IMC?') tests the same operational fact as activity 9-2-15 ('Is the trainee's frequency assignment correct?'). Both test the prohibition against assigning the special use frequency when aircraft will operate in airspace assigned for special military operations. The retrieval direction is the same in both formats.",
+      "source_basis": "9-2-15c: 'Do not assign the special use frequency to the aircraft in subparagraph a1 above, when they will operate in airspace assigned for special military operations.'",
+      "recommended_action": "Differentiate the flashcard to cover a distinct retrieval target. Options: test which aircraft types are eligible for the special use frequency (a1 list), or when the frequency may be assigned as backup (9-2-15b), or when receiver aircraft leave the special use frequency for tanker comms (approximately 200 miles from ARCP)."
+    },
+    {
+      "item_path": "flashcards.9-1-1.items[1]",
+      "para_id": "9-1-1",
+      "severity": "minor",
+      "category": "source_fidelity",
+      "problem": "Flashcard back says operations 'are pre-coordinated with appropriate facilities.' The source text says 'These flights are coordinated with appropriate facilities before departure.' 'Pre-coordinated' is a reasonable paraphrase but introduces a word not in the source. The distinction between 'coordinated before departure' and 'pre-coordinated' is subtle and unlikely to affect retrieval, but the flashcard back should hew to source language.",
+      "source_basis": "9-1-1 Note 2: 'These flights are coordinated with appropriate facilities before departure.'",
+      "recommended_action": "Change 'pre-coordinated' to 'coordinated before departure' to match source language exactly."
+    },
+    {
+      "item_path": "flashcards.9-1-2.items[0]",
+      "para_id": "9-1-2",
+      "severity": "minor",
+      "category": "source_fidelity",
+      "problem": "Flashcard back includes the interpretive gloss 'The clearance does not need to be instantaneous, but it must be issued as soon as operational circumstances reasonably permit.' The source text states only 'as soon as practicable' without elaboration. The gloss is a defensible interpretation but is not source-grounded and could be contested in graded recall.",
+      "source_basis": "9-1-2a: 'Clear the aircraft according to pilot request as soon as practicable.'",
+      "recommended_action": "Trim the back to: 'As soon as practicable — clear according to pilot request without unnecessary delay.' This retains the operational meaning without adding unsourced interpretive text."
+    },
+    {
+      "item_path": "flashcards.9-2-20.items[0]",
+      "para_id": "9-2-20",
+      "severity": "minor",
+      "category": "format_fit",
+      "problem": "Flashcard front asks only about the altitude block, but the back appends 'The maneuver is performed at or above FL 250 along a 60 NM segment.' These are related but unasked supplementary facts. A student retrieving on the altitude-block prompt may be confused by the additional FL 250 and 60 NM details that were not cued by the front.",
+      "source_basis": "9-2-20 note: 'Altitude variations must not exceed plus or minus 1,000 feet of the assigned flight level; i.e., confined within a 2,000 foot block.' FL 250 and 60 NM are from the same note but were not asked.",
+      "recommended_action": "Either remove the FL 250 and 60 NM details from the back (keeping only the altitude block answer), or broaden the front to cue the full maneuver profile: 'What are the altitude block, minimum flight level, and segment length for an evasive action maneuver?'"
+    },
+    {
+      "item_path": "flashcards.9-3-3.items[0]",
+      "para_id": "9-3-3",
+      "severity": "minor",
+      "category": "source_fidelity",
+      "problem": "Flashcard back adds 'This informs the pilot that the area is ATC-assigned, not standard special use airspace.' This is a reasonable explanation but is not sourced from 9-3-3. The source only contains the prescribed phraseology without describing its purpose.",
+      "source_basis": "9-3-3 phraseology: 'and if the airspace is an ATCAA, (name of ATCAA) IS ATC ASSIGNED AIRSPACE.'",
+      "recommended_action": "Remove the interpretive sentence or explicitly mark it as explanation: 'This informs the pilot the area is ATC-assigned airspace, not standard SUA.' Minor adjustment — the concept is correct but the phrasing should not be presented as source text."
+    },
+    {
+      "item_path": "flashcards.9-7-3.items[0]",
+      "para_id": "9-7-3",
+      "severity": "minor",
+      "category": "source_fidelity",
+      "problem": "Flashcard back adds a comparative statement: 'This is a more flexible standard than Class A/B/C, where jumping is authorized only within designated airspace.' This comparison is a reasonable pedagogical inference but is not stated in 9-7-3. Presenting it as part of the answer conflates source content with author commentary.",
+      "source_basis": "9-7-3a: 'Authorize parachute jumping with respect to known or observed traffic.' The Class A/B/C comparison is not in the source paragraph.",
+      "recommended_action": "Remove the comparative clause or restructure: back states the source rule first ('Authorize with respect to known or observed traffic'), then optionally adds a separate note line: '(Note: Class A/B/C requires authorization only within designated airspace.)'"
+    },
+    {
+      "item_path": "activities.9-2-14.items[0]",
+      "para_id": "9-2-14",
+      "severity": "minor",
+      "category": "format_fit",
+      "problem": "The instruction field reads 'What should you do?' but the question_text is 'Was the trainee's vectoring action appropriate?' The generic 'What should you do?' instruction does not match the trainee-judgment framing. The student is asked to evaluate someone else's action, not select their own.",
+      "source_basis": "N/A — format consistency issue, not a source fidelity issue.",
+      "recommended_action": "Change instruction to match the question framing: 'Is the trainee's action correct?' or change the question to an action directive: 'What should you do about the trainee's vector?'"
+    },
+    {
+      "item_path": "questions.9-1-1.items[0]",
+      "para_id": "9-1-1",
+      "severity": "suggestion",
+      "category": "context",
+      "problem": "The scenario anchors the 'otherwise agreed to' exception on a specific mechanism — the operations supervisor relay. The source text uses the broader 'unless otherwise agreed to' without prescribing the coordination channel. A student might incorrectly infer that only operations-supervisor relays satisfy the exception, when any 'otherwise agreed to' arrangement qualifies.",
+      "source_basis": "9-1-1: 'Unless otherwise agreed to, maintain direct contact with the pilot...'",
+      "recommended_action": "Consider adding a sentence to the explanation clarifying that 'otherwise agreed to' encompasses any pre-coordinated alternative method, not only an operations supervisor relay. This prevents over-indexing on the scenario's specific mechanism."
+    }
+  ]
+}

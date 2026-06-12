@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "audit_type": "content_expansion_chapter_quality",
+  "chapter": 11,
+  "pass": 1,
+  "verdict": "safe_to_publish",
+  "source_batch": "backend/app/data/content_expansion_staging/chapter_11_pass_01.json",
+  "reviewed_item_paths": [
+    "questions.11-1-2.items[0]",
+    "questions.11-1-2.items[1]",
+    "questions.11-1-2.items[2]",
+    "questions.11-1-3.items[0]",
+    "activities.11-1-2.items[0]",
+    "activities.11-1-3.items[0]",
+    "flashcards.11-1-2.items[0]",
+    "flashcards.11-1-3.items[0]"
+  ],
+  "summary": {
+    "overall": "All eight staged items are source-faithful, test genuine operational concepts, and provide plausible distractors with grounded explanations. No critical or major findings were identified. The batch reflects the remediation guidance from prior passes: stems are self-contained without paragraph-number scaffolding, no fill-in-the-blank format is used, and all items use multiple-choice or situation_action formats with operational distractors. The three question/activity pairs in the batch show mild cross-format duplication of source paragraphs that could be tightened in future passes, but each pair uses distinct operational scenarios that provide complementary application value.",
+    "strengths": [
+      "All stems are self-contained — no paragraph-location scaffolding. This directly applies prior remediation guidance.",
+      "All distractors represent plausible operational errors rather than obviously wrong answers. Each distractor has a discernible misconception behind it.",
+      "Explanations consistently cite the controlling source paragraph and address why the strongest distractor is wrong, not merely why the correct answer is right.",
+      "Both situation_action activities present realistic operational scenarios that require rule application rather than recall, continuing a pattern identified as a strength in prior reviews.",
+      "The TBFM duty-comparison question (11-1-2 items[1]) tests a subtle but operationally important facility-type distinction with balanced, parallel distractors.",
+      "The STMCIC briefing must/should question (11-1-2 items[2]) teaches an authentic regulatory-language distinction ('must' vs 'should') that has real operational consequences.",
+      "Flashcard 11-1-2 items[0] correctly distinguishes the STMCIC and OS/CIC enforcement groups — precisely the distinction that prior remediation identified as having been conflated in earlier content.",
+      "The DCT instability flashcard (11-1-3 items[0]) tests a distinct retrieval target (duration of substitute measures) that is not already tested by existing DCT-related flashcards."
+    ],
+    "patterns": [
+      "Cross-format paragraph pairing: Paragraph 11-1-2b1 is tested by both question 11-1-2[0] and activity 11-1-2[0]; the note to 11-1-3 is tested by both question 11-1-3[0] and activity 11-1-3[0]. Each pair uses distinct scenarios (weather vs equipment outage; resequencing vs general accuracy factors), providing scenario diversity but reducing the net information gain per item.",
+      "Correct-answer positional distribution: 2 of 6 question/activity items place the correct answer in the first position. 3 of 6 place it second or later. One activity places it first but with a scenario framing that reduces positional cue salience.",
+      "Answer-length balance: In most items distractors and correct answers are comparable in length. The activity 11-1-3[0] correct answer is noticeably longer (~38 words vs 14-21 for distractors) because it incorporates the full source-language list of impacts to minimize.",
+      "No paragraph-number stems: All 8 items avoid the prior pattern of embedding paragraph references in stems. This is a significant improvement over first-pass content for other chapters."
+    ]
+  },
+  "findings": [
+    {
+      "item_path": "questions.11-1-2.items[0]",
+      "para_id": "11-1-2",
+      "severity": "minor",
+      "category": "distractor_quality",
+      "problem": "The correct answer is placed first (position 0 in the choices array) and is approximately 60% longer than each distractor (30 words vs 17-18 words). First-position placement combined with longer text creates a dual cue that reduces the assessment's ability to measure knowledge independently.",
+      "source_basis": "Per 11-1-2b1, the OS/CIC must keep the TMU and affected sectors apprised of situations or circumstances that may cause congestion or delays. The item tests this rule correctly; the issue is presentation, not content fidelity.",
+      "recommended_action": "Move the correct answer to a later position (e.g., index 2 or 3) and trim or balance distractor length so all choices fall within a similar word-count range."
+    },
+    {
+      "item_path": "questions.11-1-2.items[0]",
+      "para_id": "11-1-2",
+      "severity": "minor",
+      "category": "duplication",
+      "problem": "This question and activity 11-1-2 items[0] both test the same operational rule (11-1-2b1: OS/CIC must keep TMU and affected sectors apprised when situations may cause congestion or delays) with nearly identical correct-answer text. The question uses a weather-forecast trigger; the activity uses an equipment-outage trigger. While the scenarios differ, the rule application and correct-answer formulation are substantively identical, creating cross-format redundancy within the same pass.",
+      "source_basis": "Both items derive from 11-1-2b1. The prior remediation guidance advises: 'Cross-check new items against existing coverage to avoid duplication across formats.'",
+      "recommended_action": "Retain the better-fit format for this rule — the activity's situation_action format provides richer operational context — and replace the question with an item targeting a different 11-1-2 sub-paragraph that lacks current assessment coverage (e.g., 11-1-2c2, personnel keeping OS/CIC and TMU apprised). Alternatively, keep both but ensure the question's correct answer and explanation differ substantively from the activity's."
+    },
+    {
+      "item_path": "activities.11-1-2.items[0]",
+      "para_id": "11-1-2",
+      "severity": "minor",
+      "category": "duplication",
+      "problem": "This activity and question 11-1-2 items[0] both test 11-1-2b1 with substantively identical correct-answer formulations, differing only in the operational trigger scenario (equipment outage vs weather forecast). The cross-format duplication reduces the net learning value per item in the batch.",
+      "source_basis": "Both items derive from 11-1-2b1. The prior remediation guidance advises: 'Cross-check new items against existing coverage to avoid duplication across formats.'",
+      "recommended_action": "See recommendation for questions.11-1-2.items[0]. Retain the activity (stronger format for this operational rule) and replace the question with coverage of a different 11-1-2 sub-paragraph."
+    },
+    {
+      "item_path": "questions.11-1-3.items[0]",
+      "para_id": "11-1-3",
+      "severity": "minor",
+      "category": "duplication",
+      "problem": "This question and activity 11-1-3.items[0] both test the note at 11-1-3 (caution when TBFM metering-time accuracy is affected) with correct answers that share the same core instruction: use caution to minimize impact on surrounding sector traffic, complexity, flight efficiency, and user preferences. The question asks about factors in general; the activity embeds the question in a resequencing scenario. The rule application is substantively the same.",
+      "source_basis": "Both items derive from the note at 11-1-3. The prior remediation guidance advises avoiding unnecessary cross-format duplication.",
+      "recommended_action": "Retain the activity (its scenario provides richer decision-making context) and replace the question with an item targeting a different 11-1-3 sub-paragraph that lacks current assessment coverage (e.g., 11-1-3c, the specific coordination parties when compliance is not possible, or 11-1-3b2, the facility-directive exception mechanism)."
+    },
+    {
+      "item_path": "activities.11-1-3.items[0]",
+      "para_id": "11-1-3",
+      "severity": "minor",
+      "category": "duplication",
+      "problem": "This activity and question 11-1-3.items[0] both test the note at 11-1-3 with substantively identical correct-answer formulations. See the corresponding finding for questions.11-1-3.items[0].",
+      "source_basis": "Both items derive from the note at 11-1-3.",
+      "recommended_action": "Retain the activity and replace the question with coverage of a different 11-1-3 sub-paragraph."
+    },
+    {
+      "item_path": "activities.11-1-3.items[0]",
+      "para_id": "11-1-3",
+      "severity": "suggestion",
+      "category": "distractor_quality",
+      "problem": "The correct answer is 38 words long while distractors range from 14 to 21 words. The correct answer incorporates the full source-language list ('surrounding sector traffic, complexity, flight efficiency, and user preferences') while distractors are single-clause statements. Length alone provides a cue independent of knowledge.",
+      "source_basis": "Per the note at 11-1-3, the full statement is: 'Caution should be used in these situations to minimize impact on surrounding sector traffic and complexity levels, flight efficiencies, and user preferences.' The correct answer faithfully reproduces this list, which is operationally comprehensive but structurally longer than necessary for a distractor-balanced item.",
+      "recommended_action": "Consider trimming the correct answer to a more concise formulation that still captures the operational principle without reproducing every source element, or lengthen distractors with parallel operational detail to balance choice length."
+    },
+    {
+      "item_path": "flashcards.11-1-3.items[0]",
+      "para_id": "11-1-3",
+      "severity": "minor",
+      "category": "source_fidelity",
+      "problem": "The card front states 'in place of TBFM metering' implying MIT or MINIT replaces TBFM metering wholesale during DCT instability. Per 11-1-3b1, MIT or MINIT is applied 'between those aircraft' — the specific aircraft affected by DCT instability — as a supplementary delay-absorption measure, not a replacement for metering across the sector. The back correctly clarifies this scope ('for the specific aircraft affected'), but the front's wording overstates the replacement scope.",
+      "source_basis": "Per 11-1-3b1: 'If TBFM-generated metering time accuracy within +/− 1 minute cannot be used for specific aircraft due to significant jumps in the delay countdown timer (DCT), then TMIs may be used between those aircraft such as miles−in−trail (MIT) or minutes−in−trail (MINIT) to assist in delay absorption until stability resumes.' The TMIs apply between the specific DCT-affected aircraft, not in place of TBFM metering for all aircraft in the sector.",
+      "recommended_action": "Revise the front to: 'When DCT instability prevents normal metering-time compliance for specific aircraft, how long should substitute measures such as MIT or MINIT remain in effect between those aircraft?' This clarifies that the substitution is aircraft-specific, not sector-wide."
+    },
+    {
+      "item_path": "flashcards.11-1-2.items[0]",
+      "para_id": "11-1-2",
+      "severity": "suggestion",
+      "category": "retrieval_target_focus",
+      "problem": "The card asks two separate questions on its front: 'Under the STMCIC, which personnel group carries out TBM operations and TMIs? Under the OS/CIC, which personnel group carries them out?' Each question targets a different source sub-paragraph (11-1-2a3 and 11-1-2b4). While the two groups are conceptually paired — the distinction between them is operationally taught as a comparison — the dual retrieval target means a learner who correctly recalls one but not the other cannot cleanly self-grade.",
+      "source_basis": "Per 11-1-2a3, the STMCIC ensures enforcement by personnel providing traffic management services. Per 11-1-2b4, the OS/CIC ensures enforcement by personnel providing air traffic services. The distinction is operationally important and was previously identified as an area where earlier content conflated the groups.",
+      "recommended_action": "Consider splitting into two single-target cards ('Who carries out TBM operations and TMIs under the STMCIC?' and 'Who carries out TBM operations and TMIs under the OS/CIC?'), which would also make each card self-testable. If keeping as a single comparison card, the dual-target risk is acceptable because confusing these groups is a specific operational error — learning them as a pair has genuine educational value."
+    },
+    {
+      "item_path": "questions.11-1-2.items[2]",
+      "para_id": "11-1-2",
+      "severity": "suggestion",
+      "category": "context",
+      "problem": "The stem states 'The STMCIC operational briefing must cover meteorological conditions, staffing, equipment status, runways in use, AAR, TBM use, and TMIs.' Using 'must cover' for the topics misleadingly mirrors the source's actual phrasing, where the briefing 'must' be conducted but the topics 'should' be discussed. The question is designed to test exactly this must/should distinction — the stem is presenting the misconception the answer choices then examine — but the stem's use of 'must cover' could momentarily confuse a learner who has not yet internalized the distinction.",
+      "source_basis": "Per 11-1-2a1, the STMCIC 'must ensure an operational briefing is conducted' but discussions 'should include' the listed topics. The word 'must' applies to the briefing's occurrence, not to each topic's inclusion.",
+      "recommended_action": "Consider softening the stem: 'The STMCIC operational briefing addresses meteorological conditions, staffing, equipment status, runways in use, AAR, TBM use, and TMIs. Which statement accurately describes the requirement for covering these topics?' This avoids the misleading 'must cover' while still presenting the premise the answer choices examine."
+    },
+    {
+      "item_path": "questions.11-1-2.items[1]",
+      "para_id": "11-1-2",
+      "severity": "suggestion",
+      "category": "distractor_quality",
+      "problem": "The distractor 'ARTCCs must support and monitor; TRACONs and ATCTs are only required to monitor' is partially correct — TRACONs and ATCTs are grouped together as 'only required to monitor,' but TRACONs do have the support duty per 11-1-2e1, same as ARTCCs. While this makes the distractor factually wrong (which is necessary), the TRACON/ATCT grouping could inadvertently reinforce the misconception that TRACONs and ATCTs share the same TBFM duty profile when in fact TRACONs and ARTCCs are the pair that share duties.",
+      "source_basis": "Per 11-1-2d1 (ARTCCs), e1 (TRACONs), and f1 (ATCTs), ARTCCs and TRACONs both support TBFM operations and monitor TBFM equipment; ATCTs only monitor. The operational pairing is ARTCC+TRACON vs ATCT, not TRACON+ATCT vs ARTCC.",
+      "recommended_action": "No change required — the distractor is factually wrong and will be rejected by knowledgeable learners. This is a low-risk observation that the incorrect grouping in this particular distractor mirrors a plausible operational misconception."
+    }
+  ]
+}

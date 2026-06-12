@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "audit_type": "content_expansion_chapter_quality",
+  "chapter": 1,
+  "pass": 1,
+  "verdict": "safe_to_publish",
+  "source_batch": "backend/app/data/content_expansion_staging/chapter_01_pass_01.json",
+  "reviewed_item_paths": [
+    "questions.1-1-8.items[0]",
+    "questions.1-1-9.items[0]",
+    "questions.1-1-9.items[1]",
+    "questions.1-1-12.items[0]",
+    "questions.1-2-1.items[0]",
+    "questions.1-2-1.items[1]",
+    "questions.1-2-1.items[2]",
+    "questions.1-2-1.items[3]",
+    "questions.1-2-4.items[0]",
+    "questions.1-2-5.items[0]",
+    "activities.1-1-9.items[0]",
+    "activities.1-1-12.items[0]",
+    "activities.1-2-1.items[0]",
+    "flashcards.1-1-8.items[0]",
+    "flashcards.1-1-9.items[0]",
+    "flashcards.1-1-9.items[1]",
+    "flashcards.1-1-12.items[0]",
+    "flashcards.1-2-1.items[0]",
+    "flashcards.1-2-1.items[1]",
+    "flashcards.1-2-4.items[0]",
+    "flashcards.1-2-5.items[0]",
+    "flashcards.1-2-5.items[1]"
+  ],
+  "summary": {
+    "overall": "Chapter 1 pass 1 content quality is high. The staged batch demonstrates thorough application of prior remediation guidance: no paragraph-location scaffolding appears in any stem, correct-answer positions are well-randomized across items, distractors are consistently plausible and length-comparable, and scenario-based operational framing is used throughout. Source fidelity is strong across all 22 items — no factual errors, unsafe rule statements, or incorrect answer keys were found. Seven minor or suggestion-level findings were identified, all in the categories of close duplication with existing content, narrow retrieval scope on a few flashcards, and one framing mismatch. None block publication.",
+    "strengths": [
+      "All items use self-contained operational framing — no 'Under 1-1-XX' or paragraph-location scaffolding appears in any stem, instruction, or flashcard front, demonstrating full remediation of the dominant defect pattern identified in the prior audit",
+      "Correct-answer positions are randomized across items: positions 1 through 4 each appear as the answer location, with no systematic bias",
+      "Distractors are operationally plausible throughout — they represent realistic misconceptions a controller might hold (e.g., confusing AJT/DoD/non-FAA routing paths, assuming 'Going Tactical' equals 'Due Regard', conflating notes with references)",
+      "Explanations consistently correct the strongest misconception rather than simply restating the correct answer, and cite the governing paragraph or note for traceability",
+      "Cross-format items (question + activity + flashcard for the same paragraph) generally test different retrieval angles — e.g., the 1-1-9 interpretation/clarification content is tested as routing recall (question), trigger-condition discrimination (question), and channel-matching scenario (activity)",
+      "No unsafe rule statements, fictitious minima, manufactured phraseology errors, or answer-length cues were found in any item"
+    ],
+    "patterns": [
+      "Close duplication between new flashcards and existing content in 1-1-12 and 1-2-4 — staged cards test subsets or near-verbatim restatements of existing retrieval targets rather than distinct angles",
+      "Flashcards for document-production conventions (1-2-5a change markings, 1-2-5b page reprints) test narrow reference details that are better suited to lookup than active recall",
+      "One question (1-2-1 altitude definition) frames the answer expectation as context-specific while the correct answer is the general definition, creating a mild stem/answer mismatch",
+      "The situation_action for SMS dual duty (1-1-12) and the existing situation_action for shared SMS responsibility test overlapping operational territory — both scenarios involve a coworker claiming SMS belongs only to the safety office"
+    ]
+  },
+  "findings": [
+    {
+      "item_path": "questions.1-2-1.items[3]",
+      "para_id": "1-2-1",
+      "severity": "minor",
+      "category": "context",
+      "problem": "The question stem asks what 'altitude' means 'in this context' of '4,500 feet altitude,' but the correct answer is the full general definition ('Indicated altitude MSL, flight level, or both') rather than the context-appropriate meaning (indicated altitude MSL). The explanation acknowledges the disconnect ('In context, 4,500 feet refers to MSL altitude, but the definition itself covers all three possibilities'), but the stem framing and answer are mismatched — the student is tested on the general definition while the stem implies a context-specific interpretation.",
+      "source_basis": "Per 1-2-1j: 'Altitude' means indicated altitude mean sea level (MSL), flight level (FL), or both. At 4,500 feet, the operational meaning is clearly MSL, not flight level.",
+      "recommended_action": "Rephrase the stem to ask for the general definition without the 'in this context' qualifier, e.g.: 'Under FAA Order JO 7110.65 word meanings, what does the term \"altitude\" mean?' Or alternatively, keep the contextual framing but test whether the student recognizes that 4,500 feet is an MSL altitude (retaining the general-definition answer as context)."
+    },
+    {
+      "item_path": "flashcards.1-1-12.items[0]",
+      "para_id": "1-1-12",
+      "severity": "minor",
+      "category": "duplication",
+      "problem": "This card tests a single email address (9-AJI-SMS@faa.gov) as a retrieval target. The existing flashcard 'Three ways to obtain ATO SMS info' already covers this email alongside the SMS Toolbox and service center Quality Control Group as a unified set of channels. The staged card extracts one element from that set and tests it in isolation, providing a narrower retrieval target that adds no distinct learning angle.",
+      "source_basis": "Per 1-1-12: Additional information can be obtained by visiting the SMS Toolbox, emailing AJI at 9-AJI-SMS@faa.gov, or contacting the service center Quality Control Group. Existing flashcard 'Three ways to obtain ATO SMS info' covers all three channels together.",
+      "recommended_action": "Either drop this card in favor of the existing three-channel card, or repurpose it to test a different SMS concept from 1-1-12 not yet covered in flashcard format (e.g., which FAA order contains SMS direction — JO 1000.37, already in existing but could use a properly formatted replacement)."
+    },
+    {
+      "item_path": "flashcards.1-2-4.items[0]",
+      "para_id": "1-2-4",
+      "severity": "minor",
+      "category": "duplication",
+      "problem": "The front ('What is the function of a reference in FAA Order JO 7110.65?') and back are nearly identical to the existing flashcard for 1-2-4 ('What do references do in this order? — They direct attention to an additional or supporting source of information.'). The staged version adds enumerated examples (FAA, NWS, orders, directives, notices, CFRs, ACs) and a comparison with notes, but the core retrieval target is the same definitional fact tested by the existing card.",
+      "source_basis": "Per 1-2-4: references direct attention to an additional or supporting source of information. Existing flashcard covers the identical core retrieval target.",
+      "recommended_action": "Replace with a different retrieval angle for 1-2-4, such as a card contrasting references and notes (front: 'How do references differ from notes in FAA Order JO 7110.65?'), which would test the operational distinction rather than duplicating the single-definition recall."
+    },
+    {
+      "item_path": "activities.1-1-12.items[0]",
+      "para_id": "1-1-12",
+      "severity": "minor",
+      "category": "duplication",
+      "problem": "The scenario ('a coworker says that identifying safety issues is the safety office's job and that controllers should focus only on maintaining separation') and the correct answer ('all ATO employees must strive both to maintain safety AND to continuously improve the ATO SMS') overlap substantially with the existing situation_action for 1-1-12, which uses a nearly identical coworker-misconception scenario and tests shared SMS responsibility. While the staged activity emphasizes the dual-duty aspect (maintain + improve) versus the existing activity's shared-ownership emphasis, both items reach the same operational conclusion through the same narrative device.",
+      "source_basis": "Per 1-1-12: All ATO employees must strive not only to maintain safety in the NAS but also to continuously improve the ATO SMS. Existing situation_action: 'You identify a recurring safety hazard, and a coworker says SMS belongs only to the safety office...' Correct: 'Treat SMS as a responsibility shared by all ATO employees...'",
+      "recommended_action": "Either drop this activity in favor of the existing one, or re-scaffold the scenario around a different operational situation — e.g., a controller who wants to pursue SMS training but is told only designated practitioners can do so, testing the 'SMS training available for all employees via eLMS' rule from the same paragraph."
+    },
+    {
+      "item_path": "flashcards.1-2-5.items[0]",
+      "para_id": "1-2-5",
+      "severity": "suggestion",
+      "category": "educational_value",
+      "problem": "The retrieval target — 'the change number and the effective date are printed on each revised or additional page' — is a document-production convention. While understanding page markings supports document-currency verification, this level of detail is more appropriate for reference lookup than active recall from a flashcard. A controller encountering a changed page will see these markings; recalling their names from memory does not change operational behavior.",
+      "source_basis": "Per 1-2-5a: The change number and the effective date are printed on each revised or additional page.",
+      "recommended_action": "Consider replacing with a flashcard that tests a more operational concept from 1-2-5, such as the facility-type annotation rule (EN ROUTE/OCEANIC/TERMINAL applicability) or the PHRASEOLOGY rephrase rule, both of which are higher-value retrieval targets already tested in other formats but not yet in flashcards."
+    },
+    {
+      "item_path": "flashcards.1-2-5.items[1]",
+      "para_id": "1-2-5",
+      "severity": "suggestion",
+      "category": "educational_value",
+      "problem": "Similar to the change-marking card, this retrieval target — 'unchanged pages are reprinted in their original form to maintain pagination continuity' — tests document-production mechanics. The back provides helpful context about why this matters, but the core fact is a reference detail unlikely to affect operational decision-making.",
+      "source_basis": "Per 1-2-5b: A page that does not require a change is reprinted in its original form.",
+      "recommended_action": "Same recommendation as flashcards.1-2-5.items[0] — consider replacing with a higher-value 1-2-5 concept. If retained, the pagination-continuity explanation in the back is the strongest part and should be emphasized."
+    },
+    {
+      "item_path": "flashcards.1-1-8.items[0]",
+      "para_id": "1-1-8",
+      "severity": "suggestion",
+      "category": "retrieval_scope",
+      "problem": "The back includes the full OPR mailing address: 'FAA Headquarters, Mission Support Services, Policy (AJV-P), 600 Independence Avenue SW, Washington, DC 20597.' While knowing that AJV-P is the OPR is a legitimate reference fact, memorizing the full street address and ZIP code from a flashcard is an excessive retrieval scope. The operational value is in recognizing AJV-P as the OPR, not in reciting the physical address.",
+      "source_basis": "Per 1-1-8: The office of primary responsibility (OPR) for this order is FAA Headquarters, Mission Support Services, Policy (AJV-P), 600 Independence Avenue SW, Washington, DC 20597.",
+      "recommended_action": "Tighten the back to emphasize AJV-P as the OPR and its role in processing changes, while keeping the address as supplementary context rather than required recall. E.g.: 'AJV-P (FAA Headquarters, Mission Support Services, Policy) — the office that processes and coordinates all changes to the order.'"
+    }
+  ]
+}

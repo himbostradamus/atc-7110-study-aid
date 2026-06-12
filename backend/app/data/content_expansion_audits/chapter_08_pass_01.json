@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "audit_type": "content_expansion_chapter_quality",
+  "chapter": 8,
+  "pass": 1,
+  "verdict": "safe_to_publish",
+  "source_batch": "backend/app/data/content_expansion_staging/chapter_08_pass_01.json",
+  "reviewed_item_paths": [
+    "questions.8-1-3.items[0]",
+    "questions.8-1-3.items[1]",
+    "questions.8-1-6.items[0]",
+    "questions.8-5-2.items[0]",
+    "questions.8-5-5.items[0]",
+    "questions.8-5-5.items[1]",
+    "questions.8-6-3.items[0]",
+    "questions.8-7-3.items[0]",
+    "questions.8-7-3.items[1]",
+    "questions.8-7-3.items[2]",
+    "questions.8-7-4.items[0]",
+    "questions.8-7-4.items[1]",
+    "questions.8-8-3.items[0]",
+    "questions.8-8-3.items[1]",
+    "questions.8-8-4.items[0]",
+    "questions.8-9-3.items[0]",
+    "questions.8-9-3.items[1]",
+    "questions.8-10-3.items[0]",
+    "questions.8-10-3.items[1]",
+    "activities.8-1-10.items[0]",
+    "activities.8-2-2.items[0]",
+    "activities.8-5-1.items[0]",
+    "activities.8-5-5.items[0]",
+    "activities.8-6-3.items[0]",
+    "activities.8-8-5.items[0]",
+    "activities.8-9-3.items[0]",
+    "activities.8-10-3.items[0]",
+    "flashcards.8-1-3.items[0]",
+    "flashcards.8-1-9.items[0]",
+    "flashcards.8-2-2.items[0]",
+    "flashcards.8-5-2.items[0]",
+    "flashcards.8-6-3.items[0]",
+    "flashcards.8-7-3.items[0]",
+    "flashcards.8-7-4.items[0]",
+    "flashcards.8-8-3.items[0]",
+    "flashcards.8-8-4.items[0]",
+    "flashcards.8-9-3.items[0]",
+    "flashcards.8-9-4.items[0]",
+    "flashcards.8-10-3.items[0]",
+    "flashcards.8-10-4.items[0]"
+  ],
+  "summary": {
+    "overall": "The Chapter 8 staging batch is substantially improved over prior remediation targets. All 40 items across questions, activities, and flashcards are factually accurate against source text. No critical or major findings were identified. The prior remediation patterns — paragraph-location scaffolding, wrong section cross-references, fabricated directive/LOA exception mechanisms, fill-blank overuse, and malformed reverse cards — have been effectively resolved. All items use operational scenario or concept-testing formats with plausible distractors. Regional section minima are correctly sourced. Remaining issues are limited to answer-position bias (7 of 27 multiple-choice items have correct answer at sort_order 0), mild answer-length cues in 2 items, and one close existing-content duplication.",
+    "strengths": [
+      "All source minima, procedures, and conditions verified correct against the source packet — zero fabricated values",
+      "No paragraph-location scaffolding (no 'Under 8-X-Y' stems, no paragraph-number answers)",
+      "No fill-blank questions — all items use multiple-choice or operational activity formats",
+      "No reverse flashcards testing paragraph labels",
+      "No fabricated exception mechanisms (directive/LOA language correctly absent from regional sections 8-7-1, 8-8-1, 8-9-1, 8-10-1 items)",
+      "Distractors are consistently plausible and parallel, often drawn from adjacent minima or related procedures in the same paragraphs",
+      "Explanations cite both the source rule and the operational reason the answer is correct",
+      "Flashcard scope is well-bounded — lists represent naturally coherent operational sets (separation tiers, methods, geographic areas)",
+      "Cross-format coverage is complementary: questions test through scenario, activities through situation-action, flashcards through recall",
+      "Regional sections (8-7 through 8-10) are well-covered with accurate minima and procedure items"
+    ],
+    "patterns": [
+      "7 of 27 multiple-choice items have correct answer at sort_order 0 (~26%), an improvement from prior 62-item flagging but still above ideal randomization",
+      "2 items exhibit mild answer-length cues where the correct answer is noticeably longer than distractors",
+      "Activity 8-8-5 closely tests the same rule as an existing question, creating near-duplication across formats"
+    ]
+  },
+  "findings": [
+    {
+      "item_path": "questions.8-1-3.items[0]",
+      "para_id": "8-1-3",
+      "severity": "minor",
+      "category": "answer_position_bias",
+      "problem": "Correct answer placed at sort_order 0. While not systematic across the batch, the correct-answer-first position creates a positional cue that weakens assessment validity for this item.",
+      "source_basis": "Prior remediation guidance called for randomizing correct answer position across sort_order values 0-3.",
+      "recommended_action": "Move correct answer to sort_order 1, 2, or 3 and adjust distractors accordingly."
+    },
+    {
+      "item_path": "questions.8-6-3.items[0]",
+      "para_id": "8-6-3",
+      "severity": "minor",
+      "category": "answer_position_bias",
+      "problem": "Correct answer placed at sort_order 0.",
+      "source_basis": "Prior remediation guidance called for randomizing correct answer position across sort_order values 0-3.",
+      "recommended_action": "Move correct answer to sort_order 1, 2, or 3 and adjust distractors accordingly."
+    },
+    {
+      "item_path": "questions.8-7-4.items[0]",
+      "para_id": "8-7-4",
+      "severity": "minor",
+      "category": "answer_position_bias",
+      "problem": "Correct answer placed at sort_order 0.",
+      "source_basis": "Prior remediation guidance called for randomizing correct answer position across sort_order values 0-3.",
+      "recommended_action": "Move correct answer to sort_order 1, 2, or 3 and adjust distractors accordingly."
+    },
+    {
+      "item_path": "questions.8-8-4.items[0]",
+      "para_id": "8-8-4",
+      "severity": "minor",
+      "category": "answer_position_bias",
+      "problem": "Correct answer placed at sort_order 0.",
+      "source_basis": "Prior remediation guidance called for randomizing correct answer position across sort_order values 0-3.",
+      "recommended_action": "Move correct answer to sort_order 1, 2, or 3 and adjust distractors accordingly."
+    },
+    {
+      "item_path": "questions.8-10-3.items[1]",
+      "para_id": "8-10-3",
+      "severity": "minor",
+      "category": "answer_position_bias",
+      "problem": "Correct answer placed at sort_order 0.",
+      "source_basis": "Prior remediation guidance called for randomizing correct answer position across sort_order values 0-3.",
+      "recommended_action": "Move correct answer to sort_order 1, 2, or 3 and adjust distractors accordingly."
+    },
+    {
+      "item_path": "activities.8-6-3.items[0]",
+      "para_id": "8-6-3",
+      "severity": "minor",
+      "category": "answer_position_bias",
+      "problem": "Correct answer placed at sort_order 0.",
+      "source_basis": "Prior remediation guidance called for randomizing correct answer position across sort_order values 0-3.",
+      "recommended_action": "Move correct answer to sort_order 1, 2, or 3 and adjust distractors accordingly."
+    },
+    {
+      "item_path": "activities.8-10-3.items[0]",
+      "para_id": "8-10-3",
+      "severity": "minor",
+      "category": "answer_position_bias",
+      "problem": "Correct answer placed at sort_order 0.",
+      "source_basis": "Prior remediation guidance called for randomizing correct answer position across sort_order values 0-3.",
+      "recommended_action": "Move correct answer to sort_order 1, 2, or 3 and adjust distractors accordingly."
+    },
+    {
+      "item_path": "questions.8-5-5.items[0]",
+      "para_id": "8-5-5",
+      "severity": "minor",
+      "category": "answer_length_cue",
+      "problem": "The correct answer ('The procedure requires both flight data indicating a standard transponder and no known information that it is inoperative; known inoperative status disqualifies it.') is substantially longer than two of the three distractors. The length difference creates a cue independent of the operational knowledge being tested.",
+      "source_basis": "Source 8-5-5d requires both conditions. Distractors test valid misunderstandings.",
+      "recommended_action": "Either lengthen the shorter distractors by expanding the rationale behind each wrong answer, or shorten the correct answer to a comparably terse form."
+    },
+    {
+      "item_path": "questions.8-7-3.items[2]",
+      "para_id": "8-7-3",
+      "severity": "minor",
+      "category": "answer_length_cue",
+      "problem": "The correct answer ('An ADS-C position report on at least one aircraft has been received beyond the passing point and they have passed by the applicable minimum.') is notably longer than the three distractors, introducing a length cue.",
+      "source_basis": "Source 8-7-3e2. Distractors are valid operational misconceptions but are shorter.",
+      "recommended_action": "Balance answer lengths by expanding distractor rationale or condensing the correct answer to a tighter statement of the two conditions."
+    },
+    {
+      "item_path": "activities.8-8-5.items[0]",
+      "para_id": "8-8-5",
+      "severity": "minor",
+      "category": "content_duplication",
+      "problem": "This activity tests the same rule as an existing question ('Under 8-8-5, what must the controller do if there is a possibility that VFR conditions may become impractical?'), which also asks for issuing alternative instructions. While the scenario format adds application context, the core concept and answer are identical, reducing incremental learning value.",
+      "source_basis": "Existing content already covers the alternative-instructions obligation under 8-8-5b1 at difficulty 2.",
+      "recommended_action": "Either replace this activity with a scenario testing a different aspect of 8-8-5 (e.g., the dual-condition trigger of pilot request AND sunrise/sunset), or consolidate with the existing item."
+    },
+    {
+      "item_path": "flashcards.8-9-3.items[0]",
+      "para_id": "8-9-3",
+      "severity": "suggestion",
+      "category": "card_scope",
+      "problem": "The back of this concept card lists four distinct time-based minima (15 min general, 10 min turbojet same/diverging track, Mach Number Technique, reciprocal-track vertical separation). While all are from the same paragraph and are a coherent operational set, a student memorizing these as a block may conflate which minimum applies to which aircraft type or condition. Splitting into two cards (general/time minima and reciprocal-track rule) would improve retrieval specificity.",
+      "source_basis": "Source 8-9-3a lists these as distinct sub-provisions; each has independent operational triggers.",
+      "recommended_action": "Consider splitting into (a) a card for the general time minima (15 min, 10 min turbojet, Mach Number Technique) and (b) a separate card for the reciprocal-track rule."
+    },
+    {
+      "item_path": "flashcards.8-10-3.items[0]",
+      "para_id": "8-10-3",
+      "severity": "suggestion",
+      "category": "card_scope",
+      "problem": "This procedure card packs five requirements into one back: 30/40 NM minima, Mach number ordering, mutual advisories, and 90-minute voice-less limit. During self-testing, partial recall of three of five may feel like success when two critical requirements are missed. Separating into two cards (minima + Mach constraint vs. communication constraints) would improve precision.",
+      "source_basis": "Source 8-10-3d separates the DME/RNAV requirements into five sub-conditions.",
+      "recommended_action": "Consider splitting into (a) a card covering the numerical minima and Mach constraint and (b) a card covering the communication and traffic-advisory requirements."
+    }
+  ]
+}
