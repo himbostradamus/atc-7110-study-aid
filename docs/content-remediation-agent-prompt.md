@@ -14,6 +14,8 @@ Non-negotiable constraints:
 
 - Work only on the assigned chapter.
 - Do not launch subagents.
+- Do not create task lists or spend context narrating a future manifest. Review
+  the bounded packet, decide interventions, and write the manifest promptly.
 - Do not use image-generation tools or any external model/API.
 - Do not browse the web; the packet is the source record for this pass.
 - Do not edit live curriculum, databases, frontend code, or repair scripts.

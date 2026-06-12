@@ -108,6 +108,10 @@ def run_agent(prompt_path: Path, log_path: Path) -> int:
     ])
     disallowed_tools = ",".join([
         "Task",
+        "TaskCreate",
+        "TaskUpdate",
+        "TaskList",
+        "TaskGet",
         "AskUserQuestion",
         "WebFetch",
         "WebSearch",
@@ -181,7 +185,7 @@ def main() -> int:
         manifest_path = manifests_dir / f"{stem}_pass_{args.pass_number:02d}.json"
         markdown_path = manifests_dir / f"{stem}_pass_{args.pass_number:02d}.md"
         if manifest_path.exists() and validate(shard_path, manifest_path):
-            print(f"{stem}: existing manifest valid; skipping")
+            print(f"{stem}: existing manifest valid; skipping", flush=True)
             continue
         manifest_path.unlink(missing_ok=True)
         markdown_path.unlink(missing_ok=True)
@@ -194,7 +198,7 @@ def main() -> int:
                 build_prompt(args.chapter, shard_path.resolve(), manifest_path.resolve(), markdown_path.resolve()),
                 encoding="utf-8",
             )
-            print(f"{stem}: attempt {attempt}")
+            print(f"{stem}: attempt {attempt}", flush=True)
             run_agent(prompt_path, log_path)
             if manifest_path.exists() and validate(shard_path, manifest_path):
                 completed = True
@@ -202,7 +206,7 @@ def main() -> int:
             manifest_path.unlink(missing_ok=True)
             markdown_path.unlink(missing_ok=True)
         if not completed:
-            print(f"{stem}: failed after {args.attempts} attempt(s)")
+            print(f"{stem}: failed after {args.attempts} attempt(s)", flush=True)
             return 1
 
     merge = subprocess.run(

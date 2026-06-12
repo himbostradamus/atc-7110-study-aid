@@ -103,6 +103,10 @@ def launch_agent(prompt_path: Path, log_path: Path) -> subprocess.Popen:
     ])
     disallowed_tools = ",".join([
         "Task",
+        "TaskCreate",
+        "TaskUpdate",
+        "TaskList",
+        "TaskGet",
         "AskUserQuestion",
         "WebFetch",
         "WebSearch",

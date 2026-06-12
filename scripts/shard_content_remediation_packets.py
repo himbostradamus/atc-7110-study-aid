@@ -199,10 +199,10 @@ def main() -> int:
     parser.add_argument("--target-source", default="curated")
     parser.add_argument("--packet-dir", type=Path)
     parser.add_argument("--out-dir", type=Path)
-    parser.add_argument("--max-items", type=int, default=24)
+    parser.add_argument("--max-items", type=int, default=16)
     parser.add_argument("--max-target-bytes", type=int, default=110_000)
     parser.add_argument("--max-packet-bytes", type=int, default=240_000)
-    parser.add_argument("--max-packet-items", type=int, default=80)
+    parser.add_argument("--max-packet-items", type=int, default=24)
     args = parser.parse_args()
 
     packet_dir = args.packet_dir or WORKSPACE / "packets" / args.target_source
