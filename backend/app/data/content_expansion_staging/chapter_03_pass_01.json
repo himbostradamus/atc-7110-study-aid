@@ -531,7 +531,8 @@
               "is_correct": true
             }
           ],
-          "explanation": "Paragraph 3-1-3c requires the ground controller to advise the local controller when the coordinated runway operation is complete. This may be accomplished verbally or through visual aids as specified by a facility directive. The completion notification closes the coordination loop and lets local know the runway is available again at that crossing point."
+          "explanation": "Paragraph 3-1-3c requires the ground controller to advise the local controller when the coordinated runway operation is complete. This may be accomplished verbally or through visual aids as specified by a facility directive. The completion notification closes the coordination loop and lets local know the runway is available again at that crossing point.",
+          "para_context": "USE OF ACTIVE RUNWAYS"
         }
       ]
     },
@@ -562,42 +563,39 @@
               "is_correct": false
             }
           ],
-          "explanation": "Paragraph 3-1-5b requires that the runway be free of all known ground vehicles, equipment, and personnel before a landing aircraft crosses the runway threshold. The vehicle's LOA and two-way communications authorize RSA operations up to the runway edge, but the runway itself must be clear before a landing aircraft crosses the threshold. The LOA does not override this requirement."
+          "explanation": "Paragraph 3-1-5b requires that the runway be free of all known ground vehicles, equipment, and personnel before a landing aircraft crosses the runway threshold. The vehicle's LOA and two-way communications authorize RSA operations up to the runway edge, but the runway itself must be clear before a landing aircraft crosses the threshold. The LOA does not override this requirement.",
+          "para_context": "VEHICLES/EQUIPMENT/PERSONNEL NEAR/ON RUNWAYS"
         }
       ]
     },
     "3-1-6": {
       "items": [
         {
-          "activity_type": "phraseology_builder",
+          "activity_type": "discrimination",
           "generation_source": "question_agent",
           "difficulty": 2,
-          "instruction": "Build the controller transmission using standard radar traffic-advisory phraseology via CTRD.",
-          "situation": "You are using a CTRD (Certified Tower Radar Display) and need to issue a traffic advisory to an arriving aircraft about another aircraft at their 12 o'clock position, 3 miles ahead, same altitude, also inbound.",
-          "target_phrase": "TRAFFIC TWELVE O'CLOCK THREE MILES SAME DIRECTION ALTITUDE (altitude)",
-          "word_bank": [
-            "TRAFFIC",
-            "TWELVE",
-            "O'CLOCK",
-            "THREE",
-            "MILES",
-            "SAME",
-            "DIRECTION",
-            "ALTITUDE",
-            "AHEAD",
-            "INBOUND"
+          "instruction": "Select the traffic description that most directly helps the pilot recognize the hazard.",
+          "situation": "An aircraft is approaching Runway 18 while a mower is operating just left of that runway.",
+          "question_text": "Which advisory uses the prescribed plain relative-position format?",
+          "choices": [
+            {
+              "text": "GROUND EQUIPMENT IN THE GENERAL AIRPORT AREA.",
+              "is_correct": false
+            },
+            {
+              "text": "MOWER LEFT OF RUNWAY ONE EIGHT.",
+              "is_correct": true
+            },
+            {
+              "text": "CAUTION, VEHICLE SOMEWHERE NEAR THE MOVEMENT AREA.",
+              "is_correct": false
+            },
+            {
+              "text": "MOWER TRAFFIC, POSITION UNKNOWN.",
+              "is_correct": false
+            }
           ],
-          "correct_sequence": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "explanation": "When using a CTRD, paragraph 3-1-6c authorizes the use of standard radar traffic advisory phraseology \u2014 the same phraseology used by radar approach control facilities. The format follows the prescribed traffic advisory structure: position relative to aircraft, distance, direction of flight, and altitude."
+          "explanation": "Describe vehicles, equipment, or personnel in a way that helps the pilot recognize them. A direct relative position such as \"Mower left of runway one eight\" supplies that useful context."
         }
       ]
     },
@@ -616,19 +614,20 @@
               "is_correct": false
             },
             {
-              "text": "Continue providing control instructions, safety alerts, and traffic advisories \u2014 do not presume the second aircraft is escaping unless its pilot reports performing the maneuver.",
-              "is_correct": true
-            },
-            {
               "text": "Instruct the second aircraft to execute the same escape maneuver as the first aircraft \u2014 wind shear conditions are likely affecting both departures equally.",
               "is_correct": false
+            },
+            {
+              "text": "Continue providing control instructions, safety alerts, and traffic advisories \u2014 do not presume the second aircraft is escaping unless its pilot reports performing the maneuver.",
+              "is_correct": true
             },
             {
               "text": "Transfer the second aircraft to approach control immediately \u2014 the tower can no longer provide approved separation for departures during a wind shear escape.",
               "is_correct": false
             }
           ],
-          "explanation": "Paragraph 3-1-8d(2) states: unless advised by additional aircraft that they are also performing an escape procedure, do not presume that other aircraft in the proximity of the escape aircraft are responding to wind shear alerts/events. The controller must continue to provide control instructions, safety alerts, and traffic advisories as appropriate to any aircraft that has not reported an escape."
+          "explanation": "Paragraph 3-1-8d(2) states: unless advised by additional aircraft that they are also performing an escape procedure, do not presume that other aircraft in the proximity of the escape aircraft are responding to wind shear alerts/events. The controller must continue to provide control instructions, safety alerts, and traffic advisories as appropriate to any aircraft that has not reported an escape.",
+          "para_context": "LOW LEVEL WIND SHEAR/MICROBURST ADVISORIES"
         }
       ]
     },
@@ -643,12 +642,12 @@
           "question_text": "What is the correct sequence of actions for this report?",
           "choices": [
             {
-              "text": "Confirm the report because the source is unauthorized, and if management remains unreachable, issue a NOTAM publicizing the unsafe condition and inform management as soon as practicable.",
-              "is_correct": true
-            },
-            {
               "text": "Broadcast the report immediately on ATIS without confirmation because any safety report, regardless of source, must be distributed without delay.",
               "is_correct": false
+            },
+            {
+              "text": "Confirm the report because the source is unauthorized, and if management remains unreachable, issue a NOTAM publicizing the unsafe condition and inform management as soon as practicable.",
+              "is_correct": true
             },
             {
               "text": "Ignore the report because only reports from personnel on the authorized list are actionable until management can be reached.",
@@ -659,7 +658,8 @@
               "is_correct": false
             }
           ],
-          "explanation": "Paragraph 3-3-1c requires confirming information from unauthorized sources. Paragraph 3-3-1d requires issuing a NOTAM and informing management as soon as practicable when management cannot be contacted. Only airport management or military operations can legally close a runway \u2014 the controller cannot."
+          "explanation": "Paragraph 3-3-1c requires confirming information from unauthorized sources. Paragraph 3-3-1d requires issuing a NOTAM and informing management as soon as practicable when management cannot be contacted. Only airport management or military operations can legally close a runway \u2014 the controller cannot.",
+          "para_context": "LANDING AREA CONDITION"
         }
       ]
     },
@@ -678,19 +678,20 @@
               "is_correct": false
             },
             {
-              "text": "Inform the pilot the operation will be at the pilot's own risk \u2014 do not issue a landing clearance.",
-              "is_correct": true
-            },
-            {
               "text": "Refuse the request entirely \u2014 the three-step procedure ends at step two if the pilot persists after the NOTAM is quoted.",
               "is_correct": false
+            },
+            {
+              "text": "Inform the pilot the operation will be at the pilot's own risk \u2014 do not issue a landing clearance.",
+              "is_correct": true
             },
             {
               "text": "Transfer the pilot to airport management for a runway-use authorization before proceeding.",
               "is_correct": false
             }
           ],
-          "explanation": "Paragraph 3-3-2b is the third step of the escalating closed-runway procedure: if the pilot insists after being told the runway is closed and after the NOTAM is quoted, AND the controller judges the operation would not adversely affect other traffic, the controller informs the pilot that the operation will be at the pilot's own risk. The phraseology 'LANDING WILL BE AT YOUR OWN RISK' is NOT a clearance \u2014 the controller never issues a clearance for a closed or unsafe runway."
+          "explanation": "Paragraph 3-3-2b is the third step of the escalating closed-runway procedure: if the pilot insists after being told the runway is closed and after the NOTAM is quoted, AND the controller judges the operation would not adversely affect other traffic, the controller informs the pilot that the operation will be at the pilot's own risk. The phraseology 'LANDING WILL BE AT YOUR OWN RISK' is NOT a clearance \u2014 the controller never issues a clearance for a closed or unsafe runway.",
+          "para_context": "CLOSED/UNSAFE RUNWAY INFORMATION"
         }
       ]
     },
@@ -713,15 +714,16 @@
               "is_correct": false
             },
             {
-              "text": "Assign Runway 27 \u2014 tailwind and crosswind considerations take precedence over delay and capacity, and the wind of 6 knots favors Runway 27.",
-              "is_correct": true
-            },
-            {
               "text": "Assign Runway 18 because a runway with a tailwind component is acceptable whenever it reduces delay.",
               "is_correct": false
+            },
+            {
+              "text": "Assign Runway 27 \u2014 tailwind and crosswind considerations take precedence over delay and capacity, and the wind of 6 knots favors Runway 27.",
+              "is_correct": true
             }
           ],
-          "explanation": "Paragraph 3-5-1c explicitly states that tailwind and crosswind considerations take precedence over delay/capacity considerations and noise abatement. The 6-knot wind favors Runway 27. While operational advantage is a listed exception to the wind rule, it must be weighed against wind safety \u2014 and the paragraph says wind takes precedence over delay."
+          "explanation": "Paragraph 3-5-1c explicitly states that tailwind and crosswind considerations take precedence over delay/capacity considerations and noise abatement. The 6-knot wind favors Runway 27. While operational advantage is a listed exception to the wind rule, it must be weighed against wind safety \u2014 and the paragraph says wind takes precedence over delay.",
+          "para_context": "SELECTION"
         }
       ]
     },
@@ -736,6 +738,10 @@
           "question_text": "How should these three surface-movement matters be handled?",
           "choices": [
             {
+              "text": "Use 'taxi' or 'proceed' instead of 'cleared' for surface authorization; use specific proceed-and-hold-short instructions instead of 'the field is yours'; issue the measured intersection-to-runway-end distance rounded down to the nearest 50 feet to the military aircraft.",
+              "is_correct": true
+            },
+            {
               "text": "Use 'cleared to taxi' as a common phrase; accept 'the field is yours' since the vehicles are FAA-operated; tell the military pilot to check the Chart Supplement for the intersection distance.",
               "is_correct": false
             },
@@ -746,13 +752,10 @@
             {
               "text": "Use 'cleared' for aircraft but not vehicles; accept unconditional instructions for vehicles only; provide declared distances rather than measured intersection departure length.",
               "is_correct": false
-            },
-            {
-              "text": "Use 'taxi' or 'proceed' instead of 'cleared' for surface authorization; use specific proceed-and-hold-short instructions instead of 'the field is yours'; issue the measured intersection-to-runway-end distance rounded down to the nearest 50 feet to the military aircraft.",
-              "is_correct": true
             }
           ],
-          "explanation": "Paragraph 3-7-1 prohibits using 'cleared' for surface movement authorization (use 'taxi,' 'proceed,' or 'hold'). It prohibits unconditional instructions like 'the field is yours' \u2014 specific proceed and hold short instructions are required. Paragraph 3-7-1d requires issuing measured intersection-departure distance rounded down to the nearest 50 feet to all military aircraft unless covered by directives."
+          "explanation": "Paragraph 3-7-1 prohibits using 'cleared' for surface movement authorization (use 'taxi,' 'proceed,' or 'hold'). It prohibits unconditional instructions like 'the field is yours' \u2014 specific proceed and hold short instructions are required. Paragraph 3-7-1d requires issuing measured intersection-departure distance rounded down to the nearest 50 feet to all military aircraft unless covered by directives.",
+          "para_context": "GROUND TRAFFIC MOVEMENT"
         }
       ]
     },
@@ -767,12 +770,12 @@
           "question_text": "What must happen before the arriving aircraft can receive a landing clearance?",
           "choices": [
             {
-              "text": "Cancel the line up and wait clearance and instruct the aircraft to exit the runway \u2014 the runway must be clear before issuing a landing clearance.",
-              "is_correct": true
-            },
-            {
               "text": "Clear the aircraft to land behind the holding aircraft \u2014 the hold-short line on the runway itself provides adequate separation.",
               "is_correct": false
+            },
+            {
+              "text": "Cancel the line up and wait clearance and instruct the aircraft to exit the runway \u2014 the runway must be clear before issuing a landing clearance.",
+              "is_correct": true
             },
             {
               "text": "Clear the holding aircraft for immediate takeoff and issue landing clearance to the arrival simultaneously.",
@@ -783,7 +786,8 @@
               "is_correct": false
             }
           ],
-          "explanation": "When an aircraft is holding in position (line up and wait) on a runway, the runway is occupied. A landing clearance cannot be issued while another aircraft occupies the landing runway. The controller must cancel the line up and wait, instruct the aircraft to exit the runway, and then issue the landing clearance once the runway is clear."
+          "explanation": "When an aircraft is holding in position (line up and wait) on a runway, the runway is occupied. A landing clearance cannot be issued while another aircraft occupies the landing runway. The controller must cancel the line up and wait, instruct the aircraft to exit the runway, and then issue the landing clearance once the runway is clear.",
+          "para_context": "LINE UP AND WAIT (LUAW)"
         }
       ]
     },
@@ -806,15 +810,16 @@
               "is_correct": false
             },
             {
-              "text": "Issue the landing clearance \u2014 the runway is verified clear and approved separation from other traffic exists.",
-              "is_correct": true
-            },
-            {
               "text": "Issue the clearance but only as a 'conditional landing clearance' that becomes effective when the pilot confirms the runway is clear visually.",
               "is_correct": false
+            },
+            {
+              "text": "Issue the landing clearance \u2014 the runway is verified clear and approved separation from other traffic exists.",
+              "is_correct": true
             }
           ],
-          "explanation": "A landing clearance may be issued when the landing runway is clear and approved separation from other aircraft will exist at the time the arrival crosses the landing threshold. The preceding aircraft has already exited the runway, separation exists, and the runway is clear \u2014 the conditions for issuing the landing clearance are met."
+          "explanation": "A landing clearance may be issued when the landing runway is clear and approved separation from other aircraft will exist at the time the arrival crosses the landing threshold. The preceding aircraft has already exited the runway, separation exists, and the runway is clear \u2014 the conditions for issuing the landing clearance are met.",
+          "para_context": "LANDING CLEARANCE"
         }
       ]
     },
@@ -829,6 +834,10 @@
           "question_text": "How should the controller handle the helicopter's ground movement?",
           "choices": [
             {
+              "text": "Use standard surface taxi phraseology since the helicopter is wheeled and ground conditions permit \u2014 air-taxi is preferred but not mandatory when surface taxi is practical.",
+              "is_correct": true
+            },
+            {
               "text": "Always issue an air-taxi clearance because the note says air-taxi is the preferred method regardless of conditions.",
               "is_correct": false
             },
@@ -839,13 +848,10 @@
             {
               "text": "Tell the helicopter to take off and reposition because helicopters may never taxi on the surface at controlled airports.",
               "is_correct": false
-            },
-            {
-              "text": "Use standard surface taxi phraseology since the helicopter is wheeled and ground conditions permit \u2014 air-taxi is preferred but not mandatory when surface taxi is practical.",
-              "is_correct": true
             }
           ],
-          "explanation": "Paragraph 3-11-1a says wheeled helicopters taxiing on the surface use standard 3-7-2 taxi phraseology. Air-taxi is the preferred method when ground operations/conditions permit, but a wheeled helicopter on firm ground can surface-taxi. The controller uses the appropriate movement type based on conditions and need."
+          "explanation": "Paragraph 3-11-1a says wheeled helicopters taxiing on the surface use standard 3-7-2 taxi phraseology. Air-taxi is the preferred method when ground operations/conditions permit, but a wheeled helicopter on firm ground can surface-taxi. The controller uses the appropriate movement type based on conditions and need.",
+          "para_context": "TAXI AND GROUND MOVEMENT OPERATION"
         }
       ]
     }

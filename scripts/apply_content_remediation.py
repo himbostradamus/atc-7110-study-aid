@@ -29,6 +29,16 @@ def activity_content_signature(value: object) -> str:
     content = dict(value)
     content.pop("generation_source", None)
     content.pop("generation_src", None)
+    for key in ("choices", "options"):
+        choices = content.get(key)
+        if isinstance(choices, list) and all(isinstance(choice, dict) for choice in choices):
+            content[key] = sorted(
+                choices,
+                key=lambda choice: (
+                    str(choice.get("text") or choice.get("choice_text") or ""),
+                    bool(choice.get("is_correct")),
+                ),
+            )
     return canonical_json(content)
 
 
@@ -130,7 +140,8 @@ def find_questions(
                 }
                 for choice in match["choices"]
             ]
-            if choices != expected:
+            choice_key = lambda choice: (choice["text"], choice["is_correct"])
+            if sorted(choices, key=choice_key) != sorted(expected, key=choice_key):
                 continue
         matches.append(str(row[0]))
     return matches

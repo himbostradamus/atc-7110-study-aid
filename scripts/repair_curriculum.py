@@ -294,7 +294,10 @@ def sync_replace_all_curated_activities(db: sqlite3.Connection) -> tuple[int, in
     inserted = 0
 
     for para_id, override in overrides.items():
-        if not isinstance(override, dict) or not override.get("replace_all"):
+        if (
+            not isinstance(override, dict)
+            or not override.get("replace_all")
+        ):
             continue
 
         paragraph = paragraph_rows.get(para_id)
@@ -1739,6 +1742,94 @@ def sync_curated_flashcards(db: sqlite3.Connection) -> tuple[int, int, int]:
     return synced, deleted, inserted
 
 
+def sync_append_curated_activities(db: sqlite3.Connection) -> tuple[int, int]:
+    overrides = load_curated_overrides().get("activities", {})
+    paragraph_rows = {
+        row["para_id"]: row
+        for row in db.execute(
+            "SELECT id, para_id, title FROM paragraphs ORDER BY chapter, section, para_id"
+        ).fetchall()
+    }
+    synced_paragraphs = 0
+    inserted = 0
+
+    for para_id, override in overrides.items():
+        if not isinstance(override, dict) or not override.get("appended_items"):
+            continue
+        paragraph = paragraph_rows.get(para_id)
+        if paragraph is None:
+            raise ValueError(f"Missing paragraph for append-only activity override: {para_id}")
+
+        paragraph_inserted = 0
+        for raw_item in override.get("appended_items", []):
+            if not isinstance(raw_item, dict):
+                raise ValueError(f"Append-only activity for {para_id} must be an object")
+            activity_type = normalise_ws(raw_item.get("activity_type", ""))
+            publication_id = normalise_ws(raw_item.get("publication_id", ""))
+            if not activity_type or not publication_id:
+                raise ValueError(
+                    f"Append-only activity for {para_id} requires activity_type and publication_id"
+                )
+
+            duplicate = False
+            rows = db.execute(
+                """
+                SELECT content_json
+                FROM activities
+                WHERE para_id = ? AND activity_type = ?
+                """,
+                (para_id, activity_type),
+            ).fetchall()
+            for row in rows:
+                existing = json.loads(row["content_json"])
+                if normalise_ws(existing.get("publication_id", "")) == publication_id:
+                    duplicate = True
+                    break
+            if duplicate:
+                continue
+
+            payload = dict(raw_item)
+            payload.pop("activity_type", None)
+            normalized = normalize_activity_payload(
+                activity_type,
+                payload,
+                paragraph["title"],
+                para_id,
+            )
+            errors = validate_activity_payload(activity_type, normalized, paragraph["title"])
+            if errors:
+                joined = "; ".join(errors)
+                raise ValueError(
+                    f"Invalid append-only activity for {para_id}/{activity_type}: {joined}"
+                )
+
+            before = db.total_changes
+            db.execute(
+                """
+                INSERT INTO activities
+                    (id, paragraph_db_id, para_id, activity_type, content_json, difficulty, generation_src)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    str(uuid.uuid4()),
+                    paragraph["id"],
+                    para_id,
+                    activity_type,
+                    json.dumps(normalized),
+                    int(normalized.get("difficulty", 1)),
+                    normalized.get("generation_source", "curated"),
+                ),
+            )
+            delta = db.total_changes - before
+            inserted += delta
+            paragraph_inserted += delta
+
+        if paragraph_inserted:
+            synced_paragraphs += 1
+
+    return synced_paragraphs, inserted
+
+
 def sync_curated_questions(db: sqlite3.Connection) -> tuple[int, int, int]:
     overrides = load_curated_overrides().get("questions", {})
     synced = 0
@@ -1858,6 +1949,104 @@ def sync_curated_questions(db: sqlite3.Connection) -> tuple[int, int, int]:
                 )
 
     return synced, deleted, inserted
+
+
+def sync_append_curated_questions(db: sqlite3.Connection) -> tuple[int, int]:
+    overrides = load_curated_overrides().get("questions", {})
+    synced_paragraphs = 0
+    inserted = 0
+
+    for para_id, override in overrides.items():
+        if not isinstance(override, dict) or not override.get("appended_items"):
+            continue
+        paragraph = db.execute(
+            "SELECT id FROM paragraphs WHERE para_id = ?",
+            (para_id,),
+        ).fetchone()
+        if paragraph is None:
+            raise ValueError(f"Missing paragraph for append-only question override: {para_id}")
+
+        paragraph_inserted = 0
+        for item in override.get("appended_items", []):
+            if not isinstance(item, dict):
+                raise ValueError(f"Append-only question for {para_id} must be an object")
+
+            question_text = normalise_ws(item.get("question_text", ""))
+            question_type = normalise_ws(item.get("question_type", ""))
+            explanation = normalise_ws(item.get("explanation", ""))
+            generation_source = normalise_ws(item.get("generation_source", "curated")) or "curated"
+            difficulty = int(item.get("difficulty", 2))
+            choices = item.get("choices", [])
+            if not question_text or not question_type:
+                raise ValueError(
+                    f"Append-only question for {para_id} is missing question_text/question_type"
+                )
+            if question_type in {"multiple_choice", "true_false"} and not choices:
+                raise ValueError(
+                    f"Append-only {question_type} question for {para_id} requires choices"
+                )
+            if question_type == "fill_blank" and not choices:
+                raise ValueError(
+                    f"Append-only fill_blank question for {para_id} requires an accepted answer"
+                )
+
+            duplicate = db.execute(
+                """
+                SELECT 1
+                FROM quiz_questions
+                WHERE para_id = ? AND lower(trim(question_text)) = lower(trim(?))
+                LIMIT 1
+                """,
+                (para_id, question_text),
+            ).fetchone()
+            if duplicate:
+                continue
+
+            question_id = str(uuid.uuid4())
+            before = db.total_changes
+            db.execute(
+                """
+                INSERT INTO quiz_questions
+                    (id, paragraph_db_id, para_id, question_text, question_type,
+                     explanation, difficulty, generation_src)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    question_id,
+                    paragraph["id"],
+                    para_id,
+                    question_text,
+                    question_type,
+                    explanation,
+                    difficulty,
+                    generation_source,
+                ),
+            )
+            delta = db.total_changes - before
+            inserted += delta
+            paragraph_inserted += delta
+
+            for sort_order, answer in enumerate(choices):
+                if not isinstance(answer, dict):
+                    raise ValueError(f"Append-only choice for {para_id} must be an object")
+                db.execute(
+                    """
+                    INSERT INTO question_choices (id, question_id, choice_text, is_correct, sort_order)
+                    VALUES (?, ?, ?, ?, ?)
+                    """,
+                    (
+                        str(uuid.uuid4()),
+                        question_id,
+                        normalise_ws(answer["text"]),
+                        int(bool(answer.get("is_correct"))),
+                        sort_order,
+                    ),
+                )
+
+        if paragraph_inserted:
+            synced_paragraphs += 1
+
+    return synced_paragraphs, inserted
 
 
 def backfill_missing_questions(db: sqlite3.Connection) -> tuple[int, int]:
@@ -2010,6 +2199,14 @@ def main() -> None:
         question_targets, questions_inserted = backfill_missing_questions(db)
         curated_question_targets, curated_questions_deleted, curated_questions_inserted = sync_curated_questions(db)
         remediation_stats = apply_content_remediation(db)
+        (
+            appended_activity_paragraphs,
+            appended_activities_inserted,
+        ) = sync_append_curated_activities(db)
+        (
+            appended_question_paragraphs,
+            appended_questions_inserted,
+        ) = sync_append_curated_questions(db)
         db.commit()
         unresolved_questions = [
             (para_id, message)
@@ -2117,10 +2314,14 @@ def main() -> None:
         print(f"Example-check activities inserted: {example_inserted}")
         print(f"Knowledge-check target paragraphs: {knowledge_targets}")
         print(f"Knowledge-check activities inserted: {knowledge_inserted}")
+        print(f"Append-only activity paragraphs synced: {appended_activity_paragraphs}")
+        print(f"Append-only activities inserted: {appended_activities_inserted}")
         print(f"Unmanaged flashcards deleted: {unmanaged_flashcards_deleted}")
         print(f"Curated question paragraphs synced: {curated_question_targets}")
         print(f"Curated questions deleted: {curated_questions_deleted}")
         print(f"Curated questions inserted: {curated_questions_inserted}")
+        print(f"Append-only question paragraphs synced: {appended_question_paragraphs}")
+        print(f"Append-only questions inserted: {appended_questions_inserted}")
         print(f"Curated flashcard paragraphs synced: {flashcard_targets}")
         print(f"Curated flashcards deleted: {flashcards_deleted}")
         print(f"Curated flashcards inserted: {flashcards_inserted}")

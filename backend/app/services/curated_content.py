@@ -19,6 +19,47 @@ def _empty_override_map() -> dict:
     return {"activities": {}, "questions": {}}
 
 
+def _append_item_key(top_level_key: str, item: object) -> tuple[str, ...]:
+    if not isinstance(item, dict):
+        return ("raw", json.dumps(item, sort_keys=True, ensure_ascii=True))
+    publication_id = str(item.get("publication_id") or "").strip()
+    if publication_id:
+        return ("publication_id", publication_id)
+    if top_level_key == "questions":
+        return (
+            "question",
+            str(item.get("question_type") or "").strip().lower(),
+            str(item.get("question_text") or "").strip().lower(),
+        )
+    return (
+        "activity",
+        str(item.get("activity_type") or "").strip().lower(),
+        json.dumps(item, sort_keys=True, ensure_ascii=True),
+    )
+
+
+def _merge_append_items(
+    top_level_key: str,
+    existing: dict,
+    override: dict,
+) -> dict:
+    combined = copy.deepcopy(existing)
+
+    merged_items: list[object] = []
+    seen: set[tuple[str, ...]] = set()
+    for candidate in [
+        *existing.get("appended_items", []),
+        *override.get("items", []),
+    ]:
+        key = _append_item_key(top_level_key, candidate)
+        if key in seen:
+            continue
+        seen.add(key)
+        merged_items.append(copy.deepcopy(candidate))
+    combined["appended_items"] = merged_items
+    return combined
+
+
 def _merge_override_file(merged: dict, path: Path) -> None:
     payload = json.loads(path.read_text(encoding="utf-8"))
     for top_level_key in ("activities", "questions"):
@@ -33,6 +74,14 @@ def _merge_override_file(merged: dict, path: Path) -> None:
 
             if override.get("replace_all"):
                 merged_section[para_id] = copy.deepcopy(override)
+                continue
+
+            if override.get("append_items"):
+                merged_section[para_id] = _merge_append_items(
+                    top_level_key,
+                    merged_section.get(para_id, {}),
+                    override,
+                )
                 continue
 
             existing = merged_section.get(para_id)
@@ -166,7 +215,7 @@ def merge_curated_activities(
                 continue
             merged.pop(slug, None)
 
-    for item in override.get("items", []):
+    for item in [*override.get("items", []), *override.get("appended_items", [])]:
         slug = item.get("activity_type")
         if not slug:
             continue

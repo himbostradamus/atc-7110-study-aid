@@ -1243,7 +1243,7 @@
           "generation_source": "question_agent",
           "difficulty": 2,
           "instruction": "What is the correct procedure?",
-          "question_text": "At an airport where procedures have been established for arriving VFR aircraft to contact approach control for landing information, a VFR arrival makes initial contact with the tower on the local control frequency. The controller wants the aircraft to receive landing and traffic information from approach control first. What should the controller instruct the aircraft to do?",
+          "question_text": "What should the tower instruct the aircraft to do?",
           "choices": [
             {
               "text": "Remain on tower frequency until the tower provides the landing sequence number.",
@@ -1262,7 +1262,9 @@
               "is_correct": false
             }
           ],
-          "explanation": "Per 7-1-3d, the aircraft may be instructed to contact approach control for landing and traffic information upon initial contact with the tower. This procedure allows approach control to issue the four required items (wind, runway, altimeter; traffic information; time/place to contact tower; and the tower contact instruction) before the tower assumes control of the arrival."
+          "explanation": "Per 7-1-3d, the aircraft may be instructed to contact approach control for landing and traffic information upon initial contact with the tower. This procedure allows approach control to issue the four required items (wind, runway, altimeter; traffic information; time/place to contact tower; and the tower contact instruction) before the tower assumes control of the arrival.",
+          "situation": "Established local procedures call for arriving VFR aircraft to contact approach control for landing information. A VFR arrival instead makes initial contact with the tower.",
+          "para_context": "APPROACH CONTROL SERVICE FOR VFR ARRIVING AIRCRAFT"
         }
       ]
     },
@@ -1273,7 +1275,7 @@
           "generation_source": "question_agent",
           "difficulty": 3,
           "instruction": "Which transmission should the controller issue?",
-          "question_text": "A controller clears an aircraft to climb to VFR-on-top through an overcast layer whose tops are unknown. The controller wants the aircraft to level at 8,000 feet and advise if still not on top at that altitude so an alternative clearance can be issued. The aircraft is currently at 4,000 feet IFR.",
+          "question_text": "Which transmission correctly provides the clearance and fallback?",
           "choices": [
             {
               "text": "CLIMB TO 8,000 AND REPORT VFR-ON-TOP. MAINTAIN VFR-ON-TOP ABOVE 8,000.",
@@ -1292,7 +1294,9 @@
               "is_correct": false
             }
           ],
-          "explanation": "Per 7-3-1b phraseology, when no tops report is available, the controller says NO TOPS REPORTS. The fallback safety provision is: IF NOT ON TOP AT (altitude), MAINTAIN (altitude), AND ADVISE. This prevents the aircraft from climbing indefinitely without reaching VFR conditions while giving the controller a defined point at which to reassess the clearance."
+          "explanation": "Per 7-3-1b phraseology, when no tops report is available, the controller says NO TOPS REPORTS. The fallback safety provision is: IF NOT ON TOP AT (altitude), MAINTAIN (altitude), AND ADVISE. This prevents the aircraft from climbing indefinitely without reaching VFR conditions while giving the controller a defined point at which to reassess the clearance.",
+          "situation": "An IFR aircraft requests a climb through an overcast layer to VFR-on-top. No tops report is available, and 8,000 feet is the altitude at which the controller wants the pilot to stop and advise.",
+          "para_context": "VFR-ON-TOP"
         }
       ]
     },
@@ -1303,26 +1307,28 @@
           "generation_source": "question_agent",
           "difficulty": 2,
           "instruction": "What procedure applies to the go-around?",
-          "question_text": "An aircraft on an IFR flight plan executes a go-around from a visual approach at an airport without an operating control tower. The pilot has the airport environment in sight but cannot complete the landing due to a deer on the runway. What is expected of the aircraft after the go-around?",
+          "question_text": "What is expected after the go-around?",
           "choices": [
             {
-              "text": "The aircraft must immediately fly the published missed approach procedure for the RNAV approach to the same runway.",
+              "text": "Fly the published missed approach for an instrument procedure to the same runway.",
               "is_correct": false
             },
             {
-              "text": "The aircraft must cancel IFR and operate under VFR for the remainder of the flight.",
+              "text": "Cancel IFR immediately and continue solely under VFR.",
               "is_correct": false
             },
             {
-              "text": "The aircraft must hold over the airport at the MVA and await further ATC clearance.",
+              "text": "Hold over the airport at the MVA until the runway becomes available.",
               "is_correct": false
             },
             {
-              "text": "The aircraft is expected to proceed in accordance with visual flight rules while ATC provides appropriate IFR separation until the aircraft lands or cancels IFR.",
+              "text": "Complete a landing as soon as possible or contact ATC for further clearance while ATC maintains approved IFR separation.",
               "is_correct": true
             }
           ],
-          "explanation": "Per 7-4-1b, at airports without an operating control tower, aircraft executing a go-around after a visual approach are expected to proceed in accordance with visual flight rules. There is no published missed approach segment for a visual approach because it is not a standard instrument approach procedure \u2014 a go-around must be handled as any go-around with appropriate IFR separation provided."
+          "explanation": "A visual approach has no missed-approach segment. At an airport without an operating tower, an aircraft that goes around is expected to complete a landing as soon as possible or contact ATC for further clearance. ATC must maintain approved separation from other IFR aircraft.",
+          "situation": "An IFR aircraft executes a go-around from a visual approach at an airport without an operating control tower because a deer is on the runway.",
+          "para_context": "VISUAL APPROACH"
         }
       ]
     },
@@ -1333,7 +1339,7 @@
           "generation_source": "question_agent",
           "difficulty": 3,
           "instruction": "What clearance should the controller issue?",
-          "question_text": "A pilot on an IFR flight plan requests a contact approach to an airport where the reported ground visibility is 1 mile but the controller is concerned that fog may reduce visibility below 1 mile before the aircraft reaches the airport. The pilot will approach from the south and the ILS Runway 18 provides a reliable backup.",
+          "question_text": "Which clearance includes the required alternative procedure?",
           "choices": [
             {
               "text": "CLEARED CONTACT APPROACH. IF NOT POSSIBLE, CLIMB TO 3,000 AND FLY HEADING 270 FOR VECTORS TO THE ILS RUNWAY 18 APPROACH, AND ADVISE.",
@@ -1352,7 +1358,9 @@
               "is_correct": false
             }
           ],
-          "explanation": "Per 7-4-7e, when weather conditions are such that a contact approach may not be practical, the controller must issue an alternative clearance. The prescribed phraseology is: CLEARED CONTACT APPROACH, (and if required, AT OR BELOW altitude routing), IF NOT POSSIBLE, (alternative procedures), AND ADVISE."
+          "explanation": "Per 7-4-7e, when weather conditions are such that a contact approach may not be practical, the controller must issue an alternative clearance. The prescribed phraseology is: CLEARED CONTACT APPROACH, (and if required, AT OR BELOW altitude routing), IF NOT POSSIBLE, (alternative procedures), AND ADVISE.",
+          "situation": "A pilot requests a contact approach with reported ground visibility of 1 mile. Fog may make the approach impracticable, and the ILS Runway 18 approach is available as a backup.",
+          "para_context": "CONTACT APPROACH"
         }
       ]
     },
@@ -1363,7 +1371,7 @@
           "generation_source": "question_agent",
           "difficulty": 3,
           "instruction": "How should the controller handle this situation?",
-          "question_text": "An SVFR aircraft has been cleared to enter the Class D surface area and is approximately 2 minutes from landing. An IFR aircraft then calls ready for departure on the same runway. Issuing an immediate takeoff clearance to the IFR aircraft would require the SVFR aircraft to be sent around or held outside the surface area. What may the controller do?",
+          "question_text": "How may the controller apply IFR priority efficiently?",
           "choices": [
             {
               "text": "Immediately cancel the SVFR clearance; IFR always takes absolute priority regardless of operational efficiency.",
@@ -1382,7 +1390,9 @@
               "is_correct": false
             }
           ],
-          "explanation": "Per 7-5-2 note, the priority afforded IFR aircraft over SVFR aircraft is not intended to be so rigidly applied that inefficient use of airspace results. The controller has the prerogative of permitting completion of an SVFR operation already in progress when an IFR aircraft becomes a factor, if better overall efficiency results. The example in the paragraph illustrates exactly this scenario \u2014 letting the SVFR aircraft land may cause less overall delay."
+          "explanation": "Per 7-5-2 note, the priority afforded IFR aircraft over SVFR aircraft is not intended to be so rigidly applied that inefficient use of airspace results. The controller has the prerogative of permitting completion of an SVFR operation already in progress when an IFR aircraft becomes a factor, if better overall efficiency results. The example in the paragraph illustrates exactly this scenario \u2014 letting the SVFR aircraft land may cause less overall delay.",
+          "situation": "An SVFR arrival is about 2 minutes from landing when an IFR aircraft becomes ready for departure. Sending the SVFR aircraft around would create more total delay.",
+          "para_context": "PRIORITY"
         }
       ]
     }

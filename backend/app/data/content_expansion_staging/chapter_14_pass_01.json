@@ -235,7 +235,8 @@
               "is_correct": true
             }
           ],
-          "explanation": "14-1-3(a)(1)(c) states the controller must either select a SID or, if no SID is to be assigned, select the NO SID option. The controller has discretion to select a SID from the TAS menu even when none was filed or assigned. The ---- option is only for Field 2 (Transition), and Field 1 cannot be left blank."
+          "explanation": "Paragraph 14-1-3(a)(1)(c) states the controller must either select a SID or, if no SID is to be assigned, select the NO SID option. The controller has discretion to select a SID from the TAS menu even when none was filed or assigned. The ---- option is only for Field 2 (Transition), and Field 1 cannot be left blank.",
+          "para_context": "DEPARTURE CLEARANCE (DCL) APPLICATION (PDC/CPDLC) SELECTABLE"
         }
       ]
     },
@@ -266,7 +267,8 @@
               "is_correct": false
             }
           ],
-          "explanation": "Per the note to 14-2-1, a vector/deviation off a SID/STAR cancels the altitude restrictions on the procedure. The FMS may be unable to process crossing restrictions once the aircraft leaves the lateral path. Without an assigned altitude, the FMS may revert to leveling off at the altitude set by the pilot\u2014which may be the SID/STAR published top or bottom altitude. The controller must assign a specific altitude when vectoring an aircraft off a climb/descend via clearance."
+          "explanation": "Per the note to 14-2-1, a vector/deviation off a SID/STAR cancels the altitude restrictions on the procedure. The FMS may be unable to process crossing restrictions once the aircraft leaves the lateral path. Without an assigned altitude, the FMS may revert to leveling off at the altitude set by the pilot\u2014which may be the SID/STAR published top or bottom altitude. The controller must assign a specific altitude when vectoring an aircraft off a climb/descend via clearance.",
+          "para_context": "GENERAL"
         }
       ]
     },
@@ -296,7 +298,7 @@
               "is_correct": false
             }
           ],
-          "explanation": "14-2-2(a) assigns the obligation to a specific controller: the one who has the aircraft on their voice frequency. This controller must use voice communication\u2014not CPDLC\u2014to verify the assigned altitude and acknowledge the IC mismatch or CAA downlink time-out indicator. The note adds that all sectors in the controlling ARTCC displaying an FDB will show the indicator, so other sectors may see it but the voice-frequency controller owns the response."
+          "explanation": "Paragraph 14-2-2(a) assigns the obligation to a specific controller: the one who has the aircraft on their voice frequency. This controller must use voice communication\u2014not CPDLC\u2014to verify the assigned altitude and acknowledge the IC mismatch or CAA downlink time-out indicator. The note adds that all sectors in the controlling ARTCC displaying an FDB will show the indicator, so other sectors may see it but the voice-frequency controller owns the response."
         }
       ]
     },
@@ -327,7 +329,8 @@
               "is_correct": false
             }
           ],
-          "explanation": "14-2-3(c)(1) requires a voice broadcast during shutdown or failure. 14-2-3(c)(2) requires resolving open or abnormally closed uplinks by voice with each aircraft. 14-2-3(b) requires establishing voice communication with an aircraft that lost its CPDLC connection when voice was not previously established. None of these obligations can be delegated or deferred."
+          "explanation": "Paragraph 14-2-3(c)(1) requires a voice broadcast during shutdown or failure. 14-2-3(c)(2) requires resolving open or abnormally closed uplinks by voice with each aircraft. 14-2-3(b) requires establishing voice communication with an aircraft that lost its CPDLC connection when voice was not previously established. None of these obligations can be delegated or deferred.",
+          "para_context": "SYSTEM SITUATIONS"
         }
       ]
     },
@@ -338,7 +341,7 @@
           "generation_source": "question_agent",
           "difficulty": 3,
           "instruction": "What should you do?",
-          "situation": "An aircraft at FL400 is en route and not established on any procedure with published speed restrictions. The controller wants to issue a speed adjustment of Mach .80 using CPDLC. A trainee objects, saying that speed adjustments above FL390 always require explicit voice concurrence from the pilot. Another controller says the WILCO response via CPDLC satisfies the concurrence requirement.",
+          "situation": "An aircraft at FL400 is en route and not established on any procedure with published speed restrictions. The controller wants to issue a speed adjustment of Mach.80 using CPDLC. A trainee objects, saying that speed adjustments above FL390 always require explicit voice concurrence from the pilot. Another controller says the WILCO response via CPDLC satisfies the concurrence requirement.",
           "question_text": "May the speed adjustment be issued via CPDLC, and what pilot response satisfies the concurrence requirement?",
           "choices": [
             {
@@ -358,7 +361,8 @@
               "is_correct": true
             }
           ],
-          "explanation": "14-2-4(b)(1) states that when using CPDLC to issue a speed assignment to an aircraft at or above FL390, the WILCO response satisfies the pilot concurrence requirement. The aircraft is not on a route with published speed restrictions, so 14-2-4(b)(2) does not apply. WILCO via CPDLC is sufficient\u2014a separate voice concurrence is not required."
+          "explanation": "Paragraph 14-2-4(b)(1) states that when using CPDLC to issue a speed assignment to an aircraft at or above FL390, the WILCO response satisfies the pilot concurrence requirement. The aircraft is not on a route with published speed restrictions, so 14-2-4(b)(2) does not apply. WILCO via CPDLC is sufficient\u2014a separate voice concurrence is not required.",
+          "para_context": "SPECIFIC UPLINKS"
         }
       ]
     },
@@ -389,7 +393,8 @@
               "is_correct": false
             }
           ],
-          "explanation": "14-3-1(d) states that when a pilot communicates via CPDLC, the response should be via CPDLC. 14-3-1(e) requires using the message set over free text to the extent possible. 14-3-1(a) mandates CPDLC as primary only when the aircraft is outside VHF coverage\u2014when inside VHF, CPDLC is still preferred for CPDLC-initiated exchanges. 14-3-1(b) allows voice when it provides operational advantage."
+          "explanation": "Paragraph 14-3-1(d) states that when a pilot communicates via CPDLC, the response should be via CPDLC. 14-3-1(e) requires using the message set over free text to the extent possible. 14-3-1(a) mandates CPDLC as primary only when the aircraft is outside VHF coverage\u2014when inside VHF, CPDLC is still preferred for CPDLC-initiated exchanges. 14-3-1(b) allows voice when it provides operational advantage.",
+          "para_context": "MEANS OF COMMUNICATION"
         }
       ]
     },
@@ -419,7 +424,7 @@
               "is_correct": false
             }
           ],
-          "explanation": "14-3-3(d) contains a must/should distinction: the controller MUST advise the pilot as early as possible to facilitate a smooth transition to voice communications (mandatory timing). Workload permitting, the controller SHOULD also advise the pilot of the reason for termination (discretionary content). The mandatory element is early notification; the reason is secondary."
+          "explanation": "Paragraph 14-3-3(d) contains a must/should distinction: the controller MUST advise the pilot as early as possible to facilitate a smooth transition to voice communications (mandatory timing). Workload permitting, the controller SHOULD also advise the pilot of the reason for termination (discretionary content). The mandatory element is early notification; the reason is secondary."
         }
       ]
     }
