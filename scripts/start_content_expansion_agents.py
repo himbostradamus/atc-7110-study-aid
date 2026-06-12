@@ -29,7 +29,7 @@ DEFAULT_CLAUDE = Path("/home/perfect-vacuum/.nvm/versions/node/v22.16.0/bin/clau
 LOCAL_AGENT_ENV = ROOT / ".env.agent.local"
 
 
-def build_prompt(chapter: int, packet: Path, output: Path) -> str:
+def build_prompt(chapter: int, pass_number: int, packet: Path, output: Path) -> str:
     base = PROMPT_TEMPLATE.read_text(encoding="utf-8")
     remediation = (
         ROOT / "backend" / "app" / "data" / "content_remediation"
@@ -63,11 +63,12 @@ Validator:
 
 ```bash
 python scripts/validate_question_authoring_batch.py \
-  {shlex.quote(str(output))} --db frontend/public/curriculum.db
+  {shlex.quote(str(output))} --db frontend/public/curriculum.db{" --strict" if pass_number >= 2 else ""}
 ```
 
 Read `{HARNESS}` and `{WRITING_HARNESS}` before authoring. Write only the
-assigned staging file. Finish the full chapter before exiting.
+assigned staging file. Follow the packet's `pass_plan` and each paragraph's
+`pass_analysis`. Finish the full chapter before exiting.
 """
 
 
@@ -108,7 +109,11 @@ def main() -> int:
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     prompts_dir = WORKSPACE / "prompts"
     logs_dir = WORKSPACE / "logs"
-    packets_dir = WORKSPACE / "packets"
+    packets_dir = (
+        WORKSPACE / "packets"
+        if args.pass_number == 1
+        else WORKSPACE / f"pass_{args.pass_number:02d}_packets"
+    )
     for directory in (prompts_dir, logs_dir, packets_dir, STAGING):
         directory.mkdir(parents=True, exist_ok=True)
 
@@ -123,7 +128,15 @@ def main() -> int:
         stem = f"chapter_{chapter:02d}_pass_{args.pass_number:02d}"
         prompt = prompts_dir / f"{stem}_{timestamp}.md"
         log = logs_dir / f"{stem}_{timestamp}.log"
-        prompt.write_text(build_prompt(chapter, packet.resolve(), output.resolve()), encoding="utf-8")
+        prompt.write_text(
+            build_prompt(
+                chapter,
+                args.pass_number,
+                packet.resolve(),
+                output.resolve(),
+            ),
+            encoding="utf-8",
+        )
         entry = {
             "chapter": chapter,
             "pass": args.pass_number,
@@ -133,6 +146,7 @@ def main() -> int:
             "output": str(output.resolve()),
             "started_at": datetime.now(timezone.utc).isoformat(),
             "pid": None,
+            "require_reviewed_ids": args.pass_number >= 2,
         }
         if args.run:
             process = launch_agent(prompt, log)

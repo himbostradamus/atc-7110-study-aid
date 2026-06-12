@@ -123,15 +123,18 @@ def inspect_output(output_path: Path, packet_path: Path) -> dict[str, Any]:
     return result
 
 
-def validate(output_path: Path) -> tuple[bool, str]:
+def validate(output_path: Path, *, strict: bool) -> tuple[bool, str]:
+    command = [
+        sys.executable,
+        "scripts/validate_question_authoring_batch.py",
+        str(output_path),
+        "--db",
+        "frontend/public/curriculum.db",
+    ]
+    if strict:
+        command.append("--strict")
     result = subprocess.run(
-        [
-            sys.executable,
-            "scripts/validate_question_authoring_batch.py",
-            str(output_path),
-            "--db",
-            "frontend/public/curriculum.db",
-        ],
+        command,
         cwd=ROOT,
         text=True,
         stdout=subprocess.PIPE,
@@ -186,7 +189,10 @@ def main() -> int:
                 f"incomplete review evidence: {len(reviewed)}/{output['source']} IDs"
             )
         elif not running and marker == "0" and total:
-            valid, validator = validate(output_path)
+            valid, validator = validate(
+                output_path,
+                strict=int(agent.get("pass") or 1) >= 2,
+            )
         elif not running:
             validator = "no completed content" if not total else "agent exited unsuccessfully"
 

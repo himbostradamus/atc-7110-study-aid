@@ -52,6 +52,19 @@ DOCUMENT_LOCATION_PATTERN = re.compile(
     r"\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\b",
     re.IGNORECASE,
 )
+DOCUMENT_CROSS_REFERENCE_PATTERN = re.compile(
+    r"\b(?:under|per|according to|apply|see|refer to|in accordance with)\s+"
+    r"(?:the\s+)?(?:paragraph|para|section|chapter|note)?\s*"
+    r"\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\b",
+    re.IGNORECASE,
+)
+PARAGRAPH_STRUCTURE_PATTERN = re.compile(
+    r"\b(?:the|this)\s+(?:paragraph|section|rule)\s+"
+    r"(?:provides|requires|states|says|permits|lists|does not provide)\b",
+    re.IGNORECASE,
+)
+SPACING_BEFORE_PUNCTUATION_PATTERN = re.compile(r"\s+[,.?!;:]")
+BROKEN_SCENARIO_TRANSITION_PATTERN = re.compile(r"[.?!]\s*,\s*(?:which|what|who|when|how)\b", re.IGNORECASE)
 
 
 class Reporter:
@@ -118,6 +131,18 @@ def validate_choices(
         text = normalize_text(choice.get("text") or choice.get("choice_text"))
         if not text:
             reporter.error(choice_location, "choice text is empty")
+        if SPACING_BEFORE_PUNCTUATION_PATTERN.search(text):
+            reporter.warn(choice_location, "choice text contains spacing before punctuation")
+        if DOCUMENT_CROSS_REFERENCE_PATTERN.search(text):
+            reporter.warn(
+                choice_location,
+                "choice text depends on a document cross-reference instead of stating the operational rule",
+            )
+        if PARAGRAPH_STRUCTURE_PATTERN.search(text):
+            reporter.warn(
+                choice_location,
+                "choice text uses paragraph-structure wording instead of operational substance",
+            )
         key = text.lower()
         if key in seen:
             reporter.error(choice_location, "duplicate choice text")
@@ -157,6 +182,20 @@ def validate_question(
         reporter.error(location, "question_text is required")
     elif len(text) < 18:
         reporter.warn(location, "question_text is very short; check for missing context")
+    if SPACING_BEFORE_PUNCTUATION_PATTERN.search(text):
+        reporter.warn(location, "question text contains spacing before punctuation")
+    if BROKEN_SCENARIO_TRANSITION_PATTERN.search(text):
+        reporter.warn(location, "question text contains a broken scenario-to-question transition")
+    if DOCUMENT_CROSS_REFERENCE_PATTERN.search(text):
+        reporter.warn(
+            location,
+            "question text depends on a document cross-reference instead of operational context",
+        )
+    if PARAGRAPH_STRUCTURE_PATTERN.search(text):
+        reporter.warn(
+            location,
+            "question text uses paragraph-structure wording instead of operational substance",
+        )
 
     if question_type not in QUESTION_TYPES:
         reporter.error(location, f"unsupported question_type '{question_type}'")
@@ -272,6 +311,18 @@ def validate_activity(
     )
     if len(prompt_text.split()) < 8:
         reporter.warn(location, "activity prompt may be too thin or underspecified")
+    if SPACING_BEFORE_PUNCTUATION_PATTERN.search(prompt_text):
+        reporter.warn(location, "activity prompt contains spacing before punctuation")
+    if PARAGRAPH_STRUCTURE_PATTERN.search(prompt_text):
+        reporter.warn(
+            location,
+            "activity prompt uses paragraph-structure wording instead of operational substance",
+        )
+    if DOCUMENT_CROSS_REFERENCE_PATTERN.search(prompt_text):
+        reporter.warn(
+            location,
+            "activity prompt depends on a document cross-reference instead of operational context",
+        )
 
     for key in ACTIVITY_CHOICE_KEYS:
         choices = item.get(key)
@@ -348,6 +399,20 @@ def validate_flashcard(reporter: Reporter, para_id: str, idx: int, item: Any, se
         reporter.error(location, "front is required")
     if not back:
         reporter.error(location, "back is required")
+    if SPACING_BEFORE_PUNCTUATION_PATTERN.search(front):
+        reporter.warn(location, "flashcard cue contains spacing before punctuation")
+    if SPACING_BEFORE_PUNCTUATION_PATTERN.search(back):
+        reporter.warn(location, "flashcard answer contains spacing before punctuation")
+    if PARAGRAPH_STRUCTURE_PATTERN.search(front):
+        reporter.warn(
+            location,
+            "flashcard cue uses paragraph-structure wording instead of operational substance",
+        )
+    if DOCUMENT_CROSS_REFERENCE_PATTERN.search(front):
+        reporter.warn(
+            location,
+            "flashcard cue depends on a document cross-reference instead of operational context",
+        )
     if front and back and front.lower() == back.lower():
         reporter.warn(location, "front and back are identical")
     if front and len(front.split()) < 4 and not (
@@ -427,6 +492,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("path", type=Path)
     parser.add_argument("--db", type=Path, default=DEFAULT_DB)
+    parser.add_argument(
+        "--strict",
+        action="store_true",
+        help="Treat quality warnings as validation failures.",
+    )
     args = parser.parse_args()
 
     payload = load_json(args.path)
@@ -471,7 +541,7 @@ def main() -> int:
     for error in reporter.errors:
         print(f"ERROR: {error}")
 
-    if reporter.errors:
+    if reporter.errors or (args.strict and reporter.warnings):
         print(f"\nValidation failed: {len(reporter.errors)} error(s), {len(reporter.warnings)} warning(s).")
         return 1
 
