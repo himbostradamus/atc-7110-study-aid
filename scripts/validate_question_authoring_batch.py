@@ -9,7 +9,7 @@ import argparse
 import json
 import re
 import sqlite3
-from collections import Counter, defaultdict
+from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
@@ -497,17 +497,6 @@ def validate_para_map(
             item_validator(reporter, str(para_id), idx, item, *validator_args)
 
 
-def report_answer_position_bias(reporter: Reporter, positions: list[int]) -> None:
-    if len(positions) < 4:
-        return
-    counts = Counter(positions)
-    first_rate = counts.get(0, 0) / len(positions)
-    if first_rate == 1:
-        reporter.error("answer_order", "all correct answers are first; vary answer order")
-    elif first_rate >= 0.7:
-        reporter.warn("answer_order", f"{first_rate:.0%} of correct answers are first; check answer-order bias")
-
-
 def report_portfolio_mix(reporter: Reporter, payload: dict[str, Any]) -> None:
     questions = [
         item
@@ -603,7 +592,6 @@ def main() -> int:
         validate_flashcard,
         seen_cards,
     )
-    report_answer_position_bias(reporter, first_correct_positions)
     report_portfolio_mix(reporter, payload)
 
     for warning in reporter.warnings:

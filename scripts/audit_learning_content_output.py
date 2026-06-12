@@ -803,8 +803,7 @@ def render_markdown(result: dict) -> str:
         "",
         f"- Activity types: {json.dumps(activities['type_counts'], sort_keys=True)}",
         f"- Learning modes: {json.dumps(activities['mode_counts'], sort_keys=True)}",
-        f"- Correct-answer positions: {json.dumps(activities['correct_answer_positions'], sort_keys=True)}",
-        f"- Correct answer is first in {activities['first_correct_rate']:.1%} of valid choice activities.",
+        "- Stored correct-answer position is not scored because the application shuffles choices at runtime.",
         f"- {activities['answer_length_cue_count']} activities make the correct answer conspicuously longer than the distractors.",
         f"- {activities['invalid_choice_set_count']} activities have fewer than two choices or do not have exactly one correct choice.",
         f"- {activities['duplicate_choice_set_count']} activities contain normalized duplicate choices.",
@@ -816,7 +815,7 @@ def render_markdown(result: dict) -> str:
         "",
         "## Highest-Priority Remediation",
         "",
-        "1. Rebalance activity answer positions and equalize answer/distractor specificity before adding more choice items.",
+        "1. Equalize answer/distractor specificity before adding more choice items.",
         "2. Replace flashcard labels with explicit retrieval cues; keep each card focused on one answerable target.",
         "3. Repair reverse cards so the reverse side asks a real question instead of naming a paragraph or topic.",
         "4. Plan coverage by essential source element, then use card recall, question discrimination, and activity application as complementary tasks.",
@@ -825,8 +824,8 @@ def render_markdown(result: dict) -> str:
         "",
         "## Chapter Pattern",
         "",
-        "| Chapter | Cards | Context-light cards | Card location scaffold | Activities | Activity location scaffold | First-answer rate | Length cues |",
-        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+        "| Chapter | Cards | Context-light cards | Card location scaffold | Activities | Activity location scaffold | Length cues |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for chapter, values in combined["chapter_breakdown"].items():
         lines.append(
@@ -835,7 +834,6 @@ def render_markdown(result: dict) -> str:
             f"{values['location_scaffolded_cards']} | "
             f"{values['activities']} | "
             f"{values['location_scaffolded_activities']} | "
-            f"{values['first_correct_rate']:.0%} | "
             f"{values['answer_length_cues']} |"
         )
     lines.extend([
@@ -904,14 +902,6 @@ def regression_failures(current: dict, baseline: dict) -> list[str]:
             failures.append(
                 f"{group}.{key} increased: {current_value} > {baseline_value}"
             )
-    if current.get("activities", {}).get("first_correct_rate", 0) > (
-        baseline.get("activities", {}).get("first_correct_rate", 0) + 0.001
-    ):
-        failures.append(
-            "activities.first_correct_rate increased: "
-            f"{current['activities']['first_correct_rate']} > "
-            f"{baseline['activities']['first_correct_rate']}"
-        )
     for key in (
         "covered_by_any_rate",
         "covered_by_two_or_more_rate",

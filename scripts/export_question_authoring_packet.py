@@ -254,7 +254,7 @@ def main() -> int:
                 "paragraph-title trivia",
                 "underspecified example checks",
                 "manufactured phraseology errors from arbitrary values",
-                "correct answer always first",
+                "rewriting otherwise unchanged choices solely to alter stored answer position",
             ],
         },
         "paragraphs": paragraphs,

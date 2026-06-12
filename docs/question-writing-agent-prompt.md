@@ -33,14 +33,14 @@ Quality standards:
 - Do not assume repeated digits or words are errors.
 - Use exact memorization only where exactness matters.
 - Make distractors plausible, not silly.
-- Do not put the correct answer first every time.
+- Do not rewrite or reject an item solely because of stored answer position; runtime shuffles choices.
 - Prefer positive operational decisions; use `NOT` or `EXCEPT` only when identifying the exclusion is the skill.
 - Explain the controlling principle and why the strongest plausible distractor fails.
 - Revisit important concepts through at least two different retrieval modes, such as recall plus scenario or condition discrimination. Synonym swaps are duplicates, not variety.
 - Give each format a distinct role: cards retrieve compact facts, questions discriminate rules and exceptions, and activities apply facts to scenarios, sequencing, phraseology, or source use. Do not copy the same direct-recall stem across formats.
 - Write flashcard fronts as explicit, self-contained retrieval cues rather than topic labels. Keep one coherent target per card, and make reverse cards contain a real question on the reverse side.
 - Keep paragraph numbers and citations out of ordinary flashcard cues and answers unless source navigation is the skill.
-- Balance activity correct-answer positions within every batch. Make correct and incorrect choices comparable in length, detail, and grammar so the answer is not visually obvious.
+- Make correct and incorrect choices comparable in length, detail, and grammar so the answer is not visually obvious. Runtime controls displayed choice order.
 - Give every scenario or decision activity enough operational facts to resolve it without relying on the section title.
 - If the source is ambiguous, make the ambiguity explicit or skip the item.
 

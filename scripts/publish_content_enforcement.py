@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Publish deterministic prompt and choice-order enforcement operations."""
+"""Publish deterministic learner-prompt enforcement operations."""
 
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import re
 import sqlite3
@@ -60,31 +59,6 @@ def strip_location(value: object) -> object:
     return cleaned
 
 
-def target_position(stable_key: str, choice_count: int) -> int:
-    return hashlib.sha256(stable_key.encode("utf-8")).digest()[0] % choice_count
-
-
-def reorder_choices(choices: list[dict[str, Any]], stable_key: str) -> bool:
-    if len(choices) < 3:
-        return False
-    correct = [
-        index for index, choice in enumerate(choices)
-        if bool(choice.get("is_correct"))
-    ]
-    if len(correct) != 1:
-        return False
-    target = target_position(stable_key, len(choices))
-    current = correct[0]
-    if current == target:
-        return False
-    selected = choices.pop(current)
-    choices.insert(target, selected)
-    for index, choice in enumerate(choices):
-        if "sort_order" in choice:
-            choice["sort_order"] = index
-    return True
-
-
 def question_operations(db: sqlite3.Connection) -> list[dict[str, Any]]:
     operations: list[dict[str, Any]] = []
     rows = db.execute(
@@ -130,11 +104,6 @@ def question_operations(db: sqlite3.Connection) -> list[dict[str, Any]]:
         ]
         cleaned = strip_location(row[2])
         changed = cleaned != row[2]
-        if row[3] == "multiple_choice":
-            changed = reorder_choices(
-                choices,
-                f"question:{row[1]}:{cleaned}",
-            ) or changed
         if not changed:
             continue
         replacement = {
@@ -149,11 +118,8 @@ def question_operations(db: sqlite3.Connection) -> list[dict[str, Any]]:
             "para_id": row[1],
             "action": "replace",
             "severity": "minor",
-            "categories": ["prompt_context", "answer_position"],
-            "problem": (
-                "Enforce a self-contained learner prompt and answer ordering that does not "
-                "depend on source-object position."
-            ),
+            "categories": ["prompt_context"],
+            "problem": "Enforce a self-contained learner prompt.",
             "source_basis": "The operational content and answer set are unchanged.",
             "match": {
                 "question_text": row[2],
@@ -226,13 +192,6 @@ def activity_operations(db: sqlite3.Connection) -> list[dict[str, Any]]:
                 if new != old:
                     replacement_content[field] = new
                     changed = True
-        choices = replacement_content.get("choices")
-        if isinstance(choices, list):
-            changed = reorder_choices(
-                choices,
-                f"activity:{row[0]}:{row[1]}:"
-                f"{replacement_content.get('question_text') or replacement_content.get('situation') or ''}",
-            ) or changed
         if not changed:
             continue
         replacement = {
@@ -245,11 +204,8 @@ def activity_operations(db: sqlite3.Connection) -> list[dict[str, Any]]:
             "para_id": row[0],
             "action": "replace",
             "severity": "minor",
-            "categories": ["prompt_context", "answer_position"],
-            "problem": (
-                "Enforce a self-contained activity prompt and answer ordering that does not "
-                "depend on source-object position."
-            ),
+            "categories": ["prompt_context"],
+            "problem": "Enforce a self-contained activity prompt.",
             "source_basis": "The scenario, controlling rule, and answer set are unchanged.",
             "match": {
                 "activity_type": row[1],
@@ -282,7 +238,7 @@ def main() -> int:
         "summary": {
             "purpose": (
                 "Mechanical enforcement after semantic chapter review: remove learner-facing "
-                "paragraph scaffolding and balance multiple-choice answer positions."
+                "paragraph scaffolding."
             ),
             "operation_count": len(operations),
         },

@@ -129,7 +129,7 @@ Every item should teach substance, not document trivia.
 - Do not treat duplicated digits or repeated words as automatically wrong. Controllers may need to say "seven seven zero zero" or similar values in the correct context.
 - Use rote memorization only where exact wording, exact sequence, exact phraseology, or exact minima matter.
 - Distractors must be plausible operational mistakes, not obviously absurd choices.
-- Multiple-choice answers must not always put the correct answer first.
+- Stored choice position is not a quality signal; the application shuffles choices at runtime.
 - Prefer positive operational decisions. Use `NOT` or `EXCEPT` only when identifying an exclusion is itself the required skill.
 - Every scenario must include enough facts to decide the answer without guessing the source title.
 - Every explanation must state the controlling principle and, for multiple choice, explain why the strongest plausible distractor fails.
@@ -148,7 +148,7 @@ Activity-specific rules:
 
 - Scenario and decision activities must contain all facts needed to choose an action without knowing the paragraph title.
 - Use activities for application, sequencing, phraseology assembly, source lookup, and misconception discrimination rather than another direct-recall wrapper.
-- Distribute correct choices across answer positions within every batch. Do not default to the first choice.
+- Do not spend authoring effort rearranging otherwise unchanged choices; runtime controls their displayed order.
 - Keep the correct answer and distractors comparable in length, detail, grammar, and specificity. The longest option must not routinely reveal the answer.
 - Binary checks are acceptable only when true/false discrimination is educationally useful; otherwise provide at least three plausible operational choices.
 - The activity explanation must state the controlling rule and address the strongest realistic alternative.

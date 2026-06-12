@@ -438,7 +438,7 @@ def render_markdown(result: dict, sources: tuple[str, ...]) -> str:
         f"- Paragraphs represented: {metrics['paragraph_count']}",
         f"- Question types: {json.dumps(metrics['type_counts'], sort_keys=True)}",
         f"- Retrieval modes: {json.dumps(metrics['mode_counts'], sort_keys=True)}",
-        f"- Correct-answer positions: {json.dumps(metrics['correct_answer_positions'], sort_keys=True)}",
+        "- Stored correct-answer position is not scored because the application shuffles choices at runtime.",
         f"- Retrieval modes per paragraph: {json.dumps(metrics['paragraph_mode_count_distribution'], sort_keys=True)}",
         "",
         "## Recurring Pitfalls",
