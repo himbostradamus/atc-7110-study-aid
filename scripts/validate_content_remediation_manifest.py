@@ -14,7 +14,12 @@ from typing import Any
 ACTIONS = {"replace", "remove", "split"}
 ENTITY_TYPES = {"question", "activity", "flashcard"}
 SEVERITIES = {"critical", "major", "minor", "suggestion"}
-NON_CONTENT_CATEGORIES = {"correct_answer_first", "answer_position_bias"}
+NON_CONTENT_CATEGORIES = {
+    "answer_order",
+    "answer_position",
+    "answer_position_bias",
+    "correct_answer_first",
+}
 QUESTION_TYPES = {"multiple_choice", "true_false", "fill_blank"}
 LOCATION_RE = re.compile(
     r"\b(?:"
