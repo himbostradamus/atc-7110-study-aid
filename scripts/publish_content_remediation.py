@@ -52,14 +52,29 @@ def build_match(entity_type: str, item: dict[str, Any]) -> dict[str, Any]:
     raise ValueError(f"Unsupported entity type: {entity_type}")
 
 
-def publish_chapter(chapter: int, out_dir: Path) -> tuple[Path, int]:
-    packet_path = WORKSPACE / "packets" / f"chapter_{chapter:02d}.json"
+def publish_chapter(
+    chapter: int,
+    out_dir: Path,
+    packet_dir: Path,
+    outputs_dir: Path,
+    pass_number: int,
+    output_prefix: str,
+) -> tuple[Path, int]:
+    packet_path = packet_dir / f"chapter_{chapter:02d}.json"
     manifest_path = (
-        WORKSPACE / "outputs" / f"chapter_{chapter:02d}"
-        / f"chapter_{chapter:02d}_pass_01.json"
+        outputs_dir / f"chapter_{chapter:02d}"
+        / f"chapter_{chapter:02d}_pass_{pass_number:02d}.json"
     )
     packet = json.loads(packet_path.read_text(encoding="utf-8"))
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    packet_source = str(packet.get("target_generation_source") or "")
+    if not packet_source:
+        raise ValueError(f"Chapter {chapter:02d}: packet target source is missing")
+    if int(manifest.get("pass") or 0) != pass_number:
+        raise ValueError(
+            f"Chapter {chapter:02d}: manifest pass "
+            f"{manifest.get('pass')} does not match requested pass {pass_number}"
+        )
     indexed = target_index(packet)
     operations: list[dict[str, Any]] = []
 
@@ -98,7 +113,10 @@ def publish_chapter(chapter: int, out_dir: Path) -> tuple[Path, int]:
         "operations": operations,
     }
     out_dir.mkdir(parents=True, exist_ok=True)
-    output_path = out_dir / f"chapter_{chapter:02d}.json"
+    filename = f"chapter_{chapter:02d}.json"
+    if output_prefix:
+        filename = f"{output_prefix}_chapter_{chapter:02d}.json"
+    output_path = out_dir / filename
     output_path.write_text(
         json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
@@ -110,12 +128,35 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--chapters", default="1-14")
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT)
+    parser.add_argument("--target-source", default="question_agent")
+    parser.add_argument("--pass-number", type=int, default=1)
+    parser.add_argument("--packet-dir", type=Path)
+    parser.add_argument("--outputs-dir", type=Path)
+    parser.add_argument("--output-prefix")
     args = parser.parse_args()
 
     from export_content_remediation_packets import parse_chapters
 
+    packet_dir = args.packet_dir or WORKSPACE / "packets"
+    outputs_dir = args.outputs_dir or WORKSPACE / "outputs"
+    output_prefix = args.output_prefix or ""
+    if args.target_source != "question_agent":
+        if args.packet_dir is None:
+            packet_dir = packet_dir / args.target_source
+        if args.outputs_dir is None:
+            outputs_dir = outputs_dir / args.target_source
+        if args.output_prefix is None:
+            output_prefix = f"{args.target_source}_pass_{args.pass_number:02d}"
+
     for chapter in parse_chapters(args.chapters):
-        output_path, count = publish_chapter(chapter, args.out_dir)
+        output_path, count = publish_chapter(
+            chapter,
+            args.out_dir,
+            packet_dir,
+            outputs_dir,
+            args.pass_number,
+            output_prefix,
+        )
         print(f"chapter {chapter:02d}: {count} operations -> {output_path}")
     return 0
 

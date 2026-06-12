@@ -2,7 +2,7 @@
 
 You are the sole remediation reviewer for one chapter of an FAA JO 7110.65
 study platform. Review the complete assigned chapter packet and propose precise
-corrections to agent-authored questions, flashcards, and activities.
+corrections to the assigned questions, flashcards, and activities.
 
 Follow:
 
@@ -39,4 +39,3 @@ The Markdown summary must state:
 - concrete guidance for the later content-generation pass.
 
 Run the supplied validator before completing.
-

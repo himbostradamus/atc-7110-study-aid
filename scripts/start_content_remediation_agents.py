@@ -112,8 +112,20 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--chapters", default="1-14")
     parser.add_argument("--pass-number", type=int, default=1)
+    parser.add_argument("--target-source", default="question_agent")
+    parser.add_argument("--packet-dir", type=Path)
+    parser.add_argument("--output-namespace")
     parser.add_argument("--run", action="store_true")
     args = parser.parse_args()
+
+    namespace = args.output_namespace
+    if namespace is None and args.target_source != "question_agent":
+        namespace = args.target_source
+    packet_dir = args.packet_dir
+    if packet_dir is None:
+        packet_dir = WORKSPACE / "packets"
+        if args.target_source != "question_agent":
+            packet_dir = packet_dir / args.target_source
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     prompts_dir = WORKSPACE / "prompts"
@@ -124,21 +136,32 @@ def main() -> int:
 
     registry_entries = []
     for chapter in parse_chapters(args.chapters):
-        packet_path = WORKSPACE / "packets" / f"chapter_{chapter:02d}.json"
+        packet_path = packet_dir / f"chapter_{chapter:02d}.json"
         if not packet_path.exists():
             parser.error(
                 f"packet missing for chapter {chapter}: {packet_path}; "
                 "run export_content_remediation_packets.py first"
             )
-        chapter_dir = outputs_dir / f"chapter_{chapter:02d}"
+        packet = json.loads(packet_path.read_text(encoding="utf-8"))
+        packet_source = str(packet.get("target_generation_source") or "")
+        if packet_source != args.target_source:
+            parser.error(
+                f"packet source mismatch for chapter {chapter}: "
+                f"expected {args.target_source}, found {packet_source or '<missing>'}"
+            )
+        chapter_dir = outputs_dir
+        if namespace:
+            chapter_dir = chapter_dir / namespace
+        chapter_dir = chapter_dir / f"chapter_{chapter:02d}"
         chapter_dir.mkdir(parents=True, exist_ok=True)
         stem = f"chapter_{chapter:02d}_pass_{args.pass_number:02d}"
         output_json = chapter_dir / f"{stem}.json"
         output_markdown = chapter_dir / f"{stem}.md"
         if output_json.exists() or output_markdown.exists():
             parser.error(f"refusing to overwrite existing output for {stem}")
-        prompt_path = prompts_dir / f"{stem}_{timestamp}.md"
-        log_path = logs_dir / f"{stem}_{timestamp}.log"
+        artifact_stem = f"{namespace}_{stem}" if namespace else stem
+        prompt_path = prompts_dir / f"{artifact_stem}_{timestamp}.md"
+        log_path = logs_dir / f"{artifact_stem}_{timestamp}.log"
         prompt_path.write_text(
             build_prompt(
                 chapter,
@@ -152,6 +175,8 @@ def main() -> int:
         entry = {
             "chapter": chapter,
             "pass": args.pass_number,
+            "target_generation_source": args.target_source,
+            "output_namespace": namespace,
             "packet": str(packet_path.resolve()),
             "prompt": str(prompt_path.resolve()),
             "log": str(log_path.resolve()),
@@ -172,6 +197,8 @@ def main() -> int:
         "version": 1,
         "created_at": datetime.now(timezone.utc).isoformat(),
         "run": args.run,
+        "target_generation_source": args.target_source,
+        "output_namespace": namespace,
         "agents": registry_entries,
     }
     registry_path = WORKSPACE / f"agent_registry_{timestamp}.json"

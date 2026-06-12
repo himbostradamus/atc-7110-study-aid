@@ -18,7 +18,7 @@ DEFAULT_OUT = (
     ROOT / "backend" / "app" / "data" / "question_authoring_workspace"
     / "remediation" / "packets"
 )
-TARGET_SOURCE = "question_agent"
+DEFAULT_TARGET_SOURCE = "question_agent"
 LOCATION_RE = re.compile(
     r"\b(?:"
     r"under\s+(?:the\s+)?(?:(?:paragraph|para|section)\s+)?"
@@ -192,7 +192,11 @@ def activity_flags(item: dict[str, Any]) -> list[str]:
     return flags
 
 
-def target_items(db: sqlite3.Connection, para_id: str) -> dict[str, list[dict[str, Any]]]:
+def target_items(
+    db: sqlite3.Connection,
+    para_id: str,
+    target_source: str,
+) -> dict[str, list[dict[str, Any]]]:
     questions = []
     for row in db.execute(
         """
@@ -201,7 +205,7 @@ def target_items(db: sqlite3.Connection, para_id: str) -> dict[str, list[dict[st
         WHERE para_id = ? AND generation_src = ?
         ORDER BY question_type, question_text, id
         """,
-        (para_id, TARGET_SOURCE),
+        (para_id, target_source),
     ):
         item = {
             "id": row["id"],
@@ -222,7 +226,7 @@ def target_items(db: sqlite3.Connection, para_id: str) -> dict[str, list[dict[st
         WHERE para_id = ? AND generation_src = ?
         ORDER BY activity_type, id
         """,
-        (para_id, TARGET_SOURCE),
+        (para_id, target_source),
     ):
         item = {
             "id": row["id"],
@@ -241,7 +245,7 @@ def target_items(db: sqlite3.Connection, para_id: str) -> dict[str, list[dict[st
         WHERE para_id = ? AND generation_src = ?
         ORDER BY card_type, front, id
         """,
-        (para_id, TARGET_SOURCE),
+        (para_id, target_source),
     ):
         item = {
             "id": row["id"],
@@ -258,7 +262,11 @@ def target_items(db: sqlite3.Connection, para_id: str) -> dict[str, list[dict[st
     }
 
 
-def reference_items(db: sqlite3.Connection, para_id: str) -> dict[str, list[dict[str, Any]]]:
+def reference_items(
+    db: sqlite3.Connection,
+    para_id: str,
+    target_source: str,
+) -> dict[str, list[dict[str, Any]]]:
     questions = [
         {
             "generation_src": row["generation_src"],
@@ -272,7 +280,7 @@ def reference_items(db: sqlite3.Connection, para_id: str) -> dict[str, list[dict
             WHERE para_id = ? AND generation_src != ?
             ORDER BY generation_src, question_type, question_text
             """,
-            (para_id, TARGET_SOURCE),
+            (para_id, target_source),
         )
     ]
     activities = []
@@ -283,7 +291,7 @@ def reference_items(db: sqlite3.Connection, para_id: str) -> dict[str, list[dict
         WHERE para_id = ? AND generation_src != ?
         ORDER BY generation_src, activity_type
         """,
-        (para_id, TARGET_SOURCE),
+        (para_id, target_source),
     ):
         payload = parse_json(row["content_json"], {})
         activities.append({
@@ -304,7 +312,7 @@ def reference_items(db: sqlite3.Connection, para_id: str) -> dict[str, list[dict
             WHERE para_id = ? AND generation_src != ?
             ORDER BY generation_src, card_type, front
             """,
-            (para_id, TARGET_SOURCE),
+            (para_id, target_source),
         )
     ]
     return {
@@ -314,7 +322,13 @@ def reference_items(db: sqlite3.Connection, para_id: str) -> dict[str, list[dict
     }
 
 
-def export_chapter(db: sqlite3.Connection, chapter: int, output_path: Path) -> dict[str, Any]:
+def export_chapter(
+    db: sqlite3.Connection,
+    chapter: int,
+    output_path: Path,
+    target_source: str,
+    source_db: Path,
+) -> dict[str, Any]:
     paragraphs = []
     counts = Counter()
     flag_counts = Counter()
@@ -328,7 +342,7 @@ def export_chapter(db: sqlite3.Connection, chapter: int, output_path: Path) -> d
         (chapter,),
     ):
         blocks = parse_json(row["content_json"], [])
-        targets = target_items(db, row["para_id"])
+        targets = target_items(db, row["para_id"], target_source)
         for entity_type, items in targets.items():
             counts[entity_type] += len(items)
             for item in items:
@@ -344,15 +358,15 @@ def export_chapter(db: sqlite3.Connection, chapter: int, output_path: Path) -> d
             "source_blocks": blocks,
             "source_text": flatten_blocks(blocks),
             "targets": targets,
-            "reference_items": reference_items(db, row["para_id"]),
+            "reference_items": reference_items(db, row["para_id"], target_source),
         })
 
     packet = {
         "version": 1,
         "packet_type": "chapter_content_remediation",
         "chapter": chapter,
-        "target_generation_source": TARGET_SOURCE,
-        "source_db": str(DEFAULT_DB),
+        "target_generation_source": target_source,
+        "source_db": str(source_db),
         "target_counts": dict(counts),
         "automated_flag_counts": dict(sorted(flag_counts.items())),
         "audit_findings": {
@@ -399,18 +413,33 @@ def parse_chapters(value: str) -> list[int]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--db", type=Path, default=DEFAULT_DB)
-    parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT)
+    parser.add_argument("--out-dir", type=Path)
     parser.add_argument("--chapters", default="1-14")
+    parser.add_argument("--target-source", default=DEFAULT_TARGET_SOURCE)
     args = parser.parse_args()
     if not args.db.exists():
         parser.error(f"database not found: {args.db}")
+
+    out_dir = args.out_dir
+    if out_dir is None:
+        out_dir = (
+            DEFAULT_OUT
+            if args.target_source == DEFAULT_TARGET_SOURCE
+            else DEFAULT_OUT / args.target_source
+        )
 
     db = sqlite3.connect(args.db)
     db.row_factory = sqlite3.Row
     try:
         for chapter in parse_chapters(args.chapters):
-            output_path = args.out_dir / f"chapter_{chapter:02d}.json"
-            packet = export_chapter(db, chapter, output_path)
+            output_path = out_dir / f"chapter_{chapter:02d}.json"
+            packet = export_chapter(
+                db,
+                chapter,
+                output_path,
+                args.target_source,
+                args.db,
+            )
             counts = packet["target_counts"]
             print(
                 f"chapter {chapter:02d}: "

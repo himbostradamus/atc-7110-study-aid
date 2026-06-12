@@ -1,6 +1,6 @@
 # Chapter Content Remediation Agent Harness
 
-This harness governs chapter-scoped review and remediation of agent-authored
+This harness governs chapter-scoped review and remediation of assigned
 questions, flashcards, and activities. It is intentionally separate from live
 curriculum files.
 
@@ -42,9 +42,9 @@ until a separate deterministic integration step validates and applies it.
 
 Review every target item in the assigned packet:
 
-- `question_agent` quiz questions;
-- `question_agent` activities;
-- `question_agent` flashcards.
+- quiz questions from the packet's `target_generation_source`;
+- activities from the packet's `target_generation_source`;
+- flashcards from the packet's `target_generation_source`.
 
 The manifest must list every target ID in `reviewed_item_ids`, grouped by entity
 type. The validator rejects incomplete or foreign ID coverage.
@@ -107,9 +107,14 @@ Every decision requires:
 Use the exact output paths supplied in the assignment prompt:
 
 ```text
-chapter_XX_pass_01.json
-chapter_XX_pass_01.md
+chapter_XX_pass_NN.json
+chapter_XX_pass_NN.md
 ```
+
+The packet and output directories may be namespaced by generation source, for
+example `packets/curated/` and `outputs/curated/chapter_05/`. Always use the
+exact paths supplied in the assigned prompt. Never write into another source or
+pass namespace.
 
 Write valid JSON incrementally to a temporary file if needed, then rename it to
 the required final path only when the chapter pass is complete.
@@ -174,4 +179,3 @@ python scripts/validate_content_remediation_manifest.py \
 ```
 
 Fix all errors. Warnings require review but do not necessarily block completion.
-
