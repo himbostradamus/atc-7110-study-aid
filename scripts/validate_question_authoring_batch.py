@@ -65,6 +65,11 @@ PARAGRAPH_STRUCTURE_PATTERN = re.compile(
 )
 SPACING_BEFORE_PUNCTUATION_PATTERN = re.compile(r"\s+[,.?!;:]")
 BROKEN_SCENARIO_TRANSITION_PATTERN = re.compile(r"[.?!]\s*,\s*(?:which|what|who|when|how)\b", re.IGNORECASE)
+SCENARIO_QUESTION_PATTERN = re.compile(
+    r"\b(?:aircraft|pilot|controller|traffic|runway|flight|facility|sector|"
+    r"approach|departure|arrival|reports?|requests?|observed|you are|you have)\b",
+    re.IGNORECASE,
+)
 
 
 class Reporter:
@@ -488,6 +493,47 @@ def report_answer_position_bias(reporter: Reporter, positions: list[int]) -> Non
         reporter.warn("answer_order", f"{first_rate:.0%} of correct answers are first; check answer-order bias")
 
 
+def report_portfolio_mix(reporter: Reporter, payload: dict[str, Any]) -> None:
+    questions = [
+        item
+        for override in (payload.get("questions") or {}).values()
+        if isinstance(override, dict)
+        for item in override.get("items", [])
+        if isinstance(item, dict)
+    ]
+    if len(questions) >= 6:
+        scenario_count = sum(
+            bool(SCENARIO_QUESTION_PATTERN.search(normalize_text(item.get("question_text"))))
+            and len(normalize_text(item.get("question_text")).split()) >= 22
+            for item in questions
+        )
+        scenario_rate = scenario_count / len(questions)
+        if scenario_rate > 0.5:
+            reporter.warn(
+                "question_portfolio",
+                f"{scenario_rate:.0%} of questions are scenario application; pass two caps this at 50%",
+            )
+
+    activities = [
+        item
+        for override in (payload.get("activities") or {}).values()
+        if isinstance(override, dict)
+        for item in override.get("items", [])
+        if isinstance(item, dict)
+    ]
+    if len(activities) >= 4:
+        situation_count = sum(
+            normalize_text(item.get("activity_type")).lower() == "situation_action"
+            for item in activities
+        )
+        situation_rate = situation_count / len(activities)
+        if situation_rate > 0.5:
+            reporter.warn(
+                "activity_portfolio",
+                f"{situation_rate:.0%} of activities use situation_action; pass two caps this at 50%",
+            )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("path", type=Path)
@@ -535,6 +581,7 @@ def main() -> int:
         seen_cards,
     )
     report_answer_position_bias(reporter, first_correct_positions)
+    report_portfolio_mix(reporter, payload)
 
     for warning in reporter.warnings:
         print(f"WARN: {warning}")
