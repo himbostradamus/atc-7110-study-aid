@@ -897,30 +897,30 @@
     "7-6-7": {
       "items": [
         {
-          "question_text": "A controller is sequencing VFR arrivals to close parallel runways that are 2,000 feet apart. A faster trailing aircraft on the left runway is closing on a slower lead aircraft on the right runway. What restriction applies?",
+          "question_text": "A faster trailing VFR aircraft is closing on an aircraft established on final to an adjacent parallel runway 2,000 feet away. Wake turbulence separation is required. What restriction applies?",
           "question_type": "multiple_choice",
           "difficulty": 3,
           "source_block": "body",
           "generation_source": "question_agent",
-          "explanation": "Per 7-6-7c, when parallel runways are less than 2,500 feet apart, an aircraft must not overtake another aircraft established on the adjacent final approach course. This restriction prevents side-by-side operations at close lateral proximity where wake turbulence or course deviations could compromise safety.",
+          "explanation": "When parallel runways are less than 2,500 feet apart, do not permit an aircraft to overtake another aircraft established on the adjacent final within the facility's area of responsibility when wake turbulence separation is required. The prohibition is conditional, not universal.",
           "choices": [
             {
-              "text": "The trailing aircraft may overtake if it maintains 1,000 feet vertical separation above the lead aircraft.",
+              "text": "Overtaking is allowed if both pilots report the other aircraft in sight.",
               "is_correct": false,
               "sort_order": 0
             },
             {
-              "text": "Overtaking is permitted when both aircraft are on visual approaches and both pilots report each other in sight.",
+              "text": "Overtaking is allowed if 1,000 feet vertical separation is maintained.",
               "is_correct": false,
               "sort_order": 1
             },
             {
-              "text": "No restriction applies; aircraft on separate runways may pass each other freely regardless of runway spacing.",
+              "text": "No restriction applies because the aircraft are assigned different runways.",
               "is_correct": false,
               "sort_order": 2
             },
             {
-              "text": "The trailing aircraft must not overtake the aircraft on the adjacent final approach course.",
+              "text": "The trailing aircraft must not overtake while wake turbulence separation is required.",
               "is_correct": true,
               "sort_order": 3
             }
@@ -1246,12 +1246,12 @@
           "question_text": "At an airport where procedures have been established for arriving VFR aircraft to contact approach control for landing information, a VFR arrival makes initial contact with the tower on the local control frequency. The controller wants the aircraft to receive landing and traffic information from approach control first. What should the controller instruct the aircraft to do?",
           "choices": [
             {
-              "text": "Contact approach control for landing and traffic information upon this initial contact with the tower.",
-              "is_correct": true
-            },
-            {
               "text": "Remain on tower frequency until the tower provides the landing sequence number.",
               "is_correct": false
+            },
+            {
+              "text": "Contact approach control for landing and traffic information upon this initial contact with the tower.",
+              "is_correct": true
             },
             {
               "text": "Squawk standby and await a call from approach control on the guard frequency.",
@@ -1276,16 +1276,16 @@
           "question_text": "A controller clears an aircraft to climb to VFR-on-top through an overcast layer whose tops are unknown. The controller wants the aircraft to level at 8,000 feet and advise if still not on top at that altitude so an alternative clearance can be issued. The aircraft is currently at 4,000 feet IFR.",
           "choices": [
             {
-              "text": "CLIMB TO AND REPORT REACHING VFR-ON-TOP, NO TOPS REPORTS. IF NOT ON TOP AT 8,000, MAINTAIN 8,000, AND ADVISE.",
-              "is_correct": true
-            },
-            {
               "text": "CLIMB TO 8,000 AND REPORT VFR-ON-TOP. MAINTAIN VFR-ON-TOP ABOVE 8,000.",
               "is_correct": false
             },
             {
               "text": "MAINTAIN VFR-ON-TOP UNTIL 8,000. ADVISE IF UNABLE TO COMPLY.",
               "is_correct": false
+            },
+            {
+              "text": "CLIMB TO AND REPORT REACHING VFR-ON-TOP, NO TOPS REPORTS. IF NOT ON TOP AT 8,000, MAINTAIN 8,000, AND ADVISE.",
+              "is_correct": true
             },
             {
               "text": "CLEARED VFR-ON-TOP. IF NOT ON TOP BY 8,000 REVERT TO IFR AND CONTACT APPROACH.",
@@ -1306,10 +1306,6 @@
           "question_text": "An aircraft on an IFR flight plan executes a go-around from a visual approach at an airport without an operating control tower. The pilot has the airport environment in sight but cannot complete the landing due to a deer on the runway. What is expected of the aircraft after the go-around?",
           "choices": [
             {
-              "text": "The aircraft is expected to proceed in accordance with visual flight rules while ATC provides appropriate IFR separation until the aircraft lands or cancels IFR.",
-              "is_correct": true
-            },
-            {
               "text": "The aircraft must immediately fly the published missed approach procedure for the RNAV approach to the same runway.",
               "is_correct": false
             },
@@ -1320,6 +1316,10 @@
             {
               "text": "The aircraft must hold over the airport at the MVA and await further ATC clearance.",
               "is_correct": false
+            },
+            {
+              "text": "The aircraft is expected to proceed in accordance with visual flight rules while ATC provides appropriate IFR separation until the aircraft lands or cancels IFR.",
+              "is_correct": true
             }
           ],
           "explanation": "Per 7-4-1b, at airports without an operating control tower, aircraft executing a go-around after a visual approach are expected to proceed in accordance with visual flight rules. There is no published missed approach segment for a visual approach because it is not a standard instrument approach procedure \u2014 a go-around must be handled as any go-around with appropriate IFR separation provided."
@@ -1521,9 +1521,21 @@
     "7-4-5": {
       "items": [
         {
-          "front": "What are the conditions that must be met before clearing an aircraft for a Charted Visual Flight Procedure (CVFP)?",
-          "back": "1. Operating control tower. 2. Published name of CVFP and landing runway specified in the clearance. 3. Reported ceiling \u2265 500 ft above MVA/MIA and visibility \u2265 3 miles. 4. Visual reference: for aircraft not following another \u2014 pilot reports airport or charted visual landmark in sight; for aircraft following another \u2014 pilot reports preceding aircraft in sight.",
-          "card_type": "procedure",
+          "front": "What weather minimums normally permit a Charted Visual Flight Procedure?",
+          "back": "Reported ceiling at least 500 feet above the MVA or MIA and visibility at least 3 miles, unless the published CVFP requires higher minimums.",
+          "card_type": "threshold",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "What visual reference is required for an aircraft not following another aircraft on a CVFP?",
+          "back": "The pilot must report a charted visual landmark in sight, or report a preceding aircraft landing on the same runway in sight after being instructed to follow it.",
+          "card_type": "requirement",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "What must a CVFP approach clearance identify?",
+          "back": "The published CVFP name and the landing runway. An operating control tower is also required.",
+          "card_type": "phraseology",
           "generation_source": "question_agent"
         }
       ]

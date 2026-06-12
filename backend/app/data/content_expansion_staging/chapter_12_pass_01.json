@@ -185,15 +185,27 @@
     "12-1-6": {
       "items": [
         {
-          "question_text": "In Canadian airspace, do _____ authorize parachute jumping without prior permission from the appropriate Canadian authority.",
-          "question_type": "fill_blank",
-          "difficulty": 1,
+          "question_text": "A pilot requests authorization for a parachute jump in delegated Canadian airspace but has not obtained permission from the appropriate Canadian authority. What should the controller do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
           "source_block": "body",
           "generation_source": "question_agent",
-          "explanation": "This is an absolute prohibition: \"Do not authorize.\" The controller has no discretion to approve a parachute jump based on local conditions, pilot assurances, or operational convenience. The prior permission from the appropriate Canadian authority is a non-waivable prerequisite \u2014 without it, the answer must always be no.",
+          "explanation": "Do not authorize the jump without prior permission from the appropriate Canadian authority. Traffic conditions, VFR status, or a pilot assurance do not replace that prerequisite.",
           "choices": [
             {
-              "text": "not",
+              "text": "Authorize it if traffic permits and the pilot remains VFR.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate locally, then approve it without prior Canadian permission.",
+              "is_correct": false
+            },
+            {
+              "text": "Authorize it after the pilot verbally accepts responsibility.",
+              "is_correct": false
+            },
+            {
+              "text": "Do not authorize the jump until the required Canadian permission exists.",
               "is_correct": true
             }
           ]
@@ -225,6 +237,10 @@
           "explanation": "Canadian SVFR rules explicitly permit night SVFR without IFR pilot qualification and without IFR aircraft equipment. This is a significant difference from U.S. rules under 14 CFR 91.157, which require an IFR-rated pilot and an IFR-equipped aircraft for night SVFR. Controllers working Canadian airspace must not impose U.S. night SVFR requirements on operations governed by Canadian regulations.",
           "choices": [
             {
+              "text": "Yes \u2014 Canadian rules permit night SVFR without IFR pilot qualification or IFR aircraft equipment, which differs from U.S. requirements.",
+              "is_correct": true
+            },
+            {
               "text": "No \u2014 the pilot must hold an IFR rating for any night SVFR operation, consistent with U.S. rules.",
               "is_correct": false
             },
@@ -235,10 +251,6 @@
             {
               "text": "Yes \u2014 but only if the pilot has logged at least 50 hours of night flight time in the preceding 12 months.",
               "is_correct": false
-            },
-            {
-              "text": "Yes \u2014 Canadian rules permit night SVFR without IFR pilot qualification or IFR aircraft equipment, which differs from U.S. requirements.",
-              "is_correct": true
             }
           ]
         }
@@ -257,12 +269,12 @@
           "question_text": "Which phraseology should be used \u2014 the Chapter 12 Canadian phraseology or the standard FAA phraseology?",
           "choices": [
             {
-              "text": "Use the Chapter 12 Canadian phraseology, because the chapter's Canadian-specific procedures must be applied where Canadian regulatory or unique operational requirements make them necessary.",
-              "is_correct": true
-            },
-            {
               "text": "Use the FAA phraseology because basic FAA procedures are the default and Canadian procedures are optional.",
               "is_correct": false
+            },
+            {
+              "text": "Use the Chapter 12 Canadian phraseology, because the chapter's Canadian-specific procedures must be applied where Canadian regulatory or unique operational requirements make them necessary.",
+              "is_correct": true
             },
             {
               "text": "Use whichever phraseology the pilot requests, because the delegation agreement lets the pilot choose between the two systems.",
@@ -292,12 +304,12 @@
               "is_correct": false
             },
             {
-              "text": "Class B airspace, which also permits Controlled VFR (CVFR) flights.",
-              "is_correct": true
-            },
-            {
               "text": "Class A airspace, which permits only IFR flights.",
               "is_correct": false
+            },
+            {
+              "text": "Class B airspace, which also permits Controlled VFR (CVFR) flights.",
+              "is_correct": true
             },
             {
               "text": "Class E airspace, which also permits VFR flights with no special requirements.",
@@ -327,12 +339,12 @@
               "is_correct": false
             },
             {
-              "text": "Deny it because the pilot will operate within Class B airspace, which is prohibited for the 1,000-feet-on-top clearance.",
-              "is_correct": true
-            },
-            {
               "text": "Deny it because 1,000 feet-on-top is never permitted on filed routes \u2014 it is available only for local operations within visual range of the airport.",
               "is_correct": false
+            },
+            {
+              "text": "Deny it because the pilot will operate within Class B airspace, which is prohibited for the 1,000-feet-on-top clearance.",
+              "is_correct": true
             }
           ],
           "explanation": "Per 12-1-3b, the pilot must not operate within Class A or Class B airspace when using the 1,000-feet-on-top clearance. Even though the pilot meets the weather requirements (pilot's responsibility per the note), the airspace restriction is an independent, non-waivable condition. Both conditions \u2014 pilot request plus no Class A/B operation \u2014 must be satisfied."
@@ -350,6 +362,10 @@
           "question_text": "Which type of separation minimum best resolves this situation?",
           "choices": [
             {
+              "text": "Vertical separation \u2014 ensure at least 1,000 feet vertical separation exists between the aircraft throughout the climb by coordinating the timing with the aircraft at FL 210.",
+              "is_correct": true
+            },
+            {
               "text": "Vertical separation \u2014 hold the climbing aircraft at FL 200 until the other aircraft is no longer a factor, then approve the climb.",
               "is_correct": false
             },
@@ -360,10 +376,6 @@
             {
               "text": "Lateral separation \u2014 offset the climbing aircraft onto a parallel track outside the airway boundary.",
               "is_correct": false
-            },
-            {
-              "text": "Vertical separation \u2014 ensure at least 1,000 feet vertical separation exists between the aircraft throughout the climb by coordinating the timing with the aircraft at FL 210.",
-              "is_correct": true
             }
           ],
           "explanation": "Per 12-1-4, the controller may apply a lateral, longitudinal, or vertical separation minimum. When lateral separation is unavailable (single airway) and longitudinal separation would be unduly disruptive, vertical separation is the appropriate choice. The rule gives the controller discretion to select any of the three types \u2014 it does not prioritize one over another. Here, managing the climb to maintain vertical separation throughout is the most efficient solution."
@@ -381,12 +393,12 @@
           "question_text": "Which procedure should the pilot follow?",
           "choices": [
             {
-              "text": "The alternate instructions issued by ATC, because the standard procedure applies only when ATC has NOT issued alternate radio failure instructions.",
-              "is_correct": true
-            },
-            {
               "text": "The standard procedure, because ATC-issued alternate instructions are advisory only and do not override the regulatory requirement.",
               "is_correct": false
+            },
+            {
+              "text": "The alternate instructions issued by ATC, because the standard procedure applies only when ATC has NOT issued alternate radio failure instructions.",
+              "is_correct": true
             },
             {
               "text": "Neither \u2014 the pilot should squawk 7600 and hold at the clearance limit until communications are restored or 30 minutes have elapsed.",
@@ -416,12 +428,12 @@
               "is_correct": false
             },
             {
-              "text": "Approve it \u2014 the 1/2 mile helicopter minimum is met, IFR traffic is light, and with a controller on duty the approval criteria are satisfied.",
-              "is_correct": true
-            },
-            {
               "text": "Deny it \u2014 even though helicopters have a lower visibility minimum, the IFR arrival in 25 minutes requires that SVFR be refused.",
               "is_correct": false
+            },
+            {
+              "text": "Approve it \u2014 the 1/2 mile helicopter minimum is met, IFR traffic is light, and with a controller on duty the approval criteria are satisfied.",
+              "is_correct": true
             },
             {
               "text": "Approve it but limit the operation to 10 minutes, because helicopter SVFR at reduced visibility cannot exceed that duration.",

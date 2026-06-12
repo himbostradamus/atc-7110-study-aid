@@ -1135,27 +1135,27 @@
     "5-5-1": {
       "items": [
         {
-          "question_text": "To which aircraft must radar separation be applied according to the application paragraph?",
+          "question_text": "An RNAV aircraft at FL430 is flying point-to-point via an impromptu route outside oceanic airspace. Does the mandatory Q-route/random-RNAV rule in 5-5-1a apply solely because the aircraft is RNAV-equipped?",
           "question_type": "multiple_choice",
           "difficulty": 2,
           "source_block": "body",
           "generation_source": "question_agent",
-          "explanation": "The paragraph specifically requires radar separation for 'all RNAV aircraft operating at and below FL450 on Q routes or random RNAV routes, excluding oceanic airspace.' There is also an exception for point-to-point routes via an impromptu route. This does not mean radar separation is limited to these aircraft \u2014 other separation rules apply elsewhere \u2014 but this paragraph mandates radar separation for this specific category.",
+          "explanation": "No. The mandatory application in 5-5-1a covers RNAV aircraft at and below FL450 on Q routes or random RNAV routes outside oceanic airspace, but expressly excepts point-to-point routes via an impromptu route. Other applicable separation requirements still remain.",
           "choices": [
             {
-              "text": "All aircraft regardless of navigation type or altitude.",
+              "text": "Yes. Every RNAV aircraft at or below FL450 is included regardless of routing.",
               "is_correct": false
             },
             {
-              "text": "Only turbojet aircraft at any altitude on any route.",
+              "text": "Yes, but only when the aircraft is below FL180.",
               "is_correct": false
             },
             {
-              "text": "Only non-RNAV aircraft on conventional airways.",
+              "text": "No, because radar separation is never applied to impromptu routes.",
               "is_correct": false
             },
             {
-              "text": "All RNAV aircraft operating at and below FL450 on Q routes or random RNAV routes, excluding oceanic airspace.",
+              "text": "No. Point-to-point travel via an impromptu route is the stated exception.",
               "is_correct": true
             }
           ]
@@ -2824,8 +2824,8 @@
     "5-2-12": {
       "items": [
         {
-          "front": "What downstream notification is required when an aircraft transponder is malfunctioning or inoperative?",
-          "back": "The subsequent control position in the facility or the next facility, as applicable, must be notified.",
+          "front": "What should a controller tell an aircraft when its transponder appears inoperative or malfunctioning?",
+          "back": "Advise that the transponder appears inoperative or malfunctioning, then instruct the aircraft to reset and squawk the appropriate code.",
           "card_type": "requirement",
           "generation_source": "question_agent"
         }
@@ -2864,8 +2864,8 @@
     "5-2-22": {
       "items": [
         {
-          "front": "What three pieces of information must be provided to the OS/CIC when an aircraft's ADS-B transmitter appears inoperative?",
-          "back": "1. Aircraft call sign. 2. Location. 3. Time of the occurrence (UTC).",
+          "front": "What must be done if a malfunctioning ADS-B transmitter jeopardizes the safe execution of ATC functions?",
+          "back": "Instruct the aircraft to stop ADS-B transmissions and notify the OS/CIC. If able, the aircraft should squawk the assigned Mode 3/A code.",
           "card_type": "list",
           "generation_source": "question_agent"
         }
@@ -2894,8 +2894,8 @@
     "5-3-2": {
       "items": [
         {
-          "front": "For the departing aircraft identification method, what two requirements must be met?",
-          "back": "1. Target observed within 1 mile of the takeoff runway end at an airport with an operating control tower. 2. One of the specified coordination methods must be accomplished.",
+          "front": "Which coordination methods support identifying a departing aircraft within 1 mile of the runway end?",
+          "back": "A verbal rolling or boundary notification for each departure, or a nonverbal rolling or boundary notification for each departure aircraft.",
           "card_type": "list",
           "generation_source": "question_agent"
         }
@@ -2924,8 +2924,8 @@
     "5-4-8": {
       "items": [
         {
-          "front": "What are the three required conditions for Automated Information Transfer (AIT)?",
-          "back": "1. During radar handoff. 2. Via information displayed in full data blocks. 3. When following procedures specified in the facility AIT directive and/or LOA. All three conditions must be met (connected by 'and').",
+          "front": "Does Automated Information Transfer remove the need for coordination awareness between affected positions?",
+          "back": "No. AIT may be bidirectional and involve more than two sectors; complete coordination, traffic-flow awareness, and shared understanding of each position's responsibilities remain essential.",
           "card_type": "list",
           "generation_source": "question_agent"
         }
@@ -3021,16 +3021,6 @@
         }
       ]
     },
-    "5-13-7": {
-      "items": [
-        {
-          "front": "May coast tracks be used for separation criteria?",
-          "back": "No. Do not use coast tracks in the application of either radar or nonradar separation criteria.",
-          "card_type": "rule",
-          "generation_source": "question_agent"
-        }
-      ]
-    },
     "5-2-9": {
       "items": [
         {
@@ -3064,8 +3054,14 @@
     "5-5-9": {
       "items": [
         {
-          "front": "What are the terminal radar separation minima from prominent obstructions?",
-          "back": "Less than 40 miles from antenna: 3 miles. 40 miles or more from antenna: 5 miles. Single sensor MSSR less than 60 miles: 3 miles. FUSION target symbol: 3 miles. FUSION with ISR displayed: 5 miles.",
+          "front": "What primary terminal obstruction separation applies based on distance from the radar antenna?",
+          "back": "Less than 40 miles: 3 miles. At 40 miles or more: 5 miles.",
+          "card_type": "threshold",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "What obstruction separation applies to FUSION targets?",
+          "back": "Use 3 miles for a FUSION target symbol, or 5 miles when an ISR is displayed.",
           "card_type": "threshold",
           "generation_source": "question_agent"
         }

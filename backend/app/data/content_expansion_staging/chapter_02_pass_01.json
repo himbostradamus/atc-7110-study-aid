@@ -1670,28 +1670,28 @@
           "activity_type": "knowledge_check",
           "generation_source": "question_agent",
           "difficulty": 2,
-          "instruction": "Identify which message category is unique to Canadian ACC transmissions",
-          "situation": "",
-          "question_text": "which message category is listed for Canadian ACC transmission to FAA ARTCCs but NOT in the U.S. ARTCC transmission list?",
+          "instruction": "Apply Canadian-to-U.S. flight-data format requirements.",
+          "situation": "A Canadian ACC must send a correction to flight data previously transmitted to an FAA ARTCC.",
+          "question_text": "Which handling is supported by the prescribed exchange format?",
           "choices": [
             {
-              "text": "Flight plan messages.",
+              "text": "Send only a cancellation, then require the pilot to file a new flight plan.",
               "is_correct": false
             },
             {
-              "text": "Amendment messages.",
+              "text": "Use the U.S.-to-Canada strip format because correction messages are not supported.",
               "is_correct": false
             },
             {
-              "text": "Departure messages.",
+              "text": "Send a NADIN II correction message to the FAA ARTCC.",
               "is_correct": true
             },
             {
-              "text": "Cancellation messages.",
+              "text": "Delay the correction until the aircraft checks in with the FAA ARTCC.",
               "is_correct": false
             }
           ],
-          "explanation": "the source paragraph lists message categories differently for each direction. The U.S. ARTCC transmission list includes flight plan messages (active and proposed), amendment messages, and cancellation messages. The Canadian ACC transmission list adds 'Departure messages' as a category not found in the U.S. list."
+          "explanation": "Canadian ACC transmissions to FAA ARTCCs may use the NADIN II input format for correction messages. Apply the permitted message format to the operational need rather than comparing document lists."
         }
       ]
     },
@@ -1794,28 +1794,28 @@
           "activity_type": "knowledge_check",
           "generation_source": "question_agent",
           "difficulty": 2,
-          "instruction": "Apply the ICAO pronunciation standard",
-          "situation": "",
-          "question_text": "A controller needs to spell the call sign 'N5JQ' using ICAO phonetics. Which of the following is correct?",
+          "instruction": "Apply prescribed phonetic and number pronunciation.",
+          "situation": "On a noisy frequency, a controller must transmit the aircraft identification N5JQ.",
+          "question_text": "Which transmission uses the prescribed pronunciations?",
           "choices": [
             {
-              "text": "Nancy Five John Queen.",
-              "is_correct": false
-            },
-            {
-              "text": "November Five Juliet Quebec \u2014 the double-t spelling is not prescribed.",
-              "is_correct": false
-            },
-            {
               "text": "November Five Juliett Quebec.",
+              "is_correct": false
+            },
+            {
+              "text": "Nancy Fife John Queen.",
+              "is_correct": false
+            },
+            {
+              "text": "November Fife Juliett Quebec.",
               "is_correct": true
             },
             {
-              "text": "November Five Japan Quebec.",
+              "text": "November Fife Japan Quebec.",
               "is_correct": false
             }
           ],
-          "explanation": "the source paragraph requires using the ICAO pronunciation of numbers and individual letters. TBL 2-4-1 specifies 'Juliett' with the double-t spelling, 'November' for N, and 'Quebec' for Q. 'Juliet' (single-t) is not the ICAO prescribed spelling, though it is the accepted pronunciation."
+          "explanation": "Use the prescribed spoken forms for individual characters: November, Fife, Juliett, Quebec. The operational skill is clear pronunciation; the numeral 5 is spoken \"Fife,\" not \"Five.\""
         }
       ]
     },
@@ -1826,8 +1826,8 @@
           "generation_source": "question_agent",
           "difficulty": 2,
           "instruction": "Identify the correct facility identification",
-          "situation": "",
-          "question_text": "Columbus, Mississippi has both a civil airport (Columbus AFB \u2014 actually Columbus AFB is a military installation) and the city of Columbus has both the Air Force Base and Golden Triangle Regional Airport. How should the Air Force Base tower be identified?",
+          "situation": "Columbus, Mississippi has both an Air Force Base and Golden Triangle Regional Airport in the same general area.",
+          "question_text": "How should the Air Force Base tower be identified on frequency?",
           "choices": [
             {
               "text": "Columbus Tower \u2014 the same as any other airport traffic control tower.",
@@ -1846,7 +1846,7 @@
               "is_correct": true
             }
           ],
-          "explanation": "the source paragraph states: 'Where military and civil airports are located in the same general area and have similar names, state the name of the military service followed by the name of the military facility and the word tower.' The example 'Navy Jacksonville Tower' illustrates this pattern."
+          "explanation": "When military and civil airports in the same general area have similar names, state the military service, the military facility name, and \"Tower.\" The applicable identification is \"Air Force Columbus Tower.\""
         }
       ]
     },
@@ -1940,37 +1940,6 @@
             }
           ],
           "explanation": "the source paragraph has two independent triggers for issuing touchdown RVR: (1) when prevailing visibility is 1 mile or less regardless of RVR value, OR (2) when RVR indicates a reportable value (6,000 feet or less) regardless of prevailing visibility. Here, trigger (2) applies because 5,500 feet is reportable, even though prevailing visibility exceeds 1 mile."
-        }
-      ]
-    },
-    "2-9-2": {
-      "items": [
-        {
-          "activity_type": "situation_action",
-          "generation_source": "question_agent",
-          "difficulty": 2,
-          "instruction": "Apply the ATIS recoding requirement",
-          "situation": "The current ATIS message is Information GOLF. A new official weather observation arrives with the same ceiling and visibility values as the previous one. No other changes have occurred.",
-          "question_text": "Must a new ATIS recording be made?",
-          "choices": [
-            {
-              "text": "Yes. A new recording must be made upon receipt of any new official weather, regardless of whether values changed.",
-              "is_correct": true
-            },
-            {
-              "text": "Yes, but only because the controller should update the time of the weather observation.",
-              "is_correct": false
-            },
-            {
-              "text": "No. Since the weather values are unchanged, the existing recording remains valid.",
-              "is_correct": false
-            },
-            {
-              "text": "No. A new recording is only needed when weather values change significantly.",
-              "is_correct": false
-            }
-          ],
-          "explanation": "the source paragraph(1) explicitly requires a new recording upon receipt of any new official weather regardless of whether there is or is not a change in values. The trigger is the arrival of new official weather information, not a change in the observed conditions. This ensures the ATIS always reflects the most current observation."
         }
       ]
     }
@@ -2159,8 +2128,8 @@
     "2-2-10": {
       "items": [
         {
-          "front": "What route-length condition triggers NADIN forwarding during inter-center computer operation?",
-          "back": "When the route of flight of any proposed flight plan exceeds 20 elements external to the originating ARTCC's area, NADIN must be used to forward the data to all affected centers, even when Computer B network is operational",
+          "front": "When must NADIN forward a proposed flight plan to all affected centers even though Computer B is operating?",
+          "back": "When the route contains more than 20 elements outside the originating ARTCC's area. The route scope triggers NADIN forwarding regardless of Computer B network status.",
           "card_type": "requirement",
           "generation_source": "question_agent"
         }
@@ -2189,8 +2158,8 @@
     "2-3-2": {
       "items": [
         {
-          "front": "What information is recorded in block 26 of the en route flight progress strip?",
-          "back": "Sector/position number. When voice recorders are used, this entry supports identification of the controlling position for the recorded transmission",
+          "front": "What strip entry supports identification of the controlling position for a recorded transmission?",
+          "back": "The sector or position number entry. On the en route flight progress strip, it is recorded in block 26 when applicable.",
           "card_type": "fact",
           "generation_source": "question_agent"
         }

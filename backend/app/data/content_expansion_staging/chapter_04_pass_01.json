@@ -38,22 +38,22 @@
           "difficulty": 3,
           "source_block": "body",
           "generation_source": "question_agent",
-          "explanation": "When no MCA is specified, the aircraft must be at or above the higher MEA upon crossing the fix where the higher MEA begins. The climb must therefore begin early enough that the aircraft reaches the higher MEA by the time it crosses the fix \u2014 not after crossing it. If an MCA had been specified, the aircraft would need to cross at or above that specific altitude instead.",
+          "explanation": "When a higher MEA begins at a fix and no MCA is specified, clear the aircraft to begin the climb prior to or immediately after passing that fix. Unlike an MCA case, the rule does not require the aircraft to cross the fix already level at the higher MEA.",
           "choices": [
             {
-              "text": "Immediately after crossing RIGEL, since the higher MEA only applies beyond the fix.",
+              "text": "Require the aircraft to be level at the higher MEA before crossing RIGEL.",
               "is_correct": false
             },
             {
-              "text": "The aircraft must be at or above the higher MEA upon crossing RIGEL, so climb must begin early enough to be level by the fix.",
+              "text": "Clear the aircraft to begin climbing prior to or immediately after passing RIGEL.",
               "is_correct": true
             },
             {
-              "text": "Within 5 NM after crossing RIGEL, as a standard transition buffer.",
+              "text": "Wait until the aircraft is at least 5 NM beyond RIGEL.",
               "is_correct": false
             },
             {
-              "text": "Whenever the pilot determines a climb is appropriate, since no MCA is published.",
+              "text": "Begin the climb only after the pilot reports unable to maintain the lower MEA.",
               "is_correct": false
             }
           ]
@@ -87,33 +87,29 @@
               "is_correct": false
             }
           ]
-        }
-      ]
-    },
-    "4-6-4": {
-      "items": [
+        },
         {
-          "question_text": "When a published holding pattern is charted and the controller issues holding instructions, what must still be specified?",
+          "question_text": "The assigned route includes a charted holding pattern. If complete holding instructions are not requested, what must the controller still issue?",
           "question_type": "multiple_choice",
           "difficulty": 2,
           "source_block": "body",
           "generation_source": "question_agent",
-          "explanation": "Although the holding pattern is charted, the controller must still specify the holding fix or waypoint and the direction of holding from the fix/waypoint in the clearance. The chart provides the pattern geometry but the controller's assignment determines what the pilot holds at and in which direction, which are essential for separation.",
+          "explanation": "For a charted holding pattern included in the assigned procedure or route, the controller may omit the detailed holding elements but must still issue the charted holding direction and the statement \"as published.\" Complete instructions are required if the pilot requests them.",
           "choices": [
             {
-              "text": "Only the holding fix \u2014 direction is inherent in the charted pattern.",
+              "text": "Only the holding fix because the chart supplies the direction.",
               "is_correct": false
             },
             {
-              "text": "Only the direction of holding \u2014 the chart supplies the fix.",
+              "text": "The radial, leg length, and turn direction in every case.",
               "is_correct": false
             },
             {
-              "text": "Nothing additional \u2014 the charted pattern covers all required elements.",
+              "text": "No holding information because the entire clearance is implied by the chart.",
               "is_correct": false
             },
             {
-              "text": "The holding fix and direction of holding from the fix.",
+              "text": "The charted holding direction and the statement \"as published.\"",
               "is_correct": true
             }
           ]
@@ -419,7 +415,7 @@
       "items": [
         {
           "front": "What phraseology is used to advise a pilot of an automated weather broadcast frequency?",
-          "back": "AIRPORT AWOS/ASOS WEATHER (frequency) ON FREQUENCY. Example: 'AIRPORT AWOS WEATHER ONE TWO EIGHT POINT THREE TWO ON FREQUENCY.' If the pilot cannot receive the broadcast, ATC must issue the weather information directly.",
+          "back": "(Airport) AWOS/ASOS WEATHER AVAILABLE ON (frequency). Example: \"AIRPORT AWOS WEATHER AVAILABLE ON ONE TWO EIGHT POINT THREE TWO.\" If the pilot cannot receive the broadcast, issue the last long-line disseminated weather.",
           "card_type": "basic",
           "generation_source": "question_agent"
         }
