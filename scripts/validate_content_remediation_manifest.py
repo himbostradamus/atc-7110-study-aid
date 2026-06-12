@@ -48,6 +48,16 @@ REFERENCE_RETRIEVAL_RE = re.compile(
     r"|\bwhere\s+(?:is|are)\s+.+\s+(?:standards|definitions)\s+found\b",
     re.IGNORECASE,
 )
+RATIONALE_CLAIM_RE = re.compile(
+    r"\b(?:"
+    r"because|therefore|thus|so\s+that|in\s+order\s+to|"
+    r"designed\s+(?:to|with)|ensur(?:e|es|ing)|prevent(?:s|ing)?|"
+    r"maintain(?:s|ing)?\s+situational\s+awareness|"
+    r"safety\s+and\s+.+?\s+(?:always\s+)?take\s+priority|"
+    r"sector\s+stability"
+    r")\b",
+    re.IGNORECASE,
+)
 
 
 class Reporter:
@@ -208,7 +218,29 @@ def validate_choices(
         reporter.warn(location, "multiple_choice should normally have at least three choices")
 
 
-def validate_question(reporter: Reporter, location: str, item: object) -> None:
+def reject_unsupported_rationale(
+    reporter: Reporter,
+    location: str,
+    explanation: str,
+    source_basis: str,
+) -> None:
+    if (
+        RATIONALE_CLAIM_RE.search(explanation)
+        and not RATIONALE_CLAIM_RE.search(source_basis)
+    ):
+        reporter.error(
+            location,
+            "explanation adds a purpose, consequence, safety rationale, or "
+            "system-design claim not stated in source_basis",
+        )
+
+
+def validate_question(
+    reporter: Reporter,
+    location: str,
+    item: object,
+    source_basis: str,
+) -> None:
     if not isinstance(item, dict):
         reporter.error(location, "question replacement must be an object")
         return
@@ -233,6 +265,7 @@ def validate_question(reporter: Reporter, location: str, item: object) -> None:
         reporter.error(location, "replacement still tests document structure instead of operational substance")
     if REFERENCE_RETRIEVAL_RE.search(text):
         reporter.error(location, "replacement asks for a reference location instead of applying the rule")
+    reject_unsupported_rationale(reporter, location, explanation, source_basis)
     validate_choices(reporter, location, item.get("choices"), question_type)
 
 
@@ -264,7 +297,12 @@ def activity_choices(payload: dict[str, Any]) -> object:
     return payload.get("choices") if "choices" in payload else payload.get("options")
 
 
-def validate_activity(reporter: Reporter, location: str, item: object) -> None:
+def validate_activity(
+    reporter: Reporter,
+    location: str,
+    item: object,
+    source_basis: str,
+) -> None:
     if not isinstance(item, dict):
         reporter.error(location, "activity replacement must be an object")
         return
@@ -293,6 +331,7 @@ def validate_activity(reporter: Reporter, location: str, item: object) -> None:
         reporter.error(location, "activity explanation exposes paragraph-location scaffolding")
     if DOCUMENT_TRIVIA_RE.search(prompt):
         reporter.error(location, "replacement still tests document structure instead of operational substance")
+    reject_unsupported_rationale(reporter, location, explanation, source_basis)
     choices = activity_choices(content)
     if choices is not None:
         validate_choices(reporter, location, choices, "multiple_choice")
@@ -304,6 +343,7 @@ def validate_replacement(
     entity_type: str,
     replacement: object,
     action: str,
+    source_basis: str,
 ) -> None:
     replacements = replacement if action == "split" else [replacement]
     if action == "split" and (not isinstance(replacements, list) or len(replacements) < 2):
@@ -315,9 +355,9 @@ def validate_replacement(
     for index, item in enumerate(replacements):
         item_location = f"{location}[{index}]" if action == "split" else location
         if entity_type == "question":
-            validate_question(reporter, item_location, item)
+            validate_question(reporter, item_location, item, source_basis)
         elif entity_type == "activity":
-            validate_activity(reporter, item_location, item)
+            validate_activity(reporter, item_location, item, source_basis)
         elif entity_type == "flashcard":
             validate_flashcard(reporter, item_location, item)
 
@@ -422,6 +462,7 @@ def validate(packet: dict[str, Any], manifest: dict[str, Any]) -> Reporter:
                     entity_type,
                     decision["replacement"],
                     action,
+                    normalize(decision.get("source_basis")),
                 )
                 if (
                     action == "replace"

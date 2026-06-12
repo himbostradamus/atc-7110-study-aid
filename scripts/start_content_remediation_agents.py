@@ -36,6 +36,9 @@ def build_prompt(
     output_markdown: Path,
 ) -> str:
     base = PROMPT_TEMPLATE.read_text(encoding="utf-8")
+    packet_display = packet_path.relative_to(ROOT)
+    output_json_display = output_json.relative_to(ROOT)
+    output_markdown_display = output_markdown.relative_to(ROOT)
     return f"""{base}
 
 ## Assigned Chapter
@@ -45,27 +48,27 @@ Chapter: `{chapter}`
 Packet:
 
 ```text
-{packet_path}
+{packet_display}
 ```
 
 Required JSON manifest:
 
 ```text
-{output_json}
+{output_json_display}
 ```
 
 Required Markdown summary:
 
 ```text
-{output_markdown}
+{output_markdown_display}
 ```
 
 Validator command:
 
 ```bash
 python scripts/validate_content_remediation_manifest.py \
-  --packet {shlex.quote(str(packet_path))} \
-  --manifest {shlex.quote(str(output_json))}
+  --packet {shlex.quote(str(packet_display))} \
+  --manifest {shlex.quote(str(output_json_display))}
 ```
 
 Read the harness at `{HARNESS}` before beginning. Use the exact output paths
@@ -90,17 +93,33 @@ def launch_agent(prompt_path: Path, log_path: Path) -> subprocess.Popen:
         )
     allowed_tools = ",".join([
         "View",
-        f"Write({WORKSPACE.resolve()}/**)",
-        f"Edit({WORKSPACE.resolve()}/**)",
+        "Write(backend/app/data/question_authoring_workspace/remediation/**)",
+        "Edit(backend/app/data/question_authoring_workspace/remediation/**)",
         "Glob",
         "Grep",
         "LS",
         "BatchTool",
         "Bash(python scripts/validate_content_remediation_manifest.py *)",
     ])
+    disallowed_tools = ",".join([
+        "Task",
+        "AskUserQuestion",
+        "WebFetch",
+        "WebSearch",
+        "NotebookEdit",
+        "EnterPlanMode",
+        "ExitPlanMode",
+        "EnterWorktree",
+        "ExitWorktree",
+        "CronCreate",
+        "CronDelete",
+        "CronList",
+        "ScheduleWakeup",
+    ])
     command = (
         f"{setup} --print --verbose --output-format stream-json "
         f"--allowedTools {shlex.quote(allowed_tools)} "
+        f"--disallowedTools {shlex.quote(disallowed_tools)} "
         f"< {shlex.quote(str(prompt_path))}; "
         'status=$?; echo "__CLAUDE_EXIT_CODE__${status}"; exit "$status"'
     )
@@ -118,13 +137,50 @@ def launch_agent(prompt_path: Path, log_path: Path) -> subprocess.Popen:
     )
 
 
+def launch_chapter_worker(
+    chapter: int,
+    pass_number: int,
+    packet_path: Path,
+    shard_dir: Path,
+    output_json: Path,
+    output_markdown: Path,
+    log_path: Path,
+) -> subprocess.Popen:
+    log_handle = log_path.open("w", encoding="utf-8")
+    return subprocess.Popen(
+        [
+            "python",
+            "scripts/run_content_remediation_chapter.py",
+            "--chapter",
+            str(chapter),
+            "--pass-number",
+            str(pass_number),
+            "--packet",
+            str(packet_path),
+            "--shard-dir",
+            str(shard_dir),
+            "--output-json",
+            str(output_json),
+            "--output-markdown",
+            str(output_markdown),
+        ],
+        stdout=log_handle,
+        stderr=subprocess.STDOUT,
+        cwd=ROOT,
+        env=os.environ.copy(),
+        start_new_session=True,
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--chapters", default="1-14")
     parser.add_argument("--pass-number", type=int, default=1)
     parser.add_argument("--target-source", default="question_agent")
     parser.add_argument("--packet-dir", type=Path)
+    parser.add_argument("--shard-dir", type=Path)
     parser.add_argument("--output-namespace")
+    parser.add_argument("--sharded", action="store_true")
     parser.add_argument("--run", action="store_true")
     args = parser.parse_args()
 
@@ -136,6 +192,9 @@ def main() -> int:
         packet_dir = WORKSPACE / "packets"
         if args.target_source != "question_agent":
             packet_dir = packet_dir / args.target_source
+    shard_root = args.shard_dir
+    if shard_root is None:
+        shard_root = WORKSPACE / "packet_shards" / args.target_source
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     prompts_dir = WORKSPACE / "prompts"
@@ -172,15 +231,30 @@ def main() -> int:
         artifact_stem = f"{namespace}_{stem}" if namespace else stem
         prompt_path = prompts_dir / f"{artifact_stem}_{timestamp}.md"
         log_path = logs_dir / f"{artifact_stem}_{timestamp}.log"
-        prompt_path.write_text(
-            build_prompt(
-                chapter,
-                packet_path.resolve(),
-                output_json.resolve(),
-                output_markdown.resolve(),
-            ),
-            encoding="utf-8",
-        )
+        if args.sharded:
+            chapter_shards = shard_root / f"chapter_{chapter:02d}"
+            if not any(chapter_shards.glob("chapter_*_shard_*.json")):
+                parser.error(
+                    f"shards missing for chapter {chapter}: {chapter_shards}; "
+                    "run shard_content_remediation_packets.py first"
+                )
+            prompt_path.write_text(
+                "Sequential bounded chapter worker.\n"
+                f"Chapter: {chapter}\n"
+                f"Shard directory: {chapter_shards.resolve()}\n",
+                encoding="utf-8",
+            )
+        else:
+            chapter_shards = None
+            prompt_path.write_text(
+                build_prompt(
+                    chapter,
+                    packet_path.resolve(),
+                    output_json.resolve(),
+                    output_markdown.resolve(),
+                ),
+                encoding="utf-8",
+            )
 
         entry = {
             "chapter": chapter,
@@ -192,11 +266,24 @@ def main() -> int:
             "log": str(log_path.resolve()),
             "output_json": str(output_json.resolve()),
             "output_markdown": str(output_markdown.resolve()),
+            "sharded": args.sharded,
+            "shard_dir": str(chapter_shards.resolve()) if chapter_shards else None,
             "started_at": datetime.now(timezone.utc).isoformat(),
             "pid": None,
         }
         if args.run:
-            process = launch_agent(prompt_path, log_path)
+            if args.sharded:
+                process = launch_chapter_worker(
+                    chapter,
+                    args.pass_number,
+                    packet_path.resolve(),
+                    chapter_shards.resolve(),
+                    output_json.resolve(),
+                    output_markdown.resolve(),
+                    log_path,
+                )
+            else:
+                process = launch_agent(prompt_path, log_path)
             entry["pid"] = process.pid
             print(f"started chapter {chapter:02d} pid={process.pid} log={log_path}")
         else:

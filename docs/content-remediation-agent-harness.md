@@ -10,8 +10,8 @@ Each agent must review one complete FAA JO 7110.65 chapter and:
 
 - verify source fidelity against the source blocks in its packet;
 - identify items that teach paragraph-location trivia instead of ATC substance;
-- correct underspecified prompts, weak distractors, answer-position or answer-length
-  cues, thin explanations, malformed reverse cards, and context-light cards;
+- correct underspecified prompts, weak distractors, answer-length cues, thin
+  explanations, malformed reverse cards, and context-light cards;
 - preserve exact recall where prescribed phraseology, required readbacks, minima,
   codes, sequences, or defined terms genuinely require it;
 - prefer operational decisions, conditions, exceptions, responsibilities, and
@@ -76,9 +76,15 @@ Every decision requires:
 - The stem must be self-contained without requiring paragraph-number knowledge.
 - Exactly one answer is correct for multiple choice and true/false.
 - Distractors must represent plausible operational mistakes.
-- Explanation must teach the controlling rule, condition, exception, or reason.
+- Explanation must teach the controlling rule, condition, or exception. It may
+  teach a reason only when the source blocks explicitly state that reason.
 - Do not invent a safety rationale, policy purpose, or operational consequence
   that is not supported by the packet's source blocks.
+- If the source states only a duty, threshold, sequence, or coordination
+  requirement, explain that requirement directly. Do not add claims such as
+  "this ensures situational awareness," "the system is designed this way,"
+  "safety always takes priority," or "this prevents..." unless the source
+  explicitly makes that claim.
 - Negative stems are used only when exclusion recognition is the actual skill.
 - Do not manufacture phraseology errors from arbitrary frequencies, runway
   numbers, callsigns, duplicate digits, or squawk codes.

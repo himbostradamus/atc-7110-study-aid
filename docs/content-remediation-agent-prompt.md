@@ -22,6 +22,9 @@ Non-negotiable constraints:
 - Write changed-item decisions only. Do not produce redundant keep decisions.
 - Do not replace an item solely to reorder its choices. Runtime order is shuffled.
 - Do not invent explanatory rationales that are absent from the source blocks.
+- A validator error for unsupported rationale requires correction unless the
+  source basis is expanded with the explicit supporting source statement. Do
+  not merely add an inferred rationale to `source_basis`.
 - Inspect each activity's full content object; activity types use different fields.
 - Finish the full chapter before setting `status` to `complete`.
 

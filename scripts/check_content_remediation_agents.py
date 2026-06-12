@@ -65,6 +65,23 @@ def validate(packet: Path, manifest: Path) -> str:
     return summary[-1] if summary else f"validator exit {result.returncode}"
 
 
+def shard_progress(agent: dict) -> str:
+    if not agent.get("sharded") or not agent.get("shard_dir"):
+        return ""
+    shard_dir = Path(agent["shard_dir"])
+    expected = sorted(shard_dir.glob("chapter_*_shard_*.json"))
+    manifests_dir = Path(agent["output_json"]).parent / "shards"
+    pass_number = int(agent.get("pass") or 0)
+    completed = sum(
+        (
+            manifests_dir
+            / f"{shard_path.stem}_pass_{pass_number:02d}.json"
+        ).exists()
+        for shard_path in expected
+    )
+    return f" shards={completed}/{len(expected)}"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY)
@@ -88,7 +105,7 @@ def main() -> int:
             f"pid={pid or '-'} running={'yes' if running else 'no'} "
             f"exit={marker or '-'} api_error={'yes' if failed_api else 'no'} "
             f"output={'yes' if manifest.exists() else 'no'} "
-            f"{result}"
+            f"{result}{shard_progress(agent)}"
         )
     return 0
 
