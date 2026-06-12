@@ -88,9 +88,19 @@ def launch_agent(prompt_path: Path, log_path: Path) -> subprocess.Popen:
             f"source {shlex.quote(str(DEFAULT_DEEPSEEK_SETUP))} >/dev/null && "
             f"{shlex.quote(str(DEFAULT_CLAUDE))}"
         )
+    allowed_tools = ",".join([
+        "View",
+        f"Write({WORKSPACE.resolve()}/**)",
+        f"Edit({WORKSPACE.resolve()}/**)",
+        "Glob",
+        "Grep",
+        "LS",
+        "BatchTool",
+        "Bash(python scripts/validate_content_remediation_manifest.py *)",
+    ])
     command = (
         f"{setup} --print --verbose --output-format stream-json "
-        "--allowedTools Bash,View,Write,Edit,Glob,Grep,LS,BatchTool "
+        f"--allowedTools {shlex.quote(allowed_tools)} "
         f"< {shlex.quote(str(prompt_path))}; "
         'status=$?; echo "__CLAUDE_EXIT_CODE__${status}"; exit "$status"'
     )
