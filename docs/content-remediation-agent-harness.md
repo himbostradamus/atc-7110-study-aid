@@ -99,6 +99,11 @@ Every decision requires:
 ### Activities
 
 - The activity type must match the skill.
+- Inspect the complete activity `content` object. Activity schemas vary across
+  types; fields such as `original_phrase`, `display_text`, `clearance`,
+  `question_text`, `situation`, and `choices` may carry the substantive task.
+  Never classify an activity as empty merely because a generic `prompt` field
+  is absent.
 - Scenario and source-use activities need enough operational context.
 - Table and figure items must identify the source and ask for a lookup decision,
   not merely ask whether an isolated value is “approved.”

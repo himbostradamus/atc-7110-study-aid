@@ -14,6 +14,7 @@ from typing import Any
 ACTIONS = {"replace", "remove", "split"}
 ENTITY_TYPES = {"question", "activity", "flashcard"}
 SEVERITIES = {"critical", "major", "minor", "suggestion"}
+NON_CONTENT_CATEGORIES = {"correct_answer_first", "answer_position_bias"}
 QUESTION_TYPES = {"multiple_choice", "true_false", "fill_blank"}
 LOCATION_RE = re.compile(
     r"\b(?:"
@@ -360,6 +361,7 @@ def validate(packet: dict[str, Any], manifest: dict[str, Any]) -> Reporter:
         decisions = []
     seen = set()
     action_counts = Counter()
+    removal_counts = Counter()
     for index, decision in enumerate(decisions):
         location = f"decisions[{index}]"
         if not isinstance(decision, dict):
@@ -386,11 +388,21 @@ def validate(packet: dict[str, Any], manifest: dict[str, Any]) -> Reporter:
             reporter.error(location, f"unsupported action '{action}'")
         else:
             action_counts[action] += 1
+            if action == "remove":
+                removal_counts[entity_type] += 1
         if decision.get("severity") not in SEVERITIES:
             reporter.error(location, "invalid severity")
         categories = decision.get("categories")
         if not isinstance(categories, list) or not categories:
             reporter.error(location, "categories must be a non-empty array")
+        elif (
+            action == "replace"
+            and set(categories).issubset(NON_CONTENT_CATEGORIES)
+        ):
+            reporter.error(
+                location,
+                "answer position alone is not a content defect; runtime already shuffles choices",
+            )
         if len(normalize(decision.get("problem")).split()) < 5:
             reporter.error(location, "problem must explain the defect")
         if len(normalize(decision.get("source_basis")).split()) < 5:
@@ -432,6 +444,14 @@ def validate(packet: dict[str, Any], manifest: dict[str, Any]) -> Reporter:
 
     if decisions and action_counts["replace"] + action_counts["split"] == 0:
         reporter.warn("decisions", "all interventions are removals; verify useful content was not discarded")
+    for entity_type, target_ids in inventory.items():
+        target_count = len(target_ids)
+        removed = removal_counts[entity_type]
+        if target_count >= 10 and removed > max(5, target_count * 0.25):
+            reporter.error(
+                f"decisions.{entity_type}",
+                f"removes {removed} of {target_count} targets; bulk deletion requires manual review",
+            )
     return reporter
 
 
