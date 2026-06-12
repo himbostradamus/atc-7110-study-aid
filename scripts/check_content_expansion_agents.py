@@ -65,9 +65,35 @@ def final_result(text: str) -> str:
 def reviewed_ids(text: str) -> set[str]:
     result = final_result(text)
     marker = "REVIEWED_IDS:"
-    if marker not in result:
-        return set()
-    return set(re.findall(r"\b\d+-\d+-\d+[A-Za-z0-9-]*\b", result.split(marker, 1)[1]))
+    if marker in result:
+        return set(re.findall(r"\b\d+-\d+-\d+[A-Za-z0-9-]*\b", result.split(marker, 1)[1]))
+
+    # Older prompts requested a complete review table but did not name the
+    # marker. Accept the final explicit review report, not IDs seen in tool
+    # output or source packets.
+    assistant_texts: list[str] = []
+    for line in text.splitlines():
+        try:
+            payload = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if payload.get("type") != "assistant":
+            continue
+        message = payload.get("message")
+        if not isinstance(message, dict):
+            continue
+        parts = message.get("content")
+        if not isinstance(parts, list):
+            continue
+        assistant_texts.extend(
+            part.get("text", "")
+            for part in parts
+            if isinstance(part, dict) and part.get("type") == "text"
+        )
+    for assistant_text in reversed(assistant_texts):
+        if "paragraphs reviewed" in assistant_text.lower():
+            return set(re.findall(r"\b\d+-\d+-\d+[A-Za-z0-9-]*\b", assistant_text))
+    return set()
 
 
 def item_count(container: Any) -> int:

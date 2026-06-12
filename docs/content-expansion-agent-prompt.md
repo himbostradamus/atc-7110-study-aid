@@ -98,3 +98,10 @@ At handoff, report:
 - the retrieval mode supplied by each addition;
 - legacy items that the new content is intended to supersede;
 - unresolved source ambiguity.
+
+End the handoff with one machine-readable line containing every reviewed
+paragraph ID:
+
+```text
+REVIEWED_IDS: 1-1-1, 1-1-2, 1-1-3
+```
