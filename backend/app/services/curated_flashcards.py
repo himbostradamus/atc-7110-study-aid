@@ -112,6 +112,18 @@ def _load_table_1_2_1_mochi_override() -> dict[str, dict]:
             )
             _append_unique(items, seen_cards, reverse_front, abbr)
 
+    _append_unique(
+        items,
+        seen_cards,
+        "When an abbreviation in TBL 1-2-1 has more than one listed meaning, how does a controller determine which meaning applies?",
+        (
+            "Use the operational context. For example, AAR paired with a numeric "
+            "flow value means Airport Arrival Rate, while AAR in a route description "
+            "means Adapted Arrival Route. List order does not determine meaning."
+        ),
+        "concept",
+    )
+
     return {"1-2-6": {"replace_all": True, "items": items}}
 
 

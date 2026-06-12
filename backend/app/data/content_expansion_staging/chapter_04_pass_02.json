@@ -1,0 +1,3038 @@
+{
+  "questions": {
+    "4-1-1": {
+      "items": [
+        {
+          "question_text": "A controller specifies a non-established route for an aircraft. The route passes through controlled airspace for 80 NM, exits controlled airspace for 40 NM, then re-enters controlled airspace for 60 NM. In the altitude band being flown the applicable NAVAID usable radius is 100 NM. Both controlled-airspace segments individually fall within 100 NM. Is the route acceptable under the altitude and distance limitation tables?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The body paragraph states the controller must not exceed the limitations 'on any portion of the route which lies within controlled airspace.' Each controlled-airspace segment is evaluated independently against the applicable table limitations. Since both segments individually respect the 100 NM limit, the route is acceptable. There is no requirement to sum segments across uncontrolled airspace gaps.",
+          "choices": [
+            {
+              "text": "No. The route must be treated as a single 180 NM path that exceeds the limitation because the aircraft remains on the same flight plan.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The total controlled-airspace distance of 140 NM exceeds the 100 NM limit when the two segments are combined.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the uncontrolled-airspace segment is less than 20 NM wide.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. Each controlled-airspace segment independently respects the 100 NM limit, which is what the 'any portion' rule requires.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-1-2": {
+      "items": [
+        {
+          "question_text": "A controller exceeds NAVAID altitude and distance limitations for a routing under exception (a): the pilot requested the routing and radar monitoring is provided. Under exception (b), approval from Frequency Management and Flight Inspection Offices was obtained for a different routing. Under exception (c), a third routing uses an MTR. In which cases must the controller ALSO provide the aircraft with information and advice related to significant deviations from the expected flight path?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Note 2 of 4-1-2 states: 'When a clearance is issued beyond the altitude and/or distance limitations of a NAVAID, in addition to being responsible for maintaining separation from other aircraft and airspace, the controller is responsible for providing aircraft with information and advice related to significant deviations from the expected flight path.' This obligation attaches whenever the clearance exceeds the limitations, regardless of which exception authorized it.",
+          "choices": [
+            {
+              "text": "Exception (a) only, because only radar-monitored routings carry this additional duty.",
+              "is_correct": false
+            },
+            {
+              "text": "All three cases \u2014 the significant-deviation duty applies whenever the clearance is issued beyond the NAVAID limitations, regardless of which exception is invoked.",
+              "is_correct": true
+            },
+            {
+              "text": "Exceptions (a) and (c) only, because exception (b) already involves facility office approval.",
+              "is_correct": false
+            },
+            {
+              "text": "Exception (b) only, because operational necessity implies the greatest risk of deviation.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What are the three operational conditions under which altitude and distance limitations are waived?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The three exceptions are: (a) ATC-initiated or pilot-requested routing with radar monitoring, (b) operational necessity with Frequency Management and Flight Inspection Office approval, and (c) requested routing via an MTR. Note 1 provides additional detail for GNSS-equipped aircraft.",
+          "choices": [
+            {
+              "text": "Pilot request with radar monitoring; operational necessity with office approval; requested routing via an MTR.",
+              "is_correct": true
+            },
+            {
+              "text": "Pilot request with radar monitoring; VFR-on-top operations; routing via a published airway.",
+              "is_correct": false
+            },
+            {
+              "text": "Operational necessity; VMC conditions; aircraft equipped with dual navigation systems.",
+              "is_correct": false
+            },
+            {
+              "text": "Radar monitoring alone; MTR routing alone; pilot request alone.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-1-3": {
+      "items": [
+        {
+          "question_text": "A controller clears an aircraft to hold at a fix defined by a VOR. The MVA for the holding area is 4,000 feet, the MEA for the route segment is 6,000 feet, and the L-class VOR's upper altitude limit is below 18,000 feet per TBL 4-1-1. The controller assigns FL190 for the hold, reasoning that this satisfies MVA and MEA requirements and the aircraft is only 20 NM from the VOR. Is the holding altitude consistent with the requirement to use an altitude consistent with the limitations of the aid when clearing an aircraft to cross or hold at a fix?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-1-3 requires the altitude to be 'consistent with the limitations of the aid.' An L-class VOR's normal usable altitude band is below 18,000 feet per TBL 4-1-1. Assigning FL190 exceeds the L-class altitude limitation regardless of MVA, MEA, or distance compliance. MVA/MEA ensure terrain clearance; NAVAID limitations ensure the signal is usable. They serve different purposes and must both be satisfied.",
+          "choices": [
+            {
+              "text": "Yes. MVA and MEA are the controlling criteria for holding altitude; NAVAID limitations apply only to distance, not altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "No. FL190 exceeds the L-class VOR's altitude limitation of below 18,000 feet, regardless of MVA or MEA compliance.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes. At only 20 NM from the VOR and with MVA/MEA satisfied, the altitude is operationally sound.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Holding altitudes must always be at or below 17,000 feet when using VOR-defined fixes.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-1-4": {
+      "items": [
+        {
+          "question_text": "A TACAN-only aircraft is operating at FL200 in Class A airspace on an IFR flight plan. The route passes through an area where insufficient TACAN or VORTAC NAVAIDs exist to define the route within service-volume limitations. What should the controller expect regarding the aircraft's ability to maintain VFR-on-top?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note to 4-1-4 states TACAN-only aircraft are expected to submit VFR-on-top requests 'Except in Class A airspace.' VFR operations are not permitted in Class A airspace. At FL200 in Class A, the VFR-on-top expectation does not apply. The route must be defined within NAVAID service-volume limitations or use another applicable exception from 4-1-2.",
+          "choices": [
+            {
+              "text": "The controller should solicit a VFR-on-top request from the pilot when the route is issued.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot is expected to request VFR-on-top for the portion of the route with insufficient NAVAID coverage.",
+              "is_correct": false
+            },
+            {
+              "text": "The VFR-on-top expectation does not apply because the aircraft is in Class A airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "TACAN-only aircraft are exempt from service-volume limitations at and above FL180 regardless of airspace class.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-1-5": {
+      "items": [
+        {
+          "question_text": "A controller needs to establish an unpublished fix for ATC purposes. The fix can be formed either by the en route radial and a DME distance from the same VORTAC, or by the en route radial and an intersecting radial from an off-route VOR. Both methods are technically feasible. Which method should the controller use?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-1-5b1 states: 'DME must be used in lieu of off-route radials, whenever possible.' This is an explicit preference, not optional. The controller must use the DME method unless DME is unavailable or signal coverage restrictions prevent its use.",
+          "choices": [
+            {
+              "text": "Use the off-route radial method because intersecting radials produce a uniquely identified geographic point.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the off-route radial method because radials provide more precise lateral position definition than DME arcs.",
+              "is_correct": false
+            },
+            {
+              "text": "Either method is acceptable; the controller may choose based on operational convenience.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the DME method because the rules require DME in lieu of off-route radials whenever possible.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-1": {
+      "items": [
+        {
+          "question_text": "An airborne USAF aircraft receives an altitude assignment. The controller includes the altitude, a heading change, and a frequency change in the same transmission. Is this compliant with the clearance-item rules?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Subparagraph 4-2-1g states that when issuing a clearance to an airborne USAF aircraft containing an altitude assignment, the controller must not include more than one of the following in the same transmission: frequency change, transponder change, heading, altimeter setting, or traffic information containing an altitude. Including both a heading and a frequency change (two listed items) with the altitude assignment violates this rule. Only one listed item may accompany the altitude assignment in a single transmission.",
+          "choices": [
+            {
+              "text": "Yes. The limitation applies to the number of transmissions, not the number of items within one transmission.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Only one of the five listed items may accompany an altitude assignment in the same transmission to an airborne USAF aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes. A heading and a frequency change are both time-critical and must be issued together.",
+              "is_correct": false
+            },
+            {
+              "text": "No. No additional items at all may accompany an altitude assignment to an airborne USAF aircraft.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-2": {
+      "items": [
+        {
+          "question_text": "A controller needs to relay a request for information to an aircraft through a non-ATC facility. The controller states the request without any prefix, reasoning that only relayed clearances require the 'A-T-C' prefix. Is this correct?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Subparagraph 4-2-2a requires the prefix for three categories: clearances, information, and requests for information that are relayed through a non-ATC facility. The prefix requirement is not limited to clearances alone. 'A-T-C clears,' 'A-T-C advises,' or 'A-T-C requests' are the three approved prefix forms, each corresponding to a category of relayed communication.",
+          "choices": [
+            {
+              "text": "Yes. Only relayed clearances require the 'A-T-C' prefix; requests for information may be relayed without a prefix.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The prefix requirement applies to relayed clearances, information, and requests for information \u2014 'A-T-C requests' is the correct prefix.",
+              "is_correct": true
+            },
+            {
+              "text": "No. A request for information relayed through a non-ATC facility must use 'A-T-C advises' because the information flows in both directions.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. Requests for information are inherently different from clearances and do not need special identification.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the correct prefix for relaying an advisory to an aircraft through a non-ATC facility?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The three approved prefixes correspond to the communication type: 'A-T-C clears' for clearances, 'A-T-C advises' for information/advisories, and 'A-T-C requests' for requests for information. For relaying an advisory, 'A-T-C advises' is the correct prefix.",
+          "choices": [
+            {
+              "text": "A-T-C clears.",
+              "is_correct": false
+            },
+            {
+              "text": "A-T-C advises.",
+              "is_correct": true
+            },
+            {
+              "text": "A-T-C requests.",
+              "is_correct": false
+            },
+            {
+              "text": "A-T-C relays.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-3": {
+      "items": [
+        {
+          "question_text": "A controller has issued an IFR clearance to a general aviation aircraft departing from a busy airport with multiple departure gates. The filed route uses an initial fix that differs from the active runway configuration. What guidance does the controlling rule provide about delivery instructions in this situation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The controlling text is 'Issue specific clearance delivery instructions, if appropriate.' This means the controller must issue them when circumstances warrant \u2014 the 'if appropriate' does not make it optional to ignore operational needs. The second distractor incorrectly assigns sole responsibility to the pilot; the fourth distractor misreads 'if appropriate' as 'always optional.'",
+          "choices": [
+            {
+              "text": "Do not issue delivery instructions, because the paragraph only applies when the pilot requests clarification.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue specific clearance delivery instructions, because the mismatch between the filed route and the active runway configuration makes them appropriate.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the clearance as filed without comment, because the pilot is responsible for navigating from the assigned runway to the filed route.",
+              "is_correct": false
+            },
+            {
+              "text": "Do not issue delivery instructions, because the phrase 'if appropriate' makes the entire paragraph optional and controllers may omit it at discretion.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-4": {
+      "items": [
+        {
+          "question_text": "An FSS specialist receives a clearance to relay and notices that the routing contains a VOR name the specialist believes is misspelled because the correct name is the 'Jamestown VOR' and the clearance says 'Jamesburg VOR.' Should the specialist correct the name before relaying the clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The verbatim requirement means the relay must be word-for-word what the issuing controller stated. The FSS specialist should relay exactly as received and separately query the issuing facility if they believe there is a discrepancy. The second distractor is the most plausible error \u2014 it seems 'safer' to correct, but the specialist may not know that 'Jamesburg' is in fact a valid fix.",
+          "choices": [
+            {
+              "text": "Refuse to relay the clearance until the issuing facility confirms the correct VOR name.",
+              "is_correct": false
+            },
+            {
+              "text": "Correct the name to 'Jamestown' before relaying, because issuing a clearance with a known wrong name would be unsafe.",
+              "is_correct": false
+            },
+            {
+              "text": "Relay the clearance exactly as received and separately query the issuing facility about the suspected error.",
+              "is_correct": true
+            },
+            {
+              "text": "Relay with both names to give the pilot the option: 'Cleared via Jamesburg, or possibly Jamestown, VOR.'",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How must clearances be relayed from one facility to another?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The controlling rule states: 'Relay clearances verbatim.' The relay facility must transmit exactly what was received, word for word, without paraphrasing, correcting, or summarizing.",
+          "choices": [
+            {
+              "text": "Verbatim, exactly as received from the issuing controller.",
+              "is_correct": true
+            },
+            {
+              "text": "In the relay specialist's own words to ensure clarity.",
+              "is_correct": false
+            },
+            {
+              "text": "Summarized to include only the essential routing and altitude information.",
+              "is_correct": false
+            },
+            {
+              "text": "With corrections applied for any apparent errors before relaying.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-5": {
+      "items": [
+        {
+          "question_text": "An aircraft was cleared via a SID with published altitude restrictions and a top altitude of FL230. The controller amends the clearance: 'Climb and maintain FL280' without restating the SID altitude restrictions. The aircraft remains on the SID lateral path. What is the effect of restating a maintain altitude without restating previously issued altitude restrictions?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-2-5b and the accompanying examples, failing to restate altitude restrictions when issuing a new 'maintain' altitude cancels those restrictions. The correct phraseology to preserve them would be 'Climb via SID except maintain FL280.'",
+          "choices": [
+            {
+              "text": "The SID altitude restrictions remain in effect up to FL230 and the aircraft then continues climb to FL280.",
+              "is_correct": false
+            },
+            {
+              "text": "The SID altitude restrictions remain in effect because the aircraft is still on the SID lateral path.",
+              "is_correct": false
+            },
+            {
+              "text": "The SID altitude restrictions are canceled because they were not restated in the amended clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "The clearance is ambiguous and the controller must clarify whether the restrictions are canceled.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-6": {
+      "items": [
+        {
+          "question_text": "An aircraft is cleared from Airport A to Airport C with an intermediate stop at Airport B. The controller issues: 'Cleared to Airport C, expect stop at Airport B.' Does this satisfy the requirements for a through clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The prescribed phraseology 'CLEARED THROUGH (airport) TO (fix)' structures the clearance with the intermediate stop after 'through' and the final fix after 'to.' The issued transmission reverses this and uses non-standard wording.",
+          "choices": [
+            {
+              "text": "No. A through clearance requires a separate clearance for each leg of the flight.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. Any transmission that identifies both the intermediate stop and the final destination satisfies the rule.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The word 'expect' serves the same function as 'through' in identifying the intermediate stop.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The prescribed phraseology is 'CLEARED THROUGH (airport) TO (fix),' which structures the clearance around the intermediate stop and final destination in that order.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "What is the basic phraseology for clearing an aircraft through an intermediate stop?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "The prescribed phraseology is 'CLEARED THROUGH (airport) TO (fix).' The intermediate stop follows 'through' and the final destination or fix follows 'to.' This is the standard format for through clearances.",
+          "choices": [
+            {
+              "text": "CLEARED TO (fix) VIA (airport).",
+              "is_correct": false
+            },
+            {
+              "text": "CLEARED THROUGH (airport) TO (fix).",
+              "is_correct": true
+            },
+            {
+              "text": "CLEARED VIA (airport) TO (fix).",
+              "is_correct": false
+            },
+            {
+              "text": "CLEARED TO (fix) WITH STOP AT (airport).",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-7": {
+      "items": [
+        {
+          "question_text": "An aircraft is operating under an approved ALTRV for a mission named 'BLUE FLAG.' Separation services have been deferred during the en route cruise phase. Through which flight phases does normal ALTRV coverage extend?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note explicitly extends ALTRV coverage 'up to and including holding pattern or point/time at which ATC provides separation between aircraft.' The coverage spans departure through arrival \u2014 it does not end at top of climb or cruise entry.",
+          "choices": [
+            {
+              "text": "The ALTRV coverage ends upon initial contact with the arrival facility.",
+              "is_correct": false
+            },
+            {
+              "text": "The ALTRV coverage ends at top of climb because after that point the aircraft is in level flight and does not need altitude reservation protection.",
+              "is_correct": false
+            },
+            {
+              "text": "The ALTRV coverage ends when the aircraft enters the cruise phase, because the reservation only protects the climb profile.",
+              "is_correct": false
+            },
+            {
+              "text": "The ALTRV coverage continues through arrival up to the holding pattern or the point/time ATC provides separation.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "When is the phrase 'via approved altitude reservation flight plan' inserted into a clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The body of 4-2-7 states the phrase is used 'if the aircraft will operate in an approved ALTRV.' The ALTRV (Altitude Reservation) must be approved for the phrase to be used.",
+          "choices": [
+            {
+              "text": "When the aircraft will operate in an approved ALTRV.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the aircraft is on a military flight plan.",
+              "is_correct": false
+            },
+            {
+              "text": "When the aircraft requests a block altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "For all flights above FL 600.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-9": {
+      "items": [
+        {
+          "question_text": "An airfile aircraft contacts a center frequency requesting IFR clearance to its destination. The controller is coordinating a handoff for another aircraft and processing a departure release. The airfile aircraft is within the sector's jurisdiction and its flight plan data are available. How should the controller prioritize the airfile request?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note explicitly states that airfile processing does not have priority over other ATC duties. The controller can sequence the airfile processing among other ongoing duties based on operational priority and workload.",
+          "choices": [
+            {
+              "text": "The airfile must be processed before the departure release because the airborne aircraft is already in the system.",
+              "is_correct": false
+            },
+            {
+              "text": "The airfile must be processed immediately because an aircraft without a clearance in controlled airspace is a separation hazard.",
+              "is_correct": false
+            },
+            {
+              "text": "Airfile processing does not have priority over other ATC duties; the controller may complete the handoff and departure release before processing the airfile.",
+              "is_correct": true
+            },
+            {
+              "text": "The note has no operational meaning; it is a general disclaimer about controller workload.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What are the three possible outcomes when processing an airfile aircraft request?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-2-9c lists three outcomes: issue a clearance to the destination, issue a short-range clearance, or instruct the pilot to contact an FSS if the flight plan cannot be processed. Each represents a different level of service based on what ATC can provide.",
+          "choices": [
+            {
+              "text": "Clearance to destination, short-range clearance, or instruction to contact FSS.",
+              "is_correct": true
+            },
+            {
+              "text": "Full route clearance, abbreviated clearance, or hold for release.",
+              "is_correct": false
+            },
+            {
+              "text": "Direct clearance, vectored clearance, or radar-handoff clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "IFR clearance, VFR clearance, or special VFR clearance.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-8": {
+      "items": [
+        {
+          "question_text": "A VFR aircraft requests an IFR clearance while operating 1,000 feet below the minimum IFR altitude. The pilot states that due to scattered clouds they cannot climb to the minimum IFR altitude while remaining VFR. Before issuing any IFR clearance, what must the controller ask?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The mandatory question from 4-2-8d1 must address terrain and obstruction clearance. The other options, while potentially relevant operationally, are not what the paragraph prescribes as the prerequisite question before issuing the clearance.",
+          "choices": [
+            {
+              "text": "Whether the pilot has filed an alternate airport in case the weather deteriorates further.",
+              "is_correct": false
+            },
+            {
+              "text": "Whether the pilot is able to maintain terrain and obstruction clearance until reaching the appropriate minimum IFR altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Whether the pilot can accept a special VFR clearance to climb through the cloud layer.",
+              "is_correct": false
+            },
+            {
+              "text": "Whether the pilot is instrument-rated and current for IFR operations.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-1": {
+      "items": [
+        {
+          "question_text": "A ground controller says to a pilot holding short: 'After departure, fly heading zero niner zero.' Is this transmission permitted while the aircraft is holding short?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule reserves 'takeoff' only for actual takeoff clearances and takeoff-cancellation instructions. In all other contexts, including heading instructions, the approved substitutes are 'depart,' 'departure,' or 'fly.' The transmission is correct.",
+          "choices": [
+            {
+              "text": "No. The controller should have said 'After takeoff, fly heading zero niner zero' because heading instructions only apply after the aircraft is airborne.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The controller used 'departure' instead of 'takeoff,' which is one of the approved substitute terms.",
+              "is_correct": true
+            },
+            {
+              "text": "No. The transmission should have used 'fly' without any reference to departure because heading assignments should not reference the takeoff phase.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only because the aircraft was holding short; if it had been taxiing, 'takeoff' would have been required.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Which terms should be used instead of 'takeoff' when issuing heading, route, or altitude instructions during taxi or ground operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-3-1 specifies 'depart,' 'departure,' or 'fly' as acceptable substitutes for 'takeoff' in clearances. These terms avoid confusion with actual takeoff clearances or takeoff-cancellation instructions.",
+          "choices": [
+            {
+              "text": "Depart, departure, or fly.",
+              "is_correct": true
+            },
+            {
+              "text": "Launch, airborne, or navigate.",
+              "is_correct": false
+            },
+            {
+              "text": "Proceed, commence, or initiate.",
+              "is_correct": false
+            },
+            {
+              "text": "Roll, lift off, or climb out.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-4": {
+      "items": [
+        {
+          "question_text": "A controller issues a release time of '2215' to a pilot at an airport without an operating control tower. The controller states: 'November One Two Three, released for departure at two two one five.' What additional item must accompany a release time when it uses a specific clock time?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule distinguishes between release times using a specific clock time (time check required) and those using a specified number of minutes (no time check required). Since '2215' is a specific clock time, the controller must issue a time check.",
+          "choices": [
+            {
+              "text": "Yes. Time checks are only required for clearance void times, not for release times.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. Release times never require a time check; the pilot is responsible for maintaining accurate time.",
+              "is_correct": false
+            },
+            {
+              "text": "No. A time check is required because the release time was issued as a specific clock time, not as a number of minutes.",
+              "is_correct": true
+            },
+            {
+              "text": "No. A release time must always be issued as minutes from now, not as a clock time, to avoid time-check confusion.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What three mechanisms must be issued to departures from an airport without an operating control tower?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The body of 4-3-4 states departures from airports without an operating control tower must be issued 'either a departure release, a hold for release, or a release time.' These are three distinct mechanisms for controlling non-towered IFR departures.",
+          "choices": [
+            {
+              "text": "A departure release, a hold for release, or a release time.",
+              "is_correct": true
+            },
+            {
+              "text": "A clearance void time, a ground stop, or an EDCT.",
+              "is_correct": false
+            },
+            {
+              "text": "A departure clearance, a taxi clearance, or a takeoff clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "A slot time, a wheels-up time, or a block time.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-5": {
+      "items": [
+        {
+          "question_text": "A ground stop for Chicago O'Hare is in effect. A controller at Milwaukee wants to release a departure whose destination is Detroit, and the aircraft's route passes through Chicago Center's airspace. The controller believes the ground stop applies only to Chicago-destined aircraft. What is the controlling factor for determining whether a ground stop applies to a specific aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The controlling principle is that the GS applies if it is 'applicable to that aircraft.' The scope is defined by the originator \u2014 it could cover a destination, an airspace region, a route, or a time window. The controller must verify scope, not guess.",
+          "choices": [
+            {
+              "text": "Yes. A ground stop only applies to aircraft whose destination matches the airport named in the ground stop.",
+              "is_correct": false
+            },
+            {
+              "text": "Not necessarily. The controller must verify whether the GS scope captures this aircraft; 'applicable to that aircraft' depends on the GS scope, not the destination alone.",
+              "is_correct": true
+            },
+            {
+              "text": "No. All ground stops apply to all departures nationwide regardless of destination or route.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The aircraft can be released because Milwaukee Center, not Chicago Center, controls the departure phase.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-6": {
+      "items": [
+        {
+          "question_text": "Three aircraft elect to take delay on the ground before departure. Aircraft A requested clearance at 1405Z. Aircraft B requested clearance at 1400Z. Aircraft C requested clearance at 1410Z. In what order should they receive departure clearances if practicable?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule specifies 'the order in which the requests for clearance were originally made.' B requested first, then A, then C. The qualifier 'if practicable' does not convert this to unlimited discretion.",
+          "choices": [
+            {
+              "text": "C (1410Z), then A (1405Z), then B (1400Z) \u2014 reverse order so the longest-waiting aircraft departs last.",
+              "is_correct": false
+            },
+            {
+              "text": "B (1400Z), then A (1405Z), then C (1410Z) \u2014 the order in which clearance requests were made.",
+              "is_correct": true
+            },
+            {
+              "text": "Any order the controller chooses; delay sequencing is entirely at controller discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "A (1405Z), then B (1400Z), then C (1410Z) \u2014 in the order they called, not the order they requested clearance.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-7": {
+      "items": [
+        {
+          "question_text": "An ARTCC controller anticipates that departures from a satellite airport will experience 20-minute delays due to volume at the departure gate. Which facilities must the controller inform of anticipated departure delays?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The paragraph directs the controller to inform the relevant facilities of anticipated delays. There is no minimum delay threshold, no requirement to wait for delays to materialize, and no exemption for towers. The obligation is anticipatory \u2014 'anticipated departure delays.'",
+          "choices": [
+            {
+              "text": "Inform only the approach control facility because towers do not need departure delay information.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait until the delay actually materializes before informing other facilities.",
+              "is_correct": false
+            },
+            {
+              "text": "Inform the tower and any affected approach control facilities of the anticipated departure delays.",
+              "is_correct": true
+            },
+            {
+              "text": "Do nothing \u2014 delay information only needs to be forwarded when delays exceed 30 minutes.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What does a flashing 'DM' in the data block signify?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Note 2 to paragraph 4-3-10 states 'the letters DM flashing in the data block signify unsuccessful transmission of a departure message.' The controller must then manually forward the departure time.",
+          "choices": [
+            {
+              "text": "Unsuccessful transmission of a departure message.",
+              "is_correct": true
+            },
+            {
+              "text": "The departure time has been successfully transmitted.",
+              "is_correct": false
+            },
+            {
+              "text": "A delayed departure requiring controller action.",
+              "is_correct": false
+            },
+            {
+              "text": "A data mismatch between the flight plan and the clearance.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-8": {
+      "items": [
+        {
+          "question_text": "A departure point is 10 minutes flying time from the transferring facility's boundary. A letter of agreement exists between the two facilities that specifies automatic coordination for all departures. Must the controller coordinate with the receiving facility before this aircraft's departure?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The 15-minute coordination requirement is subject to the exception for active automated procedures. The letter of agreement providing automated coordination satisfies this, so manual pre-departure coordination is not required.",
+          "choices": [
+            {
+              "text": "Yes. The letter of agreement only covers departures beyond 15 minutes flying time from the boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The 15-minute rule applies regardless of any letter of agreement; all departures within 15 minutes require manual coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The letter of agreement providing automated coordination procedures satisfies the exception to the manual coordination requirement.",
+              "is_correct": true
+            },
+            {
+              "text": "No. At only 10 minutes, the departure point is so close that the controller may assume the receiving facility is aware.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-9": {
+      "items": [
+        {
+          "question_text": "A pilot at a non-towered airport has filed an IFR flight plan but requests a VFR departure due to improving weather. The controller obtains the pilot's departure intentions and a void time. The controller also coordinates with the clearance delivery facility. Before releasing the aircraft, what else must the controller obtain from the pilot?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-3-9a, the controller must obtain the pilot's statement that VFR conditions exist for the departure to the IFR activation point. This ensures the pilot is not accepting an IFR clearance they cannot safely reach under VFR.",
+          "choices": [
+            {
+              "text": "The pilot's instrument approach currency status to ensure the IFR portion can be completed.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot's estimated time en route to the destination, to compute the IFR clearance validity period.",
+              "is_correct": false
+            },
+            {
+              "text": "Confirmation that the pilot has filed an alternate airport in case VFR conditions deteriorate.",
+              "is_correct": false
+            },
+            {
+              "text": "A statement from the pilot confirming that VFR conditions exist for the departure to the IFR activation point.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "What must a controller obtain from a pilot before issuing a VFR release of an IFR departure?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-3-9a requires obtaining a statement from the pilot confirming that the departure can be accomplished in VFR conditions to the point where the IFR clearance will be activated. This ensures the pilot can safely reach IFR conditions.",
+          "choices": [
+            {
+              "text": "A statement that the departure can be accomplished in VFR conditions to the IFR activation point.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot's instrument currency information and medical certificate date.",
+              "is_correct": false
+            },
+            {
+              "text": "Confirmation that an alternate airport is available within 30 minutes flying time.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot's total IFR flight time within the preceding 90 days.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-3-10": {
+      "items": [
+        {
+          "question_text": "A terminal controller observes 'DM' flashing in the data block for a departure. The controller decides to manually forward the departure time to the receiving facility. Is manual forwarding required, or is it merely precautionary?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "A flashing DM indicates unsuccessful transmission. The automated procedure exception is no longer in effect because the automated message failed. Manual forwarding is the correct response.",
+          "choices": [
+            {
+              "text": "No. The DM indicator means the departure message was delayed, not failed; manual forwarding would create a duplicate.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The flashing DM is informational only and the controller should wait for the system to retry automatically.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, and this is the correct response because the flashing DM indicates the automated departure message was not successfully transmitted.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only if the receiving facility specifically requests the departure time after seeing the DM indicator.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-4-3": {
+      "items": [
+        {
+          "question_text": "A military flight plan for operations at FL200 proposes a degree-distance route with fixes 300 miles apart. The NAVAIDs selected are authorized for use at that altitude and are within published service volume. Should the controller accept this flight plan?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The distance limits are altitude-dependent: below FL 180 the maximum is 80 miles; at FL 180 and above it is 260 miles; celestial navigation routes are 260 miles at all altitudes. FL200 is above FL 180, so the 260-mile limit applies.",
+          "choices": [
+            {
+              "text": "Yes. As long as the NAVAIDs are authorized for FL200 and within service volume, any fix spacing is acceptable.",
+              "is_correct": false
+            },
+            {
+              "text": "No. At FL200, the maximum distance between degree-distance fixes is 260 miles; 300 miles exceeds this limit.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes. The 260-mile limit only applies to celestial navigation routes, not degree-distance routes.",
+              "is_correct": false
+            },
+            {
+              "text": "No. At FL200, the maximum distance between fixes is 80 miles because FL200 is below the transition altitude.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-4-4": {
+      "items": [
+        {
+          "question_text": "A NAVAID outage makes a portion of an airway unusable. The controller clears a non-RNAV aircraft via a different published airway using the word 'substitute' before the route. An RNAV-capable aircraft on the same airway proceeds to the NAVAID location beyond the outage. What must the controller tell the RNAV aircraft about the NAVAID?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note creates a duty to inform RNAV aircraft proceeding to the NAVAID location that the NAVAID is out of service. While RNAV capability means the aircraft does not need the NAVAID signal, the pilot still needs to know the facility status.",
+          "choices": [
+            {
+              "text": "Yes. The substitute route for the non-RNAV aircraft was handled correctly; RNAV aircraft are handled separately with no informational requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. RNAV aircraft do not rely on ground-based NAVAIDs for navigation and therefore do not need outage information.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The controller must inform the RNAV aircraft of the NAVAID outage even though the aircraft can navigate to the location without using the NAVAID signal.",
+              "is_correct": true
+            },
+            {
+              "text": "No. The controller should have also cleared the RNAV aircraft via the substitute airway, because all aircraft must avoid the outage area.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When an airway or route is unusable due to NAVAID status, what word must immediately precede an alternative published route in the clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-4-4a specifies: 'Use the word substitute immediately preceding the alternative route in issuing the clearance.' This signals to the pilot that the assigned route replaces the normally-used route that is unavailable.",
+          "choices": [
+            {
+              "text": "Substitute.",
+              "is_correct": true
+            },
+            {
+              "text": "Alternate.",
+              "is_correct": false
+            },
+            {
+              "text": "Via.",
+              "is_correct": false
+            },
+            {
+              "text": "Amended.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-4-5": {
+      "items": [
+        {
+          "question_text": "A pilot files a flight plan with an MTR segment that passes through Class G airspace. The pilot later asks the controller to remove the MTR segment from the route. The controller agrees but continues to include a direct routing through the same Class G airspace. What authorization is needed to continue routing the aircraft through Class G airspace after the MTR segment is removed?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The body rule is: include Class G routes only when requested by the pilot. The notes create implicit requests through specific filing actions (MTR segments, random RNAV routes). If the filing action that created the implicit request is removed, the pilot must separately request Class G routing.",
+          "choices": [
+            {
+              "text": "Yes. The original filing through Class G airspace constitutes a permanent authorization for that routing.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. Once Class G routing is established in a flight plan, it can be maintained regardless of subsequent route changes.",
+              "is_correct": false
+            },
+            {
+              "text": "No. With the MTR segment removed, the implicit pilot request for Class G routing no longer exists unless the pilot separately requests it.",
+              "is_correct": true
+            },
+            {
+              "text": "No. Class G airspace routing is never permitted for IFR aircraft regardless of pilot request.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What flight plan filing actions constitute an automatic pilot request for routing through Class G airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "Notes 2 and 3 to 4-4-5 identify two implicit requests: filing random RNAV routes through Class G airspace, and filing MTR segments in or through Class G airspace. In both cases, the filing itself is treated as a pilot request for Class G routing.",
+          "choices": [
+            {
+              "text": "Filing a random RNAV route through Class G or filing MTR segments through Class G.",
+              "is_correct": true
+            },
+            {
+              "text": "Filing any IFR flight plan that transits uncontrolled airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Specifically requesting 'Class G routing' in the remarks section.",
+              "is_correct": false
+            },
+            {
+              "text": "Filing a flight plan that originates or terminates at an airport in Class G airspace.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-4-6": {
+      "items": [
+        {
+          "question_text": "An ARTCC controller wants to issue a direct routing that takes an aircraft off its flight plan route past the last fix in the facility's airspace to a fix in the adjacent center's airspace. The controller believes saving 10 minutes of flight time justifies the change, but the pilot has made no such request and operational necessity is absent. Under what conditions is a controller permitted to issue routing changes past the last fix in facility airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule in 4-4-6b is explicit: do not issue routing changes past the last fix in your airspace unless requested by the pilot or operational necessity dictates. Neither exception applies. Efficiency alone is not operational necessity.",
+          "choices": [
+            {
+              "text": "Yes. Saving 10 minutes of flight time is always sufficient justification for a direct clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The controller may not issue a direct clearance past the last fix in the facility's airspace unless the pilot requests it or operational necessity dictates.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes. The controller may issue the clearance and coordinate with the receiving facility afterwards.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Direct clearances that cross facility boundaries are never permitted under any circumstances.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What coordination is required when a flight routing within a protected segment is amended by an ARTCC TMU for amendments outside their facility?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-4-6a2(c) requires ARTCC TMU to coordinate with ATCSCC for amendments outside their facility. The coordination chain escalates with the scope of the amendment: internal (ATCS with TMU), terminal (with overlying ARTCC TMU), and external ARTCC (with ATCSCC).",
+          "choices": [
+            {
+              "text": "Coordinate with ATCSCC.",
+              "is_correct": true
+            },
+            {
+              "text": "Coordinate with the affected terminal facility TMU.",
+              "is_correct": false
+            },
+            {
+              "text": "No coordination is required for ARTCC TMU amendments.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate with the destination airport tower.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-1": {
+      "items": [
+        {
+          "question_text": "Two military aircraft are operating at FL630. One is supersonic and the other is subsonic. What vertical separation minimum applies between them?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule hierarchy is: general above FL410 = 2,000 feet; oceanic supersonic above FL450 = 4,000 feet; military above FL600 = 5,000 feet. The military-above-FL600 rule (most specific) controls when both aircraft are military and the altitude exceeds FL600.",
+          "choices": [
+            {
+              "text": "4,000 feet, because one aircraft is supersonic and the oceanic separation standard should be applied.",
+              "is_correct": false
+            },
+            {
+              "text": "5,000 feet, because both aircraft are military and operating above FL 600.",
+              "is_correct": true
+            },
+            {
+              "text": "2,000 feet, which is the standard above-FL410 minimum.",
+              "is_correct": false
+            },
+            {
+              "text": "1,000 feet, because above FL 600 the standard vertical separation reverts to the up-to-FL410 value.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-3": {
+      "items": [
+        {
+          "question_text": "A controller at an ARTCC sector needs to assign an even cardinal altitude to an eastbound aircraft at FL350 due to traffic conditions. The aircraft will proceed beyond the facility's area into an adjacent center's airspace. There is a letter of agreement between the two facilities covering random altitude assignments for traffic-condition exceptions. May the controller assign the even altitude?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-5-3a2, when aircraft will proceed beyond the facility's area, random altitude assignments are permitted only if covered in an LOA between the facilities. The LOA here satisfies that condition.",
+          "choices": [
+            {
+              "text": "No. Even altitudes are never assignable to eastbound aircraft, regardless of traffic conditions or agreements.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The traffic-condition exception only applies to aircraft that remain within the facility's area.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the controller also obtains verbal approval from the adjacent center's sector controller at the time of assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The LOA between the facilities covering random altitude assignments satisfies the condition for aircraft proceeding beyond the facility's area.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "When traffic conditions prevent assignment of directionally-prescribed altitudes, what altitude may be assigned below FL 410?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-5-3 permits assigning 'any cardinal altitude or flight level below FL 410 or any odd cardinal flight level at or above FL 410 without regard to direction of flight' when traffic, weather, or aircraft limitations prevent standard directional assignment, subject to the coordination requirements in subparagraphs a-e.",
+          "choices": [
+            {
+              "text": "Any cardinal altitude or flight level without regard to direction of flight.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the altitude immediately above the conflicting traffic.",
+              "is_correct": false
+            },
+            {
+              "text": "Only odd cardinal altitudes, same as standard eastbound assignment.",
+              "is_correct": false
+            },
+            {
+              "text": "Any altitude at or above FL 410 only.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-4": {
+      "items": [
+        {
+          "question_text": "The altimeter setting in a controller's area is 28.85 inches. According to TBL 4-5-2, what is the lowest usable flight level?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The altimeter setting 28.85 falls in the 28.91-27.92 band, which corresponds to lowest usable FL 200 per TBL 4-5-2. The bands are fixed ranges; values do not round between bands.",
+          "choices": [
+            {
+              "text": "FL 190 (29.91 to 28.92 inches band).",
+              "is_correct": false
+            },
+            {
+              "text": "FL 200 (28.91 to 27.92 inches band).",
+              "is_correct": true
+            },
+            {
+              "text": "FL 180 (29.92 or higher).",
+              "is_correct": false
+            },
+            {
+              "text": "FL 210, because 28.85 rounds up to the next pressure band.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the lowest usable flight level when the altimeter setting is 29.50 inches?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "TBL 4-5-2: altimeter settings 29.92 or higher = FL 180; 29.91 to 28.92 = FL 190; 28.91 to 27.92 = FL 200. At 29.50 inches, the setting falls in the 29.91-to-28.92 band, making FL 190 the lowest usable flight level.",
+          "choices": [
+            {
+              "text": "FL 180.",
+              "is_correct": false
+            },
+            {
+              "text": "FL 190.",
+              "is_correct": true
+            },
+            {
+              "text": "FL 200.",
+              "is_correct": false
+            },
+            {
+              "text": "FL 210.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-5": {
+      "items": [
+        {
+          "question_text": "The prescribed minimum IFR altitude for a route segment is 18,000 feet MSL. The current altimeter setting is 29.35 inches. According to TBL 4-5-3, what is the adjusted minimum flight level?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "TBL 4-5-3: altimeter 29.35 falls in the 29.41-28.92 band, requiring a 1,000-foot adjustment. FL 180 + 1,000 feet = FL 190 (odd cardinal, which is also directionally correct). The 500-foot band is 29.91-29.42, which is a different range.",
+          "choices": [
+            {
+              "text": "FL 180 (minimum altitude with no adjustment needed).",
+              "is_correct": false
+            },
+            {
+              "text": "FL 190 (FL 180 plus 1,000 feet for the 29.41 to 28.92 band).",
+              "is_correct": true
+            },
+            {
+              "text": "FL 185 (FL 180 plus 500 feet for the 29.91 to 29.42 band).",
+              "is_correct": false
+            },
+            {
+              "text": "FL 195 (FL 180 plus 1,500 feet for the 28.91 to 28.42 band).",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When the altimeter setting is 29.35 inches and the minimum IFR altitude is 18,000 feet MSL, what adjustment factor from TBL 4-5-3 must be applied?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "TBL 4-5-3: altimeter 29.41 to 28.92 inches requires adding 1,000 feet. At 29.35 inches, the setting falls in this band. The flight level equivalent of 18,000 feet (FL 180) plus 1,000 feet gives FL 190 as the adjusted minimum.",
+          "choices": [
+            {
+              "text": "500 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "1,000 feet.",
+              "is_correct": true
+            },
+            {
+              "text": "1,500 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "2,000 feet.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-8": {
+      "items": [
+        {
+          "question_text": "An aircraft at FL320 needs to climb to FL360, but traffic prevents the climb for approximately 40 miles. The controller tells the pilot: 'Expect higher in four zero miles.' Is a distance-based expectation appropriate in this situation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The prescribed phraseology 'EXPECT HIGHER/LOWER IN (number of miles or minutes) MILES/MINUTES' explicitly allows both miles and minutes. The controller correctly used the mileage format. The paragraph does not restrict the distance or impose FL290-based limitations.",
+          "choices": [
+            {
+              "text": "No. The controller should have issued 'REQUEST ALTITUDE CHANGE FROM (next facility)' because the climb cannot be accomplished in the current sector.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The controller used the prescribed phraseology and format to inform the pilot when to expect the climb clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "No. The controller should have used minutes instead of miles because altitude changes are time-based expectations.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the aircraft is above FL 290; below FL 290, altitude changes cannot be anticipated more than 20 miles ahead.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What is the prescribed phraseology to inform an aircraft when to expect a higher altitude in 40 miles?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "The prescribed phraseology is 'EXPECT HIGHER/LOWER IN (number of miles or minutes) MILES/MINUTES.' The correct format is 'EXPECT HIGHER IN FOUR ZERO MILES.' The alternatives use incorrect wording or wrong distances.",
+          "choices": [
+            {
+              "text": "EXPECT HIGHER IN FOUR ZERO MILES.",
+              "is_correct": true
+            },
+            {
+              "text": "CLIMB IN FOUR ZERO MILES.",
+              "is_correct": false
+            },
+            {
+              "text": "EXPECT CLIMB AT FOUR ZERO MILES.",
+              "is_correct": false
+            },
+            {
+              "text": "HIGHER ALTITUDE IN FOUR ZERO MILES.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-9": {
+      "items": [
+        {
+          "question_text": "A nonradar controller receives an initial contact from an aircraft at FL240. The pilot states: 'Center, November One Two Three, level at flight level two four zero.' What are the circumstances under which a controller must request a pilot to confirm assigned altitude when the pilot has already volunteered the altitude information?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Exception 1 to the altitude confirmation requirement is that 'the pilot states the assigned altitude.' The pilot stating 'level at flight level two four zero' communicates the assigned altitude without being prompted, satisfying the exception. The controller is not required to independently verify what the pilot already provided.",
+          "choices": [
+            {
+              "text": "Yes, but only because the aircraft is at FL240, which is a flight level \u2014 the exception is limited to flight level operations.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The pilot must use the exact phrase 'assigned altitude' for the exception to apply.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The exception only applies when the controller assigns a new altitude to the aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The pilot stated the assigned altitude on initial contact, which is one of the listed exceptions to the verification requirement.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-1": {
+      "items": [
+        {
+          "question_text": "A flight's assigned route includes a charted holding pattern at the clearance limit. The controller tells the pilot: 'Cleared to DRYER, hold as published.' The pilot requests complete holding instructions. When a pilot requests complete holding instructions for a charted pattern, what must the controller provide?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule has two parts: (1) the controller may omit instructions for charted patterns except direction and 'as published,' but (2) 'Always issue complete holding instructions when the pilot requests them.' The pilot's request overrides the charted-pattern shortcut unconditionally.",
+          "choices": [
+            {
+              "text": "Yes, but only if the holding pattern is not depicted on the pilot's current chart cycle.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Since the pattern is charted and the pilot has been told to hold as published, the controller has met all requirements.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The pilot should look at the chart; the controller only needs to provide holding instructions for unpublished patterns.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The rule unconditionally requires the controller to issue complete holding instructions when the pilot requests them.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-2": {
+      "items": [
+        {
+          "question_text": "A controller expects no delay for an aircraft approaching its clearance limit. The aircraft is 3 minutes from the fix, and the clearance beyond the fix is ready. Is issuing it at this time appropriate?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule has both an 'as soon as possible' obligation and a 'whenever possible, at least 5 minutes' preference. The 5 minutes is a target, not an absolute requirement. Issuing the clearance late is still better than not issuing it and forcing a hold.",
+          "choices": [
+            {
+              "text": "The controller should wait until the aircraft reaches the fix to issue the clearance beyond it.",
+              "is_correct": false
+            },
+            {
+              "text": "The clearance is too late; the aircraft must hold at the fix because the 5-minute requirement is mandatory.",
+              "is_correct": false
+            },
+            {
+              "text": "The timing is perfectly compliant; 'at least 5 minutes' is a maximum, not a minimum.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller should issue the clearance now, but the preferred timing of at least 5 minutes before the fix has passed.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-3": {
+      "items": [
+        {
+          "question_text": "Arrival delays at an airport are expected to reach 30 minutes. The airport has ATIS broadcasting the delay information. An arriving aircraft enters the center's area and the pilot makes no inquiry about delays. What conditions allow a controller to omit issuing delay information under the 30-minute arrival delay rule?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The exception in 4-6-3b3 allows omission when both conditions are met: the pilot hasn't requested the information, and ATIS is broadcasting it. The 30-minute trigger in b requires action, but b3 provides the ATIS-based exception to that action.",
+          "choices": [
+            {
+              "text": "No. ATIS can only substitute for controller-issued delay information when delays are less than 20 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The 30-minute threshold makes delay information mandatory regardless of ATIS availability.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The controller must issue delay information because it is the first center controller communicating with the aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The controller may omit the delay information because the pilot did not request it and ATIS is broadcasting it.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-4": {
+      "items": [
+        {
+          "question_text": "A controller issues holding instructions specifying the direction, fix, radial, and leg length. Standard right turns are to be used, and neither the pilot nor the controller considers turn direction necessary. Under what specific circumstances must the direction of holding pattern turns be specified?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Turn direction is specified 'only if left turns are to be made, the pilot requests it, or you consider it necessary.' Standard right turns with no pilot request and no controller concern means turn direction is correctly omitted.",
+          "choices": [
+            {
+              "text": "No. Leg length in miles makes the instruction incomplete; leg length must be specified in minutes for all holdings.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Turn direction must always be specified in holding instructions regardless of whether turns are standard.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. Turn direction is only required when left turns are used, the pilot requests it, or the controller considers it necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only because DME leg length was specified; without DME, turn direction is mandatory.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-5": {
+      "items": [
+        {
+          "question_text": "A controller wants to use a water tower as a holding fix for a VFR aircraft. The pilot states he is familiar with the area and can identify the water tower visually. The controller issues: 'Hold at the water tower until one five three zero.' Is this a valid use of a visual holding point?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule requires pilot familiarity and visual identification capability \u2014 both are met. There is no IFR-only restriction, no chart requirement, and no time limit for visual holding points.",
+          "choices": [
+            {
+              "text": "No. Visual holding points may only be used for IFR aircraft, not VFR aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The pilot confirmed familiarity with the visual reference point and the controller used the prescribed phraseology format.",
+              "is_correct": true
+            },
+            {
+              "text": "No. Visual holding points require a published chart reference in addition to pilot familiarity.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the holding is limited to 10 minutes or less.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-6": {
+      "items": [
+        {
+          "question_text": "A pilot holding at a fix requests to deviate from the prescribed holding flight path to avoid building cumulus clouds. Traffic in the holding pattern includes one aircraft at a higher altitude, and no known obstacles exist in the requested deviation area. May the controller approve the deviation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule has only two conditions: obstacles and traffic must permit the deviation. Weather avoidance is a valid operational reason; the rule does not limit deviation approval to emergencies.",
+          "choices": [
+            {
+              "text": "Yes, but only if the pilot declares an emergency or minimum fuel status.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Deviations from prescribed holding flight paths are never permitted under any circumstances.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Weather avoidance is not a valid reason for holding pattern deviation \u2014 only emergencies qualify.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. Obstacles and traffic conditions both permit the deviation as required by the paragraph.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "Under what two conditions may a controller approve a pilot's request to deviate from a prescribed holding flight path?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-6-6 states the controller may approve the deviation 'if obstacles and traffic conditions permit.' Both conditions must be satisfied for approval.",
+          "choices": [
+            {
+              "text": "If obstacles and traffic conditions permit.",
+              "is_correct": true
+            },
+            {
+              "text": "If the pilot declares an emergency or minimum fuel.",
+              "is_correct": false
+            },
+            {
+              "text": "If the deviation reduces the holding pattern by at least 50 percent.",
+              "is_correct": false
+            },
+            {
+              "text": "If the weather is VMC and the aircraft is in radar contact.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-7": {
+      "items": [
+        {
+          "question_text": "An aircraft is holding at an unmonitored NAVAID. If the NAVAID fails, the holding aircraft will drift onto a course occupied by another aircraft. What separation obligation does the controller have for an aircraft holding at an unmonitored NAVAID?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule requires specific separation from aircraft on the course the holding aircraft would follow upon NAVAID signal loss. This means the controller must protect that course \u2014 it is a specific duty beyond standard IFR separation.",
+          "choices": [
+            {
+              "text": "Monitor the NAVAID signal personally since it is unmonitored.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a new clearance to the holding aircraft because unmonitored NAVAIDs cannot be used for holding.",
+              "is_correct": false
+            },
+            {
+              "text": "Separate the holding aircraft from the other aircraft by ensuring the lost-signal course is not occupied.",
+              "is_correct": true
+            },
+            {
+              "text": "No special action is required; standard IFR separation applies without modification.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-6-8": {
+      "items": [
+        {
+          "question_text": "The weather at an airport is reported as ceiling 600 feet and visibility 1.5 miles. An aircraft requests to hold at the ILS outer marker at 3,000 feet AGL, inbound toward the airport, directly on the localizer course, 0.5 NM from the localizer antenna. Is the controller authorized to approve this holding location?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "All elements of the restriction are met: ceiling < 800 ft, visibility < 2 SM, holding below 5,000 ft AGL, on/within 1 SM of the localizer, inbound toward the airport. The USAF note adds a narrower scope only for that service; the base rule applies to all operations.",
+          "choices": [
+            {
+              "text": "Yes. The restriction applies only to USAF operations and this is a civilian aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The restriction only applies to aircraft between the OM and the runway, and 3,000 feet AGL is above the restriction altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The ceiling is below 800 feet and visibility is below 2 miles, triggering the ILS protection restriction for holding below 5,000 feet AGL on or within 1 SM of the localizer.",
+              "is_correct": true
+            },
+            {
+              "text": "No. Holding is never permitted at the OM regardless of weather conditions.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-2": {
+      "items": [
+        {
+          "question_text": "An aircraft is landing at an airport located in an adjacent center's control area near the common boundary. The controller at the first center needs to issue a lower altitude. What two actions must the controller take when exercising control of aircraft landing at an airport in an adjacent center's area near the boundary?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Both subparagraphs (a) and (b) create duties: coordinate with the receiving facility AND start early enough for normal descent. Coordination without issuing, or issuing without coordination, are both incomplete.",
+          "choices": [
+            {
+              "text": "Issue the descent clearance immediately, then coordinate with the receiving facility after the aircraft has started descent.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer communications to the adjacent center and let that facility issue the descent clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate with the receiving facility for the lower altitude and initiate the action at a sufficient distance for normal descent and speed reduction.",
+              "is_correct": true
+            },
+            {
+              "text": "Coordinate with the receiving facility only; the adjacent center issues the actual descent clearance.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-5": {
+      "items": [
+        {
+          "question_text": "A military turbojet aircraft is in a nonradar environment, and the controller plans to use the en route descent procedure. Radar capability exists to vector the aircraft to the final approach course of a published high altitude instrument approach. However, the controller anticipates a 10-minute vectoring delay due to traffic volume. May the en route descent procedure be used?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The paragraph has a two-part test for nonradar use: (1) radar capability must exist for the vector, AND (2) the controller must not anticipate other-than-normal vectoring delays. Both must be satisfied.",
+          "choices": [
+            {
+              "text": "Yes. The delay only prohibits use in a radar environment; in a nonradar environment, the delay restriction does not apply.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. Radar capability exists to vector the aircraft, which satisfies the only condition for using the procedure.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The 10-minute vectoring delay is 'other than normal,' which specifically prohibits use of this procedure.",
+              "is_correct": true
+            },
+            {
+              "text": "No. The en route descent procedure can never be used in a nonradar environment.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Who is responsible for requesting a high altitude approach when normal arrival handling is unsuitable for a military turbojet aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "note",
+          "generation_source": "question_agent",
+          "explanation": "The note to 4-7-5 states: 'It is the responsibility of the pilot to request a high altitude approach if he/she does not want normal arrival handling.' The controller provides normal arrival procedures by default; the pilot must affirmatively request the high altitude alternative.",
+          "choices": [
+            {
+              "text": "The pilot, who must request a high altitude approach.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller, who must offer it to all military aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "The operations officer, who must specify it in the flight plan remarks.",
+              "is_correct": false
+            },
+            {
+              "text": "The receiving facility, which determines the approach type.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-7": {
+      "items": [
+        {
+          "question_text": "An en route center controller has an arriving aircraft destined for an airport where the reported ceiling is 800 feet and visibility is 2 miles. The aircraft is being handed off to approach control and the weather will be transmitted through a nonapproach control facility. What must the controller do regarding weather information?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Both the ceiling threshold (below 1,000 feet, or whichever is higher between 1,000 feet and the highest circling minimum) and the visibility threshold (less than 3 miles) are triggered. The en route center is responsible for the transmission when it communicates directly with the pilot or relays through an authorized station.",
+          "choices": [
+            {
+              "text": "Tell the pilot to request weather from the destination ATIS upon arrival.",
+              "is_correct": false
+            },
+            {
+              "text": "Do nothing \u2014 weather transmission is the responsibility of the approach control facility receiving the handoff.",
+              "is_correct": false
+            },
+            {
+              "text": "Transmit the weather report and any special observations because both ceiling (below 1,000 feet) and visibility (below 3 miles) trigger the requirement.",
+              "is_correct": true
+            },
+            {
+              "text": "Transmit only the ceiling because visibility at 2 miles is above the 1-mile threshold for mandatory weather reporting.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What weather conditions trigger the requirement to transmit weather reports to arriving aircraft prior to or as part of the approach clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-7-7 triggers the weather transmission requirement when the ceiling is below 1,000 feet (USAF: 1,500 feet) or below the highest circling minimum, whichever is higher, or when visibility is less than 3 miles. Both ceiling and visibility have independent trigger thresholds.",
+          "choices": [
+            {
+              "text": "Ceiling below 1,000 feet (or highest circling minimum) or visibility less than 3 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "Ceiling below 500 feet or visibility less than 1 mile.",
+              "is_correct": false
+            },
+            {
+              "text": "Any IFR conditions at the destination airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the destination ATIS is out of service.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-8": {
+      "items": [
+        {
+          "question_text": "An arriving aircraft reports that weather conditions at the destination are below the pilot's landing minima. What are the controller's required actions upon receiving a pilot report of below-minima weather at the destination?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The controller must issue alternatives (hold or alternate airport) and manage the landing sequence. The note makes clear that the pilot determines weather adequacy for landing, but the controller must still provide operational alternatives.",
+          "choices": [
+            {
+              "text": "Immediately clear the aircraft for the approach since determining weather adequacy is the pilot's responsibility.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue instructions to hold or proceed to another airport, and adjust the landing sequence of other aircraft as necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Declare an emergency on behalf of the aircraft and provide priority handling.",
+              "is_correct": false
+            },
+            {
+              "text": "Ask the pilot to attempt the approach anyway because weather observations can be inaccurate.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-9": {
+      "items": [
+        {
+          "question_text": "An aircraft is 8 NM from its clearance limit. The receiving facility needs to issue a clearance beyond that limit. When should the transferring controller initiate the communications transfer?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The timing standard is functional, not fixed: early enough for the receiving facility to issue the clearance before the limit. No specific distance or altitude is prescribed \u2014 the controller must judge based on aircraft speed, workload, and the receiving facility's needs.",
+          "choices": [
+            {
+              "text": "Exactly at the clearance limit, because control responsibility cannot transfer before the limit is reached.",
+              "is_correct": false
+            },
+            {
+              "text": "Early enough that the receiving facility can clear the aircraft beyond the limit before the aircraft reaches it.",
+              "is_correct": true
+            },
+            {
+              "text": "At least 10 NM before the clearance limit, as prescribed by standard transfer procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "As soon as the aircraft enters the receiving facility's airspace, regardless of distance to the clearance limit.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-12": {
+      "items": [
+        {
+          "question_text": "An en route controller knows that the ILS glideslope at the destination airport is out of service. The ATIS broadcast includes this information. The pilot checks in and states the ATIS code. Must the controller separately inform the pilot of the glideslope outage?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule provides a two-condition exception: ATIS contains the information AND the pilot states the ATIS code. Both are satisfied. There is no separate mandatory-notification requirement for glideslope outages beyond what the ATIS exception covers.",
+          "choices": [
+            {
+              "text": "Yes. The ATIS code confirmation only exempts surface wind and altimeter information, not navigational aid status.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. Glideslope outages are a mandatory separate notification regardless of ATIS content.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The information may be omitted because it is contained in the ATIS broadcast and the pilot has confirmed receipt of the ATIS code.",
+              "is_correct": true
+            },
+            {
+              "text": "No, but only if the ATIS broadcast is less than 30 minutes old.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-1": {
+      "items": [
+        {
+          "question_text": "A STAR connects to an IAP at fix TULEX, which is an Intermediate Fix. The aircraft is on the STAR at 8,000 feet. At what minimum distance from TULEX must the controller issue the approach clearance, and what must be specified?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule applies equally to IAFs and IFs: 'at least 3 NM prior to the IAF/IF and specify the name of the connection fix.' The altitude-to-maintain requirement applies only to ATS Route arrivals, not STAR arrivals. Since the aircraft is on a STAR, only the fix name is required.",
+          "choices": [
+            {
+              "text": "At least 3 NM before TULEX, with the fix name and an altitude to maintain until the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "At least 5 NM before TULEX, with the fix name and the altitude to maintain.",
+              "is_correct": false
+            },
+            {
+              "text": "At the IAF only; IFs do not qualify for the 3 NM advance clearance rule.",
+              "is_correct": false
+            },
+            {
+              "text": "At least 3 NM before TULEX, specifying the connection fix name in the clearance.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-5": {
+      "items": [
+        {
+          "question_text": "An approach procedure chart shows a mandatory altitude of 3,000 feet at the final approach fix. The controller needs this altitude for separation from another aircraft on a missed approach from a crossing runway. Must the controller specify 3,000 feet in the approach clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The trigger for specifying the altitude is when 'adherence to that altitude is required for separation.' Since separation from another aircraft depends on this altitude, the controller must specify it. Published altitudes alone do not guarantee the controller needs them for separation.",
+          "choices": [
+            {
+              "text": "No, because mandatory altitudes on approach charts are automatically part of every approach clearance without restatement.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because the altitude is already published on the approach chart and the pilot is expected to comply with published mandatory altitudes.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, because the controller needs the mandatory altitude for separation from another aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only if the pilot has not previously flown this approach procedure.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-8": {
+      "items": [
+        {
+          "question_text": "An IFR aircraft intends to land at an airport without an operating control tower. The aircraft is on final approach at 5 NM, and the controller no longer requires direct communications. The pilot requests a frequency change to the CTAF. What is the correct controller response?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule is permissive ('approve a change') when the controller no longer requires direct communications. The prescribed phraseology is 'Change to advisory frequency approved.' There is no requirement for the aircraft to report back or to use FSS instead.",
+          "choices": [
+            {
+              "text": "Approve the change but require the pilot to report back on frequency after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "Deny the request because IFR aircraft must remain on the approach frequency until landing is completed.",
+              "is_correct": false
+            },
+            {
+              "text": "Approve the change with 'Change to advisory frequency approved.'",
+              "is_correct": true
+            },
+            {
+              "text": "Transfer communications to flight service instead of the CTAF.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "Under what condition may a controller approve an IFR aircraft's request to change to the advisory frequency at a non-towered airport?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The controller may approve the frequency change 'when you no longer require direct communications' with the aircraft. This ensures the controller has completed all necessary IFR control instructions before releasing the aircraft to the CTAF.",
+          "choices": [
+            {
+              "text": "When the controller no longer requires direct communications.",
+              "is_correct": true
+            },
+            {
+              "text": "When the aircraft reports the airport in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Immediately upon request, regardless of controller needs.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft has landed.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-9": {
+      "items": [
+        {
+          "question_text": "An IFR aircraft on an ILS approach executes a missed approach at the decision altitude. The controller needs the aircraft to follow the published alternate missed approach procedure instead of the primary procedure. The alternate procedure appears on FAA Form 8260 but requires controller issuance of the full description because it is pending NOTAM activation. Under what condition may the controller omit issuing the full description of an alternate missed approach procedure?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The NOTAM exception in 4-8-9c only relieves the controller of the duty to issue the full description when the alternate is 'published and in effect via NOTAM.' Without NOTAM activation, the full Form 8260 description must be issued per 4-8-9b.",
+          "choices": [
+            {
+              "text": "Issue only the missed approach point and altitude, because additional details are available on the approach chart.",
+              "is_correct": false
+            },
+            {
+              "text": "Simply tell the pilot to fly the alternate missed approach \u2014 since the procedure is published on Form 8260, the pilot has access to it.",
+              "is_correct": false
+            },
+            {
+              "text": "The alternate procedure cannot be used because it is not activated by NOTAM.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the full description of the alternate missed approach procedure as published on the FAA Form 8260, because it is not activated by NOTAM.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-11": {
+      "items": [
+        {
+          "question_text": "A controller's sector is saturated with IFR arrivals and departures. A VFR aircraft requests a practice instrument approach. The controller cannot approve it due to workload. What must the controller do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The rule requires two things when denying a practice approach due to workload: state the reason and give the anticipated delay if applicable. The delay must not be indefinite. There is no fixed delay standard; the controller provides a realistic estimate.",
+          "choices": [
+            {
+              "text": "Deny the request without explanation; controllers are not required to explain workload-based denials.",
+              "is_correct": false
+            },
+            {
+              "text": "Advise the pilot of the reason for the denial and, if possible, provide the anticipated delay before the approach can be approved.",
+              "is_correct": true
+            },
+            {
+              "text": "Approve the approach despite workload, because practice approaches cannot be refused under any circumstances.",
+              "is_correct": false
+            },
+            {
+              "text": "Tell the pilot to try again in 15 minutes; the paragraph specifies a standard 15-minute delay for all practice approach denials.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When a controller cannot approve a practice instrument approach due to workload, what two things must be communicated to the pilot?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-8-11a requires: 'advise the pilot of the reason, and if applicable, the anticipated delay until the operation can be approved.' The reason must always be given; the delay estimate is required when applicable.",
+          "choices": [
+            {
+              "text": "The reason for the denial and, if applicable, the anticipated delay.",
+              "is_correct": true
+            },
+            {
+              "text": "The reason for the denial and an alternate airport suggestion.",
+              "is_correct": false
+            },
+            {
+              "text": "The anticipated delay and the frequency for the next sector.",
+              "is_correct": false
+            },
+            {
+              "text": "The reason for the denial and the supervisor's name.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-4-1": {
+      "items": [
+        {
+          "question_text": "What are the three basic categories of routes via which aircraft may be cleared for IFR route assignments?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-4-1 lists three methods: (a) designated ATS routes, (b) radials/courses/azimuths to or from NAVAIDs, and (c) random routes. Each method has specific phraseology and requirements described in the subparagraphs.",
+          "choices": [
+            {
+              "text": "Designated ATS routes; radials/courses/azimuths to or from NAVAIDs; and random routes.",
+              "is_correct": true
+            },
+            {
+              "text": "Direct routes; victor airways; and jet routes only.",
+              "is_correct": false
+            },
+            {
+              "text": "Published airways; unpublished airways; and GPS-direct routing.",
+              "is_correct": false
+            },
+            {
+              "text": "Low-altitude routes; high-altitude routes; and transition routes.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-2": {
+      "items": [
+        {
+          "question_text": "What altitude should be assigned to an aircraft at or below FL 410 on a magnetic course of 090 degrees?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per TBL 4-5-1, aircraft on magnetic courses 0 through 179 degrees (eastbound) at or below FL 410 are assigned odd cardinal altitudes or flight levels at intervals of 2,000 feet (e.g., 3,000, 5,000, FL 310, FL 330). Course 090 is eastbound, so an odd cardinal altitude is required.",
+          "choices": [
+            {
+              "text": "An odd cardinal altitude or flight level (e.g., 5,000, FL 310, FL 330).",
+              "is_correct": true
+            },
+            {
+              "text": "An even cardinal altitude or flight level (e.g., 4,000, FL 320, FL 340).",
+              "is_correct": false
+            },
+            {
+              "text": "Any altitude the controller considers appropriate for traffic flow.",
+              "is_correct": false
+            },
+            {
+              "text": "An altitude at or above FL 410 only.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "What altitude should be assigned to an aircraft on a magnetic course of 270 degrees at or below FL 410?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per TBL 4-5-1, aircraft on magnetic courses 180 through 359 degrees (westbound) at or below FL 410 are assigned even cardinal altitudes or flight levels at intervals of 2,000 feet (e.g., 4,000, 6,000, FL 320, FL 340). Course 270 is westbound, so an even cardinal altitude is required.",
+          "choices": [
+            {
+              "text": "An even cardinal altitude or flight level (e.g., 4,000, FL 320, FL 340).",
+              "is_correct": true
+            },
+            {
+              "text": "An odd cardinal altitude or flight level (e.g., 5,000, FL 310, FL 330).",
+              "is_correct": false
+            },
+            {
+              "text": "Any altitude between the MEA and the aircraft's service ceiling.",
+              "is_correct": false
+            },
+            {
+              "text": "Only flight levels at or above FL 290.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-1": {
+      "items": [
+        {
+          "question_text": "What two elements of a STAR must be included in an arrival clearance when a STAR is assigned?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-7-1b requires the clearance to include 'the name and transition, if necessary, of the STAR/RNAV STAR to be flown.' Both the STAR name and transition must be specified when a transition is needed.",
+          "choices": [
+            {
+              "text": "The STAR name and, if necessary, the transition.",
+              "is_correct": true
+            },
+            {
+              "text": "The STAR name and the initial approach altitude only.",
+              "is_correct": false
+            },
+            {
+              "text": "The transition and the landing runway only.",
+              "is_correct": false
+            },
+            {
+              "text": "The STAR name and the expected approach type.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-10": {
+      "items": [
+        {
+          "question_text": "When may approach information contained in the ATIS broadcast be omitted from a controller's transmission to an arriving aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-7-10a allows omission of ATIS-contained approach information 'if the pilot states the appropriate ATIS code.' The pilot's acknowledgment of the ATIS code confirms receipt of the current broadcast information.",
+          "choices": [
+            {
+              "text": "When the pilot states the appropriate ATIS code.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the destination airport has ATIS available.",
+              "is_correct": false
+            },
+            {
+              "text": "When the controller has verified the ATIS broadcast is current.",
+              "is_correct": false
+            },
+            {
+              "text": "ATIS information can never be omitted; it must always be restated.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-6": {
+      "items": [
+        {
+          "question_text": "What is the distance limitation for clearing an aircraft using VOR navigation below the MEA but at or above the MOCA?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-5-6a1 permits below-MEA clearance for aircraft using VOR/VORTAC/TACAN only 'within 22 miles of that NAVAID.' The altitude must also be at least 300 feet above the floor of controlled airspace.",
+          "choices": [
+            {
+              "text": "Only within 22 miles of the VOR, VORTAC, or TACAN.",
+              "is_correct": true
+            },
+            {
+              "text": "At any distance if the aircraft is at or above the MOCA.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when radar monitoring and lost communications instructions are provided.",
+              "is_correct": false
+            },
+            {
+              "text": "At any distance if the pilot accepts responsibility for terrain clearance.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-5-7": {
+      "items": [
+        {
+          "question_text": "When issuing a cruise clearance to an airport without a published instrument approach procedure, what restriction may be omitted?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 4-5-7a and Note 2, a crossing altitude restriction may be omitted for airports without a published instrument approach because it is not possible to satisfy the requirement for a crossing altitude that ensures terrain clearance until the aircraft reaches a fix, point, or route where altitude information is available. The pilot then determines the minimum IFR altitude per 14 CFR 91.177.",
+          "choices": [
+            {
+              "text": "The crossing altitude restriction, because terrain clearance to a published reference point cannot be assured.",
+              "is_correct": true
+            },
+            {
+              "text": "The destination airport name, because the pilot already knows the destination.",
+              "is_correct": false
+            },
+            {
+              "text": "The cruise altitude itself, because the pilot can select any altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "The entire clearance beyond the initial fix.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-6": {
+      "items": [
+        {
+          "question_text": "When forwarding arrival information to approach control facilities before transfer of control jurisdiction, what information may be omitted when provided for in a letter of agreement?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-7-6b4 states the clearance limit 'may be omitted when provided for in a letter of agreement.' Similarly, b5 allows omission of the time/fix/altitude of control transfer when specified in an LOA. LOAs can streamline the arrival information forwarding requirements.",
+          "choices": [
+            {
+              "text": "The clearance limit and the time, fix, or altitude of control transfer.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft identification and type.",
+              "is_correct": false
+            },
+            {
+              "text": "The ETA and actual time over the clearance limit.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft equipment suffix and proposed altitude.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-11": {
+      "items": [
+        {
+          "question_text": "What information must approach control facilities forward to nonapproach control towers for arriving aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-7-11a requires forwarding: aircraft identification, type of aircraft, ETA, and the type of instrument approach procedure to be executed, or SVFR entry direction and restrictions, or contact approach position. These items allow the tower to adjust traffic flow.",
+          "choices": [
+            {
+              "text": "Aircraft identification, type, ETA, and type of approach or SVFR/contact approach details.",
+              "is_correct": true
+            },
+            {
+              "text": "Aircraft identification and ETA only; other information is obtained from the flight plan.",
+              "is_correct": false
+            },
+            {
+              "text": "Only the type of approach procedure; other information is forwarded separately.",
+              "is_correct": false
+            },
+            {
+              "text": "Aircraft identification, ETA, and parking gate assignment.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-13": {
+      "items": [
+        {
+          "question_text": "When changing from one ILS to another at an airport equipped with multiple ILS systems that operate one at a time, what coordination is required?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-7-13 requires coordination 'with the facilities which use the fixes formed by reference to these NAVAIDs.' When the ILS changes, any fixes defined by reference to that ILS (such as localizer-based intersections) are affected, and all facilities using those fixes must be notified.",
+          "choices": [
+            {
+              "text": "Coordinate with the facilities that use fixes formed by reference to the ILS NAVAIDs.",
+              "is_correct": true
+            },
+            {
+              "text": "Coordinate with the airport operator and the ILS maintenance technician.",
+              "is_correct": false
+            },
+            {
+              "text": "No coordination is required; the change is handled through NOTAMs.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate only with the TRACON, which handles all ILS changes.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-8-7": {
+      "items": [
+        {
+          "question_text": "When is a controller authorized to clear an aircraft for a side-step maneuver?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Paragraph 4-8-7 states the side-step maneuver may be used 'when authorized by an instrument approach procedure.' The procedure must be published authorizing the side-step; the controller cannot independently decide to use it. Note that side-step maneuvers require higher weather minima/MDA.",
+          "choices": [
+            {
+              "text": "When authorized by a published instrument approach procedure.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot requests to land on a parallel runway.",
+              "is_correct": false
+            },
+            {
+              "text": "When the primary runway is occupied and a parallel runway is available.",
+              "is_correct": false
+            },
+            {
+              "text": "At any airport with parallel runways separated by less than 2,500 feet.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-2-10": {
+      "items": [
+        {
+          "question_text": "How should ATC respond when a pilot cancels an IFR flight plan?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "source_block": "phraseology",
+          "generation_source": "question_agent",
+          "explanation": "The prescribed phraseology is '(Call sign) IFR CANCELLATION RECEIVED.' This acknowledges receipt of the cancellation and confirms the IFR flight plan is closed.",
+          "choices": [
+            {
+              "text": "(Call sign) IFR CANCELLATION RECEIVED.",
+              "is_correct": true
+            },
+            {
+              "text": "(Call sign) ROGER, CANCEL IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "(Call sign) CANCEL FLIGHT PLAN.",
+              "is_correct": false
+            },
+            {
+              "text": "(Call sign) IFR CLOSED.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "4-7-3": {
+      "items": [
+        {
+          "question_text": "What are the five conditions under which a frequency change is permitted during a Single Frequency Approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "The five exceptions are: (a) daylight hours in VFR conditions, (b) on pilot request, (c) when the pilot cancels IFR, (d) in an emergency, and (e) when cleared for a visual approach. These exceptions balance the SFA safety benefit against operational necessity.",
+          "choices": [
+            {
+              "text": "Daylight VFR, pilot request, IFR cancellation, emergency, or visual approach clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Pilot request, radar contact, VMC, DME available, and landing assured.",
+              "is_correct": false
+            },
+            {
+              "text": "Emergency only, with no other exceptions permitted.",
+              "is_correct": false
+            },
+            {
+              "text": "Night VFR, pilot request, IFR cancellation, equipment failure, or visual approach clearance.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "4-1-1": {
+      "items": [
+        {
+          "activity_type": "discrimination",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "For each situation, decide whether the altitude and distance limitation tables must be applied.",
+          "question_text": "In which of the following situations must the controller consult the altitude and distance limitation tables before issuing the route?",
+          "choices": [
+            {
+              "text": "Specifying a route that lies entirely within uncontrolled airspace for its whole length.",
+              "is_correct": false
+            },
+            {
+              "text": "Clearing an aircraft via an established Jet Route that is depicted on the high-altitude en route chart.",
+              "is_correct": false
+            },
+            {
+              "text": "Specifying a direct route between two VORs where the straight-line path is not part of any established airway, and the entire route lies within controlled airspace.",
+              "is_correct": true
+            },
+            {
+              "text": "Issuing a reroute that substitutes one published airway segment for another published airway segment.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The body of 4-1-1 states the tables apply 'when specifying a route other than an established airway or route' and only for 'any portion of the route which lies within controlled airspace.' Published airways and routes entirely in uncontrolled airspace are outside the trigger condition."
+        }
+      ]
+    },
+    "4-1-2": {
+      "items": [
+        {
+          "activity_type": "source_use",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "source_kind": "paragraph",
+          "source_label": "4-1-2 Exceptions",
+          "lookup_context": [
+            "Three listed exceptions for not applying altitude and distance limitations",
+            "Each exception has distinct conditions that must all be met"
+          ],
+          "task": "Match each operational situation to the correct exception, or determine that no exception applies.",
+          "instruction": "For each situation, identify which exception from 4-1-2 (if any) permits the altitude and distance limitations not to be applied.",
+          "question_text": "Situation: A pilot requests a direct routing that exceeds the VOR service-volume limits. Radar monitoring is available and will be provided. The requested route does not use an MTR, and no operational-necessity approval has been obtained. Which exception, if any, applies?",
+          "choices": [
+            {
+              "text": "Exception (c): requested routing via an MTR.",
+              "is_correct": false
+            },
+            {
+              "text": "Exception (b): operational necessity with office approval.",
+              "is_correct": false
+            },
+            {
+              "text": "Exception (a): routing requested by the pilot with radar monitoring provided.",
+              "is_correct": true
+            },
+            {
+              "text": "No exception applies; the routing must stay within the limitations.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Exception (a) requires two conditions: routing initiated by ATC or requested by the pilot, AND radar monitoring provided. Both are satisfied. Exception (b) requires office approval, which was not obtained. Exception (c) requires the routing to be via an MTR, which it is not."
+        }
+      ]
+    },
+    "4-1-5": {
+      "items": [
+        {
+          "activity_type": "source_use",
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "source_kind": "paragraph",
+          "source_label": "4-1-5 Fix Use, subparagraphs b3 and b4",
+          "lookup_context": [
+            "Unpublished fix divergence angle rules in 4-1-5b4(a)-(d)",
+            "Holding operations at unpublished fixes",
+            "Distance-based divergence angle calculations"
+          ],
+          "task": "Apply the unpublished-fix divergence angle rules to determine whether the proposed fix layout is valid.",
+          "instruction": "Determine whether the proposed unpublished fix satisfies the divergence angle requirements for the described operation.",
+          "question_text": "An unpublished fix is 35 NM from the off-course NAVAID and 25 NM from the on-course NAVAID. The angle of divergence between the on-course and off-course radials is 32 degrees. Holding operations are planned at this fix. Is the fix valid?",
+          "choices": [
+            {
+              "text": "No. At 35 NM, the divergence angle must increase 1 degree per NM past 30 NM, requiring 35 degrees minimum.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. 32 degrees exceeds the 30-degree minimum for NAVAIDs both within 30 NM, and subparagraph (a) does not override subparagraph (b).",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The 45-degree holding floor only applies when the NAVAIDs are more than 30 NM from the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Although the 30-degree minimum from subparagraph (b) is met at 32 degrees, subparagraph (a) requires at least 45 degrees when holding operations are involved.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "When holding operations are involved, subparagraph 4-1-5b4(a) requires a minimum of 45 degrees divergence regardless of NAVAID proximity. While the 30-degree minimum from subparagraph (b) (for NAVAIDs both within 30 NM) is satisfied at 32 degrees, the holding-operations rule imposes a 45-degree floor that overrides the lower value."
+        }
+      ]
+    },
+    "4-2-2": {
+      "items": [
+        {
+          "activity_type": "discrimination",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "For each transmission, determine whether the correct relay prefix was used.",
+          "question_text": "Which of the following uses the correct relay prefix for the type of communication being relayed through a non-ATC facility?",
+          "choices": [
+            {
+              "text": "Relaying an advisory: 'A-T-C requests November One Two Three, weather deviation reported 20 miles ahead of you.'",
+              "is_correct": false
+            },
+            {
+              "text": "Relaying a request for information: 'A-T-C clears November One Two Three, say altitude.'",
+              "is_correct": false
+            },
+            {
+              "text": "Relaying a clearance: 'A-T-C clears November One Two Three to the Springfield Airport via direct.'",
+              "is_correct": true
+            },
+            {
+              "text": "Relaying a clearance: 'A-T-C advises November One Two Three, cleared to the Springfield Airport via direct.'",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The three prefixes match their communication type: 'A-T-C clears' for clearances, 'A-T-C advises' for information/advisories, and 'A-T-C requests' for requests for information. Using 'A-T-C clears' for a request or 'A-T-C requests' for a clearance mismatches the prefix to the communication type."
+        }
+      ]
+    },
+    "4-2-5": {
+      "items": [
+        {
+          "activity_type": "discrimination",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Identify which amendment method is being used in each transmission.",
+          "question_text": "A controller issues: 'Cleared direct ODESA intersection, rest of route unchanged.' Which of the four amendment methods for a previously-issued clearance does this transmission exemplify?",
+          "choices": [
+            {
+              "text": "Stating which portion is amended and then stating the amendment (method 1).",
+              "is_correct": false
+            },
+            {
+              "text": "Issuing a clearance direct to a point on the previously issued route (method 3).",
+              "is_correct": true
+            },
+            {
+              "text": "Stating the amendment and then that the rest is unchanged (method 2).",
+              "is_correct": false
+            },
+            {
+              "text": "Issuing the entire route by stating the amendment (method 4).",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Method 3 is 'Issue a clearance direct to a point on the previously issued route.' The transmission 'Cleared direct ODESA intersection' satisfies this. Adding 'rest of route unchanged' does not convert it to method 2; the note clarifies that this phrase is optional for method 3 and may be used to clarify where the route resumes."
+        }
+      ]
+    },
+    "4-2-8": {
+      "items": [
+        {
+          "activity_type": "source_use",
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "source_kind": "paragraph",
+          "source_label": "4-2-8 IFR-VFR and VFR-IFR Flights, subparagraph d",
+          "lookup_context": [
+            "Pop-up IFR procedures when aircraft cannot climb in VFR to minimum IFR altitude",
+            "Controller obligations: terrain/obstruction clearance question, then clearance or VFR instruction",
+            "Paragraph 10-2-7 and 10-2-9 as fallback provisions"
+          ],
+          "task": "Determine the correct controller action based on the pilot's response to the terrain and obstruction clearance question.",
+          "instruction": "For the situation described, identify the correct controller response for a VFR aircraft requesting IFR clearance below the minimum IFR altitude.",
+          "question_text": "A VFR aircraft at 2,500 feet requests an IFR clearance. The minimum IFR altitude in the area is 5,000 feet. The pilot states they are in and out of clouds and cannot maintain VFR to 5,000 feet. The controller asks if the pilot can maintain terrain and obstruction clearance until reaching 5,000 feet. The pilot responds 'unable.' What should the controller do?",
+          "choices": [
+            {
+              "text": "Issue the IFR clearance with a void time, allowing the pilot to find VFR conditions within 30 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the IFR clearance anyway because the pilot has declared an inability to maintain VFR, which constitutes an emergency requiring immediate IFR handling.",
+              "is_correct": false
+            },
+            {
+              "text": "Instruct the pilot to maintain VFR and state intentions. If appropriate, apply emergency assistance procedures or radar assistance procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "Vector the pilot to the nearest VFR airport because an IFR clearance cannot be issued without terrain and obstruction clearance assurance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-2-8d3, if the pilot states they are unable to maintain terrain and obstruction clearance, the controller must instruct the pilot to maintain VFR and state intentions. Subparagraph d4 adds that the provisions of paragraph 10-2-7 (VFR Aircraft In Weather Difficulty) or 10-2-9 (Radar Assistance Techniques) may be applied if appropriate. The controller does not automatically issue the IFR clearance when the pilot cannot assure terrain/obstruction clearance."
+        }
+      ]
+    },
+    "4-2-10": {
+      "items": [
+        {
+          "activity_type": "discrimination",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Identify whether each cancellation instruction matches the airport type.",
+          "question_text": "An arriving IFR aircraft is approaching an airport without an operating control tower and without an air/ground communications station. Which of the following is the correct cancellation instruction?",
+          "choices": [
+            {
+              "text": "'Report cancellation of IFR this frequency or with tower.'",
+              "is_correct": false
+            },
+            {
+              "text": "'Report cancellation of IFR on 122.2.'",
+              "is_correct": false
+            },
+            {
+              "text": "'Report cancellation of IFR this frequency or with flight service.'",
+              "is_correct": true
+            },
+            {
+              "text": "'Cancel IFR with flight service after landing.'",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-2-10a2, for airports without an air/ground communications station, the phraseology is: '(Call sign) REPORT CANCELLATION OF IFR THIS FREQUENCY OR WITH FLIGHT SERVICE' or the variant naming the specific FSS or ATC facility. The first choice matches the prescribed wording. The third choice incorrectly substitutes 'tower' for 'flight service,' which is the alternate form for stations WITH an air/ground communications station."
+        }
+      ]
+    },
+    "4-3-2": {
+      "items": [
+        {
+          "activity_type": "source_use",
+          "generation_source": "question_agent",
+          "difficulty": 4,
+          "source_kind": "paragraph",
+          "source_label": "4-3-2 Departure Clearances, subparagraph c1",
+          "lookup_context": [
+            "Three categories of airports for specifying direction of takeoff/turn",
+            "Airports with ATC service: specify as necessary consistent with DPs",
+            "Non-towered airports in Class E surface area: coordinate before issuing turn/heading",
+            "All other airports: do not specify direction of takeoff or turn; heading applies only in controlled airspace"
+          ],
+          "task": "Determine whether the controller may specify a departure turn or heading at each type of airport.",
+          "instruction": "For each airport type, determine whether the controller's action is correct when specifying departure turns or headings.",
+          "question_text": "At a satellite airport without Airport Traffic Control Service but located within Class E surface area, the controller issues a departure clearance specifying: 'Fly heading one two zero after departure.' Before issuing this clearance, what must the controller do?",
+          "choices": [
+            {
+              "text": "Nothing additional \u2014 the controller may specify any departure heading at any airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate with the airport management or obtain the pilot's concurrence, because this is a non-towered airport within Class E surface area.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the heading only as an advisory, not as a clearance instruction, because non-towered airports cannot receive mandatory departure instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "Confirm that the airport has a published Diverse Vector Area before issuing the heading.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-2c1(b), at locations without ATC service but within Class E surface area, the controller must coordinate with the airport management or obtain the pilot's concurrence before issuing a turn or heading in the clearance. This is a distinct requirement that falls between airports with ATC service (where headings may be specified as necessary) and all other airports (where takeoff direction/turn should not be specified)."
+        }
+      ]
+    },
+    "4-3-3": {
+      "items": [
+        {
+          "activity_type": "discrimination",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Determine whether the conditions for an abbreviated departure clearance are met.",
+          "question_text": "A flight's route was changed by the company operations officer after the flight plan was filed but before the pilot received the clearance. The pilot is unaware of the change. The controller, seeing the amended route in the system, offers an abbreviated departure clearance. Is this appropriate?",
+          "choices": [
+            {
+              "text": "Yes. Condition 1 only applies to changes made by the pilot, not by the company or operations officer.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The controller has the amended route and the pilot will accept any clearance the controller issues.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Condition 1 is not met because the route was changed before departure; the pilot has not accepted the amended route.",
+              "is_correct": true
+            },
+            {
+              "text": "No. Abbreviated clearances are never appropriate when the route has been changed by anyone.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-3-3a1, the first condition is: 'The route of flight filed with ATC has not been changed by the pilot, company, operations officer, input operator, or in the stored flight plan program prior to departure.' The note explains that a pilot will not accept an abbreviated clearance if the route was changed before departure, and the company or operations officer is responsible for informing the pilot of changes. Since the company changed the route and the pilot is unaware, condition 1 is not satisfied."
+        }
+      ]
+    },
+    "4-4-1": {
+      "items": [
+        {
+          "activity_type": "source_use",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "source_kind": "paragraph",
+          "source_label": "4-4-1 Route Use, subparagraph c1",
+          "lookup_context": [
+            "Random RNAV route requirements for GNSS-equipped aircraft when not radar monitored",
+            "Points must be published NAVAIDs, waypoints, fixes, or airports recallable from navigation database",
+            "Points must be displayed on controller video maps or chart"
+          ],
+          "task": "Determine whether the proposed random RNAV route meets the requirements for non-radar operations.",
+          "instruction": "Apply the random RNAV route requirements from paragraph 4-4-1.",
+          "question_text": "A GNSS-equipped RNAV aircraft on a random RNAV route will not be radar monitored. The route is defined by four points: PUBLISHED_WP1, PUBLISHED_WP2, and two fixes that are in the aircraft's navigation database but are NOT displayed on the controller's video map or chart. Does this route meet the requirements?",
+          "choices": [
+            {
+              "text": "Yes. As long as the points are recallable from the aircraft's navigation database, the controller does not need to see them.",
+              "is_correct": false
+            },
+            {
+              "text": "No. When not radar monitored, all points must be displayed on controller video maps or depicted on the controller chart at the position.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes. The requirement for controller visibility only applies to the terminal environment, not en route.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Random RNAV routes are not permitted at all when radar monitoring is unavailable.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-4-1c1(a), for non-radar-monitored GNSS RNAV aircraft on random routes, the points must BOTH be published NAVAIDs/waypoints/fixes/airports recallable from the aircraft's navigation database AND be displayed on controller video maps or depicted on the controller chart. The two non-displayed fixes fail the second requirement."
+        }
+      ]
+    },
+    "4-4-2": {
+      "items": [
+        {
+          "activity_type": "source_use",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "source_kind": "paragraph",
+          "source_label": "4-4-2 Route Structure Transitions",
+          "lookup_context": [
+            "Seven methods for transitioning within or between route structures",
+            "Method g for RNAV aircraft: random RNAV route between ATS routes requires radar monitoring"
+          ],
+          "task": "Identify which transition method applies and whether any special requirements attach.",
+          "instruction": "Match the operational situation to the correct route structure transition method.",
+          "question_text": "An RNAV aircraft needs to transition from one Jet Route to another. The controller clears it via a random RNAV route to a fix on the new route. What additional requirement applies to this transition method?",
+          "choices": [
+            {
+              "text": "A SID or STAR must be assigned in conjunction with the random RNAV transition.",
+              "is_correct": false
+            },
+            {
+              "text": "No additional requirement; RNAV aircraft always self-navigate on random routes.",
+              "is_correct": false
+            },
+            {
+              "text": "The aircraft must report established on the new route before radar monitoring can be terminated.",
+              "is_correct": false
+            },
+            {
+              "text": "Radar monitoring must be provided to the aircraft while transitioning via the random RNAV route.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "Method g of 4-4-2 states: 'Clear RNAV aircraft between designated or established ATS routes via random RNAV routes to a NAVAID, waypoint, airport or fix on the new route. Provide radar monitoring to aircraft transitioning via random RNAV routes.' Radar monitoring is a specific requirement attached to this method."
+        }
+      ]
+    },
+    "4-4-3": {
+      "items": [
+        {
+          "activity_type": "source_use",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "source_kind": "paragraph",
+          "source_label": "4-4-3 Degree-Distance Route Definition, subparagraphs a1-a3 and b",
+          "lookup_context": [
+            "Degree-distance fix format: location identifier, azimuth in degrees magnetic, distance in NM",
+            "Distance limits: below FL180 = 80 NM, FL180+ = 260 NM, celestial = 260 NM",
+            "Authorized special military operations in subparagraph b"
+          ],
+          "task": "Verify whether the flight plan's degree-distance route meets all definition and procedural requirements.",
+          "instruction": "Evaluate the military flight plan against paragraph 4-4-3 requirements.",
+          "question_text": "A military flight plan for a refueling anchor operation at 15,000 feet defines the route with degree-distance fixes spaced 75 miles apart using NAVAIDs within published service volume. The fixes use the format 'MKE 030025.' Is the route definition valid?",
+          "choices": [
+            {
+              "text": "No. Degree-distance fixes at any altitude must use celestial navigation NAVAIDs, not VORTAC facilities like MKE.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Refueling anchor operations are not listed among the authorized special military operations in subparagraph b.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. At 15,000 feet (below FL 180), the 80-mile maximum applies and 75 miles is within that limit. The fix format is correct.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, but only if the flight plan was filed at least 4 hours before the estimated time of departure.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The fix format 'MKE 030025' correctly includes location identifier, azimuth in degrees magnetic, and distance in NM. Below FL 180, the maximum fix spacing is 80 miles \u2014 75 miles complies. Refueling operations are among the authorized special military operations listed in subparagraph b (air refueling). Flight plans must be filed at least 2 hours (not 4 hours) before ETD per subparagraph a5(b)."
+        }
+      ]
+    },
+    "4-5-1": {
+      "items": [
+        {
+          "activity_type": "discrimination",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "For each altitude band and aircraft pairing, identify the correct vertical separation minimum.",
+          "question_text": "A non-RVSM aircraft is at FL300. Another aircraft at FL310 is also non-RVSM. What vertical separation minimum applies between them?",
+          "choices": [
+            {
+              "text": "1,000 feet, because FL300 and FL310 are both at or below FL 410.",
+              "is_correct": false
+            },
+            {
+              "text": "2,000 feet, because at or above FL 290 between non-RVSM aircraft and all other aircraft, 2,000 feet applies.",
+              "is_correct": true
+            },
+            {
+              "text": "2,000 feet, because above FL 410 the standard minimum is always 2,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "1,000 feet, because these are both non-RVSM and the 2,000-foot rule only applies between RVSM and non-RVSM aircraft.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-5-1b: 'Apply 2,000 feet at or above FL 290 between non-RVSM aircraft and all other aircraft at or above FL 290.' The rule triggers on the non-RVSM status of one aircraft \u2014 the 'all other aircraft' includes both RVSM and non-RVSM aircraft. Since both are non-RVSM, this rule applies to both directions of the pairing, requiring 2,000 feet separation."
+        }
+      ]
+    },
+    "4-5-6": {
+      "items": [
+        {
+          "activity_type": "source_use",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "source_kind": "paragraph",
+          "source_label": "4-5-6 Minimum En Route Altitudes, subparagraph a",
+          "lookup_context": [
+            "Exceptions permitting clearance below MEA but not below MOCA",
+            "Three conditions: VOR/VORTAC/TACAN within 22 NM, radar with MVA/MIA + lost comm, or GNSS-equipped",
+            "Additional requirement: altitude at least 300 feet above floor of controlled airspace"
+          ],
+          "task": "Determine whether the aircraft qualifies for a below-MEA clearance under paragraph 4-5-6.",
+          "instruction": "Apply the below-MEA exception rules to each situation.",
+          "question_text": "An aircraft using VOR navigation is 30 NM from the VORTAC defining the route. The MEA is 5,000 feet and the MOCA is 3,500 feet. The controller wants to clear the aircraft at 4,000 feet, which is 400 feet above the floor of controlled airspace. Radar service is not being provided and the aircraft is not GNSS-equipped. Is the clearance at 4,000 feet valid?",
+          "choices": [
+            {
+              "text": "Yes. 4,000 feet is above the MOCA and at least 300 feet above the floor of controlled airspace, which satisfies the general below-MEA rule.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The aircraft is beyond 22 NM from the VORTAC, radar is not provided, and the aircraft is not GNSS-equipped \u2014 none of the three conditions is met.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes. The MOCA takes precedence over all other altitude restrictions when the aircraft is beyond 22 NM from the NAVAID.",
+              "is_correct": false
+            },
+            {
+              "text": "No. The aircraft must be at or above the MEA (5,000 feet) regardless of other conditions because no exception applies at 30 NM from the NAVAID.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-5-6a, to clear below MEA but not below MOCA, one of three conditions must be met: (1) within 22 NM of VOR/VORTAC/TACAN, (2) radar with MVA/MIA and lost comm instructions, or (3) GNSS-equipped. At 30 NM, without radar, and without GNSS, none of the conditions is satisfied. The general rule (at or above MEA) applies."
+        }
+      ]
+    },
+    "4-5-7": {
+      "items": [
+        {
+          "activity_type": "discrimination",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Distinguish between a 'maintain' and a 'cruise' altitude instruction based on the operational context.",
+          "question_text": "A controller clears an aircraft to an airport without a published instrument approach procedure, using an unpublished route. The controller wants to give the aircraft flexibility to descend at pilot discretion while ensuring obstacle clearance. Which altitude instruction is appropriate?",
+          "choices": [
+            {
+              "text": "Issue a cruise clearance with a specific crossing restriction to ensure terrain clearance until the FAF.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue 'maintain (altitude)' because cruise clearances are prohibited when using unpublished routes.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a cruise clearance without a crossing restriction. When no published approach exists, a crossing altitude cannot satisfy the terrain-clearance requirement, so a cruise clearance is appropriate.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue 'maintain (altitude) until established on a published segment' because cruise clearances do not provide obstruction clearance.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 4-5-7a and Note 2: when issuing a cruise clearance to an airport without a published instrument approach, it is not possible to satisfy the crossing-altitude requirement. Under those conditions, a cruise clearance without a crossing restriction is authorized, and the pilot determines the minimum IFR altitude per 14 CFR 91.177."
+        }
+      ]
+    },
+    "4-7-3": {
+      "items": [
+        {
+          "activity_type": "discrimination",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Determine whether a frequency change is permitted under the SFA procedure.",
+          "question_text": "A military single-piloted turbojet aircraft on an IFR flight plan is conducting an approach under SFA procedures per a letter of agreement. The aircraft is at 3,000 feet in IMC, on the intermediate approach segment. The controller needs the aircraft to change to the tower frequency for sequencing. Is this frequency change permitted?",
+          "choices": [
+            {
+              "text": "No. Under SFA procedures for military turbojet aircraft, frequency changes are prohibited at any point between initial contact during en route descent and landing or low approach completion.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. Frequency changes to the tower for sequencing purposes are routine and are permitted under SFA procedures regardless of weather or flight conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes. The SFA frequency-change restriction applies only during the final approach segment, so making a change on the intermediate approach segment is permitted.",
+              "is_correct": false
+            },
+            {
+              "text": "No. Under SFA procedures, a frequency change is not permitted after the approach begins unless a listed exception applies (daylight VFR, pilot request, IFR cancellation, emergency, or visual approach).",
+              "is_correct": true
+            }
+          ],
+          "explanation": "SFA procedures prohibit frequency changes after the approach begins or after initial contact during an en route descent until landing or low approach is completed, except in five specific conditions: (a) daylight VFR, (b) pilot request, (c) IFR cancellation, (d) emergency, or (e) visual approach clearance. None of these exceptions applies to the situation described."
+        }
+      ]
+    }
+  },
+  "flashcards": {}
+}

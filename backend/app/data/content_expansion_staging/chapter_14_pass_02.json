@@ -1,0 +1,692 @@
+{
+  "questions": {
+    "14-1-1": {
+      "items": [
+        {
+          "question_text": "After TDLS commissioning, how long must ATIS announce PDC availability?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-1-1(f) specifies a minimum of 60 days following TDLS commissioning for the ATIS broadcast. The 60-day requirement is a floor, not a ceiling; the facility may broadcast longer if needed. The countdown starts from TDLS commissioning, not from the first PDC transmission or the date the facility directive is published.",
+          "choices": [
+            {
+              "text": "A minimum of 30 days following the first PDC transmission.",
+              "is_correct": false
+            },
+            {
+              "text": "A minimum of 60 days following the commissioning of the TDLS.",
+              "is_correct": true
+            },
+            {
+              "text": "A minimum of 90 days following publication of the facility directive.",
+              "is_correct": false
+            },
+            {
+              "text": "Indefinitely; every ATIS broadcast must include PDC availability once TDLS is commissioned.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "How must a PDC clearance be delivered after its flight plan is amended?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-1-1(d) prohibits PDC transmission of amended or revised flight plans. The clearance for any revised or amended flight plan must be verbally issued to the flight crew. This is an absolute prohibition \u2014 there is no exception for minor amendments or for amendments that the TAS could technically display. The only exception is in the note: a flight plan that initially generates in the tower with an automation-assigned route (e.g., ADR) is not considered revised or amended.",
+          "choices": [
+            {
+              "text": "Transmit the original PDC as-is, since the amendment occurred after the PDC was prepared.",
+              "is_correct": false
+            },
+            {
+              "text": "Modify the PDC fields to match the amendment and transmit the updated clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "Verbally issue the clearance to the flight crew, since PDC does not permit amended or revised flight plans.",
+              "is_correct": true
+            },
+            {
+              "text": "Cancel the PDC and file a new flight plan; a new PDC must be generated from scratch.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "14-1-2": {
+      "items": [
+        {
+          "question_text": "After commissioning CPDLC departure clearance, how long must ATIS announce its availability?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-1-2(e) mirrors 14-1-1(f) but with a different trigger: for a minimum of 60 days following the commissioning of CPDLC capability (not TDLS, which triggers the PDC broadcast), the ATIS must broadcast that CPDLC is available. The two requirements are parallel but triggered by different system commissionings.",
+          "choices": [
+            {
+              "text": "The ATIS must broadcast CPDLC availability only if PDC is also available at the same facility.",
+              "is_correct": false
+            },
+            {
+              "text": "No ATIS broadcast is required for CPDLC; only PDC commissioning triggers the broadcast requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "The ATIS must broadcast CPDLC availability permanently once the capability is commissioned.",
+              "is_correct": false
+            },
+            {
+              "text": "The ATIS must broadcast CPDLC availability for a minimum of 60 days following commissioning of the CPDLC capability.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "How does amendment handling differ between PDC and CPDLC departure clearances?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-1-1(d) states PDC does not permit amended or revised flight plans to be transmitted at all. 14-1-2(c) states CPDLC permits amended or revised flight plans to be transmitted, but those that cannot be delivered using CPDLC must be verbally issued. The difference is inherent in the systems: PDC has no mechanism to carry amendments, while CPDLC does \u2014 but only to the extent the TAS predefined fields can express the amendment. If the amendment cannot be expressed in those fields, CPDLC DCL reverts to the same verbal requirement as PDC.",
+          "choices": [
+            {
+              "text": "PDC can transmit minor amendments but not major route changes; CPDLC can transmit any amendment.",
+              "is_correct": false
+            },
+            {
+              "text": "Both systems can transmit amendments, but only CPDLC requires the ATIS broadcast during the 60-day window.",
+              "is_correct": false
+            },
+            {
+              "text": "CPDLC DCL permits amended flight plans to be transmitted; PDC does not permit them at all.",
+              "is_correct": true
+            },
+            {
+              "text": "PDC permits amendments only when the ATIS confirms PDC availability; CPDLC has no such restriction.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "14-1-3": {
+      "items": [
+        {
+          "question_text": "What do NO SID, ----, and SEE SID represent in their respective DCL selectable fields?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Fields 1, 2, and 7 each have their own distinct convention for indicating that no data is being provided or that the pilot should reference another source. Field 1 uses NO SID (14-1-3(a)(1)(c)), Field 2 uses ---- (14-1-3(a)(2)(c)), and Field 7 uses SEE SID (14-1-3(a)(7)). They are not interchangeable \u2014 each field has a specific 'no data' or 'delegated' convention, and using the wrong one for a given field would be procedurally incorrect.",
+          "choices": [
+            {
+              "text": "All three mean the same thing: the field contains no controller-entered data and the pilot should disregard it.",
+              "is_correct": false
+            },
+            {
+              "text": "NO SID, ----, and SEE SID are interchangeable across all nine selectable fields.",
+              "is_correct": false
+            },
+            {
+              "text": "These conventions apply only when the TAS drop-down menu has no available entries for that field.",
+              "is_correct": false
+            },
+            {
+              "text": "Each field uses its own distinct convention for indicating no data, a delegated reference, or that the field is not populated.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "What belongs in Selectable Field 5 when no SID-based initial altitude or vertical guidance exists?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-1-3(a)(5): when no SID is assigned or the assigned SID does not contain either an initial altitude or vertical guidance, Selectable Field 5 must contain the instruction MAINTAIN (assigned altitude). Field 5 is the fallback when Field 4 (CLIMB VIA) does not apply because there is no SID-based vertical guidance.",
+          "choices": [
+            {
+              "text": "CLIMB VIA SID, since Field 4 always applies when a SID reference exists.",
+              "is_correct": false
+            },
+            {
+              "text": "Leave Field 5 blank and place the altitude in Field 6 instead.",
+              "is_correct": false
+            },
+            {
+              "text": "MAINTAIN (assigned altitude).",
+              "is_correct": true
+            },
+            {
+              "text": "SEE SID, directing the pilot to consult the SID chart for the initial altitude.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "14-2-1": {
+      "items": [
+        {
+          "question_text": "An aircraft is in level cruise at FL370, well clear of any critical phase of flight, and the controller wants to issue a routine route amendment. Voice frequencies are congested. Another aircraft is on final approach in IMC, and the controller needs to issue an immediate speed reduction. For which aircraft may the controller appropriately use CPDLC?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-2-1(c) requires controllers to minimize CPDLC during critical phases of flight (final approach is a critical phase). 14-2-1(d) prohibits using CPDLC for immediate or expeditious clearances unless voice is not operationally feasible. The cruising aircraft has no restriction preventing CPDLC use. The aircraft on final approach faces two prohibitions: critical phase (minimize CPDLC) and immediate clearance (do not use CPDLC). Voice should be used for the approach aircraft.",
+          "choices": [
+            {
+              "text": "Use CPDLC for the cruising aircraft's routine amendment; use voice for the approach aircraft's immediate speed reduction.",
+              "is_correct": true
+            },
+            {
+              "text": "Use voice for both, since any use of CPDLC during busy operations is discouraged.",
+              "is_correct": false
+            },
+            {
+              "text": "Use CPDLC for both, since voice frequencies are congested and CPDLC augments voice for all clearance types.",
+              "is_correct": false
+            },
+            {
+              "text": "Use CPDLC for the immediate speed reduction since it is time-critical, and voice for the routine amendment.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "An aircraft has an open trajectory-altering clearance (TAC) that was sent via CPDLC and awaits a pilot response. The sector is about to transfer communications for this aircraft to the next sector. What must the controller do regarding the open TAC before transfer, unless otherwise coordinated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-2-1(e) requires the controller to ensure there are no open trajectory-altering clearances prior to transfer of communication unless otherwise coordinated. An open TAC represents an unresolved change to the aircraft's flight path \u2014 transferring the aircraft with an unresolved TAC could leave the receiving controller unaware of the pending trajectory change. The TAC must be resolved (acknowledged, completed, or canceled) before the transfer.",
+          "choices": [
+            {
+              "text": "Transfer communications and let the receiving sector manage the open TAC.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel the open TAC and reissue it as a non-trajectory-altering clearance before transfer.",
+              "is_correct": false
+            },
+            {
+              "text": "Ensure no open trajectory-altering clearances remain prior to transfer, unless otherwise coordinated.",
+              "is_correct": true
+            },
+            {
+              "text": "Leave the TAC open but annotate the handoff with a note about the pending clearance.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "14-2-2": {
+      "items": [
+        {
+          "question_text": "An IC mismatch indicator appears in the FDB for an aircraft. Controller A, who is working a different sector in the same ARTCC, sees the indicator on their display and reaches to acknowledge it. Controller B has the aircraft on their voice frequency. Who must respond to the IC mismatch indicator, and how?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-2-2(a) assigns the obligation to the controller who has the aircraft on voice frequency (Controller B), who must use voice communication to verify the assigned altitude and acknowledge the indicator. The note clarifies that all sectors in the controlling ARTCC displaying an FDB will show the indicator \u2014 this means Controller A can see it, but the response obligation belongs exclusively to the voice-frequency controller. Anyone else acknowledging it without coordination would violate the procedure.",
+          "choices": [
+            {
+              "text": "Either controller may acknowledge the indicator, since all sectors in the controlling ARTCC display it.",
+              "is_correct": false
+            },
+            {
+              "text": "Controller A must acknowledge the indicator to clear the FDB for their sector; Controller B issues the altitude verification by voice.",
+              "is_correct": false
+            },
+            {
+              "text": "Neither controller should acknowledge it; the system automatically resolves IC mismatches after a preset timeout.",
+              "is_correct": false
+            },
+            {
+              "text": "Controller B must use voice communication to verify the assigned altitude and acknowledge the indicator; Controller A sees it but should not acknowledge it.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    "14-2-3": {
+      "items": [
+        {
+          "question_text": "During a CPDLC shutdown, what two obligations stop new messages and resolve pending uplinks?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-2-3(c) imposes two separate obligations during a CPDLC shutdown: (1) broadcast a voice message alerting all pilots to the shutdown and requesting no further downlinks \u2014 this prevents new CPDLC traffic from being initiated; and (2) take action to resolve, by voice, any open or abnormally closed uplinks with each affected aircraft \u2014 this ensures no clearance ambiguity remains. These are sequential and complementary: first stop new traffic, then clean up existing transactions.",
+          "choices": [
+            {
+              "text": "Notify the next facility of the shutdown, and log all open uplinks for later resolution when CPDLC is restored.",
+              "is_correct": false
+            },
+            {
+              "text": "Broadcast a voice alert to pilots to stop downlinks, and resolve any open or abnormally closed uplinks by voice with each aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Terminate CPDLC connections for all aircraft, and advise pilots to squawk 7600 until further notice.",
+              "is_correct": false
+            },
+            {
+              "text": "Cancel all pending uplinks from the ground system, and instruct pilots to disregard any undelivered CPDLC messages.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "When does an altitude uplink automatically include an altimeter setting?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per the note to 14-2-3(a), automated altimeter settings are only sent in response to a monitor transfer of communication (TOC) or an altitude uplink when the assigned altitude is below FL 180. Since FL175 is below FL 180, the system will automatically send the altimeter setting. If the aircraft were at or above FL 180, the system would not automatically include the altimeter, and the controller must issue it manually per Chapter 2, Section 7 if needed.",
+          "choices": [
+            {
+              "text": "Yes, because FL175 is below FL 180 and the altitude uplink triggers an automated altimeter setting.",
+              "is_correct": true
+            },
+            {
+              "text": "No, automated altimeters are only sent on a monitor TOC, never on an altitude uplink.",
+              "is_correct": false
+            },
+            {
+              "text": "No, automated altimeters are only sent when the assigned altitude is at or above FL 180.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, automated altimeters are sent with every altitude uplink regardless of the assigned altitude.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "14-3-1": {
+      "items": [
+        {
+          "question_text": "A CPDLC-connected aircraft is operating outside VHF coverage when the controller determines that a complex reroute would be more efficiently explained by voice via SATCOM. Under what conditions may the controller use voice for this CPDLC-connected aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-1(b) permits voice communications for CPDLC aircraft when it provides an operational advantage and/or when workload or equipment capabilities demand. This is a permissive exception to the primary-means rule in 14-3-1(a). The controller must weigh the operational advantage of voice (clearer explanation of a complex reroute) against the primary-means preference for CPDLC outside VHF coverage. The key is that voice is permitted \u2014 not required \u2014 when these conditions exist.",
+          "choices": [
+            {
+              "text": "Voice must never be used outside VHF coverage once a CPDLC connection is active.",
+              "is_correct": false
+            },
+            {
+              "text": "Voice may be used only after the CPDLC connection is terminated and the pilot acknowledges the termination.",
+              "is_correct": false
+            },
+            {
+              "text": "Voice may be used when it provides an operational advantage and/or when workload or equipment capabilities demand it.",
+              "is_correct": true
+            },
+            {
+              "text": "Voice may be used only when the CPDLC message set cannot express the clearance, regardless of operational advantage.",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "A CPDLC-connected oceanic aircraft is operating within VHF coverage. The pilot sends a route request via CPDLC. What communication medium should the controller use to respond?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-1(d) establishes a symmetry rule: when a pilot communicates via CPDLC, the response should be via CPDLC. This rule applies regardless of whether the aircraft is inside or outside VHF coverage. The controller should respond on the same medium the pilot used to initiate the exchange, maintaining CPDLC message continuity and ensuring proper closure of the CPDLC transaction.",
+          "choices": [
+            {
+              "text": "Respond via voice, since the aircraft is within VHF coverage and voice is more efficient.",
+              "is_correct": false
+            },
+            {
+              "text": "Respond via CPDLC, since the pilot initiated the communication using CPDLC.",
+              "is_correct": true
+            },
+            {
+              "text": "Respond via CPDLC only if the message set contains the appropriate response; otherwise use voice.",
+              "is_correct": false
+            },
+            {
+              "text": "It does not matter; the controller may choose either medium based on workload.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "14-3-2": {
+      "items": [
+        {
+          "question_text": "A controller is preparing to transfer communications for an oceanic CPDLC aircraft to an adjacent facility. The receiving facility's CPDLC system is temporarily out of service. How must the transfer of communications be handled?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-2(b): when a receiving facility is not CPDLC capable (including when its CPDLC system is out of service), the transfer of communications must be made in accordance with local directives and Letters of Agreement (LOAs). This contrasts with 14-3-2(a) where a CPDLC-capable receiving facility gets an automatic data link transfer within facility-adapted parameters. The non-CPDLC transfer relies on pre-coordinated procedures rather than automated data link handoff.",
+          "choices": [
+            {
+              "text": "The automatic data link transfer proceeds normally; the receiving facility's CPDLC system will queue the transfer until restored.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller must delay the transfer until the receiving facility's CPDLC system is restored to service.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller terminates the CPDLC connection and transfers the aircraft as a non-CPDLC flight using voice-only procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "The transfer must be made in accordance with local directives and Letters of Agreement, since the receiving facility is not currently CPDLC capable.",
+              "is_correct": true
+            }
+          ]
+        },
+        {
+          "question_text": "How is a normal data-link transfer completed when the receiving facility supports CPDLC?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-2(a): when the receiving facility is CPDLC capable, the data link transfer is automatic and accomplished within facility-adapted parameters. This means the controller does not manually initiate the CPDLC portion of the transfer \u2014 the system handles it based on pre-configured facility parameters. The automatic nature of the transfer reduces controller workload and standardizes the handoff process.",
+          "choices": [
+            {
+              "text": "The controller must manually send a transfer message through CPDLC to the receiving facility before the voice handoff.",
+              "is_correct": false
+            },
+            {
+              "text": "The data link transfer is automatic and accomplished within facility-adapted parameters; no manual CPDLC transfer action is required.",
+              "is_correct": true
+            },
+            {
+              "text": "The automatic transfer applies only to the voice frequency; the CPDLC connection requires manual coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "The transfer is automatic only for FANS 1/A aircraft; all other aircraft require manual CPDLC transfer.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "14-3-3": {
+      "items": [
+        {
+          "question_text": "What phraseology begins initial voice contact when CPDLC clearance delivery is uncertain?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-3(e) prescribes the exact phraseology for initial voice contact when there has been uncertainty about CPDLC clearance delivery: (Call Sign) CPDLC Failure, (message). This phraseology alerts the pilot that the controller is following up on a potential CPDLC delivery issue and sets the context for verifying whether the clearance was received. The phraseology is mandatory, not optional, when uncertainty about clearance delivery exists.",
+          "choices": [
+            {
+              "text": "\"(Call Sign) Confirm CPDLC Clearance, (message).\"",
+              "is_correct": false
+            },
+            {
+              "text": "\"(Call Sign) Verify CPDLC Delivery, (message).\"",
+              "is_correct": false
+            },
+            {
+              "text": "\"(Call Sign) CPDLC Failure, (message).\"",
+              "is_correct": true
+            },
+            {
+              "text": "\"(Call Sign) CPDLC Status Check, (message).\"",
+              "is_correct": false
+            }
+          ]
+        },
+        {
+          "question_text": "CPDLC service is being canceled for an oceanic aircraft. The controller advises the pilot as early as possible to facilitate a smooth transition to voice. What additional action should the controller take, workload permitting?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "14-3-3(d): the controller must advise the pilot as early as possible when CPDLC service is to be canceled. Workload permitting, the controller should also advise the pilot of the reason for the termination of data link. The mandatory requirement is early notification; the reason is a should-do when workload allows. Understanding the distinction between 'must advise as early as possible' and 'should advise the reason' is important for operational prioritization.",
+          "choices": [
+            {
+              "text": "Advise the pilot of the reason for the termination of data link, workload permitting.",
+              "is_correct": true
+            },
+            {
+              "text": "Send a connection request message (CR1) to reestablish CPDLC as soon as possible.",
+              "is_correct": false
+            },
+            {
+              "text": "Instruct the pilot to send an End Service (EOS) message before voice transition.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate the voice backup circuit since it is no longer needed once CPDLC is restored.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "14-1-1": {
+      "items": [
+        {
+          "activity_type": "ordering",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Arrange the PDC pre-transmission review steps in the correct sequence.",
+          "question_text": "A controller has a PDC ready to transmit to a departing aircraft. In what order must the review and verification steps be performed?",
+          "choices": [
+            {
+              "text": "Review the clearance for accuracy and route integrity, then ensure the information is complete, understandable, and the route is continuous, then confirm no amendments are present.",
+              "is_correct": true
+            },
+            {
+              "text": "Ensure the information is complete and understandable, then review for accuracy and route integrity, then check for amendments.",
+              "is_correct": false
+            },
+            {
+              "text": "Check for amendments first, then if none are present, review for accuracy and route integrity.",
+              "is_correct": false
+            },
+            {
+              "text": "Review for route integrity only, then ensure the ATIS broadcast is current, then verify accuracy.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The PDC review sequence flows from the procedural requirements in 14-1-1: first review for accuracy and route integrity (para b), then ensure all information is complete, understandable, and the route is continuous (para c). Separately, the controller must confirm that the flight plan has not been revised or amended, since PDC cannot transmit amendments (para d). The accuracy and integrity check is the foundational step; the completeness check follows."
+        }
+      ]
+    },
+    "14-1-3": {
+      "items": [
+        {
+          "activity_type": "discrimination",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the correct Field 4 entry for each SID scenario.",
+          "question_text": "For each of the following SID scenarios, what must Selectable Field 4 contain? Scenario 1: SID with vertical guidance from take-off to a published altitude to maintain, aircraft will follow the SID. Scenario 2: SID with vertical guidance but no initial altitude to maintain. Scenario 3: SID with a published altitude to maintain, but the controller needs to assign a different altitude.",
+          "choices": [
+            {
+              "text": "Scenario 1: MAINTAIN (altitude); Scenario 2: CLIMB VIA SID; Scenario 3: CLIMB VIA SID.",
+              "is_correct": false
+            },
+            {
+              "text": "Scenario 1: CLIMB VIA SID EXCEPT MAINTAIN (altitude); Scenario 2: CLIMB VIA SID; Scenario 3: MAINTAIN (altitude).",
+              "is_correct": false
+            },
+            {
+              "text": "All three scenarios require CLIMB VIA SID, with the actual altitude in Field 5.",
+              "is_correct": false
+            },
+            {
+              "text": "Scenario 1: CLIMB VIA SID; Scenario 2: CLIMB VIA SID EXCEPT MAINTAIN (altitude); Scenario 3: CLIMB VIA SID EXCEPT MAINTAIN (altitude).",
+              "is_correct": true
+            }
+          ],
+      "explanation": "Field 4 has three distinct applications. Use CLIMB VIA SID when the SID provides vertical guidance to an altitude to maintain and the aircraft will follow it. Use CLIMB VIA SID EXCEPT MAINTAIN with an assigned altitude when the SID has no initial altitude or when the assigned altitude differs from the published SID altitude."
+        }
+      ]
+    },
+    "14-2-3": {
+      "items": [
+        {
+          "activity_type": "ordering",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Arrange the controller actions in the correct sequence for a CPDLC service shutdown.",
+          "question_text": "CPDLC service is being shut down. The controller must take several actions. What is the correct sequence?",
+          "choices": [
+            {
+              "text": "First resolve open uplinks with each aircraft by voice, then broadcast the shutdown alert to all pilots.",
+              "is_correct": false
+            },
+            {
+              "text": "First, broadcast a voice alert that CPDLC is no longer in use; then, resolve any open or abnormally closed uplinks by voice with each aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Broadcast the shutdown alert and resolve open uplinks simultaneously on different frequencies.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate all CPDLC connections first, then notify pilots that CPDLC is no longer available.",
+              "is_correct": false
+            }
+          ],
+      "explanation": "Broadcast the shutdown first to stop new downlinks, then resolve open or abnormally closed uplinks with each aircraft by voice. Stopping new traffic first prevents additional open transactions from accumulating while the controller resolves existing ones."
+        }
+      ]
+    },
+    "14-3-2": {
+      "items": [
+        {
+          "activity_type": "discrimination",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Choose the correct transfer procedure for each scenario.",
+          "question_text": "Compare two oceanic CPDLC transfer scenarios. Scenario A: The receiving facility is fully CPDLC capable. Scenario B: The receiving facility has no CPDLC capability. Which correctly describes the transfer procedure for each?",
+          "choices": [
+            {
+              "text": "Scenario A: Controller manually initiates CPDLC transfer. Scenario B: Automatic transfer proceeds but with reduced functionality.",
+              "is_correct": false
+            },
+            {
+              "text": "Both scenarios use the same automatic transfer process; the receiving facility's capability does not affect the procedure.",
+              "is_correct": false
+            },
+            {
+              "text": "Scenario A: No CPDLC transfer occurs; voice handoff is always used. Scenario B: Controller must terminate CPDLC before transfer.",
+              "is_correct": false
+            },
+            {
+              "text": "Scenario A: Data link transfer is automatic within facility-adapted parameters. Scenario B: Transfer must follow local directives and Letters of Agreement.",
+              "is_correct": true
+            }
+          ],
+      "explanation": "Oceanic CPDLC transfer follows two paths. Transfer to a CPDLC-capable facility is automatic within adapted parameters. Transfer to a facility without CPDLC capability follows local directives and Letters of Agreement. The receiving facility's capability determines the applicable path."
+        }
+      ]
+    },
+    "14-3-3": {
+      "items": [
+        {
+          "activity_type": "ordering",
+          "generation_source": "question_agent",
+          "difficulty": 2,
+          "instruction": "Arrange the controller actions for a failed automated CPDLC transfer in the correct sequence.",
+          "question_text": "An automated CPDLC data link transfer to the next facility has failed. What is the correct sequence of actions the controller should take?",
+          "choices": [
+            {
+              "text": "Advise the pilot to log on to the next facility first, then attempt a manual transfer to clear the failed automated attempt.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate the CPDLC connection and revert to voice-only communications for the remainder of the flight.",
+              "is_correct": false
+            },
+            {
+              "text": "Attempt to initiate the transfer manually; if unable to complete, advise the pilot to log on to the next facility and send an End Service (EOS) message.",
+              "is_correct": true
+            },
+            {
+              "text": "Send a connection request message (CR1) to the receiving facility, then advise the pilot to maintain the current connection.",
+              "is_correct": false
+            }
+          ],
+      "explanation": "For a failed automated transfer, first attempt to initiate the transfer manually. If the manual attempt also fails, advise the pilot to log on to the next facility and send an EOS message to close the current connection. Exhaust the manual transfer option before instructing the pilot to act."
+        }
+      ]
+    }
+  },
+  "flashcards": {
+    "14-1-2": {
+      "items": [
+        {
+          "front": "What is the core operational difference between PDC and CPDLC DCL regarding amended or revised flight plans?",
+          "back": "PDC does not permit amended or revised flight plans to be transmitted at all \u2014 they must be verbal. CPDLC DCL permits amendments to be transmitted, but those that cannot be delivered using CPDLC must be verbally issued. Per 14-1-1(d) and 14-1-2(c).",
+          "card_type": "concept",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "14-1-3": {
+      "items": [
+        {
+          "front": "What are the character limits for DCL Selectable Fields 3, 8, and 9?",
+          "back": "Field 3 (Climb Out): 32 characters. Field 8 (Contact): 32 characters. Field 9 (Local Information): 34 characters, and must not contradict information elsewhere in the clearance. Per 14-1-3(a)(3), (8), and (9).",
+          "card_type": "definition",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "14-2-1": {
+      "items": [
+        {
+          "front": "What must the controller ensure regarding trajectory-altering clearances before transferring an aircraft's communications?",
+          "back": "Ensure there are no trajectory-altering clearances (TAC) open prior to transfer of communication, unless otherwise coordinated. Per 14-2-1(e).",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "14-2-4": {
+      "items": [
+        {
+          "front": "When does a WILCO response to a CPDLC speed assignment satisfy the pilot concurrence requirement of JO 7110.65, 5-7-2b?",
+          "back": "When the aircraft is at or above FL 390. Below FL 390, pilot concurrence must be obtained through other means. Per 14-2-4(b)(1).",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        },
+        {
+          "front": "Why must clearing an aircraft out of holding be done via voice rather than CPDLC?",
+          "back": "A route uplink does not specify a new clearance limit. Clearing an aircraft from holding requires providing a clearance limit, which CPDLC route uplinks cannot convey. Per note to 14-2-4(c)(1).",
+          "card_type": "concept",
+          "generation_source": "question_agent"
+        }
+      ]
+    },
+    "14-3-3": {
+      "items": [
+        {
+          "front": "What is the prescribed phraseology for initial voice contact with an aircraft after uncertainty about CPDLC clearance delivery?",
+          "back": "\"(Call Sign) CPDLC Failure, (message).\" Per 14-3-3(e) phraseology. This preface alerts the pilot that the controller is following up on a potential CPDLC delivery issue.",
+          "card_type": "procedure",
+          "generation_source": "question_agent"
+        }
+      ]
+    }
+  }
+}

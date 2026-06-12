@@ -43,3 +43,30 @@ source packet explicitly justifies the exception.
   mode mix, and legacy replacement claims are audited.
 - The same packet analysis will later be applied to all older content, not only
   the latest expansion cohort.
+
+## Final Outcome
+
+The reviewed pass publishes 336 questions, 156 activities, and 162 flashcards
+across all 14 chapters. QA removed 146 staged items that duplicated an existing
+retrieval target or conflicted with another staged item. Seven lexical overlap
+findings remain by design because they test distinct table bands, maneuver
+boundaries, threshold cases, or complete multi-part duties.
+
+The final cohort has:
+
+- zero paragraph-location scaffolds or generic source references;
+- zero thin question explanations, flashcard backs, or activity scenarios;
+- zero malformed or duplicate choice sets and zero answer-length cues;
+- zero within-format card/activity near-duplicates and zero cross-format
+  near-duplicates;
+- one intentional negative-framed source-use task that asks the learner to
+  identify a missing contact-approach condition;
+- one intentional question similarity pair covering opposite magnetic-course
+  outcomes in the IFR altitude table.
+
+The review also corrected the five-minute lost-communications trigger in
+paragraph 10-4-4: after communications remain lost for five minutes, the
+aircraft or pilot activity is treated as suspicious and reported to the OS/CIC.
+The database repair path now updates append-only activities by stable
+`publication_id`, so later content corrections replace previously published
+JSON instead of being silently skipped.

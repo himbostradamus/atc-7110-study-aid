@@ -1,0 +1,128 @@
+{
+  "questions": {
+    "11-1-1": {
+      "items": [
+        {
+          "question_text": "What is the operational significance of recognizing that the ATCS is integral in the execution of the traffic management mission?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 11-1-1c, the ATCS is recognized as integral in the execution of the traffic management mission. This means traffic management is not conducted solely by a separate traffic management unit — controllers on position are essential participants in carrying out the mission. The controller helps execute TMIs and provides real-time feedback; the controller is not merely a recipient of external flow instructions. The plausible misconception is that ATCS personnel are implementers rather than participants, which would relegate them to a passive role the source does not support.",
+          "supersedes": "Under 11-1-1, the ATCS is recognized as integral in the execution of the traffic management mission.",
+          "choices": [
+            {
+              "text": "Traffic management functions are carried out by a separate unit; controllers receive and implement those decisions without participating in the mission itself.",
+              "is_correct": false
+            },
+            {
+              "text": "Air traffic control specialists are essential participants in carrying out the traffic management mission, not merely recipients of external flow instructions.",
+              "is_correct": true
+            },
+            {
+              "text": "ATCS personnel may modify or cancel any traffic management initiative independently because their integral role gives them override authority.",
+              "is_correct": false
+            },
+            {
+              "text": "The ATCS role in traffic management is limited to reporting observed congestion to the TMU after delays have already developed.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    "11-1-3": {
+      "items": [
+        {
+          "question_text": "Which of the following correctly pairs a TBFM metering-time compliance challenge with its authorized response?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "source_block": "body",
+          "generation_source": "question_agent",
+          "explanation": "Per 11-1-3b1, when DCT instability prevents reliable metering-time accuracy for specific aircraft, TMIs such as MIT or MINIT may be used between those aircraft to assist delay absorption until stability resumes. The other pairings misstate the authorized response. A sector-wide exception requires explicit authorization in a facility directive (11-1-3b2), not independent controller action. When compliance is not possible for any reason, the controller must coordinate with the OS/CIC, traffic management services, and adjacent facilities as appropriate (11-1-3c); silent deviation is not authorized. TMU resequencing calls for caution to minimize impact on surrounding traffic and user preferences (note), not suspension of metering.",
+          "choices": [
+            {
+              "text": "When a controller cannot meet a metering time for any reason, the controller may deviate from the time without notification as long as separation from other aircraft is maintained.",
+              "is_correct": false
+            },
+            {
+              "text": "When an ARTCC sector consistently struggles to meet the plus-or-minus-1-minute standard, the sector controller may adopt a wider tolerance at their discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "When DCT instability prevents reliable metering times for specific aircraft, use MIT or MINIT between those aircraft until stability resumes.",
+              "is_correct": true
+            },
+            {
+              "text": "When TBFM-generated times fluctuate due to TMU resequencing, suspend all metering operations for the affected flights and manage without reference to TBFM.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "activities": {
+    "11-1-1": {
+      "items": [
+        {
+      "activity_type": "discrimination",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Identify which set of items correctly and completely represents the traffic management framework.",
+          "question_text": "Which of the following correctly states all three elements of the traffic management framework?",
+          "choices": [
+            {
+              "text": "Balance demand with capacity for maximum NAS utilization; use MIT in preference to TBFM to the maximum extent feasible; the ATCS is integral to mission execution.",
+              "is_correct": false
+            },
+            {
+              "text": "Eliminate all holding delays system-wide; use TBFM in preference to MIT; delegate all flow decisions to the ATCSCC without facility input.",
+              "is_correct": false
+            },
+            {
+              "text": "Balance demand with capacity for maximum NAS utilization; use TBFM in preference to MIT; controllers may override any TMI independently when they determine it is necessary.",
+              "is_correct": false
+            },
+            {
+              "text": "Balance demand with capacity for maximum NAS utilization; use TBFM in preference to MIT to the maximum extent feasible; the ATCS is integral to mission execution.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "The traffic management framework establishes three elements: the mission — balancing demand with capacity for maximum efficient NAS utilization; the TBFM preference rule — TBFM must be used to the maximum extent feasible in preference to MIT; and the ATCS role — controllers are integral to mission execution. Choice 1 reverses the TBFM/MIT preference relationship. Choice 2 substitutes an entirely different mission and adds an incorrect claim about ATCSCC exclusivity. Choice 3 adds an unauthorized controller override authority that the source does not grant."
+        }
+      ]
+    },
+    "11-1-2": {
+      "items": [
+        {
+          "activity_type": "discrimination",
+          "generation_source": "question_agent",
+          "difficulty": 3,
+          "instruction": "Identify the role responsible for each duty described.",
+          "question_text": "A facility is preparing for the day shift. Three duties must be handled: (1) ensure an operational briefing is conducted with the minimum required participants; (2) keep the TMU and affected sectors apprised of developing weather that may cause congestion; (3) enforce active TBM operations and TMIs on position. Which role is responsible for each of these three duties, in order?",
+          "choices": [
+            {
+              "text": "OS/CIC for the briefing; STMCIC for the notification; Personnel providing traffic management services for the enforcement.",
+              "is_correct": false
+            },
+            {
+              "text": "STMCIC for the briefing; OS/CIC for the notification; Personnel providing air traffic services for the enforcement.",
+              "is_correct": true
+            },
+            {
+              "text": "STMCIC for the briefing; STMCIC for the notification; OS/CIC for the enforcement.",
+              "is_correct": false
+            },
+            {
+              "text": "OS/CIC for the briefing; OS/CIC for the notification; Personnel providing air traffic services for the enforcement.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 11-1-2a1, the STMCIC must ensure the operational briefing is conducted at least once during day and evening shifts. Per 11-1-2b1, the OS/CIC must keep the TMU and affected sectors apprised of situations that may cause congestion or delays. Per 11-1-2c1, personnel providing air traffic services must ensure TBM operations and TMIs are enforced within their area of responsibility. Each role has distinct duties, and the enforcement groups differ — the STMCIC ensures enforcement by personnel providing traffic management services (a3), while the OS/CIC ensures enforcement by personnel providing air traffic services (b4). Cross-role confusion is a common operational risk when duties appear similar across the role structure."
+        }
+      ]
+    }
+  },
+  "flashcards": {}
+}

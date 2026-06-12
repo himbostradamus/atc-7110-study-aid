@@ -1771,23 +1771,6 @@ def sync_append_curated_activities(db: sqlite3.Connection) -> tuple[int, int]:
                     f"Append-only activity for {para_id} requires activity_type and publication_id"
                 )
 
-            duplicate = False
-            rows = db.execute(
-                """
-                SELECT content_json
-                FROM activities
-                WHERE para_id = ? AND activity_type = ?
-                """,
-                (para_id, activity_type),
-            ).fetchall()
-            for row in rows:
-                existing = json.loads(row["content_json"])
-                if normalise_ws(existing.get("publication_id", "")) == publication_id:
-                    duplicate = True
-                    break
-            if duplicate:
-                continue
-
             payload = dict(raw_item)
             payload.pop("activity_type", None)
             normalized = normalize_activity_payload(
@@ -1803,6 +1786,54 @@ def sync_append_curated_activities(db: sqlite3.Connection) -> tuple[int, int]:
                     f"Invalid append-only activity for {para_id}/{activity_type}: {joined}"
                 )
 
+            existing_match = None
+            rows = db.execute(
+                """
+                SELECT id, content_json, difficulty, generation_src
+                FROM activities
+                WHERE para_id = ? AND activity_type = ?
+                """,
+                (para_id, activity_type),
+            ).fetchall()
+            for row in rows:
+                existing = json.loads(row["content_json"])
+                if normalise_ws(existing.get("publication_id", "")) == publication_id:
+                    existing_match = (row, existing)
+                    break
+
+            difficulty = int(normalized.get("difficulty", 1))
+            generation_source = normalized.get("generation_source", "curated")
+            if existing_match:
+                row, existing = existing_match
+                if (
+                    existing == normalized
+                    and int(row["difficulty"]) == difficulty
+                    and row["generation_src"] == generation_source
+                ):
+                    continue
+                before = db.total_changes
+                db.execute(
+                    """
+                    UPDATE activities
+                    SET paragraph_db_id = ?,
+                        content_json = ?,
+                        difficulty = ?,
+                        generation_src = ?
+                    WHERE id = ?
+                    """,
+                    (
+                        paragraph["id"],
+                        json.dumps(normalized),
+                        difficulty,
+                        generation_source,
+                        row["id"],
+                    ),
+                )
+                delta = db.total_changes - before
+                inserted += delta
+                paragraph_inserted += delta
+                continue
+
             before = db.total_changes
             db.execute(
                 """
@@ -1816,8 +1847,8 @@ def sync_append_curated_activities(db: sqlite3.Connection) -> tuple[int, int]:
                     para_id,
                     activity_type,
                     json.dumps(normalized),
-                    int(normalized.get("difficulty", 1)),
-                    normalized.get("generation_source", "curated"),
+                    difficulty,
+                    generation_source,
                 ),
             )
             delta = db.total_changes - before
@@ -2315,7 +2346,7 @@ def main() -> None:
         print(f"Knowledge-check target paragraphs: {knowledge_targets}")
         print(f"Knowledge-check activities inserted: {knowledge_inserted}")
         print(f"Append-only activity paragraphs synced: {appended_activity_paragraphs}")
-        print(f"Append-only activities inserted: {appended_activities_inserted}")
+        print(f"Append-only activities inserted or updated: {appended_activities_inserted}")
         print(f"Unmanaged flashcards deleted: {unmanaged_flashcards_deleted}")
         print(f"Curated question paragraphs synced: {curated_question_targets}")
         print(f"Curated questions deleted: {curated_questions_deleted}")

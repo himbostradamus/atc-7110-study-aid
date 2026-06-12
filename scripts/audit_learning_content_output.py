@@ -33,6 +33,22 @@ SCENARIO_ACTIVITY_RE = re.compile(
 )
 SOURCE_ACTIVITY_TYPES = {"source_lookup", "source_use"}
 REFERENCE_CARD_TYPES = {"reference", "source_reference"}
+NEGATIVE_SELECTION_RE = re.compile(
+    r"(?:"
+    r"\b(?:which|what)\b.{0,100}\bexcept\b|"
+    r"\b(?:which|what)\b.{0,100}\b(?:is|are|does|do|would|should|must|may|can)"
+    r"\s+(?:not|false|incorrect)\b|"
+    r"\b(?:identify|select|choose)\b.{0,100}"
+    r"\b(?:not met|not required|does not|is not|false|incorrect|least appropriate)\b"
+    r")",
+    re.IGNORECASE,
+)
+NEGATIVE_DIRECTIVE_RE = re.compile(
+    r"^(?:identify|select|choose)\b.{0,120}"
+    r"\b(?:not met|not required|does not apply|is not (?:required|authorized|"
+    r"permitted|valid)|false|incorrect|least appropriate)\b",
+    re.IGNORECASE,
+)
 
 
 @dataclass(frozen=True)
@@ -63,6 +79,13 @@ class Activity:
             "situation", "clearance", "lookup_context", "para_context",
             "question_text", "task", "instruction",
         )
+        return question_audit.normalize_space(
+            " ".join(str(self.payload.get(field) or "") for field in fields)
+        )
+
+    @property
+    def assessment_prompt(self) -> str:
+        fields = ("prompt", "question", "question_text", "task", "instruction")
         return question_audit.normalize_space(
             " ".join(str(self.payload.get(field) or "") for field in fields)
         )
@@ -213,6 +236,23 @@ def is_prompt_like(value: str) -> bool:
 
 def normalized_choice(value: object) -> str:
     return re.sub(r"[^a-z0-9]+", " ", str(value or "").lower()).strip()
+
+
+def uses_negative_selection(activity: Activity) -> bool:
+    question = question_audit.normalize_space(
+        activity.payload.get("question_text")
+        or activity.payload.get("question")
+        or activity.payload.get("prompt")
+    )
+    if re.match(r"^(?:which|what)\b", question, re.IGNORECASE):
+        if NEGATIVE_SELECTION_RE.search(question):
+            return True
+    return any(
+        NEGATIVE_DIRECTIVE_RE.search(
+            question_audit.normalize_space(activity.payload.get(field))
+        )
+        for field in ("task", "instruction")
+    )
 
 
 def near_duplicate_pairs(items_by_para: dict[str, list], text_getter) -> list[dict]:
@@ -433,7 +473,7 @@ def analyze(db_path: Path, sources: tuple[str, ...]) -> dict:
         ]
         negative_activities = [
             activity for activity in activities
-            if question_audit.NEGATIVE_STEM_RE.search(activity.prompt)
+            if uses_negative_selection(activity)
         ]
         thin_activity_explanations = [
             activity for activity in activities

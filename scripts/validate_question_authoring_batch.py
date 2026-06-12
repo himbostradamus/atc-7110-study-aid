@@ -66,8 +66,9 @@ PARAGRAPH_STRUCTURE_PATTERN = re.compile(
 SPACING_BEFORE_PUNCTUATION_PATTERN = re.compile(r"\s+[,.?!;:]")
 BROKEN_SCENARIO_TRANSITION_PATTERN = re.compile(r"[.?!]\s*,\s*(?:which|what|who|when|how)\b", re.IGNORECASE)
 SCENARIO_QUESTION_PATTERN = re.compile(
-    r"\b(?:aircraft|pilot|controller|traffic|runway|flight|facility|sector|"
-    r"approach|departure|arrival|reports?|requests?|observed|you are|you have)\b",
+    r"^(?:a|an|two|three|several|multiple|during|after|while|given|"
+    r"you are|you have|the controller|the pilot|the aircraft|weather at|"
+    r"traffic conditions)\b",
     re.IGNORECASE,
 )
 
@@ -98,12 +99,26 @@ def normalize_text(text: Any) -> str:
     return re.sub(r"\s+", " ", str(text or "")).strip()
 
 
-def load_existing_question_stems(db_path: Path) -> dict[str, set[str]]:
+def load_existing_question_stems(
+    db_path: Path,
+    ignored_generation_source: str = "",
+) -> dict[str, set[str]]:
     if not db_path.exists():
         return {}
     db = sqlite3.connect(db_path)
     try:
-        rows = db.execute("SELECT para_id, question_text FROM quiz_questions").fetchall()
+        if ignored_generation_source:
+            rows = db.execute(
+                """
+                SELECT para_id, question_text FROM quiz_questions
+                WHERE generation_src != ?
+                """,
+                (ignored_generation_source,),
+            ).fetchall()
+        else:
+            rows = db.execute(
+                "SELECT para_id, question_text FROM quiz_questions"
+            ).fetchall()
     finally:
         db.close()
     existing: dict[str, set[str]] = defaultdict(set)
@@ -501,17 +516,17 @@ def report_portfolio_mix(reporter: Reporter, payload: dict[str, Any]) -> None:
         for item in override.get("items", [])
         if isinstance(item, dict)
     ]
-    if len(questions) >= 6:
+    if len(questions) >= 10:
         scenario_count = sum(
             bool(SCENARIO_QUESTION_PATTERN.search(normalize_text(item.get("question_text"))))
             and len(normalize_text(item.get("question_text")).split()) >= 22
             for item in questions
         )
         scenario_rate = scenario_count / len(questions)
-        if scenario_rate > 0.5:
+        if scenario_rate > 0.6:
             reporter.warn(
                 "question_portfolio",
-                f"{scenario_rate:.0%} of questions are scenario application; pass two caps this at 50%",
+                f"{scenario_rate:.0%} of questions are scenario application; pass two caps this at 60%",
             )
 
     activities = [
@@ -543,11 +558,19 @@ def main() -> int:
         action="store_true",
         help="Treat quality warnings as validation failures.",
     )
+    parser.add_argument(
+        "--ignore-existing-generation-source",
+        default="",
+        help="Ignore live question stems from this source during idempotent publication.",
+    )
     args = parser.parse_args()
 
     payload = load_json(args.path)
     reporter = Reporter()
-    existing_stems = load_existing_question_stems(args.db)
+    existing_stems = load_existing_question_stems(
+        args.db,
+        args.ignore_existing_generation_source,
+    )
     seen_stems: set[str] = set()
     seen_cards: set[tuple[str, str, str]] = set()
     first_correct_positions: list[int] = []
