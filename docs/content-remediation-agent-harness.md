@@ -77,11 +77,14 @@ Every decision requires:
 - Exactly one answer is correct for multiple choice and true/false.
 - Distractors must represent plausible operational mistakes.
 - Explanation must teach the controlling rule, condition, exception, or reason.
+- Do not invent a safety rationale, policy purpose, or operational consequence
+  that is not supported by the packet's source blocks.
 - Negative stems are used only when exclusion recognition is the actual skill.
 - Do not manufacture phraseology errors from arbitrary frequencies, runway
   numbers, callsigns, duplicate digits, or squawk codes.
-- Do not consistently place the correct answer first or make it conspicuously
-  longer than every distractor.
+- Do not intervene solely because the correct answer is first in stored data;
+  the application randomizes choice order at runtime. Do intervene when answer
+  wording, length, specificity, or implausible distractors reveal the answer.
 
 ### Flashcards
 

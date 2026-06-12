@@ -20,6 +20,8 @@ Non-negotiable constraints:
 - Do not overwrite another pass or another chapter's files.
 - Review every target ID and include complete coverage in `reviewed_item_ids`.
 - Write changed-item decisions only. Do not produce redundant keep decisions.
+- Do not replace an item solely to reorder its choices. Runtime order is shuffled.
+- Do not invent explanatory rationales that are absent from the source blocks.
 - Finish the full chapter before setting `status` to `complete`.
 
 Read the packet's `audit_findings` and each item's `automated_flags`, but do not

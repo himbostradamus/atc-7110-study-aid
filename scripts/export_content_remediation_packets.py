@@ -121,8 +121,6 @@ def question_flags(item: dict[str, Any]) -> list[str]:
             flags.append("invalid_answer_key")
     elif len(correct) != 1:
         flags.append("invalid_answer_key")
-    if choices and choices[0]["is_correct"]:
-        flags.append("correct_answer_first")
     if len(correct) == 1:
         distractor_lengths = [
             max(1, len(normalize(choice["text"]).split()))
@@ -194,8 +192,6 @@ def activity_flags(item: dict[str, Any]) -> list[str]:
         correct = [choice for choice in choices if choice.get("is_correct") is True]
         if len(correct) != 1:
             flags.append("invalid_answer_key")
-        elif choices[0].get("is_correct") is True:
-            flags.append("correct_answer_first")
         if len(correct) == 1:
             correct_length = len(normalize(correct[0].get("text")).split())
             distractors = [

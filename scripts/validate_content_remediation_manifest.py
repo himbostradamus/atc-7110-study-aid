@@ -75,9 +75,86 @@ def has_paragraph_location(value: object) -> bool:
     return bool(LOCATION_RE.search(text) or PARAGRAPH_ID_RE.search(text))
 
 
-def packet_inventory(packet: dict[str, Any]) -> tuple[dict[str, set[str]], dict[str, tuple[str, str]]]:
+def canonical_json(value: object) -> str:
+    return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+
+
+def normalized_choices(value: object) -> list[dict[str, Any]]:
+    if not isinstance(value, list):
+        return []
+    choices = []
+    for choice in value:
+        if not isinstance(choice, dict):
+            continue
+        choices.append({
+            "text": normalize(choice.get("text") or choice.get("choice_text")),
+            "is_correct": choice.get("is_correct") is True,
+        })
+    return sorted(choices, key=lambda choice: (choice["text"], choice["is_correct"]))
+
+
+def normalized_activity_content(value: object) -> object:
+    if not isinstance(value, dict):
+        return value
+    content = {
+        key: child
+        for key, child in value.items()
+        if key not in {"generation_source", "generation_src"}
+    }
+    for key in ("choices", "options"):
+        if key in content:
+            content[key] = normalized_choices(content[key])
+    return content
+
+
+def replacement_only_reorders_choices(
+    entity_type: str,
+    original: dict[str, Any],
+    replacement: object,
+) -> bool:
+    if not isinstance(replacement, dict):
+        return False
+    if entity_type == "question":
+        original_shape = {
+            "question_text": normalize(original.get("question_text")),
+            "question_type": normalize(original.get("question_type")),
+            "explanation": normalize(original.get("explanation")),
+            "difficulty": int(original.get("difficulty") or 2),
+            "choices": normalized_choices(original.get("choices")),
+        }
+        replacement_shape = {
+            "question_text": normalize(replacement.get("question_text")),
+            "question_type": normalize(replacement.get("question_type")),
+            "explanation": normalize(replacement.get("explanation")),
+            "difficulty": int(replacement.get("difficulty") or 2),
+            "choices": normalized_choices(replacement.get("choices")),
+        }
+        return canonical_json(original_shape) == canonical_json(replacement_shape)
+    if entity_type == "activity":
+        original_shape = {
+            "activity_type": normalize(original.get("activity_type")),
+            "difficulty": int(original.get("difficulty") or 2),
+            "content": normalized_activity_content(original.get("content")),
+        }
+        replacement_shape = {
+            "activity_type": normalize(replacement.get("activity_type")),
+            "difficulty": int(replacement.get("difficulty") or 2),
+            "content": normalized_activity_content(replacement.get("content")),
+        }
+        return canonical_json(original_shape) == canonical_json(replacement_shape)
+    return False
+
+
+def packet_inventory(
+    packet: dict[str, Any],
+) -> tuple[
+    dict[str, set[str]],
+    dict[str, tuple[str, str]],
+    dict[str, dict[str, Any]],
+]:
     inventory = {entity_type: set() for entity_type in ENTITY_TYPES}
     lookup: dict[str, tuple[str, str]] = {}
+    originals: dict[str, dict[str, Any]] = {}
     for paragraph in packet.get("paragraphs", []):
         para_id = str(paragraph.get("para_id") or "")
         targets = paragraph.get("targets") or {}
@@ -87,7 +164,8 @@ def packet_inventory(packet: dict[str, Any]) -> tuple[dict[str, set[str]], dict[
                 if item_id:
                     inventory[entity_type].add(item_id)
                     lookup[item_id] = (entity_type, para_id)
-    return inventory, lookup
+                    originals[item_id] = item
+    return inventory, lookup, originals
 
 
 def validate_choices(
@@ -240,7 +318,7 @@ def validate_replacement(
 
 def validate(packet: dict[str, Any], manifest: dict[str, Any]) -> Reporter:
     reporter = Reporter()
-    inventory, lookup = packet_inventory(packet)
+    inventory, lookup, originals = packet_inventory(packet)
     chapter = packet.get("chapter")
     if manifest.get("version") != 1:
         reporter.error("version", "expected version 1")
@@ -328,6 +406,19 @@ def validate(packet: dict[str, Any], manifest: dict[str, Any]) -> Reporter:
                     decision["replacement"],
                     action,
                 )
+                if (
+                    action == "replace"
+                    and item_id in originals
+                    and replacement_only_reorders_choices(
+                        entity_type,
+                        originals[item_id],
+                        decision["replacement"],
+                    )
+                ):
+                    reporter.error(
+                        location,
+                        "replacement changes only stored choice order; runtime already shuffles choices",
+                    )
         elif action == "remove" and "replacement" in decision:
             reporter.warn(location, "remove decision ignores replacement")
 
