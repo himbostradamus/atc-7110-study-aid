@@ -424,8 +424,7 @@ def analyze(db_path: Path, sources: tuple[str, ...]) -> dict:
             card for card in cards
             if card.card_type.lower() not in REFERENCE_CARD_TYPES
             and (
-                question_audit.DOCUMENT_LOCATION_RE.search(card.front)
-                or question_audit.NOTE_LOCATION_RE.search(card.front)
+                question_audit.has_document_location(card.front)
             )
         ]
         card_generic = [
@@ -463,8 +462,7 @@ def analyze(db_path: Path, sources: tuple[str, ...]) -> dict:
             activity for activity in activities
             if activity.activity_type not in SOURCE_ACTIVITY_TYPES
             and (
-                question_audit.DOCUMENT_LOCATION_RE.search(activity.prompt)
-                or question_audit.NOTE_LOCATION_RE.search(activity.prompt)
+                question_audit.has_document_location(activity.prompt)
             )
         ]
         activity_generic = [

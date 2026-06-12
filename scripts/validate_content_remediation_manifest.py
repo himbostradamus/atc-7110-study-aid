@@ -23,6 +23,10 @@ LOCATION_RE = re.compile(
     r")\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\b",
     re.IGNORECASE,
 )
+PARAGRAPH_ID_RE = re.compile(
+    r"\b(?:\u00a7\s*)?\d{1,2}(?:[-\u2212]\d+){2,}(?:[a-z]\d*)?\b",
+    re.IGNORECASE,
+)
 GENERIC_REFERENCE_RE = re.compile(
     r"\b(?:this|the)\s+(?:paragraph|section|rule|material|example)\b",
     re.IGNORECASE,
@@ -64,6 +68,11 @@ def load_object(path: Path) -> dict[str, Any]:
 
 def normalize(value: object) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip()
+
+
+def has_paragraph_location(value: object) -> bool:
+    text = normalize(value)
+    return bool(LOCATION_RE.search(text) or PARAGRAPH_ID_RE.search(text))
 
 
 def packet_inventory(packet: dict[str, Any]) -> tuple[dict[str, set[str]], dict[str, tuple[str, str]]]:
@@ -130,8 +139,10 @@ def validate_question(reporter: Reporter, location: str, item: object) -> None:
         reporter.error(location, "difficulty must be an integer from 1 to 5")
     if len(explanation.split()) < 10:
         reporter.error(location, "explanation must teach the controlling principle")
-    if LOCATION_RE.search(text):
+    if has_paragraph_location(text):
         reporter.error(location, "replacement still uses paragraph-location scaffolding")
+    if has_paragraph_location(explanation):
+        reporter.error(location, "explanation exposes paragraph-location scaffolding")
     if GENERIC_REFERENCE_RE.search(text):
         reporter.warn(location, "replacement still uses a generic document reference")
     if DOCUMENT_TRIVIA_RE.search(text):
@@ -150,8 +161,11 @@ def validate_flashcard(reporter: Reporter, location: str, item: object) -> None:
     card_type = normalize(item.get("card_type"))
     if not front or not back or not card_type:
         reporter.error(location, "front, back, and card_type are required")
-    if LOCATION_RE.search(front) and card_type not in {"reference", "source_reference"}:
+    is_reference = card_type in {"reference", "source_reference"}
+    if has_paragraph_location(front) and not is_reference:
         reporter.error(location, "replacement still uses paragraph-location scaffolding")
+    if has_paragraph_location(back) and not is_reference:
+        reporter.error(location, "replacement back exposes paragraph-location scaffolding")
     if DOCUMENT_TRIVIA_RE.search(front):
         reporter.error(location, "replacement still tests document structure instead of operational substance")
     if REFERENCE_RETRIEVAL_RE.search(front):
@@ -189,8 +203,10 @@ def validate_activity(reporter: Reporter, location: str, item: object) -> None:
             "question_text", "task", "instruction",
         )
     ))
-    if LOCATION_RE.search(prompt):
+    if has_paragraph_location(prompt):
         reporter.error(location, "replacement still uses paragraph-location scaffolding")
+    if has_paragraph_location(explanation):
+        reporter.error(location, "activity explanation exposes paragraph-location scaffolding")
     if DOCUMENT_TRIVIA_RE.search(prompt):
         reporter.error(location, "replacement still tests document structure instead of operational substance")
     choices = activity_choices(content)

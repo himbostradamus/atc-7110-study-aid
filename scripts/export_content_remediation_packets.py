@@ -27,6 +27,10 @@ LOCATION_RE = re.compile(
     r")\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\b",
     re.IGNORECASE,
 )
+PARAGRAPH_ID_RE = re.compile(
+    r"\b(?:\u00a7\s*)?\d{1,2}(?:[-\u2212]\d+){2,}(?:[a-z]\d*)?\b",
+    re.IGNORECASE,
+)
 GENERIC_REFERENCE_RE = re.compile(
     r"\b(?:this|the)\s+(?:paragraph|section|rule|material|example)\b",
     re.IGNORECASE,
@@ -51,6 +55,11 @@ def parse_json(value: str | None, fallback: Any) -> Any:
 
 def normalize(value: object) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip()
+
+
+def has_paragraph_location(value: object) -> bool:
+    text = normalize(value)
+    return bool(LOCATION_RE.search(text) or PARAGRAPH_ID_RE.search(text))
 
 
 def flatten_blocks(blocks: object) -> str:
@@ -96,8 +105,10 @@ def question_flags(item: dict[str, Any]) -> list[str]:
     explanation = normalize(item["explanation"])
     choices = item["choices"]
     flags = []
-    if LOCATION_RE.search(text):
+    if has_paragraph_location(text):
         flags.append("paragraph_location_scaffold")
+    if has_paragraph_location(explanation):
+        flags.append("paragraph_location_explanation")
     if GENERIC_REFERENCE_RE.search(text):
         flags.append("generic_reference")
     if NEGATIVE_RE.search(text):
@@ -132,8 +143,11 @@ def card_flags(item: dict[str, Any]) -> list[str]:
     back = normalize(item["back"])
     card_type = normalize(item["card_type"]).lower()
     flags = []
-    if LOCATION_RE.search(front) and card_type not in {"reference", "source_reference"}:
+    is_reference = card_type in {"reference", "source_reference"}
+    if has_paragraph_location(front) and not is_reference:
         flags.append("paragraph_location_scaffold")
+    if has_paragraph_location(back) and not is_reference:
+        flags.append("paragraph_location_back")
     if GENERIC_REFERENCE_RE.search(front):
         flags.append("generic_reference")
     if len(front.split()) < 4 and "?" not in front and not QUESTION_LEAD_RE.search(front):
@@ -162,8 +176,13 @@ def activity_flags(item: dict[str, Any]) -> list[str]:
     prompt = activity_prompt(payload)
     explanation = normalize(payload.get("explanation"))
     flags = []
-    if LOCATION_RE.search(prompt) and item["activity_type"] not in {"source_lookup", "source_use"}:
+    if (
+        has_paragraph_location(prompt)
+        and item["activity_type"] not in {"source_lookup", "source_use"}
+    ):
         flags.append("paragraph_location_scaffold")
+    if has_paragraph_location(explanation):
+        flags.append("paragraph_location_explanation")
     if GENERIC_REFERENCE_RE.search(prompt):
         flags.append("generic_reference")
     if NEGATIVE_RE.search(prompt):

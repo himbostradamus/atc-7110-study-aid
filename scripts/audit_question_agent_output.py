@@ -25,6 +25,10 @@ DOCUMENT_LOCATION_RE = re.compile(
     r"\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\b",
     re.IGNORECASE,
 )
+PARAGRAPH_ID_RE = re.compile(
+    r"\b(?:\u00a7\s*)?\d{1,2}(?:[-\u2212]\d+){2,}(?:[a-z]\d*)?\b",
+    re.IGNORECASE,
+)
 NOTE_LOCATION_RE = re.compile(
     r"\b(?:according to|under)\s+(?:the\s+)?note\s+in\s+"
     r"\d+(?:[-\u2212]\d+)+(?:[a-z]\d*)?\b",
@@ -88,6 +92,15 @@ class Question:
 
 def normalize_space(value: object) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip()
+
+
+def has_document_location(value: object) -> bool:
+    text = normalize_space(value)
+    return bool(
+        DOCUMENT_LOCATION_RE.search(text)
+        or NOTE_LOCATION_RE.search(text)
+        or PARAGRAPH_ID_RE.search(text)
+    )
 
 
 def tokens(value: object) -> set[str]:
@@ -247,7 +260,7 @@ def analyze(db_path: Path, sources: tuple[str, ...]) -> dict:
 
         location_dependent = [
             question for question in questions
-            if DOCUMENT_LOCATION_RE.search(question.text) or NOTE_LOCATION_RE.search(question.text)
+            if has_document_location(question.text)
         ]
         generic_reference = [
             question for question in questions if GENERIC_REFERENCE_RE.search(question.text)
@@ -316,8 +329,7 @@ def analyze(db_path: Path, sources: tuple[str, ...]) -> dict:
                 "paragraphs": len(chapter_paragraphs),
                 "location_scaffolded": sum(
                     bool(
-                        DOCUMENT_LOCATION_RE.search(question.text)
-                        or NOTE_LOCATION_RE.search(question.text)
+                        has_document_location(question.text)
                     )
                     for question in chapter_questions
                 ),
