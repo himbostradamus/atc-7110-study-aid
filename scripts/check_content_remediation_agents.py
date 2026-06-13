@@ -72,14 +72,14 @@ def shard_progress(agent: dict) -> str:
     expected = sorted(shard_dir.glob("chapter_*_shard_*.json"))
     manifests_dir = Path(agent["output_json"]).parent / "shards"
     pass_number = int(agent.get("pass") or 0)
-    completed = sum(
+    written = sum(
         (
             manifests_dir
             / f"{shard_path.stem}_pass_{pass_number:02d}.json"
         ).exists()
         for shard_path in expected
     )
-    return f" shards={completed}/{len(expected)}"
+    return f" shards_written={written}/{len(expected)}"
 
 
 def main() -> int:

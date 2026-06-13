@@ -215,7 +215,7 @@ def validate_choices(
     if question_type == "true_false" and len(choices) != 2:
         reporter.error(location, "true_false requires exactly two choices")
     if question_type == "multiple_choice" and len(choices) < 3:
-        reporter.warn(location, "multiple_choice should normally have at least three choices")
+        reporter.error(location, "multiple_choice requires at least three choices")
 
 
 def reject_unsupported_rationale(
@@ -297,6 +297,17 @@ def activity_choices(payload: dict[str, Any]) -> object:
     return payload.get("choices") if "choices" in payload else payload.get("options")
 
 
+def activity_choice_type(choices: object) -> str:
+    if not isinstance(choices, list):
+        return "multiple_choice"
+    labels = {
+        normalize(choice.get("text")).lower()
+        for choice in choices
+        if isinstance(choice, dict)
+    }
+    return "true_false" if labels == {"true", "false"} else "multiple_choice"
+
+
 def validate_activity(
     reporter: Reporter,
     location: str,
@@ -334,7 +345,12 @@ def validate_activity(
     reject_unsupported_rationale(reporter, location, explanation, source_basis)
     choices = activity_choices(content)
     if choices is not None:
-        validate_choices(reporter, location, choices, "multiple_choice")
+        validate_choices(
+            reporter,
+            location,
+            choices,
+            activity_choice_type(choices),
+        )
 
 
 def validate_replacement(
