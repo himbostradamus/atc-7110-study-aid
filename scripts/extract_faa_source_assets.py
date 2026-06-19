@@ -231,8 +231,10 @@ def extract_figures(soup: BeautifulSoup, page_url: str, chapter: int, section: i
             alt_text=collapse(img.get("alt") or title),
         )
 
-    for heading in soup.find_all(["h3", "h4", "h5", "p"]):
+    for heading in soup.find_all(["h3", "h4", "h5"]):
         if not isinstance(heading, Tag):
+            continue
+        if "paragraph-title" in (heading.get("class") or []):
             continue
         heading_text = collapse(heading.get_text(" "))
         match = FIGURE_LABEL_RE.search(heading_text)
