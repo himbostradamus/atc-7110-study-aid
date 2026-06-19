@@ -1,53 +1,53 @@
 # Learning-Content Agent Output Audit
 
-Sources audited: `question_agent`
+Sources audited: `curated, question_agent, deepseek, content_expansion_pass_01, content_expansion_pass_02, content_expansion_pass_02_2`
 
 ## Corpus Summary
 
-- Questions: 1838 across 653 paragraphs.
-- Flashcards: 1642 across 643 paragraphs.
-- Activities: 287 across 234 paragraphs.
-- Paragraphs represented by all three formats: 220 of 672.
+- Questions: 4635 across 688 paragraphs.
+- Flashcards: 4663 across 688 paragraphs.
+- Activities: 2642 across 687 paragraphs.
+- Paragraphs represented by all three formats: 687 of 688.
 
 ## Cross-Format Essential-Element Coverage
 
-- Heuristic essential statements in represented paragraphs: 3839.
-- Covered by questions: 1618 (42.1%).
-- Covered by flashcards: 1698 (44.2%).
-- Covered by activities: 219 (5.7%).
-- Covered by at least one format: 2054 (53.5%).
-- Reinforced through two or more formats: 1326 (34.5%).
-- Reinforced through all three formats: 155 (4.0%).
-- Cross-format near-duplicate pairs: 37.
+- Heuristic essential statements in represented paragraphs: 3873.
+- Covered by questions: 2598 (67.1%).
+- Covered by flashcards: 2517 (65.0%).
+- Covered by activities: 1492 (38.5%).
+- Covered by at least one format: 2948 (76.1%).
+- Reinforced through two or more formats: 2359 (60.9%).
+- Reinforced through all three formats: 1300 (33.6%).
+- Cross-format near-duplicate pairs: 509.
 
 Coverage is a lexical triage signal, not a legal or semantic determination. Cross-format reinforcement only counts when each format independently overlaps the same controlling source statement.
 
 ## Flashcard Findings
 
-- Card types: {"authorization": 1, "basic": 43, "capability": 3, "comparison": 8, "concept": 388, "concept_reverse": 6, "condition": 28, "condition_change": 1, "conditions": 6, "contrast": 17, "definition": 121, "exception": 34, "fact": 2, "format": 6, "limitation": 1, "list": 69, "minimum": 12, "note": 2, "phraseology": 60, "preference": 1, "principle": 3, "priority": 1, "procedure": 564, "prohibition": 2, "reasoning": 10, "reference": 28, "requirement": 57, "responsibility": 1, "restriction": 6, "rule": 71, "scope": 12, "sequence": 3, "source_reference": 1, "table": 3, "threshold": 69, "trigger": 1, "warning": 1}
-- Retrieval modes: {"boundary_recall": 89, "concept_recall": 589, "definition_recall": 121, "discrimination": 25, "exact_recall": 66, "list_recall": 69, "numeric_recall": 81, "procedure_recall": 567, "reverse_recall": 6, "source_navigation": 29}
+- Card types: {"advisory": 1, "authority": 1, "authorization": 1, "basic": 43, "boundary": 5, "capability": 14, "caution": 7, "comparison": 14, "concept": 438, "concept_reverse": 6, "condition": 121, "condition_change": 1, "conditions": 6, "contrast": 18, "definition": 1323, "detail": 5, "directive": 2, "discretion": 1, "discrimination": 7, "document": 3, "effect": 4, "exact_recall": 1, "example": 9, "exception": 241, "expectation": 2, "fact": 2, "focus": 1, "format": 6, "guidance": 1, "hazard": 1, "interval": 4, "judgment": 1, "limit": 2, "limitation": 6, "list": 80, "list_recall": 3, "minima": 21, "minimum": 29, "note": 10, "numeric": 6, "numeric_recall": 2, "order": 2, "phraseology": 216, "preference": 2, "principle": 3, "priority": 3, "procedure": 1217, "prohibition": 12, "purpose": 3, "reason": 1, "reasoning": 49, "recordkeeping": 1, "reference": 31, "requirement": 318, "responsibility": 9, "restriction": 51, "risk": 1, "rule": 76, "scope": 62, "sequence": 3, "source_reference": 1, "standard": 1, "table": 56, "technique": 1, "threshold": 77, "timing": 4, "trigger": 3, "use": 5, "visual": 4, "warning": 2}
+- Retrieval modes: {"boundary_recall": 495, "concept_recall": 1147, "definition_recall": 1323, "discrimination": 32, "exact_recall": 222, "list_recall": 80, "numeric_recall": 106, "procedure_recall": 1220, "reverse_recall": 6, "source_navigation": 32}
 - 41 cards use context-light label prompts shorter than four words.
-- 4 cards have answers shorter than four words.
-- 7 cards overload one reveal with more than 50 words or a long list.
+- 690 cards have answers shorter than four words.
+- 22 cards overload one reveal with more than 50 words or a long list.
 - 0 reverse cards do not provide a clear reverse-side prompt.
-- 433 non-reference cards use paragraph-location scaffolding.
-- 0 cards substantially repeat prompt language in the answer.
-- 46 within-paragraph prompt pairs have at least 0.78 token similarity.
-- 83 paragraphs have at least three flashcard retrieval modes.
+- 453 non-reference cards use paragraph-location scaffolding.
+- 7 cards substantially repeat prompt language in the answer.
+- 412 within-paragraph prompt pairs have at least 0.78 token similarity.
+- 400 paragraphs have at least three flashcard retrieval modes.
 
 ## Activity Findings
 
-- Activity types: {"discrimination": 1, "format_check": 1, "identification_decision": 1, "knowledge_check": 108, "list_membership": 1, "phraseology_decision": 1, "readback_check": 9, "responsibility_check": 1, "sequence_check": 1, "situation_action": 154, "source_lookup": 5, "source_use": 1, "spot_the_error": 2, "traffic_advisory_decision": 1}
-- Learning modes: {"discrimination": 3, "exact_application": 11, "knowledge_check": 108, "list_or_sequence": 2, "scenario_application": 157, "source_use": 6}
+- Activity types: {"capability_check": 17, "condition_boundary": 3, "conditional_rule_check": 143, "directive_check": 79, "discrimination": 71, "document_control_check": 4, "format_check": 1, "identification_decision": 1, "knowledge_check": 636, "list_membership": 128, "match_pairs": 2, "minima_rule_check": 48, "ordering": 7, "ordering_or_list": 4, "phraseology_builder": 120, "phraseology_construction": 6, "phraseology_decision": 1, "phraseology_exactness": 1, "readback_check": 90, "requirement_check": 208, "responsibility_check": 1, "scope_check": 103, "sequence_check": 1, "sequence_construction": 1, "sequence_steps": 11, "situation_action": 753, "source_lookup": 17, "source_use": 13, "spot_the_error": 91, "table_lookup": 49, "term_definition_check": 8, "traffic_advisory_decision": 1, "visual_interpretation": 23}
+- Learning modes: {"discrimination": 162, "exact_application": 219, "knowledge_check": 1122, "list_or_sequence": 145, "requirement_recall": 208, "scenario_application": 756, "source_use": 30}
 - Stored correct-answer position is not scored because the application shuffles choices at runtime.
-- 40 activities make the correct answer conspicuously longer than the distractors.
+- 86 activities make the correct answer conspicuously longer than the distractors.
 - 0 activities have fewer than two choices or do not have exactly one correct choice.
 - 0 activities contain normalized duplicate choices.
-- 4 scenario/decision activities provide fewer than twelve words of decision context.
-- 4 activities use negative framing.
-- 9 non-source-use activities rely on paragraph-location scaffolding.
+- 14 scenario/decision activities provide fewer than twelve words of decision context.
+- 16 activities use negative framing.
+- 72 non-source-use activities rely on paragraph-location scaffolding.
 - 0 within-paragraph activity pairs have at least 0.78 prompt similarity.
-- 5 paragraphs have at least three activity modes.
+- 417 paragraphs have at least three activity modes.
 
 ## Highest-Priority Remediation
 
@@ -62,20 +62,20 @@ Coverage is a lexical triage signal, not a legal or semantic determination. Cros
 
 | Chapter | Cards | Context-light cards | Card location scaffold | Activities | Activity location scaffold | Length cues |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 1 | 55 | 0 | 2 | 21 | 0 | 1 |
-| 2 | 207 | 14 | 2 | 19 | 1 | 1 |
-| 3 | 166 | 0 | 9 | 10 | 1 | 0 |
-| 4 | 221 | 7 | 15 | 0 | 0 | 0 |
-| 5 | 273 | 4 | 166 | 35 | 0 | 18 |
-| 6 | 108 | 0 | 85 | 5 | 1 | 0 |
-| 7 | 100 | 15 | 5 | 39 | 0 | 3 |
-| 8 | 91 | 0 | 43 | 37 | 0 | 5 |
-| 9 | 126 | 0 | 101 | 37 | 2 | 0 |
-| 10 | 139 | 0 | 3 | 33 | 1 | 6 |
-| 11 | 27 | 0 | 0 | 5 | 1 | 0 |
-| 12 | 25 | 0 | 0 | 5 | 0 | 2 |
-| 13 | 55 | 0 | 2 | 26 | 1 | 4 |
-| 14 | 49 | 1 | 0 | 15 | 1 | 0 |
+| 1 | 650 | 0 | 2 | 58 | 2 | 1 |
+| 2 | 793 | 14 | 18 | 442 | 37 | 23 |
+| 3 | 789 | 0 | 10 | 547 | 6 | 4 |
+| 4 | 651 | 7 | 15 | 336 | 0 | 6 |
+| 5 | 619 | 4 | 168 | 446 | 3 | 25 |
+| 6 | 161 | 0 | 85 | 105 | 5 | 0 |
+| 7 | 177 | 15 | 5 | 188 | 3 | 6 |
+| 8 | 176 | 0 | 43 | 147 | 5 | 7 |
+| 9 | 188 | 0 | 101 | 107 | 3 | 2 |
+| 10 | 216 | 0 | 4 | 138 | 2 | 6 |
+| 11 | 34 | 0 | 0 | 9 | 1 | 0 |
+| 12 | 39 | 0 | 0 | 24 | 1 | 2 |
+| 13 | 89 | 0 | 2 | 56 | 3 | 4 |
+| 14 | 81 | 1 | 0 | 39 | 1 | 0 |
 
 ## Example Context-Light Flashcards
 
@@ -112,33 +112,33 @@ Coverage is a lexical triage signal, not a legal or semantic determination. Cros
 
 ## Example Cross-Format Near-Duplicates
 
-- `3-10-2` `question/flashcard` (1.00): “Nonapproach control towers must forward what to arriving aircraft?” / “What must nonapproach control towers forward to arriving aircraft?”
-- `7-2-1` `question/flashcard` (1.00): “When is tower-applied visual separation not authorized?” / “Tower-applied visual separation: when NOT authorized”
-- `7-5-5` `question/flashcard` (1.00): “What is the key condition for authorizing local SVFR operations for a specified period?” / “What is the key condition for authorizing local SVFR operations for a specified period?”
-- `8-2-2` `question/flashcard` (1.00): “How many ATC units may control an aircraft at any given time?” / “How many ATC units may control an aircraft at any given time?”
-- `10-1-4` `question/flashcard` (1.00): “Which two conditions must both be met before aircraft may join up in formation during emergency conditions?” / “What two conditions must both be met before aircraft may join up in formation during emergency conditions?”
-- `2-1-1` `question/flashcard` (1.00): “What is the primary purpose of the ATC system?” / “ATC system: primary purpose”
-- `4-5-8` `question/flashcard` (1.00): “When should a controller inform an aircraft about when to expect a climb or descent clearance?” / “When should a controller inform an aircraft about when to expect a climb or descent clearance?”
-- `9-8-1` `question/flashcard` (1.00): “What does 'UAP' stand for?” / “9-8-1: What does UAP stand for?”
-- `9-2-20` `question/flashcard` (1.00): “What is the total altitude block within which the evasive action maneuver must be confined?” / “What is the total altitude block within which an evasive action maneuver must be confined?”
-- `3-1-14` `question/flashcard` (1.00): “What two operational harms does newly airborne volcanic ash cause to following aircraft?” / “What two operational harms does newly airborne volcanic ash cause to following aircraft?”
-- `9-2-18` `question/flashcard` (1.00): “How are AWACS/NORAD Special flights identified in the flight plan?” / “How are AWACS/NORAD Special flights identified in the flight plan?”
-- `2-2-12` `question/flashcard` (1.00): “What two categories of information from airborne military aircraft must be forwarded to FSSs?” / “What two categories of information from airborne military aircraft must be forwarded to FSSs?”
+- `3-6-3` `question/flashcard` (1.00): “Who remains responsible for visual navigation to the clearance limit and for avoiding parked or taxiing aircraft, vehicles, or persons?” / “Who remains responsible for visual navigation to the clearance limit and for avoiding parked or taxiing aircraft, vehicles, or persons?”
+- `8-10-1` `question/flashcard` (1.00): “What procedures and minima govern ATC services in the North American ICAO Region?” / “What procedures and minima govern ATC services in the North American ICAO Region?”
+- `8-10-1` `question/flashcard` (1.00): “What procedures and minima govern ATC services in the North American ICAO Region?” / “What procedures and minima govern ATC services in the North American ICAO Region?”
+- `3-10-13` `question/flashcard` (1.00): “What altitude information must be obtained before approving the approach?” / “What altitude information must be obtained before approving the approach?”
+- `3-10-13` `question/flashcard` (1.00): “What must be in effect before military SFO, ELP, or practice precautionary approaches may be authorized?” / “What must be in effect before military SFO, ELP, or practice precautionary approaches may be authorized?”
+- `3-10-13` `question/flashcard` (1.00): “What report request applies at the entry point for overhead SFO or ELP approaches?” / “What report request applies at the entry point for overhead SFO or ELP approaches?”
+- `3-10-13` `question/flashcard` (1.00): “What report request applies to straight-in simulated flameout approaches?” / “What report request applies to straight-in simulated flameout approaches?”
+- `4-1-2` `question/flashcard` (1.00): “What approval is required when operational necessity requires exceeding the limitations?” / “What approval is required when operational necessity requires exceeding the limitations?”
+- `5-3-8` `question/flashcard` (1.00): “What minimum information must an en route data block display?” / “What minimum information must an en route data block display?”
+- `2-3-9` `question/flashcard` (1.00): “What symbols indicate the clearance limit when a delay is not anticipated?” / “What symbols indicate the clearance limit when delay is not anticipated?”
+- `3-10-4` `question/flashcard` (1.00): “What must be issued to each aircraft operating on intersecting runways during arrival operations?” / “What must be issued to each aircraft operating on intersecting runways during arrival operations?”
+- `3-2-1` `question/flashcard` (1.00): “What does a flashing green light-gun signal mean for an aircraft on the ground?” / “What does a flashing green light-gun signal mean for an aircraft on the ground?”
 
 ## Lowest Multi-Format Reinforcement
 
-- `2-6-4`: 0/34 essential statements covered by two or more formats; Q 1, cards 0, activities 0.
-- `2-10-1`: 0/20 essential statements covered by two or more formats; Q 0, cards 1, activities 0.
-- `2-9-3`: 0/17 essential statements covered by two or more formats; Q 0, cards 0, activities 0.
-- `5-8-3`: 0/17 essential statements covered by two or more formats; Q 0, cards 1, activities 0.
-- `3-10-5`: 0/14 essential statements covered by two or more formats; Q 0, cards 0, activities 0.
-- `3-9-7`: 0/14 essential statements covered by two or more formats; Q 1, cards 1, activities 0.
-- `5-2-1`: 0/12 essential statements covered by two or more formats; Q 3, cards 0, activities 0.
-- `2-10-3`: 0/10 essential statements covered by two or more formats; Q 1, cards 1, activities 0.
-- `10-4-4`: 0/9 essential statements covered by two or more formats; Q 0, cards 2, activities 0.
-- `3-10-12`: 0/9 essential statements covered by two or more formats; Q 0, cards 4, activities 0.
-- `5-2-7`: 0/9 essential statements covered by two or more formats; Q 3, cards 0, activities 0.
-- `5-5-9`: 0/9 essential statements covered by two or more formats; Q 0, cards 5, activities 0.
-- `3-10-13`: 0/8 essential statements covered by two or more formats; Q 0, cards 1, activities 0.
-- `3-12-3`: 0/8 essential statements covered by two or more formats; Q 0, cards 0, activities 0.
-- `3-9-10`: 0/8 essential statements covered by two or more formats; Q 0, cards 1, activities 0.
+- `7-6-12`: 0/3 essential statements covered by two or more formats; Q 0, cards 1, activities 0.
+- `1-2-6`: 0/2 essential statements covered by two or more formats; Q 0, cards 2, activities 0.
+- `10-2-16`: 0/2 essential statements covered by two or more formats; Q 2, cards 0, activities 0.
+- `7-9-7`: 0/2 essential statements covered by two or more formats; Q 2, cards 0, activities 0.
+- `2-2-14`: 0/1 essential statements covered by two or more formats; Q 0, cards 0, activities 0.
+- `7-7-6`: 0/1 essential statements covered by two or more formats; Q 0, cards 1, activities 0.
+- `8-10-2`: 0/1 essential statements covered by two or more formats; Q 0, cards 0, activities 0.
+- `14-3-3`: 7/127 essential statements covered by two or more formats; Q 8, cards 7, activities 5.
+- `13-2-3`: 1/13 essential statements covered by two or more formats; Q 5, cards 2, activities 0.
+- `8-8-3`: 3/29 essential statements covered by two or more formats; Q 11, cards 3, activities 2.
+- `8-10-3`: 3/28 essential statements covered by two or more formats; Q 7, cards 4, activities 4.
+- `2-1-13`: 1/7 essential statements covered by two or more formats; Q 1, cards 3, activities 1.
+- `14-2-4`: 7/48 essential statements covered by two or more formats; Q 8, cards 7, activities 6.
+- `5-7-1`: 3/19 essential statements covered by two or more formats; Q 4, cards 3, activities 5.
+- `8-9-3`: 5/30 essential statements covered by two or more formats; Q 7, cards 2, activities 6.
