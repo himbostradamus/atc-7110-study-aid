@@ -1,0 +1,1432 @@
+{
+  "version": 1,
+  "chapter": 1,
+  "target_generation_source": "content_expansion_pass_02",
+  "packet_sha256": "10a81a718b2f44819a108a791551d22acbf456614d1228aeef7387a3179132a1",
+  "manifest_sha256": "a16ff6ef238f14ea91f1d04da041b73891a1fa8ed3f5459cb6f2cecd0b784f1d",
+  "summary": {
+    "overall": "Chapter 1 was reviewed in 2 bounded source-grounded shards. Proposed changes: 26 replacements, 0 splits, and 0 removals.",
+    "patterns": [
+      "Pervasive paragraph-location scaffolding: 16 of 23 items use 'Per X-X-X' or similar document-structure references in explanations rather than stating the operational requirement directly.",
+      "Unsupported rationale injection: one question (1-1-1) asks 'why' the order prescribes both procedures and phraseology — a question the source does not answer. Two flashcards add claims (safety rationale; MyFAA interpretations; legal force of notes) absent from source blocks.",
+      "Document-structure trivia: one question (1-1-14) frames its stem around 'subparagraph (a)' vs 'subparagraph (b)' rather than the operational distinction between mandatory distribution and organizations' subscription duty.",
+      "No factually incorrect answers were found. All items with source-supported content produce accurate correct-answer selections and plausible distractors.",
+      "Cross-format coverage is thin: 1-1-3, 1-1-5, 1-1-7, 1-1-12, 1-1-14, 1-2-3 each appear in only one format. The word-meaning definitions in 1-2-1a–d (mandatory, prohibited, recommended, optional) are tested only through 'should' vs 'may' — 'must', 'must not', and 'need not' are not covered.",
+      "Automated flags for paragraph_location_explanation were accurate across all flagged items. The negative_stem flag on the 1-1-7 activity is a false positive — the negative framing is inherent to the non-receipt rule being tested.",
+      "Paragraph-location scaffolding in explanations: all seven explanations reference paragraph numbers, sub-paragraph letters, or table identifiers ('Per 1-2-3,' 'Per 1-2-4,' 'Per 1-2-5a,' 'Per the note following 1-2-5g,' 'Per TBL 1-2-1') instead of stating the operating requirement directly. This teaches document-navigation trivia rather than ATC operational knowledge.",
+      "Source fidelity error on scope unit: one question (1262864a) replaces 'paragraph' with 'section' in the correct answer, broadening the annotation's scope beyond what the source states. The source clearly limits WAKE TURBULENCE APPLICATION to the remainder of the paragraph, not the section.",
+      "Table-reference scaffolding in question stems: one question (bd02b18e) opens with 'In TBL 1-2-1' rather than presenting the abbreviation-disambiguation concept self-containedly.",
+      "Strengths — plausible distractors: across the shard, incorrect choices represent operationally plausible mistakes (confusing direction, misunderstanding scope, reversing meaning) rather than arbitrary wrong answers.",
+      "Strengths — operational context in activities: the three activities embed their questions in realistic controller scenarios (interpreting a reference, rephrasing after an uncertain readback, disambiguating an abbreviation in a traffic management directive)."
+    ],
+    "generation_guidance": [
+      "Strip all paragraph-location scaffolding from explanations before the content-generation pass. Audit every explanation for 'Per X-X-X', 'paragraph X', 'this section', and 'the source states' — replace with the operational requirement stated directly.",
+      "Generate items covering uncovered source content: controller familiarity requirement (1-1-1); 'will' means futurity not requirement (1-2-1e); singular/plural reciprocity (1-2-1f,g); 'aircraft' definition (1-2-1h); 'approved separation' definition (1-2-1i); 'altitude' definition (1-2-1j); 'miles' definition (1-2-1k); magnetic default rule (1-2-1l); time/UTC definition (1-2-1m); 'runway' definition (1-2-1n); procedural change submission content requirements (1-1-8c); operational software prerequisite for procedural changes (1-1-8d).",
+      "Cover the full word-meaning taxonomy from 1-2-1a–d: 'must' (mandatory), 'must not' (prohibited), 'should' (recommended), 'may'/'need not' (optional). Currently only 'should' vs 'may' is tested.",
+      "Bolster cross-format coverage: paragraphs 1-1-3, 1-1-5, 1-1-7, 1-1-12, 1-1-14, and 1-2-3 each appear in one format only. Add at least one more format per paragraph where the source content supports it.",
+      "The due regard activity (1-2-1) is well constructed — scenario-based source-use items that test application against the full condition list are an effective pattern worth replicating for other multi-condition rules.",
+      "Do not invent rationale questions. When the source states only a fact or requirement, test recognition and application of that fact, not the policy reason behind it.",
+      "Write all explanations without paragraph numbers, sub-paragraph letters, note qualifiers, or table identifiers. State the operating requirement directly.",
+      "When paraphrasing source rules about scope, preserve the exact organizational unit used in the source (e.g., 'paragraph,' 'section,' 'chapter'). Do not substitute one for another.",
+      "Avoid opening question stems with table or figure references (e.g., 'In TBL 1-2-1'). Present the concept self-containedly; the source reference belongs in metadata, not the student-facing text.",
+      "Activity explanations must connect the answer to the operational principle without routing through the document structure.",
+      "When a source statement is brief (e.g., the single-sentence 1-2-4 definition of references), explanations should teach the operational implication directly from what the source states without inventing additional policy rationales or operational consequences."
+    ],
+    "shard_overviews": [
+      "The shard covers 14 paragraphs with 23 items (9 questions, 7 activities, 7 flashcards). Source fidelity is generally good — no factually incorrect answers were found. The pervasive defect is paragraph-location scaffolding in explanations: nearly every explanation begins with 'Per X-X-X' or references paragraph structure, violating the rule that explanations teach the operating requirement directly. Three items have deeper issues: one question invents a rationale question the source does not answer, one question frames its stem around document subparagraph structure, and two flashcards add content absent from the source blocks. Several source blocks contain operational content not yet covered by any item format, particularly the controller familiarity requirement in 1-1-1, the 'will' vs 'must' distinction and singular/plural rules in 1-2-1, and the mandatory/prohibited/recommended/optional word-meaning taxonomy.",
+      "The shard contains seven items covering references, annotations, and abbreviations from paragraphs 1-2-4 through 1-2-6. Factual accuracy is generally sound, with one notable exception where the correct answer for question 1262864a substitutes 'section' for 'paragraph,' misstating the scope of the WAKE TURBULENCE APPLICATION annotation. The dominant defect across all seven items is persistent paragraph-location scaffolding in explanations — every item uses 'Per 1-2-X' or similar document-structure references instead of stating the operational requirement directly. Distractors are plausibly constructed and activity scenarios provide meaningful operational context. No items require removal or splitting; all can be remediated through targeted text replacements."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "question",
+      "para_id": "1-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The question asks why the order must include both procedures and phraseology rather than only controller actions. The source block states only that the order prescribes procedures and phraseology — it does not state a reason why both are required. The explanation invents a rationale ('preventing misunderstanding between controllers and pilots,' 'safe, coordinated operations') that is not supported by the source. The explanation also uses paragraph-location scaffolding ('Per 1-1-1').",
+      "source_basis": "Source 1-1-1 states: 'This order prescribes air traffic control procedures and phraseology for use by persons providing air traffic control services. Controllers are required to be familiar with the provisions of this order that pertain to their operational responsibilities and to exercise their best judgment if they encounter situations that are not covered by it.' The source does not state why both elements are necessary.",
+      "match": {
+        "question_text": "FAA Order JO 7110.65 prescribes two distinct elements: procedures and phraseology. Why must the order include both rather than prescribing only controller actions?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "According to FAA Order JO 7110.65, what must a controller do when they encounter a situation that is not covered by any provision in the order?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Controllers must exercise their best judgment when they encounter situations not covered by the order. When a published procedure applies, the controller follows it. Best judgment is the required fallback for uncovered situations — it is not a discretionary alternative to an existing procedure.",
+          "choices": [
+            {
+              "text": "Follow the most similar published procedure and document the deviation.",
+              "is_correct": false
+            },
+            {
+              "text": "Exercise their best judgment.",
+              "is_correct": true
+            },
+            {
+              "text": "Request an immediate waiver through the facility manager before proceeding.",
+              "is_correct": false
+            },
+            {
+              "text": "Contact the service area office for guidance before taking any action.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-10",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding: 'Per 1-1-10' and 'Per 1-1-11' instead of stating the operational requirements directly. The question stem, choices, and answer are source-faithful and educationally sound.",
+      "source_basis": "Source 1-1-10 states: 'LOAs only supplement this order. Any minima they specify must not be less than that specified herein unless appropriate military authority has authorized application of reduced separation between military aircraft.' Source 1-1-11 states: 'Exceptional or unusual requirements may dictate procedural deviations or supplementary procedures to this order.'",
+      "match": {
+        "question_text": "A facility faces a situation where the standard separation minima in FAA Order JO 7110.65 are unsuitable. A supervisor considers documenting reduced minima in a Letter of Agreement (LOA) between two civilian facilities versus pursuing a waiver. Which mechanism may authorise a reduction below the order's minima for civilian operations, and why?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A facility faces a situation where the standard separation minima in FAA Order JO 7110.65 are unsuitable. A supervisor considers documenting reduced minima in a Letter of Agreement (LOA) between two civilian facilities versus pursuing a waiver. Which mechanism may authorise a reduction below the order's minima for civilian operations, and why?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "LOAs only supplement the order and must not specify lower minima except when military authority authorizes reduced separation between military aircraft. Waivers address exceptional or unusual requirements that dictate procedural deviations. For civilian facilities needing minima below the order, a waiver is the correct mechanism — an LOA between civilian facilities cannot lower the order's minima.",
+          "choices": [
+            {
+              "text": "Either an LOA or a waiver works equally — the facility may choose whichever is faster to process.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "An LOA may lower minima for civilian operations if both facilities sign it; a waiver is needed only for military involvement.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "An LOA between civilian facilities cannot lower minima below the order; a waiver under the exceptional-or-unusual standard is the correct mechanism for civilian procedural deviations.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Neither an LOA nor a waiver can change minima — only a full revision of the order through JO 7000.5 can alter separation standards.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-13",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding: 'Per 1-1-13' and references 'The examples given' as if pointing to document text. The question stem, choices, and answer are source-faithful.",
+      "source_basis": "Source 1-1-13 states: 'When references are made to regional office organizations that are not part of the Air Traffic Organization (Communications Center, Flight Standards, Airport offices, etc.), the facility should contact the FAA region where the facility is physically located—not the region where the facility's service area office is located.'",
+      "match": {
+        "question_text": "Under FAA Order JO 7110.65, what rule determines which FAA region a facility must contact when the order references a non-ATO regional office organization?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Under FAA Order JO 7110.65, what rule determines which FAA region a facility must contact when the order references a non-ATO regional office organization?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "The facility contacts the FAA region where the facility is physically located, not the region where its service area office is located. Physical geography governs over organizational alignment for non-ATO regional contacts. Non-ATO organizations include Communications Centers, Flight Standards, and Airport offices.",
+          "choices": [
+            {
+              "text": "Contact the region where the facility's service area office is located.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Contact the region where the facility is physically located.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Contact whichever region most recently issued a directive on the subject matter.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Contact Washington headquarters directly in all cases.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-14",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "The stem frames the question around document structure: 'subparagraph (a)' and 'subparagraph (b)' — testing paragraph-location trivia rather than operational substance. The explanation is rife with document-structure scaffolding ('Per 1-1-14, subparagraph (a),' 'subparagraph (b) places an affirmative duty'). The operational distinction — mandatory distribution to named recipients versus organizations' affirmative subscription duty — can be tested without referencing subparagraphs.",
+      "source_basis": "Source 1-1-14 states: '(a) This order is distributed to selected offices...' and '(b) This order is distributed electronically to all who subscribe... All organizations are responsible for viewing, downloading, and subscribing to receive email notifications when changes occur to this order.'",
+      "match": {
+        "question_text": "FAA Order JO 7110.65 describes two distribution mechanisms. What is the key distinction between the mandatory distribution list in subparagraph (a) and the electronic subscription mechanism in subparagraph (b)?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "According to FAA Order JO 7110.65, what responsibility do organizations have regarding electronic access to the order and its changes?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Organizations are responsible for subscribing to receive email notifications, viewing, and downloading changes when they occur to the order. The burden to stay current rests on the organization through the electronic subscription mechanism.",
+          "choices": [
+            {
+              "text": "Organizations receive the order automatically — no action is required.",
+              "is_correct": false
+            },
+            {
+              "text": "Organizations are responsible for subscribing to receive email notifications, viewing, and downloading changes.",
+              "is_correct": true
+            },
+            {
+              "text": "Only regional offices must subscribe; field facilities receive automatic distribution.",
+              "is_correct": false
+            },
+            {
+              "text": "Organizations must request each update individually through the FAA Hotline.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding: 'Per 1-1-2.' The question stem, choices, and answer are source-faithful and educationally sound.",
+      "source_basis": "Source 1-1-2 states: 'This order applies to all ATO personnel and anyone using ATO directives.'",
+      "match": {
+        "question_text": "FAA Order JO 7110.65 applies to two categories of persons. Which statement correctly identifies both categories?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "FAA Order JO 7110.65 applies to two categories of persons. Which statement correctly identifies both categories?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "The order applies to all ATO personnel and anyone using ATO directives. The first category covers employees within the Air Traffic Organization regardless of role. The second category captures contractors, military personnel, and others who use ATO-published procedures regardless of employment relationship.",
+          "choices": [
+            {
+              "text": "Only FAA-certified air traffic controllers and facility managers.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "All ATO personnel and anyone using ATO directives.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Only FAA employees and military personnel assigned to joint-use facilities.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Only persons holding a current FAA medical certificate and security clearance.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding: 'Per 1-1-5.' It also references 'The EOC pages provide a summary of substantive revisions, not an exhaustive catalogue' which is an elaboration not directly stated in the source. The question stem and choices are source-faithful and educationally sound.",
+      "source_basis": "Source 1-1-5 states: 'The significant changes to this order are identified in the Explanation of Changes page(s). It is advisable to retain the page(s) throughout the duration of the basic order.'",
+      "match": {
+        "question_text": "A trainee compares the Explanation of Changes pages against the marked changes in the order text and finds that the EOC pages include only a subset of the changed text — formatting corrections and punctuation fixes are absent. What principle explains which changes appear on the EOC pages?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A trainee compares the Explanation of Changes pages against the marked changes in the order text and finds that the EOC pages include only a subset of the changed text — formatting corrections and punctuation fixes are absent. What principle explains which changes appear on the EOC pages?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The Explanation of Changes pages identify significant changes. Minor formatting corrections, punctuation fixes, and typographical repairs are not significant changes and are therefore excluded from the EOC pages.",
+          "choices": [
+            {
+              "text": "The EOC pages should list every change, including formatting; the omissions are errors that must be reported to AJV-P.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The EOC pages identify only significant changes; minor formatting and punctuation corrections are not significant and are therefore excluded.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Formatting changes are never made to the order; any such differences are printing errors.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The EOC pages only list changes that affect separation minima; all other changes are documented in JO 7210.3.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-1-8",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding: 'Per 1-1-8a and 1-1-8b' and references 'AJV-P' in a way that assumes paragraph knowledge. The question stem, choices, and answer are source-faithful.",
+      "source_basis": "Source 1-1-8 states: 'Personnel should submit recommended changes in procedures to facility management' and 'Recommendations from other sources should be submitted through appropriate FAA, military, or industry/user channels.'",
+      "match": {
+        "question_text": "How does the initial routing of a procedural change recommendation from FAA facility personnel differ from a recommendation submitted by an industry group?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "How does the initial routing of a procedural change recommendation from FAA facility personnel differ from a recommendation submitted by an industry group?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "FAA personnel submit recommended changes to facility management first. Recommendations from other sources should be submitted through appropriate FAA, military, or industry/user channels. Both paths lead to the same destination; the initial routing differs by source type.",
+          "choices": [
+            {
+              "text": "Both go directly to AJV-P without any intermediate routing.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "FAA personnel submit to facility management first; industry groups submit through appropriate FAA, military, or industry/user channels.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "FAA personnel submit directly to AJV-P; industry groups must route through facility management.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Both must be submitted through the Federal Register public comment process.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding: 'Per 1-2-1c and 1-2-1d.' The question stem, choices, and answer are source-faithful and educationally sound.",
+      "source_basis": "Source 1-2-1 states: 'c. \"Should\" means a procedure is recommended' and 'd. \"May\" or \"need not\" means a procedure is optional.'",
+      "match": {
+        "question_text": "A controller reads that a facility 'should' issue a particular advisory and another paragraph stating the controller 'may' issue a different advisory. What is the operational difference between these two instructions under FAA Order JO 7110.65 word meanings?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller reads that a facility 'should' issue a particular advisory and another paragraph stating the controller 'may' issue a different advisory. What is the operational difference between these two instructions under FAA Order JO 7110.65 word meanings?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "'Should' means a procedure is recommended — the controller is expected to follow it absent a good reason not to. 'May' means a procedure is optional — the controller decides whether circumstances warrant it. A recommended action carries an expectation; an optional one does not.",
+          "choices": [
+            {
+              "text": "Both words mean the same thing — the controller may choose whether to comply.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "'Should' means recommended (expected absent good reason); 'may' means optional (controller decides based on circumstances).",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "'Should' means mandatory; 'may' means recommended.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "'Should' means the procedure applies only to terminal facilities; 'may' applies to all facilities.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding: 'Per 1-2-2.' The question stem, choices, and answer are source-faithful and educationally sound.",
+      "source_basis": "Source 1-2-2 states: 'SAME COURSES are courses whose protected airspaces are coincident, overlap, or intersect and whose angular difference is less than 45 degrees'; 'CROSSING COURSES are intersecting courses whose angular difference is 45 through 135 degrees inclusive'; 'OPPOSITE/RECIPROCAL COURSES are courses whose protected airspaces are coincident, overlap, or intersect and whose angular difference is greater than 135 degrees through 180 degrees inclusive.'",
+      "match": {
+        "question_text": "Arrange the three course classifications defined in FAA Order JO 7110.65 in order from the smallest angular difference to the largest: (A) Opposite/reciprocal courses, (B) Same courses, (C) Crossing courses.",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Arrange the three course classifications defined in FAA Order JO 7110.65 in order from the smallest angular difference to the largest: (A) Opposite/reciprocal courses, (B) Same courses, (C) Crossing courses.",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Same courses have an angular difference less than 45 degrees (smallest range). Crossing courses cover 45 through 135 degrees inclusive (middle range). Opposite/reciprocal courses cover greater than 135 through 180 degrees inclusive (largest range). The correct ascending order is Same, Crossing, Opposite/reciprocal.",
+          "choices": [
+            {
+              "text": "B (Same), C (Crossing), A (Opposite/reciprocal).",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "C (Crossing), B (Same), A (Opposite/reciprocal).",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "B (Same), A (Opposite/reciprocal), C (Crossing).",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "A (Opposite/reciprocal), C (Crossing), B (Same).",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The activity explanation uses paragraph-location scaffolding: 'Per 1-1-1.' The activity content, question, choices, and answer are source-faithful and educationally sound — the discrimination format effectively tests the best judgment rule through application scenarios.",
+      "source_basis": "Source 1-1-1 states: 'Controllers are required to be familiar with the provisions of this order that pertain to their operational responsibilities and to exercise their best judgment if they encounter situations that are not covered by it.'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "For each situation, decide whether the controller must follow a prescribed procedure or may exercise best judgment.",
+          "question_text": "In which of the following situations must the controller exercise best judgment rather than apply a specific published procedure?",
+          "choices": [
+            {
+              "text": "An aircraft requests an approach to an airport served by a published instrument approach procedure that the controller regularly uses.",
+              "is_correct": false
+            },
+            {
+              "text": "An unusual mix of VFR and IFR traffic creates a conflict scenario that is not addressed by any provision in the order, and the controller must resolve it safely.",
+              "is_correct": true
+            },
+            {
+              "text": "Two aircraft on the same airway at the same altitude are closing, and the order prescribes a specific separation minimum and vectoring procedure.",
+              "is_correct": false
+            },
+            {
+              "text": "A controller receives a handoff using the standard coordination procedure described in the order and must decide whether to accept it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-1, controllers must exercise best judgment when they encounter situations NOT covered by the order. When a published procedure applies, the controller follows it. Best judgment is the fallback for uncovered situations, not a discretionary alternative to existing procedures.",
+          "publication_id": "content-expansion-pass-02:chapter-01:activities:1-1-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "For each situation, decide whether the controller must follow a prescribed procedure or may exercise best judgment.",
+            "question_text": "In which of the following situations must the controller exercise best judgment rather than apply a specific published procedure?",
+            "choices": [
+              {
+                "text": "An aircraft requests an approach to an airport served by a published instrument approach procedure that the controller regularly uses.",
+                "is_correct": false
+              },
+              {
+                "text": "An unusual mix of VFR and IFR traffic creates a conflict scenario that is not addressed by any provision in the order, and the controller must resolve it safely.",
+                "is_correct": true
+              },
+              {
+                "text": "Two aircraft on the same airway at the same altitude are closing, and the order prescribes a specific separation minimum and vectoring procedure.",
+                "is_correct": false
+              },
+              {
+                "text": "A controller receives a handoff using the standard coordination procedure described in the order and must decide whether to accept it.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Controllers must exercise their best judgment when they encounter situations not covered by the order. When a published procedure applies, the controller follows it. Best judgment is the fallback for uncovered situations — it is not a discretionary alternative to existing procedures.",
+            "publication_id": "content-expansion-pass-02:chapter-01:activities:1-1-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-11",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The activity explanation uses paragraph-location scaffolding: 'Per 1-1-10' and 'Per 1-1-11.' The activity content, question, choices, and answer are source-faithful and educationally sound — the discrimination format effectively tests the LOA-vs-waiver distinction through operational scenarios.",
+      "source_basis": "Source 1-1-10 states: 'LOAs only supplement this order. Any minima they specify must not be less than that specified herein unless appropriate military authority has authorized application of reduced separation between military aircraft.' Source 1-1-11 states: 'Exceptional or unusual requirements may dictate procedural deviations or supplementary procedures to this order.'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "For each situation, determine whether a Letter of Agreement (LOA) or a Waiver is the appropriate mechanism.",
+          "question_text": "In which of the following situations is a waiver the appropriate mechanism rather than an LOA?",
+          "choices": [
+            {
+              "text": "Two civilian TRACONs want to document joint handoff procedures that operate within existing order minima and require mutual coordination.",
+              "is_correct": false
+            },
+            {
+              "text": "A civilian facility has an exceptional operational requirement that dictates a procedural deviation below the order's separation minima, and no military operations are involved.",
+              "is_correct": true
+            },
+            {
+              "text": "An ARTCC and an adjacent approach control want to formalise standard coordination procedures that both facilities already follow in practice.",
+              "is_correct": false
+            },
+            {
+              "text": "Two facilities need to document agreed-upon altitude assignments for arriving traffic that stay within the order's prescribed ranges.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-10, LOAs document jointly applied procedures or minima requiring multi-facility cooperation — but their minima may not fall below the order's except for military-authorised reduced separation between military aircraft. Per 1-1-11, waivers address exceptional or unusual requirements that dictate procedural deviations — this is the mechanism for a civilian facility needing a deviation below the order's minima.",
+          "publication_id": "content-expansion-pass-02:chapter-01:activities:1-1-11:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "For each situation, determine whether a Letter of Agreement (LOA) or a Waiver is the appropriate mechanism.",
+            "question_text": "In which of the following situations is a waiver the appropriate mechanism rather than an LOA?",
+            "choices": [
+              {
+                "text": "Two civilian TRACONs want to document joint handoff procedures that operate within existing order minima and require mutual coordination.",
+                "is_correct": false
+              },
+              {
+                "text": "A civilian facility has an exceptional operational requirement that dictates a procedural deviation below the order's separation minima, and no military operations are involved.",
+                "is_correct": true
+              },
+              {
+                "text": "An ARTCC and an adjacent approach control want to formalise standard coordination procedures that both facilities already follow in practice.",
+                "is_correct": false
+              },
+              {
+                "text": "Two facilities need to document agreed-upon altitude assignments for arriving traffic that stay within the order's prescribed ranges.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "LOAs document jointly applied procedures or minima requiring multi-facility cooperation, but their minima must not fall below the order's except for military-authorized reduced separation between military aircraft. Waivers address exceptional or unusual requirements that dictate procedural deviations — this is the mechanism for a civilian facility needing a deviation below the order's minima.",
+            "publication_id": "content-expansion-pass-02:chapter-01:activities:1-1-11:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-12",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The activity explanation uses paragraph-location scaffolding: 'Per 1-1-12' and 'in this paragraph.' The activity content, question, and choices are source-faithful.",
+      "source_basis": "Source 1-1-12 states: 'Additional information pertaining to ATO SMS requirements and processes can be obtained by visiting the SMS Toolbox, emailing the Office of Safety and Technical Training (AJI) at 9-AJI-SMS@faa.gov, or contacting the service center Quality Control Group.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Choose the best answer.",
+          "question_text": "Which list correctly identifies all three channels that FAA Order JO 7110.65 specifies for obtaining additional ATO SMS information?",
+          "choices": [
+            {
+              "text": "SMS Toolbox, emailing AJI at 9-AJI-SMS@faa.gov, and contacting the service center Quality Control Group.",
+              "is_correct": true
+            },
+            {
+              "text": "SMS Toolbox, facility quality assurance program, and FAA Hotline.",
+              "is_correct": false
+            },
+            {
+              "text": "Emailing AJI, filing a UCR, and contacting the regional administrator.",
+              "is_correct": false
+            },
+            {
+              "text": "MyFAA portal, eLMS training module, and the service center Quality Control Group.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-12, three channels are identified for obtaining additional SMS information: visiting the SMS Toolbox, emailing AJI at 9-AJI-SMS@faa.gov, and contacting the service center Quality Control Group. Other FAA channels serve different purposes and are not listed as SMS information channels in this paragraph.",
+          "publication_id": "content-expansion-pass-02:chapter-01:activities:1-1-12:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Choose the best answer.",
+            "question_text": "Which list correctly identifies all three channels that FAA Order JO 7110.65 specifies for obtaining additional ATO SMS information?",
+            "choices": [
+              {
+                "text": "SMS Toolbox, emailing AJI at 9-AJI-SMS@faa.gov, and contacting the service center Quality Control Group.",
+                "is_correct": true
+              },
+              {
+                "text": "SMS Toolbox, facility quality assurance program, and FAA Hotline.",
+                "is_correct": false
+              },
+              {
+                "text": "Emailing AJI, filing a UCR, and contacting the regional administrator.",
+                "is_correct": false
+              },
+              {
+                "text": "MyFAA portal, eLMS training module, and the service center Quality Control Group.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Three channels are identified for obtaining additional SMS information: visiting the SMS Toolbox, emailing the Office of Safety and Technical Training at 9-AJI-SMS@faa.gov, and contacting the service center Quality Control Group. Other FAA channels serve different purposes and are not listed as SMS information channels.",
+            "publication_id": "content-expansion-pass-02:chapter-01:activities:1-1-12:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The activity explanation uses paragraph-location scaffolding: 'Per 1-1-2' and quotes 'anyone using ATO directives' with single-quote scaffolding. The activity content, question, and choices are source-faithful.",
+      "source_basis": "Source 1-1-2 states: 'This order applies to all ATO personnel and anyone using ATO directives.'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "For each person, determine whether FAA Order JO 7110.65 applies to them.",
+          "question_text": "To which of the following persons does FAA Order JO 7110.65 apply?",
+          "choices": [
+            {
+              "text": "A military contractor using ATO-published separation standards while developing procedures for a DoD range operation.",
+              "is_correct": true
+            },
+            {
+              "text": "A civilian software engineer developing a flight-planning tool who has never read or used any ATO directive.",
+              "is_correct": false
+            },
+            {
+              "text": "An airline dispatcher who does not use FAA ATC directives in their work.",
+              "is_correct": false
+            },
+            {
+              "text": "A private pilot who flies recreationally and does not use ATO directives.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-2, the order applies to all ATO personnel AND anyone using ATO directives. The military contractor using ATO separation standards falls under 'anyone using ATO directives.' The other persons listed do not use ATO directives and are not ATO personnel, so the order does not apply to them.",
+          "publication_id": "content-expansion-pass-02:chapter-01:activities:1-1-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "For each person, determine whether FAA Order JO 7110.65 applies to them.",
+            "question_text": "To which of the following persons does FAA Order JO 7110.65 apply?",
+            "choices": [
+              {
+                "text": "A military contractor using ATO-published separation standards while developing procedures for a DoD range operation.",
+                "is_correct": true
+              },
+              {
+                "text": "A civilian software engineer developing a flight-planning tool who has never read or used any ATO directive.",
+                "is_correct": false
+              },
+              {
+                "text": "An airline dispatcher who does not use FAA ATC directives in their work.",
+                "is_correct": false
+              },
+              {
+                "text": "A private pilot who flies recreationally and does not use ATO directives.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The order applies to all ATO personnel and anyone using ATO directives. The military contractor using ATO separation standards falls under anyone using ATO directives. The other persons listed do not use ATO directives and are not ATO personnel, so the order does not apply to them.",
+            "publication_id": "content-expansion-pass-02:chapter-01:activities:1-1-2:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-1-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The activity explanation uses paragraph-location scaffolding: 'Per 1-1-7b' and 'Per 1-1-7c.' The activity content, question, and choices are source-faithful. The automated negative_stem flag is a false positive — the negative framing ('not been received') is inherent to the non-receipt rule being tested.",
+      "source_basis": "Source 1-1-7 states: 'If an FAA facility has not received the order/changes at least 30 days before the above effective dates, the facility must notify its service area office distribution officer' and 'If a military facility has not received the order/changes at least 30 days before the above effective dates, the facility must notify its appropriate military headquarters.'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 1,
+          "instruction": "Choose the correct notification target for each facility type.",
+          "question_text": "When the order or changes have not been received at least 30 days before the effective date, to whom must an FAA facility report non-receipt, and to whom must a military facility report?",
+          "choices": [
+            {
+              "text": "An FAA facility notifies its service area office distribution officer; a military facility notifies its appropriate military headquarters.",
+              "is_correct": true
+            },
+            {
+              "text": "Both FAA and military facilities notify AJV-P directly.",
+              "is_correct": false
+            },
+            {
+              "text": "An FAA facility notifies its military headquarters; a military facility notifies its service area office distribution officer.",
+              "is_correct": false
+            },
+            {
+              "text": "Both facility types notify the GovDelivery subscription administrator.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-1-7b, FAA facilities notify their service area office distribution officer. Per 1-1-7c, military facilities notify their appropriate military headquarters. The notification targets are distinct and based on facility type.",
+          "publication_id": "content-expansion-pass-02:chapter-01:activities:1-1-7:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 1,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 1,
+            "instruction": "Choose the correct notification target for each facility type.",
+            "question_text": "When the order or changes have not been received at least 30 days before the effective date, to whom must an FAA facility report non-receipt, and to whom must a military facility report?",
+            "choices": [
+              {
+                "text": "An FAA facility notifies its service area office distribution officer; a military facility notifies its appropriate military headquarters.",
+                "is_correct": true
+              },
+              {
+                "text": "Both FAA and military facilities notify AJV-P directly.",
+                "is_correct": false
+              },
+              {
+                "text": "An FAA facility notifies its military headquarters; a military facility notifies its service area office distribution officer.",
+                "is_correct": false
+              },
+              {
+                "text": "Both facility types notify the GovDelivery subscription administrator.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "FAA facilities notify their service area office distribution officer. Military facilities notify their appropriate military headquarters. The notification targets are distinct and based on facility type.",
+            "publication_id": "content-expansion-pass-02:chapter-01:activities:1-1-7:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The activity explanation uses paragraph-location scaffolding: 'Per 1-2-1o' and references 'condition (c)(4).' The activity content, question, and choices are source-faithful and the source-use format with scenario verification is an effective pattern for testing multi-condition rules.",
+      "source_basis": "Source 1-2-1o states the state aircraft commander must: separate from all other air traffic, assure SAR monitoring, and operate under at least one of: VMC, ATC surveillance with communications, airborne radar sufficient for separation, or Class G airspace.",
+      "match": {
+        "activity_type": "source_use",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "source_kind": "body",
+          "source_label": "FAA Order JO 7110.65, 1-2-1o",
+          "lookup_context": [
+            "A state aircraft commander plans to operate under due regard",
+            "The pilot must meet two obligations and satisfy at least one of four operational conditions"
+          ],
+          "task": "Verify that a pilot's stated operational plan satisfies the due regard conditions by checking against the complete list in the order.",
+          "instruction": "Use FAA Order JO 7110.65 paragraph 1-2-1o to verify the pilot's plan.",
+          "question_text": "A state aircraft commander states the following plan: they will separate from all other air traffic, have arranged with a military unit for search and rescue monitoring, and will operate in Class G airspace. Has the commander satisfied the minimum requirements for due regard operations?",
+          "choices": [
+            {
+              "text": "Yes; all requirements are met — both obligations are satisfied plus at least one of the four operational conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "No; the commander must also be in communication with ATC even in Class G airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "No; the commander must satisfy at least two of the four operational conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "No; Class G airspace is not one of the acceptable operational conditions for due regard.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-2-1o, due regard requires: obligation (a) separate from all other air traffic; obligation (b) assure SAR monitoring; and at least one condition from (c): VMC, or ATC surveillance + communications, or airborne radar, or Class G airspace. The commander's plan satisfies both obligations and meets condition (c)(4) — Class G airspace — so all minimum requirements are met.",
+          "publication_id": "content-expansion-pass-02:chapter-01:activities:1-2-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_use",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "source_kind": "body",
+            "source_label": "FAA Order JO 7110.65, 1-2-1o",
+            "lookup_context": [
+              "A state aircraft commander plans to operate under due regard",
+              "The pilot must meet two obligations and satisfy at least one of four operational conditions"
+            ],
+            "task": "Verify that a pilot's stated operational plan satisfies the due regard conditions by checking against the complete list in the order.",
+            "instruction": "Use FAA Order JO 7110.65 paragraph 1-2-1o to verify the pilot's plan.",
+            "question_text": "A state aircraft commander states the following plan: they will separate from all other air traffic, have arranged with a military unit for search and rescue monitoring, and will operate in Class G airspace. Has the commander satisfied the minimum requirements for due regard operations?",
+            "choices": [
+              {
+                "text": "Yes; all requirements are met — both obligations are satisfied plus at least one of the four operational conditions.",
+                "is_correct": true
+              },
+              {
+                "text": "No; the commander must also be in communication with ATC even in Class G airspace.",
+                "is_correct": false
+              },
+              {
+                "text": "No; the commander must satisfy at least two of the four operational conditions.",
+                "is_correct": false
+              },
+              {
+                "text": "No; Class G airspace is not one of the acceptable operational conditions for due regard.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Due regard requires the state aircraft commander to separate from all other air traffic, assure that an appropriate monitoring agency assumes responsibility for search and rescue actions, and operate under at least one of four conditions: VMC, ATC surveillance with communications, airborne radar sufficient for separation, or Class G airspace. The commander's plan satisfies both obligations and meets the Class G airspace condition, so all minimum requirements are met.",
+            "publication_id": "content-expansion-pass-02:chapter-01:activities:1-2-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-2-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The activity explanation uses paragraph-location scaffolding: 'Per 1-2-2c.' The activity content, question, and choices are source-faithful and the boundary-condition scenario (140 degrees, intersecting) is a well-chosen test of the crossing/opposite classification threshold.",
+      "source_basis": "Source 1-2-2c states: 'OPPOSITE/RECIPROCAL COURSES are courses whose protected airspaces are coincident, overlap, or intersect and whose angular difference is greater than 135 degrees through 180 degrees inclusive.'",
+      "match": {
+        "activity_type": "source_use",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "source_kind": "figure",
+          "source_label": "FIG 1-2-1",
+          "lookup_context": [
+            "Course definitions require classification into same, crossing, or opposite/reciprocal based on angular difference",
+            "FIG 1-2-1 depicts the angular divergence bands visually"
+          ],
+          "task": "Use the course-definition figure and the associated paragraph to classify a course relationship by angular difference.",
+          "instruction": "Use FIG 1-2-1 and the course definitions in FAA Order JO 7110.65.",
+          "question_text": "Using the course definitions and FIG 1-2-1, classify two courses whose protected airspaces intersect with an angular difference of 140 degrees.",
+          "choices": [
+            {
+              "text": "Opposite/reciprocal courses, because the angular difference is greater than 135 degrees and the protected airspaces intersect.",
+              "is_correct": true
+            },
+            {
+              "text": "Crossing courses, because the angular difference is between 45 and 180 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "Same courses, because the angular difference is less than 180 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "The classification is undefined because protected airspaces intersect rather than overlap.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-2-2c, opposite/reciprocal courses are courses whose protected airspaces are coincident, overlap, or intersect AND whose angular difference is greater than 135 degrees through 180 degrees inclusive. At 140 degrees with intersecting protected airspaces, both conditions are satisfied — this is opposite/reciprocal.",
+          "publication_id": "content-expansion-pass-02:chapter-01:activities:1-2-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_use",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "source_kind": "figure",
+            "source_label": "FIG 1-2-1",
+            "lookup_context": [
+              "Course definitions require classification into same, crossing, or opposite/reciprocal based on angular difference",
+              "FIG 1-2-1 depicts the angular divergence bands visually"
+            ],
+            "task": "Use the course-definition figure and the associated paragraph to classify a course relationship by angular difference.",
+            "instruction": "Use FIG 1-2-1 and the course definitions in FAA Order JO 7110.65.",
+            "question_text": "Using the course definitions and FIG 1-2-1, classify two courses whose protected airspaces intersect with an angular difference of 140 degrees.",
+            "choices": [
+              {
+                "text": "Opposite/reciprocal courses, because the angular difference is greater than 135 degrees and the protected airspaces intersect.",
+                "is_correct": true
+              },
+              {
+                "text": "Crossing courses, because the angular difference is between 45 and 180 degrees.",
+                "is_correct": false
+              },
+              {
+                "text": "Same courses, because the angular difference is less than 180 degrees.",
+                "is_correct": false
+              },
+              {
+                "text": "The classification is undefined because protected airspaces intersect rather than overlap.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Opposite/reciprocal courses are courses whose protected airspaces are coincident, overlap, or intersect and whose angular difference is greater than 135 degrees through 180 degrees inclusive. At 140 degrees with intersecting protected airspaces, both conditions are satisfied — this is opposite/reciprocal.",
+            "publication_id": "content-expansion-pass-02:chapter-01:activities:1-2-2:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "1-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The back adds an unsupported safety rationale: 'Both are required for standardised, safe operations.' The source block states only that the order prescribes procedures and phraseology; it does not state why both are required or link them to safety outcomes. The definitional parentheticals ('Procedures govern what controllers do; phraseology governs what controllers say') are reasonable clarifications of the terms. Trim the back to what the source supports.",
+      "source_basis": "Source 1-1-1 states: 'This order prescribes air traffic control procedures and phraseology for use by persons providing air traffic control services.'",
+      "match": {
+        "front": "What two distinct elements does FAA Order JO 7110.65 prescribe for persons providing ATC services?",
+        "back": "Air traffic control procedures and phraseology. Procedures govern what controllers do; phraseology governs what controllers say. Both are required for standardised, safe operations.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What two distinct elements does FAA Order JO 7110.65 prescribe for persons providing ATC services?",
+          "back": "Air traffic control procedures (what controllers do) and phraseology (how controllers communicate).",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "1-1-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The back states that published interpretations are available on the MyFAA employee portal and that 'interpretations are internal.' The source block only identifies two public websites where the order text is available — it says nothing about interpretations, MyFAA, or internal systems. The front compounds the problem by asking about 'how does this differ from where published interpretations are available,' which frames a question the source does not answer. The flashcard should test only what the source states: where the order text is available.",
+      "source_basis": "Source 1-1-3 states: 'This order is available on the FAA's Air Traffic Plans and Publications website at https://www.faa.gov/air_traffic/publications/ and Orders and Notices website at https://www.faa.gov/regulations_policies/orders_notices/.' The source does not mention interpretations, MyFAA, or internal portals.",
+      "match": {
+        "front": "Where is the text of FAA Order JO 7110.65 available online, and how does this differ from where published interpretations are available?",
+        "back": "The order text is available on two public FAA websites: Air Traffic Plans and Publications, and Orders and Notices. Published interpretations are available on the MyFAA employee portal (an internal system). The order is public; interpretations are internal.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "Where is the text of FAA Order JO 7110.65 available online?",
+          "back": "On two FAA websites: the Air Traffic Plans and Publications website and the Orders and Notices website.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "1-2-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The back claims notes 'do not create independent mandatory requirements' and that 'the directive text governs; notes support understanding of it.' The source block only defines what notes are: 'Statements of fact, or of a prefatory or explanatory nature relating to directive material.' The source does not address the legal or regulatory force of notes. The unsupported claim about mandatory requirements should be removed. The second part of the front ('does a note create independent mandatory requirements?') also frames a question the source does not answer.",
+      "source_basis": "Source 1-2-3 states: 'Statements of fact, or of a prefatory or explanatory nature relating to directive material, are set forth as notes.' The source does not address whether notes create independent requirements.",
+      "match": {
+        "front": "What is the function of a note in FAA Order JO 7110.65, and does a note create independent mandatory requirements?",
+        "back": "A note sets forth statements of fact or prefatory/explanatory material relating to directive material. Notes explain or provide context — they do not create independent mandatory requirements. The directive text governs; notes support understanding of it.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "In FAA Order JO 7110.65, what kind of material is set forth as notes?",
+          "back": "Notes set forth statements of fact, or material of a prefatory or explanatory nature, relating to directive material.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 1-2-3' and 'Per 1-2-4') instead of stating the operational distinction between notes and references directly. The question stem, choices, and correct answer are otherwise accurate and self-contained.",
+      "source_basis": "1-2-4: 'As used in this order, references direct attention to an additional or supporting source of information such as FAA, NWS, and other agencies' orders, directives, notices, CFRs, and Advisory Circulars (ACs).'",
+      "match": {
+        "question_text": "In FAA Order JO 7110.65, how does the function of a note differ from the function of a reference?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "In FAA Order JO 7110.65, how does the function of a note differ from the function of a reference?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Notes provide explanatory or factual context relating to directive material. References direct attention to additional or supporting sources of information such as FAA orders, NWS directives, CFRs, and Advisory Circulars. Notes explain; references point to other sources.",
+          "choices": [
+            {
+              "text": "Notes point to external sources; references provide explanatory context for directive material.",
+              "is_correct": false
+            },
+            {
+              "text": "Notes and references serve the same function and the terms are used interchangeably.",
+              "is_correct": false
+            },
+            {
+              "text": "Notes are mandatory; references are optional.",
+              "is_correct": false
+            },
+            {
+              "text": "Notes provide explanatory or factual context; references direct attention to additional or supporting sources of information.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-2-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 1-2-4') instead of stating the operating principle directly. The activity scenario, choices, and correct answer are otherwise accurate and self-contained.",
+      "source_basis": "1-2-4: 'As used in this order, references direct attention to an additional or supporting source of information such as FAA, NWS, and other agencies' orders, directives, notices, CFRs, and Advisory Circulars (ACs).'",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "What should the controller do?",
+          "situation": "A controller is applying a separation procedure in FAA Order JO 7110.65 and sees a reference block citing another FAA order. The controller assumes the referenced order must be consulted and followed before any action can be taken.",
+          "para_context": "A reference directs attention to additional or supporting information; it does not independently add a mandatory procedural step.",
+          "question_text": "Does a reference block in FAA Order JO 7110.65 create an additional mandatory procedure that the controller must follow before acting?",
+          "choices": [
+            {
+              "text": "Yes; all references create binding obligations that must be satisfied before the referencing procedure can be applied.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if the reference cites another chapter within JO 7110.65 itself.",
+              "is_correct": false
+            },
+            {
+              "text": "No; references direct attention to supporting information but do not, by themselves, create additional mandatory procedural steps.",
+              "is_correct": true
+            },
+            {
+              "text": "No; references are decorative elements that have no operational function.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 1-2-4, references direct attention to an additional or supporting source of information. They alert the reader to where related or supporting material can be found, but they do not independently create new mandatory procedures. The controller should be aware of the referenced material but need not treat every reference as a prerequisite.",
+          "publication_id": "content-expansion-pass-02:chapter-01:activities:1-2-4:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "What should the controller do?",
+            "situation": "A controller is applying a separation procedure in FAA Order JO 7110.65 and sees a reference block citing another FAA order. The controller assumes the referenced order must be consulted and followed before any action can be taken.",
+            "para_context": "A reference directs attention to additional or supporting information; it does not independently add a mandatory procedural step.",
+            "question_text": "Does a reference block in FAA Order JO 7110.65 create an additional mandatory procedure that the controller must follow before acting?",
+            "choices": [
+              {
+                "text": "Yes; all references create binding obligations that must be satisfied before the referencing procedure can be applied.",
+                "is_correct": false
+              },
+              {
+                "text": "Yes, but only if the reference cites another chapter within JO 7110.65 itself.",
+                "is_correct": false
+              },
+              {
+                "text": "No; references direct attention to supporting information but do not, by themselves, create additional mandatory procedural steps.",
+                "is_correct": true
+              },
+              {
+                "text": "No; references are decorative elements that have no operational function.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "References direct attention to additional or supporting sources of information such as FAA orders, NWS directives, CFRs, and Advisory Circulars. They alert the reader to where related or supporting material can be found, but they do not independently create new mandatory procedural steps. The controller should be aware of the referenced material but need not treat every reference as a prerequisite.",
+            "publication_id": "content-expansion-pass-02:chapter-01:activities:1-2-4:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 1-2-5a' and 'per 1-2-5b') instead of stating the change-number and reprint rules directly. The question stem, choices, and correct answer are otherwise accurate.",
+      "source_basis": "1-2-5a: 'The change number and the effective date are printed on each revised or additional page.' 1-2-5b: 'A page that does not require a change is reprinted in its original form.'",
+      "match": {
+        "question_text": "What do the change number and effective date on a revised page of FAA Order JO 7110.65 tell the controller, and are they printed on every page?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What do the change number and effective date on a revised page of FAA Order JO 7110.65 tell the controller, and are they printed on every page?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "The change number and effective date are printed on each revised or additional page — not on every page of the order. They allow the controller to verify at a glance that the page reflects the current change level. An unrevised page that does not require a change is reprinted in its original form.",
+          "choices": [
+            {
+              "text": "They are printed on every page of the order so controllers can verify currency throughout.",
+              "is_correct": false
+            },
+            {
+              "text": "They are printed on each revised or additional page only, allowing quick verification that the page is at the current change level.",
+              "is_correct": true
+            },
+            {
+              "text": "They appear only on the Explanation of Changes pages, not on the procedure pages themselves.",
+              "is_correct": false
+            },
+            {
+              "text": "They are printed on the cover page only; internal pages use a separate date-tracking system.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "explanation_quality"
+      ],
+      "problem": "The correct answer misstates the scope of the WAKE TURBULENCE APPLICATION annotation as applying to 'all information that follows the annotation within that section of the order.' The source specifies 'the remaining information in the paragraph,' not the section. A section is a higher-level organizational unit in FAA Order JO 7110.65; substituting it broadens the annotation's scope beyond what the source states. The explanation also uses paragraph-location scaffolding ('Per 1-2-5f').",
+      "source_basis": "1-2-5f: 'WAKE TURBULENCE APPLICATION inserted within a paragraph means that the remaining information in the paragraph requires the application of wake turbulence procedures.'",
+      "match": {
+        "question_text": "What does the annotation WAKE TURBULENCE APPLICATION mean when it appears within a paragraph of FAA Order JO 7110.65?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What does the annotation WAKE TURBULENCE APPLICATION mean when it appears within a paragraph of FAA Order JO 7110.65?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "WAKE TURBULENCE APPLICATION inserted within a paragraph means that the remaining information in the paragraph requires the application of wake turbulence procedures. The annotation does not label a separate wake turbulence section — it marks that wake turbulence rules apply to the remainder of the paragraph in which the annotation appears.",
+          "choices": [
+            {
+              "text": "Only the sentence immediately preceding the annotation requires wake turbulence procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "The paragraph is an advisory discussion of wake turbulence and creates no mandatory procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "Wake turbulence procedures must be applied to all information that follows the annotation within that paragraph.",
+              "is_correct": true
+            },
+            {
+              "text": "Wake turbulence separation is waived for all operations described in that paragraph.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-2-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per the note following 1-2-5g') instead of stating the phraseology rephrasing guidance directly. The activity scenario, choices, and correct answer are otherwise accurate and self-contained.",
+      "source_basis": "Note following 1-2-5g: 'Controllers may, after first using the prescribed phraseology for a specific procedure, rephrase the message to ensure the content is understood. Good judgment must be exercised when using nonstandard phraseology.'",
+      "match": {
+        "activity_type": "phraseology_construction",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Evaluate whether the controller's action is consistent with the order's guidance on rephrasing prescribed phraseology.",
+          "question_text": "A controller issues a landing clearance using the prescribed phraseology, then rephrases the message with different words after the pilot sounds uncertain. Is this permitted under FAA Order JO 7110.65?",
+          "choices": [
+            {
+              "text": "Yes; controllers may rephrase after first using the prescribed phraseology, provided they exercise good judgment and ensure the content is understood.",
+              "is_correct": true
+            },
+            {
+              "text": "No; once prescribed phraseology is used, no further transmission on the same subject is permitted.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes; controllers may rephrase at any time and need not use prescribed phraseology first.",
+              "is_correct": false
+            },
+            {
+              "text": "No; rephrasing is only permitted when the annotation EXAMPLE appears in the section.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per the note following 1-2-5g, controllers may, after first using the prescribed phraseology for a specific procedure, rephrase the message to ensure the content is understood. Good judgment must be exercised. The prescribed words come first; rephrasing is permitted as a follow-up comprehension aid.",
+          "publication_id": "content-expansion-pass-02:chapter-01:activities:1-2-5:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "phraseology_construction",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Evaluate whether the controller's action is consistent with the order's guidance on rephrasing prescribed phraseology.",
+            "question_text": "A controller issues a landing clearance using the prescribed phraseology, then rephrases the message with different words after the pilot sounds uncertain. Is this permitted under FAA Order JO 7110.65?",
+            "choices": [
+              {
+                "text": "Yes; controllers may rephrase after first using the prescribed phraseology, provided they exercise good judgment and ensure the content is understood.",
+                "is_correct": true
+              },
+              {
+                "text": "No; once prescribed phraseology is used, no further transmission on the same subject is permitted.",
+                "is_correct": false
+              },
+              {
+                "text": "Yes; controllers may rephrase at any time and need not use prescribed phraseology first.",
+                "is_correct": false
+              },
+              {
+                "text": "No; rephrasing is only permitted when the annotation EXAMPLE appears in the section.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Controllers may, after first using the prescribed phraseology for a specific procedure, rephrase the message to ensure the content is understood. Good judgment must be exercised when using nonstandard phraseology. The prescribed words come first; rephrasing is permitted as a follow-up comprehension aid.",
+            "publication_id": "content-expansion-pass-02:chapter-01:activities:1-2-5:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "1-2-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The question stem opens with 'In TBL 1-2-1' — table-location scaffolding that substitutes document-structure knowledge for self-contained context. The explanation uses 'Per TBL 1-2-1' instead of stating the disambiguation principle directly. The choices and correct answer are otherwise accurate.",
+      "source_basis": "1-2-6: 'As used in this order, the abbreviations listed below have the following meanings indicated. (See TBL 1-2-1.)' TBL 1-2-1 lists AAR with two meanings: Adapted Arrival Route and Airport Arrival Rate.",
+      "match": {
+        "question_text": "In TBL 1-2-1, the abbreviation AAR has two listed meanings: Adapted Arrival Route and Airport Arrival Rate. How does a controller determine which meaning applies when reading FAA Order JO 7110.65?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "FAA Order JO 7110.65 lists two meanings for the abbreviation AAR: Adapted Arrival Route and Airport Arrival Rate. How does a controller determine which meaning applies when reading the order?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Several abbreviations in FAA Order JO 7110.65 have multiple listed meanings. Context determines which applies: AAR as Airport Arrival Rate appears in traffic management discussions with numeric rates; AAR as Adapted Arrival Route appears in route descriptions. The controller must use operational context, not list order, to disambiguate.",
+          "choices": [
+            {
+              "text": "Use the first meaning listed, as it is the primary definition.",
+              "is_correct": false
+            },
+            {
+              "text": "Determine the correct meaning from the operational context in which the abbreviation is used.",
+              "is_correct": true
+            },
+            {
+              "text": "All listed meanings apply simultaneously — the controller must satisfy every possible interpretation.",
+              "is_correct": false
+            },
+            {
+              "text": "Use the longer meaning for en route operations and the shorter meaning for terminal operations.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "1-2-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses table-location scaffolding ('Per TBL 1-2-1') instead of stating the abbreviation disambiguation principle directly. The activity scenario, choices, and correct answer are otherwise accurate and self-contained.",
+      "source_basis": "TBL 1-2-1 lists AAR with two meanings: Adapted Arrival Route and Airport Arrival Rate.",
+      "match": {
+        "activity_type": "situation_action",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Interpret the abbreviation in context.",
+          "situation": "A controller reading a traffic management directive sees the abbreviation AAR used in the sentence: 'The AAR for ATL is currently 32.' A trainee claims AAR always means Adapted Arrival Route. The controller needs to determine the correct meaning.",
+          "para_context": "When an abbreviation has more than one approved meaning, determine the intended meaning from its operational context.",
+          "question_text": "In the sentence 'The AAR for ATL is currently 32,' what does AAR most likely mean, and how should the controller make this determination?",
+          "choices": [
+            {
+              "text": "Adapted Arrival Route, because AAR always defaults to the first definition listed in TBL 1-2-1.",
+              "is_correct": false
+            },
+            {
+              "text": "Airport Arrival Rate, because the numeric value (32) in context of traffic management indicates a flow rate, not a route.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller must use both meanings simultaneously — 32 Adapted Arrival Routes at a rate.",
+              "is_correct": false
+            },
+            {
+              "text": "Adverse Assumption Obstacle, because traffic management directives use safety abbreviations.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per TBL 1-2-1, AAR has two listed meanings: Adapted Arrival Route and Airport Arrival Rate. Context determines which applies. A numeric value ('32') used with an airport identifier (ATL) in a traffic management context indicates a flow rate — Airport Arrival Rate.",
+          "publication_id": "content-expansion-pass-02:chapter-01:activities:1-2-6:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "situation_action",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Interpret the abbreviation in context.",
+            "situation": "A controller reading a traffic management directive sees the abbreviation AAR used in the sentence: 'The AAR for ATL is currently 32.' A trainee claims AAR always means Adapted Arrival Route. The controller needs to determine the correct meaning.",
+            "para_context": "When an abbreviation has more than one approved meaning, determine the intended meaning from its operational context.",
+            "question_text": "In the sentence 'The AAR for ATL is currently 32,' what does AAR most likely mean, and how should the controller make this determination?",
+            "choices": [
+              {
+                "text": "Adapted Arrival Route, because AAR always defaults to the first definition listed.",
+                "is_correct": false
+              },
+              {
+                "text": "Airport Arrival Rate, because the numeric value (32) in context of traffic management indicates a flow rate, not a route.",
+                "is_correct": true
+              },
+              {
+                "text": "The controller must use both meanings simultaneously — 32 Adapted Arrival Routes at a rate.",
+                "is_correct": false
+              },
+              {
+                "text": "Adverse Assumption Obstacle, because traffic management directives use safety abbreviations.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The abbreviation AAR has two listed meanings in FAA Order JO 7110.65: Adapted Arrival Route and Airport Arrival Rate. Context determines which applies. A numeric value ('32') used with an airport identifier (ATL) in a traffic management context indicates a flow rate — Airport Arrival Rate.",
+            "publication_id": "content-expansion-pass-02:chapter-01:activities:1-2-6:0"
+          }
+        }
+      ]
+    }
+  ]
+}

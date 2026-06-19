@@ -1,0 +1,1949 @@
+{
+  "version": 1,
+  "chapter": 5,
+  "target_generation_source": "content_expansion_pass_02",
+  "packet_sha256": "a390b480d349a5795b278f66baf851ed08108e51c5000da4f55af87debc4b60f",
+  "manifest_sha256": "0b1440cf90d1b10195b3ef7895d259cdb0aa4b92ccfa1f23263d13b6c0094750",
+  "summary": {
+    "overall": "Chapter 5 was reviewed in 4 bounded source-grounded shards. Proposed changes: 43 replacements, 1 splits, and 0 removals.",
+    "patterns": [
+      "Source fidelity gaps are the dominant defect. Four questions (981ea30a, bcf37078, 8d0b08ee, 0449d426) teach content that does not appear in or contradicts the packet source blocks — describing manual fix posting as radar display marking, inventing code-minimization principles for 5-2-2, listing coordination types as transfer methods in 5-4-3, and mischaracterizing target resolution as a system capability.",
+      "Invented rationales in explanations are a recurring minor pattern. Several items add unsupported claims about sensor refresh rates, intermittent failure mechanisms, or policy purposes that the source blocks do not state. These rationales sound plausible but are speculative.",
+      "Distractors in early items (5-1-3) are operationally absurd — instructing controllers to ignore interference or terminate all radar operations — rather than representing plausible procedural errors.",
+      "Paragraph-location references in answer choices and explanations are the least severe but most prevalent automated flag pattern. In most cases the reference is incidental rather than the thing being tested; a few items (b85d4035 answer choice) embed paragraph references as substantive content.",
+      "Flashcards are the strongest format in this shard. All six are source-accurate, well-scoped, and appropriate for their card types.",
+      "Paragraph-location scaffolding persists in several explanations and flashcard backs (5-8-4, 5-9-11 question and flashcard, 5-9-2 flashcard), where document references substitute for stating the operational requirement directly.",
+      "Answer-length cues appear in two 5-9-4 items — the question's correct answer and the activity's correct choice are visibly longer than distractors, leaking the answer.",
+      "One question (5-7-1) has near-duplicate incorrect and correct choices that both conclude 'Aircraft A only,' making the question ambiguous.",
+      "The SOIA activity (5-9-9) has a blocker-level defect: the correct classification (A: SOIA, B: dependent, C: neither) is marked false while an incorrect classification is marked true — the answer key is fully inverted.",
+      "One flashcard (5-9-2) states the interception angle criterion incorrectly, substituting 'vectoring to an intermediate fix' for the actual distance-based and triple-simultaneous criteria from TBL 5-9-1.",
+      "Explanations in two questions add unsupported rationales absent from source blocks: efficiency/profile-management claims (5-7-4) and alignment/configuration benefits (5-9-1).",
+      "The strong items — 5-6-1 discrimination activity, 5-8-2 phraseology flashcard, 5-9-5 separation-responsibility question, 5-9-6 question/activity/cards — are source-faithful, use plausible distractors, and teach operational decision-making.",
+      "Fabricated content: 7 of 13 questions ask about operational concepts not present in their paragraph's source blocks (5-10-10, 5-10-5, 5-10-8, 5-11-2, 5-11-4, 5-12-1, 5-13-3). These invent planning objectives, verification procedures, system purposes, and timing that the source does not address.",
+      "Factual reversal: The 5-10-2 question and flashcard both identify altimeter setting (item 1) as the mandatory exception to the omission rule, but the source states that subparagraph 3 — special weather observations — is the exception. Altimeter setting is item 1 and may be omitted after the first approach when no change has occurred.",
+      "Document-structure scaffolding: Explanations for the 5-10-1 question and activity open with 'The note explicitly states' and 'The paragraph authorizes,' teaching paragraph-location identification rather than the operating requirement directly.",
+      "Unsupported safety and operational rationales: Explanations add claims such as 'prompts immediate pilot action' (5-11-5), 'terrain hazard' (E-MSAW flashcard 5-13-2), and 'no weather minimum restricting' (5-10-1 activity) that are not stated in the source blocks.",
+      "Strong items: Flashcards for 5-11-1, 5-11-5, 5-13-2, and 5-13-4 accurately capture procedural minima, intervals, and trigger lists from their source blocks. The 5-13-2 discrimination activity uses well-constructed scenarios that correctly distinguish indefinite from specific suppression use cases.",
+      "Explanation scaffolding: three items use 'the paragraph requires,' 'the note states,' or equivalent document-location language instead of stating operational requirements directly.",
+      "Invented rationale: one explanation adds a safety justification ('ensures approaching aircraft with Mode C are visible') that is not present in the source blocks.",
+      "Source fidelity gap: one question tests 'holding fix' and 'direction of holding' — content absent from paragraph 5-13-9, which addresses specific ERAM computer-entry actions and coordination rules.",
+      "Flashcard overload: one card combines altitude buffer amounts and data block content into a single retrieval target.",
+      "Answer length cue: one question's correct answer is substantially longer than its distractors, making it distinguishable by shape rather than substance."
+    ],
+    "generation_guidance": [
+      "Verify every question's correct answer against the exact wording of the source block. Do not paraphrase operational procedures — state the requirement as written. If the source says 'do not request a code change until the aircraft is within your area,' do not render that as 'keep code changes to a minimum.'",
+      "When a paragraph contains two or more distinct conditions (e.g., 5-2-10's standby triggers), either test both together in one item or create separate items — do not test only one and label it 'the' purpose.",
+      "Explanations must state the operating requirement directly. Do not add rationale clauses beginning with 'because,' 'this ensures,' or 'the system is designed to' unless the source block itself provides that reasoning.",
+      "For paragraphs with minimal source text (e.g., 5-2-20's single-sentence instruction), test the explicit procedure rather than inventing surrounding conditions. The source says to inform the pilot — the question should test that, not guess when the controller should want the transponder off.",
+      "Activity discrimination items for minima and angular difference thresholds are working well and match the lookup/application skills that the source demands. Continue this pattern for remaining minima-heavy paragraphs.",
+      "Flashcard backs that cross-reference other paragraphs (e.g., 'apply the procedures in paragraph 10-4-4') should state the operational action — 'apply communications failure procedures' — without citing the paragraph number, unless the cross-reference itself is the required retrieval target.",
+      "State operational requirements directly in explanations and flashcard backs; never use paragraph numbers, table identifiers, or document-location language as a substitute for substance.",
+      "Ensure all answer choices in multiple-choice questions are of comparable length to avoid length cues that reveal the correct answer.",
+      "Verify answer keys against source criteria before publication — the SOIA classification activity had all three scenarios misclassified in the 'correct' answer.",
+      "Do not add rationales (efficiency benefits, safety justifications, alignment purposes) unless the source blocks explicitly state them.",
+      "For flashcards that reference tables (TBL 5-9-1), include the actual values rather than the table identifier so the card is self-contained.",
+      "When testing prohibitions with exceptions (e.g., FL 390 speed adjustment prohibition lifted by pilot consent), ensure distractors represent distinct misunderstandings rather than near-duplicates of the correct answer.",
+      "Continue the strong pattern from 5-9-6 where operational scenarios with specific numeric parameters require the student to classify the correct tier from a table of thresholds.",
+      "Ground every item in a specific statement from the paragraph's source blocks. Do not ask 'why' or 'what is the purpose' unless the source explicitly states a reason or purpose. Most of these paragraphs state WHAT the controller does, not WHY.",
+      "For paragraphs that are purely procedural (5-10-5, 5-10-8, 5-11-2, 5-12-1, 5-13-3), test the exact procedural action, condition, or phraseology — not an invented rationale or planning objective.",
+      "When a paragraph contains a list of items (5-10-2, 5-10-1, 5-11-5), verify which item is which position before writing questions about mandatory vs. omissible elements. Cross-check numbered subparagraph positions against the source block ordering.",
+      "Write explanations that state the operating requirement directly. Do not open with 'The paragraph states,' 'The note says,' or any document-location reference. Begin with the rule or condition.",
+      "Do not add operational justifications (safety, efficiency, terrain protection, situational awareness) unless the source block explicitly provides that justification. If the source only states the action, explain only the action.",
+      "For phraseology flashcards, verify the sectional context — 5-12-3 (PAR) should not be conflated with ASR descent instructions from 5-11-4, which use different phraseology.",
+      "Write explanations that state the operational requirement directly. Never use phrases like 'the paragraph says,' 'the note states,' 'this section requires,' or similar document-structure scaffolding.",
+      "Do not add safety rationales, policy purposes, or operational justifications that are not stated in the source blocks. If the source gives only a duty, threshold, or sequence, explain that directly.",
+      "Test only the content present in the assigned source paragraph. For ERAM paragraphs, that means the specific computer-entry actions, coordination rules, and system capabilities — not general holding-instruction components like fix names and holding directions.",
+      "Keep each flashcard to one retrieval target. When a paragraph covers multiple distinct facts (e.g., buffer amounts and data block contents), split them into separate cards.",
+      "Balance distractor length against correct-answer length. The correct answer for this paragraph's concepts will naturally be more detailed than a simplistic wrong answer, but avoid gaps exceeding roughly 50 characters.",
+      "For suppression/inhibition discrimination items, model the approach used in the CA/MCI question (858771f3): a situated operational scenario, source-verbatim rule text as the correct answer, and distractors that reflect specific, plausible misapplications of the functions."
+    ],
+    "shard_overviews": [
+      "One-quarter of the 16 questions have significant source-fidelity defects. Four questions teach concepts not present in the source blocks or mischaracterize operational procedures. Three more questions have incomplete coverage, weak distractors, or add conditions absent from the minimal source. Two activities are well-constructed and source-accurate. All six flashcards are faithful to the source; two have paragraph-location references in the back that are incidental to the operational content and do not represent document-structure scaffolding. The remaining eight questions that passed review are accurate, well-distracted, and pedagogically sound.",
+      "Chapter 5 shard 2 covers 15 paragraphs (5-5-8 through 5-9-9) with 23 learning items. The shard is generally well-constructed: 13 of 23 items require no intervention. The strongest areas are the simultaneous dependent approach para (5-9-6) with 4 correct items and the formation flight and radar departure cards which are accurate and well-focused. The recurring defects are paragraph-location scaffolding in explanations, an answer-length cue in the 5-9-4 question and activity, and one critical blocker where the SOIA classification activity (5-9-9) has its answer key inverted — the correct classification is marked false. No items require removal or splitting; all defects are correctable through targeted replacement.",
+      "The shard contains 13 questions, 2 activities, and 7 flashcards across 15 paragraphs. Nine blocker-level source-fidelity failures were found where item content was fabricated or contradicted the source blocks entirely. Seven minor-level issues involve document-structure scaffolding in explanations, unsupported explanatory claims, and minor format or precision errors. Six items are correct as written. The most prevalent defect is questions that test content absent from the paragraph's source blocks — fabricated 'why' questions, invented verification procedures, and misattributed mandatory items. The strongest items are the flashcards for 5-11-1, 5-11-5, 5-13-2, and 5-13-4, and the E-MSAW discrimination activity for 5-13-2, which all test actual paragraph content accurately.",
+      "The shard covers five paragraphs of terminal and en route automation procedures (altitude display limits, ERAM hold entry, display configuration, CA/MCI alerts, MSAW inhibition). Most items are source-faithful and target operational decisions rather than paragraph-location trivia. The predominant defect is explanation quality: three items use document-structure scaffolding ('the paragraph requires,' 'the note states') and one item invents a safety rationale absent from the source blocks. One question is a source-fidelity failure — it tests holding fix and direction of holding entries that do not appear anywhere in the assigned paragraph's source blocks. One flashcard is overloaded with two unrelated retrieval targets. One question has an answer-length cue and an explanation that references external content. The two items left unchanged — the CA/MCI suppress-vs-inhibit question and its companion flashcard — are the strongest in the shard, with source-verbatim answer text, plausible distractors, and clean explanations."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "question",
+      "para_id": "5-1-7",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The question asks about the purpose of manual fix posting on a radar display and the correct answer describes marking geographic positions on the display. The source block defines manual fix posting as manually recording the observed or reported time over a fix for each controlled aircraft when the EAS FDP flight progress recording components are not operational. Nothing in the source mentions marking positions on a radar display. The question teaches a concept that does not exist in the assigned paragraph.",
+      "source_basis": "EN ROUTE. Manually record the observed or reported time over a fix at least once for each controlled aircraft in your sector of responsibility when the flight progress recording components of the EAS FDP are not operational.",
+      "match": {
+        "question_text": "What is the primary operational purpose of manual fix posting on a radar display?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "The flight progress recording components of the EAS FDP are not operational. What must an en route controller do for each controlled aircraft in the sector of responsibility?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When the flight progress recording components of the EAS FDP are not operational, the en route controller must manually record the observed or reported time over a fix at least once for each controlled aircraft in the sector of responsibility.",
+          "choices": [
+            {
+              "text": "Manually record the observed or reported time over a fix at least once for each controlled aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Mark each compulsory reporting point with a fix symbol on the radar display.",
+              "is_correct": false
+            },
+            {
+              "text": "Request each aircraft to report its position relative to every fix on its route at 15-minute intervals.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer control of all aircraft to an adjacent sector with functioning flight progress recording equipment.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-2-2",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The correct answer claims beacon code changes should be kept to a minimum and new codes must not duplicate other assigned codes. Neither principle appears in the source block for 5-2-2. The source states a single rule: do not request an aircraft to change from the code it was squawking in the transferring facility's area until the aircraft is within your area of responsibility, unless otherwise specified in a directive, LOA, or coordinated at handoff.",
+      "source_basis": "Unless otherwise specified in a directive or a letter of agreement or coordinated at the time of handoff, do not request an aircraft to change from the code it was squawking in the transferring facility's area until the aircraft is within your area of responsibility.",
+      "match": {
+        "question_text": "What principle governs when a controller should change an aircraft's assigned beacon code?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An aircraft is being handed off from another facility. When may a controller request the aircraft to change from the beacon code it was squawking in the transferring facility's area?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "A controller must not request an aircraft to change from the code it was squawking in the transferring facility's area until the aircraft is within the controller's area of responsibility. Exceptions apply when a directive, letter of agreement, or handoff coordination specifies otherwise.",
+          "choices": [
+            {
+              "text": "After the aircraft is within the controller's area of responsibility, unless a directive, letter of agreement, or handoff coordination permits otherwise.",
+              "is_correct": true
+            },
+            {
+              "text": "At any time the controller deems necessary, including before the aircraft enters the controller's airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft has established two-way radio communication, regardless of its position relative to the airspace boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the transferring facility explicitly requests the code change in writing.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-4-3",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The question asks for the three methods of transferring radar identification, but the correct answer lists 'handoff, point out, and automated information transfer (AIT).' These are coordination action types defined in 5-4-2, not the transfer methods specified in 5-4-3. The source for 5-4-3 lists three methods: physically pointing to the target on the receiving controller's display, using landline voice communications, and using automation capabilities. The correct answer is factually wrong.",
+      "source_basis": "Transfer the radar identification of an aircraft by at least one of the following methods: 1. Physically point to the target on the receiving controller's display. 2. Use landline voice communications. 3. Use automation capabilities.",
+      "match": {
+        "question_text": "What are the three standard methods for transferring radar identification of an aircraft between controllers?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What are the three methods listed for transferring radar identification of an aircraft to another controller?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Radar identification may be transferred by physically pointing to the target on the receiving controller's display, using landline voice communications, or using automation capabilities. These are the methods of transfer; handoff and point out are types of coordination actions that employ these methods.",
+          "choices": [
+            {
+              "text": "Physically point to the target on the receiving controller's display, use landline voice communications, or use automation capabilities.",
+              "is_correct": true
+            },
+            {
+              "text": "Handoff, point out, and automated information transfer.",
+              "is_correct": false
+            },
+            {
+              "text": "Instruct the pilot to report position over fixes, issue heading changes, or assign speed adjustments.",
+              "is_correct": false
+            },
+            {
+              "text": "Primary radar target correlation, secondary radar code matching, and ADS-B registration lookup.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-5-3",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The question characterizes target resolution as a system capability and target separation as a controller-applied standard. The source describes target resolution as a process the controller applies — not a system capability. It is an operational procedure with specific constraints (mandatory traffic advisories and safety alerts, prohibition with mosaic radar) and distinct measurement points (between target edges, not centers). The correct answer fundamentally misrepresents what target resolution is.",
+      "source_basis": "Target resolution (5-5-3): A process to ensure that correlated radar targets or digitized targets do not touch. Mandatory traffic advisories and safety alerts must be issued when this procedure is used. This procedure must not be provided utilizing mosaic radar systems. Target resolution must be applied between the edges of two primary targets, between the end of the beacon control slash and the edge of a primary target, and between the ends of two beacon control slashes. Target separation (5-5-2): Apply radar separation between the centers of primary radar targets, between the ends of beacon control slashes, between the end of a beacon control slash and the center of a primary target, and between the centers of digital targets. Do not allow targets to touch.",
+      "match": {
+        "question_text": "How does target resolution differ from target separation on a radar display?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which of the following is a key operational distinction between target resolution and target separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Target resolution is a process applied between target edges that requires mandatory traffic advisories and safety alerts and is prohibited with mosaic radar systems. Target separation is applied between target centers or beacon control slash ends and does not carry these additional requirements. Both procedures require that targets not touch on the display.",
+          "choices": [
+            {
+              "text": "Target resolution requires mandatory traffic advisories and safety alerts, is applied between target edges, and is prohibited with mosaic radar.",
+              "is_correct": true
+            },
+            {
+              "text": "Target resolution is an automated system function requiring no controller action; target separation is performed manually.",
+              "is_correct": false
+            },
+            {
+              "text": "Target resolution applies exclusively above FL 600; target separation applies at all altitudes.",
+              "is_correct": false
+            },
+            {
+              "text": "Target resolution and target separation are synonymous terms with identical application and requirements.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-1-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "distractor_quality",
+        "educational_coherence"
+      ],
+      "problem": "Two distractors — ignoring interference because EA activity is 'always authorized' and terminating all radar operations until EA concludes — are operationally absurd rather than plausible procedural mistakes. A controller would never ignore dangerous interference or shut down all radar. The distractors do not represent realistic confusions a controller might make.",
+      "source_basis": "When EA activity interferes with the operational use of radar: TERMINAL. Request suspension of the activity through the ARTCC. If immediate cessation of the activity is required, broadcast the request directly to the EA aircraft on the emergency frequency. Notify the ARTCC of direct broadcast as soon as possible.",
+      "match": {
+        "question_text": "When EA activity interferes with the operational use of radar in a terminal facility, what is the correct procedure?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When EA activity interferes with the operational use of radar in a terminal facility, what is the correct procedure?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "For terminal facilities, the controller must request suspension of the EA activity through the ARTCC. If immediate cessation is required, the controller broadcasts the request directly to the EA aircraft on the emergency frequency and notifies the ARTCC of the direct broadcast as soon as possible. This differs from en route procedure where the controller requests suspension directly from the responsible military unit or aircraft.",
+          "choices": [
+            {
+              "text": "Request suspension through the ARTCC. If immediate cessation is required, broadcast directly to the EA aircraft on the emergency frequency and notify the ARTCC as soon as possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Request suspension directly from the responsible military unit or aircraft, following the en route procedure.",
+              "is_correct": false
+            },
+            {
+              "text": "Request suspension through the ARTCC only; never broadcast directly to the aircraft regardless of urgency.",
+              "is_correct": false
+            },
+            {
+              "text": "Change the radar frequency band or channel to avoid the interference without coordinating with the EA aircraft or ARTCC.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-2-10",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "completeness",
+        "source_fidelity"
+      ],
+      "problem": "The question asks for 'the operational purpose' of standby as though there is one. The source gives two distinct and independent purposes: (a) when approximately 15 miles from destination and transponder/ADS-B operation is no longer desired, and (b) to reduce clutter in a multi-target area with instruction to return to normal as soon as possible. The correct answer and explanation cover only the clutter-reduction purpose and omit the destination-proximity purpose entirely. The phrase 'derogating the radar presentation' is also not FAA source language.",
+      "source_basis": "You may instruct an aircraft operating on an assigned code to change the transponder/ADS-B to standby position: a. When approximately 15 miles from its destination and you no longer desire operation of the transponder/ADS-B; or b. When necessary to reduce clutter in a multi-target area, provided you instruct the pilot to return the transponder/ADS-B to normal position as soon as possible thereafter.",
+      "match": {
+        "question_text": "What is the operational purpose of instructing a pilot to place the transponder in standby?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "In which of the following situations may a controller instruct an aircraft operating on an assigned code to squawk standby?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "A controller may instruct an aircraft to squawk standby when the aircraft is approximately 15 miles from its destination and transponder/ADS-B operation is no longer desired, or to reduce clutter in a multi-target area provided the pilot is instructed to return to normal as soon as possible thereafter.",
+          "choices": [
+            {
+              "text": "When the aircraft is approximately 15 miles from its destination and the controller no longer desires transponder/ADS-B operation.",
+              "is_correct": true
+            },
+            {
+              "text": "Only during declared emergencies when the aircraft needs to conserve electrical power.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft has landed and completed its landing roll.",
+              "is_correct": false
+            },
+            {
+              "text": "Whenever the controller wants to test whether the transponder is generating a valid Mode C altitude return.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-2-20",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The source block for 5-2-20 is a single sentence: 'Inform the pilot when you want their aircraft's transponder and ADS-B Out turned off' followed by the STOP SQUAWK phraseology. The correct answer adds specific operational conditions — 'upon landing' and 'when exiting controlled airspace' — that do not appear in the source. The source gives the controller discretion and specifies the required action (inform the pilot), not the circumstances. The question invents conditions the source does not provide.",
+      "source_basis": "Inform the pilot when you want their aircraft's transponder and ADS-B Out turned off. Phraseology: STOP SQUAWK. (For a military aircraft when you do not know if the military service requires that it continue operating on another mode), STOP SQUAWK (mode in use).",
+      "match": {
+        "question_text": "When should an aircraft's radar beacon service be terminated?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What must a controller do when they want an aircraft's transponder and ADS-B Out turned off?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When a controller wants an aircraft's transponder and ADS-B Out turned off, they must inform the pilot. The prescribed phraseology is STOP SQUAWK. For a military aircraft when it is not known whether the military service requires continued operation on another mode, use STOP SQUAWK followed by the mode in use.",
+          "choices": [
+            {
+              "text": "Inform the pilot, using the phraseology STOP SQUAWK.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue a clearance that terminates the aircraft's IFR flight plan, which automatically disables the transponder.",
+              "is_correct": false
+            },
+            {
+              "text": "Instruct the pilot to squawk standby first, then stop squawk after the aircraft has taxied clear of the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign Code 0000 to remotely disable the transponder through the automation system.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-2-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses document-structure scaffolding ('The note states...') and invents a rationale not present in the source ('because the code may reflect an intermittent or developing failure'). The source states the rule unconditionally — observe Code 7600, apply communications failure procedures. It does not discuss intermittent failure as a justification.",
+      "source_basis": "When you observe a Code 7600 display, apply the procedures in paragraph 10-4-4, Communications Failure.",
+      "match": {
+        "question_text": "An aircraft squawks Code 7600 and the controller's ERAM display shows 'RDOF.' The pilot has been communicating normally on frequency. What is the controller's correct response?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An aircraft squawks Code 7600 and the controller's ERAM display shows 'RDOF.' The pilot has been communicating normally on frequency. What is the controller's correct response?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "When a controller observes a Code 7600 display, communications failure procedures must be applied regardless of whether the pilot is currently communicating on frequency. The observation of the code is the triggering event for the procedural obligation.",
+          "choices": [
+            {
+              "text": "Disregard the code display because the pilot is responding, so the indication must be erroneous.",
+              "is_correct": false
+            },
+            {
+              "text": "Apply communications failure procedures because the code display triggers the obligation regardless of current voice communication status.",
+              "is_correct": true
+            },
+            {
+              "text": "Instruct the pilot to recycle the transponder to clear what appears to be a false indication.",
+              "is_correct": false
+            },
+            {
+              "text": "Treat the code as a hijack indicator and apply hijack procedures instead.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-5-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "The correct answer is substantially longer and more substantive than the three distractors, creating an answer-length cue. The distractors are shorter generic statements while the correct answer contains the specific rule text.",
+      "source_basis": "Radar separation must be applied to all RNAV aircraft operating at and below FL450 on Q routes or random RNAV routes, excluding oceanic airspace.",
+      "match": {
+        "question_text": "An RNAV aircraft is operating at FL 430 on a Q route in domestic airspace. Is radar separation mandatory or discretionary for this aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An RNAV aircraft is operating at FL 430 on a Q route in domestic airspace. Is radar separation mandatory or discretionary for this aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Radar separation must be applied to all RNAV aircraft operating at and below FL 450 on Q routes or random RNAV routes, excluding oceanic airspace. The requirement is mandatory, not discretionary.",
+          "choices": [
+            {
+              "text": "Mandatory. Radar separation must be applied to RNAV aircraft at or below FL 450 on Q routes.",
+              "is_correct": true
+            },
+            {
+              "text": "Discretionary. Radar separation may be applied but is not required for RNAV aircraft on any route type.",
+              "is_correct": false
+            },
+            {
+              "text": "Mandatory only when the aircraft is operating on a random RNAV route, not on a designated Q route.",
+              "is_correct": false
+            },
+            {
+              "text": "Not required. RNAV aircraft above FL 290 are exempt from radar separation requirements.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-5-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality",
+        "educational_coherence"
+      ],
+      "problem": "The correct answer choice embeds a paragraph-location reference: 'as specified in paragraph 5-14-4, subparagraph f3.' This makes part of the answer depend on document-structure knowledge. The explanation also adds an unsupported rationale: 'These situations involve aircraft that may change altitude at pilot discretion without controller assignment, making Mode C-based vertical separation unreliable.' The source states the prohibition but does not explain why.",
+      "source_basis": "Do not use Mode C to effect vertical separation with an aircraft on a cruise clearance, contact approach, or as specified in paragraph 5-14-4, System Requirements, subparagraph f3.",
+      "match": {
+        "question_text": "A controller is using Mode C altitude information for vertical separation. In which of the following situations is this use prohibited?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller is using Mode C altitude information for vertical separation. In which of the following situations is this use prohibited?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Mode C altitude information must not be used to effect vertical separation with an aircraft on a cruise clearance, on a contact approach, or where system requirements prohibit Mode C altitude use for vertical separation.",
+          "choices": [
+            {
+              "text": "Only for aircraft in Class A airspace where all aircraft operate under IFR.",
+              "is_correct": false
+            },
+            {
+              "text": "An aircraft on a cruise clearance, on a contact approach, or where system requirements prohibit Mode C altitude use for vertical separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Any aircraft conducting a visual approach after being cleared by the tower.",
+              "is_correct": false
+            },
+            {
+              "text": "Only aircraft operating in oceanic airspace beyond radar coverage.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-5-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation invents a rationale not present in the source: 'The sensor type drives the minimum angular difference — the longer-range ARSR with slower refresh requires a wider angular separation for the controller to be confident that passing or diverging separation is safe.' The source states the different angular values by sensor type but provides no explanation for why they differ.",
+      "source_basis": "Single Site ASR or FUSION Mode: aircraft are on opposite/reciprocal courses and have passed each other; or aircraft on same or crossing courses and one has crossed the projected course of the other, and the angular difference is at least 15 degrees. Single Site ARSR or FUSION Mode when ISR is displayed: same conditions but angular difference is at least 45 degrees.",
+      "match": {
+        "question_text": "In terminal operations, a controller is using a single site ASR sensor. Two aircraft are on crossing courses and one has crossed the projected course of the other. What minimum angular difference between their courses is required to apply passing or diverging separation?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "In terminal operations, a controller is using a single site ASR sensor. Two aircraft are on crossing courses and one has crossed the projected course of the other. What minimum angular difference between their courses is required to apply passing or diverging separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "For single site ASR or FUSION mode, the required minimum angular difference between aircraft courses is at least 15 degrees. For single site ARSR or FUSION mode when ISR is displayed, the requirement increases to at least 45 degrees.",
+          "choices": [
+            {
+              "text": "At least 45 degrees, because all crossing-course scenarios require the same angular difference.",
+              "is_correct": false
+            },
+            {
+              "text": "At least 15 degrees, because the controller is using single site ASR.",
+              "is_correct": true
+            },
+            {
+              "text": "At least 30 degrees, which is the standard for all terminal separation scenarios.",
+              "is_correct": false
+            },
+            {
+              "text": "No minimum angular difference is required as long as the targets do not touch.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "5-5-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation invents a rationale not present in the source: 'The difference reflects the refresh rate and precision of the sensor type — ARSR provides less frequent updates, therefore requiring more angular separation for the controller to confirm passing or diverging.' The source states the different angular values but does not explain why they differ.",
+      "source_basis": "Single Site ASR or FUSION Mode: angular difference of at least 15 degrees. Single Site ARSR or FUSION Mode when target refresh is only from an ARSR or when in FUSION Mode ISR is displayed: angular difference of at least 45 degrees.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "For each scenario, determine the minimum angular difference required to apply passing or diverging separation in terminal operations.",
+          "situation": "Scenario 1: A terminal controller is using a single site ARSR sensor and has FUSION mode with ISR displayed. Two aircraft are on crossing assigned radar vectors. Scenario 2: A terminal controller is using a single site ASR sensor in FUSION mode. Two aircraft are on crossing courses and one has crossed the projected course of the other.",
+          "question_text": "What angular difference is required in each scenario?",
+          "choices": [
+            {
+              "text": "At least 15 degrees for both scenarios.",
+              "is_correct": false
+            },
+            {
+              "text": "At least 45 degrees for Scenario 1; at least 15 degrees for Scenario 2.",
+              "is_correct": true
+            },
+            {
+              "text": "At least 45 degrees for both scenarios.",
+              "is_correct": false
+            },
+            {
+              "text": "At least 15 degrees for Scenario 1; at least 45 degrees for Scenario 2.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "For single site ARSR or FUSION mode when ISR is displayed, the required minimum angular difference is at least 45 degrees. For single site ASR or FUSION mode (without ISR), it is at least 15 degrees. The difference reflects the refresh rate and precision of the sensor type — ARSR provides less frequent updates, therefore requiring more angular separation for the controller to confirm passing or diverging.",
+          "publication_id": "content-expansion-pass-02:chapter-05:activities:5-5-7:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "For each scenario, determine the minimum angular difference required to apply passing or diverging separation in terminal operations.",
+            "situation": "Scenario 1: A terminal controller is using a single site ARSR sensor and has FUSION mode with ISR displayed. Two aircraft are on crossing assigned radar vectors. Scenario 2: A terminal controller is using a single site ASR sensor in FUSION mode. Two aircraft are on crossing courses and one has crossed the projected course of the other.",
+            "question_text": "What angular difference is required in each scenario?",
+            "choices": [
+              {
+                "text": "At least 15 degrees for both scenarios.",
+                "is_correct": false
+              },
+              {
+                "text": "At least 45 degrees for Scenario 1; at least 15 degrees for Scenario 2.",
+                "is_correct": true
+              },
+              {
+                "text": "At least 45 degrees for both scenarios.",
+                "is_correct": false
+              },
+              {
+                "text": "At least 15 degrees for Scenario 1; at least 45 degrees for Scenario 2.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "For single site ARSR or FUSION mode when ISR is displayed, the required minimum angular difference is at least 45 degrees. For single site ASR or FUSION mode, the minimum is at least 15 degrees.",
+            "publication_id": "content-expansion-pass-02:chapter-05:activities:5-5-7:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-7-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "Two answer choices both conclude 'Aircraft A only' with near-identical reasoning — one marked incorrect ('but the consent makes it permissible whereas the other two remain prohibited') and one marked correct ('because the pilot has consented and the other two are in prohibited categories'). The student cannot distinguish between them, making the question effectively ambiguous.",
+      "source_basis": "5-7-1b prohibits speed adjustment to aircraft at or above FL 390 without pilot consent, aircraft executing a published high altitude instrument approach procedure, and aircraft in a holding pattern.",
+      "match": {
+        "question_text": "A controller evaluates three aircraft for speed adjustment. Aircraft A is at FL 400 and the pilot has consented. Aircraft B is flying a published high altitude instrument approach procedure. Aircraft C is established in a holding pattern. To which aircraft may speed adjustment be assigned?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller evaluates three aircraft for speed adjustment. Aircraft A is at FL 400 and the pilot has consented. Aircraft B is flying a published high altitude instrument approach procedure. Aircraft C is established in a holding pattern. To which aircraft may speed adjustment be assigned?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Speed adjustment must not be assigned to aircraft at or above FL 390 without pilot consent, aircraft executing a published high altitude instrument approach procedure, or aircraft in a holding pattern. Aircraft A may receive speed adjustment because the pilot has consented. Aircraft B and C are in prohibited categories regardless of consent.",
+          "choices": [
+            {
+              "text": "All three aircraft may receive speed adjustments because operational need overrides the restrictions.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "None of the aircraft may receive speed adjustments because all three fall into prohibited categories.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Aircraft A only, because the pilot has consented and the other two are in prohibited categories.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Aircraft B and C only, because they are on established procedures.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-7-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence",
+        "source_fidelity"
+      ],
+      "problem": "The explanation adds unsupported rationale not present in the source blocks: 'they constrain the pilot's ability to operate the aircraft efficiently and may interfere with normal profile management.' The source states only the operational duty to terminate speed adjustments when no longer needed, without attributing efficiency or profile-management reasons.",
+      "source_basis": "5-7-1 states 'Terminate speed adjustments when no longer needed.' 5-7-4 states 'Advise aircraft when speed adjustments are no longer needed.' The source prescribes the duty without elaborating on efficiency or profile-management consequences.",
+      "match": {
+        "question_text": "When should speed adjustments be terminated?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When should speed adjustments be terminated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Speed adjustments must be terminated when they are no longer needed to achieve or maintain the required or desired spacing. The controller must advise the aircraft that speed adjustments are no longer needed.",
+          "choices": [
+            {
+              "text": "When the speed adjustments are no longer needed to achieve or maintain the required or desired spacing.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Only when the aircraft reaches the final approach fix.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Speed adjustments automatically terminate when the aircraft changes altitude.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Speed adjustments must be maintained until the aircraft lands regardless of spacing achieved.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-8-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('The paragraph permits') and adds an invented conditional consequence ('If this separation increase cannot be achieved within 1 minute, the procedure may not be used') that is not stated in the source blocks.",
+      "source_basis": "5-8-4 states: separate a departing aircraft from an arriving aircraft on final approach by a minimum of 2 miles if separation will increase to a minimum of 3 miles (5 miles when 40 miles or more from the antenna) within 1 minute after takeoff.",
+      "match": {
+        "question_text": "A terminal controller releases a departing aircraft when an arriving aircraft on final approach is 2 miles from the runway. The antenna distance is 25 miles. What must happen within 1 minute after takeoff for this to be legal?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A terminal controller releases a departing aircraft when an arriving aircraft on final approach is 2 miles from the runway. The antenna distance is 25 miles. What must happen within 1 minute after takeoff for this to be legal?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Separate a departing aircraft from an arriving aircraft on final approach by a minimum of 2 miles if separation will increase to a minimum of 3 miles within 1 minute after takeoff. When the antenna distance is 40 miles or more, the separation must increase to a minimum of 5 miles. At 25 miles from the antenna, the 3-mile threshold applies.",
+          "choices": [
+            {
+              "text": "Separation must increase to a minimum of 5 miles within 1 minute after takeoff.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Separation must increase to a minimum of 3 miles within 1 minute after takeoff.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "The departing aircraft must reach at least 1,000 feet AGL within 1 minute.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "No additional requirement applies because 2 miles of separation is sufficient on its own.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-9-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The explanation adds unsupported details and rationale not present in the 5-9-1 source blocks: 'typically 1 to 2 miles from the final approach fix' (the exact distance from the approach gate to the FAF is not stated in these blocks) and 'It ensures aircraft are properly aligned and configured before beginning the final approach segment' (invented rationale — the source uses the approach gate as a vectoring reference without attributing alignment or configuration purposes).",
+      "source_basis": "5-9-1 requires vectoring arriving aircraft to intercept the final approach course at least 2 miles outside the approach gate unless weather minimums are met or the pilot requests a closer intercept. The approach gate serves as the reference point for final approach course interception.",
+      "match": {
+        "question_text": "What is the operational purpose of the approach gate in radar arrival procedures?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the operational purpose of the approach gate in radar arrival procedures?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The approach gate is the point on the final approach course that serves as the reference for vectoring aircraft to final. Aircraft must be vectored to intercept the final approach course at least 2 miles outside the approach gate, unless the reported ceiling is at least 500 feet above the MVA/MIA with visibility at least 3 miles, or the pilot specifically requests a closer intercept.",
+          "choices": [
+            {
+              "text": "A designated point on final approach course by which an arriving aircraft should be established on the final approach course.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "A physical gate at the airport perimeter that aircraft must pass before landing clearance is issued.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The point where the controller transfers communications to the tower.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The published missed approach point for the instrument approach procedure.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-9-11",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding: 'in accordance with paragraph 2-1-20.' The operational requirement should be stated directly rather than referencing a document location.",
+      "source_basis": "5-9-11 requires control instructions to be issued expeditiously and prior to losing the approved reduced separation when an aircraft on a simultaneous approach with reduced separation executes a go-around or has its approach clearance terminated. Wake turbulence cautionary advisories must also be issued.",
+      "match": {
+        "question_text": "Two aircraft are conducting simultaneous dependent approaches with reduced separation. The lead aircraft executes a go-around. When must the controller issue control instructions to increase separation?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Two aircraft are conducting simultaneous dependent approaches with reduced separation. The lead aircraft executes a go-around. When must the controller issue control instructions to increase separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "When an aircraft on a simultaneous approach with reduced separation executes a go-around or has its approach clearance terminated, the controller must expeditiously issue control instructions to increase separation before the approved reduced separation is lost. These instructions must establish approved separation through altitude and/or lateral divergence. Wake turbulence cautionary advisories must also be issued.",
+          "choices": [
+            {
+              "text": "Only after the reduced separation is lost, because the go-around aircraft must first establish a positive climb rate.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Expeditiously and prior to losing the approved reduced separation, establishing approved separation via altitude and/or lateral divergence.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Within 2 minutes, since the reduced separation provides a buffer for transitional maneuvers.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Only for the go-around aircraft; the other aircraft can continue its approach unchanged.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "5-9-11",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "The back of the card uses paragraph-location scaffolding: 'per 2-1-20.' The operational requirement should be stated directly rather than referencing a document location.",
+      "source_basis": "5-9-11 requires expeditious control instructions to increase separation before losing approved reduced separation, and wake turbulence cautionary advisories must be issued.",
+      "match": {
+        "front": "During simultaneous approaches with reduced separation, if one aircraft executes a go-around, what must the controller do and when?",
+        "back": "Expeditiously issue control instructions to increase separation between the applicable aircraft PRIOR TO LOSING the approved reduced separation. These instructions must establish approved separation (altitude and/or lateral via divergence). Wake turbulence cautionary advisories must also be issued per 2-1-20.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "During simultaneous approaches with reduced separation, if one aircraft executes a go-around, what must the controller do and when?",
+          "back": "Expeditiously issue control instructions to increase separation between the applicable aircraft PRIOR TO LOSING the approved reduced separation. These instructions must establish approved separation (altitude and/or lateral via divergence). Wake turbulence cautionary advisories must also be issued.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "5-9-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The back incorrectly states that the maximum interception angle depends on 'whether the approach is vectoring to an intermediate fix.' TBL 5-9-1 criteria are the distance from the interception point to the approach gate (less than 2 miles vs. 2 miles or more) and whether triple simultaneous approaches are in use. The back also uses paragraph-location scaffolding ('specified in TBL 5-9-1') instead of stating the actual values.",
+      "source_basis": "TBL 5-9-1 specifies a maximum interception angle of 20 degrees when the distance from the interception point to the approach gate is less than 2 miles or triple simultaneous approaches are in use, and 30 degrees (45 degrees for helicopters) when the distance is 2 miles or more.",
+      "match": {
+        "front": "What constraint applies to headings assigned for final approach course interception?",
+        "back": "Headings must permit final approach course interception on a track that does not exceed the interception angles specified in TBL 5-9-1. The maximum interception angle depends on the distance from the approach gate and whether the approach is vectoring to an intermediate fix.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "What constraint applies to headings assigned for final approach course interception?",
+          "back": "Headings must permit final approach course interception on a track that does not exceed a 20-degree interception angle when the interception point is less than 2 miles from the approach gate or triple simultaneous approaches are in use, or 30 degrees (45 degrees for helicopters) when the interception point is 2 miles or more from the approach gate.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-9-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "answer_defensibility"
+      ],
+      "problem": "The correct answer is visibly longer than all distractors, creating an answer-length cue that reveals the correct answer without operational knowledge. The correct choice spans multiple clauses while distractors are single-clause sentences.",
+      "source_basis": "5-9-4c states approach clearance may be issued only after the aircraft is established on a segment of a published route or instrument approach procedure, or is assigned an altitude to maintain until established on such a segment.",
+      "match": {
+        "question_text": "An arriving aircraft is being vectored to the final approach course and has been assigned an altitude of 3,000 feet to maintain until established on the localizer. The aircraft is still en route to the localizer intercept point. When is the controller authorized to issue the approach clearance?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An arriving aircraft is being vectored to the final approach course and has been assigned an altitude of 3,000 feet to maintain until established on the localizer. The aircraft is still en route to the localizer intercept point. When is the controller authorized to issue the approach clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Approach clearance may be issued when the aircraft is established on a segment of a published route or instrument approach procedure, or when assigned an altitude to maintain until established on such a segment. The aircraft has been assigned an altitude to maintain until established on the localizer, satisfying the second condition.",
+          "choices": [
+            {
+              "text": "After the aircraft confirms it is established on the localizer segment.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Only when the aircraft is conducting a radar approach procedure.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The assigned altitude-to-maintain meets the clearance condition.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Immediately — any vectored aircraft automatically qualifies.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "5-9-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "answer_defensibility"
+      ],
+      "problem": "The correct choice is significantly longer than all distractors, creating an answer-length cue. The correct choice spans multiple clauses specifying all three required elements, while distractors are shorter and simpler.",
+      "source_basis": "5-9-4 requires issuing position relative to a fix on the final approach course (or the NAVAID or airport), a vector to intercept the final approach course if required, and the approach clearance after the aircraft is established or assigned an altitude to maintain until established on a published segment.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Select the complete set of arrival instructions required before the aircraft reaches the approach gate.",
+          "situation": "A controller is preparing arrival instructions for an aircraft approaching the approach gate. The aircraft is being vectored to intercept the final approach course. The pilot has already stated the current ATIS code.",
+          "question_text": "Which set of instructions satisfies the approach-gate requirement?",
+          "choices": [
+            {
+              "text": "Position relative to the final approach course, a descent clearance to the MVA, and the current ATIS in full.",
+              "is_correct": false
+            },
+            {
+              "text": "Position relative to an appropriate final-course fix or reference, a vector to intercept final if required, and the approach clearance after the applicable establishment or altitude condition is met.",
+              "is_correct": true
+            },
+            {
+              "text": "A vector to the airport, landing clearance, and a reminder to report the runway in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "The current ATIS code, distance from the runway threshold, and instructions to maintain present speed until the final approach fix.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The required elements are position relative to a fix on the final approach course, or to the NAVAID or airport when no fix is available; a vector to intercept final when required; and the approach clearance, except for a radar approach, after the aircraft is established or has been assigned an altitude to maintain until established. Repeating a received ATIS broadcast is not one of these three elements.",
+          "publication_id": "content-expansion-pass-02:chapter-05:activities:5-9-4:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Select the complete set of arrival instructions required before the aircraft reaches the approach gate.",
+            "situation": "A controller is preparing arrival instructions for an aircraft approaching the approach gate. The aircraft is being vectored to intercept the final approach course. The pilot has already stated the current ATIS code.",
+            "question_text": "Which set of instructions satisfies the approach-gate requirement?",
+            "choices": [
+              {
+                "text": "Position relative to final course, descent to MVA, and full ATIS broadcast.",
+                "is_correct": false
+              },
+              {
+                "text": "Position relative to a final-course reference, vector if needed, and approach clearance after conditions are met.",
+                "is_correct": true
+              },
+              {
+                "text": "Vector to airport, landing clearance, and report runway in sight.",
+                "is_correct": false
+              },
+              {
+                "text": "ATIS code, distance from threshold, and present speed to final approach fix.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Before the aircraft reaches the approach gate, issue position relative to a fix on the final approach course (or to the NAVAID or airport if none is available), a vector to intercept the final approach course if required, and the approach clearance after the aircraft is established on a published segment or assigned an altitude to maintain until established on one. Repeating a previously received ATIS broadcast is not one of the required elements.",
+            "publication_id": "content-expansion-pass-02:chapter-05:activities:5-9-4:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "5-9-9",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "answer_defensibility"
+      ],
+      "problem": "The answer key is incorrect. The correct classification — A: SOIA (2,000 ft spacing, 2.8-degree offset, authorized), B: simultaneous dependent (4,500 ft spacing, nil offset, in dependent approach range), C: neither (500 ft below all thresholds) — is marked false. A wrong classification (A: dependent, B: SOIA, C: SOIA) is marked true. All three scenarios are misclassified in the marked-correct choice.",
+      "source_basis": "5-9-9 requires parallel runway centerlines separated by at least 750 feet and less than 3,000 feet with one final approach course offset by 2.5 to 3.0 degrees. 5-9-6 requires runway centerlines at least 2,500 feet apart for dependent approaches. Scenario A (2,000 ft, 2.8-degree offset, authorized) meets SOIA criteria. Scenario B (4,500 ft, nil offset) exceeds SOIA maximum but falls within the dependent approach range. Scenario C (500 ft) is below the minimum spacing for both SOIA (750 ft) and dependent approaches (2,500 ft).",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Classify each approach scenario as SOIA, simultaneous dependent, or neither.",
+          "situation": "Scenario A: Parallel runways 2,000 ft apart, one course offset by 2.8 degrees, FAA authorization in place. Scenario B: Parallel runways 4,500 ft apart, nil offset, dependent approaches in use. Scenario C: Parallel runways 500 ft apart with no offset authorization.",
+          "question_text": "How should each scenario be classified?",
+          "choices": [
+            {
+              "text": "A: SOIA; B: simultaneous dependent; C: neither.",
+              "is_correct": false
+            },
+            {
+              "text": "A: simultaneous dependent approaches; B: SOIA approaches; C: SOIA approaches.",
+              "is_correct": true
+            },
+            {
+              "text": "All three scenarios qualify as SOIA approaches under the applicable criteria.",
+              "is_correct": false
+            },
+            {
+              "text": "A: SOIA; B: SOIA; C: simultaneous dependent approaches.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "SOIA requires parallel runways with centerlines at least 750 ft and less than 3,000 ft apart with one course offset by 2.5-3.0 degrees and FAA authorization. Scenario A meets all criteria. Scenario B has runways outside the SOIA range (4,500 ft) but within dependent approach range (2,500-9,000 ft). Scenario C's runways at 500 ft are below the SOIA minimum of 750 ft.",
+          "publication_id": "content-expansion-pass-02:chapter-05:activities:5-9-9:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Classify each approach scenario as SOIA, simultaneous dependent, or neither.",
+            "situation": "Scenario A: Parallel runways 2,000 ft apart, one course offset by 2.8 degrees, FAA authorization in place. Scenario B: Parallel runways 4,500 ft apart, nil offset, dependent approaches in use. Scenario C: Parallel runways 500 ft apart with no offset authorization.",
+            "question_text": "How should each scenario be classified?",
+            "choices": [
+              {
+                "text": "A: SOIA; B: simultaneous dependent; C: neither.",
+                "is_correct": true
+              },
+              {
+                "text": "A: simultaneous dependent approaches; B: SOIA approaches; C: SOIA approaches.",
+                "is_correct": false
+              },
+              {
+                "text": "All three scenarios qualify as SOIA approaches under the applicable criteria.",
+                "is_correct": false
+              },
+              {
+                "text": "A: SOIA; B: SOIA; C: simultaneous dependent approaches.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "SOIA requires parallel runways with centerlines at least 750 ft and less than 3,000 ft apart, with one final approach course offset by 2.5 to 3.0 degrees, and FAA authorization. Scenario A meets all criteria. Scenario B has 4,500 ft runway spacing with no offset — outside the SOIA maximum of 3,000 ft but within the simultaneous dependent approach range of 2,500 to 9,000 ft. Scenario C at 500 ft is below the minimum spacing for SOIA (750 ft) and for dependent approaches (2,500 ft).",
+            "publication_id": "content-expansion-pass-02:chapter-05:activities:5-9-9:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-10-10",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The question asks why pilot acknowledgment of controller transmissions is critical during a radar approach, with a correct answer about confirming pilot receipt and initiating lost communication procedures. The source blocks for 5-10-10 state the opposite: after contact is established with the final controller and while on the final approach course, the controller must instruct the aircraft NOT to acknowledge further transmissions. The entire item — stem, correct answer, distractors, and explanation — is fabricated and contradicts the paragraph's actual content.",
+      "source_basis": "Paragraph 5-10-10 body: 'After contact has been established with the final controller and while on the final approach course, instruct the aircraft not to acknowledge further transmissions.' Phraseology: 'DO NOT ACKNOWLEDGE FURTHER TRANSMISSIONS.'",
+      "match": {
+        "question_text": "Why is pilot acknowledgment of controller transmissions critical during a radar approach?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "After contact has been established with the final controller and the aircraft is on the final approach course, what must the controller instruct the aircraft regarding further transmissions?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "After contact has been established with the final controller and while on the final approach course, instruct the aircraft not to acknowledge further transmissions. The prescribed phraseology is DO NOT ACKNOWLEDGE FURTHER TRANSMISSIONS.",
+          "choices": [
+            {
+              "text": "Instruct the aircraft not to acknowledge further transmissions.",
+              "is_correct": true
+            },
+            {
+              "text": "Instruct the aircraft to acknowledge every transmission with a readback of the instruction.",
+              "is_correct": false
+            },
+            {
+              "text": "Instruct the aircraft to acknowledge only altitude assignments and heading changes.",
+              "is_correct": false
+            },
+            {
+              "text": "No special acknowledgment instruction is required during the final approach phase.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-10-2",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The question identifies altimeter setting as the one item that must be provided on every repeated approach. The source states that all items except subparagraph 3 may be omitted after the first approach when repeated approaches are made and no change has occurred. Subparagraph 3 is special weather observations (item 3), not altimeter setting (item 1). Altimeter setting may be omitted after the first approach when no change has occurred. The question and its answer teach a safety-critical procedure backward.",
+      "source_basis": "Paragraph 5-10-2 body: 'All items listed below, except for subparagraph 3 may be omitted after the first approach if repeated approaches are made and no change has occurred.' The listed items are: 1. Altimeter setting. 2. Ceiling and visibility... 3. Issue any known changes classified as special weather observations as soon as possible. 4. Pertinent information on known airport conditions... 5. Lost communication procedures...",
+      "match": {
+        "question_text": "During repeated radar approaches, the pilot has already received a full approach information briefing. Which information item must the controller continue to provide on each subsequent approach?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "During repeated radar approaches, no conditions have changed since the first approach. Most approach information items may be omitted after the first approach under these circumstances. Which information item is the specific exception and must still be addressed on each approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "After the first approach, all approach information items except known changes classified as special weather observations may be omitted when repeated approaches are made and no change has occurred. Special weather observations must be issued as soon as possible; they need not be issued after they are included in the ATIS broadcast and the pilot states the appropriate ATIS broadcast code.",
+          "choices": [
+            {
+              "text": "Altimeter setting, which is item 1 of the approach information list.",
+              "is_correct": false
+            },
+            {
+              "text": "Known changes classified as special weather observations, which must be issued as soon as possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Lost communication procedures, which are safety-critical on every approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Ceiling and visibility, which must be reissued regardless of whether conditions have changed.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "5-10-2",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The flashcard back identifies altimeter setting as the mandatory exception and incorrectly labels it as 'subparagraph 3.' In the source, altimeter setting is item 1, and subparagraph 3 is special weather observations. The omission exception applies to special weather observations, not altimeter setting. The card teaches a factual reversal of a safety-critical procedural rule.",
+      "source_basis": "Paragraph 5-10-2 body: 'All items listed below, except for subparagraph 3 may be omitted after the first approach if repeated approaches are made and no change has occurred.' Listed item 1 is Altimeter setting. Listed item 3 is special weather observations.",
+      "match": {
+        "front": "What approach information item must continue to be provided on every radar approach even during repeated approaches with no changes?",
+        "back": "The altimeter setting. All other items, except for subparagraph 3 (altimeter setting), may be omitted after the first approach if repeated approaches are made and no change has occurred. Transmissions should occur approximately every minute during this phase.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "During repeated radar approaches with no changes, what is the one approach information item that cannot be omitted after the first approach under the omission rule?",
+          "back": "Known changes classified as special weather observations. All other items (altimeter setting, ceiling and visibility, airport conditions, and lost communication procedures) may be omitted after the first approach when repeated approaches are made and no change has occurred. Special weather observations must be issued as soon as possible; they need not be issued after they are included in the ATIS broadcast and the pilot states the appropriate ATIS broadcast code.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-10-5",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The question asks what a controller must do when radar contact is lost during a radar approach, and the correct answer is 'immediately advise the pilot that radar contact is lost and issue alternate instructions or a missed approach.' The source states a different procedure: if radar contact is lost during an approach and the aircraft has not started final approach, clear the aircraft to an appropriate NAVAID/fix for an instrument approach. The item invents a missed approach and notification requirement not present in this paragraph. The stem is also underspecified — it does not distinguish between before and during final approach, which the source treats separately.",
+      "source_basis": "Paragraph 5-10-5 body: 'If radar contact is lost during an approach and the aircraft has not started final approach, clear the aircraft to an appropriate NAVAID/fix for an instrument approach.'",
+      "match": {
+        "question_text": "What must a controller do when radar contact is lost with an aircraft on a radar approach?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Radar contact is lost with an aircraft during a radar approach, and the aircraft has not yet started final approach. What must the controller do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "If radar contact is lost during an approach and the aircraft has not started final approach, clear the aircraft to an appropriate NAVAID or fix for an instrument approach.",
+          "choices": [
+            {
+              "text": "Clear the aircraft to an appropriate NAVAID or fix for an instrument approach.",
+              "is_correct": true
+            },
+            {
+              "text": "Immediately issue a missed approach instruction and advise the pilot radar contact is lost.",
+              "is_correct": false
+            },
+            {
+              "text": "Continue issuing approach guidance based on the last known radar position.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait 30 seconds to see if radar contact returns before taking any action.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-10-8",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The question asks at what point during a radar approach the final controller changeover should occur, and the correct answer cites continuity of guidance before a critical approach portion. The source blocks for 5-10-8 do not address when the changeover occurs — they specify what the controller must include in the frequency-change instruction: the name of the facility. The item invents timing and coordination concepts absent from the paragraph.",
+      "source_basis": "Paragraph 5-10-8 body: 'When instructing the aircraft to change frequency for final approach guidance, include the name of the facility.' Phraseology: 'CONTACT (name of facility) FINAL CONTROLLER ON (frequency).'",
+      "match": {
+        "question_text": "At what point during a radar approach should the final controller changeover occur?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When instructing an aircraft to change frequency for final approach guidance, what must the controller include in the instruction?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "When instructing the aircraft to change frequency for final approach guidance, include the name of the facility. The prescribed phraseology is CONTACT (name of facility) FINAL CONTROLLER ON (frequency).",
+          "choices": [
+            {
+              "text": "The name of the facility.",
+              "is_correct": true
+            },
+            {
+              "text": "The aircraft's distance from the runway threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "The current altimeter setting for the destination airport.",
+              "is_correct": false
+            },
+            {
+              "text": "The missed approach procedure for the approach being flown.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-11-2",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The question asks what the controller must verify before the pilot may continue visually to the runway after reporting the runway environment in sight. The source blocks for 5-11-2 only state that aircraft may be requested to report the runway, approach/runway lights, or airport in sight. The paragraph does not address controller verification, visual continuation authorization, or position assessment. The entire question fabricates a procedural step absent from the source.",
+      "source_basis": "Paragraph 5-11-2 body: 'Aircraft may be requested to report the runway, approach/runway lights, or airport in sight. Helicopters and powered-lift aircraft making a point-in-space approach may be requested to report when able to proceed to the landing area by visual reference to a prescribed surface route.'",
+      "match": {
+        "question_text": "During a surveillance approach, the pilot reports the runway environment in sight. What must the controller verify before the pilot may continue visually to the runway?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "During a surveillance approach, what visual references may a controller request an aircraft to report?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Aircraft may be requested to report the runway, approach/runway lights, or airport in sight. For helicopters and powered-lift aircraft making a point-in-space approach, the controller may request a report when the aircraft is able to proceed to the landing area by visual reference to a prescribed surface route.",
+          "choices": [
+            {
+              "text": "The runway, approach/runway lights, or airport in sight.",
+              "is_correct": true
+            },
+            {
+              "text": "Only the specific runway number and the type of approach lighting system in use.",
+              "is_correct": false
+            },
+            {
+              "text": "The runway environment, the tower, and the FBO location on the field.",
+              "is_correct": false
+            },
+            {
+              "text": "Visual reports are not permitted during surveillance approaches; only PAR approaches allow them.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-11-4",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The question asks for the controller's primary planning objective when issuing descent instructions, with an answer about reaching MDA at or before the missed approach point on a stabilized path. The source blocks for 5-11-4 do not address a planning objective. They state what action to take when the aircraft reaches the descent point: issue descent to MDA when no restriction exists, or specify a restriction altitude when a descent restriction exists and later advise continuing to MDA. The item invents a planning framework not present in the paragraph.",
+      "source_basis": "Paragraph 5-11-4 body: 'When an aircraft reaches the descent point, issue one of the following as appropriate: a. Unless a descent restriction exists, advise the aircraft to descend to the MDA. b. When a descent restriction exists, specify the prescribed restriction altitude. When the aircraft has passed the altitude limiting point, advise to continue descent to MDA.'",
+      "match": {
+        "question_text": "What is the controller's primary planning objective when issuing descent instructions on a surveillance approach?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An aircraft on a surveillance approach reaches the descent point and no descent restriction exists. What instruction must the controller issue?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When an aircraft reaches the descent point and no descent restriction exists, advise the aircraft to descend to the minimum descent altitude. The prescribed phraseology includes the distance from the runway, airport, or heliport followed by DESCEND TO YOUR MINIMUM DESCENT ALTITUDE.",
+          "choices": [
+            {
+              "text": "Advise the aircraft to descend to the minimum descent altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Instruct the aircraft to hold at the descent point until the pilot requests descent.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a clearance to descend at pilot's discretion to any altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "Instruct the aircraft to descend only after reporting the runway in sight.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-12-1",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The question asks what a PAR controller must provide when the aircraft reaches the glidepath, with a correct answer mentioning distance from touchdown. The source states the controller must inform the aircraft when it is approaching glidepath — approximately 10 to 30 seconds before final descent — not when it reaches the glidepath. The source does not mention distance from touchdown as part of this notification. The timing, content, and procedure are all misrepresented.",
+      "source_basis": "Paragraph 5-12-1 body: 'Inform the aircraft when it is approaching glidepath (approximately 10 to 30 seconds before final descent).' Phraseology: 'APPROACHING GLIDEPATH.'",
+      "match": {
+        "question_text": "What information must a PAR controller provide when the aircraft reaches the glidepath during a precision approach?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "During a precision approach, when must the controller inform the aircraft about the glidepath, and what is the prescribed phraseology?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Inform the aircraft when it is approaching glidepath, approximately 10 to 30 seconds before final descent. The prescribed phraseology is APPROACHING GLIDEPATH.",
+          "choices": [
+            {
+              "text": "When the aircraft is approaching glidepath, approximately 10 to 30 seconds before final descent, using the phrase APPROACHING GLIDEPATH.",
+              "is_correct": true
+            },
+            {
+              "text": "When the aircraft reaches glidepath intercept, announcing the distance from touchdown using the phrase REACHING GLIDEPATH.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the pilot requests glidepath information, using the phrase GLIDEPATH AVAILABLE.",
+              "is_correct": false
+            },
+            {
+              "text": "When the aircraft is 2 miles from the runway threshold, regardless of glidepath position.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-13-3",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The question asks why flight plan information must be entered into the en route computer system, with an answer about automated tracking, conflict probe processing, and flight data distribution. The source blocks for 5-13-3 describe what computer entries to make and when (altitude fields must reflect current status; enter new assigned, interim, procedure, or LIA altitudes when cleared differently from the flight plan; do not modify data outside jurisdiction without coordination). The paragraph does not state the purpose of the computer system. The question and answer are entirely fabricated.",
+      "source_basis": "Paragraph 5-13-3 body: 'Whenever an aircraft is cleared to maintain an altitude different from that in the flight plan database, enter into the computer one of the following: (a) The new assigned altitude if the aircraft will maintain the new altitude, or (b) An interim altitude if the aircraft will maintain the new altitude for a short period of time and subsequently be recleared... or (c) A procedure altitude if the aircraft is cleared to vertically navigate (VNAV) on a SID/STAR... or (d) Where appropriate for interfacility handoffs, an LIA when the assigned altitude differs from the coordinated altitude...'",
+      "match": {
+        "question_text": "Why must flight plan information be entered into the en route computer system?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An aircraft is cleared to descend to and maintain FL 240 for a short period before being recleared to FL 320, which matches the altitude in the flight plan database. What type of altitude computer entry must the controller make?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "When an aircraft is cleared to maintain an altitude different from the flight plan database for a short period and will subsequently be recleared to the flight plan altitude or a new altitude, enter an interim altitude into the computer.",
+          "choices": [
+            {
+              "text": "An interim altitude, because the aircraft will maintain FL 240 temporarily before returning to a different altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "A new assigned altitude, because any altitude change requires replacing the flight plan altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "A procedure altitude, because the aircraft is descending on a published arrival.",
+              "is_correct": false
+            },
+            {
+              "text": "No entry is needed because the aircraft will return to the flight plan altitude.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-10-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "document_scaffolding",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with 'The note explicitly states that the pilot is responsible...' which uses document-structure scaffolding. The operational requirement should be stated directly without referencing document structure. The question stem, answer, and distractors are correct.",
+      "source_basis": "Paragraph 5-10-1 note: 'Acceptance of a radar approach by a pilot does not waive the prescribed weather minima for the airport or for the particular aircraft operator concerned. The pilot is responsible for determining if the approach and landing are authorized under the existing weather minima.'",
+      "match": {
+        "question_text": "A pilot accepts a radar approach during IFR conditions with weather below published minima for the airport. Who is responsible for determining whether the approach and landing are authorized under the existing weather minima?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A pilot accepts a radar approach during IFR conditions with weather below published minima for the airport. Who is responsible for determining whether the approach and landing are authorized under the existing weather minima?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Acceptance of a radar approach by a pilot does not waive the prescribed weather minima for the airport or for the particular aircraft operator concerned. The pilot is responsible for determining if the approach and landing are authorized under the existing weather minima.",
+          "choices": [
+            {
+              "text": "The controller offering the approach assumes responsibility for weather minima compliance.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot is responsible for determining whether the approach and landing are authorized under the existing weather minima.",
+              "is_correct": true
+            },
+            {
+              "text": "The radar approach itself waives the published weather minima by regulation.",
+              "is_correct": false
+            },
+            {
+              "text": "Responsibility is shared equally between the controller and the pilot.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "5-10-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "document_scaffolding",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with 'The paragraph authorizes' — document-structure scaffolding. It also asserts 'There is no weather minimum restricting when a controller may offer one' as a blanket statement, but the source only says 'regardless of weather conditions' specifically for aircraft in distress. The overgeneralization adds an unsupported claim about weather minima for all radar approach offerings. The activity's stem, choices, and correct answer are otherwise correct.",
+      "source_basis": "Paragraph 5-10-1 body: 'A radar approach may be given to any aircraft upon request and may be offered to aircraft in distress regardless of weather conditions or to expedite traffic.' Note: 'Acceptance of a radar approach by a pilot does not waive the prescribed weather minima...'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify the correct statement about when radar approaches may be given.",
+          "situation": "A controller is reviewing the rules for providing radar approaches.",
+          "question_text": "Which statement correctly describes when radar approaches may be given?",
+          "choices": [
+            {
+              "text": "A radar approach may only be given to IFR aircraft operating in instrument meteorological conditions.",
+              "is_correct": false
+            },
+            {
+              "text": "A radar approach may be given to any aircraft upon request, offered to aircraft in distress regardless of weather, or offered to expedite traffic.",
+              "is_correct": true
+            },
+            {
+              "text": "A radar approach may be given only when the ceiling is below 1,000 feet or visibility is less than 3 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "A radar approach may be given only when specifically requested by the pilot in writing before the flight.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The paragraph authorizes radar approaches to any aircraft upon request, and they may be offered to aircraft in distress regardless of weather conditions or to expedite traffic. There is no weather minimum restricting when a controller may offer one, though the pilot remains responsible for determining whether the approach and landing are authorized under existing weather minima.",
+          "publication_id": "content-expansion-pass-02:chapter-05:activities:5-10-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify the correct statement about when radar approaches may be given.",
+            "situation": "A controller is reviewing the rules for providing radar approaches.",
+            "question_text": "Which statement correctly describes when radar approaches may be given?",
+            "choices": [
+              {
+                "text": "A radar approach may only be given to IFR aircraft operating in instrument meteorological conditions.",
+                "is_correct": false
+              },
+              {
+                "text": "A radar approach may be given to any aircraft upon request, offered to aircraft in distress regardless of weather, or offered to expedite traffic.",
+                "is_correct": true
+              },
+              {
+                "text": "A radar approach may be given only when the ceiling is below 1,000 feet or visibility is less than 3 miles.",
+                "is_correct": false
+              },
+              {
+                "text": "A radar approach may be given only when specifically requested by the pilot in writing before the flight.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "A radar approach may be given to any aircraft upon request and may be offered to aircraft in distress regardless of weather conditions or to expedite traffic. Acceptance of a radar approach by a pilot does not waive the prescribed weather minima; the pilot remains responsible for determining whether the approach and landing are authorized under existing weather minima.",
+            "publication_id": "content-expansion-pass-02:chapter-05:activities:5-10-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-11-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The question and answer are factually correct — the phraseology elements match the source blocks for course deviation and trend information. However, the explanation adds the unsupported claim that the combination 'prompts immediate pilot action.' The source does not state what the phraseology prompts the pilot to do; it only specifies what the controller must say. Remove the invented rationale.",
+      "source_basis": "Paragraph 5-11-5 body and phraseology: course guidance uses HEADING, ON COURSE, or SLIGHTLY/WELL LEFT/RIGHT OF COURSE. Trend information uses 'Going left/right of course' or 'Left/right of course and holding/correcting,' modified by RAPIDLY or SLOWLY as appropriate.",
+      "match": {
+        "question_text": "During a surveillance final approach, the controller observes the target moving steadily left of the extended runway centerline at a rate that requires prompt correction. Which combination of phraseology elements correctly communicates the course deviation and the correction trend?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "During a surveillance final approach, the controller observes the target moving steadily left of the extended runway centerline at a rate that requires prompt correction. Which combination of phraseology elements correctly communicates the course deviation and the correction trend?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Course guidance uses the terms SLIGHTLY or WELL LEFT/RIGHT OF COURSE to describe deviation from the final approach course. Trend information uses 'Going left/right of course' or 'Left/right of course and holding/correcting,' modified by RAPIDLY or SLOWLY as appropriate to describe target movement relative to the extended runway centerline.",
+          "choices": [
+            {
+              "text": "ON COURSE — heading correction to the right needed.",
+              "is_correct": false
+            },
+            {
+              "text": "WELL LEFT OF COURSE, GOING LEFT OF COURSE RAPIDLY — heading correction to the right.",
+              "is_correct": true
+            },
+            {
+              "text": "SLIGHTLY LEFT OF COURSE, CORRECTING — no heading change needed.",
+              "is_correct": false
+            },
+            {
+              "text": "LEFT OF COURSE, TURN LEFT to intercept the course.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-13-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity",
+        "explanation_quality"
+      ],
+      "problem": "The source states the controller must 'evaluate the reason for the alert without delay and take appropriate action.' The answer paraphrases this as 'assess the situation to determine if a conflict actually exists,' which narrows the task from evaluating the reason (which could be technical, a Mode C intruder, or an actual conflict) to binary conflict determination. The explanation adds unsupported language about automated warnings not substituting for controller judgment and verifying separation adequacy. The operational rule should match the source's framing: evaluate the reason for the alert.",
+      "source_basis": "Paragraph 5-13-1 body: 'When a CA or MCI alert is displayed, evaluate the reason for the alert without delay and take appropriate action.'",
+      "match": {
+        "question_text": "What is the controller's required response when a Conflict Alert (CA) activates?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the controller's required response when a Conflict Alert (CA) or Mode C Intruder (MCI) alert is displayed?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When a CA or MCI alert is displayed, evaluate the reason for the alert without delay and take appropriate action. If another controller is involved in the alert, initiate coordination to ensure an effective course of action. Coordination is not required when immediate action is dictated.",
+          "choices": [
+            {
+              "text": "Evaluate the reason for the alert without delay and take appropriate action.",
+              "is_correct": true
+            },
+            {
+              "text": "The alert automatically resolves the conflict, requiring no controller action.",
+              "is_correct": false
+            },
+            {
+              "text": "Suppress all CA and MCI alerts before evaluating the situation.",
+              "is_correct": false
+            },
+            {
+              "text": "Wait for a second alert activation before taking any action.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "5-13-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The flashcard front and the procedural content of the back are correct. However, the back adds 'that would create a new terrain hazard' when describing the caution about adjacent MIA areas. The source note states adjacent MIA areas are a factor to consider, but does not characterize the specific hazard as terrain. Replace the unsupported hazard characterization with the source's precise language.",
+      "source_basis": "Paragraph 5-13-2 body: 'When an E-MSAW alert is displayed, immediately analyze the situation and take the appropriate action to resolve the alert.' Note: 'Caution should be exercised when issuing a clearance to an aircraft in reaction to an E-MSAW alert to ensure that adjacent MIA areas are not a factor.'",
+      "match": {
+        "front": "What is the controller's required response when an E-MSAW alert activates, and what caution must be observed when issuing a clearance in reaction to the alert?",
+        "back": "Immediately analyze the situation and take appropriate action to resolve the alert. When issuing a clearance in reaction to an E-MSAW alert, exercise caution to ensure that adjacent MIA areas are not a factor that would create a new terrain hazard.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "What is the controller's required response when an E-MSAW alert activates, and what caution must be observed when issuing a clearance in reaction to the alert?",
+          "back": "Immediately analyze the situation and take the appropriate action to resolve the alert. When issuing a clearance in reaction to an E-MSAW alert, exercise caution to ensure that adjacent MIA areas are not a factor.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "5-12-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity",
+        "format_fit"
+      ],
+      "problem": "The flashcard front asks about 'PAR/ASR approach' but the paragraph 5-12-3 is under Section 12 (Precision Approach Radar) and the BEGIN DESCENT instruction is specific to PAR final descent. ASR (surveillance) approaches use different descent phraseology under 5-11-4 that includes distance information. Including ASR conflates two distinct procedural contexts and the associated phraseology.",
+      "source_basis": "Paragraph 5-12-3 body: 'When an aircraft reaches the point where final descent is to start, instruct it to begin descent.' Phraseology: 'BEGIN DESCENT.' Section 12 is titled Precision Approach Radar.",
+      "match": {
+        "front": "What is the prescribed phraseology for instructing an aircraft on a PAR/ASR approach to begin final descent?",
+        "back": "BEGIN DESCENT. The instruction is issued when the aircraft reaches the point where final descent is to start.",
+        "card_type": "phraseology"
+      },
+      "replacements": [
+        {
+          "front": "What is the prescribed phraseology for instructing an aircraft on a PAR approach to begin final descent?",
+          "back": "BEGIN DESCENT. The instruction is issued when the aircraft reaches the point where final descent is to start.",
+          "card_type": "phraseology"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-13-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The question stem, answer, and distractors are correct. The explanation contains two inaccuracies: (1) it lists FL 200 as an example of a 10,000-foot interval point, but FL 200 is the starting altitude of the climb, not a 10,000-foot interval reached during the climb; and (2) it states 'during the descent similarly,' implying the 10,000-foot trigger applies during the descent from FL 350 to FL 300, but that descent spans only 5,000 feet and does not reach a 10,000-foot interval.",
+      "source_basis": "Paragraph 5-13-4 body: 'Whenever Mode C altitude information is either not available or is unreliable, enter reported altitudes into the computer as follows: a. When an aircraft reaches the assigned altitude. b. When an aircraft at an assigned altitude is issued a clearance to climb or descend. c. A minimum of each 10,000 feet during climb to or descent from FL 180 and above.'",
+      "match": {
+        "question_text": "Mode C altitude information is unavailable for an en route aircraft climbing from FL 200 to FL 350. The aircraft passes through FL 280, reaches FL 350, and is subsequently cleared to descend to FL 300. At which points must reported altitudes be entered into the computer?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Mode C altitude information is unavailable for an en route aircraft climbing from FL 200 to FL 350. The aircraft passes through FL 280, reaches FL 350, and is subsequently cleared to descend to FL 300. At which points must reported altitudes be entered into the computer?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Three triggers require entry of reported altitudes when Mode C is unavailable or unreliable. Trigger (a): when the aircraft reaches the assigned altitude — FL 350. Trigger (b): when an aircraft at an assigned altitude is issued a clearance to climb or descend — the clearance to descend to FL 300. Trigger (c): a minimum of each 10,000 feet during climb to or descent from FL 180 and above — during the climb from FL 200 to FL 350, this occurs at FL 300. The subsequent descent from FL 350 to FL 300 spans 5,000 feet and does not trigger the 10,000-foot interval rule.",
+          "choices": [
+            {
+              "text": "Only when the aircraft reaches FL 350 and again at FL 300.",
+              "is_correct": false
+            },
+            {
+              "text": "At FL 300 during the climb, upon reaching FL 350, and upon receiving the descent clearance.",
+              "is_correct": true
+            },
+            {
+              "text": "Only at each 10,000-foot interval during climb only, since descent entries are not required.",
+              "is_correct": false
+            },
+            {
+              "text": "Upon reaching FL 350 only, because the other triggers apply only when Mode C is available.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-13-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with document-structure scaffolding ('The note states exceptions to the selected altitude limit requirements...') instead of stating the operational requirement directly.",
+      "source_basis": "The source note states: 'Exception to these requirements may be authorized for specific altitudes in certain ARTCC sectors if defined in appropriate facility directives and approved by the respective service area operations directorate.'",
+      "match": {
+        "question_text": "A facility wants to reduce the altitude display buffer for a particular sector below the standard additional requirements of 1,200 feet or 2,200 feet. Under what conditions may such an exception be authorized?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A facility wants to reduce the altitude display buffer for a particular sector below the standard additional requirements of 1,200 feet or 2,200 feet. Under what conditions may such an exception be authorized?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Exceptions to the selected altitude limit requirements may be authorized for specific altitudes in certain ARTCC sectors if defined in appropriate facility directives and approved by the respective service area operations directorate. This requires both documented local direction and service-area-level approval — it cannot be done unilaterally at the sector or facility level.",
+          "choices": [
+            {
+              "text": "Exceptions are never permitted under any circumstances.",
+              "is_correct": false
+            },
+            {
+              "text": "Any facility may make the adjustment at the sector level without higher-level approval.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if defined in appropriate facility directives and approved by the respective service area operations directorate.",
+              "is_correct": true
+            },
+            {
+              "text": "Only if the aircraft operators using that airspace submit a written request.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-13-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation invents a safety rationale not present in the source blocks: 'The larger buffer at higher flight levels ensures approaching aircraft with Mode C are visible before entering the sector's vertical stratum for Merging Target Procedures.' The source states the two buffer amounts but provides no rationale for why they differ.",
+      "source_basis": "The source body states: 'a. 1,200 feet above the highest and below the lowest altitude or flight level of the sector where 1,000 feet vertical separation is applicable; and b. 2,200 feet above the highest and below the lowest flight level of the sector where 2,000 feet vertical separation is applicable.'",
+      "match": {
+        "question_text": "A sector applies 1,000 feet vertical separation at lower altitudes and 2,000 feet vertical separation at higher flight levels. What additional altitude display buffer must be added to the sector's altitude stratum for each case?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A sector applies 1,000 feet vertical separation at lower altitudes and 2,000 feet vertical separation at higher flight levels. What additional altitude display buffer must be added to the sector's altitude stratum for each case?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Where 1,000 feet vertical separation is applicable, sectors must add at least 1,200 feet above the highest and below the lowest altitude or flight level of the sector. Where 2,000 feet vertical separation is applicable, sectors must add at least 2,200 feet above the highest and below the lowest flight level.",
+          "choices": [
+            {
+              "text": "1,000 feet where 1,000-foot separation applies; 2,000 feet where 2,000-foot separation applies.",
+              "is_correct": false
+            },
+            {
+              "text": "1,200 feet where 1,000-foot separation applies; 2,200 feet where 2,000-foot separation applies.",
+              "is_correct": true
+            },
+            {
+              "text": "2,200 feet in all cases regardless of the applicable separation minimum.",
+              "is_correct": false
+            },
+            {
+              "text": "1,200 feet where 2,000-foot separation applies; 2,200 feet where 1,000-foot separation applies.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "5-13-5",
+      "action": "split",
+      "severity": "major",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "The flashcard front asks two distinct questions and the back combines two unrelated retrieval targets — altitude buffer amounts and minimum data block content — into a single card. These are independent operational facts that should be tested separately.",
+      "source_basis": "The source body states both the altitude buffer values ('1,200 feet above the highest and below the lowest altitude or flight level of the sector where 1,000 feet vertical separation is applicable; 2,200 feet above the highest and below the lowest flight level of the sector where 2,000 feet vertical separation is applicable') and the data block content requirement ('The data block, for purposes of this paragraph, must contain the Mode C altitude and call sign or beacon code at a minimum'). These are distinct concepts.",
+      "match": {
+        "front": "What additional altitude buffer must sector altitude limits display beyond the sector's own stratum for Merging Target Procedures, and what minimum data block content is required?",
+        "back": "At minimum: 1,200 feet above highest and below lowest altitude/FL where 1,000-foot vertical separation applies; 2,200 feet above highest and below lowest FL where 2,000-foot vertical separation applies. The data block must contain Mode C altitude and call sign or beacon code at minimum.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What additional altitude buffer must a sector's altitude limits display beyond its own stratum for Merging Target Procedures?",
+          "back": "At least 1,200 feet above the highest and below the lowest altitude or flight level where 1,000-foot vertical separation applies; at least 2,200 feet above the highest and below the lowest flight level where 2,000-foot vertical separation applies.",
+          "card_type": "concept"
+        },
+        {
+          "front": "What minimum information must the data block contain for application of Merging Target Procedures?",
+          "back": "Mode C altitude and call sign or beacon code at a minimum.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-13-9",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The question tests content not found in the source paragraph. The correct answer references 'holding fix' and 'direction of holding' — concepts absent from paragraph 5-13-9, which addresses specific ERAM computer entries (enter a hold message, maintain a paired track, enter an EFC time, enter non-published holding instructions) and coordination rules. The stem, choices, and explanation all correspond to a different concept than what the source paragraph actually covers.",
+      "source_basis": "The source body (5-13-9a) states: 'When an aircraft is issued holding instructions, the delay is ATC initiated, and the EFC is other than no delay expected: 1. Enter a hold message. 2. Maintain a paired track. 3. Enter an EFC time via a hold message, the Hold Data Menu, or the Hold View. 4. Enter non-published holding instructions via a hold message or the Hold Data Menu.' The source does not mention 'holding fix' or 'direction of holding.' Paragraph 5-13-9c states: 'An EFC time entered into the Hold Data Menu, Hold View, or the hold message constitutes coordination of the EFC between ERAM sectors.'",
+      "match": {
+        "question_text": "What minimum information must be entered into ERAM when an aircraft is assigned a holding pattern?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An EFC time is entered into the Hold Data Menu for an aircraft in hold status. What effect does this entry have regarding coordination between ERAM sectors?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "An EFC time entered into the Hold Data Menu, Hold View, or the hold message constitutes coordination of the EFC between ERAM sectors. No separate verbal coordination of the EFC is required between the sectors.",
+          "choices": [
+            {
+              "text": "It constitutes coordination of the EFC between ERAM sectors.",
+              "is_correct": true
+            },
+            {
+              "text": "It does not constitute coordination; verbal coordination of the EFC is always required.",
+              "is_correct": false
+            },
+            {
+              "text": "It coordinates the EFC only if the receiving sector acknowledges the entry.",
+              "is_correct": false
+            },
+            {
+              "text": "It automatically transfers track control to the receiving sector.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-14-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses document-structure scaffolding in two places: 'The paragraph requires that during outages of the ASR...' and 'The note clarifies that the ADS-B indicator will only display...' The operating requirements should be stated directly without referencing the document organization.",
+      "source_basis": "The source body states: 'During outages of the ASR that supports an ASDE system where MLAT is inoperative or is not present, the tower position(s) responsible for aircraft on approach to the airport must enable the ADS-B indicator on the tower display workstation(s) (TDW(s)).' The note states: 'The ADS-B indicator will only display if the TDW is operating in Fused Display Mode.'",
+      "match": {
+        "question_text": "The ASR that supports the ASDE system at a tower goes out of service, and MLAT is inoperative at this facility. What must the tower position responsible for aircraft on approach do?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "The ASR that supports the ASDE system at a tower goes out of service, and MLAT is inoperative at this facility. What must the tower position responsible for aircraft on approach do?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "During outages of the ASR that supports an ASDE system where MLAT is inoperative or is not present, the tower position responsible for aircraft on approach must enable the ADS-B indicator on the tower display workstation (TDW). The ADS-B indicator will only display if the TDW is operating in Fused Display Mode.",
+          "choices": [
+            {
+              "text": "Suspend all approach operations until the ASR and MLAT are restored.",
+              "is_correct": false
+            },
+            {
+              "text": "Enable the ADS-B indicator on the tower display workstation, which requires the TDW to be in Fused Display Mode to display.",
+              "is_correct": true
+            },
+            {
+              "text": "Switch to a backup radar display that does not require ADS-B indicators.",
+              "is_correct": false
+            },
+            {
+              "text": "Revert to using only the two-letter ICAO designators as the sole source of aircraft identification.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "5-14-7",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "answer_defensibility",
+        "explanation_quality"
+      ],
+      "problem": "The correct answer is substantially longer than the distractors, creating an answer-length cue. The explanation references 'the en route E-MSAW indefinite suppression function' — a concept not present in the paragraph's source blocks. The answer text uses imprecise language ('aircraft that routinely trigger alerts due to their operational profile') not grounded in the source, which specifies inhibition for VFR aircraft and aircraft that cancel IFR flight plans.",
+      "source_basis": "The source body states: 'a. Inhibit MSAW processing of VFR aircraft and aircraft that cancel instrument flight rules (IFR) flight plans unless the pilot specifically requests otherwise. b. A low altitude alert may be suppressed from the control position. Computer entry of the suppress message constitutes an acknowledgment for the alert and indicates that appropriate action has or will be taken.'",
+      "match": {
+        "question_text": "What distinguishes MSAW alert suppression from inhibition in the terminal environment?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What distinguishes MSAW alert suppression from inhibition in the terminal environment?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "MSAW processing is inhibited for VFR aircraft and aircraft that cancel IFR flight plans, unless the pilot specifically requests otherwise. A low altitude alert may be suppressed from the control position; computer entry of the suppress message constitutes acknowledgment that appropriate action has or will been taken.",
+          "choices": [
+            {
+              "text": "Inhibition applies to VFR aircraft and aircraft that cancel IFR flight plans, unless the pilot requests otherwise; suppression handles a specific alert occurrence and constitutes acknowledgment.",
+              "is_correct": true
+            },
+            {
+              "text": "Both functions serve the same purpose and may be used interchangeably in terminal operations based on controller preference.",
+              "is_correct": false
+            },
+            {
+              "text": "Suppression is used exclusively in en route facilities; inhibition is used exclusively in terminal facilities.",
+              "is_correct": false
+            },
+            {
+              "text": "Inhibition permanently disables MSAW processing for the entire facility; suppression temporarily silences a single alert.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

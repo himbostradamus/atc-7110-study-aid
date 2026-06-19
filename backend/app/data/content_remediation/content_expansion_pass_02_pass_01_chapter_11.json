@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "chapter": 11,
+  "target_generation_source": "content_expansion_pass_02",
+  "packet_sha256": "f14a6c820c4c45c505d73fe17457c6bbdf31edafbbc6d9a33f342c152e42fd0f",
+  "manifest_sha256": "103c89187c837a6484f9bafaa2b1706dfd77df4c0282a74718c967715348bb07",
+  "summary": {
+    "overall": "Chapter 11 was reviewed in 1 bounded source-grounded shards. Proposed changes: 3 replacements, 0 splits, and 0 removals.",
+    "patterns": [
+      "Paragraph-location scaffolding in explanations: three of four items open or structure their explanations with 'Per 11-1-X' references, violating the harness requirement to state the operating requirement directly.",
+      "Invented operational rationales: two items add claims about operational risk, controller feedback mechanisms, or educational misconceptions that the source blocks do not state. The source blocks for these paragraphs are brief declarative statements — they assign roles, duties, and thresholds without describing why or discussing downstream implications.",
+      "Strength — source-true answers: all four items have correct answers that faithfully reflect the source text. No item has a factually wrong answer.",
+      "Strength — plausible distractors: distractor choices reflect genuine operational misunderstandings (role confusion between STMCIC and OS/CIC, reversing TBFM/MIT preference, equating 'integral' with 'override authority', confusing coordination with silence)."
+    ],
+    "generation_guidance": [
+      "Write explanations that state the operational requirement directly. Replace 'Per 11-1-3b1, the controller must...' with 'During metering, personnel must comply with TBFM-generated metering times within +/- 1 minute.' The operational rule is the subject, not its location.",
+      "Do not elaborate beyond what the source states. When the source says 'the ATCS is integral in the execution of the traffic management mission,' do not add 'the controller helps execute TMIs and provides real-time feedback' unless the source elaborates. If the source is a single sentence, the explanation mirrors that sentence with minimal paraphrase.",
+      "For role-assignment items like 11-1-2, state each role's duties directly. Avoid adding commentary about why duties are structured as they are or what operational risk their similarity creates — the source does not provide that rationale.",
+      "The discrimination activity at 11-1-1 (77b6390d) is a model to follow: the explanation names each framework element plainly, describes the correct answer by stating the three elements, and explains why each distractor is wrong by identifying which element it misstates without referring to paragraph numbers."
+    ],
+    "shard_overviews": [
+      "The shard covers three paragraphs (11-1-1, 11-1-2, 11-1-3) with 2 questions and 2 activities. All four items have source-true correct answers and plausible operational distractors; activity types match the tested skills; question stems are self-contained without paragraph-number dependencies. However, three of the four items have explanations that rely on paragraph-location scaffolding rather than stating operational requirements directly, and two of those three also invent operational rationales or educational characterizations absent from the source blocks. One activity (77b6390d) is a clean exemplar."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "question",
+      "para_id": "11-1-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with 'Per 11-1-1c' — paragraph-location scaffolding instead of stating the operational requirement directly. It also invents operational details absent from the source: 'The controller helps execute TMIs and provides real-time feedback' and 'The plausible misconception is that ATCS personnel are implementers rather than participants, which would relegate them to a passive role.' The source states only that the ATCS is integral in the execution of the traffic management mission; it does not describe specific execution mechanisms or characterize educational misconceptions.",
+      "source_basis": "11-1-1c: 'It is recognized that the ATCS is integral in the execution of the traffic management mission.'",
+      "match": {
+        "question_text": "What is the operational significance of recognizing that the ATCS is integral in the execution of the traffic management mission?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which statement describes the role of the air traffic control specialist in traffic management?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The traffic management framework recognizes that the air traffic control specialist is integral in the execution of the traffic management mission. The specialist is an essential participant in that mission — the specialist is not merely a recipient of instructions from a separate traffic management unit.",
+          "choices": [
+            {
+              "text": "Traffic management functions are carried out by a separate unit; controllers receive and implement those decisions without participating in the mission itself.",
+              "is_correct": false
+            },
+            {
+              "text": "The air traffic control specialist is integral in the execution of the traffic management mission — an essential participant, not merely a recipient of external decisions.",
+              "is_correct": true
+            },
+            {
+              "text": "The air traffic control specialist may independently modify or cancel any traffic management initiative because the integral role grants override authority.",
+              "is_correct": false
+            },
+            {
+              "text": "The air traffic control specialist's role in traffic management is limited to reporting observed congestion after delays have developed.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with paragraph-location scaffolding ('Per 11-1-2a1', 'Per 11-1-2b1', 'Per 11-1-2c1', and subsequent references to 'a3' and 'b4') instead of stating the operational requirements directly. It also invents an operational rationale absent from the source: 'Cross-role confusion is a common operational risk when duties appear similar across the role structure.' The source blocks assign specific duties to specific roles; they do not discuss operational risk or the causes of role confusion.",
+      "source_basis": "11-1-2a1: The STMCIC must ensure an operational briefing is conducted at least once during the day and evening shifts. 11-1-2b1: The OS/CIC must keep the TMU and affected sectors apprised of situations or circumstances that may cause congestion or delays. 11-1-2c1: Personnel providing air traffic services must ensure that TBM operations and TMIs are enforced within their area of responsibility.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Identify the role responsible for each duty described.",
+          "question_text": "A facility is preparing for the day shift. Three duties must be handled: (1) ensure an operational briefing is conducted with the minimum required participants; (2) keep the TMU and affected sectors apprised of developing weather that may cause congestion; (3) enforce active TBM operations and TMIs on position. Which role is responsible for each of these three duties, in order?",
+          "choices": [
+            {
+              "text": "OS/CIC for the briefing; STMCIC for the notification; Personnel providing traffic management services for the enforcement.",
+              "is_correct": false
+            },
+            {
+              "text": "STMCIC for the briefing; OS/CIC for the notification; Personnel providing air traffic services for the enforcement.",
+              "is_correct": true
+            },
+            {
+              "text": "STMCIC for the briefing; STMCIC for the notification; OS/CIC for the enforcement.",
+              "is_correct": false
+            },
+            {
+              "text": "OS/CIC for the briefing; OS/CIC for the notification; Personnel providing air traffic services for the enforcement.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 11-1-2a1, the STMCIC must ensure the operational briefing is conducted at least once during day and evening shifts. Per 11-1-2b1, the OS/CIC must keep the TMU and affected sectors apprised of situations that may cause congestion or delays. Per 11-1-2c1, personnel providing air traffic services must ensure TBM operations and TMIs are enforced within their area of responsibility. Each role has distinct duties, and the enforcement groups differ — the STMCIC ensures enforcement by personnel providing traffic management services (a3), while the OS/CIC ensures enforcement by personnel providing air traffic services (b4). Cross-role confusion is a common operational risk when duties appear similar across the role structure.",
+          "publication_id": "content-expansion-pass-02:chapter-11:activities:11-1-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "instruction": "Identify the role responsible for each duty described.",
+            "question_text": "A facility is preparing for the day shift. Three duties must be handled: (1) ensure an operational briefing is conducted with the minimum required participants; (2) keep the TMU and affected sectors apprised of developing weather that may cause congestion; (3) enforce active TBM operations and TMIs on position. Which role is responsible for each of these three duties, in order?",
+            "choices": [
+              {
+                "text": "OS/CIC for the briefing; STMCIC for the notification; Personnel providing traffic management services for the enforcement.",
+                "is_correct": false
+              },
+              {
+                "text": "STMCIC for the briefing; OS/CIC for the notification; Personnel providing air traffic services for the enforcement.",
+                "is_correct": true
+              },
+              {
+                "text": "STMCIC for the briefing; STMCIC for the notification; OS/CIC for the enforcement.",
+                "is_correct": false
+              },
+              {
+                "text": "OS/CIC for the briefing; OS/CIC for the notification; Personnel providing air traffic services for the enforcement.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The STMCIC must ensure an operational briefing is conducted at least once during the day and evening shifts. The OS/CIC must keep the TMU and affected sectors apprised of situations or circumstances that may cause congestion or delays. Personnel providing air traffic services must ensure that TBM operations and TMIs are enforced within their area of responsibility. Each role carries distinct responsibilities under the traffic management framework."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding throughout: 'Per 11-1-3b1', '(11-1-3b2)', '(11-1-3c)', and '(note)'. The explanatory content is substantively correct and maps to the source requirements, but every reference is framed through the document structure rather than stating the operational requirement directly.",
+      "source_basis": "11-1-3: During periods of metering, personnel must display TBFM schedule information and comply with metering times within +/- 1 minute. When DCT instability prevents reliable metering-time accuracy for specific aircraft, MIT or MINIT may be used between those aircraft to assist in delay absorption until stability resumes. An exception to the +/- 1 minute compliance standard may be authorized for certain ARTCC sectors if explicitly defined in a facility directive. When compliance is not possible, coordinate with the OS/CIC, traffic management services, and adjacent facilities/sectors.",
+      "match": {
+        "question_text": "Which of the following correctly pairs a TBFM metering-time compliance challenge with its authorized response?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which of the following correctly pairs a TBFM metering-time compliance challenge with its authorized response?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "When delay countdown timer instability prevents reliable metering-time accuracy for specific aircraft, miles-in-trail or minutes-in-trail restrictions may be used between those aircraft to assist in delay absorption until stability resumes. An exception to the plus-or-minus-one-minute compliance standard requires explicit authorization in a facility directive — it is not available at the controller's discretion. When compliance with a metering time is not possible for any reason, the controller must coordinate with the OS/CIC, personnel providing traffic management services, and adjacent facilities or sectors as appropriate.",
+          "choices": [
+            {
+              "text": "When a controller cannot meet a metering time for any reason, the controller may deviate from the time without notification as long as separation from other aircraft is maintained.",
+              "is_correct": false
+            },
+            {
+              "text": "When an ARTCC sector consistently struggles to meet the plus-or-minus-1-minute standard, the sector controller may adopt a wider tolerance at their discretion.",
+              "is_correct": false
+            },
+            {
+              "text": "When DCT instability prevents reliable metering times for specific aircraft, use MIT or MINIT between those aircraft until stability resumes.",
+              "is_correct": true
+            },
+            {
+              "text": "When TBFM-generated times fluctuate due to TMU resequencing, suspend all metering operations for the affected flights and manage without reference to TBFM.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

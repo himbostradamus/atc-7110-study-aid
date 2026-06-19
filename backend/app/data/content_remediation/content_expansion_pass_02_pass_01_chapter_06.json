@@ -1,0 +1,2202 @@
+{
+  "version": 1,
+  "chapter": 6,
+  "target_generation_source": "content_expansion_pass_02",
+  "packet_sha256": "9b2d53776719aacaaf8d26f33a767ef95ab148e923553b1e57d6b3a18be79376",
+  "manifest_sha256": "da8f9134e3c4f867f3ecb4a30493d7a88568525b5c0ed305bcf18f9368f1d751",
+  "summary": {
+    "overall": "Chapter 6 was reviewed in 3 bounded source-grounded shards. Proposed changes: 42 replacements, 1 splits, and 2 removals.",
+    "patterns": [
+      "Document-structure scaffolding in explanations is the single most frequent defect — 7 of 13 decisions involve replacing explanations that reference 'subparagraph a3,' 'c2(b),' '(a1),' and similar labels instead of stating operating requirements directly.",
+      "Rationale invention arises where the source states a duty or value but not its reason. The 6-1-5 question and activity ask why same-runway minima exceed parallel-runway minima for small-behind-B757; the source lists the values but provides no explanation, so the answers manufacture wake-physics reasoning.",
+      "Near-duplication between question and activity formats occurs in 6-1-1 (both test direct VHF comms) and 6-2-1 (both test three-tier diverging-course minima). In each case the question is stronger.",
+      "Explanations for the 6-1-4 items are factually correct but wrapped in subparagraph labels that make them read as index lookups rather than operational knowledge.",
+      "The condition_boundary (6-1-2) and source_use (6-2-2) activities demonstrate the right pattern — scenario-driven, testing whether the rule's trigger condition is met rather than testing recall of label-to-value mappings.",
+      "Paragraph-location scaffolding in explanations: 13 items reference 'subparagraph a/b/c/d,' 'Subparagraph c2(b),' 'the paragraph lists,' or paragraph numbers in explanations. These teach document structure rather than operational principle.",
+      "Invented rationales: 3 items add unsupported safety/design reasoning ('position uncertainty,' 'conservative approach ensures separation is never understated,' 'reflecting that one aircraft is on a defined arc') not present in source blocks.",
+      "Factual fidelity: one activity (539c4364) asserts 25 degrees is absent from the non-DME divergence table when TBL 6-5-1 explicitly lists 25 degrees → 10 NM. This is a blocker-level source-fidelity error.",
+      "Flashcard accuracy: one flashcard (e9dbe494) asks for 'two conditions' when the source states three prerequisites for pilot-maintained separation.",
+      "Strength: all multiple-choice and phraseology-construction items use plausible distractors drawn from adjacent procedure values or non-standard phraseology variants. No answer is revealed by length, specificity, or implausibility of alternatives.",
+      "Strength: all separation minima, speed thresholds, and time values are faithful to source blocks. No numerical fabrication detected.",
+      "Invented explanatory rationale: multiple items append geometric reasoning (6-5-4), wake-vulnerability justifications (6-7-5), safety purposes (6-7-1, 6-7-2), or operational consequences not stated in source blocks.",
+      "Document-structure scaffolding: explanations reference 'subparagraph a/b/c,' 'the note states,' 'subparagraph b2' instead of stating the operating requirement directly. One question stem (9ac7134d) also contains 'subparagraphs b and c.'",
+      "Answer-length cue: de33e1c6 has a correct answer notably longer than any distractor, making it guessable without content knowledge.",
+      "Source fidelity error: 51af3341 includes 'time to start procedure turn if applicable' in the correct answer; this element does not appear in the provided 6-7-2 source blocks.",
+      "Incomplete true/false stem: dbb2128e uses bare phraseology text as a T/F stem without forming a complete proposition."
+    ],
+    "generation_guidance": [
+      "Eliminate all subparagraph references from explanations. State the operating requirement directly: 'Category H behind Category C requires 2 minutes' rather than 'Subparagraph a3 specifies 2 minutes.'",
+      "Do not write items that ask 'why' unless the source blocks explicitly provide the reason. When the source states only values or procedures, test recall and application of those values or procedures.",
+      "Avoid near-duplicate question/activity pairs. When both formats cover the same paragraph, the activity should test a different operational skill or boundary condition, not restate the question with swapped phrasing.",
+      "Keep flashcard backs to one retrieval target. Split multi-method procedural cards so each card addresses a single separation method.",
+      "Balance distractor length against correct-answer length. When the correct answer is a detailed phraseologicial requirement, make distractors similarly substantive rather than terse.",
+      "The 6-1-2 condition_boundary activity and the 6-2-2 source_use activity are exemplars: scenario-driven, boundary-sensitive, and testing whether the rule's conditions are met.",
+      "Write explanations that state the operating requirement directly. Replace 'Subparagraph a requires the leading aircraft to maintain a speed at least 44 knots faster' with 'When the leading aircraft maintains a speed at least 44 knots faster than the following aircraft and both are DME/ATD-equipped, the minimum is 5 miles.' Never name the subparagraph.",
+      "Do not add explanatory rationales such as 'this conservative approach ensures separation is never understated' or 'the doubling reflects greater position uncertainty.' State the rule as given; add reasoning only when the source block supplies it.",
+      "Verify table entries against the source tables before writing a table_lookup activity. A premise that a listed angle 'does not appear' in the table is trivially falsified by reading the table.",
+      "Count prerequisite conditions directly from the source block before writing the flashcard front. If the source lists three requirements, do not ask for 'two conditions.'",
+      "Maintain the current distractor quality: wrong choices should be adjacent separation values, opposite-direction rules, or plausible non-standard phraseology, as seen throughout this shard. This is a strength worth preserving.",
+      "When writing phraseology-construction activities, use 'CROSS (fix) AT OR BEFORE (time)' as the authoritative form and test the student's ability to select it over non-standard variants. The distractor set in c0c81cfd is a good model.",
+      "Write explanations that state the operating requirement directly — e.g., 'At FL180 through FL230, a course change of 91 through 180 degrees requires 28 miles of overflown-side protection' — without adding unstated geometric or safety rationales.",
+      "Remove all document-structure references from stems and explanations. Never use 'subparagraph,' 'paragraph,' 'the note states,' 'this section requires,' or similar scaffolding.",
+      "Do not hypothesize why a rule exists when the source only states the rule. For 6-5-4, the source gives values; it does not explain why larger turns need more protection. For 6-7-5, the source lists wake turbulence intervals without explaining the vulnerability rationale.",
+      "Ensure correct answers do not stand out by length. When the correct answer is inherently longer (as with compound procedural requirements), construct distractors of comparable length and specificity.",
+      "Build true/false stems as complete propositions the student can evaluate, not as isolated data strings. E.g., ask whether a specific phraseology string is valid published phraseology.",
+      "Verify every element in a correct-answer choice against the source blocks. For timed-approach clearance elements (6-7-2), the source lists approach clearance, descent to vacated altitude, and time to leave the fix — not procedure-turn timing.",
+      "For fill-in-blank questions with two blanks, ensure both blanks are independently answerable from the same source context and the stem does not contain paragraph-structure references."
+    ],
+    "shard_overviews": [
+      "The shard has a solid core of well-constructed items, particularly the scenario-based condition_boundary activity in 6-1-2 and the source_use activity in 6-2-2. The dominant defect is document-structure scaffolding in explanations — seven items refer to subparagraphs by letter/number instead of stating the operating requirement directly. Two 6-1-5 items ask 'why' questions whose answers invent wake-physics rationale entirely absent from the source blocks. One flashcard is overloaded with two procedural methods on a single back. Two activity/question pairs are near-duplicates testing identical content in the same retrieval mode. Minor answer-length cue noted on one 6-3-1 question. The remaining ten items are well-formed and require no intervention.",
+      "The shard covers seven paragraphs (6-4-1 through 6-5-3) with 23 items. Core operational concepts — time-based longitudinal separation, opposite-course minima, diverging-radials tables, DME arc minima — are accurately represented. No items are factually wrong on separation values or phraseology except the table_lookup activity in 6-5-2. The primary quality defect is pervasive paragraph-location scaffolding in explanations: 13 of 23 items embed 'subparagraph,' paragraph-number, or parenthetical-letter references in their explanations instead of stating operational requirements directly. Several explanations also invent unsupported rationales (position uncertainty, conservative-design justifications) absent from source blocks. One flashcard miscounts prerequisite conditions.",
+      "The shard covers non-airway lateral separation, RNAV diverging/crossing minima, vertical separation altitude reassignment (basic rule and exceptions), pilot-maintained vertical separation, timed approach conditions and procedures, interval minima, and missed approach handling. Source fidelity is sound on factual values and most procedures, but explanations frequently invent geometric rationales, wake-vulnerability justifications, or safety purposes absent from the source blocks. One question (51af3341) has a correct answer that includes a procedure-turn element not present in the source paragraphs provided. Several explanations use paragraph-structure scaffolding ('subparagraph a,' 'the note states'). The true/false phraseology question has a bare stem lacking a proposition. Answer-length cue is present in one question where the correct option is substantially longer than all distractors. Flashcards are generally well-constructed and accurate. The activity in 6-5-4 shares the same invented-geometric-rationale defect as its companion question."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "activity",
+      "para_id": "6-1-1",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "retrieval_diversity"
+      ],
+      "problem": "This discrimination activity is a near-duplicate of question 5b0c5910. Both items test the same single-source-sentence rule (direct VHF/UHF voice communications required for mileage-based separation) via multiple-choice discrimination with overlapping distractor sets. The question is slightly stronger in stem framing; the activity adds no new retrieval dimension.",
+      "source_basis": "6-1-1 source block: 'Use mileage-based (DME and/or ATD) procedures and minima only when direct pilot/controller VHF or UHF voice communications are maintained.'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Which communications scenario permits use of mileage-based separation?",
+          "question_text": "In which of the following situations may the controller apply mileage-based (DME and/or ATD) procedures and minima?",
+          "choices": [
+            {
+              "text": "The pilot communicates through a relay aircraft on the same frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot and controller are in direct VHF voice communication.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot sends position reports via datalink while a third party relays voice.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot communicates through company dispatch which relays to ATC.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule requires direct pilot/controller VHF or UHF voice communications. Direct communication means the controller and pilot speak to each other without an intermediary. Relayed communications, regardless of the relay method, do not satisfy this requirement.",
+          "publication_id": "content-expansion-pass-02:chapter-06:activities:6-1-1:0"
+        }
+      }
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-1-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses document-structure scaffolding ('Subparagraph a3 specifies') instead of stating the operating requirement directly. The question stem and choices are correct.",
+      "source_basis": "6-1-4 source block: 'a. The ATC facility having control jurisdiction at adjacent airports must separate arriving or departing IFR aircraft on a course that will cross the flight path of an aircraft requiring wake turbulence separation in accordance with the following: 1. Category B, C, D, E, F, G, H, or I aircraft behind Category A aircraft − 3 minutes. 2. Category B, C, D, E, F, G, H, or I aircraft behind Category B or D aircraft − 2 minutes. 3. Category E, F, G, H, or I aircraft behind Category C aircraft − 2 minutes. 4. Category I aircraft behind Category E aircraft − 2 minutes.'",
+      "match": {
+        "question_text": "Which of the following correctly pairs a terminal adjacent-airport wake turbulence category combination with its required separation?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which of the following correctly pairs a terminal adjacent-airport wake turbulence category combination with its required separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Category H behind Category C requires 2 minutes of wake turbulence separation. Category F behind Category A requires 3 minutes, not 2. Category I behind Category E requires 2 minutes, not 3. Category D behind Category B requires 2 minutes, not 3.",
+          "choices": [
+            {
+              "text": "Category F behind Category A — 2 minutes.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Category H behind Category C — 2 minutes.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Category I behind Category E — 3 minutes.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Category D behind Category B — 3 minutes.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "6-1-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses document-structure scaffolding ('Subparagraph a1 specifies,' 'a2,' 'a3,' 'a4') instead of stating the operating requirement directly. The activity question and choices are correct.",
+      "source_basis": "6-1-4 source block terminal subparagraph a1: 'Category B, C, D, E, F, G, H, or I aircraft behind Category A aircraft − 3 minutes.' All other terminal adjacent-airport pairs use 2 minutes per a2, a3, and a4.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "For each category pair, identify which requires 3 minutes of wake turbulence separation in terminal adjacent-airport operations.",
+          "question_text": "In terminal adjacent-airport operations, which of the following category pairs requires 3 minutes rather than 2 minutes of wake turbulence separation?",
+          "choices": [
+            {
+              "text": "Category D behind Category B.",
+              "is_correct": false
+            },
+            {
+              "text": "Category H behind Category C.",
+              "is_correct": false
+            },
+            {
+              "text": "Category F behind Category A.",
+              "is_correct": true
+            },
+            {
+              "text": "Category I behind Category E.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Subparagraph a1 specifies 3 minutes for any Category B through I behind Category A. All other terminal adjacent-airport pairs use 2 minutes: Category B-I behind B or D (a2), Category E-I behind C (a3), and Category I behind E (a4).",
+          "publication_id": "content-expansion-pass-02:chapter-06:activities:6-1-4:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "For each category pair, identify which requires 3 minutes of wake turbulence separation in terminal adjacent-airport operations.",
+            "question_text": "In terminal adjacent-airport operations, which of the following category pairs requires 3 minutes rather than 2 minutes of wake turbulence separation?",
+            "choices": [
+              {
+                "text": "Category D behind Category B.",
+                "is_correct": false
+              },
+              {
+                "text": "Category H behind Category C.",
+                "is_correct": false
+              },
+              {
+                "text": "Category F behind Category A.",
+                "is_correct": true
+              },
+              {
+                "text": "Category I behind Category E.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Category B through I behind Category A requires 3 minutes of wake turbulence separation. All other terminal adjacent-airport category pairs require 2 minutes: Category B through I behind Category B or D; Category E through I behind Category C; and Category I behind Category E."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "6-1-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The flashcard back uses document-structure scaffolding ('(a1),' '(a2),' '(a3),' '(a4)') that teaches paragraph-index trivia rather than the operational requirements. The front and card type are correct.",
+      "source_basis": "6-1-4 source block terminal subparagraphs a1 through a4.",
+      "match": {
+        "front": "In terminal adjacent-airport operations, what are the four wake turbulence separation values and their corresponding lead-trail category pairs?",
+        "back": "3 min — any B-I behind A (a1). 2 min — any B-I behind B or D (a2). 2 min — E-I behind C (a3). 2 min — I behind E (a4).",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "In terminal adjacent-airport operations, what are the four wake turbulence separation values and their corresponding lead-trail category pairs?",
+          "back": "3 min — any Category B through I behind Category A. 2 min — any Category B through I behind Category B or D. 2 min — Category E through I behind Category C. 2 min — Category I behind Category E.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The question asks why the same-runway minimum (3 min) exceeds the parallel-runway minimum (2 min) for small-behind-B757 arrivals. The source blocks state the two values but provide no operational rationale for the difference. The explanation and correct answer invent wake-physics reasoning (flight paths diverge, reducing duration and intensity of wake exposure) that is absent from the source. This teaches a rationale the FAA order does not assert.",
+      "source_basis": "6-1-5 source block en route subparagraphs b3 and c3 state only the values: 'Small behind B757 − 3 minutes' for same runway and 'Small behind B757 − 2 minutes' for parallel/crossing runways. No rationale is provided.",
+      "match": {
+        "question_text": "In en route arrival operations, a small aircraft behind a B757 requires 3 minutes when landing to the same runway but only 2 minutes when landing to a parallel runway separated by less than 2,500 feet. Why does the same-runway case require more time?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "In en route arrival operations, a small aircraft is landing behind a B757 to a parallel runway separated by less than 2,500 feet. What wake turbulence separation is required?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "A small aircraft behind a B757 requires 2 minutes of wake turbulence separation when landing to a parallel runway separated by less than 2,500 feet, or a crossing runway if projected flight paths will cross. When landing to the same runway, 3 minutes is required.",
+          "choices": [
+            {
+              "text": "2 minutes.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "3 minutes.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "4 minutes.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "5 minutes.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "6-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The activity asks 'What operational factor explains the difference?' between same-runway and parallel-runway minima for small-behind-B757. The source blocks provide no such explanation — they state the two values without rationale. The correct answer and explanation invent a wake-exposure comparison absent from the FAA order.",
+      "source_basis": "6-1-5 source block en route subparagraphs b3 and c3 state only the values: 'Small behind B757 − 3 minutes' for same runway and 'Small behind B757 − 2 minutes' for parallel/crossing runways. No operational factor is provided.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Compare en route arrival minima for same-runway versus parallel/crossing-runway operations for a small aircraft behind a B757.",
+          "question_text": "In en route arrival operations, a small aircraft behind a B757 requires 3 minutes to the same runway but only 2 minutes to a parallel runway separated by less than 2,500 feet. What operational factor explains the difference?",
+          "choices": [
+            {
+              "text": "Same-runway arrivals fly through the same wake path for longer, while parallel-runway flight paths diverge, reducing wake exposure time.",
+              "is_correct": true
+            },
+            {
+              "text": "The B757 produces more wake on the same runway than when landing on a parallel runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Parallel-runway arrivals always use radar separation as the primary method.",
+              "is_correct": false
+            },
+            {
+              "text": "The same-runway minimum includes an extra minute for coordination between approach and tower.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When aircraft land on the same runway, the trailing aircraft flies directly through the leading aircraft's wake. On parallel runways, the flight paths diverge, reducing the duration of wake exposure. This reduced risk permits a smaller minimum for the parallel/crossing case, but only for the B757 — super and heavy lead aircraft have the same minima in both cases.",
+          "publication_id": "content-expansion-pass-02:chapter-06:activities:6-1-5:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Identify the correct wake turbulence separation for a small aircraft behind a B757 in each en route arrival configuration.",
+            "question_text": "In en route arrival operations, which of the following correctly states the wake turbulence separation for a small aircraft behind a B757?",
+            "choices": [
+              {
+                "text": "3 minutes to the same runway; 2 minutes to a parallel runway separated by less than 2,500 feet.",
+                "is_correct": true
+              },
+              {
+                "text": "2 minutes to the same runway; 3 minutes to a parallel runway separated by less than 2,500 feet.",
+                "is_correct": false
+              },
+              {
+                "text": "3 minutes to both the same runway and a parallel runway.",
+                "is_correct": false
+              },
+              {
+                "text": "2 minutes to both the same runway and a parallel runway.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "A small aircraft behind a B757 requires 3 minutes of wake turbulence separation when landing to the same runway. When landing to a parallel runway separated by less than 2,500 feet or a crossing runway where projected flight paths will cross, 2 minutes is required."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses document-structure scaffolding ('Subparagraph c1(b)(2) requires,' 'c1(b)(1)') instead of stating the operating requirement directly. The question text and answer are correct.",
+      "source_basis": "6-2-1 source block subparagraph c1(b): 'Nonintersecting runways. Authorize simultaneous takeoffs when either of the following conditions exist: ...(b) The distance between runway centerlines at and beyond the points where takeoffs begin is at least: (1) 2,000 feet and the runways diverge by 15 to 29 degrees inclusive. (2) 3,500 feet and the runways diverge by less than 15 degrees.'",
+      "match": {
+        "question_text": "For nonintersecting runways, a divergence of less than 15 degrees requires a centerline distance of at least _____ feet for simultaneous takeoffs.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "For nonintersecting runways, a divergence of less than 15 degrees requires a centerline distance of at least _____ feet for simultaneous takeoffs.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "explanation": "For nonintersecting runways that diverge by less than 15 degrees, simultaneous takeoffs are authorized when the distance between runway centerlines at and beyond the takeoff points is at least 3,500 feet. When the runways diverge by 15 to 29 degrees, 2,000 feet is sufficient.",
+          "choices": [
+            {
+              "text": "3,500",
+              "is_correct": true,
+              "sort_order": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-2-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses document-structure scaffolding ('Subparagraph c2(b) adds...' 'under c2(a)') and invents a rationale absent from the source ('The turn ensures positive divergence at shallower angles'). The source states the turn requirement for 15-29 degrees but does not provide an operational explanation for why the turn is required.",
+      "source_basis": "6-2-1 source block subparagraph c2: 'Intersecting runways. Authorize takeoff of a succeeding aircraft when the preceding aircraft has passed the point of runway intersection, and (a) The runways diverge by 30 degrees or more. ... (b) The runways diverge by 15 to 29 degrees inclusive and the preceding aircraft has commenced a turn.'",
+      "match": {
+        "question_text": "For which divergence angle must the preceding aircraft have both passed the runway intersection point AND commenced a turn before the succeeding aircraft may take off from intersecting runways?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "For which divergence angle must the preceding aircraft have both passed the runway intersection point AND commenced a turn before the succeeding aircraft may take off from intersecting runways?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "For intersecting runways that diverge by 15 to 29 degrees, the preceding aircraft must have both passed the point of runway intersection and commenced a turn before the succeeding aircraft may take off. For intersecting runways that diverge by 30 degrees or more, passage of the intersection point alone is sufficient.",
+          "choices": [
+            {
+              "text": "30 degrees or more.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Any divergence angle on intersecting runways.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "15 to 29 degrees inclusive.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Less than 15 degrees.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity",
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses document-structure scaffolding ('Subparagraph a lists') and appends an invented rationale ('reflecting longer exposure to potential conflict') that the source does not assert. The source lists the three-tier values but provides no causal explanation for the progression.",
+      "source_basis": "6-2-1 source block subparagraph a: 'When aircraft will fly diverging courses: 1. Immediately after takeoff − 1 minute until courses diverge. ... 2. Within 5 minutes after takeoff − 2 minutes until courses diverge. ... 3. Within 13 miles DME/ATD after takeoff − 3 miles until courses diverge.'",
+      "match": {
+        "question_text": "Which list correctly states the three-tier diverging-course departure minima in order from the smallest to largest separation value?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which list correctly states the three-tier diverging-course departure minima in order from the smallest to largest separation value?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Aircraft on diverging courses require: 1 minute when divergence occurs immediately after takeoff; 2 minutes when divergence occurs within 5 minutes after takeoff; or 3 miles when divergence occurs within 13 miles DME/ATD after takeoff.",
+          "choices": [
+            {
+              "text": "1 minute immediately after takeoff; 2 minutes within 5 minutes after takeoff; 3 miles within 13 miles DME/ATD.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "2 minutes immediately after takeoff; 3 minutes within 5 minutes after takeoff; 5 miles within 13 miles DME/ATD.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "1 minute immediately after takeoff; 3 minutes within 5 minutes after takeoff; 5 miles within 13 miles DME/ATD.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "3 miles immediately after takeoff; 2 minutes within 5 minutes after takeoff; 1 minute within 13 miles DME/ATD.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "6-2-1",
+      "action": "remove",
+      "severity": "minor",
+      "categories": [
+        "retrieval_diversity"
+      ],
+      "problem": "This ordering activity tests the same three-tier diverging-course minima as question 1b9070be. Both ask the learner to identify the correct ordering from smallest to largest separation value with near-identical distractor patterns. The activity adds no distinct retrieval dimension. The question (1b9070be) is retained.",
+      "source_basis": "6-2-1 source block subparagraph a, items 1-3.",
+      "match": {
+        "activity_type": "ordering",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Arrange the three diverging-course departure minima in order from smallest to largest separation value.",
+          "question_text": "Which list correctly orders the three diverging-course departure minima from the smallest separation value to the largest?",
+          "choices": [
+            {
+              "text": "1 minute immediately after takeoff; 2 minutes within 5 minutes after takeoff; 3 miles within 13 miles DME/ATD.",
+              "is_correct": true
+            },
+            {
+              "text": "3 miles within 13 miles DME/ATD; 2 minutes within 5 minutes after takeoff; 1 minute immediately after takeoff.",
+              "is_correct": false
+            },
+            {
+              "text": "2 minutes within 5 minutes; 3 minutes immediately; 5 miles within 13 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "1 minute immediately; 3 minutes within 5 minutes; 5 miles within 13 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The three-tier progression is: immediately after takeoff → 1 minute; within 5 minutes → 2 minutes; within 13 miles DME/ATD → 3 miles. Each tier uses a larger value because divergence occurs later, increasing the period during which aircraft are on potentially conflicting paths.",
+          "publication_id": "content-expansion-pass-02:chapter-06:activities:6-2-1:0"
+        }
+      }
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "6-2-2",
+      "action": "split",
+      "severity": "minor",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "This flashcard loads two procedurally distinct separation methods (3-minute timed and 5-mile distance-based) onto a single back along with the 5-mile conditional qualifiers. The back is too dense for one retrieval target. Splitting gives each method its own focused card.",
+      "source_basis": "6-2-2 source block: 'Separate aircraft that will fly the same course when the following aircraft will climb through the altitude assigned to the leading aircraft by using a minimum of 3 minutes until the following aircraft passes through the assigned altitude of the leading aircraft; or 5 miles between DME equipped aircraft; RNAV equipped aircraft using ATD; and between DME and ATD aircraft provided the DME aircraft is either 10,000 feet or below or outside of 10 miles from the DME NAVAID.'",
+      "match": {
+        "front": "What are the two authorized separation methods for same-course departures when the following aircraft will climb through the leading aircraft's altitude?",
+        "back": "3 minutes until the following aircraft passes through the assigned altitude of the leading aircraft; OR 5 miles between DME-equipped aircraft, RNAV-equipped using ATD, or mixed DME/ATD with the DME aircraft at/below 10,000 ft or outside 10 miles from the DME NAVAID.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "When the following aircraft will climb through the leading aircraft's altitude on the same course, what is the timed separation minimum?",
+          "back": "3 minutes until the following aircraft passes through the assigned altitude of the leading aircraft.",
+          "card_type": "threshold"
+        },
+        {
+          "front": "When the following aircraft will climb through the leading aircraft's altitude on the same course, what is the distance-based separation minimum?",
+          "back": "5 miles between DME-equipped aircraft, RNAV-equipped aircraft using ATD, or between DME and ATD aircraft provided the DME aircraft is at or below 10,000 feet or outside 10 miles from the DME NAVAID.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-3-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "explanation_quality",
+        "distractor_quality"
+      ],
+      "problem": "The explanation uses document-structure scaffolding ('Subparagraph b applies,' 'subparagraph a') and the correct answer is notably longer than all three distractors, creating an answer-length cue. A student can identify the correct choice by length without understanding the operational rule.",
+      "source_basis": "6-3-1 source block subparagraphs a and b: 'a. TERMINAL. When takeoff direction differs by at least 45 degrees from the reciprocal of the final approach course, the departing aircraft takes off before the arriving aircraft leaves a fix inbound not less than 4 miles from the airport. b. TERMINAL. When takeoff direction is other than in subparagraph a, the departing aircraft takes off so that it is established on a course diverging by at least 45 degrees from the reciprocal of the final approach course before the arriving aircraft leaves a fix inbound not less than 4 miles from the airport.'",
+      "match": {
+        "question_text": "In terminal operations with a valid fix at 6 miles, the takeoff direction is aligned with the final approach course reciprocal (differing by less than 45 degrees). What must the departing aircraft accomplish before the arriving aircraft reaches the fix?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "In terminal operations with a valid fix at 6 miles, the takeoff direction differs by less than 45 degrees from the reciprocal of the final approach course. What must the departing aircraft accomplish before the arriving aircraft reaches the fix?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When the takeoff direction differs by less than 45 degrees from the reciprocal of the final approach course, the departing aircraft must be established on a course diverging by at least 45 degrees from the reciprocal of the final approach course before the arriving aircraft leaves a fix at least 4 miles from the airport. When the takeoff direction differs by at least 45 degrees, the departure need only have taken off before the arrival reaches the fix.",
+          "choices": [
+            {
+              "text": "Be established on a course diverging by at least 45 degrees from the final approach course reciprocal.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Have taken off before the arriving aircraft reaches the fix inbound from the airport.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Have been airborne and reached at least 4 miles from the departure airport before the fix.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Be at or above the arriving aircraft's assigned altitude before reaching the fix inbound.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "6-3-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence",
+        "explanation_quality"
+      ],
+      "problem": "The activity asks why the fix-based separation method is preferred over the time-based method. The source establishes fix-based as primary and time-based as a fallback when no fix exists, but does not state a reason for the preference. The explanation invents a precision rationale ('uses an actual geographic reference... which is more precise than an estimated arrival time') absent from the source. Additionally, the explanation uses document-structure scaffolding ('Subparagraph c makes the time-based method the fallback').",
+      "source_basis": "6-3-1 source block subparagraphs a, b, c, d, and e establish fix-based methods (a, b) as the primary procedures and time-based methods (d, e) as fallbacks under subparagraph c: 'When the absence of an appropriate fix precludes the application of subparagraphs a or b... the separation in subparagraphs d or e must be applied.' No rationale for the preference is stated.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Compare the fix-based and time-based departure/arrival separation methods.",
+          "question_text": "When the takeoff direction differs by at least 45 degrees from the reciprocal of the final approach course, the fix-based method has the departure take off before the arrival leaves a fix at least 4 miles from the airport. The time-based method has the departure take off 3 minutes before the arrival is estimated at the airport. Why is the fix-based method preferred when an appropriate fix exists?",
+          "choices": [
+            {
+              "text": "The fix-based method uses a precise geographic reference rather than an estimate, reducing position uncertainty.",
+              "is_correct": true
+            },
+            {
+              "text": "The fix-based method always requires less time between the departure and arrival.",
+              "is_correct": false
+            },
+            {
+              "text": "The time-based method requires DME equipment that is not available at all airports.",
+              "is_correct": false
+            },
+            {
+              "text": "The fix-based method eliminates the need for the 45-degree divergence requirement.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The fix-based method uses an actual geographic reference — the aircraft's position relative to a known fix — which is more precise than an estimated arrival time. Subparagraph c makes the time-based method the fallback, reinforcing that fix-based is the preferred method.",
+          "publication_id": "content-expansion-pass-02:chapter-06:activities:6-3-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Determine which departure/arrival separation method applies given the takeoff direction, fix availability, and airport type.",
+            "question_text": "An airport has approach control service and a valid fix at 6 miles from the airport. A departing aircraft's takeoff direction differs by at least 45 degrees from the reciprocal of the final approach course. Which separation must the controller apply?",
+            "choices": [
+              {
+                "text": "The departing aircraft takes off before the arriving aircraft leaves the fix.",
+                "is_correct": true
+              },
+              {
+                "text": "The departing aircraft must be established on a course diverging by at least 45 degrees from the final approach course reciprocal before the arrival reaches the fix.",
+                "is_correct": false
+              },
+              {
+                "text": "The departing aircraft takes off 3 minutes before the arriving aircraft is estimated at the airport.",
+                "is_correct": false
+              },
+              {
+                "text": "The departing aircraft takes off 5 minutes before the arriving aircraft is estimated at the airport.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "When the takeoff direction differs by at least 45 degrees from the reciprocal of the final approach course and an appropriate fix exists, the departing aircraft must take off before the arriving aircraft leaves a fix at least 4 miles from the airport. When the takeoff direction differs by less than 45 degrees, the departure must be established on a diverging course before the arrival reaches the fix. The timed methods apply only when no appropriate fix is available."
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-4-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses paragraph-location scaffolding: 'Subparagraph c2(b) requires' and '(a), (c)' reference the document structure instead of stating the operational condition directly.",
+      "source_basis": "Source block 6-4-2 body subparagraph c2(b): 'The aircraft are separated by not more than 4,000 feet when the altitude change started.'",
+      "match": {
+        "question_text": "For non-DME aircraft climbing or descending through another aircraft's altitude, the 5-minute longitudinal minimum requires all of three conditions. Which condition concerns the maximum permitted vertical distance at the start of the altitude change?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "For non-DME aircraft climbing or descending through another aircraft's altitude, the 5-minute longitudinal minimum requires all of three conditions. Which condition concerns the maximum permitted vertical distance at the start of the altitude change?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "For the 5-minute longitudinal minimum when non-DME aircraft climb or descend through another aircraft's altitude, three conditions must all be met: the descending aircraft must be leading or the climbing aircraft following; the aircraft must be separated by not more than 4,000 feet when the altitude change started; and the change must start within 10 minutes after the following aircraft reports over a fix reported by the leading aircraft or acknowledges a crossing-time clearance.",
+          "choices": [
+            {
+              "text": "Not more than 2,000 feet apart when the altitude change started.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Not more than 4,000 feet apart when the altitude change started.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Not more than 5,000 feet apart when the altitude change started.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Not more than 10,000 feet apart when the altitude change started.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-4-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses paragraph-location scaffolding throughout: 'Subparagraph a requires,' 'Subparagraph b requires,' 'The fallback under subparagraph d is.' These teach document structure instead of operational rules.",
+      "source_basis": "Source block 6-4-2 body subparagraphs a, b, and d establish three speed-advantage tiers: ≥44 knots → 5 miles (or 3 min), ≥22 knots → 10 miles (or 5 min), and 20 miles/10 min fallback when neither speed advantage is met.",
+      "match": {
+        "question_text": "Which speed advantage from the leading aircraft, combined with DME/ATD equipment, authorizes a 5-mile longitudinal separation minimum on same, converging, or crossing courses?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which speed advantage from the leading aircraft, combined with DME/ATD equipment, authorizes a 5-mile longitudinal separation minimum on same, converging, or crossing courses?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When the leading aircraft maintains a speed at least 44 knots faster than the following aircraft and both are DME/ATD-equipped, the minimum longitudinal separation is 5 miles. At least 22 knots faster provides 10 miles. When neither speed advantage is met, the fallback is 20 miles or 10 minutes.",
+          "choices": [
+            {
+              "text": "At least 20 knots faster.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "At least 30 knots faster.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "At least 22 knots faster.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "At least 44 knots faster.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-4-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation opens with paragraph-location scaffolding: 'Subparagraph c provides three RNAV distance tiers.' The document-structure reference substitutes for direct operational instruction.",
+      "source_basis": "Source block 6-4-3 note sequence 2 subparagraph c: RNAV aircraft opposite-course minima are 8 miles (route ≤8 NM wide), 18 miles (route >8 NM wide), or 30 miles when the segment requires extended usable distance limitations beyond 130 miles.",
+      "match": {
+        "question_text": "Two RNAV aircraft on opposite courses report passing the same position. The route is greater than 8 miles in width and the segment requires extended usable distance limitations beyond 130 miles. What minimum distance must separate the aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Two RNAV aircraft on opposite courses report passing the same position. The route is greater than 8 miles in width and the segment requires extended usable distance limitations beyond 130 miles. What minimum distance must separate the aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "For RNAV aircraft on opposite courses, three distance tiers apply after both report passing the same position: 8 miles for routes 8 miles or less in width; 18 miles for routes greater than 8 miles in width; and 30 miles for any route segment requiring extended usable distance limitations beyond 130 miles. The extended-distance qualifier overrides the route-width tier and mandates 30 miles.",
+          "choices": [
+            {
+              "text": "8 miles because the aircraft reported the same position.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "18 miles because the route is greater than 8 miles in width.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "30 miles because the segment requires extended usable distance limitations beyond 130 miles.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "3 minutes because time-based separation applies when extended distance limitations are in effect.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-4-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation opens with paragraph-location scaffolding: 'Subparagraph b permits discontinuing vertical separation when.' The operational condition should be stated directly.",
+      "source_basis": "Source block 6-4-3 note sequence 2 subparagraph b: 'Both aircraft have reported passing the same intersection/waypoint and they are at least 3 minutes apart.'",
+      "match": {
+        "question_text": "Two aircraft on opposite courses have reported passing the same intersection and are 4 minutes apart. May vertical separation be discontinued?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Two aircraft on opposite courses have reported passing the same intersection and are 4 minutes apart. May vertical separation be discontinued?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Vertical separation on opposite courses may be discontinued when both aircraft have reported passing the same intersection or waypoint and they are at least 3 minutes apart. With 4 minutes, this condition is met. A shared reference point plus a minimum time interval confirms the aircraft have passed each other.",
+          "choices": [
+            {
+              "text": "Yes, because they reported passing the same intersection and are at least 3 minutes apart.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "No, because they must report passing different NAVAIDs indicating they have passed each other.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "No, because vertical separation must continue for the full 10 minutes after estimated passing.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Yes, but only if they are also at least 8 miles apart.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-5-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses paragraph-location scaffolding: 'Subparagraph d requires' and cross-references '6-2-1' as a document location. Both are document-structure references instead of operational statements.",
+      "source_basis": "Source block 6-5-1 body subparagraph d: 'Clear departing aircraft to fly specified headings which diverge by at least 45 degrees.'",
+      "match": {
+        "question_text": "Clear departing aircraft to fly specified headings that diverge by at least _____ degrees.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "Clear departing aircraft to fly specified headings that diverge by at least _____ degrees.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "explanation": "Departing aircraft must be cleared to fly specified headings that diverge by at least 45 degrees for lateral separation. This is the same 45-degree divergence threshold used for diverging-course departure separation.",
+          "choices": [
+            {
+              "text": "45",
+              "is_correct": true,
+              "sort_order": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-5-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses paragraph-location scaffolding: 'The paragraph lists four methods: (a)... (b)... (c)... (d)...' The letter labels and 'paragraph' reference teach document structure rather than the methods themselves.",
+      "source_basis": "Source block 6-5-1 body lists four lateral separation methods: different non-overlapping airways/routes, different geographical locations below FL180, different non-overlapping holding fixes, and headings diverging by at least 45 degrees.",
+      "match": {
+        "question_text": "Which of the following is an approved method for procedural lateral separation?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which of the following is an approved method for procedural lateral separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Approved lateral separation methods include: clearing aircraft on different airways or routes whose protected airspace widths do not overlap; clearing aircraft below 18,000 feet to different geographical locations; clearing aircraft to hold over different fixes whose holding pattern airspace does not overlap; and clearing departing aircraft to fly specified headings that diverge by at least 45 degrees.",
+          "choices": [
+            {
+              "text": "Clear aircraft on different airways or routes whose protected airspace widths do not overlap.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Assign different altitudes to aircraft on the same airway.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Require aircraft to report position every 50 miles along the route.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Apply 5 miles of radar separation between aircraft on parallel tracks.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-5-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation opens with paragraph-location scaffolding: 'Subparagraph a1 requires at least 15 degrees of divergence.' The operational threshold should be stated directly without naming the document subdivision.",
+      "source_basis": "Source block 6-5-2 body subparagraph a1: 'Established on radials of the same NAVAID that diverge by at least 15 degrees when either aircraft is clear of the airspace to be protected for the other aircraft.'",
+      "match": {
+        "question_text": "The diverging-radials lateral separation procedure requires radials of the same NAVAID to diverge by at least _____ degrees.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "The diverging-radials lateral separation procedure requires radials of the same NAVAID to diverge by at least _____ degrees.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "explanation": "Radials diverging-radials lateral separation requires at least 15 degrees of divergence between radials of the same NAVAID, with either aircraft clear of the airspace to be protected for the other. Below 15 degrees the procedure does not apply regardless of aircraft distance from the NAVAID.",
+          "choices": [
+            {
+              "text": "15",
+              "is_correct": true,
+              "sort_order": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-5-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "Explanation adds an invented rationale: 'This conservative approach ensures separation is never understated when the exact angle does not match a table entry.' The source block states the rule without explaining its purpose. The explanation should state the rule directly.",
+      "source_basis": "Source block 6-5-2 note sequence 1 subparagraph b: 'For divergence that falls between two values, use the lesser divergence value to obtain the distance.'",
+      "match": {
+        "question_text": "The non-DME diverging-radials table specifies a required distance for each divergence angle. When the actual divergence angle falls between two values in the table, which value is used?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "The non-DME diverging-radials table specifies a required distance for each divergence angle. When the actual divergence angle falls between two values in the table, which value is used?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When the divergence angle falls between two table values, use the lesser divergence value to obtain the distance. The lesser divergence value yields the larger distance value from the table.",
+          "choices": [
+            {
+              "text": "The next lower value in the table.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The average of the two adjacent values.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The next higher value in the table.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "The value for the closest whole-degree entry.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-5-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence",
+        "explanation_quality"
+      ],
+      "problem": "Explanation uses paragraph-location scaffolding ('Subparagraph a1 specifies,' 'subparagraph a2 increases') and adds an invented rationale: 'The doubling reflects greater position uncertainty farther from the NAVAID.' The source blocks for 6-5-3 do not state why the values differ.",
+      "source_basis": "Source block 6-5-3 body subparagraph a1: 10 miles at 35 miles or less from the NAVAID; subparagraph a2: 20 miles at more than 35 miles from the NAVAID.",
+      "match": {
+        "question_text": "Between different DME arcs about the same NAVAID at 35 miles or less from the NAVAID, the minimum lateral separation is _____ miles.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "Between different DME arcs about the same NAVAID at 35 miles or less from the NAVAID, the minimum lateral separation is _____ miles.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "explanation": "Between different DME arcs about the same NAVAID, the minimum lateral separation is 10 miles at 35 miles or less from the NAVAID. At more than 35 miles, the minimum increases to 20 miles.",
+          "choices": [
+            {
+              "text": "10",
+              "is_correct": true,
+              "sort_order": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-5-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence",
+        "explanation_quality"
+      ],
+      "problem": "Explanation uses paragraph-location scaffolding ('Subparagraph b1 specifies') and adds an invented rationale: 'reflecting that one aircraft is on a defined arc while the other is in a designated airspace volume.' The source blocks state the minima without explaining the design rationale.",
+      "source_basis": "Source block 6-5-3 note sequence 2 subparagraph b1: 5 miles between an arc and other airspace to be protected at 35 miles or less from the NAVAID. Subparagraph b2: 10 miles at more than 35 miles.",
+      "match": {
+        "question_text": "A controller assigns one aircraft to fly a 30-mile DME arc about a VOR, and needs to protect other airspace inside that arc. The airspace to be protected is within 35 miles of the NAVAID. What minimum must be maintained between the arc and that airspace?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller assigns one aircraft to fly a 30-mile DME arc about a VOR, and needs to protect other airspace inside that arc. The airspace to be protected is within 35 miles of the NAVAID. What minimum must be maintained between the arc and that airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Between a DME arc about a NAVAID and other airspace to be protected, the minimum lateral separation is 5 miles when both are at 35 miles or less from the NAVAID. At more than 35 miles from the NAVAID, the minimum is 10 miles. The 30-mile arc distance is the assigned arc radius, not the separation minimum; the controlling factor is distance from the NAVAID.",
+          "choices": [
+            {
+              "text": "5 miles.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "10 miles, the same as arc-to-arc separation.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "20 miles because the arc is at 30 miles from the NAVAID.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "No minimum applies because the airspace is inside the arc.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "6-4-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses publication-authority scaffolding: 'The published phraseology is,' 'This is the prescribed wording,' and 'Nonstandard variations are not the authorized phraseology.' These reference the publication as an authority rather than teaching the operational distinction directly. The circular final sentence essentially says nonstandard phraseology is wrong because it is nonstandard.",
+      "source_basis": "Source block 6-4-1 phraseology: 'CROSS (fix) AT OR BEFORE (time).' This is the prescribed phraseology for a fix-crossing deadline. 'AT OR AFTER' serves the opposite purpose.",
+      "match": {
+        "activity_type": "phraseology_construction",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 1,
+          "instruction": "Construct the correct phraseology for a fix-crossing deadline.",
+          "question_text": "A controller needs an aircraft to cross FIXXX no later than 1430Z. Which phraseology correctly conveys this restriction?",
+          "choices": [
+            {
+              "text": "CROSS FIXXX AT OR BEFORE 1430Z.",
+              "is_correct": true
+            },
+            {
+              "text": "CROSS FIXXX NO LATER THAN 1430Z.",
+              "is_correct": false
+            },
+            {
+              "text": "CROSS FIXXX AT OR AFTER 1430Z.",
+              "is_correct": false
+            },
+            {
+              "text": "PROCEED TO FIXXX, ARRIVE BY 1430Z.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The published phraseology is 'CROSS (fix) AT OR BEFORE (time).' This is the prescribed wording for a fix-crossing time restriction. 'AT OR AFTER' serves the opposite purpose (earliest crossing time). Nonstandard variations are not the authorized phraseology.",
+          "publication_id": "content-expansion-pass-02:chapter-06:activities:6-4-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "phraseology_construction",
+          "difficulty": 1,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 1,
+            "instruction": "Construct the correct phraseology for a fix-crossing deadline.",
+            "question_text": "A controller needs an aircraft to cross FIXXX no later than 1430Z. Which phraseology correctly conveys this restriction?",
+            "choices": [
+              {
+                "text": "CROSS FIXXX AT OR BEFORE 1430Z.",
+                "is_correct": true
+              },
+              {
+                "text": "CROSS FIXXX NO LATER THAN 1430Z.",
+                "is_correct": false
+              },
+              {
+                "text": "CROSS FIXXX AT OR AFTER 1430Z.",
+                "is_correct": false
+              },
+              {
+                "text": "PROCEED TO FIXXX, ARRIVE BY 1430Z.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct phraseology for a fix-crossing deadline is 'CROSS (fix) AT OR BEFORE (time).' This imposes a required crossing time that the aircraft must not exceed. 'AT OR AFTER' serves the opposite purpose: it sets the earliest permitted crossing time.",
+            "publication_id": "content-expansion-pass-02:chapter-06:activities:6-4-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "6-4-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation embeds paragraph sub-letter references as labels: '≥44 knots → 5 miles (a), ≥22 knots → 10 miles (b), and neither → 20 miles fallback (d).' The parenthetical letter labels teach document structure instead of operational thresholds.",
+      "source_basis": "Source block 6-4-2 body: ≥44 knots faster → 5 miles; ≥22 knots faster → 10 miles; neither condition → 20 miles fallback.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Match each speed advantage to the correct longitudinal separation minimum for DME/ATD-equipped aircraft.",
+          "question_text": "Match each leading-aircraft speed advantage to the correct longitudinal separation minimum for DME/ATD-equipped aircraft: (1) 50 knots faster; (2) 30 knots faster; (3) 15 knots faster.",
+          "choices": [
+            {
+              "text": "(1) 5 miles; (2) 10 miles; (3) 20 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "(1) 10 miles; (2) 20 miles; (3) 30 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "(1) 5 miles; (2) 5 miles; (3) 10 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "(1) 3 minutes; (2) 5 minutes; (3) 10 minutes.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The rule provides three tiers: ≥44 knots → 5 miles (a), ≥22 knots → 10 miles (b), and neither → 20 miles fallback (d). 50 knots qualifies for the 5-mile tier, 30 knots for the 10-mile tier (≥22 but <44), and 15 knots qualifies for neither, requiring the 20-mile fallback.",
+          "publication_id": "content-expansion-pass-02:chapter-06:activities:6-4-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Match each speed advantage to the correct longitudinal separation minimum for DME/ATD-equipped aircraft.",
+            "question_text": "Match each leading-aircraft speed advantage to the correct longitudinal separation minimum for DME/ATD-equipped aircraft: (1) 50 knots faster; (2) 30 knots faster; (3) 15 knots faster.",
+            "choices": [
+              {
+                "text": "(1) 5 miles; (2) 10 miles; (3) 20 miles.",
+                "is_correct": true
+              },
+              {
+                "text": "(1) 10 miles; (2) 20 miles; (3) 30 miles.",
+                "is_correct": false
+              },
+              {
+                "text": "(1) 5 miles; (2) 5 miles; (3) 10 miles.",
+                "is_correct": false
+              },
+              {
+                "text": "(1) 3 minutes; (2) 5 minutes; (3) 10 minutes.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The longitudinal separation minima for DME/ATD-equipped aircraft have three tiers based on the leading aircraft's speed advantage: at least 44 knots faster permits 5 miles; at least 22 knots faster permits 10 miles; and when neither speed advantage is met, the fallback is 20 miles. A 50-knot advantage qualifies for 5 miles, 30 knots qualifies for 10 miles (22 or more but less than 44), and 15 knots qualifies for the 20-mile fallback.",
+            "publication_id": "content-expansion-pass-02:chapter-06:activities:6-4-2:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "6-4-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses paragraph-location scaffolding throughout: 'satisfies subparagraph c,' 'fails subparagraph b because,' 'fails subparagraph a because,' 'fails subparagraph c.' The operational conditions should be identified without document-subdivision labels.",
+      "source_basis": "Source block 6-4-3 lists four conditions for discontinuing vertical separation: (a) both reported passing NAVAIDs/DME fixes/waypoints indicating they passed each other; (b) both reported same intersection/waypoint and ≥3 min apart; (c) RNAV aircraft reported same position and ≥8 mi (≤8 NM route) or ≥18 mi (>8 NM route) or ≥30 mi (extended distance limits); (d) RNAV+VOR mixed-equipment conditions.",
+      "match": {
+        "activity_type": "condition_boundary",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Determine which opposite-course vertical separation discontinuation method is satisfied in each situation.",
+          "question_text": "For which of the following situations may vertical separation on opposite courses be discontinued?",
+          "choices": [
+            {
+              "text": "Both aircraft report passing the same VOR and are 2 minutes apart.",
+              "is_correct": false
+            },
+            {
+              "text": "Two RNAV aircraft on a route 6 miles wide report passing the same position and are 8 miles apart.",
+              "is_correct": true
+            },
+            {
+              "text": "Both aircraft report passing NAVAIDs indicating they have passed each other, but only 5 minutes have elapsed since the estimated passing time.",
+              "is_correct": false
+            },
+            {
+              "text": "Two RNAV aircraft on a route 12 miles wide report passing the same position and are 15 miles apart.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The second option satisfies subparagraph c: RNAV aircraft on a route ≤8 miles wide need 8 miles. The first fails subparagraph b because 2 min < 3 min. The third fails subparagraph a because the 10-minute window hasn't closed. The fourth fails subparagraph c: >8 miles wide requires 18 miles, and 15 < 18.",
+          "publication_id": "content-expansion-pass-02:chapter-06:activities:6-4-3:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "condition_boundary",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Determine which opposite-course vertical separation discontinuation method is satisfied in each situation.",
+            "question_text": "For which of the following situations may vertical separation on opposite courses be discontinued?",
+            "choices": [
+              {
+                "text": "Both aircraft report passing the same VOR and are 2 minutes apart.",
+                "is_correct": false
+              },
+              {
+                "text": "Two RNAV aircraft on a route 6 miles wide report passing the same position and are 8 miles apart.",
+                "is_correct": true
+              },
+              {
+                "text": "Both aircraft report passing NAVAIDs indicating they have passed each other, but only 5 minutes have elapsed since the estimated passing time.",
+                "is_correct": false
+              },
+              {
+                "text": "Two RNAV aircraft on a route 12 miles wide report passing the same position and are 15 miles apart.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The second option satisfies the RNAV condition: aircraft on a route 8 miles or less in width need at least 8 miles after reporting the same position. The first fails because the same-intersection condition requires at least 3 minutes and only 2 minutes have elapsed. The third fails because the 10-minute window has not closed, regardless of NAVAID reports. The fourth fails because a route greater than 8 miles in width requires 18 miles, and 15 miles is insufficient.",
+            "publication_id": "content-expansion-pass-02:chapter-06:activities:6-4-3:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "6-4-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation references paragraph-location: 'controller-applied longitudinal separation under 6-4-2b.' The reference to paragraph 6-4-2b is document-location scaffolding.",
+      "source_basis": "Source block 6-4-4: pilot-maintained separation is 10 minutes or 20 miles (DME/ATD). The 5-minute/10-mile values are controller-applied minima from 6-4-2, not pilot-maintained values.",
+      "match": {
+        "activity_type": "readback_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "The controller issued pilot-maintained longitudinal separation authorization. Evaluate the pilot readback.",
+          "clearance": "MAINTAIN AT LEAST ONE ZERO MINUTES OR TWO ZERO MILES SEPARATION FROM N123AB.",
+          "question_text": "Controller: \"MAINTAIN AT LEAST ONE ZERO MINUTES OR TWO ZERO MILES SEPARATION FROM N123AB.\" Which pilot response correctly interprets the instruction?",
+          "choices": [
+            {
+              "text": "\"Wilco, we will maintain at least 10 minutes or 20 miles from N123AB.\"",
+              "is_correct": true
+            },
+            {
+              "text": "\"Roger, maintaining 10 miles from N123AB.\"",
+              "is_correct": false
+            },
+            {
+              "text": "\"Wilco, we will maintain at least 5 minutes or 10 miles separation from N123AB.\"",
+              "is_correct": false
+            },
+            {
+              "text": "\"Roger, we'll maintain at least 20 minutes separation from N123AB.\"",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The phraseology 'ONE ZERO MINUTES/TWO ZERO MILES' means 10 minutes or 20 miles. The pilot correctly reads back both options. The 5-minute/10-mile values are controller-applied longitudinal separation under 6-4-2b, not pilot-maintained separation.",
+          "publication_id": "content-expansion-pass-02:chapter-06:activities:6-4-4:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "readback_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "The controller issued pilot-maintained longitudinal separation authorization. Evaluate the pilot readback.",
+            "clearance": "MAINTAIN AT LEAST ONE ZERO MINUTES OR TWO ZERO MILES SEPARATION FROM N123AB.",
+            "question_text": "Controller: \"MAINTAIN AT LEAST ONE ZERO MINUTES OR TWO ZERO MILES SEPARATION FROM N123AB.\" Which pilot response correctly interprets the instruction?",
+            "choices": [
+              {
+                "text": "\"Wilco, we will maintain at least 10 minutes or 20 miles from N123AB.\"",
+                "is_correct": true
+              },
+              {
+                "text": "\"Roger, maintaining 10 miles from N123AB.\"",
+                "is_correct": false
+              },
+              {
+                "text": "\"Wilco, we will maintain at least 5 minutes or 10 miles separation from N123AB.\"",
+                "is_correct": false
+              },
+              {
+                "text": "\"Roger, we'll maintain at least 20 minutes separation from N123AB.\"",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The phraseology 'ONE ZERO MINUTES/TWO ZERO MILES' means 10 minutes or 20 miles — the pilot-maintained longitudinal separation values. The correct readback confirms both options. The 5-minute and 10-mile values are controller-applied longitudinal separation minima, not the pilot-maintained separation standard.",
+            "publication_id": "content-expansion-pass-02:chapter-06:activities:6-4-4:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "6-5-2",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The activity premise is factually false. TBL 6-5-1 (Non-DME Divergence Distance Minima) explicitly lists 25 degrees → 10 NM. The question text states 'The non-DME divergence table does not list 25 degrees directly — it lists values for 20 degrees and 30 degrees,' which contradicts the source table. This makes the activity unanswerable as written because the premise is fabricated.",
+      "source_basis": "Source block 6-5-2 note sequence 1 TBL 6-5-1 lists 15→16, 20→12, 25→10, 30→8, 35→7, 45→6, 55→5, 90→4. The value 25 degrees is present. The interpolation rule states: 'For divergence that falls between two values, use the lesser divergence value to obtain the distance.'",
+      "match": {
+        "activity_type": "table_lookup",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Use the diverging-radials table interpolation rule.",
+          "question_text": "Two aircraft are on radials of the same VOR diverging by 25 degrees. The non-DME divergence table does not list 25 degrees directly — it lists values for 20 degrees and 30 degrees. What interpolation rule applies?",
+          "choices": [
+            {
+              "text": "Use the next higher value from the table.",
+              "is_correct": true
+            },
+            {
+              "text": "Use the next lower value from the table.",
+              "is_correct": false
+            },
+            {
+              "text": "Average the values for the two adjacent entries.",
+              "is_correct": false
+            },
+            {
+              "text": "Round the divergence angle to the nearest table entry.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When the divergence angle falls between two table values, the rule specifies using the next higher distance value. This is conservative: it ensures separation is never understated when the exact angle doesn't match a table entry.",
+          "publication_id": "content-expansion-pass-02:chapter-06:activities:6-5-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "table_lookup",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Use the diverging-radials table interpolation rule.",
+            "question_text": "Two aircraft are on radials of the same VOR diverging by 22 degrees. The non-DME divergence table lists values for 20 degrees (12 NM) and 25 degrees (10 NM). What distance applies under the interpolation rule?",
+            "choices": [
+              {
+                "text": "12 NM",
+                "is_correct": true
+              },
+              {
+                "text": "10 NM",
+                "is_correct": false
+              },
+              {
+                "text": "11 NM",
+                "is_correct": false
+              },
+              {
+                "text": "8 NM",
+                "is_correct": false
+              }
+            ],
+            "explanation": "When the divergence angle falls between two table values, use the lesser divergence value to obtain the distance. With 22 degrees falling between 20 and 25 degrees, the lesser divergence value is 20 degrees, which corresponds to 12 NM.",
+            "publication_id": "content-expansion-pass-02:chapter-06:activities:6-5-2:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "6-5-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses publication-authority scaffolding and circular reasoning: 'The published phraseology is' and 'Deviations from this format are not the authorized phraseology' — the latter essentially says non-standard phraseology is wrong because it is not standard, without teaching the operational distinction.",
+      "source_basis": "Source block 6-5-3 phraseology: 'VIA (number of miles) MILE ARC (direction) OF (name of DME NAVAID).'",
+      "match": {
+        "activity_type": "phraseology_construction",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 1,
+          "instruction": "Construct the correct DME arc assignment phraseology.",
+          "question_text": "A controller assigns an aircraft to fly a 25-mile DME arc south of the ABC VOR. Which phraseology is correct?",
+          "choices": [
+            {
+              "text": "VIA 25 MILE ARC SOUTH OF ABC VOR.",
+              "is_correct": true
+            },
+            {
+              "text": "FLY THE 25 DME ARC SOUTH OF ABC.",
+              "is_correct": false
+            },
+            {
+              "text": "PROCEED VIA 25 MILE ARC SOUTH OF ABC.",
+              "is_correct": false
+            },
+            {
+              "text": "MAINTAIN 25 MILE DME ARC SOUTH OF ABC.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The published phraseology is 'VIA (number of miles) MILE ARC (direction) OF (name of DME NAVAID).' Deviations from this format are not the authorized phraseology.",
+          "publication_id": "content-expansion-pass-02:chapter-06:activities:6-5-3:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "phraseology_construction",
+          "difficulty": 1,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 1,
+            "instruction": "Construct the correct DME arc assignment phraseology.",
+            "question_text": "A controller assigns an aircraft to fly a 25-mile DME arc south of the ABC VOR. Which phraseology is correct?",
+            "choices": [
+              {
+                "text": "VIA 25 MILE ARC SOUTH OF ABC VOR.",
+                "is_correct": true
+              },
+              {
+                "text": "FLY THE 25 DME ARC SOUTH OF ABC.",
+                "is_correct": false
+              },
+              {
+                "text": "PROCEED VIA 25 MILE ARC SOUTH OF ABC.",
+                "is_correct": false
+              },
+              {
+                "text": "MAINTAIN 25 MILE DME ARC SOUTH OF ABC.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The correct phraseology for a DME arc assignment is 'VIA (number of miles) MILE ARC (direction) OF (name of DME NAVAID).' This format specifies the arc distance, the direction of the arc from the NAVAID, and the NAVAID that defines the arc.",
+            "publication_id": "content-expansion-pass-02:chapter-06:activities:6-5-3:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "6-4-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The front asks for 'two conditions' but the source block states three prerequisites for pilot-maintained longitudinal separation: (1) pilots on the same course, (2) in direct radio communication with each other, and (3) they concur. The back correctly lists all three but the front miscounts.",
+      "source_basis": "Source block 6-4-4 body: 'When pilots of aircraft on the same course in direct radio communication with each other concur, you may authorize the following aircraft to maintain longitudinal separation...' Three distinct conditions are stated.",
+      "match": {
+        "front": "What two conditions must be met before a controller may authorize the following aircraft to maintain longitudinal separation by pilot concurrence?",
+        "back": "The pilots must be on the same course and in direct radio communication with each other, and they must concur.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What conditions must be met before a controller may authorize the following aircraft to maintain longitudinal separation by pilot concurrence?",
+          "back": "The pilots must be on the same course, be in direct radio communication with each other, and concur.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-5-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "explanation"
+      ],
+      "problem": "The question asks for a 'general principle' explaining why 91-180 degree course changes require more overflown-side protection than 16-90 degree changes. The source blocks state only the numeric protection values for each angle range and altitude band; they do not state any geometric or operational principle. The correct answer ('Larger course changes sweep through more airspace') and the explanation's geometric rationale are invented.",
+      "source_basis": "Source block sequence 5: 'b. When course change is 16 degrees through 90 degrees, protect the airspace on the overflown side beginning at the point where the course changes...2. FL 180 to FL 230 inclusive− 14 miles.' and 'c. When course change is 91 degrees through 180 degrees...2. FL 180 to FL 230 inclusive− 28 miles.' The source provides values only; no principle is stated.",
+      "match": {
+        "question_text": "For a course change of 75 degrees at FL200, the overflown-side protection is 14 miles. For a course change of 120 degrees at the same altitude, the protection is 28 miles. What general principle explains this difference?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An aircraft at FL200 makes a course change of 120 degrees along other than an established airway or route. What overflown-side protection must be applied?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "For a course change of 91 through 180 degrees at FL180 through FL230 inclusive, protect 28 miles on the overflown side beginning at the point where the course changes.",
+          "choices": [
+            {
+              "text": "14 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "17 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "28 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "34 miles.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "6-5-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "explanation"
+      ],
+      "problem": "The discrimination activity asks 'Why does the protection double for the larger turn angle?' and the explanation invents a geometric rationale ('Larger course changes sweep through more airspace on the overflown side') and uses document-structure scaffolding ('Subparagraphs b and c establish two angle ranges'). The source blocks provide numeric protection values without explaining why they differ. The activity also duplicates the same invented-principle question as the companion question 5126bc2b.",
+      "source_basis": "Source block sequence 5: subparagraphs b and c give protection values for 16-90 degree and 91-180 degree course changes at specific altitude bands. No geometric or operational principle is stated in the source blocks.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Compare overflown-side protection for different course change angles.",
+          "question_text": "At FL200, the overflown-side protection is 14 miles for a 75-degree turn but 28 miles for a 120-degree turn. Why does the protection double for the larger turn angle?",
+          "choices": [
+            {
+              "text": "Larger course changes sweep through more airspace on the overflown side before the aircraft establishes on the new course.",
+              "is_correct": true
+            },
+            {
+              "text": "The 91-180 degree range always requires exactly double the protection because aircraft accelerate during sharper turns.",
+              "is_correct": false
+            },
+            {
+              "text": "The larger value includes a buffer for crossing traffic that only exists during turns greater than 90 degrees.",
+              "is_correct": false
+            },
+            {
+              "text": "Protection values are based on turn radius, and a 120-degree turn has exactly double the radius of a 75-degree turn.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Subparagraphs b and c establish two angle ranges (16-90° and 91-180°) with different protection values. A larger turn sweeps through a larger area before the aircraft establishes on the new course. At FL180-230, the values are 14 miles (16-90°) and 28 miles (91-180°).",
+          "publication_id": "content-expansion-pass-02:chapter-06:activities:6-5-4:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Compare overflown-side protection values for different course change angle ranges at the same altitude.",
+            "question_text": "An aircraft at FL200 makes a course change of 75 degrees. Another aircraft at FL200 makes a course change of 120 degrees. What is the overflown-side protection for each?",
+            "choices": [
+              {
+                "text": "14 miles for 75 degrees; 17 miles for 120 degrees.",
+                "is_correct": false
+              },
+              {
+                "text": "14 miles for 75 degrees; 28 miles for 120 degrees.",
+                "is_correct": true
+              },
+              {
+                "text": "17 miles for 75 degrees; 28 miles for 120 degrees.",
+                "is_correct": false
+              },
+              {
+                "text": "28 miles for 75 degrees; 34 miles for 120 degrees.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "A course change of 16 through 90 degrees at FL180 through FL230 inclusive requires 14 miles of overflown-side protection. A course change of 91 through 180 degrees at the same altitude band requires 28 miles.",
+            "publication_id": "content-expansion-pass-02:chapter-06:activities:6-5-4:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-5-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation"
+      ],
+      "problem": "The explanation uses document-structure scaffolding ('Subparagraph b specifies') and adds an unsupported gloss ('The extended-distance qualifier overrides the standard route-width tier').",
+      "source_basis": "Source block sequence 0: 'b. When operating along any route segment that is greater than 8 miles in width − 9 miles, except that 15 miles must be applied along that portion of any route segment requiring extended usable distance limitation beyond 130 miles of the reference facility.'",
+      "match": {
+        "question_text": "For RNAV aircraft on diverging or crossing courses, lateral separation exists when one aircraft is beyond the point where protected airspaces cease to overlap. On a route greater than 8 miles in width where extended usable distance limitations beyond 130 miles are required, this distance is _____ miles.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "For RNAV aircraft on diverging or crossing courses, lateral separation exists when one aircraft is beyond the point where protected airspaces cease to overlap. On a route greater than 8 miles in width where extended usable distance limitations beyond 130 miles are required, this distance is _____ miles.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "explanation": "For a route segment greater than 8 miles in width, the required non-overlap distance is 9 miles. When extended usable distance limitations beyond 130 miles of the reference facility apply along that route segment, the required distance increases to 15 miles.",
+          "choices": [
+            {
+              "text": "15",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-5-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation",
+        "source_fidelity"
+      ],
+      "problem": "The explanation uses document-structure scaffolding ('Subparagraph a specifies') and adds unsupported commentary ('This is the smallest non-overlap distance in the RNAV diverging/crossing table, reflecting the narrower protected airspace'). The source states only the distance value; the comparison and rationale are invented.",
+      "source_basis": "Source block sequence 0: 'a. When operating along a route that is 8 miles or less in width− 4 miles.'",
+      "match": {
+        "question_text": "What is the required non-overlap distance for RNAV aircraft on a route that is 8 miles or less in width?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the required non-overlap distance for RNAV aircraft on diverging or crossing courses when operating along a route that is 8 miles or less in width?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "When operating along a route that is 8 miles or less in width, an RNAV aircraft must be at least 4 miles beyond the point where its lateral protected airspace ceases to overlap that of another aircraft for lateral separation to exist.",
+          "choices": [
+            {
+              "text": "4 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "9 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "8 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "15 miles.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-6-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "The true/false stem is a bare phraseology string ('REPORT LEAVING ODD/EVEN ALTITUDES/FLIGHT LEVELS.') rather than a complete proposition. A true/false stem must present an assertion the student can evaluate as true or false, not an isolated data fragment.",
+      "source_basis": "Source block sequence 1 contains the phraseology: 'REPORT LEAVING ODD/EVEN ALTITUDES/FLIGHT LEVELS.' as published phraseology in JO 7110.65 para 6-6-1.",
+      "match": {
+        "question_text": "REPORT LEAVING ODD/EVEN ALTITUDES/FLIGHT LEVELS.",
+        "question_type": "true_false"
+      },
+      "replacements": [
+        {
+          "question_text": "'REPORT LEAVING ODD/EVEN ALTITUDES/FLIGHT LEVELS' is valid published phraseology for requesting an aircraft to report each time it passes through an odd or even altitude or flight level during climb or descent.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "explanation": "REPORT LEAVING ODD/EVEN ALTITUDES/FLIGHT LEVELS is published phraseology used to request reports at each altitude or flight level change during climb or descent, as distinct from REPORT LEAVING/REACHING which requests a report at a single specified altitude or flight level.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-6-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation",
+        "source_fidelity"
+      ],
+      "problem": "The explanation uses document-structure scaffolding ('The note states') and adds an unsupported characterization ('permanently surrenders the higher portions of that block'). The source note states that the pilot may not return to that altitude; it does not characterize the surrender as 'permanent' or describe surrendered 'portions of that block.'",
+      "source_basis": "Source block sequence 2 (note): 'When the pilot verbally reports leaving an altitude in descent, he/she may not return to that altitude.'",
+      "match": {
+        "question_text": "An aircraft on a cruise clearance verbally reports leaving 9,000 feet in descent. May the pilot later return to 9,000 feet without a new clearance?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An aircraft on a cruise clearance verbally reports leaving 9,000 feet in descent. May the pilot later return to 9,000 feet without a new clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "A cruise clearance assigns a block of airspace from the minimum IFR altitude up to and including the assigned cruising altitude. When the pilot verbally reports leaving an altitude in descent, the pilot may not return to that altitude.",
+          "choices": [
+            {
+              "text": "Yes, because the cruise clearance assigns a block of airspace up to the cruising altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because the verbal report of leaving 9,000 feet in descent means the pilot may not return to that altitude.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes, provided the controller confirms via Mode C that 9,000 feet is unoccupied.",
+              "is_correct": false
+            },
+            {
+              "text": "No, because a cruise clearance prohibits any altitude changes once a descent has begun.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-6-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "answer_defensibility",
+        "explanation"
+      ],
+      "problem": "The correct answer ('At or passing through another altitude separated from the first by the appropriate minimum') is substantially longer and more specific than every distractor, creating a strong answer-length cue. The explanation uses document-structure scaffolding ('The exception at subparagraph a triggers the stricter rule') and invents a rationale ('reflecting the increased risk of altitude deviations in severe turbulence') not stated in the source blocks.",
+      "source_basis": "Source block sequence 0: 'Assign an altitude to an aircraft only after the aircraft previously at that altitude has reported at or passing through another altitude separated from the first by the appropriate minimum when: a. Severe turbulence is reported.'",
+      "match": {
+        "question_text": "When severe turbulence is reported, what must an aircraft previously at an altitude report before that altitude can be assigned to another aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When severe turbulence is reported, what must an aircraft previously at an altitude report before that altitude can be assigned to another aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When severe turbulence is reported, an altitude may be reassigned only after the previous aircraft reports at or passing through another altitude separated from the first by the appropriate minimum. This is a stricter requirement than the basic rule, under which reporting leaving the altitude is sufficient.",
+          "choices": [
+            {
+              "text": "That it has left the altitude and is established at a new altitude separated by at least 1,000 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "At or passing through another altitude separated from the first by the appropriate minimum.",
+              "is_correct": true
+            },
+            {
+              "text": "That severe turbulence has subsided and normal altitude-keeping capability has been restored.",
+              "is_correct": false
+            },
+            {
+              "text": "That it is at or above the minimum IFR altitude for the route segment being flown.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-7-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation",
+        "source_fidelity"
+      ],
+      "problem": "The explanation invents a safety rationale ('This ensures that an aircraft executing the sole missed approach can safely transition to a circling maneuver if needed') that is not stated in the source blocks. The source states the requirement without explaining its purpose.",
+      "source_basis": "Source block sequence 1 (note): 'c. If only one missed approach procedure is available, the following conditions are met: 1. Course reversal is not required. 2. Reported ceiling and visibility are equal to or greater than the highest prescribed circling minimums for the instrument approach procedure in use.'",
+      "match": {
+        "question_text": "When only one missed approach procedure is available for timed approaches, the existing ceiling must be at or above the highest _____ minimum established for the airport.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "When only one missed approach procedure is available for timed approaches, the existing ceiling must be at or above the highest _____ minimum established for the airport.",
+          "question_type": "fill_blank",
+          "difficulty": 2,
+          "explanation": "When only one missed approach procedure is available, the reported ceiling and visibility must be equal to or greater than the highest prescribed circling minimums for the instrument approach procedure in use, and course reversal must not be required.",
+          "choices": [
+            {
+              "text": "Circling",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-7-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation"
+      ],
+      "problem": "The explanation invents a rationale ('This ensures the tower has positive control during the final approach segment') not stated in the source blocks. The source simply requires release before the aircraft reaches the final approach fix.",
+      "source_basis": "Source block sequence 5 (note, continued): 'c. Release the aircraft to the tower before it reaches the final approach fix.'",
+      "match": {
+        "question_text": "During a timed-approach sequence, at what point must the controller release the succeeding aircraft to the tower?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "During a timed-approach sequence, at what point must the controller release the succeeding aircraft to the tower?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "The controller must release the aircraft to the tower before it reaches the final approach fix.",
+          "choices": [
+            {
+              "text": "Before the aircraft reaches the final approach fix.",
+              "is_correct": true
+            },
+            {
+              "text": "After the aircraft reports established on the final approach course.",
+              "is_correct": false
+            },
+            {
+              "text": "Before the aircraft begins the procedure turn.",
+              "is_correct": false
+            },
+            {
+              "text": "After the preceding aircraft has landed and cleared the runway.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-7-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The correct answer includes 'time to start procedure turn if applicable' as an element of a timed-approach clearance. The source blocks for 6-7-2 list three elements: (1) clear for approach, (2) descend to the altitude vacated by the preceding aircraft, and (3) leave the final approach fix inbound at a specified time. The procedure-turn element is not present in the provided source blocks.",
+      "source_basis": "Source block sequence 1 (reference): 'a. Clear the succeeding aircraft for approach, to descend to the altitude vacated by the preceding aircraft, and to leave the final approach fix inbound (nonprecision approach) or the outer marker or the fix used in lieu of the outer marker inbound (precision approach) at a specified time.'",
+      "match": {
+        "question_text": "Which list correctly identifies the elements that must be included when clearing the succeeding aircraft for a timed approach?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which list correctly identifies the elements that must be included when clearing the succeeding aircraft for a timed approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When clearing the succeeding aircraft for a timed approach, the controller must clear the aircraft for approach, instruct it to descend to the altitude vacated by the preceding aircraft, and specify the time to leave the final approach fix inbound.",
+          "choices": [
+            {
+              "text": "Approach clearance, descent to the altitude vacated by the preceding aircraft, and time to leave the final approach fix inbound.",
+              "is_correct": true
+            },
+            {
+              "text": "Approach clearance, assigned altitude, and missed approach procedure.",
+              "is_correct": false
+            },
+            {
+              "text": "Time to leave the approach fix, radar vector heading, and frequency change.",
+              "is_correct": false
+            },
+            {
+              "text": "Approach clearance, release to tower, and landing runway assignment.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-7-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation"
+      ],
+      "problem": "The question stem contains document-structure scaffolding ('specified in subparagraphs b and c') and the explanation uses 'Subparagraph a specifies' and 'subparagraphs b and c.' The operating requirement should be stated directly.",
+      "source_basis": "Source block sequence 0: 'a. Except as provided in subparagraph b, use a 2-minute or a 5-mile radar interval as the minimum between successive approaches.' Wake turbulence exceptions appear in subparagraphs b and c.",
+      "match": {
+        "question_text": "The standard minimum interval between successive timed approaches is _____ minutes or a _____-mile radar interval. Larger intervals apply for wake turbulence situations specified in subparagraphs b and c.",
+        "question_type": "fill_blank"
+      },
+      "replacements": [
+        {
+          "question_text": "The standard minimum interval between successive timed approaches is _____ minutes or a _____-mile radar interval. Larger intervals apply for wake turbulence situations involving specific aircraft weight categories.",
+          "question_type": "fill_blank",
+          "difficulty": 1,
+          "explanation": "The standard minimum interval between successive timed approaches is 2 minutes or a 5-mile radar interval. Wake turbulence situations may require larger intervals depending on the weight categories of the aircraft involved.",
+          "choices": [
+            {
+              "text": "2",
+              "is_correct": true
+            },
+            {
+              "text": "5",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-7-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation"
+      ],
+      "problem": "The explanation uses document-structure scaffolding ('Subparagraph b2 specifies' and 'b1(a)') and invents a rationale ('reflecting similar wake vulnerability'). The source states intervals without explaining why they match.",
+      "source_basis": "Source block sequence 0 (reference): 'b. EN ROUTE...2. Small behind heavy − 3 minutes or 6 miles.'",
+      "match": {
+        "question_text": "In en route timed approaches, a small aircraft behind a heavy aircraft requires what wake turbulence interval?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "In en route timed approaches, a small aircraft behind a heavy aircraft requires what wake turbulence interval?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "For en route timed approaches, when a small aircraft is behind a heavy aircraft, the minimum wake turbulence interval is 3 minutes or 6 miles.",
+          "choices": [
+            {
+              "text": "3 minutes or 6 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "4 minutes or 8 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "3 minutes or 7 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "2 minutes or 5 miles.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "6-7-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation"
+      ],
+      "problem": "The explanation invents a rationale ('Both represent maximum wake vulnerability — the smallest aircraft behind the largest wake producer') not stated in the source blocks. The source lists intervals without explaining why particular category pairs share intervals.",
+      "source_basis": "Source block sequence 0 (reference): 'c. TERMINAL...1. Behind Category A aircraft: (c) Category H or I aircraft – 4 minutes or 8 miles.' and 'b. EN ROUTE...1. Behind super: (c) Small − 4 minutes or 8 miles.' Both pairs require 4 minutes or 8 miles.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Compare en route and terminal wake turbulence intervals for timed approaches.",
+          "question_text": "In timed approaches, a Category H aircraft behind a Category A aircraft in terminal operations requires 4 minutes or 8 miles. Which en route weight-class pair requires the same interval?",
+          "choices": [
+            {
+              "text": "Small behind super — 4 minutes or 8 miles.",
+              "is_correct": true
+            },
+            {
+              "text": "Small behind heavy — 3 minutes or 6 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Heavy behind super — 3 minutes or 6 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Large behind super — 3 minutes or 7 miles.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Both Category H/I behind A (terminal) and small behind super (en route) represent maximum wake vulnerability — the smallest aircraft behind the largest wake producer — and both require 4 minutes or 8 miles.",
+          "publication_id": "content-expansion-pass-02:chapter-06:activities:6-7-5:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Compare en route and terminal wake turbulence intervals for timed approaches.",
+            "question_text": "In timed approaches, a Category H aircraft behind a Category A aircraft in terminal operations requires 4 minutes or 8 miles. Which en route weight-class pair requires the same interval?",
+            "choices": [
+              {
+                "text": "Small behind super — 4 minutes or 8 miles.",
+                "is_correct": true
+              },
+              {
+                "text": "Small behind heavy — 3 minutes or 6 miles.",
+                "is_correct": false
+              },
+              {
+                "text": "Heavy behind super — 3 minutes or 6 miles.",
+                "is_correct": false
+              },
+              {
+                "text": "Large behind super — 3 minutes or 7 miles.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "A Category H or I aircraft behind a Category A aircraft in terminal operations requires 4 minutes or 8 miles. In en route operations, a small aircraft behind a super aircraft also requires 4 minutes or 8 miles.",
+            "publication_id": "content-expansion-pass-02:chapter-06:activities:6-7-5:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "6-7-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation"
+      ],
+      "problem": "The explanation uses document-structure scaffolding ('Subparagraph b permits') instead of stating the operating requirement directly.",
+      "source_basis": "Source block sequence 0: 'b. If an aircraft misses an approach, allow the next aircraft to continue the approach if it has been assigned an alternative missed approach procedure. Retain radar control or hold any remaining aircraft at assigned altitudes until traffic conditions permit the issuance of approach clearances.'",
+      "match": {
+        "question_text": "An aircraft on a timed approach misses. Under what condition may the next aircraft continue its approach?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An aircraft on a timed approach misses. Under what condition may the next aircraft continue its approach?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When an aircraft on a timed approach misses, the next aircraft may continue its approach only if it has been assigned an alternative missed approach procedure. Any remaining aircraft must be retained under radar control or held at assigned altitudes until traffic conditions permit issuing approach clearances.",
+          "choices": [
+            {
+              "text": "Only if the next aircraft has been assigned an alternative missed approach procedure.",
+              "is_correct": true
+            },
+            {
+              "text": "Only if the preceding aircraft reports clear of the missed approach path.",
+              "is_correct": false
+            },
+            {
+              "text": "Only if the weather is at or above VFR minimums.",
+              "is_correct": false
+            },
+            {
+              "text": "The next aircraft must always discontinue the approach and hold after any missed approach.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "6-7-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation"
+      ],
+      "problem": "The explanation uses document-structure scaffolding ('Subparagraph b instructs') and adds an unsupported conclusion ('The controller must not release remaining aircraft until the traffic situation resolves'). The source states to retain radar control or hold remaining aircraft until traffic conditions permit issuing approach clearances; it does not state a prohibition on releasing them sooner.",
+      "source_basis": "Source block sequence 0: 'b. If an aircraft misses an approach, allow the next aircraft to continue the approach if it has been assigned an alternative missed approach procedure. Retain radar control or hold any remaining aircraft at assigned altitudes until traffic conditions permit the issuance of approach clearances.'",
+      "match": {
+        "activity_type": "ordering",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "An aircraft on a timed approach misses. Identify the correct sequence of controller actions.",
+          "question_text": "An aircraft in a timed-approach sequence misses the approach. The next aircraft has an alternative missed approach procedure. What is the correct sequence of controller actions?",
+          "choices": [
+            {
+              "text": "Allow the next aircraft to continue; retain radar control or hold remaining aircraft until traffic conditions permit issuing approach clearances.",
+              "is_correct": true
+            },
+            {
+              "text": "Hold all aircraft at assigned altitudes, cancel all approach clearances, and restart the sequence.",
+              "is_correct": false
+            },
+            {
+              "text": "Clear the next aircraft for a straight-in approach and release remaining aircraft to the tower immediately.",
+              "is_correct": false
+            },
+            {
+              "text": "Allow the next aircraft to continue and clear all remaining aircraft for their approaches without delay.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Subparagraph b instructs: (1) allow the next aircraft to continue if it has an alternative missed approach procedure, and (2) retain radar control or hold remaining aircraft until traffic conditions permit. The controller must not release remaining aircraft until the traffic situation resolves.",
+          "publication_id": "content-expansion-pass-02:chapter-06:activities:6-7-7:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "ordering",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "An aircraft on a timed approach misses. Identify the correct sequence of controller actions.",
+            "question_text": "An aircraft in a timed-approach sequence misses the approach. The next aircraft has an alternative missed approach procedure. What is the correct sequence of controller actions?",
+            "choices": [
+              {
+                "text": "Allow the next aircraft to continue; retain radar control or hold remaining aircraft until traffic conditions permit issuing approach clearances.",
+                "is_correct": true
+              },
+              {
+                "text": "Hold all aircraft at assigned altitudes, cancel all approach clearances, and restart the sequence.",
+                "is_correct": false
+              },
+              {
+                "text": "Clear the next aircraft for a straight-in approach and release remaining aircraft to the tower immediately.",
+                "is_correct": false
+              },
+              {
+                "text": "Allow the next aircraft to continue and clear all remaining aircraft for their approaches without delay.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "When an aircraft misses a timed approach, allow the next aircraft to continue if it has been assigned an alternative missed approach procedure. Retain radar control or hold any remaining aircraft at assigned altitudes until traffic conditions permit issuing approach clearances.",
+            "publication_id": "content-expansion-pass-02:chapter-06:activities:6-7-7:0"
+          }
+        }
+      ]
+    }
+  ]
+}

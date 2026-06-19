@@ -1,0 +1,452 @@
+{
+  "version": 1,
+  "chapter": 3,
+  "target_generation_source": "content_expansion_pass_02",
+  "packet_sha256": "a1e5b6234d7ae7befb094c5a0ecd97d91aabaa26e9464d7785f282e49244e6d3",
+  "manifest_sha256": "14ed3d8a0fa8d8d76df38870e8bdcf96822b19fa281b685cc65891f0f563d322",
+  "summary": {
+    "overall": "Chapter 3 was reviewed in 2 bounded source-grounded shards. Proposed changes: 10 replacements, 0 splits, and 0 removals.",
+    "patterns": [
+      "Two items (73fa9531 question and febfd5c2 flashcard, both para 3-7-6) import an unsupported rationale about POFZ volume size that is not present in the source blocks. The source states the weather criteria and notes both surfaces protect missed approaches but does not explain why the thresholds differ.",
+      "Two items (e2df9eda question para 3-8-2, 24e75df8 activity para 3-3-3) use document-structure scaffolding (\"the paragraph establishes,\" \"item g\") in their explanations. The operational content is correct; only the framing needs adjustment.",
+      "One flashcard (296d75a6, para 3-1-9) omits one of the four certified tower radar display uses, stating \"three\" instead of four.",
+      "One activity (bd66c573, para 3-7-2) has a scenario requiring hold short of Runway 18 while the marked-correct clearance crosses Runway 18 — the scenario and answer do not match.",
+      "One flashcard (ee4cce59, para 3-1-4) frames all three coordination items as ground→local, but item (c) is a mutual obligation between controllers.",
+      "Strengths: every item tests operational knowledge rather than document location; stems are self-contained; distractors represent plausible operational errors; no answer-length cues detected; sequencing activities are logically constructed.",
+      "Document-structure scaffolding appears in two explanations referencing 'the paragraph' or 'the section' rather than stating the operational requirement directly.",
+      "One flashcard back adds 'formal sea-lane infrastructure' — a concept absent from the source block, which only requires sea lanes to be established and controlled.",
+      "Question stems are consistently self-contained and scenario-based across all three paragraphs.",
+      "The CTRD note in 3-10-7 is unrepresented, leaving a gap in understanding what satisfies the visual observation requirement."
+    ],
+    "generation_guidance": [
+      "When the source states parallel weather criteria (POFZ vs. OCS) for the same stated purpose (missed approach protection), state the criteria and the purpose directly. Do not infer reasons for the difference unless the source blocks provide them.",
+      "For multi-item enumeration flashcards (e.g., certified radar display uses), verify the count against the complete source paragraph. Check all sub-items including those in later block sequences.",
+      "When constructing taxi-clearance discrimination activities, verify that the scenario conditions (hold points, crossing points) appear verbatim in the marked-correct answer choice. Cross-walk every element of the scenario against the clearance.",
+      "For coordination paragraphs with mixed-direction obligations (some one-way, some mutual), flashcards should not collapse all items under a single directional label.",
+      "Remove all document-structure references from explanations: \"the paragraph,\" \"item [letter],\" \"this section,\" \"per subparagraph,\" \"the source states.\" State the operational requirement directly.",
+      "The light-signal flashcard (d3f2ad6f) references TBL 3-2-1 content not included in the packet source blocks. Future packet assembly should include referenced table content for source-fidelity verification.",
+      "The PROCEED AS REQUESTED phraseology note (\"not approved phraseology for instructing aircraft, vehicles, equipment, or personnel to cross or operate on a runway\") is not tested by any item in this shard. Consider coverage in a later pass.",
+      "When writing explanations, state the operational requirement directly. Never use 'the paragraph says,' 'this section requires,' or similar document-location language.",
+      "Do not embellish source conditions with unsupported nouns. If the source says 'established and controlled,' do not add 'infrastructure' or 'formal designation.'",
+      "Consider generating a flashcard or short-answer question for the CTRD observation exception in 3-10-7 — it is a concrete exception that pilots and controllers both need to know.",
+      "Paragraph 3-10-7 and 3-10-8 are conceptually adjacent. A cross-paragraph activity combining the NOT IN SIGHT phraseology with the prohibition on indefinite withholding could reinforce both rules in an integrated scenario."
+    ],
+    "shard_overviews": [
+      "This shard covers 14 paragraphs across sections 1-9 of Chapter 3. The 24 items are predominantly correct and operationally sound. Seven interventions are needed — one factual omission, one scenario/answer mismatch, one imprecise flashcard front, two items with unsupported rationale in explanations, and two items with document-structure scaffolding (\"the paragraph,\" \"item g\") in explanations. No items test paragraph-location trivia. Distractors are generally plausible. Most flashcards are well-scoped. The remaining 17 items require no changes.",
+      "This shard covers three paragraphs across landing clearance procedures (3-10-7 and 3-10-8) and sea-lane applicability (3-12-1). The six items are generally accurate and well-formed. Two question explanations and one flashcard back contain document-structure scaffolding that should be removed. One flashcard back includes an unsupported embellishment about infrastructure. The source note in 3-10-7 regarding CTRD observation satisfying the visual requirement is not covered by any item."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "flashcard",
+      "para_id": "3-1-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The front asks what \"ground control must notify or advise local control\" of, but source item (c) is a mutual obligation — the controller releasing the aircraft must advise the other controller (either local or ground), not only ground advising local. The front's directional framing is incorrect for the third notification requirement.",
+      "source_basis": "Source block (c): \"When the runways in use for landing/departing aircraft are not visible from the tower or the aircraft using them are not visible on radar, advise the local/ground controller of the aircraft's location before releasing the aircraft to the other controller.\" Unlike (a) and (b) which explicitly require ground to notify local, (c) applies to whichever controller is releasing the aircraft.",
+      "match": {
+        "front": "What three specific circumstances require ground control to notify or advise local control?",
+        "back": "1) Aircraft taxied to a runway other than one previously designated as active. 2) Aircraft taxied to an intersection for takeoff. 3) Before releasing an aircraft when runways or aircraft are not visible — advise the aircraft's location first.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "What specific information must ground control notify local control of, and what must either controller advise before releasing an aircraft when visibility is limited?",
+          "back": "Ground control must notify local control when: (1) a departing aircraft has been taxied to a runway other than the one previously designated as active; (2) an aircraft has been taxied to an intersection for takeoff. (3) When runways in use or aircraft using them are not visible from the tower or on radar, the controller releasing the aircraft must advise the other controller of the aircraft's location before the release.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "3-1-9",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The front states local controllers have \"three authorized uses\" of a certified tower radar display, but the source lists four. The card omits item 4: \"To provide information and instructions to aircraft operating within the surface area for which the tower has responsibility.\" This is a factual omission of an entire authorized use.",
+      "source_basis": "Source block: \"b. Local controllers may use certified tower radar displays for the following purposes: 1. To determine an aircraft's identification, exact location, or spatial relationship to other aircraft. 2. To provide aircraft with radar traffic advisories. 3. To provide a direction or suggested headings to VFR aircraft as a method for radar identification or as an advisory aid to navigation. 4. To provide information and instructions to aircraft operating within the surface area for which the tower has responsibility.\"",
+      "match": {
+        "front": "What are the three authorized uses of a certified tower radar display by local controllers?",
+        "back": "1) Determine aircraft identification, exact location, or spatial relationship to other aircraft. 2) Provide radar traffic advisories. 3) Provide suggested headings or directions to VFR aircraft as an advisory aid to navigation (not radar vectors).",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "What are the four authorized uses of a certified tower radar display by local controllers?",
+          "back": "1) Determine aircraft identification, exact location, or spatial relationship to other aircraft. 2) Provide radar traffic advisories. 3) Provide suggested headings or directions to VFR aircraft as an advisory aid to navigation. 4) Provide information and instructions to aircraft operating within the surface area for which the tower has responsibility.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "3-7-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "answer_defensibility",
+        "educational_coherence"
+      ],
+      "problem": "The scenario states the aircraft needs to taxi to Runway 27 \"with an intermediate hold short of Runway 18.\" The marked-correct clearance crosses Runway 18 at Taxiway Alpha instead of holding short. The scenario requirement and the correct answer are inconsistent — none of the four choices properly implements a hold-short-of-Runway-18 clearance with correct phraseology.",
+      "source_basis": "Source block a: \"When authorizing an aircraft to taxi or a vehicle to proceed on the movement area, specify the taxi instructions/route. If it is the intent to hold the aircraft/vehicle short of: 1. A runway: issue the route up to the runway hold short point.\" Source block b: \"When authorizing an aircraft to taxi to an assigned takeoff runway, state the departure runway followed by the specific taxi route.\" Source phraseology: \"RUNWAY (number), TAXI VIA (route as necessary).\"",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Select the taxi clearance that includes all required elements and proper construction.",
+          "question_text": "An aircraft at the general aviation ramp needs to taxi to Runway 27 for departure, with an intermediate hold short of Runway 18. Which clearance is properly constructed?",
+          "choices": [
+            {
+              "text": "\"Taxi to Runway Two-Seven, hold short of Runway One-Eight on the way.\"",
+              "is_correct": false
+            },
+            {
+              "text": "\"Runway Two-Seven, taxi via Alpha, cross Runway One-Eight at Taxiway Alpha, hold short of Runway Two-Seven.\"",
+              "is_correct": true
+            },
+            {
+              "text": "\"Cleared to Runway Two-Seven, taxi at your discretion.\"",
+              "is_correct": false
+            },
+            {
+              "text": "\"Runway Two-Seven, taxi via Alpha, you'll need to hold somewhere before Runway One-Eight.\"",
+              "is_correct": false
+            }
+          ],
+          "explanation": "A proper taxi clearance must include the runway assignment, the specific taxi route in concise terms, any required crossing instructions with the crossing point, and the hold-short point. The correct choice includes the runway (Runway 27), route (via Alpha), crossing instruction with location, and hold position. The distractors omit route specificity, use vague language, or lack required elements.",
+          "publication_id": "content-expansion-pass-02:chapter-03:activities:3-7-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Select the taxi clearance that includes all required elements and proper construction.",
+            "question_text": "An aircraft at the general aviation ramp needs to taxi to Runway 27 for departure. The route must cross Runway 18 at Taxiway Alpha. Which clearance is properly constructed?",
+            "choices": [
+              {
+                "text": "\"Runway Two-Seven, taxi via Alpha, cross Runway One-Eight at Taxiway Alpha.\"",
+                "is_correct": true
+              },
+              {
+                "text": "\"Taxi to Runway Two-Seven via Alpha, cross Runway One-Eight at Taxiway Alpha.\"",
+                "is_correct": false
+              },
+              {
+                "text": "\"Runway Two-Seven, taxi via Alpha, and you'll cross Runway One-Eight on the way.\"",
+                "is_correct": false
+              },
+              {
+                "text": "\"Runway Two-Seven, cleared to enter the movement area, proceed via Alpha across Runway One-Eight.\"",
+                "is_correct": false
+              }
+            ],
+            "explanation": "A taxi clearance to a runway must state the departure runway first, followed by the specific taxi route. The correct construction is 'RUNWAY (number), TAXI VIA (route).' When the route crosses a runway, issue a crossing clearance with the specific crossing point using 'CROSS (runway) at (runway/taxiway).' The distractors omit the runway-first format, use casual language instead of prescribed phraseology, or substitute non-standard terms for the crossing instruction.",
+            "publication_id": "content-expansion-pass-02:chapter-03:activities:3-7-2:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "3-7-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The front asks why POFZ and OCS weather criteria differ, and the back answers that POFZ criteria are stricter \"because it protects a smaller, closer-in volume for immediate missed approach.\" The source blocks state the two sets of weather criteria and note that both surfaces protect aircraft executing a missed approach, but they do not explain why the thresholds differ. The volume-size rationale is unsupported by the source.",
+      "source_basis": "Source block a: POFZ clearance required when ceiling below 300 feet or visibility less than 3/4 SM. Source block b: OCS clearance required when ceiling below 800 feet or visibility less than 2 SM. Note 1: \"The POFZ and the close−in portion of the final approach obstacle clearance surfaces protect aircraft executing a missed approach.\" Neither block explains why the numerical thresholds differ.",
+      "match": {
+        "front": "What weather minimums trigger POFZ clearance versus OCS clearance, and why do they differ?",
+        "back": "POFZ: aircraft within 2 miles AND ceiling below 300 ft OR visibility below 3/4 SM. OCS: aircraft within 2 miles AND ceiling below 800 ft OR visibility below 2 SM. POFZ criteria are stricter because it protects a smaller, closer-in volume for immediate missed approach.",
+        "card_type": "discrimination"
+      },
+      "replacements": [
+        {
+          "front": "What weather conditions trigger POFZ clearance versus final approach OCS clearance?",
+          "back": "POFZ: aircraft within 2 miles of threshold AND ceiling below 300 ft OR visibility below 3/4 SM. OCS: aircraft within 2 miles AND ceiling below 800 ft OR visibility below 2 SM. Both surfaces protect aircraft executing a missed approach.",
+          "card_type": "discrimination"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "3-7-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The explanation appends an unsupported rationale: \"The POFZ has stricter weather criteria because it protects a smaller, closer-in volume for aircraft executing an immediate missed approach. The OCS protects a larger volume and triggers at less severe weather minimums.\" The source blocks state the two sets of criteria and note both surfaces protect missed approach, but do not explain why the numerical thresholds differ. The volume-size claim is not supported by the packet source blocks.",
+      "source_basis": "Source block a: POFZ clearance when ceiling below 300 feet or visibility less than 3/4 SM, \"to protect aircraft executing a missed approach.\" Source block b: OCS clearance when ceiling below 800 feet or visibility less than 2 SM, \"to protect aircraft executing a missed approach.\" Both serve the same stated purpose; the source does not provide a reason for the different thresholds.",
+      "match": {
+        "question_text": "How do the weather conditions required to clear the POFZ differ from those required to clear the final approach OCS?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "How do the weather conditions required to clear the POFZ differ from those required to clear the final approach OCS?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "The POFZ must be clear when the aircraft is within 2 miles of the threshold and the ceiling is below 300 feet or visibility is less than 3/4 SM. The final approach OCS must be clear when within 2 miles and the ceiling is below 800 feet or visibility is less than 2 SM. The POFZ criteria are materially stricter — a lower ceiling threshold and a tighter visibility requirement. Both surfaces protect aircraft executing a missed approach.",
+          "choices": [
+            {
+              "text": "The POFZ uses stricter criteria (ceiling below 300 ft or visibility below 3/4 SM) than the OCS (ceiling below 800 ft or visibility below 2 SM).",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Both surfaces use identical weather criteria: ceiling below 300 feet or visibility below 3/4 SM.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The OCS uses stricter criteria than the POFZ because it protects a larger volume.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The POFZ requires only the distance trigger (within 2 miles); the OCS requires only the weather trigger.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "3-8-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation opens with document-structure scaffolding: \"The paragraph establishes that each maneuver type has a distinct transition point.\" The harness requires explanations to state the operational requirement directly, avoiding references to document structure. The operational content is correct; only the introductory framing needs replacement.",
+      "source_basis": "Source block: \"Consider an aircraft cleared for touch-and-go, stop-and-go, or low approach as an arriving aircraft until it touches down (for touch-and-go), or makes a complete stop (for stop-and-go), or crosses the landing threshold (for low approach), and thereafter as a departing aircraft.\"",
+      "match": {
+        "question_text": "At what point does an aircraft cleared for a stop-and-go transition from arriving to departing status?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "At what point does an aircraft cleared for a stop-and-go transition from arriving to departing status?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Each maneuver type has a distinct transition point from arriving to departing status. For a stop-and-go, the aircraft is considered an arriving aircraft until it makes a complete stop; thereafter it is a departing aircraft. For a touch-and-go, the transition occurs at touchdown. For a low approach, it occurs when the aircraft crosses the landing threshold. The transition point determines which separation rules apply to the aircraft.",
+          "choices": [
+            {
+              "text": "At the moment of touchdown on the runway.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "When the aircraft comes to a complete stop.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "When the aircraft begins its takeoff roll after the stop.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "When the aircraft exits the runway after completing the maneuver.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "3-3-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses document-structure scaffolding: \"Only volcanic ash (item g) carries the unique requirement...\" Referencing \"item g\" teaches the source's subparagraph lettering rather than the operational substance. The substance — that volcanic ash reports must state whether the ash is wet or dry — is correct, but the framing should state the requirement directly.",
+      "source_basis": "Source block g: \"Volcanic ash on any airport surface area and whether the ash is wet or dry (if known).\" Source note: \"Braking action on wet ash may be degraded. Dry ash on the runway may necessitate minimum use of reverse thrust.\" No other condition in subparagraphs (a)-(h) carries a comparable mandatory sub-descriptor.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "For each airport condition, indicate whether the controller must include an additional specific detail beyond the basic condition description when issuing timely information.",
+          "question_text": "Classify: (A) Volcanic ash on the airport surface. (B) Construction work adjacent to the movement area. (C) Braking conditions caused by ice. (D) Parked aircraft on the movement area.",
+          "choices": [
+            {
+              "text": "A: must state whether ash is wet or dry (if known); B, C, D: basic description suffices",
+              "is_correct": true
+            },
+            {
+              "text": "A: basic description suffices; B: must state exact construction boundaries; C: must state ice depth; D: must state aircraft type",
+              "is_correct": false
+            },
+            {
+              "text": "A and C: must include additional detail; B and D: basic description suffices",
+              "is_correct": false
+            },
+            {
+              "text": "All four conditions require additional specific detail beyond the basic description",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Only volcanic ash (item g) carries the unique requirement to state whether the ash is wet or dry if that information is known. Dry ash and wet ash create different operational hazards — dry ash may necessitate minimum use of reverse thrust, while wet ash may produce degraded braking. The other listed conditions carry no equivalent requirement.",
+          "publication_id": "content-expansion-pass-02:chapter-03:activities:3-3-3:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "For each airport condition, indicate whether the controller must include an additional specific detail beyond the basic condition description when issuing timely information.",
+            "question_text": "Classify: (A) Volcanic ash on the airport surface. (B) Construction work adjacent to the movement area. (C) Braking conditions caused by ice. (D) Parked aircraft on the movement area.",
+            "choices": [
+              {
+                "text": "A: must state whether ash is wet or dry (if known); B, C, D: basic description suffices",
+                "is_correct": true
+              },
+              {
+                "text": "A: basic description suffices; B: must state exact construction boundaries; C: must state ice depth; D: must state aircraft type",
+                "is_correct": false
+              },
+              {
+                "text": "A and C: must include additional detail; B and D: basic description suffices",
+                "is_correct": false
+              },
+              {
+                "text": "All four conditions require additional specific detail beyond the basic description",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Volcanic ash is the only condition in the timely-information requirements that carries a mandatory additional descriptor — the controller must state whether the ash is wet or dry if that information is known. Dry ash may necessitate minimum use of reverse thrust, while wet ash may produce degraded braking, creating different operational hazards. The other listed conditions carry no equivalent requirement to include a specific physical-state descriptor.",
+            "publication_id": "content-expansion-pass-02:chapter-03:activities:3-3-3:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "3-10-8",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality",
+        "educational_coherence"
+      ],
+      "problem": "The explanation opens with 'The paragraph directs controllers…' — a document-structure reference prohibited by the remediation harness. The remaining content is correct but the framing teaches paragraph location instead of stating the operational requirement directly.",
+      "source_basis": "Do not withhold a landing clearance indefinitely even though it appears a violation of Title 14 of the Code of Federal Regulations has been committed. The apparent violation might be the result of an emergency situation. In any event, assist the pilot to the extent possible.",
+      "match": {
+        "question_text": "What is the controller's obligation when an aircraft appears to have committed a regulatory violation while in the traffic pattern?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the controller's obligation when an aircraft appears to have committed a regulatory violation while in the traffic pattern?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Do not withhold a landing clearance indefinitely when an apparent regulatory violation has occurred — the violation might stem from an emergency. Instead, assist the pilot to the extent possible. The landing clearance is not an enforcement tool.",
+          "choices": [
+            {
+              "text": "Withhold the landing clearance and instruct the aircraft to contact the facility by telephone after landing.",
+              "is_correct": false
+            },
+            {
+              "text": "Report the violation to the FSDO and withhold services until the investigation is complete.",
+              "is_correct": false
+            },
+            {
+              "text": "Do not withhold the landing clearance indefinitely — assist the pilot to the extent possible.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue the clearance only after the pilot acknowledges and explains the apparent violation.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "3-12-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses 'Section 12 applies only where…' and 'does not trigger the section' — document-structure references that should be replaced with direct operational language describing the sea-lane prerequisite.",
+      "source_basis": "Where sea lanes are established and controlled, apply the provisions of this section.",
+      "match": {
+        "question_text": "A floatplane pilot asks a tower controller to apply the special sea-lane separation provisions from Section 12 for an operation on a river near the airport. The river is an uncontrolled waterway with no formal sea-lane designation. How should the controller respond?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A floatplane pilot asks a tower controller to apply the special sea-lane separation provisions from Section 12 for an operation on a river near the airport. The river is an uncontrolled waterway with no formal sea-lane designation. How should the controller respond?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Sea-lane separation provisions apply only where sea lanes are both established and controlled. An uncontrolled waterway, even if used by floatplanes, does not meet the prerequisite. Without established and controlled sea lanes, these special provisions are not available.",
+          "choices": [
+            {
+              "text": "Decline to apply sea-lane provisions because the river lacks an established and controlled sea lane.",
+              "is_correct": true
+            },
+            {
+              "text": "Apply the sea-lane provisions as a courtesy since the pilot requested them for a water operation.",
+              "is_correct": false
+            },
+            {
+              "text": "Temporarily designate the river as a sea lane for the duration of the pilot's operation.",
+              "is_correct": false
+            },
+            {
+              "text": "Apply Section 12 provisions because all water operations by floatplanes automatically qualify as sea-lane operations.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "3-12-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality",
+        "source_fidelity"
+      ],
+      "problem": "The back contains two issues: (1) 'do not trigger the section' is document-structure scaffolding; (2) 'formal sea-lane infrastructure exists' is an unsupported embellishment — the source says only that sea lanes must be established and controlled, not that infrastructure must exist.",
+      "source_basis": "Where sea lanes are established and controlled, apply the provisions of this section.",
+      "match": {
+        "front": "What is the prerequisite for applying Section 12 sea-lane provisions?",
+        "back": "Sea lanes must be both established AND controlled. Uncontrolled waterways do not trigger the section, even if floatplanes use them. The provisions apply only where formal sea-lane infrastructure exists.",
+        "card_type": "condition"
+      },
+      "replacements": [
+        {
+          "front": "What is the prerequisite for applying Section 12 sea-lane provisions?",
+          "back": "Sea lanes must be both established and controlled. The provisions do not apply to uncontrolled waterways, even if floatplanes use them.",
+          "card_type": "condition"
+        }
+      ]
+    }
+  ]
+}

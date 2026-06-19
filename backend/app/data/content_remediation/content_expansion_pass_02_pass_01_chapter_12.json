@@ -1,0 +1,520 @@
+{
+  "version": 1,
+  "chapter": 12,
+  "target_generation_source": "content_expansion_pass_02",
+  "packet_sha256": "7a4f01aafb384035fcf05e0529a3c94eab4e4c13f306d7703ba77b9146184453",
+  "manifest_sha256": "6a1bc226ea629be5fb6f44ae0c21f0b4c23fb91a18a038f47785340590180d5e",
+  "summary": {
+    "overall": "Chapter 12 was reviewed in 1 bounded source-grounded shards. Proposed changes: 10 replacements, 0 splits, and 0 removals.",
+    "patterns": [
+      "Paragraph-location scaffolding is prevalent: 8 of 10 intervened items open or embed explanations with paragraph references ('Per 12-1-2b', 'per 12-1-4', 'Per 12-1-5', etc.). These must be removed across all explanations.",
+      "Invented rationales appear in the three MAJOR-severity decisions: a fabricated 'common misconception' about CVFR separation (12-1-2 question), an unsourced 'ensures the operation is at the proper altitude' safety rationale (12-1-5 question and flashcard), and an unsourced explanation for why the SVFR criteria differ by controller presence (12-1-7 question).",
+      "Distractor meta-commentary substitutes for rule teaching: two items critique individual distractor wording instead of stating the operational requirement directly (12-1-4 question, 12-1-7 activity).",
+      "AND/OR logic framing on the 12-1-3 flashcard converts an operational requirement into a formal-logic quiz. The card should ask for the two conditions directly.",
+      "All stems are self-contained and none require paragraph-number knowledge. Correct answers are unambiguously supported by source blocks. Distractors represent plausible operational errors.",
+      "Cross-format reinforcement exists for source statements in 12-1-2 (Class F — flashcard + discrimination activity), 12-1-3 (1000-on-top — question + flashcard), 12-1-4 (separation — question + discrimination activity), and 12-1-5 (lost-comms — question + sequence activity + flashcard). This is a strength."
+    ],
+    "generation_guidance": [
+      "Remove all paragraph-location references from explanations. State the operational requirement directly without naming paragraph, section, or chapter numbers as scaffolding.",
+      "Do not invent safety rationales, policy purposes, or operational consequences. If a source block does not state why a rule exists, the explanation must not supply a reason.",
+      "Do not embed distractor-by-distractor critique in explanations. State what the correct answer is and why the rule requires it. Do not describe how individual distractors were designed or why they are wrong.",
+      "Avoid Boolean logic framing (AND/OR, gate metaphors) for operational requirements. Ask for the conditions or the rule directly.",
+      "When a flashcard back includes both a direct statement and interpretive gloss, prefer the direct statement alone. Flashcard backs must fit a single retrieval target.",
+      "For flashcard 12-1-1: the content is correct; the back could be more concise but the retrieval target is unambiguous.",
+      "Paragraphs 12-1-2 and 12-1-7 have no items (question or activity) testing the Class A/B airspace definitions or the controller-duty SVFR distinction as a standalone recall task — these are high-value operational distinctions that could be sampled in a future generation pass."
+    ],
+    "shard_overviews": [
+      "Chapter 12 shard 1 is sound on source fidelity for stems, correct answers, and distractor construction. No item is factually wrong or educationally harmful. The recurring defect is explanation quality: nearly every explanation uses paragraph-location scaffolding ('Per 12-1-X') and several invent rationales absent from the source blocks — most notably the 'common misconception' about CVFR separation in 12-1-2, the purpose rationale for SVFR controller-duty distinction in 12-1-7, and the 'ensures proper altitude' safety rationale in 12-1-5 items. One flashcard frames an operational requirement as Boolean logic (AND/OR) instead of asking for the conditions directly. All other items are well-constructed."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "question",
+      "para_id": "12-1-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "Explanation opens with paragraph-location references ('Per 12-1-2b', 'per 12-1-4') and invents a 'common misconception' about CVFR operations receiving reduced separation that is absent from the source blocks. Neither 12-1-2b nor 12-1-4 describes or refutes any misconception about CVFR separation.",
+      "source_basis": "12-1-2 body block 0: 'ATC procedures pertinent to IFR flights must be applied to CVFR aircraft.' 12-1-4 body block 0: 'Apply a lateral, longitudinal, or vertical separation minimum between aircraft operating in accordance with an IFR or CVFR clearance, regardless of the weather conditions.'",
+      "match": {
+        "question_text": "Which of the following correctly describes how the separation obligation for a Controlled VFR (CVFR) operation differs from that for an ordinary VFR operation in Canadian controlled airspace?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which of the following correctly describes how the separation obligation for a Controlled VFR (CVFR) operation differs from that for an ordinary VFR operation in Canadian controlled airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "ATC must apply IFR procedures to CVFR operations. A lateral, longitudinal, or vertical separation minimum must be applied between aircraft operating under an IFR or CVFR clearance, regardless of weather conditions. Ordinary VFR operations are not covered by this separation requirement.",
+          "choices": [
+            {
+              "text": "CVFR operations receive separation only when operating in IMC; ordinary VFR operations receive it only in VMC.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Both CVFR and ordinary VFR operations are treated identically — neither receives separation services from ATC in any weather condition.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "A lateral, longitudinal, or vertical separation minimum must be applied to CVFR operations regardless of weather; ordinary VFR operations do not receive ATC separation services.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "CVFR operations receive separation only when the pilot specifically requests it; ordinary VFR operations receive it automatically without a request.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "12-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation references paragraph numbers ('per 12-1-2f') and embeds document-location comparisons ('Class C is defined by VFR clearance requirements, Class E by the absence of special VFR requirements, and Class G as uncontrolled airspace') that serve as paragraph-location scaffolding rather than teaching the operational definition of Class F airspace directly.",
+      "source_basis": "12-1-2 note block 1: 'Class F airspace. Airspace of defined dimensions within which activities must be confined because of their nature, or within which limitations are imposed upon aircraft operations that are not a part of those activities, or both. Special use airspace may be classified as Class F advisory or Class F restricted.'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Identify the correct Canadian airspace class for the description.",
+          "question_text": "Controlled airspace of defined dimensions within which activities must be confined because of their nature, or within which limitations are imposed upon operations not part of those activities. This airspace may be classified as either advisory or restricted.",
+          "choices": [
+            {
+              "text": "Class C airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Class E airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Class G airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "Class F airspace.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "Class F is unique among Canadian airspace classes — it is the only class defined by the purpose or nature of activities within it rather than solely by altitude limits and flight rules. It is airspace of defined dimensions established because activities must be confined or because limitations must be imposed on non-participating operations. It may be classified as Class F advisory or Class F restricted, per 12-1-2f. Class C is defined by VFR clearance requirements, Class E by the absence of special VFR requirements, and Class G as uncontrolled airspace with no ATC authority.",
+          "publication_id": "content-expansion-pass-02:chapter-12:activities:12-1-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Identify the correct Canadian airspace class for the description.",
+            "question_text": "Controlled airspace of defined dimensions within which activities must be confined because of their nature, or within which limitations are imposed upon operations not part of those activities. This airspace may be classified as either advisory or restricted.",
+            "choices": [
+              {
+                "text": "Class C airspace.",
+                "is_correct": false
+              },
+              {
+                "text": "Class E airspace.",
+                "is_correct": false
+              },
+              {
+                "text": "Class G airspace.",
+                "is_correct": false
+              },
+              {
+                "text": "Class F airspace.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "Class F airspace is airspace of defined dimensions where activities must be confined because of their nature, or where limitations are imposed on operations not part of those activities, or both. It may be classified as Class F advisory or Class F restricted.",
+            "publication_id": "content-expansion-pass-02:chapter-12:activities:12-1-2:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation opens with a paragraph-location reference ('Per 12-1-3') and uses Boolean logic jargon ('they function as an AND gate') not present in the source blocks.",
+      "source_basis": "12-1-3 body block 0: 'Clear an aircraft to maintain at least 1,000 feet-on-top in lieu of VFR-on-top, provided: a. The pilot requests it. ... b. The pilot will not operate within Class A or Class B airspace.' Note block 1: 'It is the pilot's responsibility to ensure that the requested operation can be conducted at least 1,000 feet above all cloud, haze, smoke, or other formation, with a flight visibility of 3 miles or more. A pilot's request can be considered as confirmation that conditions are adequate.'",
+      "match": {
+        "question_text": "Which two requirements must both be met before a clearance to maintain 'at least 1,000 feet-on-top' may be issued in Canadian airspace?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which two requirements must both be met before a clearance to maintain 'at least 1,000 feet-on-top' may be issued in Canadian airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Both conditions must be met before the clearance may be issued: the pilot requests the clearance, and the pilot will not operate within Class A or Class B airspace. Weather verification is the pilot's responsibility, not a controller issuance condition. The pilot's request serves as confirmation that conditions are adequate — at least 1,000 feet above all cloud, haze, smoke, or other formation, with 3 miles flight visibility.",
+          "choices": [
+            {
+              "text": "The pilot files a CVFR flight plan and agrees to maintain 3 miles flight visibility throughout the operation.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The pilot requests the clearance and confirms the operation will not enter Class A or Class B airspace.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "ATC verifies the ceiling is at least 1,000 feet and the pilot requests the clearance.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The pilot agrees to remain at or below 18,000 feet ASL and files a flight plan with a designated alternate airport.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "12-1-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Front frames the operational requirement as a Boolean logic question (AND vs OR) — a logical framing not present in the source blocks. Back adds interpretive gloss ('If either condition is not satisfied, the clearance cannot be issued') beyond what the source states directly. The card should ask for the two conditions directly.",
+      "source_basis": "12-1-3 body block 0: 'Clear an aircraft to maintain at least 1,000 feet-on-top in lieu of VFR-on-top, provided: a. The pilot requests it. ... b. The pilot will not operate within Class A or Class B airspace.'",
+      "match": {
+        "front": "For the 1,000-feet-on-top clearance in Canadian airspace, are the two issuance conditions an AND or an OR requirement?",
+        "back": "Both conditions must be met — they are an AND requirement: (a) the pilot requests the clearance AND (b) the pilot will not operate in Class A or Class B airspace. If either condition is not satisfied, the clearance cannot be issued.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What two conditions must both be met before a clearance to maintain 'at least 1,000 feet-on-top' may be issued in Canadian airspace?",
+          "back": "The pilot must request the clearance, and the pilot must not operate within Class A or Class B airspace. Both conditions are required — the clearance cannot be issued if either is not satisfied.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation opens with a paragraph-location reference ('Per 12-1-4') and includes distractor meta-commentary ('The strongest distractor is the one limiting separation to IFR operations only in IMC, which misreads the rule's regardless of weather clause') instead of teaching the operational rule directly.",
+      "source_basis": "12-1-4 body block 0: 'Apply a lateral, longitudinal, or vertical separation minimum between aircraft operating in accordance with an IFR or CVFR clearance, regardless of the weather conditions.'",
+      "match": {
+        "question_text": "Which of the following correctly states when a lateral, longitudinal, or vertical separation minimum must be applied under Canadian ATC procedures?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which of the following correctly states when a lateral, longitudinal, or vertical separation minimum must be applied under Canadian ATC procedures?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "A lateral, longitudinal, or vertical separation minimum must be applied between aircraft operating under an IFR or CVFR clearance. Weather conditions do not affect this obligation — separation is required regardless of whether conditions are VMC or IMC. Ordinary VFR operations are not covered by this separation requirement.",
+          "choices": [
+            {
+              "text": "Only between two IFR operations when both are in instrument meteorological conditions.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Between any two operations in controlled airspace, regardless of whether they hold an IFR or CVFR clearance.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Between IFR operations in any weather, and between CVFR operations only when the pilot specifically requests separation.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Between operations conducted under an IFR or CVFR clearance, regardless of weather conditions.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Explanation opens with a paragraph-location reference ('Per 12-1-5') and invents a safety rationale absent from the source blocks: 'This ensures the operation is at the proper altitude upon border crossing rather than climbing through U.S. airspace.' The source block states the timing rule but does not state its purpose or rationale.",
+      "source_basis": "12-1-5 body block 0: 'When the aircraft will enter U.S. airspace within 10 minutes after passing the clearance limit, the climb to the flight planned border crossing altitude is to be commenced at the estimated time of crossing the Canada/U.S. boundary.'",
+      "match": {
+        "question_text": "Under what condition does the standard Canadian lost-communications 10-minute altitude maintenance period give way to an earlier climb for crossing into U.S. airspace?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Under what condition does the standard Canadian lost-communications 10-minute altitude maintenance period give way to an earlier climb for crossing into U.S. airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "When the operation will enter U.S. airspace within 10 minutes after passing the clearance limit, the climb to the border-crossing altitude commences at the estimated time of crossing the Canada/U.S. boundary. This replaces the standard timing, under which altitude is maintained until 10 minutes beyond the clearance limit before proceeding at filed altitudes. The border-crossing exception is not triggered by the destination country, the distance to the border in nautical miles, or pilot discretion — it depends on whether the boundary crossing occurs within 10 minutes of the clearance limit.",
+          "choices": [
+            {
+              "text": "When the destination airport is located in the United States, the border-crossing climb timing replaces the standard 10-minute hold regardless of the distance from the clearance limit to the border.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "When the filed route enters U.S. airspace within 10 minutes after passing the clearance limit, the climb to the border-crossing altitude commences at the estimated time of crossing the Canada/U.S. boundary.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "When the clearance limit is located inside U.S. airspace, the standard 10-minute hold is shortened to 5 minutes for all turbine-powered operations.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "When the pilot has filed U.S. airspace in the flight plan, the climb to border-crossing altitude may begin at the pilot's discretion based on terrain and weather encountered after the clearance limit.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "12-1-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses a paragraph-location reference ('combines two rules from 12-1-5'), includes an interpretive inference ('which occurs before the 10-minute hold period expires'), and embeds distractor-by-distractor critique instead of teaching the correct altitude sequence directly.",
+      "source_basis": "12-1-5 body block 0: 'maintaining the last assigned altitude or flight level or the minimum en route IFR altitude, whichever is higher, until 10 minutes beyond the point specified in the clearance (clearance limit), and then proceed at altitude(s) or flight level(s) filed in the flight plan. When the aircraft will enter U.S. airspace within 10 minutes after passing the clearance limit, the climb to the flight planned border crossing altitude is to be commenced at the estimated time of crossing the Canada/U.S. boundary.'",
+      "match": {
+        "activity_type": "sequence_construction",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Choose the correct sequence of altitude actions.",
+          "question_text": "A turbine-powered operation loses communications after departure in Canadian airspace, was cleared to a fix short of its destination, and will enter U.S. airspace within 10 minutes after the clearance limit. Which of the following represents the correct sequence of altitude actions?",
+          "choices": [
+            {
+              "text": "Climb immediately to the filed altitude as soon as the clearance limit is crossed, maintain that filed altitude all the way to the destination, and then descend for the approach once the destination is in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Maintain the last assigned altitude until the operation physically enters U.S. airspace at the border, climb to the border-crossing altitude upon that entry, and maintain filed altitude for the remainder of the route.",
+              "is_correct": false
+            },
+            {
+              "text": "Maintain the last assigned altitude or MEA (whichever is higher) for 10 minutes after the clearance limit, then descend to the en route minimum altitude, and finally climb to the filed altitude upon reaching the destination.",
+              "is_correct": false
+            },
+            {
+              "text": "Maintain the last assigned altitude or MEA (whichever is higher) until 10 minutes beyond the clearance limit, commence the border-crossing climb at the estimated time of crossing the Canada/U.S. boundary, and then proceed at the filed altitude(s) or flight level(s).",
+              "is_correct": true
+            }
+          ],
+          "explanation": "The correct sequence combines two rules from 12-1-5: (1) the standard rule — maintain the higher of the last assigned altitude/flight level or MEA until 10 minutes beyond the clearance limit, then proceed at filed altitudes; and (2) the border-crossing exception — when U.S. airspace is entered within 10 minutes of the clearance limit, the climb to the border-crossing altitude commences at the estimated time of crossing the boundary, which occurs before the 10-minute hold period expires. The first distractor skips the hold entirely. The second uses border entry as the climb trigger instead of the estimated crossing time. The third incorrectly adds a descent after the hold period.",
+          "publication_id": "content-expansion-pass-02:chapter-12:activities:12-1-5:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "sequence_construction",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Choose the correct sequence of altitude actions.",
+            "question_text": "A turbine-powered operation loses communications after departure in Canadian airspace, was cleared to a fix short of its destination, and will enter U.S. airspace within 10 minutes after the clearance limit. Which of the following represents the correct sequence of altitude actions?",
+            "choices": [
+              {
+                "text": "Climb immediately to the filed altitude as soon as the clearance limit is crossed, maintain that filed altitude all the way to the destination, and then descend for the approach once the destination is in sight.",
+                "is_correct": false
+              },
+              {
+                "text": "Maintain the last assigned altitude until the operation physically enters U.S. airspace at the border, climb to the border-crossing altitude upon that entry, and maintain filed altitude for the remainder of the route.",
+                "is_correct": false
+              },
+              {
+                "text": "Maintain the last assigned altitude or MEA (whichever is higher) for 10 minutes after the clearance limit, then descend to the en route minimum altitude, and finally climb to the filed altitude upon reaching the destination.",
+                "is_correct": false
+              },
+              {
+                "text": "Maintain the last assigned altitude or MEA (whichever is higher) until 10 minutes beyond the clearance limit, commence the border-crossing climb at the estimated time of crossing the Canada/U.S. boundary, and then proceed at the filed altitude(s) or flight level(s).",
+                "is_correct": true
+              }
+            ],
+            "explanation": "The standard rule requires maintaining the higher of the last assigned altitude or MEA until 10 minutes beyond the clearance limit, then proceeding at filed altitudes. The border-crossing exception applies when U.S. airspace is entered within 10 minutes of the clearance limit: the climb to the border-crossing altitude commences at the estimated time of crossing the Canada/U.S. boundary.",
+            "publication_id": "content-expansion-pass-02:chapter-12:activities:12-1-5:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "12-1-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Back includes an invented safety rationale absent from the source blocks: 'This ensures the operation is at the proper altitude at the border rather than climbing through U.S. airspace.' The source block states the timing rule but does not state its purpose.",
+      "source_basis": "12-1-5 body block 0: 'When the aircraft will enter U.S. airspace within 10 minutes after passing the clearance limit, the climb to the flight planned border crossing altitude is to be commenced at the estimated time of crossing the Canada/U.S. boundary.'",
+      "match": {
+        "front": "During a Canadian lost-communications event, what special timing rule applies when a turbine operation will enter U.S. airspace within 10 minutes after passing the clearance limit?",
+        "back": "The climb to the border-crossing altitude commences at the estimated time of crossing the Canada/U.S. boundary — earlier than the standard 10-minute hold period. This ensures the operation is at the proper altitude at the border rather than climbing through U.S. airspace.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "During a Canadian lost-communications event, what special timing rule applies when a turbine operation will enter U.S. airspace within 10 minutes after passing the clearance limit?",
+          "back": "The climb to the border-crossing altitude commences at the estimated time of crossing the Canada/U.S. boundary. This crossing-time climb replaces the standard timing, under which altitude is maintained until 10 minutes beyond the clearance limit before proceeding at filed altitudes.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "12-1-7",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Explanation opens with paragraph-location references ('Per 12-1-7a and 12-1-7b') and invents a reason for the procedural distinction absent from the source blocks: 'The distinction exists because an on-duty controller can directly assess current conditions, while an absent controller must rely on official reports.' The source blocks state the two different evaluation criteria but do not state why they differ.",
+      "source_basis": "12-1-7 note blocks 0a and 0b: 'Within a control zone where there is an airport controller on duty, approve or refuse a pilot's request for SVFR on the basis of current or anticipated IFR traffic only.' 'Within a control zone where there is no airport controller on duty, authorize or refuse an aircraft's request for SVFR on the basis of: 1. Current or anticipated IFR traffic, and 2. Official ceiling and visibility reports.'",
+      "match": {
+        "question_text": "What determines whether official ceiling and visibility reports must be evaluated alongside IFR traffic when processing a special VFR request in a Canadian control zone?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What determines whether official ceiling and visibility reports must be evaluated alongside IFR traffic when processing a special VFR request in a Canadian control zone?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When an airport controller is on duty, the SVFR decision is based solely on current or anticipated IFR traffic. When no airport controller is on duty, both IFR traffic and official ceiling and visibility reports must be evaluated together. The type of operation, time of day, and reported ceiling do not change which criteria apply.",
+          "choices": [
+            {
+              "text": "The type of operation requesting SVFR — ceiling and visibility reports apply only to fixed-wing requests, not to helicopter operations.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The time of day — during daylight hours only IFR traffic is considered, but at night both traffic and official weather reports must be evaluated.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Whether an airport controller is on duty — when one is on duty, only IFR traffic is considered; when none is on duty, both IFR traffic AND official ceiling and visibility reports must be evaluated.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "The reported ceiling — if the ceiling is below 1,000 feet, both traffic and weather are evaluated; if above 1,000 feet, only traffic is considered.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "12-1-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation opens with a paragraph-location reference ('Per 12-1-7c') and includes distractor meta-commentary ('The second distractor correctly identifies the split minimum but reverses which type gets which value') instead of teaching the visibility minimums directly.",
+      "source_basis": "12-1-7 note blocks 0c: 'Canadian SVFR weather minimums for: 1. Aircraft other than helicopters. Flight visibility (ground visibility when reported) 1 mile. 2. Helicopters. Flight visibility (ground visibility when available) 1/2 mile.'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify which operation meets the Canadian SVFR visibility minimum.",
+          "question_text": "A helicopter and a fixed-wing aircraft both request special VFR at the same Canadian control zone. The reported ground visibility is 3/4 mile. Which statement correctly describes the visibility requirement for each?",
+          "choices": [
+            {
+              "text": "Both meet their minimums because 3/4 mile exceeds the common 1/2 mile threshold that applies to all SVFR operations in Canada.",
+              "is_correct": false
+            },
+            {
+              "text": "The helicopter meets its 1/2 mile minimum; the fixed-wing aircraft does not meet its 1 mile minimum.",
+              "is_correct": true
+            },
+            {
+              "text": "Both must have at least 1 mile flight visibility — the helicopter minimum applies only during daylight operations below 500 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "The helicopter requires 1 mile because ground visibility is available; the fixed-wing aircraft requires 1/2 mile if flight visibility can be confirmed.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 12-1-7c, Canadian SVFR weather minimums differ by operation type: aircraft other than helicopters require 1 mile flight visibility (using ground visibility when reported), while helicopters require only 1/2 mile flight visibility (using ground visibility when available). At 3/4 mile reported ground visibility, the helicopter meets its 1/2 mile minimum but the fixed-wing aircraft falls short of its 1 mile minimum. The second distractor correctly identifies the split minimum but reverses which type gets which value.",
+          "publication_id": "content-expansion-pass-02:chapter-12:activities:12-1-7:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify which operation meets the Canadian SVFR visibility minimum.",
+            "question_text": "A helicopter and a fixed-wing aircraft both request special VFR at the same Canadian control zone. The reported ground visibility is 3/4 mile. Which statement correctly describes the visibility requirement for each?",
+            "choices": [
+              {
+                "text": "Both meet their minimums because 3/4 mile exceeds the common 1/2 mile threshold that applies to all SVFR operations in Canada.",
+                "is_correct": false
+              },
+              {
+                "text": "The helicopter meets its 1/2 mile minimum; the fixed-wing aircraft does not meet its 1 mile minimum.",
+                "is_correct": true
+              },
+              {
+                "text": "Both must have at least 1 mile flight visibility — the helicopter minimum applies only during daylight operations below 500 feet.",
+                "is_correct": false
+              },
+              {
+                "text": "The helicopter requires 1 mile because ground visibility is available; the fixed-wing aircraft requires 1/2 mile if flight visibility can be confirmed.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Canadian SVFR weather minimums differ by operation type: aircraft other than helicopters require 1 mile flight visibility (using ground visibility when reported), while helicopters require 1/2 mile flight visibility (using ground visibility when available). At 3/4 mile reported ground visibility, the helicopter meets its 1/2 mile minimum but the fixed-wing aircraft does not meet its 1 mile minimum.",
+            "publication_id": "content-expansion-pass-02:chapter-12:activities:12-1-7:0"
+          }
+        }
+      ]
+    }
+  ]
+}

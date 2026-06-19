@@ -1,0 +1,505 @@
+{
+  "version": 1,
+  "chapter": 2,
+  "target_generation_source": "content_expansion_pass_02",
+  "packet_sha256": "68db3283ed5450ea1fc037804ef3e7d53a7c86fe7134b4e336a1eb4b9733f52a",
+  "manifest_sha256": "247bf334b25d9c1a2302e175dbaf09bcbab6fdce2b1b741969def7acd2c58ef5",
+  "summary": {
+    "overall": "Chapter 2 was reviewed in 3 bounded source-grounded shards. Proposed changes: 11 replacements, 0 splits, and 0 removals.",
+    "patterns": [
+      "Six question explanations across three paragraphs (2-1-1, 2-1-2, 2-1-20) use document-location scaffolding instead of stating the operational requirement directly. The source blocks are substantive — the explanations just need to deliver that substance without narrating where it was found.",
+      "All source fidelity is correct. Every question's correct answer and every flashcard back matches the paragraph source blocks exactly. No wrong answers, no missing conditions, no fabricated phraseology.",
+      "Flashcards (8 total) are uniformly clean — no document scaffolding, no invented rationales, appropriate card types, and complete-but-concise backs. The activity (discrimination type) is well-constructed with a clear scenario and directly stated explanation.",
+      "Cross-format reinforcement exists for the three deviation conditions (2-1-1: question + flashcard + activity) and the wake turbulence advisory elements (2-1-20: question + flashcard), but several paragraphs have only one format present. This is a content-generation concern, not a remediation defect.",
+      "No item relies on paragraph-number knowledge, answer-length cues, or implausible distractors. Choice sets are well-balanced across all 13 questions.",
+      "Strength: Questions consistently embed the tested rule in an operational scenario rather than asking for verbatim paragraph recall.",
+      "Strength: Distractors represent plausible operational mistakes (e.g. assuming other aircraft are involved in an RA, confusing flight-plan remarks with verbal identification triggers, confusing immediately/expedite definitions).",
+      "Strength: Explanations state the operating requirement directly. None use paragraph-location scaffolding such as 'the paragraph says' or 'this section requires.'",
+      "Strength: Activity types match the tested skill — situation_action for decision evaluation, discrimination for category classification, phraseology_construction for exact transmission recall.",
+      "Strength: Flashcards are one-concept-per-card and avoid multi-rule dumps.",
+      "Defect: Two questions (72bb2b5b in 2-1-6, 0d330a10 in 2-4-10) have correct answers noticeably longer than all distractors, creating an answer-length cue that reveals the correct choice without operational knowledge.",
+      "Observation: The TCAS (2-1-28) and TAWS (2-1-30) paragraphs prescribe identical separation-resumption conditions, producing near-duplicate flashcards. Both are individually correct and the fronts are differentiated by system, but the retrieval target is the same rule.",
+      "Observation: The flashcard for 2-1-5 appends the expedite-cancellation rule to the back of a discrimination card about immediately-vs-expedite. The extra sentence is factually correct and might deepen understanding of the expedite concept, but it is a separate operational rule.",
+      "Explanations that lean on document-structure references ('Per the ICAO phonetic table') instead of stating the operational requirement directly",
+      "Unsupported rationales invented in explanations ('to ensure clarity') when the source gives only a directive",
+      "Phraseology answer fidelity not verified against the source template — band-width mismatch between scenario data and correct answer",
+      "Flashcard front/back wording diverges from precise source language in small but meaningful ways (dropped qualifiers, narrowed scope)",
+      "Answer-length cues where the correct choice is substantially longer than all distractors"
+    ],
+    "generation_guidance": [
+      "Write explanations that state the operating requirement directly. Never begin with 'The paragraph lists,' 'This section requires,' or similar document-structure anchors. The learner needs to know what controllers must do, not where it was written.",
+      "Do not add policy rationales, safety justifications, or operational consequences that the source blocks do not explicitly state. If the source says 'include position, altitude if known, and direction of flight,' explain that requirement. Do not add why those three elements are chosen unless the source explains why.",
+      "Paragraphs 2-1-10 (NAVAID malfunctions), 2-1-21 (traffic advisories), and 2-1-22 (UAS activity) each have only one or two items covering rich source blocks. The GPS/WAAS anomaly reporting sub-procedures, the traffic advisory format distinctions between radar-identified and non-radar-identified aircraft, and the UAS advisory content requirements all have substantial uncovered procedural detail that would benefit from additional questions or activities.",
+      "The formation flight paragraph (2-1-13) covers standard vs. nonstandard beacon assignments, RVSM equipment suffix responsibilities at multiple phases (departure, climb, break-up), and join-up for multiple aircraft vs. established formations. Only two questions exist. Consider scenario-based items that chain these related decisions.",
+      "Paragraph 2-1-2 duty priority has three questions and one flashcard all testing the first-priority rule from slightly different angles. The note about 'virtually impossible to develop a standard list' and the judgment principle could support a scenario-based activity where the learner must rank competing duties.",
+      "When the correct answer for a multiple-choice question contains a compound operational concept (e.g. 'emergency messages including essential information on aircraft accidents'), ensure distractors are comparably detailed so answer length does not give away the correct choice. Alternatively, phrase the correct answer more concisely.",
+      "Continue using operational scenarios as question stems rather than asking for verbatim paragraph content. The items in this shard that do this — the TCAS second-aircraft question, the MEDEVAC flight-plan-remarks question, the expedite-cancellation question — are among the strongest.",
+      "When a single operational rule appears identically in two paragraphs (TCAS/TAWS separation resumption), decide whether to produce one consolidated item or two system-specific items with explicit cross-references in the explanation. The current approach of separate items is defensible but the duplication should be intentional, not accidental.",
+      "For discrimination flashcards that define two terms (immediately vs expedite), the back should stay focused on the definitions the front asks for. If a related operational rule (expedite cancellation) is worth its own retrieval target, give it a separate card.",
+      "Phraseology items should continue to test exact recall of the prescribed transmission. The 2-1-6 phraseology construction activity does this well with plausible but incorrect alternatives.",
+      "Maintain the practice of using the note block content (e.g. flight plan remarks are informational only) to create operational-discrimination items. The 2-1-4 MEDEVAC question and 2-1-29 excepted-aircraft activity are exemplary.",
+      "Verify every phraseology answer against the source template with actual scenario numbers — do not assume the generated answer is consistent with the scenario's arithmetic",
+      "Write explanations as direct operational requirements; remove all document-location scaffolding and do not add rationales the source does not provide",
+      "Match flashcard wording to source phrasing exactly where the distinction is operationally meaningful (e.g., 'solicitation and dissemination' vs 'dissemination', 'in the cabin' qualifier)",
+      "When the correct answer is a full phraseology block, ensure distractors are similarly structured and of comparable length to avoid answer-length cues",
+      "For list-recall flashcards sourced from 'this includes' clauses, use the source's own framing verb ('includes' or 'covers') rather than inventing a verb like 'emphasize'"
+    ],
+    "shard_overviews": [
+      "This shard is in good shape. All 22 items across paragraphs 2-1-1 through 2-1-22 have correct source fidelity, plausible distractors, and operationally sound answers. The primary defect is a recurring pattern of document-location scaffolding in question explanations — phrases like 'the paragraph lists,' 'the note to the paragraph confirms,' and 'the paragraph specifies' that substitute document trivia for direct operational statements. One explanation also appends an invented rationale about providing 'sufficient information to assess the risk' that is not supported by the source blocks. These are all minor, explanation-only fixes; no items require removal, splitting, or answer changes.",
+      "Strong shard. All items are source-accurate and operationally focused. Questions use realistic scenarios and plausible distractors. Explanations state operational requirements directly without paragraph-location scaffolding. Activities match tested skills to appropriate formats. Flashcards are focused single-concept retrieval targets. Two minor answer-length-cue issues are the only needed interventions across 24 reviewed items.",
+      "Shard quality is mixed. Four of six items are fundamentally correct but two questions and one flashcard need intervention. The worst defect is a factual phraseology error in a weather-area question that would teach an incorrect band-width value. Explanation quality is uneven — one question injects document-location scaffolding and an unsupported rationale. The single flashcard has front/back wording misaligned with source phrasing on two counts. The remaining three items are clean, well-distracted, and teach operational rules without scaffolding."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "question",
+      "para_id": "2-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses document-location scaffolding: 'The paragraph lists three authorized grounds for deviation.' The operating requirement should be stated directly without referencing the document structure.",
+      "source_basis": "Controllers must provide air traffic control service in accordance with the procedures and minima in this order, except when one or more of the following conditions exists: 1. A deviation is necessary to conform with ICAO Documents, National Rules of the Air, or special agreements where the U.S. provides air traffic control service in airspace outside the U.S.; 2. Other procedures/minima are prescribed in a letter of agreement, FAA directive, or a military document; 3. A deviation is necessary to assist an aircraft when an emergency has been declared.",
+      "match": {
+        "question_text": "Which of the following is a valid reason for a controller to deviate from JO 7110.65 procedures and minima?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which of the following is a valid reason for a controller to deviate from JO 7110.65 procedures and minima?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Controllers must provide service in accordance with 7110.65 procedures and minima except when one of three conditions exists: conformance with ICAO Documents, National Rules of the Air, or special agreements where the U.S. provides service outside its territory; other procedures or minima prescribed in an LOA, FAA directive, or military document; or a deviation necessary to assist an aircraft when an emergency has been declared. A controller's independent belief that a different procedure is safer, absent any of these conditions, does not authorize deviation.",
+          "choices": [
+            {
+              "text": "The controller independently determines a different procedure would be safer.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot requests a different procedure for operational convenience.",
+              "is_correct": false
+            },
+            {
+              "text": "Other procedures or minima are prescribed in a letter of agreement, FAA directive, or military document.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller's supervisor verbally authorizes an ad hoc procedure change.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "2-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses document-location scaffolding: 'The note to the paragraph confirms that the action most critical from a safety standpoint is performed first.' The operational principle should be stated directly.",
+      "source_basis": "Give first priority to separating aircraft and issuing safety alerts as required in this order. When more than one action is required, controllers must exercise their best judgment based on the facts and circumstances known to them. That action which is most critical from a safety standpoint is performed first.",
+      "match": {
+        "question_text": "A controller is simultaneously handling an aircraft at an unsafe altitude near terrain and another aircraft requesting a weather update for an airport 50 miles ahead. Which action must be performed first?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller is simultaneously handling an aircraft at an unsafe altitude near terrain and another aircraft requesting a weather update for an airport 50 miles ahead. Which action must be performed first?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Separating aircraft and issuing safety alerts is the first priority. The controller must issue the safety alert before providing the weather update, even though both are required duties. When more than one action is required, the action most critical from a safety standpoint is performed first.",
+          "choices": [
+            {
+              "text": "Provide the weather update first because it is a specific pilot request.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the safety alert first — separation and safety alerts are the first duty priority.",
+              "is_correct": true
+            },
+            {
+              "text": "Handle both simultaneously by giving the weather update while scanning for terrain conflicts.",
+              "is_correct": false
+            },
+            {
+              "text": "Ask the supervisor to decide which of the two tasks is more important.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "2-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses document-location scaffolding: 'The duty priority paragraph enumerates duties in order.' The priority hierarchy should be stated directly as an operational fact.",
+      "source_basis": "Give first priority to separating aircraft and issuing safety alerts. Provide support to national security and homeland defense activities. Provide and/or solicit weather information. Provide additional services to the extent possible, contingent only upon higher priority duties and other factors including limitations of radar, volume of traffic, frequency congestion, and workload.",
+      "match": {
+        "question_text": "In the duty priority hierarchy, how does 'provide and/or solicit weather information' rank relative to 'provide additional services'?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "In the duty priority hierarchy, how does 'provide and/or solicit weather information' rank relative to 'provide additional services'?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Controller duties are prioritized in this order: first, separating aircraft and issuing safety alerts; second, supporting national security and homeland defense; third, providing and soliciting weather information; and fourth, providing additional services contingent upon higher priority duties. Weather information is a distinct duty that ranks above additional services.",
+          "choices": [
+            {
+              "text": "Weather information is an additional service provided only when workload permits.",
+              "is_correct": false
+            },
+            {
+              "text": "Weather information is a distinct duty that comes before additional services in the priority hierarchy.",
+              "is_correct": true
+            },
+            {
+              "text": "Weather information and additional services share the same priority level.",
+              "is_correct": false
+            },
+            {
+              "text": "Weather information is optional unless the pilot specifically requests it.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "2-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses document-location scaffolding: 'The paragraph states: \"Give first priority to separating aircraft and issuing safety alerts as required in this order.\"' The first-priority rule should be presented as an operational requirement, not as a quote attributed to the document structure.",
+      "source_basis": "Give first priority to separating aircraft and issuing safety alerts as required in this order. Good judgment must be used in prioritizing all other provisions of this order based on the requirements of the situation at hand.",
+      "match": {
+        "question_text": "What is the first priority duty for all controllers?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the first priority duty for all controllers?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Separating aircraft and issuing safety alerts is the first priority duty. All other provisions must be prioritized using good judgment based on the requirements of the situation at hand.",
+          "choices": [
+            {
+              "text": "Providing weather information to all aircraft on the frequency.",
+              "is_correct": false
+            },
+            {
+              "text": "Providing additional services to the extent possible.",
+              "is_correct": false
+            },
+            {
+              "text": "Separating aircraft and issuing safety alerts as required.",
+              "is_correct": true
+            },
+            {
+              "text": "Supporting national security and homeland defense activities.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "2-1-20",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses document-location scaffolding: 'The paragraph specifies that at terminal facilities...' The operational condition should be stated directly without referencing the document structure.",
+      "source_basis": "Issue wake turbulence cautionary advisories including the position, altitude if known, and direction of flight to aircraft operating behind an aircraft that requires wake turbulence separation when: 1. TERMINAL. VFR aircraft not being radar vectored are behind the larger aircraft.",
+      "match": {
+        "question_text": "Under what terminal condition must a wake turbulence cautionary advisory be issued to a VFR aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Under what terminal condition must a wake turbulence cautionary advisory be issued to a VFR aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "At terminal facilities, wake turbulence cautionary advisories must be issued to VFR aircraft not being radar vectored when they are behind a larger aircraft that requires wake turbulence separation. The advisory must include the position, altitude if known, and direction of flight.",
+          "choices": [
+            {
+              "text": "Only when the VFR aircraft is on an IFR flight plan within 5 miles of the larger aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the pilot of the VFR aircraft specifically requests wake turbulence information.",
+              "is_correct": false
+            },
+            {
+              "text": "When the VFR aircraft not being radar vectored is behind the larger aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Only after the larger aircraft has reported wake turbulence on a previous approach.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "2-1-20",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation appends an invented rationale not supported by the source blocks: 'These three elements give the following aircraft sufficient information to assess the risk.' The source blocks state what must be included but do not explain why those three elements are chosen. The rationale should not be manufactured.",
+      "source_basis": "Issue wake turbulence cautionary advisories including the position, altitude if known, and direction of flight to aircraft operating behind an aircraft that requires wake turbulence separation.",
+      "match": {
+        "question_text": "What three items of information must a wake turbulence cautionary advisory include?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What three items of information must a wake turbulence cautionary advisory include?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Wake turbulence cautionary advisories must include the position, altitude if known, and direction of flight of the aircraft creating the wake hazard.",
+          "choices": [
+            {
+              "text": "Aircraft type, speed, and estimated time of arrival.",
+              "is_correct": false
+            },
+            {
+              "text": "Position, altitude if known, and direction of flight.",
+              "is_correct": true
+            },
+            {
+              "text": "Runway assignment, aircraft weight class, and expected departure time.",
+              "is_correct": false
+            },
+            {
+              "text": "Call sign, destination, and aircraft manufacturer.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "2-1-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "The correct answer is substantially longer than all three distractors (18 words versus 10–11 words), creating an answer-length cue that reveals the correct choice without operational knowledge.",
+      "source_basis": "2-1-6 body: 'Issue a safety alert to an aircraft if you are aware the aircraft is in a position/altitude that, in your judgment, places it in unsafe proximity to terrain, obstructions, or other aircraft.' The correct answer restates this standard; the replacement tightens the phrasing to reduce the length differential while preserving the controller's awareness and the three proximity targets.",
+      "match": {
+        "question_text": "What determines whether a controller should issue a safety alert to an aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What determines whether a controller should issue a safety alert to an aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The trigger for a safety alert is the controller's awareness that the aircraft is in unsafe proximity to terrain, obstructions, or other aircraft. It is not limited to automated system alerts. Sources of recognition can include MSAW, Mode C intruder alerts, PAR observations, or pilot reports.",
+          "choices": [
+            {
+              "text": "Only when an automated system such as MSAW generates an alert.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Only when a pilot specifically requests a safety alert from the controller.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "When the controller is aware the aircraft is in unsafe proximity to terrain, obstructions, or other aircraft.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Only when another controller calls to advise of an unsafe situation.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "2-4-10",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "The correct answer is substantially longer than all three distractors (13 words versus 4–7 words), creating an answer-length cue that reveals the correct choice without operational knowledge.",
+      "source_basis": "2-4-10 body: 'a. First priority. Emergency messages including essential information on aircraft accidents or suspected accidents.' The replacement answer compresses the compound concept into a shorter phrase while preserving the two key elements: emergency messages and essential accident information.",
+      "match": {
+        "question_text": "What is the first priority for interphone transmissions?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the first priority for interphone transmissions?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "First priority for interphone transmissions is emergency messages including essential information on aircraft accidents or suspected accidents. After an actual emergency has passed, messages relating to that accident receive a lower priority.",
+          "choices": [
+            {
+              "text": "Clearances and control instructions.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Emergency messages and essential accident information.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Movement and control messages such as progress reports.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Movement messages on VFR aircraft.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "2-4-16",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses document-location scaffolding ('Per the ICAO phonetic table') instead of stating the operational requirement directly, and invents an unsupported rationale ('to ensure clarity in radiotelephony communications'). The source block states only 'Use the ICAO pronunciation of numbers and individual letters' without providing a purpose or rationale.",
+      "source_basis": "Source block body: 'Use the ICAO pronunciation of numbers and individual letters. (See the ICAO radiotelephony alphabet and pronunciation in TBL 2−4−1.)' The table prescribes 'TREE' for the number 3.",
+      "match": {
+        "question_text": "How is the number '3' pronounced using ICAO phonetics?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "How is the number '3' pronounced using ICAO phonetics?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "The number 3 is pronounced 'TREE' under ICAO phonetics. ICAO pronunciations are prescribed for numbers and individual letters in radiotelephony communications.",
+          "choices": [
+            {
+              "text": "THREE.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "TREE.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "THUH-REE.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "TRI.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "2-6-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The front narrows the scope to 'PIREP dissemination' when the source states emphasis is on 'solicitation and dissemination.' The front also uses the verb 'emphasize' when the source uses 'includes' for the conditions. The back drops the location qualifier 'in the cabin' from 'detection of sulfur gases in the cabin,' changing the specificity of the condition.",
+      "source_basis": "Source block body: 'Emphasis must be placed on the solicitation and dissemination of Urgent (UUA) and Routine (UA) PIREPs. ... This includes reports of strong frontal activity, squall lines, thunderstorms, light to severe icing, wind shear and turbulence (including clear air turbulence) of moderate or greater intensity, braking action, volcanic eruptions and volcanic ash clouds, detection of sulfur gases in the cabin, and other conditions pertinent to flight safety.'",
+      "match": {
+        "front": "What types of conditions must controllers emphasize in PIREP dissemination?",
+        "back": "Strong frontal activity, squall lines, thunderstorms, light to severe icing, wind shear, turbulence (including CAT) of moderate or greater intensity, braking action, volcanic eruptions/ash clouds, and sulfur gas detection.",
+        "card_type": "list_recall"
+      },
+      "replacements": [
+        {
+          "front": "What conditions does PIREP information include?",
+          "back": "Strong frontal activity, squall lines, thunderstorms, light to severe icing, wind shear, turbulence (including CAT) of moderate or greater intensity, braking action, volcanic eruptions and volcanic ash clouds, detection of sulfur gases in the cabin, and other conditions pertinent to flight safety.",
+          "card_type": "list_recall"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "2-6-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "answer_length_cue"
+      ],
+      "problem": "The correct answer contains a factual error: it states the band width as 'TWO ZERO MILE BAND OF WEATHER FROM ONE FIVE TO TWO FIVE MILES AHEAD.' The scenario specifies an area 15 to 25 miles from the aircraft, which is a 10-mile radial span requiring 'ONE ZERO MILE BAND.' Additionally, the correct answer is substantially longer than all distractors, creating an answer-length cue that reveals the answer without knowledge of the material.",
+      "source_basis": "Source block phraseology: 'WEATHER/CHAFF AREA BETWEEN (number) O'CLOCK AND (number) O'CLOCK (number) MILES, and/or (number) MILE BAND OF WEATHER/CHAFF FROM (fix or number of miles and direction from fix) TO (fix or number of miles and direction from fix).' The band width stated in the transmission must reflect the span between the FROM and TO distances.",
+      "match": {
+        "question_text": "Which of the following uses the correct phraseology format for a weather advisory describing an area of thunderstorms between 11 o'clock and 2 o'clock, 15 to 25 miles from the aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which of the following uses the correct phraseology format for a weather advisory describing an area of thunderstorms between 11 o'clock and 2 o'clock, 15 to 25 miles from the aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When issuing a weather advisory, controllers describe the area using azimuth, distance, and radial extent. The format states the area between clock positions at the nearest distance, followed by a band description that defines the radial depth. The band width must match the span between the FROM and TO distances — a band extending from 15 to 25 miles ahead is a 10-mile band, transmitted as 'ONE ZERO MILE BAND OF WEATHER FROM ONE FIVE TO TWO FIVE MILES AHEAD.'",
+          "choices": [
+            {
+              "text": "WEATHER AREA BETWEEN ELEVEN O'CLOCK AND TWO O'CLOCK ONE FIVE MILES. ONE ZERO MILE BAND OF WEATHER FROM ONE FIVE TO TWO FIVE MILES AHEAD.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "WEATHER AREA BETWEEN ELEVEN O'CLOCK AND TWO O'CLOCK TWO FIVE MILES. ONE ZERO MILE BAND OF WEATHER FROM ONE FIVE TO TWO FIVE MILES AHEAD.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "WEATHER AREA BETWEEN ELEVEN O'CLOCK AND TWO O'CLOCK ONE FIVE MILES. ONE ZERO MILE BAND OF WEATHER FROM TWO FIVE TO THREE FIVE MILES AHEAD.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "WEATHER AREA BETWEEN ELEVEN O'CLOCK AND TWO O'CLOCK ONE FIVE MILES. TWO ZERO MILE BAND OF WEATHER FROM ONE FIVE TO TWO FIVE MILES AHEAD.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

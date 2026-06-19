@@ -1,0 +1,2120 @@
+{
+  "version": 1,
+  "chapter": 8,
+  "target_generation_source": "content_expansion_pass_02",
+  "packet_sha256": "fb9eb1110682463f223f41ed71e13f1d302a4a3f778a0912bc6bb7b4f81487db",
+  "manifest_sha256": "c567c010fe08da6eeb4447c82958d7204f77a545e35fead1f0471ae7531f4263",
+  "summary": {
+    "overall": "Chapter 8 was reviewed in 4 bounded source-grounded shards. Proposed changes: 35 replacements, 0 splits, and 0 removals.",
+    "patterns": [
+      "Answer-to-source contradictions are concentrated in items that required assembling multi-condition rules into a single distractor set; the generator produced plausible-sounding but factually wrong correct answers for 8-1-9 and 8-2-1.",
+      "Explanations in 8-1-7 consistently begin with document references (JO 7210.632 establishes...) rather than stating the operational requirement directly, a pattern the generator should avoid for all chapters.",
+      "Scenario-based items (8-1-5 altimeter exceptions, 8-2-2 communications transfer timing, 8-3-1 differing longitudinal standards) are the shard's strongest contributions — they test applying the rule to a concrete operational situation.",
+      "Single-paragraph paragraphs (8-1-4, 8-1-6) are covered only by a single flashcard each, leaving separation types and the 'affecting separation' condition untested in higher-retrieval formats.",
+      "The 8-2-3 question about AIDC correctly tests the three-pronged prerequisite (implementation, ICD, LOA) and is well-constructed.",
+      "No items teach paragraph-location trivia; all stems are self-contained operational scenarios or direct questions.",
+      "Paragraph 8-3-2 reciprocal-track activity has a completely wrong answer: it teaches controllers to wait for passing reports then apply vertical separation retroactively, directly contradicting the source requirement to separate aircraft before estimated passing.",
+      "Flashcard e1891dab frames the two conditions for discontinuing vertical separation as cumulative ('both must be met') instead of independent alternatives, and incorrectly requires the same-direction longitudinal minimum under both conditions.",
+      "The Mach number technique flashcard adds an unsupported explanatory rationale ('enabling more accurate prediction of relative positions') absent from the source blocks.",
+      "Paragraph-location scaffolding persists in the 8-4-1 source_lookup activity explanation ('The note in 8-4-1 states'), violating the prohibition against document-structure language.",
+      "Activity 29a39a9a suffers from a question-answer mismatch: the question asks why controllers must account for QNE/QNH differences below FL 180, but the correct answer explains the absence of the problem above FL 180 instead.",
+      "Three paragraphs (8-3-3, 8-4-4, 8-5-5) have only a single format item each, leaving no cross-format reinforcement.",
+      "Paragraphs 8-3-3, 8-4-4, 8-5-3, 8-5-4, and 8-5-5 lack question coverage entirely.",
+      "Two items contain blocker-level wrong answers that contradict their own source paragraphs (58f6a626 and b5c6c779). Both teach the opposite of what the source prescribes.",
+      "Answer-length and word-matching cues appear in several stems: one correct answer is noticeably longer than its distractors, and two stems contain the answer word in the question text.",
+      "Explanations in three items add unsupported rationales about why rules exist (navigation uncertainty, lex specialis, doubling) that the source blocks do not state.",
+      "One question tests a document-structure comparison (what 8-8-1 omits vs. 8-1-1) rather than the operational substance of the Caribbean application rule.",
+      "One flashcard has multiple accuracy errors including omitting a 10-minute supersonic case and misrepresenting the relationship between Mach technique and the 15-minute turbojet minimum.",
+      "The 8-6-2 refusal ordering activity, the 8-7-4 lateral minima question/flashcards, the 8-8-3 discrimination activity, and the source-lookup activities for 8-7-2 and 8-8-1 are accurate and well-constructed.",
+      "Paragraph-comparison questions test structural differences across regional sections rather than operational requirements — particularly acute in 8-10-1 and 8-10-2 where questions ask 'what makes this unique' instead of 'what procedure governs'.",
+      "Cross-regional comparisons in flashcard backs and explanations cite facts from paragraphs not present in this shard's source blocks (e.g., 'simpler than other regions,' 'the only regional section that requires...').",
+      "Explanations occasionally invent operational rationale absent from the source (e.g., 'Arctic CTA,' '20-minute vertical separation window'), violating the rule against unsupported safety/policy claims.",
+      "One question (e23f4eab) has a stem/choice format mismatch — the stem asks 'what are the two conditions' but the answer choices use yes/no framing.",
+      "Strengths: questions testing tier discrimination (8-9-4, 8-10-4) are well-constructed with plausible distractors that reflect common operational errors. The DME/RNAV separation activity (8-10-3) tests a nuanced rule interaction effectively."
+    ],
+    "generation_guidance": [
+      "When generating items for multi-condition rules (e.g., non-RVSM entry requiring both excepted criteria AND supervisor approval), verify that the marked correct answer contains all required conditions. Generate distractors that omit one condition at a time to test partial understanding.",
+      "Do not begin explanations with document identifiers such as 'JO 7210.632 establishes...' or 'Paragraph X requires...' State the operational knowledge directly: 'The five reportable oceanic error categories are...'",
+      "Do not extend explanations beyond what the source blocks state. If the source says 'control estimates must be used when applying time-based separation minima,' do not add claims about what applies to distance-based separation.",
+      "For estimate revision threshold questions, ensure the answer's yes/no polarity matches the reasoning. A 2-minute revision is below the 3-minute threshold and does not require forwarding — the answer must be 'No' with the correct threshold rationale.",
+      "For activity stems, avoid multi-part preambles that list scenarios not tested by the item. If the item only asks about one scenario, present only that scenario in the stem.",
+      "Do not add rationale such as 'protects both aircraft' or 'ensures safety' unless the source blocks explicitly state that rationale. State the rule and let it stand on its own.",
+      "Replace the reciprocal-track ordering activity with a knowledge_check that tests condition (2) independently — NAVAIDs/DME fixes indicating passing — without requiring the same-direction longitudinal minimum. This distinguishes the two conditions and avoids the retroactive-vertical-separation error.",
+      "Correct the reciprocal-track-conditions flashcard to present the two conditions as independent alternatives using 'or,' not as cumulative requirements that 'both must be met.' The NAVAID/DME condition (2) does not require the same-direction longitudinal minimum.",
+      "Strip unsupported rationale from the Mach number technique flashcard. The source states the technique allows reduced minima; do not add 'enabling more accurate prediction' unless a source block explicitly makes that claim.",
+      "Remove 'The note in 8-4-1 states' from the source_lookup activity explanation. State the operational organization directly: regional sections contain the lateral minima.",
+      "Align the 8-5-1 knowledge_check question and answer: either ask about the required controller action (not 'why') and make the correct choice the direct rule statement, or rewrite choices so the correct answer directly addresses the question asked.",
+      "When generating content for subsequent passes, add questions for paragraphs 8-3-3, 8-4-4, 8-5-3, 8-5-4, and 8-5-5 to establish cross-format reinforcement. The Mach number technique minimums per 0.01 Mach difference (10 min base, 9-5 min graduated) and the NDB divergence-distance table are testable numeric material currently untapped.",
+      "For stationary reservation activities: ensure the correct answer teaches vertical separation as the alternative when lateral would cause overlap, not cancel-and-reroute.",
+      "For source-lookup activities: verify that the designated correct answer matches the paragraph being tested. A correct explanation paired with a wrong answer is a recurring failure mode.",
+      "For discrimination and knowledge-check activities: sanitize stems of answer-revealing words. Do not use the key term in the question text when that term is the answer.",
+      "For comparison questions: test operational distinctions between methods, not structural comparisons between document paragraphs.",
+      "For flashcard backs: verify every stated relationship (e.g., 'doubles,' 'precedence') against the source before claiming it. Use the source's own language when describing minima.",
+      "For explanations: state the operational requirement directly. Do not add rationales about navigation uncertainty, legal hierarchy, or arithmetic relationships unless the source explicitly states them.",
+      "When generating items for moving vs. stationary reservation paragraphs, emphasize which separation methods apply to each type — lateral and vertical for stationary, lateral/longitudinal/vertical for moving.",
+      "The regional application paragraphs (8-7-1, 8-8-1) are structurally similar but should be tested on their operational meaning, not on how they differ from each other or from 8-1-1.",
+      "Do not write stems or flashcards that ask 'what makes this paragraph/section/rule unique.' Instead ask 'what procedure governs' or 'what minimum applies,' testing the operational requirement directly.",
+      "Do not include cross-regional comparisons unless all compared paragraphs are present in the generation source material. When a source block is a single paragraph, confine the item to what that block states.",
+      "For source_lookup activities, ask the student to identify where the governing rule is found, but do not require paragraph-number recall in the answer. Frame the lookup around operational context (e.g., 'the Pacific regional application paragraph') without paragraph numbers.",
+      "Explanations must state the operating requirement directly without document-structure framing ('Per the rules,' 'the paragraph says,' paragraph-number references). Do not add safety rationale, policy purpose, or operational consequence claims unless the source explicitly makes that claim.",
+      "Ensure stem and choice format are coherent: a 'what are the conditions' stem requires declarative-choice answers, not yes/no judgments.",
+      "The VFR climb/descent paragraph (8-8-5) is under-covered — only one question, one activity, and one flashcard address it. The controller duties after clearing (issue alternative instructions, issue traffic information) could support additional questions or discrimination activities."
+    ],
+    "shard_overviews": [
+      "The shard covers 12 paragraphs across Sections 1-3 with 22 items. Source fidelity is strong for most items, and the scenario-based questions and activities effectively test operational application rather than rote memorization. However, three blocker-level defects in paragraphs 8-1-9 and 8-2-1 contain answers that directly contradict the source: one marks an unsafe rule as correct (non-RVSM entry without excepted criteria), one is logically self-contradictory (2-minute revision threshold misapplied), and one mismatches the answer to its own explanation. Five minor defects involve explanation quality: two use document-location scaffolding, one invents an unsupported claim about distance-based separation, one has a confusing stem, and one adds an unsupported safety rationale. The 15 remaining items across questions, activities, and flashcards are educationally sound and faithful to the source blocks.",
+      "Chapter 8 shard 2 covers longitudinal separation methods, lateral separation, route protected airspace reduction, track separation, offshore/oceanic transition, and radar identification application. Most items are factually correct and pedagogically sound, with well-constructed scenario-based questions. However, five items contain defects ranging from a fundamentally incorrect ordering activity (teaching retroactive vertical separation) to a flashcard that conflates two independent conditions into cumulative requirements. The shard has no structured question coverage for paragraphs 8-3-3, 8-4-4, 8-5-3, 8-5-4, or 8-5-5, and most paragraphs rely on a single format for reinforcement rather than cross-format coverage.",
+      "This shard covers separation methods for stationary and moving airspace reservations (8-6), the North Atlantic ICAO Region longitudinal and lateral minima (8-7), and the Caribbean ICAO Region longitudinal and lateral minima (8-8). The shard has two blocker-level source-fidelity failures where designated correct answers directly contradict the source material, plus several items where stems leak the answer through word-matching or where explanations add rationales not present in the source. The remaining items are generally accurate and well-targeted, particularly the ordering activity for refusal-of-clearance procedures and the lateral-minimum-tier flashcards.",
+      "The shard covers eight paragraphs spanning three sections (8-8, 8-9, 8-10) with 21 learning items. About half the items are well-constructed, testing operational knowledge with plausible distractors and source-grounded explanations. The remaining half suffer primarily from paragraph-comparison trivia framing, cross-regional comparisons unsupported by the packet's source blocks, and explanations that invent operational rationale or use document-structure language. Two source_lookup activities teach word-spotting and paragraph-number identification rather than operational source-use skills. No items are factually wrong; all salvageable through replacement."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "activity",
+      "para_id": "8-1-9",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The choice marked correct states 'Supervisor approval alone, without meeting the excepted aircraft criteria, is sufficient for any non-RVSM aircraft to enter RVSM airspace.' The source block requires that non-RVSM aircraft must meet the criteria of excepted aircraft AND be previously approved by the operations supervisor/CIC. Supervisor approval alone without excepted criteria is insufficient. The item's own explanation correctly states all three conditions must be met, but the marked answer directly contradicts both the source and the explanation. A student who selects that answer will learn an unsafe rule.",
+      "source_basis": "Paragraph 8-1-9 source block: 'Ensure non-RVSM aircraft are not permitted in RVSM airspace unless they meet the criteria of excepted aircraft and are previously approved by the operations supervisor/CIC.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Select the statement that correctly describes the RVSM exception rules.",
+          "question_text": "Which statement correctly describes the rules for non-RVSM aircraft in oceanic RVSM airspace?",
+          "choices": [
+            {
+              "text": "Supervisor approval alone is sufficient for any non-RVSM aircraft to enter RVSM airspace.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Supervisor approval alone, without meeting the excepted aircraft criteria, is sufficient for any non-RVSM aircraft to enter RVSM airspace.",
+              "is_correct": true,
+              "sort_order": 3
+            },
+            {
+              "text": "Non-RVSM exceptions are mandatory requirements that the controller must accommodate regardless of current workload or traffic conditions.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "A non-RVSM aircraft that meets the excepted criteria may enter RVSM airspace without any further approval or coordination.",
+              "is_correct": false,
+              "sort_order": 1
+            }
+          ],
+          "explanation": "The RVSM exception rule has three layers: (1) the aircraft must meet the criteria of an excepted aircraft, (2) prior supervisor/CIC approval is required, and (3) exceptions are accommodated on a workload or traffic-permitting basis. All three layers apply.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-1-9:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Select the statement that correctly describes the RVSM exception rules.",
+            "question_text": "Which statement correctly describes the rules for non-RVSM aircraft in oceanic RVSM airspace?",
+            "choices": [
+              {
+                "text": "A non-RVSM aircraft that meets excepted aircraft criteria may enter RVSM airspace without supervisor approval.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "Non-RVSM aircraft exceptions must be accommodated by the controller regardless of current workload or traffic conditions.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "A non-RVSM aircraft must meet the criteria of an excepted aircraft, receive prior approval from the operations supervisor/CIC, and the exception must be accommodated on a workload or traffic-permitting basis.",
+                "is_correct": true,
+                "sort_order": 2
+              },
+              {
+                "text": "Supervisor approval alone, without meeting excepted aircraft criteria, is sufficient for any non-RVSM aircraft to enter RVSM airspace.",
+                "is_correct": false,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "Non-RVSM aircraft are not permitted in RVSM airspace unless they meet the criteria of excepted aircraft and are previously approved by the operations supervisor/CIC. Exceptions are accommodated on a workload or traffic-permitting basis. All three conditions must be satisfied.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-1-9:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-2-1",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "answer_defensibility"
+      ],
+      "problem": "The stem asks whether a 2-minute revision must be forwarded. The source states ARTCCs must forward revisions of 3 minutes or more; a 2-minute revision is below this threshold and does not require forwarding. The correct answer to the polar question is 'No.' The marked correct answer says 'Yes, because only revisions of 3 minutes or more require forwarding' — a logical contradiction: if only 3+ minute revisions require forwarding, a 2-minute revision does not. The two 'No' distractors also give false universal reasons ('any change must be forwarded,' 'all boundary crossing times must be coordinated'), making them poor distractors because they state the correct conclusion with wrong reasoning.",
+      "source_basis": "Paragraph 8-2-1 source block, duty (d): 'Forward revisions of estimates of 3 minutes or more to the appropriate ATS facility.'",
+      "match": {
+        "question_text": "An ARTCC has a 2-minute revision to an oceanic flight's boundary estimate. Must this revision be forwarded to the receiving ATS facility?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An ARTCC has a 2-minute revision to an oceanic flight's boundary estimate. Must this revision be forwarded to the receiving ATS facility?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "ARTCCs must forward revisions of estimates of 3 minutes or more to the appropriate ATS facility. A 2-minute revision is below this threshold and does not require forwarding.",
+          "choices": [
+            {
+              "text": "No, because only revisions of 3 minutes or more require forwarding.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "No, because forwarding requirements are waived for all transoceanic flights.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Yes, because all estimate changes must be forwarded regardless of magnitude.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Yes, but only if the revision affects separation between aircraft.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-2-1",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "answer_defensibility"
+      ],
+      "problem": "The scenario describes a 4-minute estimate revision (1345Z to 1349Z), which triggers ARTCC coordination duty (d): forwarding revisions of estimates of 3 minutes or more. The marked correct answer instead selects duty (a): forwarding current flight plan and control information as the flight progresses. The item's own explanation correctly states the action 'falls under the duty to forward revisions of estimates of 3 minutes or more,' but the marked correct choice does not correspond to that duty. The answer teaches the wrong duty for the scenario.",
+      "source_basis": "Paragraph 8-2-1 source block, duties (a) and (d): '(a) Forward to appropriate ATS facilities, as a flight progresses, current flight plan and control information.' '(d) Forward revisions of estimates of 3 minutes or more to the appropriate ATS facility.'",
+      "match": {
+        "activity_type": "ordering",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify which ARTCC coordination duty is being described.",
+          "question_text": "An ARTCC forward's a flight's updated estimate from 1345Z to 1349Z to the receiving oceanic facility. Which coordination duty is the ARTCC performing?",
+          "choices": [
+            {
+              "text": "Forwarding current flight plan and control information.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Coordinating with adjacent ATS facilities when the airspace to be protected will overlap the common boundary.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Forwarding to appropriate ATS facilities the current flight plan and control information as the flight progresses.",
+              "is_correct": true,
+              "sort_order": 3
+            },
+            {
+              "text": "Coordinating IFR/VFR service continuation.",
+              "is_correct": false,
+              "sort_order": 2
+            }
+          ],
+          "explanation": "The 4-minute revision meets the 3-minute-or-more threshold, so this action falls under the duty to forward revisions of estimates of 3 minutes or more to the appropriate ATS facility.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-2-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "ordering",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify which ARTCC coordination duty is being described.",
+            "question_text": "An ARTCC forwards a flight's updated boundary estimate from 1345Z to 1349Z to the receiving oceanic facility. Which ARTCC coordination duty is being performed?",
+            "choices": [
+              {
+                "text": "Forwarding revisions of estimates of 3 minutes or more to the appropriate ATS facility.",
+                "is_correct": true,
+                "sort_order": 0
+              },
+              {
+                "text": "Forwarding current flight plan and control information as the flight progresses.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Coordinating with adjacent ATS facilities when the airspace to be protected will overlap the common boundary.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Coordinating IFR and VFR flight service continuation with adjacent facilities.",
+                "is_correct": false,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "The revision from 1345Z to 1349Z is a 4-minute change, which meets the 3-minute-or-more threshold. ARTCCs must forward revisions of estimates of 3 minutes or more to the appropriate ATS facility. This duty is distinct from the routine forwarding of current flight plan and control information as the flight progresses.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-2-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-1-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation leads with document-location scaffolding: 'JO 7210.632 establishes reporting procedures for Gross Navigation Errors, height errors, time (longitudinal) errors, intervention, and SAO verification.' The explanation should state the operational knowledge directly without framing it through the document that contains it.",
+      "source_basis": "Paragraph 8-1-7 source block: 'FAA Order JO 7210.632 establishes procedures for reporting Gross Navigation Errors (GNE), height errors, time (longitudinal) errors, intervention, and Special Area of Operations (SAO) verification in oceanic airspace.'",
+      "match": {
+        "question_text": "A controller needs to report an oceanic error event. Which of the following IS a reportable category under JO 7210.632?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller needs to report an oceanic error event. Which of the following IS a reportable category under JO 7210.632?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The five reportable oceanic error categories are Gross Navigation Errors, height errors, time (longitudinal) errors, intervention, and Special Area of Operations verification. Height errors are one of these five categories. Speed deviations, radar identification failures, and CPDLC message errors are not among the reportable categories.",
+          "choices": [
+            {
+              "text": "Speed deviations.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "CPDLC message errors.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Radar identification failures.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Height errors.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-1-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation leads with document-location scaffolding: 'JO 7210.632 establishes procedures for reporting five categories...' and ends with a document reference: 'The other lists contain items not found in the source.' The explanation should state the operational content directly.",
+      "source_basis": "Paragraph 8-1-7 source block: 'FAA Order JO 7210.632 establishes procedures for reporting Gross Navigation Errors (GNE), height errors, time (longitudinal) errors, intervention, and Special Area of Operations (SAO) verification in oceanic airspace.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Select the statement that correctly describes the reportable oceanic error categories.",
+          "question_text": "Which list correctly identifies the five reportable oceanic error categories under JO 7210.632?",
+          "choices": [
+            {
+              "text": "Transponder failures, CPDLC logon rejections, altitude deviations, speed deviations, and route deviations.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Lateral deviations, vertical deviations, speed deviations, communication failures, and surveillance failures.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Gross Navigation Errors, height errors, time errors, speed errors, and communication failures.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Gross Navigation Errors, height errors, time (longitudinal) errors, intervention, and Special Area of Operations verification.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ],
+          "explanation": "JO 7210.632 establishes procedures for reporting five categories: Gross Navigation Errors (GNE), height errors, time (longitudinal) errors, intervention, and Special Area of Operations (SAO) verification. The other lists contain items not found in the source.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-1-7:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Select the statement that correctly describes the reportable oceanic error categories.",
+            "question_text": "Which list correctly identifies the five reportable oceanic error categories under JO 7210.632?",
+            "choices": [
+              {
+                "text": "Transponder failures, CPDLC logon rejections, altitude deviations, speed deviations, and route deviations.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "Lateral deviations, vertical deviations, speed deviations, communication failures, and surveillance failures.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Gross Navigation Errors, height errors, time errors, speed errors, and communication failures.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Gross Navigation Errors, height errors, time (longitudinal) errors, intervention, and Special Area of Operations verification.",
+                "is_correct": true,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "The five reportable oceanic error categories are Gross Navigation Errors (GNE), height errors, time (longitudinal) errors, intervention, and Special Area of Operations (SAO) verification. The other lists contain items that are not among these five categories.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-1-7:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-1-8",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality",
+        "source_fidelity"
+      ],
+      "problem": "The explanation adds the unsupported claim 'For distance-based separation, other position references apply.' The source block states only that control estimates must be used when applying time-based separation minima. It does not characterize what applies to distance-based separation. This invented extension could mislead a student about distance-based separation rules that are not addressed by this paragraph.",
+      "source_basis": "Paragraph 8-1-8 source block: 'Control estimates must be used when applying time-based separation minima.' The source makes no statement about what applies to distance-based separation.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "When must control estimates be used?",
+          "question_text": "A controller is applying both time-based and distance-based separation between oceanic aircraft. For which type of separation are control estimates required to be used?",
+          "choices": [
+            {
+              "text": "Only for time-based separation minima.",
+              "is_correct": true,
+              "sort_order": 3
+            },
+            {
+              "text": "For both time-based and distance-based separation minima.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Control estimates are optional for all separation types.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Only for distance-based separation minima.",
+              "is_correct": false,
+              "sort_order": 0
+            }
+          ],
+          "explanation": "Control estimates are the estimated position of aircraft with reference to time. They must be used when applying time-based separation minima. For distance-based separation, other position references apply.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-1-8:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "When must control estimates be used?",
+            "question_text": "A controller is applying both time-based and distance-based separation between oceanic aircraft. For which type of separation are control estimates required to be used?",
+            "choices": [
+              {
+                "text": "Only for time-based separation minima.",
+                "is_correct": true,
+                "sort_order": 3
+              },
+              {
+                "text": "For both time-based and distance-based separation minima.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Control estimates are optional for all separation types.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Only for distance-based separation minima.",
+                "is_correct": false,
+                "sort_order": 0
+              }
+            ],
+            "explanation": "Control estimates are the estimated position of aircraft with reference to time. They must be used when applying time-based separation minima.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-1-8:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-1-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The stem begins with an extraneous matching preamble listing three numbered scenarios: '(1) Operations at FL 190, (2) Operations 80 NM seaward from the shoreline, (3) Operations in airspace below the Oceanic CTAs in any FIR.' Only the second scenario is actually tested. The unasked scenarios create confusion about what is being assessed and suggest a matching format that the item does not deliver.",
+      "source_basis": "Paragraph 8-1-3 source block, subparagraph (b): 'Within the Oakland FIR when operating less than 100 NM seaward from the shoreline within controlled airspace.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Identify which area permits the described operation.",
+          "question_text": "Match each VFR flight plan operation to the area where it is permitted: (1) Operations at FL 190, (2) Operations 80 NM seaward from the shoreline, (3) Operations in airspace below the Oceanic CTAs in any FIR. Which area permits operations 80 NM seaward within controlled airspace?",
+          "choices": [
+            {
+              "text": "The Miami, Houston, and San Juan CTAs below FL 180.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The Oakland FIR, when operating less than 100 NM seaward from the shoreline within controlled airspace.",
+              "is_correct": true,
+              "sort_order": 3
+            },
+            {
+              "text": "All Oceanic FIR airspace below the Oceanic CTAs.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "All three areas permit operations at 80 NM seaward.",
+              "is_correct": false,
+              "sort_order": 1
+            }
+          ],
+          "explanation": "The Oakland FIR permits VFR flight plan operations when operating less than 100 NM seaward from the shoreline within controlled airspace. The CTAs limit altitude (below FL 180) rather than distance. The all-FIR airspace category applies below Oceanic CTAs.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-1-3:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Identify which area permits the described operation.",
+            "question_text": "A VFR flight on a flight plan is operating 80 NM seaward from the shoreline within controlled airspace. Under which VFR flight plan operating area is this operation permitted?",
+            "choices": [
+              {
+                "text": "The Miami, Houston, and San Juan CTAs below FL 180.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "All Oceanic FIR airspace below the Oceanic CTAs.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "All three areas permit operations at 80 NM seaward.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "The Oakland FIR, when operating less than 100 NM seaward from the shoreline within controlled airspace.",
+                "is_correct": true,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "The Oakland FIR permits VFR flight plan operations when operating less than 100 NM seaward from the shoreline within controlled airspace. The Miami, Houston, and San Juan CTAs limit operations to below FL 180 rather than by distance. The all-FIR airspace category applies below the Oceanic CTAs.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-1-3:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-3-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation adds the unsupported rationale 'The more restrictive minimum protects both aircraft.' The source block states only that the larger of the two standards must be applied. It does not explain why or characterize the purpose of the rule. This is an invented safety rationale.",
+      "source_basis": "Paragraph 8-3-1 source block, subparagraph (b): 'In situations where one aircraft requires a different time-based longitudinal standard than another, apply the larger of the two standards between the aircraft concerned.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Which minimum applies?",
+          "question_text": "Two aircraft on the same track require different time-based longitudinal standards. Aircraft A, a turbojet using Mach number technique, is subject to a 10-minute minimum. Aircraft B, a nonturbojet, is subject to a 30-minute minimum. Which minimum applies between them?",
+          "choices": [
+            {
+              "text": "30 minutes, the larger of the two standards.",
+              "is_correct": true,
+              "sort_order": 3
+            },
+            {
+              "text": "10 minutes, the smaller standard applicable to the lead aircraft.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "15 minutes, the general Chapter 8 default.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "20 minutes, the average of the two standards.",
+              "is_correct": false,
+              "sort_order": 0
+            }
+          ],
+          "explanation": "When one aircraft requires a different time-based longitudinal standard than another, apply the larger of the two standards between the aircraft concerned. The more restrictive minimum protects both aircraft.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-3-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Which minimum applies?",
+            "question_text": "Two aircraft on the same track require different time-based longitudinal standards. Aircraft A, a turbojet using Mach number technique, is subject to a 10-minute minimum. Aircraft B, a nonturbojet, is subject to a 30-minute minimum. Which minimum applies between them?",
+            "choices": [
+              {
+                "text": "30 minutes, the larger of the two standards.",
+                "is_correct": true,
+                "sort_order": 3
+              },
+              {
+                "text": "10 minutes, the smaller standard applicable to the lead aircraft.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "15 minutes, the general Chapter 8 default.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "20 minutes, the average of the two standards.",
+                "is_correct": false,
+                "sort_order": 0
+              }
+            ],
+            "explanation": "When one aircraft requires a different time-based longitudinal standard than another, apply the larger of the two standards between the aircraft concerned.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-3-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-3-2",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "The correct answer states aircraft should wait to report passing each other then apply vertical separation retroactively. The source requires vertical separation to be applied before and after estimated passing, not retroactively after passing is confirmed. None of the four choices describe a correct sequence. The ordering format is also a poor fit; the source's two-stage rule (apply vertical separation → discontinue when conditions met, with an OR branch) is not a linear multi-step sequence suitable for ordering.",
+      "source_basis": "8-3-2(b)(3)(a): 'Ensure that aircraft are vertically separated for a time interval equal to the applicable minimum required before and after the aircraft are estimated to pass.' The correct procedure applies vertical separation proactively before estimated passing, not retroactively after reports.",
+      "match": {
+        "activity_type": "ordering",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Put the reciprocal track separation steps in the correct order.",
+          "question_text": "For aircraft on reciprocal tracks, what is the correct sequence for applying longitudinal separation?",
+          "choices": [
+            {
+              "text": "Wait for both aircraft to report passing each other, then apply vertical separation retroactively.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Wait for both aircraft to report passing each other visually or by reference to ground-based aids, then apply vertical separation retroactively.",
+              "is_correct": true,
+              "sort_order": 3
+            },
+            {
+              "text": "Apply the crossing-track minimum at the point of intersection; reciprocal tracks use the same rule as crossing tracks.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Apply the same-direction longitudinal minimum for the entire crossing without using vertical separation, because reciprocal tracks and same tracks use identical separation rules.",
+              "is_correct": false,
+              "sort_order": 1
+            }
+          ],
+          "explanation": "Reciprocal track separation requires: (1) vertical separation before and after estimated passing for the applicable minimum interval, then (2) vertical separation may be discontinued only after aircraft have reported passing a significant point AND the same-direction minimum is achieved.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-3-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Determine whether vertical separation may be discontinued under the NAVAID-based condition.",
+            "question_text": "Two aircraft on reciprocal tracks are vertically separated. Both aircraft have reported passing ground-based NAVAIDs that indicate they have passed each other. No common significant point has been reported, and the same-direction longitudinal minimum has not been confirmed. What action should the controller take?",
+            "choices": [
+              {
+                "text": "Discontinue vertical separation, because both aircraft have reported passing ground-based NAVAIDs indicating they have passed each other.",
+                "is_correct": true,
+                "sort_order": 3
+              },
+              {
+                "text": "Maintain vertical separation until both aircraft report passing the same significant point.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Maintain vertical separation until the same-direction longitudinal minimum is confirmed.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Discontinue all separation, because the aircraft have passed each other.",
+                "is_correct": false,
+                "sort_order": 0
+              }
+            ],
+            "explanation": "Vertical separation on reciprocal tracks may be discontinued when both aircraft report passing ground-based NAVAIDs or DME fixes indicating they have passed each other. This condition is independent of the significant-point-plus-longitudinal-minimum condition; either alone authorizes discontinuing vertical separation.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-3-2:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-3-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The front asks what two conditions 'must both be met,' implying the conditions are cumulative rather than independent alternatives. The back conflates the two independent conditions by folding the NAVAIDs/DME-fix condition into condition (1) as an alternative reporting method, then incorrectly requiring the same-direction longitudinal minimum under that alternative. Per the source, condition (2) — both aircraft reporting ground-based NAVAIDs or DME fixes indicating they have passed each other — is a standalone condition that does not require the same-direction longitudinal minimum.",
+      "source_basis": "8-3-2(b)(3)(b): 'Vertical separation may be discontinued after one of the following conditions is met: (1) Both aircraft have reported passing a significant point and the aircraft are separated by at least the applicable minimum required for the same direction longitudinal spacing; or (2) Both aircraft have reported passing ground-based NAVAIDs or DME fixes indicating that they have passed each other.' The word 'or' makes the conditions independent alternatives.",
+      "match": {
+        "front": "What two conditions must both be met before vertical separation may be discontinued for aircraft on reciprocal tracks?",
+        "back": "1. Both aircraft have reported passing a significant point (or passing ground-based NAVAIDs/DME fixes indicating they have passed each other). 2. The aircraft are separated by at least the applicable same-direction longitudinal minimum.",
+        "card_type": "discrimination"
+      },
+      "replacements": [
+        {
+          "front": "What are the two independent conditions under which vertical separation may be discontinued for aircraft on reciprocal tracks?",
+          "back": "1. Both aircraft have reported passing a significant point AND the aircraft are separated by at least the applicable same-direction longitudinal minimum. 2. Both aircraft have reported passing ground-based NAVAIDs or DME fixes indicating that they have passed each other.",
+          "card_type": "discrimination"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-3-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The flashcard back adds the explanatory claim 'enabling more accurate prediction of relative positions' which is not stated in any source block for this paragraph. The source states that the technique allows for reduced minima and describes the conditions and Mach number assignment requirements, but does not attribute the reduction to more accurate position prediction.",
+      "source_basis": "8-3-3 body: 'The use of Mach number technique allows for the application of reduced longitudinal separation minima.' The source states the allowance as a fact without explaining the mechanism behind it.",
+      "match": {
+        "front": "What is the operational purpose of the Mach number technique?",
+        "back": "It allows for the application of reduced longitudinal separation minima by ensuring aircraft maintain assigned Mach numbers, enabling more accurate prediction of relative positions.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What is the operational purpose of the Mach number technique?",
+          "back": "It allows for the application of reduced longitudinal separation minima.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-4-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses prohibited document-structure scaffolding: 'The note in 8-4-1 states that lateral separation minima are contained in the regional sections.' This phrases the answer in terms of what a paragraph says rather than stating the operational organization directly.",
+      "source_basis": "8-4-1 note: 'Lateral separation minima is contained in: Section 7, North Atlantic ICAO Region. Section 8, Caribbean ICAO Region. Section 9, Pacific ICAO Region. Section 10, North American ICAO Region−Arctic CTA.'",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Where would you find the applicable lateral separation minimum?",
+          "question_text": "A controller is working an aircraft in the North Atlantic ICAO Region and needs to verify the applicable lateral separation minimum for that region. Where in Chapter 8 should the controller look?",
+          "choices": [
+            {
+              "text": "Section 1, General, which contains all lateral separation minima.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Section 4, Lateral Separation, which applies uniformly to all regions.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Section 7, North Atlantic ICAO Region.",
+              "is_correct": true,
+              "sort_order": 3
+            },
+            {
+              "text": "Section 10, North American ICAO Region, which is the default for all regions.",
+              "is_correct": false,
+              "sort_order": 2
+            }
+          ],
+          "explanation": "The note in 8-4-1 states that lateral separation minima are contained in the regional sections: Section 7 (North Atlantic), Section 8 (Caribbean), Section 9 (Pacific), and Section 10 (North American-Arctic CTA). The controller should look in the relevant regional section.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-4-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_lookup",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Where would you find the applicable lateral separation minimum?",
+            "question_text": "A controller is working an aircraft in the North Atlantic ICAO Region and needs to verify the applicable lateral separation minimum for that region. Where in Chapter 8 should the controller look?",
+            "choices": [
+              {
+                "text": "Section 1, General, which contains all lateral separation minima.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "Section 4, Lateral Separation, which applies uniformly to all regions.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Section 7, North Atlantic ICAO Region.",
+                "is_correct": true,
+                "sort_order": 3
+              },
+              {
+                "text": "Section 10, North American ICAO Region, which is the default for all regions.",
+                "is_correct": false,
+                "sort_order": 2
+              }
+            ],
+            "explanation": "Lateral separation minima are organized by ICAO region in dedicated sections: Section 7 covers the North Atlantic, Section 8 covers the Caribbean, Section 9 covers the Pacific, and Section 10 covers the North American ICAO Region-Arctic CTA. Controllers must reference the section corresponding to the region in which they are operating.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-4-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-5-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "educational_coherence",
+        "answer_defensibility"
+      ],
+      "problem": "The question asks why controllers must account for QNE and QNH differences below FL 180, but the correct answer explains the absence of the problem above FL 180. None of the choices directly answer the question asked — the correct choice addresses a different question (why the rule is scoped below rather than above FL 180). The question-answer mismatch makes the item educationally incoherent.",
+      "source_basis": "8-5-1 body: 'When vertical separation is applied between aircraft crossing the offshore/oceanic airspace boundary below FL 180, control action must be taken to ensure that differences between the standard altimeter setting (QNE) and local altimeter setting (QNH) do not compromise separation.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify the pressure-setting risk addressed below FL 180.",
+          "question_text": "Why must controllers account for QNE and QNH differences below FL 180 when aircraft cross the offshore/oceanic boundary?",
+          "choices": [
+            {
+              "text": "Above FL 180, vertical separation is never applied across the offshore/oceanic boundary.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "At and above FL 180, all aircraft use the standard altimeter setting of 29.92, so there is no QNE/QNH difference to manage.",
+              "is_correct": true,
+              "sort_order": 3
+            },
+            {
+              "text": "Below FL 180, all aircraft use local altimeter settings that differ from the oceanic standard.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Below FL 180, aircraft are always in controlled airspace requiring special handling.",
+              "is_correct": false,
+              "sort_order": 1
+            }
+          ],
+          "explanation": "The transition level in oceanic airspace is typically FL 180. At and above this level, all aircraft use QNE (29.92 inches Hg / standard pressure setting). Below FL 180, aircraft may be using local QNH settings. The rule ensures the difference between QNE and QNH does not erode vertical separation.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-5-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Determine the correct controller action below FL 180.",
+            "question_text": "A controller is applying vertical separation between aircraft crossing the offshore/oceanic boundary below FL 180. What must the controller ensure?",
+            "choices": [
+              {
+                "text": "That differences between the standard altimeter setting (QNE) and local altimeter setting (QNH) do not compromise the separation.",
+                "is_correct": true,
+                "sort_order": 3
+              },
+              {
+                "text": "That all aircraft are using the standard altimeter setting (QNE) before the boundary crossing.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "That all aircraft are using the local altimeter setting (QNH) before the boundary crossing.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "That the aircraft are vertically separated by at least 2,000 feet at the boundary.",
+                "is_correct": false,
+                "sort_order": 0
+              }
+            ],
+            "explanation": "When vertical separation is applied between aircraft crossing the offshore/oceanic boundary below FL 180, control action must be taken to ensure that differences between the standard altimeter setting (QNE) and local altimeter setting (QNH) do not compromise the separation.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-5-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-6-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation states 'This buffer accounts for navigation uncertainty around the reservation boundary.' The source block only defines the buffer's size (one-half the lateral separation minimum); it does not explain why the buffer exists. This is an invented rationale.",
+      "source_basis": "8-6-1 b: 'Clear aircraft so that vertical separation exists while the aircraft is within a geographical area defined as the stationary reservation plus a buffer around the perimeter equivalent to one-half the lateral separation minimum.'",
+      "match": {
+        "question_text": "A controller chooses to separate an aircraft from a temporary stationary airspace reservation by vertical separation. How is the protected airspace around the reservation defined for this purpose?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A controller chooses to separate an aircraft from a temporary stationary airspace reservation by vertical separation. How is the protected airspace around the reservation defined for this purpose?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When vertical separation is used to separate aircraft from a temporary stationary reservation, the protected geographical area is the reservation plus a buffer around the perimeter equivalent to one-half the lateral separation minimum.",
+          "choices": [
+            {
+              "text": "The stationary reservation area plus a buffer of one-half the lateral separation minimum around the perimeter.",
+              "is_correct": true
+            },
+            {
+              "text": "The stationary reservation area only, with no buffer.",
+              "is_correct": false
+            },
+            {
+              "text": "The stationary reservation area plus a buffer of the full lateral separation minimum around the perimeter.",
+              "is_correct": false
+            },
+            {
+              "text": "A cylinder of 5 NM radius centered on the reservation's geographic coordinates.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-6-1",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The designated correct answer teaches the wrong operational action. It says to cancel the IFR clearance and reroute to a different airway, but the source provides two approved separation methods for stationary reservations — lateral and vertical. When lateral separation would cause the protected airspace to overlap the reservation, the correct alternative is vertical separation, not cancellation and rerouting. The activity's own explanation correctly describes vertical separation as the alternative, directly contradicting the designated correct answer.",
+      "source_basis": "8-6-1: 'Separate aircraft from a temporary stationary reservation by one of two methods: a. Laterally: Clear aircraft so that the protected airspace along the route of flight does not overlap the geographical area of the stationary reservation. b. Vertically: Clear aircraft so that vertical separation exists while the aircraft is within a geographical area defined as the stationary reservation plus a buffer around the perimeter equivalent to one-half the lateral separation minimum.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Choose the correct separation method.",
+          "question_text": "A controller needs to separate an aircraft from a temporary stationary airspace reservation along a route where the protected airspace would overlap the reservation. How can the aircraft still transit the area?",
+          "choices": [
+            {
+              "text": "Cancel the aircraft's clearance and reroute to a completely different airway.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Cancel the aircraft's IFR clearance and instruct the pilot to reroute to a completely different airway that avoids the reservation area entirely.",
+              "is_correct": true,
+              "sort_order": 3
+            },
+            {
+              "text": "No separation method works; aircraft must always be rerouted around stationary reservations.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Use longitudinal separation by measuring the time interval from the reservation activation to the aircraft's estimated crossing point.",
+              "is_correct": false,
+              "sort_order": 1
+            }
+          ],
+          "explanation": "Two methods are available for stationary reservations. If lateral separation is unavailable (protected airspace would overlap), vertical separation may be used. The protected area for vertical separation includes the reservation plus a buffer of one-half the lateral separation minimum.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-6-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Choose the correct separation method.",
+            "question_text": "A controller needs to separate an aircraft from a temporary stationary airspace reservation along a route where lateral separation would cause the aircraft's protected airspace to overlap the reservation. How can the aircraft still transit the area?",
+            "choices": [
+              {
+                "text": "Use vertical separation, clearing the aircraft so that vertical separation exists while the aircraft is within the reservation area plus a buffer of one-half the lateral separation minimum.",
+                "is_correct": true,
+                "sort_order": 0
+              },
+              {
+                "text": "Request the pilot to deviate around the reservation using visual separation.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Issue a clearance through the reservation, advising the pilot that ATC services will not be provided while the flight is within the reservation.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Use longitudinal separation by applying the minimum time interval ahead of or behind the reservation.",
+                "is_correct": false,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "Two methods are available for separating aircraft from a temporary stationary airspace reservation: lateral and vertical. When lateral separation is unavailable because the protected airspace along the route would overlap the reservation, vertical separation must be used. The protected area for vertical separation is the reservation plus a buffer around the perimeter equivalent to one-half the lateral separation minimum.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-6-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-6-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "distractor_quality"
+      ],
+      "problem": "The correct answer is noticeably longer and more detailed than the distractors, creating an answer-length cue. Distractors should be comparably substantive so the correct answer does not stand out by length or specificity alone.",
+      "source_basis": "8-6-3 a: 'Laterally: Clear aircraft so that the protected airspace along the route of flight does not overlap the (time-dependent) geographical area of the moving airspace reservation.' 8-6-3 b: 'Longitudinally: Clear aircraft so that the appropriate longitudinal minimum exists ahead of the first or behind the last aircraft operating within the reservation.'",
+      "match": {
+        "question_text": "How does the longitudinal separation method for a temporary moving airspace reservation differ from the lateral method for the same reservation type?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "How does the longitudinal separation method for a temporary moving airspace reservation differ from the lateral method for the same reservation type?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "For temporary moving reservations, longitudinal separation applies the minimum ahead of the first or behind the last aircraft operating within the reservation. Lateral separation ensures the aircraft's protected airspace does not overlap the time-dependent geographical area of the moving reservation. Vertical separation, the third method, uses the reservation plus a buffer of one-half the lateral separation minimum.",
+          "choices": [
+            {
+              "text": "Longitudinal separation applies only to stationary reservations, while lateral separation applies to both stationary and moving reservations.",
+              "is_correct": false
+            },
+            {
+              "text": "Both methods are identical in application for moving reservations; the terms are interchangeable in this context.",
+              "is_correct": false
+            },
+            {
+              "text": "Longitudinal separation places the applicable minimum ahead of the first or behind the last aircraft in the reservation, while lateral separation keeps the aircraft's protected airspace clear of the reservation's geographical area.",
+              "is_correct": true
+            },
+            {
+              "text": "Longitudinal separation requires a buffer of one-half the lateral separation minimum around the reservation perimeter, while lateral separation applies the full separation minimum to the reservation boundaries.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-6-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "The question stem contains the word 'longitudinal,' which is the answer to the question. A student can answer correctly by matching the word in the stem to the word in the choice without understanding the underlying separation method.",
+      "source_basis": "8-6-3 b: 'Longitudinally: Clear aircraft so that the appropriate longitudinal minimum exists ahead of the first or behind the last aircraft operating within the reservation.'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify which separation method matches the description.",
+          "question_text": "For a temporary moving airspace reservation, which method clears aircraft so that the appropriate longitudinal minimum exists ahead of the first or behind the last aircraft in the reservation?",
+          "choices": [
+            {
+              "text": "Vertical separation.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Lateral separation.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Radar separation.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Longitudinal separation.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ],
+          "explanation": "Moving reservations have three separation methods: lateral (non-overlapping protected airspace), longitudinal (minimum ahead of first or behind last aircraft in the reservation), and vertical (reservation plus perimeter buffer). The longitudinal method treats the reservation as a moving block in time/distance.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-6-3:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify which separation method matches the description.",
+            "question_text": "For a temporary moving airspace reservation, which method clears aircraft so that the applicable separation minimum exists ahead of the first or behind the last aircraft operating within the reservation?",
+            "choices": [
+              {
+                "text": "Vertical separation.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "Lateral separation.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Radar separation.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Longitudinal separation.",
+                "is_correct": true,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "Moving reservations have three separation methods: lateral (non-overlapping protected airspace), longitudinal (minimum ahead of first or behind last aircraft in the reservation), and vertical (reservation plus perimeter buffer). The longitudinal method treats the reservation as a moving block and applies the minimum in front of or behind it.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-6-3:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-7-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation adds 'as the more specific regional rule,' implying a legal hierarchy principle that the source does not state. The source establishes that Section 7 procedures apply for the North Atlantic region but does not explain the legal basis for why regional rules take priority.",
+      "source_basis": "8-7-1: 'Provide air traffic control services in the North Atlantic ICAO Region with the procedures and minima contained in this section except when noted otherwise.'",
+      "match": {
+        "question_text": "When Section 7 North Atlantic procedures differ from the general Chapter 8 procedures, which procedures take precedence in the North Atlantic ICAO Region?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When Section 7 North Atlantic procedures differ from the general Chapter 8 procedures, which procedures take precedence in the North Atlantic ICAO Region?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The North Atlantic regional application provision directs that ATC services be provided with the procedures and minima contained in Section 7 except when noted otherwise. When Section 7 procedures differ from general Chapter 8 procedures, the Section 7 procedures control.",
+          "choices": [
+            {
+              "text": "The general Chapter 8 procedures, because they apply uniformly throughout all oceanic airspace.",
+              "is_correct": false
+            },
+            {
+              "text": "The procedures in Section 8, because the Caribbean and North Atlantic regions share the same rules.",
+              "is_correct": false
+            },
+            {
+              "text": "Whichever set of procedures provides the larger separation minimum.",
+              "is_correct": false
+            },
+            {
+              "text": "The Section 7 procedures, because they are the region-specific provisions that govern the North Atlantic ICAO Region.",
+              "is_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-7-1",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The designated correct answer claims that Section 1 General provisions is the governing rule that establishes Section 7 as the controlling authority. This directly contradicts the source, which states that ATC services in the North Atlantic are provided with the procedures and minima in Section 7. The activity's own explanation correctly identifies 8-7-1 as the governing provision, further confirming the answer is wrong. Additionally, two of the four choices (sort_orders 0 and 3) both assert that Section 1 applies uniformly, one marked true and the other false, making those choices functionally duplicate.",
+      "source_basis": "8-7-1: 'Provide air traffic control services in the North Atlantic ICAO Region with the procedures and minima contained in this section except when noted otherwise.'",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Where would you confirm the regional rules apply?",
+          "question_text": "A controller is working an aircraft in the North Atlantic ICAO Region and needs to confirm that Section 7 lateral separation minima apply rather than the general Chapter 8 lateral minima. Where is the governing rule that establishes Section 7 as the controlling authority?",
+          "choices": [
+            {
+              "text": "Section 1 General provisions, because the general rules in Chapter 8 apply uniformly across all ICAO regions regardless of the regional sections.",
+              "is_correct": true,
+              "sort_order": 3
+            },
+            {
+              "text": "The lateral separation note, which lists the regional lateral minima but does not establish which section controls for a given aircraft in the region.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "ICAO Document 7030, the North Atlantic Regional Supplementary Procedures, which operates independently of JO 7110.65 for this region's airspace.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Section 1, General, which applies uniformly to all regions regardless of regional provisions.",
+              "is_correct": false,
+              "sort_order": 0
+            }
+          ],
+          "explanation": "Each regional section has an application paragraph that establishes the section as the governing authority for that region. For the North Atlantic, 8-7-1 states that services are provided with the procedures and minima in Section 7 except when noted otherwise.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-7-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_lookup",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Where would you confirm the regional rules apply?",
+            "question_text": "A controller is working an aircraft in the North Atlantic ICAO Region and needs to confirm that Section 7 lateral separation minima apply rather than the general Chapter 8 lateral minima. Where is the governing provision that establishes Section 7 as the controlling authority?",
+            "choices": [
+              {
+                "text": "The North Atlantic ICAO Region application provision, which states that services are provided with the procedures and minima contained in Section 7 except when noted otherwise.",
+                "is_correct": true,
+                "sort_order": 0
+              },
+              {
+                "text": "The general Chapter 8 provisions, because they apply uniformly across all ICAO regions regardless of the regional sections.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "ICAO Document 7030 North Atlantic Regional Supplementary Procedures, which operate independently of JO 7110.65 for this region.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "The lateral separation provisions in Section 7 only, because the vertical and longitudinal provisions in Section 7 defer to Chapter 8 generally.",
+                "is_correct": false,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "The North Atlantic application provision establishes that the region-specific section controls for that area. It states that services are provided with the procedures and minima in Section 7 except when noted otherwise. The entire Section 7 — not just the lateral separation provisions — governs North Atlantic operations.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-7-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-7-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The card back has multiple accuracy errors. It omits the 10-minute supersonic case (same type/Mach, cruise climb, common point). It states 'Turbojet subsonic: 15 minutes (or Mach technique),' which incorrectly implies that 15 minutes is the Mach technique minimum — the Mach technique has its own prescribed minima per 8-3-3 and is an alternative to the 15-minute minimum, not equivalent to it. The front's framing 'not using Mach number technique' only applies to the turbojet subsonic category, making the question ill-posed for supersonic and nonturbojet categories.",
+      "source_basis": "8-7-3 a.1: '10 minutes provided that: (a) both aircraft are in level flight at the same Mach number or the aircraft are of the same type and are both operating in cruise climb, and ...' 8-7-3 a.2: '15 minutes between aircraft in supersonic flight not covered in subparagraph a1 above.' 8-7-3 b.1: 'Apply the prescribed minima in accordance with paragraph 8-3-3, Mach Number Technique; or' 8-7-3 b.3: 'Apply 15 minutes between all other turbojet aircraft.' 8-7-3 c.1: 'Apply 20 minutes between aircraft operating in the West Atlantic Route System (WATRS), or' 8-7-3 c.2: 'Apply 30 minutes between aircraft operating outside of the WATRS.'",
+      "match": {
+        "front": "In the North Atlantic ICAO Region, what are the basic longitudinal minima for each aircraft category not using Mach number technique?",
+        "back": "Supersonic (different types/cruise): 15 minutes. Turbojet subsonic: 15 minutes (or Mach technique). Nonturbojet in WATRS: 20 minutes. Nonturbojet outside WATRS: 30 minutes.",
+        "card_type": "comparison"
+      },
+      "replacements": [
+        {
+          "front": "In the North Atlantic ICAO Region, what are the longitudinal separation minima for each aircraft category when the Mach number technique is not used?",
+          "back": "Supersonic: 10 minutes (same type/Mach, cruise climb, common point or equivalent) or 15 minutes (otherwise). Turbojet subsonic: 15 minutes (when not using Mach technique per 8-3-3; Mach technique has its own prescribed minima). Nonturbojet: 20 minutes in WATRS, 30 minutes outside WATRS.",
+          "card_type": "comparison"
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-7-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "answer_defensibility"
+      ],
+      "problem": "The question stem states the aircraft is 'operating in airspace designated for 23 NM lateral separation,' which contains the answer value. A student can answer correctly by matching '23 NM' in the stem to '23 NM' in the choices without understanding the qualifying conditions.",
+      "source_basis": "8-7-4 a: '23 NM to approved aircraft (at a minimum, RNP 4, RCP 240, and RSP 180) operating within airspace designated for 23 NM lateral separation when direct controller/pilot communications via voice or CPDLC, and the required ADS-C contracts are maintained and monitored by an automated flight data processor.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Select the correct lateral minimum.",
+          "question_text": "An RNP 4 approved aircraft with CPDLC and ADS-C contracts maintained is operating in airspace designated for 23 NM lateral separation in the North Atlantic ICAO Region. What lateral minimum applies?",
+          "choices": [
+            {
+              "text": "60 NM.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "50 NM.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "30 NM.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "23 NM.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ],
+          "explanation": "23 NM applies to approved aircraft (minimum RNP 4, RCP 240, RSP 180) operating within designated airspace with direct controller/pilot communications via voice or CPDLC, and required ADS-C contracts maintained and monitored by an automated flight data processor.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-7-4:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Select the correct lateral minimum.",
+            "question_text": "An aircraft in the North Atlantic ICAO Region is approved for RNP 4, RCP 240, and RSP 180. Direct controller/pilot communications are established via CPDLC, and required ADS-C contracts are maintained and monitored by ATOP. The aircraft is outside the New York, San Juan, and Miami Oceanic CTAs/FIRs. What lateral separation minimum applies?",
+            "choices": [
+              {
+                "text": "60 NM.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "50 NM.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "30 NM.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "23 NM.",
+                "is_correct": true,
+                "sort_order": 3
+              }
+            ],
+            "explanation": "23 NM lateral separation applies to approved aircraft meeting minimum RNP 4, RCP 240, and RSP 180, operating within designated airspace, with direct controller/pilot communications via voice or CPDLC and required ADS-C contracts maintained and monitored by an automated flight data processor. The 50 NM tier applies specifically to the New York, San Juan, and Atlantic Miami CTAs/FIRs.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-7-4:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-8-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context"
+      ],
+      "problem": "The question tests a document-structure comparison between what 8-8-1 omits (directives and LOAs) and what 8-1-1 includes, rather than testing the operational meaning of the Caribbean application provision. The stem requires knowledge of a paragraph outside the immediate topic to answer, making it a paragraph-comparison exercise rather than a test of operational understanding.",
+      "source_basis": "8-8-1: 'Provide air traffic control services in the Caribbean ICAO Region with the procedures and minima contained in this section except when noted otherwise.'",
+      "match": {
+        "question_text": "How does the Caribbean ICAO Region's governing rule differ from the oceanic controlled airspace rule that allows directives and LOAs to supersede Chapter 8?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the governing provision for air traffic control services in the Caribbean ICAO Region?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "In the Caribbean ICAO Region, controllers provide air traffic control services using the procedures and minima contained in Section 8 except when the section itself notes otherwise. The section's own exceptions govern any departure from its procedures.",
+          "choices": [
+            {
+              "text": "Services are provided with the procedures and minima contained in Section 8 except when noted otherwise.",
+              "is_correct": true
+            },
+            {
+              "text": "Services follow the general Chapter 8 procedures unless a directive or LOA prescribes different procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "Services are governed by ICAO Document 7030 Caribbean Regional Supplementary Procedures, which operate independently of JO 7110.65.",
+              "is_correct": false
+            },
+            {
+              "text": "Services follow the same procedures as the North Atlantic ICAO Region except where the Caribbean section lists a different minimum.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-8-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The card back states 'The minimum doubles below FL 200 for turbojets in these areas,' but 20 minutes is not double 15 minutes. The source prescribes 20 minutes for turbojet operations below FL 200 and 15 minutes at or above FL 200; it does not describe this as a doubling relationship.",
+      "source_basis": "8-8-3 b.3: 'Apply 15 minutes between all other turbojet aircraft.' 8-8-3 c: 'Apply 20 minutes between turbojet aircraft operating below FL 200 in the San Juan Oceanic (outside the WATRS area), Miami Oceanic, and Houston Oceanic CTAs/FIRs.'",
+      "match": {
+        "front": "In the Caribbean ICAO Region, what longitudinal minimum applies to turbojet aircraft at or above FL 200 versus below FL 200?",
+        "back": "At or above FL 200 in listed CTAs/FIRs: 15 minutes (or Mach technique). Below FL 200 in San Juan (outside WATRS), Miami, and Houston CTAs/FIRs: 20 minutes. The minimum doubles below FL 200 for turbojets in these areas.",
+        "card_type": "comparison"
+      },
+      "replacements": [
+        {
+          "front": "In the Caribbean ICAO Region, what longitudinal minimum applies to turbojet aircraft at or above FL 200 versus below FL 200?",
+          "back": "At or above FL 200 in the Miami Oceanic, Houston Oceanic, San Juan CTAs/FIRs, WATRS, and New York Oceanic CTA/FIR: 15 minutes when not using Mach number technique (which has its own prescribed minima per 8-3-3). Below FL 200 in San Juan (outside WATRS), Miami, and Houston CTAs/FIRs: 20 minutes.",
+          "card_type": "comparison"
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-8-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The question scenario says 'operating west of 55 degrees West between the U.S. and Bermuda.' The source condition for 90 NM lateral separation (d.2) requires operations 'west of 55 West between the U.S., Canada, or Bermuda and points in the Caribbean ICAO Region' — the route must include a Caribbean point. A flight between the U.S. and Bermuda alone does not satisfy this condition. The scenario is ambiguous because it matches neither d.1 (WATRS) nor d.2 (Caribbean-point route) cleanly as stated.",
+      "source_basis": "8-8-4 d: '90 NM between aircraft not approved for RNP 4 or RNP 10 and which: 1. Operate within WATRS; or 2. Operate west of 55 West between the U.S., Canada, or Bermuda and points in the Caribbean ICAO Region.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Select the correct lateral minimum for the described operation.",
+          "question_text": "Two aircraft without RNP 4 or RNP 10 approval are operating west of 55 degrees West between the U.S. and Bermuda. What Caribbean lateral minimum applies?",
+          "choices": [
+            {
+              "text": "120 NM.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "100 NM.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "90 NM.",
+              "is_correct": true,
+              "sort_order": 3
+            },
+            {
+              "text": "60 NM.",
+              "is_correct": false,
+              "sort_order": 2
+            }
+          ],
+          "explanation": "In the Caribbean, 90 NM applies to aircraft without RNP 4 or RNP 10 operating within WATRS, or west of 55 West between the U.S./Canada/Bermuda and Caribbean points. The 100 NM tier applies to other aircraft west of 55 West not covered by narrower tiers. The 120 NM tier applies east of 55 West.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-8-4:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Select the correct lateral minimum for the described operation.",
+            "question_text": "Two aircraft without RNP 4 or RNP 10 approval are operating within the West Atlantic Route System (WATRS) in the Caribbean ICAO Region. What lateral separation minimum applies?",
+            "choices": [
+              {
+                "text": "120 NM.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "100 NM.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "90 NM.",
+                "is_correct": true,
+                "sort_order": 3
+              },
+              {
+                "text": "60 NM.",
+                "is_correct": false,
+                "sort_order": 2
+              }
+            ],
+            "explanation": "In the Caribbean ICAO Region, 90 NM lateral separation applies between aircraft not approved for RNP 4 or RNP 10 when operating within WATRS, or when operating west of 55 degrees West between the U.S., Canada, or Bermuda and points in the Caribbean ICAO Region. The 100 NM tier applies to other aircraft west of 55 West not covered by narrower tiers, and 120 NM applies to aircraft east of 55 West not covered by narrower tiers.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-8-4:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-8-5",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The question stem asks 'What are the two conditions that must both be met before an IFR flight in the Miami CTA may be cleared to climb or descend in VFR conditions?' but the answer choices use a yes/no format ('Yes, because...' / 'No, because...'). A 'what are the conditions' stem cannot be coherently answered with yes/no judgments. The stem and choice format are mismatched.",
+      "source_basis": "8-8-5 states two conditions for VFR climb or descent: '1. When requested by the pilot; and 2. Between sunrise and sunset.'",
+      "match": {
+        "question_text": "What are the two conditions that must both be met before an IFR flight in the Miami CTA may be cleared to climb or descend in VFR conditions?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which two conditions must both be met before an IFR flight may be cleared to climb or descend in VFR conditions in the Houston, Miami, or San Juan CTA?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "An IFR flight may be cleared to climb or descend in VFR conditions only when the pilot requests it and the operation occurs between sunrise and sunset. Both conditions must be satisfied; neither alone is sufficient.",
+          "choices": [
+            {
+              "text": "The pilot must request it, and it must be between sunrise and sunset.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "ATC must initiate the clearance, and the aircraft must be at or above FL180.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The pilot must request it, and the aircraft must be ADS-C equipped.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The aircraft must be in radar contact, and it must be between sunrise and sunset.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-9-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity",
+        "explanation_quality"
+      ],
+      "problem": "The question asks what procedures apply when Section 9 is silent on a matter. The source block (8-9-1) states only that services are provided 'with the procedures and minima contained in this section except when noted otherwise.' It does not address what happens when the section is silent, and the explanation invents a fallback framework ('the general Chapter 8 procedures provide the fallback framework') not stated in the source. The item should test the stated governing rule directly.",
+      "source_basis": "8-9-1 states: 'Provide air traffic control services in the Pacific ICAO Region with the procedures and minima contained in this section except when noted otherwise.'",
+      "match": {
+        "question_text": "When Section 9 Pacific procedures are silent on a matter, what procedures should a controller apply in the Pacific ICAO Region?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What procedures and minima govern ATC services in the Pacific ICAO Region?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "ATC services in the Pacific ICAO Region are provided with the procedures and minima contained in Section 9 except when noted otherwise.",
+          "choices": [
+            {
+              "text": "The procedures and minima contained in Section 9, except when noted otherwise.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "The procedures and minima in Section 9, which supersede all other JO 7110.65 provisions for Pacific operations.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "ICAO Pacific Regional Supplementary Procedures, which override Section 9 where differences exist.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The general Chapter 8 offshore/oceanic procedures; Section 9 provides supplementary guidance only.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-9-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location",
+        "context"
+      ],
+      "problem": "The activity teaches paragraph-location trivia rather than operational ATC substance. The explanation names the paragraph number ('The Pacific application paragraph (8-9-1)'), and the correct answer choice includes explicit paragraph-number scaffolding. The question frames the learning objective as identifying which paragraph governs rather than what the governing rule requires. For a source_lookup activity, the student should learn where to find the rule in operational terms without paragraph-number recall.",
+      "source_basis": "8-9-1 states: 'Provide air traffic control services in the Pacific ICAO Region with the procedures and minima contained in this section except when noted otherwise.'",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Where is the governing rule?",
+          "question_text": "You are providing ATC service in the Pacific ICAO Region. A colleague says general Chapter 8 procedures always apply. Where do you confirm that Section 9 procedures take precedence for this region?",
+          "choices": [
+            {
+              "text": "The Pacific application paragraph, which states services are provided with the procedures and minima in Section 9 except when noted otherwise.",
+              "is_correct": true,
+              "sort_order": 3
+            },
+            {
+              "text": "The general oceanic rule in Section 1, which states directives and LOAs may prescribe different procedures.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The ICAO Pacific Regional Supplementary Procedures; JO 7110.65 does not independently govern the Pacific Region.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Chapter 4, which is the universal source for all oceanic airspace procedures.",
+              "is_correct": false,
+              "sort_order": 0
+            }
+          ],
+          "explanation": "The Pacific application paragraph (8-9-1) establishes that ATC services in the Pacific ICAO Region are provided with the procedures and minima in Section 9 except when noted otherwise. It is the regional governing rule.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-9-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_lookup",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify where the governing rule for Pacific regional services is found.",
+            "question_text": "You are providing ATC service in the Pacific ICAO Region and need to verify which procedures govern. Where in JO 7110.65 is the rule that establishes Section 9 procedures and minima as the governing framework for this region?",
+            "choices": [
+              {
+                "text": "The Pacific regional application paragraph, which states services are provided with the procedures and minima in Section 9 except when noted otherwise.",
+                "is_correct": true,
+                "sort_order": 3
+              },
+              {
+                "text": "The general offshore/oceanic procedures in Chapter 8, Section 1, which establish default rules for all oceanic regions.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "ICAO Document 4444, which governs all Pacific ICAO Region operations independently.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Chapter 4, IFR, which governs separation for all oceanic airspace regardless of region.",
+                "is_correct": false,
+                "sort_order": 2
+              }
+            ],
+            "explanation": "ATC services in the Pacific ICAO Region are provided with the procedures and minima contained in Section 9 except when noted otherwise.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-9-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-10-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location",
+        "context"
+      ],
+      "problem": "The question tests paragraph-comparison trivia: 'How does the North American ICAO Region's application paragraph differ from the other three regional application paragraphs?' The correct answer identifies a wording difference between paragraphs rather than teaching what procedures a controller must apply. The learning objective is document-structure comparison, not operational ATC knowledge. The explanation further reinforces this by enumerating the other three regional paragraph numbers.",
+      "source_basis": "8-10-1 states: 'Provide air traffic control services in the North American ICAO Region with the procedures and minima contained in this section.'",
+      "match": {
+        "question_text": "How does the North American ICAO Region's application paragraph differ from the other three regional application paragraphs?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What procedures and minima govern ATC services in the North American ICAO Region?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "ATC services in the North American ICAO Region are provided with the procedures and minima contained in Section 10.",
+          "choices": [
+            {
+              "text": "The procedures and minima contained in Section 10.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "The procedures and minima in Section 10, except when other directives or letters of agreement provide otherwise.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "ICAO North American Regional Supplementary Procedures, which supersede Section 10 for this region.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "A combination of Chapter 4 oceanic rules and facility-specific supplements chosen by the controller.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-10-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location",
+        "educational_coherence"
+      ],
+      "problem": "The activity is a word-spotting exercise: 'The North Atlantic, Caribbean, and Pacific paragraphs all contain four words not found in the North American application paragraph. What are they?' It teaches cross-paragraph structural comparison rather than operational source-lookup skills. The student is asked to identify a missing phrase rather than to locate the governing rule for North American regional operations.",
+      "source_basis": "8-10-1 states: 'Provide air traffic control services in the North American ICAO Region with the procedures and minima contained in this section.'",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify the key difference.",
+          "question_text": "Compare the four regional application paragraphs. The North Atlantic, Caribbean, and Pacific paragraphs all contain four words not found in the North American application paragraph. What are they?",
+          "choices": [
+            {
+              "text": "'Contained in this section.'",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "'With the procedures and minima.'",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "'Provide air traffic control services.'",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "'Except when noted otherwise.'",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ],
+          "explanation": "The North American application paragraph omits 'except when noted otherwise' — language present in all three other regional application paragraphs. The North American region simply states services are provided with the regional procedures and minima without a stated exception mechanism.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-10-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_lookup",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify where the governing rule for North American regional services is found.",
+            "question_text": "You are providing ATC service in the North American ICAO Region and need to confirm which procedures govern. Where in JO 7110.65 is the rule that establishes Section 10 procedures and minima as the governing framework for this region?",
+            "choices": [
+              {
+                "text": "The North American regional application paragraph, which states services are provided with the procedures and minima contained in Section 10.",
+                "is_correct": true,
+                "sort_order": 3
+              },
+              {
+                "text": "The general offshore/oceanic procedures in Chapter 8, Section 1, which establish default rules applicable to all regions.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "The ICAO North American Regional Supplementary Procedures, which supersede Section 10 for this region.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "Chapter 4, IFR, Section 5, which governs vertical separation for all oceanic airspace without regard to region.",
+                "is_correct": false,
+                "sort_order": 2
+              }
+            ],
+            "explanation": "ATC services in the North American ICAO Region are provided with the procedures and minima contained in Section 10.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-10-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-10-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The flashcard front asks 'What makes the North American ICAO Region application paragraph unique compared to the other three regional application paragraphs?' — framing the learning objective around paragraph-comparison trivia rather than operational knowledge of what procedures govern North American services. The front should ask directly what the governing requirement is.",
+      "source_basis": "8-10-1 states: 'Provide air traffic control services in the North American ICAO Region with the procedures and minima contained in this section.'",
+      "match": {
+        "front": "What makes the North American ICAO Region application paragraph unique compared to the other three regional application paragraphs?",
+        "back": "It is the only regional application paragraph that does NOT include the phrase 'except when noted otherwise.' It states services are provided with the procedures and minima in Section 10 without a stated exception mechanism.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What procedures and minima govern ATC services in the North American ICAO Region?",
+          "back": "The procedures and minima contained in Section 10.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "8-10-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "paragraph_location",
+        "source_fidelity",
+        "explanation_quality"
+      ],
+      "problem": "The question asks 'What makes the North American ICAO Region's vertical separation rule unique among the four ICAO regions in Chapter 8?' — testing cross-regional paragraph comparison not supported by the single source block for 8-10-2. The explanation invents operational rationale absent from the source: 'This reflects the unique operational need to manage the flight level/metric altitude interface in the Arctic CTA.' The Arctic CTA is not mentioned in the 8-10-2 source block. The item should test what governs vertical separation for North American operations directly.",
+      "source_basis": "8-10-2 states: 'Provide vertical separation in accordance with: a. Chapter 4, IFR, Section 5, Altitude Assignment and Verification; and b. Facility directives depicting the transition between flight levels and metric altitudes.'",
+      "match": {
+        "question_text": "What makes the North American ICAO Region's vertical separation rule unique among the four ICAO regions in Chapter 8?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What governs vertical separation in the North American ICAO Region?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Vertical separation in the North American ICAO Region is provided in accordance with Chapter 4, IFR, Section 5, Altitude Assignment and Verification, and facility directives depicting the transition between flight levels and metric altitudes.",
+          "choices": [
+            {
+              "text": "Chapter 4, IFR, Section 5, Altitude Assignment and Verification, and facility directives depicting the transition between flight levels and metric altitudes.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Chapter 4, IFR, Section 5 only; no additional documents are required for North American vertical separation.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Facility directives only; Chapter 4 does not apply to North American oceanic vertical separation.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "ICAO Doc 4444 vertical separation standards, supplemented by facility directives.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-10-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation adds invented operational rationale ('This reflects the operational need to manage flight level/metric altitude interfaces in the Arctic CTA') not present in the 8-10-2 source block. The instruction 'What makes the North American vertical separation unique?' also frames the activity as a cross-regional comparison rather than an operational query.",
+      "source_basis": "8-10-2 states: 'Provide vertical separation in accordance with: a. Chapter 4, IFR, Section 5, Altitude Assignment and Verification; and b. Facility directives depicting the transition between flight levels and metric altitudes.'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "What makes the North American vertical separation unique?",
+          "question_text": "What additional document beyond Chapter 4, Section 5 is required for vertical separation in the North American ICAO Region?",
+          "choices": [
+            {
+              "text": "Facility directives depicting the transition between flight levels and metric altitudes.",
+              "is_correct": true,
+              "sort_order": 3
+            },
+            {
+              "text": "A letter of agreement with the Anchorage ARTCC.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "No additional document is required; the North American rule is identical to other regions.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "An ICAO regional air navigation agreement.",
+              "is_correct": false,
+              "sort_order": 0
+            }
+          ],
+          "explanation": "The North American vertical separation paragraph is unique in requiring both Chapter 4, Section 5 AND facility directives depicting the transition between flight levels and metric altitudes. This reflects the operational need to manage flight level/metric altitude interfaces in the Arctic CTA.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-10-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Identify what governs vertical separation in the North American ICAO Region.",
+            "question_text": "What additional document beyond Chapter 4, Section 5 is required for vertical separation in the North American ICAO Region?",
+            "choices": [
+              {
+                "text": "Facility directives depicting the transition between flight levels and metric altitudes.",
+                "is_correct": true,
+                "sort_order": 3
+              },
+              {
+                "text": "A letter of agreement with the Anchorage ARTCC.",
+                "is_correct": false,
+                "sort_order": 1
+              },
+              {
+                "text": "No additional document is required; the North American rule lists only Chapter 4, Section 5.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "An ICAO regional air navigation agreement.",
+                "is_correct": false,
+                "sort_order": 0
+              }
+            ],
+            "explanation": "Vertical separation in the North American ICAO Region is provided in accordance with Chapter 4, IFR, Section 5, Altitude Assignment and Verification, and facility directives depicting the transition between flight levels and metric altitudes.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-10-2:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-10-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The flashcard back includes cross-regional comparison not supported by the source block: 'This is the only regional section that requires facility directives as a second source.' The 8-10-2 source block states the two governing sources but does not compare them to other regional sections. The comparison is an unsupported claim.",
+      "source_basis": "8-10-2 states: 'Provide vertical separation in accordance with: a. Chapter 4, IFR, Section 5, Altitude Assignment and Verification; and b. Facility directives depicting the transition between flight levels and metric altitudes.'",
+      "match": {
+        "front": "What are the two sources that govern vertical separation in the North American ICAO Region?",
+        "back": "1. Chapter 4, IFR, Section 5, Altitude Assignment and Verification. 2. Facility directives depicting the transition between flight levels and metric altitudes. This is the only regional section that requires facility directives as a second source.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "What are the two sources that govern vertical separation in the North American ICAO Region?",
+          "back": "1. Chapter 4, IFR, Section 5, Altitude Assignment and Verification. 2. Facility directives depicting the transition between flight levels and metric altitudes.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "8-10-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses document-structure framing: 'Per the North American DME/RNAV separation rules, unless both aircraft are radar identified...' The explanation should state the operating requirement directly without prefacing it with a reference to 'the rules' or the document structure.",
+      "source_basis": "8-10-3.d.2 states: 'Unless both aircraft are radar identified, both aircraft must provide DME/RNAV distance reports via direct voice that indicates the appropriate separation exists.' 8-10-3.d.3 states: 'Application of DME/RNAV separation without direct voice communications may not continue for more than 90 minutes.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "How long may DME/RNAV separation continue without direct voice communications?",
+          "question_text": "In the North American ICAO Region, two turbojet aircraft are being separated using DME/RNAV in the NOPAC Route System. Both are radar identified. One aircraft's voice communications become unreliable. How long may DME/RNAV separation continue?",
+          "choices": [
+            {
+              "text": "Not more than 60 minutes without direct voice communications.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Not more than 90 minutes without direct voice communications.",
+              "is_correct": true,
+              "sort_order": 3
+            },
+            {
+              "text": "DME/RNAV separation requires direct voice communications at all times and cannot continue without it.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Indefinitely, because both aircraft are radar identified.",
+              "is_correct": false,
+              "sort_order": 1
+            }
+          ],
+          "explanation": "Per the North American DME/RNAV separation rules, unless both aircraft are radar identified, both must provide DME/RNAV distance reports via direct voice. Application without direct voice communications may not continue for more than 90 minutes.",
+          "publication_id": "content-expansion-pass-02:chapter-08:activities:8-10-3:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "How long may DME/RNAV separation continue without direct voice communications?",
+            "question_text": "In the North American ICAO Region, two turbojet aircraft are being separated using DME/RNAV in the NOPAC Route System. Both are radar identified. One aircraft's voice communications become unreliable. How long may DME/RNAV separation continue?",
+            "choices": [
+              {
+                "text": "Not more than 60 minutes without direct voice communications.",
+                "is_correct": false,
+                "sort_order": 0
+              },
+              {
+                "text": "Not more than 90 minutes without direct voice communications.",
+                "is_correct": true,
+                "sort_order": 3
+              },
+              {
+                "text": "DME/RNAV separation requires direct voice communications at all times and cannot continue without it.",
+                "is_correct": false,
+                "sort_order": 2
+              },
+              {
+                "text": "Indefinitely, because both aircraft are radar identified.",
+                "is_correct": false,
+                "sort_order": 1
+              }
+            ],
+            "explanation": "Unless both aircraft are radar identified, both must provide DME/RNAV distance reports via direct voice communications. Application of DME/RNAV separation without direct voice communications may not continue for more than 90 minutes.",
+            "publication_id": "content-expansion-pass-02:chapter-08:activities:8-10-3:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "8-10-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The flashcard back includes cross-regional comparison not supported by the source block: 'Simpler than other regions — only two basic time-based categories.' The 8-10-3 source block lists the North American time-based minima but does not compare them to other regions. The claim that other regions have more categories is unsupported.",
+      "source_basis": "8-10-3.a states: '1. 15 minutes between turbojet aircraft. 2. The prescribed minima in accordance with paragraph 8-3-3, Mach Number Technique. 3. 20 minutes between other aircraft.'",
+      "match": {
+        "front": "In the North American ICAO Region, what are the time-based longitudinal minima for each aircraft category?",
+        "back": "Turbojet: 15 minutes (or Mach technique). Other (nonturbojet): 20 minutes. Simpler than other regions — only two basic time-based categories.",
+        "card_type": "comparison"
+      },
+      "replacements": [
+        {
+          "front": "In the North American ICAO Region, what are the time-based longitudinal minima for each aircraft category?",
+          "back": "Turbojet aircraft: 15 minutes. Other (nonturbojet) aircraft: 20 minutes. Mach number technique minima also apply where prescribed.",
+          "card_type": "comparison"
+        }
+      ]
+    }
+  ]
+}

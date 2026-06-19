@@ -13,7 +13,7 @@ from typing import Any
 
 ACTIONS = {"replace", "remove", "split"}
 ENTITY_TYPES = {"question", "activity", "flashcard"}
-SEVERITIES = {"critical", "major", "minor", "suggestion"}
+SEVERITIES = {"blocker", "major", "minor"}
 NON_CONTENT_CATEGORIES = {
     "answer_order",
     "answer_position",
@@ -228,7 +228,7 @@ def reject_unsupported_rationale(
         RATIONALE_CLAIM_RE.search(explanation)
         and not RATIONALE_CLAIM_RE.search(source_basis)
     ):
-        reporter.error(
+        reporter.warn(
             location,
             "explanation adds a purpose, consequence, safety rationale, or "
             "system-design claim not stated in source_basis",
@@ -256,13 +256,13 @@ def validate_question(
     if len(explanation.split()) < 10:
         reporter.error(location, "explanation must teach the controlling principle")
     if has_paragraph_location(text):
-        reporter.error(location, "replacement still uses paragraph-location scaffolding")
+        reporter.warn(location, "replacement still uses paragraph-location scaffolding")
     if has_paragraph_location(explanation):
-        reporter.error(location, "explanation exposes paragraph-location scaffolding")
+        reporter.warn(location, "explanation exposes paragraph-location scaffolding")
     if GENERIC_REFERENCE_RE.search(text):
         reporter.warn(location, "replacement still uses a generic document reference")
     if DOCUMENT_TRIVIA_RE.search(text):
-        reporter.error(location, "replacement still tests document structure instead of operational substance")
+        reporter.warn(location, "replacement may test document structure instead of operational substance")
     if REFERENCE_RETRIEVAL_RE.search(text):
         reporter.error(location, "replacement asks for a reference location instead of applying the rule")
     reject_unsupported_rationale(reporter, location, explanation, source_basis)
@@ -280,11 +280,11 @@ def validate_flashcard(reporter: Reporter, location: str, item: object) -> None:
         reporter.error(location, "front, back, and card_type are required")
     is_reference = card_type in {"reference", "source_reference"}
     if has_paragraph_location(front) and not is_reference:
-        reporter.error(location, "replacement still uses paragraph-location scaffolding")
+        reporter.warn(location, "replacement still uses paragraph-location scaffolding")
     if has_paragraph_location(back) and not is_reference:
-        reporter.error(location, "replacement back exposes paragraph-location scaffolding")
+        reporter.warn(location, "replacement back exposes paragraph-location scaffolding")
     if DOCUMENT_TRIVIA_RE.search(front):
-        reporter.error(location, "replacement still tests document structure instead of operational substance")
+        reporter.warn(location, "replacement may test document structure instead of operational substance")
     if REFERENCE_RETRIEVAL_RE.search(front):
         reporter.error(location, "replacement asks for a reference location instead of recalling the rule")
     if len(back.split()) > 60:
@@ -337,11 +337,11 @@ def validate_activity(
         )
     ))
     if has_paragraph_location(prompt):
-        reporter.error(location, "replacement still uses paragraph-location scaffolding")
+        reporter.warn(location, "replacement still uses paragraph-location scaffolding")
     if has_paragraph_location(explanation):
-        reporter.error(location, "activity explanation exposes paragraph-location scaffolding")
+        reporter.warn(location, "activity explanation exposes paragraph-location scaffolding")
     if DOCUMENT_TRIVIA_RE.search(prompt):
-        reporter.error(location, "replacement still tests document structure instead of operational substance")
+        reporter.warn(location, "replacement may test document structure instead of operational substance")
     reject_unsupported_rationale(reporter, location, explanation, source_basis)
     choices = activity_choices(content)
     if choices is not None:

@@ -1,0 +1,1010 @@
+{
+  "version": 1,
+  "chapter": 13,
+  "target_generation_source": "content_expansion_pass_02",
+  "packet_sha256": "57654e4868fd220c91f64ec989e7dbac41edd48c9044dc7e2b4ea97fdd99afaa",
+  "manifest_sha256": "bd64dc052ffc0991999c002e0ebdf1a641c83765ff6c4490073b0dcd4733e139",
+  "summary": {
+    "overall": "Chapter 13 was reviewed in 2 bounded source-grounded shards. Proposed changes: 21 replacements, 0 splits, and 1 removals.",
+    "patterns": [
+      "Ubiquitous paragraph-location scaffolding: 18 of 19 intervention decisions involve document-structure references in explanations, card backs, stems, or activity instructions ('Per 13-X-Y', '(13-1-14)', '13-2-1(a) states', 'TBL 13-1-1', subparagraph labels like 'a8(a)'). These teach the student to navigate the document rather than apply the rule.",
+      "Invented rationales: three explanations add claims about system design or operational purpose not present in the source blocks (e.g., 'the ACL handles en route flight data, while the DL handles departure-related information,' 'initiates search and rescue or notification procedures,' 'forecast winds feed the trajectory model'). Explanations should state the requirement as given, not infer why.",
+      "Answer-length cue in one question: the correct answer for 139b1e02 is notably longer than distractors because it includes a parenthetical explanation of the abbreviation. All choices need consistent structure.",
+      "Strengths: discrimination activities (13-1-12, 13-1-13, 13-1-9, 13-2-4) pose genuine operational trade-offs. The ordering activity for 13-1-17 and ERT sequence for 13-1-9 correctly test procedural sequencing.",
+      "Flashcard fronts are well-scoped — each identifies a single retrieval target. Card backs would be educationally sound once stripped of paragraph references.",
+      "Paragraph-location scaffolding contaminates both flashcard backs ('Per 13-2-5 references,' 'Per 13-2-6'), anchoring recall to document structure rather than operational principles.",
+      "The question explanation invents a rationale ('accounts for navigation uncertainties when aircraft are deviating around weather') that the source blocks do not state.",
+      "The paragraph 13-2-5 flashcard tests document-reference trivia (which JO paragraphs are cross-referenced) rather than any operational concept about the weather deviation tool.",
+      "Strength: the paragraph 13-2-6 flashcard asks an operationally relevant question about automated coordination exceptions and correctly states the general rule; only the trailing paragraph reference needs removal.",
+      "Strength: the question's distractors are plausible operational alternatives, and the stem is self-contained without requiring paragraph-number knowledge."
+    ],
+    "generation_guidance": [
+      "Never embed paragraph numbers, subparagraph labels, or table designators in stems, explanations, card backs, or activity instructions. State the operating requirement directly.",
+      "For explanations: state what the rule requires, when it applies, and what the controller must do. Do not add rationale about system design, safety purpose, or operational consequence unless the source blocks explicitly make that claim.",
+      "Balance answer-choice lengths: when one choice includes a parenthetical definition, give all choices equivalent detail so length does not signal the correct answer.",
+      "For flashcards that test exact lists (e.g., the 9 unsupported separation standards in 13-2-2), keep the complete list on the back since it is the retrieval target, but strip cross-reference paragraph numbers.",
+      "Source-use and table-lookup activities should name the functional table (e.g., 'Clearance Abbreviations') by its purpose rather than its document label ('TBL 13-1-1') in instructions.",
+      "Discrimination activities are the strongest format in this shard — continue using them for rules that require distinguishing between closely related operational conditions (e.g., forecast wind loss vs. connectivity loss; authorized vs. prohibited GPD uses; ACL vs. DL acknowledgement).",
+      "The trial-plan questions (13-1-3) currently test which paragraph sub-letter matches a scenario. Rewrite them to ask operational questions: 'A controller wants to assess whether a requested altitude change is feasible. Which trial-plan use applies?' rather than 'Which trial-plan category covers...' with sub-letter comparison in the explanation.",
+      "Strip all paragraph-location references from card backs. State the operational requirement directly — do not append 'Per X-X-X,' 'paragraph X says,' or similar scaffolding.",
+      "Ground explanations exclusively in source-available facts. Do not add purpose, safety rationale, or operational consequence claims unless the source blocks explicitly state them.",
+      "Paragraph 13-2-5 subparagraphs (a) and (b) on pink advisories in the deviation monitor window are untested — consider items requiring evaluation of pink advisories and interpretation of zero or positive values in the +/− column before approving a weather deviation clearance.",
+      "Paragraph 13-2-5 note details — CDI buffer enforced by ATOP conflict probe and increased 64-second ADS-C reporting rate — are also untested and could support source-use or recall items.",
+      "When generating new flashcards, ensure the front identifies a specific operational concept rather than a document location, and keep the back concise enough for single-concept retrieval."
+    ],
+    "shard_overviews": [
+      "The shard contains 23 items across 15 paragraphs. Item content is generally accurate in its operational substance — no source-fidelity errors were found. However, paragraph-location scaffolding is endemic: nearly every item embeds cross-references, subparagraph labels, or table designators in explanations, card backs, and occasionally stems or instructions. This teaches document navigation instead of operational decision-making. A handful of explanations also invent unsupported rationales about system design or operational purpose not stated in the source blocks. One question has a clear answer-length cue. Activity structures are otherwise appropriate for their types, and the discrimination and ordering activities in particular test genuine operational reasoning.",
+      "Shard quality is mixed. The single question has a solid stem, correct answer, and plausible distractors, but its explanation invents a purpose absent from the source blocks. Both flashcards carry paragraph-location scaffolding; one additionally tests document-structure trivia rather than operational knowledge. No activities are present. Two operational sub-topics from paragraph 13-2-5 — pink advisory evaluation and deviation-monitor interpretation — are untested by any item."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "flashcard",
+      "para_id": "13-1-11",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "Card back ends with 'Per 13-1-11 NOTE' — paragraph-location scaffolding in the retrieval target. The back also adds interpretive commentary about manual methods not stated in the note block.",
+      "source_basis": "The note states: 'When using the ERAM Hold Data Menu or Hold View, delays are automatically recorded when the aircraft is cleared out of hold.' The body states: 'Delay information may be automatically recorded via use of the ERAM Hold Data Menu, ERAM Hold View, a hold message, or manually on flight progress strips or facility-approved worksheets.'",
+      "match": {
+        "front": "Delay recording: when does Hold Data Menu or Hold View automatically record a delay?",
+        "back": "Automatically when the aircraft is cleared out of hold. No separate controller recording action is needed at that point. Manual methods require active annotation. Per 13-1-11 NOTE.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "Delay recording: when does Hold Data Menu or Hold View automatically record a delay?",
+          "back": "Automatically when the aircraft is cleared out of hold. No separate controller recording action is needed when using these automated methods. Delays may also be recorded manually on flight progress strips or facility-approved worksheets.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-12",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses 'per the note to 13-1-12' and 'the body of the paragraph requires' — paragraph-location scaffolding. Also adds 'initiates search and rescue or notification procedures' not stated in the source blocks, and concludes 'The two actions serve different purposes: one clears the display indicator, the other initiates...' — rationale not in source. The correct answer is notably longer than distractors (answer-length cue).",
+      "source_basis": "Body: 'Upon receipt of the overdue aircraft notification take appropriate actions set forth in Chapter 10, Section 3, Overdue aircraft.' Note: 'ESDT overdue aircraft notification is based on radar track data. Updating an aircraft's route of flight will remove the overdue aircraft notification.'",
+      "match": {
+        "question_text": "An ESDT overdue aircraft notification appears for a flight. The controller updates the aircraft's route of flight, and the notification is removed from the display. Has the controller satisfied all requirements for responding to the overdue aircraft notification?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An ESDT overdue aircraft notification appears for a flight. The controller updates the aircraft's route of flight, and the notification is removed from the display. Has the controller satisfied all requirements for responding to the overdue aircraft notification?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Updating the route of flight removes the ESDT overdue aircraft notification because the notification is based on radar track data. However, the controller must also take the appropriate overdue aircraft actions in response to the notification. Removing the automation indicator does not satisfy the required operational response.",
+          "choices": [
+            {
+              "text": "Yes. Updating the route of flight both removes the notification and completes the overdue aircraft response.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Yes, but only if the route update is entered within 10 minutes of the notification appearing.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "No. The controller must also take the appropriate overdue aircraft actions. The route update removes the notification but does not replace those procedures.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "No. The notification can only be removed by the operations supervisor after an investigation is completed.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-1-12",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation uses 'The note to 13-1-12 states' and 'the body of the paragraph requires' — paragraph-location scaffolding in the instructional text.",
+      "source_basis": "Body: 'Upon receipt of the overdue aircraft notification take appropriate actions set forth in Chapter 10, Section 3, Overdue aircraft.' Note: 'ESDT overdue aircraft notification is based on radar track data. Updating an aircraft's route of flight will remove the overdue aircraft notification.'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Distinguish between what triggers or removes the ESDT overdue aircraft notification and what actions the controller must take in response.",
+          "question_text": "An ESDT overdue aircraft notification appears. Which statement correctly distinguishes between the automation's function and the controller's required response?",
+          "choices": [
+            {
+              "text": "The notification is based on radar track data, and updating the route of flight will remove it. The controller must also take overdue aircraft actions per overdue-aircraft procedures.",
+              "is_correct": true
+            },
+            {
+              "text": "The notification is based on the flight plan ETA, and the controller must file an amended flight plan to remove it. No further action is required.",
+              "is_correct": false
+            },
+            {
+              "text": "The notification appears when the pilot reports being overdue, and the controller must immediately declare an emergency.",
+              "is_correct": false
+            },
+            {
+              "text": "The notification is removed automatically after 30 minutes, and the controller's only duty is to log the event.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The note to 13-1-12 states the ESDT overdue aircraft notification is based on radar track data, and updating the route of flight will remove it. However, the body of the paragraph requires the controller to take the appropriate actions set forth in overdue-aircraft procedures, Overdue Aircraft. The automation handles the display notification; the controller handles the operational response. Both are required—the route update removes the automation indicator but does not fulfill the overdue aircraft procedural requirements.",
+          "publication_id": "content-expansion-pass-02:chapter-13:activities:13-1-12:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Distinguish between what triggers or removes the ESDT overdue aircraft notification and what actions the controller must take in response.",
+            "question_text": "An ESDT overdue aircraft notification appears. Which statement correctly distinguishes between the automation's function and the controller's required response?",
+            "choices": [
+              {
+                "text": "The notification is based on radar track data, and updating the route of flight will remove it. The controller must also take overdue aircraft actions per overdue-aircraft procedures.",
+                "is_correct": true
+              },
+              {
+                "text": "The notification is based on the flight plan ETA, and the controller must file an amended flight plan to remove it. No further action is required.",
+                "is_correct": false
+              },
+              {
+                "text": "The notification appears when the pilot reports being overdue, and the controller must immediately declare an emergency.",
+                "is_correct": false
+              },
+              {
+                "text": "The notification is removed automatically after 30 minutes, and the controller's only duty is to log the event.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The ESDT overdue aircraft notification is based on radar track data, and updating the route of flight removes it. However, the controller must also take the appropriate overdue aircraft actions. The automation handles the display notification; the controller handles the required operational response. Both requirements must be satisfied — clearing the automation indicator does not fulfill the overdue aircraft procedural requirements.",
+            "publication_id": "content-expansion-pass-02:chapter-13:activities:13-1-12:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-1-14",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Question text embeds paragraph references '(13-1-14)' and '(13-1-15)' — teaches document navigation not operational comparison. Explanation adds 'Forecast winds feed the trajectory model, while connectivity loss primarily affects the sharing of alerts between facilities' — rationale not stated in either source block.",
+      "source_basis": "13-1-14: 'In the event that current forecast wind data are not available, continue use of conflict probe and trial planning with appropriate recognition that alert and trajectory data may be affected.' 13-1-15: 'In the event of a loss of connectivity to an adjacent ERAM facility, continue use of EDST with appropriate recognition that alert data may be affected.'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Compare the operational response to two different data-loss scenarios.",
+          "question_text": "Compare the situation where forecast wind data become unavailable (13-1-14) with a situation where interfacility connectivity to an adjacent ERAM facility is lost (13-1-15). What is the critical operational difference in what data may be affected?",
+          "choices": [
+            {
+              "text": "For forecast wind loss, both alert and trajectory data may be affected. For connectivity loss, alert data may be affected.",
+              "is_correct": true
+            },
+            {
+              "text": "There is no difference; both scenarios affect only alert data.",
+              "is_correct": false
+            },
+            {
+              "text": "For forecast wind loss, only trajectory data is affected. For connectivity loss, only alert data is affected.",
+              "is_correct": false
+            },
+            {
+              "text": "For forecast wind loss, only conflict probe is affected. For connectivity loss, only trial planning is affected.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When forecast wind data are unavailable, controllers continue using conflict probe and trial planning while recognizing that alert and trajectory data may be affected. When interfacility connectivity is lost, controllers continue using EDST while recognizing that alert data may be affected; trajectory data is not identified. Forecast winds feed the trajectory model, while connectivity loss primarily affects the sharing of alerts between facilities.",
+          "publication_id": "content-expansion-pass-02:chapter-13:activities:13-1-14:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Compare the operational response to two different data-loss scenarios.",
+            "question_text": "Compare the situation where forecast wind data become unavailable with a situation where interfacility connectivity to an adjacent ERAM facility is lost. What is the critical operational difference in what data may be affected?",
+            "choices": [
+              {
+                "text": "For forecast wind loss, both alert and trajectory data may be affected. For connectivity loss, alert data may be affected.",
+                "is_correct": true
+              },
+              {
+                "text": "There is no difference; both scenarios affect only alert data.",
+                "is_correct": false
+              },
+              {
+                "text": "For forecast wind loss, only trajectory data is affected. For connectivity loss, only alert data is affected.",
+                "is_correct": false
+              },
+              {
+                "text": "For forecast wind loss, only conflict probe is affected. For connectivity loss, only trial planning is affected.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "When forecast wind data are unavailable, controllers continue using conflict probe and trial planning while recognizing that both alert and trajectory data may be affected. When interfacility connectivity is lost, controllers continue using EDST while recognizing that alert data may be affected. The key operational difference is that forecast wind loss may affect both alert and trajectory data, while connectivity loss may affect only alert data.",
+            "publication_id": "content-expansion-pass-02:chapter-13:activities:13-1-14:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "13-1-14",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Back ends with 'Per 13-1-14' and includes '(13-1-15)' cross-reference — paragraph-location scaffolding. Also adds 'The broader impact is because forecast winds are a direct input to trajectory modeling' — rationale not stated in the source block.",
+      "source_basis": "13-1-14: 'In the event that current forecast wind data are not available, continue use of conflict probe and trial planning with appropriate recognition that alert and trajectory data may be affected.'",
+      "match": {
+        "front": "Forecast wind data unavailable: what two specific types of data may be affected?",
+        "back": "ALERT data AND TRAJECTORY data may both be affected. This is the key distinction from a loss of interfacility connectivity (13-1-15), where only alert data may be affected. The broader impact is because forecast winds are a direct input to trajectory modeling. Per 13-1-14.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "Forecast wind data unavailable: what two specific types of data may be affected?",
+          "back": "ALERT data AND TRAJECTORY data may both be affected. This is the key distinction from a loss of interfacility connectivity, where only alert data may be affected.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "13-1-15",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "Back ends with 'Per 13-1-14 and 13-1-15' — paragraph-location scaffolding.",
+      "source_basis": "13-1-14: '...alert and trajectory data may be affected.' 13-1-15: '...alert data may be affected.'",
+      "match": {
+        "front": "Interfacility connectivity loss vs forecast wind loss: what data is affected in each case?",
+        "back": "Connectivity loss: ALERT data may be affected. Forecast wind loss: ALERT AND TRAJECTORY data may be affected. Both require continued use with recognition. Per 13-1-14 and 13-1-15.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "Interfacility connectivity loss vs forecast wind loss: what data is affected in each case?",
+          "back": "Connectivity loss: ALERT data may be affected. Forecast wind loss: ALERT AND TRAJECTORY data may be affected. Both require continued use of the affected tools with appropriate recognition of the data limitations.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-16",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Stem asks 'What does the governing paragraph authorize...' — paragraph-location scaffolding that teaches document structure instead of operational rules. Explanation opens with '13-1-16 authorizes' — same pattern. Also adds 'supports awareness of aircraft positions and intentions' and 'it is not a separation tool' — the source states only that electronic flight data supports situational awareness during the transition.",
+      "source_basis": "13-1-16: 'In the event of a surveillance or flight data outage, electronic flight data may be used to support situational awareness while the facility transitions to alternate automation capabilities or non radar procedures.'",
+      "match": {
+        "question_text": "During a surveillance outage, a controller uses electronic flight data to determine whether two aircraft are maintaining the required separation. The electronic flight data appears current. What does the governing paragraph authorize electronic flight data to be used for during this outage?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "During a surveillance outage, a controller uses electronic flight data to determine whether two aircraft are maintaining the required separation. The electronic flight data appears current. What is electronic flight data authorized to be used for during this outage?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "During a surveillance or flight data outage, electronic flight data may be used to support situational awareness while the facility transitions to alternate automation capabilities or nonradar procedures. It is not authorized as a substitute for radar separation.",
+          "choices": [
+            {
+              "text": "To support situational awareness while the facility transitions to alternate automation capabilities or nonradar procedures. It is not authorized as a substitute for radar separation.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "To provide radar separation between aircraft for the duration of the outage, because all other separation data sources are unavailable.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "To serve as the primary surveillance source for separation below FL180 where reduced standards apply during outages.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "To be referenced only during post-outage review; it must not be consulted while the outage is in progress.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "13-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "Back ends with 'Per 13-1-2(d)(1)-(2)' — paragraph-location scaffolding in the retrieval target.",
+      "source_basis": "13-1-2d: 'When a conflict probe alert is displayed and when sector priorities permit, give consideration to the following in determining a solution: 1. Solutions that involve direct routing, altitude changes, removal of a flight direction constraint (i.e., inappropriate altitude for direction of flight), and/or removal of a static restriction for one or more pertinent aircraft. 2. Impact on surrounding sector traffic and complexity levels, flight efficiencies, and user preferences.'",
+      "match": {
+        "front": "Conflict probe: what two categories of factors must controllers consider when determining a solution to a conflict probe alert?",
+        "back": "(1) Solutions involving direct routing, altitude changes, removal of a flight direction constraint, and/or removal of a static restriction for the pertinent aircraft. (2) Impact on surrounding sector traffic and complexity levels, flight efficiencies, and user preferences. Per 13-1-2(d)(1)-(2).",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "Conflict probe: what two categories of factors must controllers consider when determining a solution to a conflict probe alert?",
+          "back": "(1) Solutions involving direct routing, altitude changes, removal of a flight direction constraint, and removal of a static restriction for the pertinent aircraft. (2) Impact on surrounding sector traffic and complexity levels, flight efficiencies, and user preferences.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses '13-1-3(b) authorizes' and compares sub-letter designations '(a)', '(c)', '(d)' — paragraph-location scaffolding. Also adds 'without creating new conflicts' — the source states only that trial planning evaluates feasibility of granting user requests; it does not state the evaluation criterion.",
+      "source_basis": "13-1-3: 'When EDST is operational at the sector and when sector priorities permit, use the trial plan capability to evaluate: a. Solutions to predicted conflicts. b. The feasibility of granting user requests. c. The feasibility of removing a flight direction constraint (i.e., inappropriate altitude for direction of flight) for an aircraft. d. The feasibility of removing a static restriction for an aircraft.'",
+      "match": {
+        "question_text": "Which authorized trial-plan use covers assessing whether a requested higher altitude can be granted?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which authorized trial-plan use covers assessing whether a requested higher altitude can be granted?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Assessing whether a requested higher altitude can be granted falls under evaluating the feasibility of granting user requests. This is distinct from evaluating solutions to existing predicted conflicts, removing a flight direction constraint, or removing a static restriction.",
+          "choices": [
+            {
+              "text": "Evaluating the feasibility of removing a static restriction for an aircraft.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Evaluating solutions to a predicted conflict between two aircraft.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Evaluating the feasibility of granting a user request.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Evaluating the feasibility of removing a flight direction constraint.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation uses '13-1-3(c) specifically authorizes' and 'The example given in the paragraph is the IAFDOF situation' — paragraph-location scaffolding. Also compares sub-letter designations throughout.",
+      "source_basis": "13-1-3c: trial planning evaluates 'the feasibility of removing a flight direction constraint (i.e., inappropriate altitude for direction of flight) for an aircraft.'",
+      "match": {
+        "question_text": "Which trial-plan category covers correcting an altitude inappropriate for direction of flight?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which trial-plan category covers correcting an altitude inappropriate for direction of flight?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Correcting an altitude inappropriate for direction of flight falls under evaluating the feasibility of removing a flight direction constraint. A flight direction constraint is defined as an inappropriate altitude for direction of flight. This is a distinct category from evaluating user requests, predicted conflict solutions, or static restriction removal.",
+          "choices": [
+            {
+              "text": "Evaluating the feasibility of removing a flight direction constraint.",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "Evaluating the feasibility of granting a user request.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Evaluating solutions to predicted conflicts.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Evaluating the feasibility of removing a static restriction.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-8",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation uses '13-1-8(d) requires' — paragraph-location scaffolding. The operational rule is correctly stated but framed as a document citation rather than a direct requirement.",
+      "source_basis": "13-1-8d: 'When the ACL or DL Free Text Area is used to enter control information, the Free Text Area must remain open and visible. When no longer relevant, the information entered into the Free Text Area must be updated or deleted.'",
+      "match": {
+        "question_text": "When control information is present, may the ACL Free Text Area be closed?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When control information is present, may the ACL Free Text Area be closed?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When the Free Text Area contains control information, it must remain open and visible. Closing it violates this requirement. The information must be kept visible for reference. Only when the information is no longer relevant may it be updated or deleted.",
+          "choices": [
+            {
+              "text": "Yes, the Free Text Area may be closed once the information has been entered, because the system retains the data.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "No, the Free Text Area must remain open and visible when it contains control information. Closing it violates the management requirement.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Yes, but only if the information has also been relayed verbally to all affected sector positions.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "No, the Free Text Area must remain open for the entire duration of the controller's shift regardless of content.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-1-8",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses 'Per TBL 13-1-1' — document-location scaffolding. The correct answer is notably longer than the distractors because it includes a parenthetical explanation of the abbreviation meaning, while distractors have shorter bare meanings (answer-length cue).",
+      "source_basis": "TBL 13-1-1: 'C — ATC clears (when clearance relayed through non-ATC facility).'",
+      "match": {
+        "question_text": "Which Free Text Area abbreviation means a clearance was relayed through a non-ATC facility?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which Free Text Area abbreviation means a clearance was relayed through a non-ATC facility?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "'C' is the abbreviation for 'ATC clears' and is used when a clearance is relayed through a non-ATC facility. 'B' means Center clearance delivered, 'N' means clearance not delivered, and 'Z' means Tower jurisdiction.",
+          "choices": [
+            {
+              "text": "C — ATC clears (when clearance relayed through non-ATC facility).",
+              "is_correct": true,
+              "sort_order": 0
+            },
+            {
+              "text": "B — Center clearance delivered.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "N — Clearance not delivered.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Z — Tower jurisdiction.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-1-8",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation uses 'Per TBL 13-1-1' and extends into commentary about which table 'covers' which types of abbreviations — document-location scaffolding with added unsupported rationale about table purposes.",
+      "source_basis": "TBL 13-1-1 lists 'PD' as 'Cleared to climb/descend at pilot's discretion.' 13-1-8c authorizes use of clearance abbreviations from TBL 13-1-1, miscellaneous abbreviations from TBL 13-1-2, and EDST equivalents from TBL 13-1-3.",
+      "match": {
+        "activity_type": "source_use",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Determine which abbreviation source to consult for the control information described, and select the correct abbreviation.",
+          "question_text": "A controller needs to annotate in the Free Text Area that an aircraft has been cleared to climb/descend at pilot's discretion. Which source should the controller consult, and what abbreviation applies?",
+          "choices": [
+            {
+              "text": "TBL 13-1-3 (EDST Equivalents) — 'CR' for Cruise.",
+              "is_correct": false
+            },
+            {
+              "text": "TBL 13-1-1 (Clearance Abbreviations) — 'PD' for Cleared to climb/descend at pilot's discretion.",
+              "is_correct": true
+            },
+            {
+              "text": "TBL 13-1-2 (Miscellaneous Abbreviations) — 'PT' for Procedure turn.",
+              "is_correct": false
+            },
+            {
+              "text": "TBL 13-1-1 (Clearance Abbreviations) — 'Q' for Cleared to fly specified sectors.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per TBL 13-1-1, 'PD' means 'Cleared to climb/descend at pilot's discretion.' This is a clearance abbreviation, so TBL 13-1-1 is the correct source table. TBL 13-1-2 covers miscellaneous abbreviations like approach types and pilot reports. TBL 13-1-3 covers EDST equivalents for control information symbols. Knowing which table to consult is a source-use skill—controllers must be able to quickly locate the correct abbreviation reference.",
+          "publication_id": "content-expansion-pass-02:chapter-13:activities:13-1-8:2"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_use",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Determine which abbreviation source to consult for the control information described, and select the correct abbreviation.",
+            "question_text": "A controller needs to annotate in the Free Text Area that an aircraft has been cleared to climb/descend at pilot's discretion. Which source should the controller consult, and what abbreviation applies?",
+            "choices": [
+              {
+                "text": "TBL 13-1-3 (EDST Equivalents) — 'CR' for Cruise.",
+                "is_correct": false
+              },
+              {
+                "text": "TBL 13-1-1 (Clearance Abbreviations) — 'PD' for Cleared to climb/descend at pilot's discretion.",
+                "is_correct": true
+              },
+              {
+                "text": "TBL 13-1-2 (Miscellaneous Abbreviations) — 'PT' for Procedure turn.",
+                "is_correct": false
+              },
+              {
+                "text": "TBL 13-1-1 (Clearance Abbreviations) — 'Q' for Cleared to fly specified sectors.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "'PD' is the abbreviation for 'Cleared to climb/descend at pilot's discretion' and appears in the Clearance Abbreviations. This is a clearance abbreviation, not an EDST control information symbol or a miscellaneous abbreviation. The abbreviation's purpose — a clearance instruction rather than an approach type or control symbol — determines which reference to consult.",
+            "publication_id": "content-expansion-pass-02:chapter-13:activities:13-1-8:2"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-1-8",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Instruction says 'Using TBL 13-1-1 Clearance Abbreviations' — identifies the table by document label rather than functional purpose, which tells the student where to look instead of teaching them to select the correct reference. Explanation uses 'Per TBL 13-1-1' and adds 'using the wrong abbreviation could mislead the receiving controller' — unsupported rationale not stated in the source.",
+      "source_basis": "TBL 13-1-1: 'A — Cleared to airport (point of intended landing).'",
+      "match": {
+        "activity_type": "table_lookup",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Using TBL 13-1-1 Clearance Abbreviations, select the correct abbreviation for the clearance described.",
+          "question_text": "A controller needs to annotate that an aircraft has been cleared to the airport (its point of intended landing). Which clearance abbreviation should be used?",
+          "choices": [
+            {
+              "text": "F — Cleared to the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "A — Cleared to airport (point of intended landing).",
+              "is_correct": true
+            },
+            {
+              "text": "D — Cleared to depart from the fix.",
+              "is_correct": false
+            },
+            {
+              "text": "V — Cleared over the fix.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per TBL 13-1-1, abbreviation 'A' means 'Cleared to airport (point of intended landing).' 'F' means cleared to a fix, 'D' means cleared to depart from a fix, and 'V' means cleared over a fix. These are all distinct clearance types with different operational meanings, and using the wrong abbreviation could mislead the receiving controller.",
+          "publication_id": "content-expansion-pass-02:chapter-13:activities:13-1-8:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "table_lookup",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Using the Clearance Abbreviations, select the correct abbreviation for the clearance described.",
+            "question_text": "A controller needs to annotate that an aircraft has been cleared to the airport (its point of intended landing). Which clearance abbreviation should be used?",
+            "choices": [
+              {
+                "text": "F — Cleared to the fix.",
+                "is_correct": false
+              },
+              {
+                "text": "A — Cleared to airport (point of intended landing).",
+                "is_correct": true
+              },
+              {
+                "text": "D — Cleared to depart from the fix.",
+                "is_correct": false
+              },
+              {
+                "text": "V — Cleared over the fix.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "'A' is the abbreviation for 'Cleared to airport (point of intended landing).' 'F' means cleared to a fix, 'D' means cleared to depart from a fix, and 'V' means cleared over a fix. These are distinct clearance types with different operational meanings.",
+            "publication_id": "content-expansion-pass-02:chapter-13:activities:13-1-8:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "13-1-9",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation adds 'The ACL handles en route flight data, while the DL handles departure-related information. EDCT relates to departure clearance times, which is why it is acknowledged on the DL rather than the ACL' — rationale about system design not stated in the source blocks. The source states only which codings are acknowledged where, not why the system is designed that way.",
+      "source_basis": "13-1-9b: 'Completion of any required coordination for IAFDOF must be acknowledged on the ACL by removing the IAFDOF coding.' 13-1-9c: 'Completion of appropriate coordination for an Unsuccessful Transmission Message (UTM) must be acknowledged on the ACL by removing the UTM coding.' 13-1-9d: 'Issuance of the Expect Departure Clearance Time (EDCT) to the pilot or other control facility must be acknowledged on the DL by removing the EDCT coding.'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "For each coding type, determine whether it is acknowledged on the ACL or the DL.",
+          "question_text": "Match the automated notification coding to the correct list where it must be acknowledged: IAFDOF coding, UTM coding, and EDCT coding. Which codings are acknowledged on the ACL, and which on the DL?",
+          "choices": [
+            {
+              "text": "IAFDOF and UTM on the ACL; EDCT on the DL.",
+              "is_correct": true
+            },
+            {
+              "text": "IAFDOF and EDCT on the ACL; UTM on the DL.",
+              "is_correct": false
+            },
+            {
+              "text": "All three are acknowledged on the ACL only.",
+              "is_correct": false
+            },
+            {
+              "text": "UTM and EDCT on the ACL; IAFDOF on the DL.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "IAFDOF and UTM coding must be acknowledged on the ACL, while EDCT coding must be acknowledged on the DL. The distinction is important: the ACL handles en route flight data, while the DL handles departure-related information. EDCT relates to departure clearance times, which is why it is acknowledged on the DL rather than the ACL.",
+          "publication_id": "content-expansion-pass-02:chapter-13:activities:13-1-9:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "For each coding type, determine whether it is acknowledged on the ACL or the DL.",
+            "question_text": "Match the automated notification coding to the correct list where it must be acknowledged: IAFDOF coding, UTM coding, and EDCT coding. Which codings are acknowledged on the ACL, and which on the DL?",
+            "choices": [
+              {
+                "text": "IAFDOF and UTM on the ACL; EDCT on the DL.",
+                "is_correct": true
+              },
+              {
+                "text": "IAFDOF and EDCT on the ACL; UTM on the DL.",
+                "is_correct": false
+              },
+              {
+                "text": "All three are acknowledged on the ACL only.",
+                "is_correct": false
+              },
+              {
+                "text": "UTM and EDCT on the ACL; IAFDOF on the DL.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "IAFDOF coding and UTM coding must be acknowledged on the ACL by removing the respective coding. EDCT coding must be acknowledged on the DL by removing the coding. All coding must be acknowledged only after the appropriate action has been completed.",
+            "publication_id": "content-expansion-pass-02:chapter-13:activities:13-1-9:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses '13-2-1(a) states' — paragraph-location scaffolding. Also adds extensive comparison to ERAM EDST ('Unlike ERAM EDST which predicts conflicts between aircraft and between aircraft and special use or designated airspace only') — content not present in the source blocks for this paragraph, which describe ATOP capabilities in isolation.",
+      "source_basis": "13-2-1a: 'ATOP includes both surveillance and flight data processing, which provides the controllers with automated decision support tools to establish, monitor and maintain separation between aircraft, and aircraft to airspace and terrain.'",
+      "match": {
+        "question_text": "Does ATOP decision support include aircraft-to-terrain separation?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Does ATOP decision support include aircraft-to-terrain separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "ATOP provides automated decision support tools to establish, monitor, and maintain separation between aircraft and terrain, in addition to aircraft-to-aircraft and aircraft-to-airspace separation. Aircraft-to-terrain separation is included in the scope of ATOP decision support.",
+          "choices": [
+            {
+              "text": "No. Terrain separation is outside ATOP's scope, which is limited to aircraft-to-aircraft and aircraft-to-airspace separation.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Yes, but only if the terrain is located within special use airspace boundaries.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "No. ATOP is strictly an oceanic communication system and does not provide separation decision support tools.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Yes. ATOP provides decision support tools to establish, monitor, and maintain separation between aircraft and terrain, in addition to aircraft-to-aircraft and aircraft-to-airspace separation.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-2-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation is dense with subparagraph labels — '13-2-2(a)(3)(a)(1) authorizes,' 'as listed in subparagraph a8(a),' 'Nonintersecting paths (8-4-2a2) is listed in a8(a)' — severe paragraph-location scaffolding that obscures the operational rule.",
+      "source_basis": "13-2-2(a)(3)(a)(1): controllers must not override conflict probe except for 'The application of a separation standard not recognized by conflict probe listed in subparagraph a8(a), or as identified by facility directive.' 13-2-2(a)(8)(a)(1): 'Subparagraph 8-4-2a2 — Nonintersecting paths.' 13-2-2(b): 'Additional Decision Support Tools' including 'range/bearing' may be used 'for establishing and maintaining separation standards not supported by probe.'",
+      "match": {
+        "question_text": "A conflict probe red alert appears for two aircraft in ATOP oceanic airspace whose projected paths remain geometrically separate throughout the protected segment. After verifying adequate spacing using the range/bearing tool, how should the controller proceed?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A conflict probe red alert appears for two aircraft in ATOP oceanic airspace whose projected paths remain geometrically separate throughout the protected segment. After verifying adequate spacing using the range/bearing tool, how should the controller proceed?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Conflict probe may be overridden when applying a separation standard not recognized by conflict probe. Nonintersecting paths is one such unsupported standard. The controller may override the probe, apply the appropriate separation standard for nonintersecting paths using additional decision support tools such as range/bearing, and must continue to ensure separation is maintained until the conflict is resolved.",
+          "choices": [
+            {
+              "text": "Take no action on the alert, because red conflicts must always be resolved exclusively through conflict probe guidance.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Override conflict probe and use the range/bearing tool to establish and maintain the appropriate separation standard for nonintersecting paths, while continuing to ensure separation until the conflict is resolved.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Resolve the conflict using conflict probe results exclusively, because a red alert always takes precedence over the unsupported-standard provisions.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Suppress the alert and notify the operations supervisor that conflict probe has malfunctioned for this aircraft pair.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "13-2-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "format_fit"
+      ],
+      "problem": "Back begins with 'Per 13-2-2(a)(8)(a)' and each list entry includes cross-reference paragraph numbers '(8-4-2a2)', '(8-4-2d)', etc. — paragraph-location scaffolding throughout the retrieval target. The nine unsupported standards themselves are the correct content; the cross-references teach document navigation.",
+      "source_basis": "13-2-2(a)(8)(a) lists nine separation minima not supported by conflict probe: nonintersecting paths, intersecting flight paths with variable width protected airspace, reduction of Route Protected Airspace below/above FL 240, same NAVAID VOR/VORTAC/TACAN and NDB, dead reckoning, same direction, and VFR climb and descent.",
+      "match": {
+        "front": "ATOP conflict probe: which separation standards does conflict probe NOT support? (9 categories)",
+        "back": "Per 13-2-2(a)(8)(a): (1) Nonintersecting paths (8-4-2a2). (2) Intersecting flight paths with variable width protected airspace (8-4-2d). (3-4) Reduction of Route Protected Airspace below/above FL 240 (8-4-3a/b). (5-6) Same NAVAID: VOR/VORTAC/TACAN and NDB (8-4-4a1/a2). (7) Dead Reckoning (8-4-4c). (8) Same Direction (8-5-4). (9) VFR Climb and Descent (8-8-5).",
+        "card_type": "definition"
+      },
+      "replacements": [
+        {
+          "front": "ATOP conflict probe: which separation standards does conflict probe NOT support? (9 categories)",
+          "back": "(1) Nonintersecting paths. (2) Intersecting flight paths with variable width protected airspace. (3) Reduction of Route Protected Airspace below FL 240. (4) Reduction of Route Protected Airspace at and above FL 240. (5) Same NAVAID: VOR/VORTAC/TACAN. (6) Same NAVAID: NDB. (7) Dead Reckoning. (8) Same Direction. (9) VFR Climb and Descent.",
+          "card_type": "definition"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-2-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation opens with '13-2-3(c)(1)(b) lists' — paragraph-location scaffolding. The flag meanings are correct but framed as a document citation.",
+      "source_basis": "13-2-3(c)(1)(b): 'Ensure the flags listed below are selected appropriately for each flight: (1) M — Mach Number Technique (MNT). (2) R — Reduced MNT. (3) D — Distance-based longitudinal. (4) W — Reduced Vertical Separation Minimum (RVSM).'",
+      "match": {
+        "question_text": "Which electronic flight-strip flag identifies Mach Number Technique longitudinal separation?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which electronic flight-strip flag identifies Mach Number Technique longitudinal separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "The M flag identifies Mach Number Technique (MNT) longitudinal separation. R is Reduced MNT, D is Distance-based longitudinal, and W is Reduced Vertical Separation Minimum (RVSM). Each flag corresponds to a specific separation method and must be selected appropriately for each flight.",
+          "choices": [
+            {
+              "text": "R — Reduced MNT, because all Mach number operations use the reduced standard.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "M — Mach Number Technique (MNT).",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "W — RVSM, because MNT requires reduced vertical separation.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "D — Distance-based longitudinal, because MNT is a longitudinal separation method.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "13-2-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation invents a rationale not present in the source blocks: 'This buffer accounts for the navigation uncertainties when aircraft are deviating around weather.' The source states only that the tool adds the CDI mileage buffer to required separation when RNP distance-based longitudinal separation is applied; it does not attribute a purpose for navigation uncertainty to the buffer.",
+      "source_basis": "Body block: 'The weather deviation tool adds an additional converging, diverging, and intersecting (CDI) mileage buffer to the required separation calculated by ATOP when RNP distance-based longitudinal separation is being applied.' The source states the operational requirement directly without explaining why the buffer accounts for navigation uncertainties.",
+      "match": {
+        "question_text": "What additional buffer does ATOP apply when its weather deviation tool supports RNP distance-based longitudinal separation?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What additional buffer does ATOP apply when its weather deviation tool supports RNP distance-based longitudinal separation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The weather deviation tool adds a CDI (Converging, Diverging, and Intersecting) mileage buffer to the required separation ATOP calculates when RNP distance-based longitudinal separation is in use. The CDI mileage buffer is enforced by the ATOP conflict probe.",
+          "choices": [
+            {
+              "text": "A 10 NM lateral buffer applied in addition to the standard RNP containment value.",
+              "is_correct": false
+            },
+            {
+              "text": "A time-based buffer of two minutes added to the longitudinal time standard.",
+              "is_correct": false
+            },
+            {
+              "text": "A CDI (Converging, Diverging, and Intersecting) mileage buffer added to the required separation.",
+              "is_correct": true
+            },
+            {
+              "text": "No additional buffer is added; the weather deviation tool only provides visual depiction of weather cells.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "13-2-5",
+      "action": "remove",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "The flashcard asks which JO paragraphs the weather deviation tool references for RNP distance-based applications. This tests document-structure trivia rather than operational knowledge about the weather deviation tool. The back lists paragraph numbers (8-7-3, 8-8-3, 8-9-3, 8-10-3, 13-2-2) with parenthetical titles and ends with the paragraph-location tag 'Per 13-2-5 references.' A controller needs to apply the tool's procedures — evaluating pink advisories and interpreting deviation monitor values — not recall which paragraphs are listed in the order's cross-references.",
+      "source_basis": "The source reference block lists paragraph cross-references, but these are document citations, not operational content. The body and note blocks of 13-2-5 contain operational substance — the CDI buffer, pink advisory evaluation requirements, conflict probe enforcement, and 64-second reporting rate — none of which this card tests.",
+      "match": {
+        "front": "Weather deviation tool: what longitudinal separation paragraphs does the tool reference for RNP distance-based applications?",
+        "back": "FAA Order JO 7110.65 paragraphs: 8-7-3 (Longitudinal Separation), 8-8-3 (Longitudinal Separation), 8-9-3 (Longitudinal Separation), and 8-10-3 (Longitudinal Separation). Also references 13-2-2 (Conflict Detection and Resolution). Per 13-2-5 references.",
+        "card_type": "definition"
+      }
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "13-2-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "The card back ends with 'Per 13-2-6,' which is paragraph-location scaffolding. The front and the operational content of the back are otherwise sound: the card asks an operationally relevant question about the two exceptions to automated coordination and correctly states the general rule that automated coordination constitutes complete coordination in all other cases.",
+      "source_basis": "Body block: 'automated coordination must constitute complete coordination between ATOP sectors, both internally and between sectors across adjacent ATOP facilities, except: a. When the aircraft is in conflict with another in the receiving sector, or b. When otherwise specified in facility directives or LOA.' The trailing 'Per 13-2-6' adds no operational information and anchors recall to a document location.",
+      "match": {
+        "front": "ATOP automated coordination: what two exceptions prevent automated coordination from constituting complete coordination?",
+        "back": "(a) When the aircraft is in CONFLICT with another in the receiving sector. (b) When otherwise specified in FACILITY DIRECTIVES or LOA. In all other cases, automated coordination constitutes complete coordination between ATOP sectors internally and across adjacent ATOP facilities. Per 13-2-6.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "ATOP automated coordination: what two exceptions prevent automated coordination from constituting complete coordination?",
+          "back": "(a) When the aircraft is in conflict with another in the receiving sector. (b) When otherwise specified in facility directives or LOA. In all other cases, automated coordination constitutes complete coordination between ATOP sectors internally and across adjacent ATOP facilities.",
+          "card_type": "procedure"
+        }
+      ]
+    }
+  ]
+}

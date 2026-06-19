@@ -1,0 +1,1121 @@
+{
+  "version": 1,
+  "chapter": 9,
+  "target_generation_source": "content_expansion_pass_02",
+  "packet_sha256": "f89516b1e85174bdbab209b5dc5859d5d814d80dda794e6e396988aeed0eade0",
+  "manifest_sha256": "f645d78ee6d47af79910aca26b15956f695e19acd46395003bdc13f77d350db1",
+  "summary": {
+    "overall": "Chapter 9 was reviewed in 2 bounded source-grounded shards. Proposed changes: 23 replacements, 0 splits, and 0 removals.",
+    "patterns": [
+      "Paragraph-location scaffolding in explanations — 12 of 22 items open their explanation with 'Per 9-X-Y' or equivalent document-structure references, violating the requirement that explanations state the operating requirement directly.",
+      "Unsupported rationales — two items introduce reasons absent from the source blocks: 'to protect the mission profile' for inert device handling (9-2-1 flashcard) and 'to prevent interference' for frequency assignment (9-2-15 question). The source blocks state what is done and the proximate operational reason (e.g., inert devices are easily mistaken for dangerous counterparts), but do not assert the underlying policy motivation.",
+      "Source fidelity errors — the 9-3-2 flashcard invents a standalone '3 miles laterally' minimum and omits the route-clearance method; the 9-3-3 question substitutes 'aircraft ordnance' for 'aircraft operations,' changing the scope of the regulatory exception.",
+      "List-count inflation — the 9-3-2 flashcard presents 'four separation minima' when the source enumerates three methods (vertical, radar, route) plus an LOA/LOP superseding clause, not a fourth minimum.",
+      "Scenario tense ambiguity — the 9-2-19 question describes a dropsonde as already released but then asks who decides whether to delay the release, creating a minor coherence gap in the scenario framing.",
+      "Paragraph-location scaffolding is the dominant defect — 7 of 9 decisions involve removing 'Per 9-X-Y' or parenthetical paragraph references from explanations and flashcard backs.",
+      "One question invents an unsupported rationale (why fuel separation minima differ) to which the source provides no answer; the source states only the procedure.",
+      "One activity explanation uses a positional reference ('first option') to identify a scenario, which is both factually wrong and fragile against runtime shuffling.",
+      "Distractors are generally well-constructed: plausible operational mistakes without answer-length cues or implausible extremes.",
+      "Stems are uniformly self-contained — no item requires paragraph-number knowledge to understand the question."
+    ],
+    "generation_guidance": [
+      "Remove all 'Per 9-X-Y[a]' paragraph references from explanations and state the operating requirement directly. This was the dominant defect across this shard and likely pervades other chapters produced by the same generation pipeline.",
+      "When summarizing multi-element procedures (separation minima, exception lists, duty chains), verify the count of elements against the source structure. A flashcard claiming 'four minima' when the source lists three methods misleads the learner about the organizational framework.",
+      "For regulatory exceptions that use defined terms ('aircraft operations,' 'hazardous activities not involving aircraft operations'), reproduce the source language exactly. Paraphrasing 'aircraft operations' as 'aircraft ordnance' changes the regulatory meaning.",
+      "Do not attach policy rationales (interference prevention, mission profile protection, safety motivation) to fact statements unless the source blocks explicitly state that rationale. When the source says frequencies are assigned so adjacent centers do not share one, state that fact without adding 'to prevent interference.'",
+      "When writing scenario stems that test a pre-action decision (whether to delay a release), use framing that places the learner before the action ('is preparing to release,' 'has a scheduled release'), not after ('releases').",
+      "Never begin an explanation with 'Per [paragraph]' or reference document structure. State the operating requirement directly.",
+      "Do not frame a question around a rationale or cause when the source states only a procedure or value. Test the procedure or value, not an inferred reason.",
+      "In activity explanations, identify scenarios by their content ('the overweight landing fuel dump'), never by choice position. Runtime order is shuffled.",
+      "Flashcard backs must not contain paragraph references. If a card cross-references another paragraph's minima, state only the action the current paragraph prescribes — do not enumerate values from outside the reviewed source blocks.",
+      "Distractors in this shard are well done: they reflect common operational mistakes (swapping above/below separation, conflating VFR/IFR applicability, assuming blanket authorization). Continue this approach."
+    ],
+    "shard_overviews": [
+      "This shard covers 17 paragraphs from Chapter 9 Sections 2 and 3, spanning dangerous materials handling, security services, law enforcement missions, aerial refueling, special frequencies, radiation avoidance, SAMP flights, AWACS/NORAD special flights, weather reconnaissance, FLYNET, MTRs, interceptor operations, special interest sites, SATR/SFRA rules, SUA separation procedures, and VFR-on-top exceptions. The item quality is generally high: scenario-based questions are well-constructed with plausible distractors targeting real operational misconceptions, and most flashcards are concise and source-faithful. However, the shard suffers from two endemic defects: nearly every explanation uses paragraph-location scaffolding ('Per 9-X-Y'), and two items contain substantive source fidelity errors — one flashcard fabricates a separation minimum not found in the source, and one question mischaracterizes the regulatory exception scope by substituting 'ordnance' for 'operations.'",
+      "Shard quality is moderate. Most items are factually correct and teach genuine operational requirements, but nearly every explanation and several flashcard backs carry paragraph-location scaffolding ('Per 9-3-4a', '9-7-2b', etc.) that substitutes document trivia for substance. One question (9-4-4) is built on an invented rationale absent from the source blocks — the entire stem and correct answer must be replaced. One activity explanation contains a factual error identifying options by position. Three flashcards (9-3-4 obligation card, both 9-5-1 cards) are clean and require no intervention."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "flashcard",
+      "para_id": "9-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity",
+        "explanation_quality"
+      ],
+      "problem": "The back of this flashcard appends an unsupported rationale: 'they also receive special handling to protect the mission profile.' The source Note states that inert devices receive special handling because they 'closely resemble nuclear or explosive items that are classified as dangerous and could be easily mistaken for their dangerous counterparts.' No source block in the packet mentions mission profile protection as a reason for special handling of inert devices.",
+      "source_basis": "9-2-1 Note: '\"Inert devices\" are devices containing no dangerous materials but closely resembling nuclear or explosive items that are classified as dangerous and could be easily mistaken for their dangerous counterparts.'",
+      "match": {
+        "front": "What is the operational difference between 'dangerous cargo' and 'inert devices' in a military flight plan?",
+        "back": "Dangerous cargo contains hazardous materials requiring special handling. Inert devices contain NO dangerous materials but closely resemble nuclear or explosive devices in appearance — they also receive special handling to protect the mission profile.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What is the operational difference between 'dangerous cargo' and 'inert devices' in a military flight plan?",
+          "back": "Dangerous cargo contains hazardous materials requiring special handling. Inert devices contain NO dangerous materials but closely resemble nuclear or explosive items that are classified as dangerous and could be easily mistaken for their dangerous counterparts; they receive special handling because they are indistinguishable from dangerous items by appearance alone.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "9-2-10",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with paragraph-location scaffolding ('Per 9-2-10a phraseology, the correct transmission is...') instead of stating the operating requirement directly. The activity content is otherwise well-constructed: the situation matches the source instruction, the correct choice reflects the prescribed phraseology elements (TRANSPONDER OBSERVED, airspace class exclusion), and the distractors test plausible errors (RADAR CONTACT vs TRANSPONDER OBSERVED, SQUAWK OBSERVED).",
+      "source_basis": "9-2-10 body: 'When the assigned code is observed, advise the aircraft to proceed on course/as requested but to remain outside of Class B, C, and/or D airspace as appropriate.' Phraseology: '(ACID) TRANSPONDER OBSERVED PROCEED ON COURSE/AS REQUESTED; REMAIN OUTSIDE (class) AIRSPACE.'",
+      "match": {
+        "activity_type": "phraseology_exactness",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Construct the correct phraseology for this situation using the prescribed format.",
+          "situation": "An aircraft squawking the assigned SFRA code has been radar-identified. You need to advise the aircraft to proceed on course as requested while remaining outside Class B, C, and D airspace.",
+          "question_text": "Which transmission uses the correct prescribed phraseology?",
+          "choices": [
+            {
+              "text": "N123AB, RADAR CONTACT, PROCEED AS FILED BUT STAY CLEAR OF ALL CONTROLLED AIRSPACE.",
+              "is_correct": false
+            },
+            {
+              "text": "N123AB, TRANSPONDER OBSERVED, PROCEED ON COURSE AS REQUESTED BUT REMAIN OUTSIDE OF CLASS B, C, AND/OR D AIRSPACE AS APPROPRIATE.",
+              "is_correct": true
+            },
+            {
+              "text": "N123AB, TRANSPONDER OBSERVED, CLEARED TO PROCEED ON COURSE, REMAIN CLEAR OF CLASS B AIRSPACE ONLY.",
+              "is_correct": false
+            },
+            {
+              "text": "N123AB, SQUAWK OBSERVED, PROCEED ON COURSE AND MAINTAIN VFR AT ALL TIMES IN THE SFRA.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-2-10a phraseology, the correct transmission is: '(ACID) TRANSPONDER OBSERVED, PROCEED ON COURSE AS REQUESTED BUT REMAIN OUTSIDE OF CLASS B, C, AND/OR D AIRSPACE AS APPROPRIATE.' The key elements are 'TRANSPONDER OBSERVED' (not 'radar contact') and the specific airspace exclusion language covering B, C, and/or D as appropriate.",
+          "publication_id": "content-expansion-pass-02:chapter-09:activities:9-2-10:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "phraseology_exactness",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Construct the correct phraseology for this situation using the prescribed format.",
+            "situation": "An aircraft squawking the assigned SFRA code has been radar-identified. You need to advise the aircraft to proceed on course as requested while remaining outside Class B, C, and/or D airspace.",
+            "question_text": "Which transmission uses the correct prescribed phraseology?",
+            "choices": [
+              {
+                "text": "N123AB, RADAR CONTACT, PROCEED AS FILED BUT STAY CLEAR OF ALL CONTROLLED AIRSPACE.",
+                "is_correct": false
+              },
+              {
+                "text": "N123AB, TRANSPONDER OBSERVED, PROCEED ON COURSE AS REQUESTED BUT REMAIN OUTSIDE OF CLASS B, C, AND/OR D AIRSPACE AS APPROPRIATE.",
+                "is_correct": true
+              },
+              {
+                "text": "N123AB, TRANSPONDER OBSERVED, CLEARED TO PROCEED ON COURSE, REMAIN CLEAR OF CLASS B AIRSPACE ONLY.",
+                "is_correct": false
+              },
+              {
+                "text": "N123AB, SQUAWK OBSERVED, PROCEED ON COURSE AND MAINTAIN VFR AT ALL TIMES IN THE SFRA.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "When the assigned SFRA transponder code is observed, the prescribed phraseology is 'TRANSPONDER OBSERVED, PROCEED ON COURSE/AS REQUESTED; REMAIN OUTSIDE (class) AIRSPACE.' The key elements are 'TRANSPONDER OBSERVED' (not 'radar contact') and the specific airspace exclusion language covering Class B, C, and/or D as appropriate to the aircraft's position.",
+            "publication_id": "content-expansion-pass-02:chapter-09:activities:9-2-10:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-12",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with paragraph-location scaffolding ('Per 9-2-12a2, assistance to law enforcement aircraft must...'). The question stem, answer choices, and distractors are well-constructed — the scenario tests the operational boundary of 'maximum assistance,' and all distractors represent plausible operational misconceptions.",
+      "source_basis": "9-2-12a2: 'Ensure assistance to law enforcement aircraft does not compromise approved separation minima or place the aircraft in unsafe proximity to terrain, obstructions or other aircraft.'",
+      "match": {
+        "question_text": "A law enforcement aircraft requests that ATC locate and track a suspect aircraft. The controller's sector is busy with moderate traffic. What limits apply to providing this assistance?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A law enforcement aircraft requests that ATC locate and track a suspect aircraft. The controller's sector is busy with moderate traffic. What limits apply to providing this assistance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Assistance to law enforcement aircraft must not compromise approved separation minima or place the aircraft in unsafe proximity to terrain, obstructions, or other aircraft. Maximum assistance is required as a duty priority, but it stops at the point where separation standards or aircraft safety would be compromised.",
+          "choices": [
+            {
+              "text": "Law enforcement assistance takes priority over all separation standards when suspect aircraft are involved.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Assistance must not compromise approved separation minima or place aircraft in unsafe proximity to terrain or other aircraft.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Assistance is limited to communicating on a separate frequency; the controller cannot provide tracking.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Controllers must decline all law enforcement assistance requests when sector traffic is moderate or greater.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-15",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "source_fidelity",
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "Two defects: (1) The explanation opens with paragraph-location scaffolding ('Per 9-2-15 Note'). (2) The correct answer choice states 'to prevent interference' — an unsupported rationale. The source states that adjacent ARTCCs are not assigned the same frequency but does not articulate interference prevention as the reason. The answer should reflect the assignment fact without fabricating the rationale.",
+      "source_basis": "9-2-15 Note: 'Special use frequencies are assigned to ARTCCs in such a manner that adjacent ARTCCs will not have the same frequency.'",
+      "match": {
+        "question_text": "How are special use frequencies assigned to ARTCCs?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "How are special use frequencies assigned to ARTCCs?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Special use frequencies are assigned to ARTCCs so that adjacent ARTCCs do not share the same frequency. They are used within each ARTCC's area from the established FL base of the high altitude sectors and above, with each high altitude sector having shared-use capability on the frequency.",
+          "choices": [
+            {
+              "text": "All ARTCCs share the same special use frequency nationwide.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Adjacent ARTCCs are assigned different frequencies; no two adjacent centers share the same special use frequency.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Each ARTCC sector within the same center receives a unique special use frequency.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Special use frequencies rotate between ARTCCs on a monthly schedule.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-17",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with paragraph-location scaffolding ('Per 9-2-17, controllers must approve...'). The question is well-constructed: the scenario tests the controller's active accommodation obligation for SAMP missions, and all distractors represent plausible but incorrect alternatives (self-separation delegation, denial due to occupied altitude, deferral).",
+      "source_basis": "9-2-17 body: 'Approve inflight clearance requests for altitude and route changes to the maximum extent possible. Other IFR aircraft may be recleared so that requests by SAMP aircraft are approved.'",
+      "match": {
+        "question_text": "A SAMP aircraft requests an altitude change for its nuclear sampling mission. Other IFR traffic is already established at the requested altitude. What is the controller's obligation?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A SAMP aircraft requests an altitude change for its nuclear sampling mission. Other IFR traffic is already established at the requested altitude. What is the controller's obligation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Controllers must approve SAMP inflight clearance requests for altitude and route changes to the maximum extent possible. Other IFR aircraft may be recleared so that SAMP requests are approved. The standard requires active accommodation — not merely processing the request, but potentially moving other traffic to fulfill it.",
+          "choices": [
+            {
+              "text": "Approve the change only if the SAMP aircraft accepts responsibility for separation from the other traffic.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Deny the request because the altitude is already occupied by other IFR traffic.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Approve the altitude change to the maximum extent possible; reclear the established traffic if necessary.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Defer the request until the other IFR aircraft has passed the SAMP aircraft's position.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-18",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with paragraph-location scaffolding ('Per 9-2-18a, en route altitude changes are acceptable...'). The question is well-designed: it presents a realistic scenario requiring the learner to apply the ±2,000-foot tolerance to a concrete altitude assignment, and all distractors test distinct misconceptions (unlimited changes, climb-only limit, no changes permitted).",
+      "source_basis": "9-2-18a: 'En route altitude changes +/− 2,000 feet from the requested flight level.'",
+      "match": {
+        "question_text": "An AWACS/NORAD Special flight has requested FL 350. During expedited handling, a trainee assigns FL 320 to resolve a crossing conflict. Is this assignment within acceptable limits?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An AWACS/NORAD Special flight has requested FL 350. During expedited handling, a trainee assigns FL 320 to resolve a crossing conflict. Is this assignment within acceptable limits?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "En route altitude changes for AWACS/NORAD Special flights are acceptable within ±2,000 feet of the requested flight level. For a requested FL 350, the allowable range is FL 330 to FL 370. FL 320 is 3,000 feet below the requested altitude, which exceeds the 2,000-foot tolerance.",
+          "choices": [
+            {
+              "text": "Yes. Any altitude change that resolves a conflict is acceptable for expedited handling.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "No. Acceptable altitude changes are limited to ±2,000 feet from the requested flight level.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Yes. The ±2,000-foot limit applies only to climbs, not descents.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "No. Altitude changes from the requested flight level are never permitted.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-19",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality",
+        "educational_coherence"
+      ],
+      "problem": "Two defects: (1) The explanation opens with paragraph-location scaffolding ('Per 9-2-19, the aircraft commander bears responsibility...'). (2) The scenario stem uses present-tense 'releases a dropsonde' to describe a situation where the learner is asked about the decision to delay — creating a coherence gap between the accomplished action and the pre-action decision. The scenario should frame the release as imminent rather than executed.",
+      "source_basis": "9-2-19 Note: 'It is the aircraft commanders responsibility to delay release of dropsondes if traffic is a factor. Aircraft commanders will delay release of dropsondes based solely upon traffic as issued by ATC.'",
+      "match": {
+        "question_text": "A TEAL mission aircraft at FL 310 releases a dropsonde while a nonparticipating aircraft is at FL 210, 8 NM ahead on the same track. Who determines whether to delay the dropsonde release, and on what basis?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A TEAL mission aircraft at FL 310 is preparing to release a dropsonde. A nonparticipating aircraft is at FL 210, 8 NM ahead on the same track. Who determines whether to delay the dropsonde release, and on what basis?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The controller advises the mission aircraft of observed traffic near the drop area. The aircraft commander then determines whether to delay the dropsonde release, based solely upon the traffic information issued by ATC. The controller provides the advisory; the commander makes the delay decision.",
+          "choices": [
+            {
+              "text": "The controller, who must cancel the release if any traffic is within 10 NM of the drop point.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The aircraft commander, based solely upon the traffic information issued by ATC.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "The supervisory traffic management coordinator, who deconflicts the drop with flow control.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The NOAA mission coordinator on the ground, who relays the decision through HF radio.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding in two places ('Per 9-2-5b' and 'per 9-2-5c'). The question is well-constructed: it tests whether the learner understands that DEN notification is a first-facility-only duty while expeditious handling applies at every facility. All distractors test distinct operational misconceptions.",
+      "source_basis": "9-2-5 body: 'ATC personnel at the first facility establishing contact with an aircraft using the code word FLYNET must: a. Provide expeditious handling. b. Report it to the operations supervisor (OS)/controller-in-charge (CIC), for reporting to the National Tactical Security Operations (NTSO) Air Traffic Security Coordinator (ATSC) through the Domestic Events Network (DEN). c. Add to the remarks section of the flight plan that DEN notification has been accomplished.'",
+      "match": {
+        "question_text": "A FLYNET aircraft is already in contact with Center when it enters your approach control airspace. The pilot notes that DEN notification was accomplished by Center. What must your facility do?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A FLYNET aircraft is already in contact with Center when it enters your approach control airspace. The pilot notes that DEN notification was accomplished by Center. What must your facility do?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "DEN notification is a duty of the first ATC facility establishing contact with a FLYNET aircraft. Once notification has been accomplished and noted in the flight plan remarks, subsequent facilities do not re-notify. However, every facility handling a FLYNET aircraft must still provide expeditious handling — that obligation applies at every sector and is not discharged by a prior facility.",
+          "choices": [
+            {
+              "text": "Transfer the aircraft back to Center because approach control cannot handle FLYNET aircraft directly.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Re-accomplish DEN notification because every ATC facility that handles a FLYNET aircraft must independently notify the DEN.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Provide routine handling since DEN notification was already done by the first facility.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Provide expeditious handling but do not re-accomplish DEN notification since it is already noted in the flight plan remarks.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "9-2-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with paragraph-location scaffolding ('Per 9-2-6 phraseology, the clearance is...'). The activity is well-constructed: the clearance matches the prescribed IR phraseology, the correct readback mirrors the clearance elements, and each distractor tests a distinct readback error (incomplete readback, altitude substitution, clearance element alteration).",
+      "source_basis": "9-2-6 phraseology: 'CLEARED INTO IR (designator). MAINTAIN (altitude), or MAINTAIN IR (designator) ALTITUDE(S).'",
+      "match": {
+        "activity_type": "readback_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Evaluate the pilot readback against the prescribed IR clearance phraseology.",
+          "clearance": "CLEARED INTO IR 801. MAINTAIN IR 801 ALTITUDES.",
+          "situation": "The controller issues: 'CLEARED INTO IR 801. MAINTAIN IR 801 ALTITUDES.'",
+          "question_text": "Which pilot readback correctly acknowledges the clearance?",
+          "choices": [
+            {
+              "text": "Roger, entering IR 801 at this time, Callsign 123.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared into IR 801, maintaining flight level two zero zero, Callsign 123.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared direct IR 801, will maintain VFR, Callsign 123.",
+              "is_correct": false
+            },
+            {
+              "text": "Cleared into IR 801, maintaining IR 801 altitudes, Callsign 123.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "Per 9-2-6 phraseology, the clearance is 'CLEARED INTO IR (designator). MAINTAIN (altitude)' or 'MAINTAIN IR (designator) ALTITUDE(S).' The correct readback mirrors the clearance: 'Cleared into IR 801, maintaining IR 801 altitudes.' The readback must include the IR designator and altitude restriction as issued.",
+          "publication_id": "content-expansion-pass-02:chapter-09:activities:9-2-6:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "readback_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Evaluate the pilot readback against the prescribed IR clearance phraseology.",
+            "clearance": "CLEARED INTO IR 801. MAINTAIN IR 801 ALTITUDES.",
+            "situation": "The controller issues: 'CLEARED INTO IR 801. MAINTAIN IR 801 ALTITUDES.'",
+            "question_text": "Which pilot readback correctly acknowledges the clearance?",
+            "choices": [
+              {
+                "text": "Roger, entering IR 801 at this time, Callsign 123.",
+                "is_correct": false
+              },
+              {
+                "text": "Cleared into IR 801, maintaining flight level two zero zero, Callsign 123.",
+                "is_correct": false
+              },
+              {
+                "text": "Cleared direct IR 801, will maintain VFR, Callsign 123.",
+                "is_correct": false
+              },
+              {
+                "text": "Cleared into IR 801, maintaining IR 801 altitudes, Callsign 123.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "The prescribed IR clearance uses 'CLEARED INTO IR (designator)' followed by one of several altitude formats, including 'MAINTAIN IR (designator) ALTITUDE(S).' The correct readback must include both the IR designator and the altitude restriction as issued. Substituting a specific altitude for the IR altitude block or altering 'INTO' to 'DIRECT' changes the operational terms of the clearance.",
+            "publication_id": "content-expansion-pass-02:chapter-09:activities:9-2-6:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with paragraph-location scaffolding ('Per 9-2-7') and references another paragraph by number ('(9-1-1)'). Additionally, the explanation asserts that expedited control transfer is 'a requirement unique to air defense missions,' a comparative claim that cannot be verified from this shard's source blocks alone. The question itself is educationally sound, testing a cross-context comparison of operational obligations.",
+      "source_basis": "9-2-7 body: 'Provide maximum assistance to expedite the movement of interceptor aircraft on active air defense (scrambles) missions until the unknown aircraft is identified.' 9-2-7c: 'Upon request, the ATC facility must expedite transfer of the control jurisdiction of the interceptors to the requesting ADCF.'",
+      "match": {
+        "question_text": "How does the controller's obligation for interceptor aircraft on active air defense scramble missions differ from the obligation for flight inspection aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "How does the controller's obligation for interceptor aircraft on active air defense scramble missions differ from the obligation for flight inspection aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "For interceptor aircraft on active air defense scramble missions, the obligation to provide maximum assistance terminates when the unknown aircraft is identified. For flight inspection aircraft, the obligation continues for the full duration of the inspection mission with no automatic termination upon identification. Interceptors also require expedited transfer of control jurisdiction to the requesting Air Defense Control Facility.",
+          "choices": [
+            {
+              "text": "Both require maximum assistance for the entire flight; there is no operational difference.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Interceptor assistance terminates when the unknown aircraft is identified; flight inspection assistance continues for the mission duration.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Flight inspection aircraft have priority over interceptors in all cases.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Interceptor assistance only applies when the aircraft is squawking emergency codes.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-2-8",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with paragraph-location scaffolding ('Per 9-2-8, controllers must...'). The question is well-constructed: the scenario tests whether the learner knows the controller's limited role (relay, not monitor) near special interest sites. All distractors test plausible operational overreaches.",
+      "source_basis": "9-2-8 body: 'Immediately relay any reports or information regarding unusual aircraft activities in the vicinity of special interest sites such as nuclear power plants, power plants, dams, refineries, etc., to supervisory/CIC personnel.' 9-2-8 Note: 'Air traffic controllers have no responsibilities to monitor or observe aircraft in the vicinity of special interest sites unless directed by supervisory/CIC personnel.'",
+      "match": {
+        "question_text": "What is a controller's responsibility regarding unusual aircraft activity near special interest sites such as nuclear power plants or dams?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is a controller's responsibility regarding unusual aircraft activity near special interest sites such as nuclear power plants or dams?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Controllers must immediately relay any reports or information regarding unusual aircraft activities near special interest sites to supervisory/CIC personnel. Controllers have no independent monitoring or observation responsibilities unless specifically directed by supervisory/CIC personnel.",
+          "choices": [
+            {
+              "text": "Vector all aircraft at least 3 NM away from these sites at all times.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Monitor these sites continuously using available radar and visual observation.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Immediately relay any reports or information to supervisory/CIC personnel.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Contact the Department of Homeland Security before taking any action.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "9-2-9",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with paragraph-location scaffolding ('Per 9-2-9, Special Flight Rules Areas are areas where...'). The activity correctly tests the distinction that not all Part 93 areas are SFRAs, though all SFRAs follow Part 93 rules. The distractors test plausible confusions about the regulatory relationship between Part 93, SFRAs, and SATRs.",
+      "source_basis": "9-2-9a: 'Special Flight Rules Areas are areas of airspace wherein the flight of aircraft is subject to special air traffic rules set forth in 14 CFR part 93, unless otherwise authorized by air traffic control. Not all areas listed in 14 CFR part 93 are Special Flight Rules Areas, but special air traffic rules apply to all areas designated as SFRA.'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Determine whether the statement about special air traffic rules is correct.",
+          "question_text": "A trainee states: 'Every airspace area listed in 14 CFR Part 93 is a Special Flight Rules Area.' Is this correct?",
+          "choices": [
+            {
+              "text": "Correct. Every airspace area listed in 14 CFR Part 93 is, by definition, a Special Flight Rules Area.",
+              "is_correct": false
+            },
+            {
+              "text": "Incorrect. Not all Part 93 areas are SFRAs, but all SFRAs follow Part 93 rules.",
+              "is_correct": true
+            },
+            {
+              "text": "Correct. SFRAs and SATRs are identical categories with the same operational rules.",
+              "is_correct": false
+            },
+            {
+              "text": "Incorrect. Special Flight Rules Areas are defined in 14 CFR Part 91, not in Part 93.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 9-2-9, Special Flight Rules Areas are areas where flight is subject to special air traffic rules in 14 CFR Part 93 unless otherwise authorized by ATC. Not all areas listed in Part 93 are SFRAs — the distinction is that SFRAs have specific flight rules, while other Part 93 areas may have different regulatory structures.",
+          "publication_id": "content-expansion-pass-02:chapter-09:activities:9-2-9:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Determine whether the statement about special air traffic rules is correct.",
+            "question_text": "A trainee states: 'Every airspace area listed in 14 CFR Part 93 is a Special Flight Rules Area.' Is this correct?",
+            "choices": [
+              {
+                "text": "Correct. Every airspace area listed in 14 CFR Part 93 is, by definition, a Special Flight Rules Area.",
+                "is_correct": false
+              },
+              {
+                "text": "Incorrect. Not all Part 93 areas are SFRAs, but all SFRAs follow Part 93 rules.",
+                "is_correct": true
+              },
+              {
+                "text": "Correct. SFRAs and SATRs are identical categories with the same operational rules.",
+                "is_correct": false
+              },
+              {
+                "text": "Incorrect. Special Flight Rules Areas are defined in 14 CFR Part 91, not in Part 93.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Special Flight Rules Areas are airspace where flight is subject to special air traffic rules in 14 CFR Part 93 unless otherwise authorized by ATC. Not all areas listed in Part 93 are SFRAs — the distinction is that SFRAs are a subset of Part 93 areas to which specific flight rules apply. All areas designated as SFRA operate under Part 93 rules.",
+            "publication_id": "content-expansion-pass-02:chapter-09:activities:9-2-9:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "9-3-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The flashcard back states 'four separation minima' and includes '3 miles laterally' as a standalone third item alongside '3 miles radar,' inventing a separate lateral minimum not found in the source. The source enumerates three methods: vertical (altitude assignment), radar separation from the boundary, and route clearance (airways/routes with non-overlapping protected airspace). The LOA/LOP clause in the opening statement is a superseding condition, not a fourth minimum. The flashcard also omits the third method entirely (airway/route clearance) and omits the 6-mile radar separation at FL 600 and above.",
+      "source_basis": "9-3-2: 'separate nonparticipating aircraft from active special use airspace, ATCAAs, and stationary ALTRVs by the following minima: a. Assign an altitude... at least 500 feet (above FL 290-1000 feet) above/below the upper/lower limit... b. Provide radar separation of 3 miles (FL 600 and above − 6 miles) from the... peripheral boundary... c. Clear aircraft on airways or routes whose widths or protected airspace do not overlap the peripheral boundary.'",
+      "match": {
+        "front": "What are the four separation minima for nonparticipating aircraft from active SUA, ATCAA, or stationary ALTRV?",
+        "back": "1. At least 500 feet above/below the airspace limit (above FL 290: 1,000 feet). 2. 3 miles radar. 3. 3 miles laterally. 4. In accordance with a letter of agreement or letter of procedure.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "What are the separation minima for nonparticipating aircraft from active SUA, ATCAA, or stationary ALTRV?",
+          "back": "1. Vertical: At least 500 feet above/below the airspace limit (1,000 feet above FL 290). 2. Radar: 3 miles from the peripheral boundary (6 miles at FL 600 and above); certain security/hazard areas require vectors to remain clear instead. 3. Route: Clear aircraft on airways or routes whose protected airspace does not overlap the peripheral boundary. These requirements apply unless a letter of agreement or letter of procedure provides otherwise.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-3-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "Three defects: (1) The explanation opens with paragraph-location scaffolding ('Per 9-3-3c, certain Prohibited/Restricted Areas...'). (2) The explanation substitutes 'aircraft ordnance' for the source language 'aircraft operations,' changing the regulatory scope. The source exempts areas containing hazardous activities not involving aircraft operations broadly (ground-based hazards of any kind), not only those related to ordnance. (3) The question stem itself uses 'non-ordnance hazardous activities' which similarly misrepresents the broader 'hazardous activities not involving aircraft operations.'",
+      "source_basis": "9-3-3c: 'Exception: Some Prohibited/Restricted Areas are established for security reasons or to contain hazardous activities not involving aircraft operations. The addition of 500 (or 1,000) feet to the upper/lower limit of these Prohibited/Restricted Areas is not required if the areas have been identified by facility management.'",
+      "match": {
+        "question_text": "What separation procedure applies to Prohibited or Restricted Areas established for security or non-ordnance hazardous activities?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What separation procedure applies to Prohibited or Restricted Areas established for security reasons or to contain hazardous activities not involving aircraft operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Certain Prohibited and Restricted Areas are established for security reasons or to contain hazardous activities that do not involve aircraft operations — for example, ground-based hazards. For these areas, the addition of 500 feet (or 1,000 feet above FL 290) to the upper and lower limits is not required, provided the areas have been identified by facility management. The controller keeps aircraft clear of the airspace without applying the vertical buffer that applies to other Prohibited and Restricted Areas.",
+          "choices": [
+            {
+              "text": "At least 500 feet above or below the airspace limit, with 1,000 feet above FL 290.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Keep aircraft clear of the airspace without the added 500-foot vertical buffer.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "At least 2,000 feet above or below the airspace limit at all altitudes.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Same separation as Warning Areas — 3 miles lateral or 500 feet vertical.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-3-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses paragraph-location scaffolding ('Per 9-3-4a') instead of stating the operating requirement directly. The question, choices, and difficulty are otherwise correct.",
+      "source_basis": "9-3-4a: 'Comply with the instruction/clearances issued by the Using Agency and provide the applicable separation minima between aircraft when two or more aircraft are transiting the area.'",
+      "match": {
+        "question_text": "An LOA permits SUA transit with using agency coordination. The using agency clears two aircraft through the area at different altitudes. What separation responsibility does the controller retain?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An LOA permits SUA transit with using agency coordination. The using agency clears two aircraft through the area at different altitudes. What separation responsibility does the controller retain?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "The controller must provide applicable separation minima between aircraft when two or more are transiting the area. Even though the using agency authorizes the transit, separation between transiting aircraft remains the controller's responsibility.",
+          "choices": [
+            {
+              "text": "Only vertical separation is required; lateral separation is delegated to the using agency.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The using agency assumes all separation responsibility for aircraft inside the SUA.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Separation is not required because the using agency's clearance deconflicts the aircraft.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Provide applicable separation minima between the two aircraft transiting the area.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "9-3-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence",
+        "source_fidelity"
+      ],
+      "problem": "Back includes a paragraph-location reference ('9-3-2') and enumerates specific separation minima (500 ft vertical, 1,000 ft above FL 290, 3 miles radar, 3 miles lateral) that are not present in the 9-3-4 source blocks. The back should state the fallback action concisely without importing detail from a cross-referenced paragraph outside the reviewed source.",
+      "source_basis": "9-3-4b: 'If unable to comply with instructions/clearances, clear the aircraft in accordance with paragraph 9-3-2, Separation Minima.'",
+      "match": {
+        "front": "What is the controller's fallback when unable to comply with using agency instructions during a coordinated SUA transit?",
+        "back": "Clear the aircraft in accordance with nonparticipant separation minima (9-3-2): at least 500 feet vertical (1,000 feet above FL 290), 3 miles radar, or 3 miles lateral from the SUA boundary.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What is the controller's fallback when unable to comply with using agency instructions during a coordinated SUA transit?",
+          "back": "Clear the aircraft in accordance with nonparticipant separation minima.",
+          "card_type": "concept"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-4-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence",
+        "source_fidelity"
+      ],
+      "problem": "Explanation uses paragraph-location scaffolding ('Per 9-4-2') and adds an invented rationale ('the aircraft's emergency takes priority over routing preferences') that is not present in the source blocks. The source states only the rule; it does not state why. The question, choices, and difficulty are otherwise correct.",
+      "source_basis": "9-4-2: 'Except when it is dumping fuel for emergency reasons, an aircraft in either VFR or IFR conditions may be requested to fly a different route.'",
+      "match": {
+        "question_text": "When may a controller request a fuel-dumping aircraft to fly a different route?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When may a controller request a fuel-dumping aircraft to fly a different route?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Except when the aircraft is dumping fuel for emergency reasons, a controller may request an aircraft in either VFR or IFR conditions to fly a different route.",
+          "choices": [
+            {
+              "text": "Only when the aircraft is operating under VFR, not IFR.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Except when the aircraft is dumping fuel for emergency reasons.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "At any time, regardless of whether the dump is for emergency reasons.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Only when the aircraft is dumping fuel below 10,000 feet MSL.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "9-4-2",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "educational_coherence",
+        "source_fidelity"
+      ],
+      "problem": "Explanation uses paragraph-location scaffolding ('Per 9-4-2') and misidentifies which scenario is the overweight landing fuel dump: it says '(first option)' but the overweight landing is the fourth option in the stored data. Positional references are fragile because runtime order is shuffled. The activity structure, choices, difficulty, and instruction are otherwise correct.",
+      "source_basis": "9-4-2: 'Except when it is dumping fuel for emergency reasons, an aircraft in either VFR or IFR conditions may be requested to fly a different route.'",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Determine whether the controller may request a different route in each situation.",
+          "question_text": "In which of the following situations may the controller request the fuel-dumping aircraft to fly a different route?",
+          "choices": [
+            {
+              "text": "An aircraft dumping fuel because of a dual hydraulic failure; the controller prefers an offshore route.",
+              "is_correct": false
+            },
+            {
+              "text": "An aircraft dumping fuel because of an engine fire; the dump route passes over a populated area.",
+              "is_correct": false
+            },
+            {
+              "text": "An aircraft dumping fuel for any reason — emergency routing changes are always permitted.",
+              "is_correct": false
+            },
+            {
+              "text": "An aircraft dumping fuel to reduce weight for an overweight landing; the dump route passes over a populated area.",
+              "is_correct": true
+            }
+          ],
+          "explanation": "Per 9-4-2, the controller may request a different route except when the aircraft is dumping fuel for emergency reasons. The overweight landing (first option) is a non-emergency operation, so a route change may be requested. The engine fire and dual hydraulic failure are emergency situations where the aircraft cannot be asked to deviate. The rule applies to both VFR and IFR conditions.",
+          "publication_id": "content-expansion-pass-02:chapter-09:activities:9-4-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Determine whether the controller may request a different route in each situation.",
+            "question_text": "In which of the following situations may the controller request the fuel-dumping aircraft to fly a different route?",
+            "choices": [
+              {
+                "text": "An aircraft dumping fuel because of a dual hydraulic failure; the controller prefers an offshore route.",
+                "is_correct": false
+              },
+              {
+                "text": "An aircraft dumping fuel because of an engine fire; the dump route passes over a populated area.",
+                "is_correct": false
+              },
+              {
+                "text": "An aircraft dumping fuel for any reason — emergency routing changes are always permitted.",
+                "is_correct": false
+              },
+              {
+                "text": "An aircraft dumping fuel to reduce weight for an overweight landing; the dump route passes over a populated area.",
+                "is_correct": true
+              }
+            ],
+            "explanation": "The controller may request a different route except when the aircraft is dumping fuel for emergency reasons. A fuel dump to reduce weight for an overweight landing is a non-emergency operation — a different route may be requested. A fuel dump due to dual hydraulic failure or engine fire is an emergency situation — a different route cannot be requested. The rule applies in both VFR and IFR conditions.",
+            "publication_id": "content-expansion-pass-02:chapter-09:activities:9-4-2:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-4-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The question asks 'why is the required vertical separation different above and below the dumping aircraft?' The 9-4-4 source blocks state only the separation minima (the WHAT) without providing any rationale for the difference (the WHY). The correct answer ('Fuel descends and disperses below the aircraft, creating a greater hazard beneath than above') invents a rationale wholly unsupported by the source blocks. The entire question premise must be replaced with one that tests knowledge of the actual separation minima stated in the source.",
+      "source_basis": "9-4-4: 'Separate known aircraft from the aircraft dumping fuel as follows: a. IFR aircraft by one of the following: 1. 1,000 feet above it; or in accordance with paragraph 4-5-1, Vertical Separation Minima, whichever is greater. 2. 2,000 feet below it. 3. 5 miles radar. 4. 5 miles laterally.'",
+      "match": {
+        "question_text": "When separating an IFR aircraft from an aircraft dumping fuel, why is the required vertical separation different above and below the dumping aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What vertical separation is required between a known IFR aircraft and an aircraft dumping fuel?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Separate a known IFR aircraft from an aircraft dumping fuel by 1,000 feet above (or standard vertical separation minima, whichever is greater) and 2,000 feet below. Lateral separation of 5 miles and radar separation of 5 miles are also authorized alternatives.",
+          "choices": [
+            {
+              "text": "2,000 feet above and 1,000 feet below.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "1,000 feet above (or standard vertical separation minima, whichever is greater) and 2,000 feet below.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "1,000 feet both above and below.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "2,000 feet both above and below.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-7-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses paragraph-location scaffolding ('Per 9-7-1') instead of stating the operating requirement directly. The question, choices, and difficulty are otherwise correct.",
+      "source_basis": "9-7-1: 'Coordinate any pertinent information prior to and at the end of each parachute jump or series of jumps which begins or ends in your area of jurisdiction with other affected ATC facilities/sectors.'",
+      "match": {
+        "question_text": "At what points during a parachute operation must pertinent information be coordinated with affected ATC facilities?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "At what points during a parachute operation must pertinent information be coordinated with affected ATC facilities?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Coordinate pertinent information prior to and at the end of each parachute jump or series of jumps that begins or ends in your area of jurisdiction. Coordination is with other affected ATC facilities or sectors.",
+          "choices": [
+            {
+              "text": "Only after the jump is complete and the aircraft has left the area.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Prior to and at the end of each parachute jump or series of jumps.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Only when the jump involves more than 10 parachutists.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "At the beginning of each shift regardless of jump scheduling.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-7-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses paragraph-location scaffolding ('Per 9-7-2') instead of stating the operating requirement directly. The question, choices, and difficulty are otherwise correct.",
+      "source_basis": "9-7-2: 'a. Authorize parachute operations only within airspace designated for the jumping activity. b. Separate aircraft, other than those participating in the jump operation, from the airspace authorized for the jumping activity. c. Impose, as necessary, any conditions and restrictions which in your judgment would promote the safety of the operation.'",
+      "match": {
+        "question_text": "What three requirements govern parachute operations in Class A, Class B, or Class C airspace?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What three requirements govern parachute operations in Class A, Class B, or Class C airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Authorize parachute operations only within airspace designated for the jumping activity. Separate aircraft other than those participating in the jump operation from the airspace authorized for the jumping activity. Impose any conditions and restrictions that, in your judgment, would promote the safety of the operation.",
+          "choices": [
+            {
+              "text": "Authorize anywhere in Class A/B/C, provide traffic advisories only, and file a NOTAM after the operation.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Authorize only within designated airspace, separate nonparticipating aircraft, and impose safety conditions as needed.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Coordinate with the using agency, separate only IFR aircraft, and broadcast advisories to all aircraft.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Authorize per pilot request, separate only VFR aircraft, and notify the supervisor after each jump series.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "9-7-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Explanation uses paragraph-location scaffolding ('Per 9-7-3a' and '9-7-2b') instead of stating the operating requirement directly. The question, choices, and difficulty are otherwise correct.",
+      "source_basis": "9-7-3: 'Authorize parachute jumping with respect to known or observed traffic.' 9-7-2: 'Separate aircraft, other than those participating in the jump operation, from the airspace authorized for the jumping activity.'",
+      "match": {
+        "question_text": "A parachute jump aircraft requests authorization in Class D airspace. The controller can see the jump aircraft on radar and has two VFR aircraft 5 miles from the jump zone. What is the correct authorization standard?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A parachute jump aircraft requests authorization in Class D airspace. The controller can see the jump aircraft on radar and has two VFR aircraft 5 miles from the jump zone. What is the correct authorization standard?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Class D parachute jumping is authorized with respect to known or observed traffic. This is a more permissive standard than the Class A, B, or C requirement to separate nonparticipating aircraft from the jump airspace. In Class D, the controller weighs known traffic conditions and authorizes accordingly rather than providing positive separation.",
+          "choices": [
+            {
+              "text": "Authorize without restriction; no traffic advisories are needed for Class D operations.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Deny the jump because nonparticipating VFR aircraft are within 10 miles of the drop zone.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "Apply the same separation standard as Class A/B/C — separate all nonparticipating aircraft from the jump airspace.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Authorize jumping with respect to known or observed traffic; the standard is more permissive than Class A/B/C separation requirements.",
+              "is_correct": true,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "9-7-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "Back uses paragraph-location references ('9-7-2' and '9-7-3') in parentheticals. The operational comparison is correct and educationally valuable; only the scaffolding needs removal.",
+      "source_basis": "9-7-2b requires separating nonparticipating aircraft from the jump airspace. 9-7-3 authorizes parachute jumping with respect to known or observed traffic.",
+      "match": {
+        "front": "What is the key operational difference between Class D and Class A/B/C parachute jump authorization?",
+        "back": "Class A/B/C (9-7-2): Separate nonparticipating aircraft FROM the airspace authorized for jumping. Class D (9-7-3): Authorize jumping WITH RESPECT TO known or observed traffic — a judgment-based standard that does not require positive separation.",
+        "card_type": "concept"
+      },
+      "replacements": [
+        {
+          "front": "What is the key operational difference between Class D and Class A/B/C parachute jump authorization?",
+          "back": "Class A/B/C: Separate nonparticipating aircraft FROM the airspace authorized for jumping. Class D: Authorize jumping WITH RESPECT TO known or observed traffic — a judgment-based standard that does not require positive separation.",
+          "card_type": "concept"
+        }
+      ]
+    }
+  ]
+}

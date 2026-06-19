@@ -1,0 +1,1806 @@
+{
+  "version": 1,
+  "chapter": 7,
+  "target_generation_source": "content_expansion_pass_02",
+  "packet_sha256": "d0ef00d5cef5511896d58e267e892c87c949888ff2f28f0c1330d959bf350760",
+  "manifest_sha256": "4dbec9707f42eb758772107ba86c71a20075df5c290aa08683825a27a676edc4",
+  "summary": {
+    "overall": "Chapter 7 was reviewed in 2 bounded source-grounded shards. Proposed changes: 31 replacements, 0 splits, and 0 removals.",
+    "patterns": [
+      "Paragraph-location scaffolding: nearly every explanation begins with 'Per 7-X-Y' or cites paragraph/subparagraph labels as the authority rather than stating the operational requirement directly. This affects 20 of 24 items.",
+      "Unsupported explanatory rationales: two items add safety justifications or policy purposes not present in the source blocks (night VFR-on-top darkness rationale in 7-3-1 question; 'have numbers' meaning inference in 7-1-3 items).",
+      "Cross-shard source fidelity: the 7-5-8 question and activity compare pilot-reported visibility scenarios against officially-reported visibility procedures from 7-5-7, which is not in this shard's source blocks.",
+      "Flashcard imprecision: one flashcard front says 'two conditions' but the back lists three; one back includes Class B/C comparisons not found in the source paragraph; one back infers the meaning of 'have numbers' beyond what the source states.",
+      "Activity design: several source_lookup activities embed paragraph and subparagraph identifiers in choices, tasks, and lookup_context fields, teaching document trivia rather than operational decision-making.",
+      "Distractor quality: two distractors are internally contradictory or confusingly worded (7-4-7 activity distractor C, 7-5-1 activity distractor D).",
+      "Paragraph-number scaffolding in explanations: 7 of 8 replace decisions target 'Per X-X-X' preambles and document-structure language. This is the shard's dominant defect and is consistent across the question and activity formats.",
+      "Paragraph-number references in non-explanation fields: the source_lookup activity at 7-8-3 uses paragraph numbers in source_label, lookup_context, and instruction — fields that guide the student to the reference material. These teach document-location instead of identifying the operational rule by its subject.",
+      "One question stem contains parenthetical paragraph-number citations — the student must parse document coordinates to understand what is being compared.",
+      "All factual claims are source-accurate: no incorrect answers, no fabricated minima or phraseology, no missing conditions.",
+      "All three flashcards are clean, self-contained, and cover distinct retrieval targets without duplication. The two altitude-resume cards (7-8-5 and 7-9-7) test the correct airspace-class-specific triggers.",
+      "The comparative activity (7-8-3 vs 7-9-4) and the discrimination activity (7-9-4) engage distinct skills — conceptual comparison vs weight-tier application — and do not duplicate each other."
+    ],
+    "generation_guidance": [
+      "Remove all paragraph-number citations from explanations and activity content. State operational requirements directly — e.g., 'The controller must maintain radar separation until visual separation is provided' instead of 'Per 7-4-3c3, radar separation must be maintained.'",
+      "Do not fabricate safety rationales or policy purposes absent from the source. If the source states a requirement without explaining why, state the requirement alone. Do not add 'this ensures,' 'this prevents,' or 'the concern is.'",
+      "Keep each item's source basis strictly within the paragraph(s) assigned to the item. Do not draw comparisons with procedures from other paragraphs unless both paragraphs are included in the same shard's source blocks.",
+      "For source_lookup activities, remove paragraph/subparagraph identifiers from choices, task instructions, and lookup_context. The student should identify the operational procedure, not its document location.",
+      "Flashcards must state only facts directly supported by the source paragraph. Avoid comparisons with other airspace classes or rule sections unless the source paragraph itself makes that comparison.",
+      "When a flashcard front specifies a count (e.g., 'two conditions'), the back must contain exactly that many items with no additional qualifications.",
+      "Distractors must represent plausible but incorrect operational actions. Avoid internally contradictory distractors where the first clause negates the second.",
+      "For exact phraseology recall, flashcards using the exact source phraseology are appropriate. Ensure the front clearly signals this is a phraseology recall item.",
+      "The 7-5-8 source covers only the no-weather-reported case. All items for this paragraph must stay within that scope — do not compare against the weather-reported case from 7-5-7.",
+      "Write explanations that state the operating requirement directly. Begin with the airspace class, the controlling condition, or the duty — never with 'Per X-X-X' or 'Per paragraph X.'",
+      "For source_lookup activities, identify sources in source_label by their subject and airspace class (e.g., 'FAA Order JO 7110.65, Class C Separation and Class B Separation') rather than by paragraph number. Apply the same principle to lookup_context and instruction fields.",
+      "Keep question stems free of parenthetical paragraph-number citations. When comparing rules across airspace classes, name the airspace classes directly without attaching document coordinates.",
+      "Continue the pattern of plausible operational distractors. The distractors in this shard represent realistic controller mistakes — applying the wrong tier, assuming identical frameworks, or confusing Class C and Class B minima.",
+      "When an item covers a rule with multiple conditions or triggers (e.g., altitude-resume cards), verify that every condition from the source is captured. The existing flashcards at 7-8-5 and 7-9-7 do this correctly.",
+      "Do not add interpretive glosses not present in the source (e.g., 'Class C is about awareness and coordination,' 'the weight threshold creates two distinct separation tiers,' 'the Class B framework is more complex'). State the rule directly and let the comparison speak for itself."
+    ],
+    "shard_overviews": [
+      "Chapter 7 shard 1 has broadly accurate operational content but a systemic pattern of paragraph-location scaffolding in explanations, a few unsupported explanatory inferences, two items that draw on source material outside this shard's scope, and several flashcards with imprecise or extra-source content. All items have salvageable operational substance; no removals are required.",
+      "All 11 items in this shard are factually correct against their source blocks. No source-fidelity errors, no unsafe operational implications, and no items require removal. The dominant defect is systematic use of paragraph-number scaffolding in explanations — eight of the eleven items replace 'Per X-X-X' preamble language with direct operational statements. One question embeds paragraph numbers in its stem. One source_lookup activity propagates paragraph-number references across source_label, lookup_context, instruction, and explanation fields. The flashcards are clean and self-contained. Distractors are plausible and items test meaningful operational knowledge across the TRSA, Class C, and Class B domains."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "question",
+      "para_id": "7-1-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "explanation_quality",
+        "source_fidelity"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-1-3a,' 'the note explicitly states') and contains an unsupported inference that 'have numbers' 'refers only to having received the required landing data.' The source blocks state only that the controller may omit wind, runway, and altimeter when the pilot uses 'have numbers' and that this does not indicate ATIS receipt. The source does not positively define what 'have numbers' means.",
+      "source_basis": "7-1-3 body: 'This information may be omitted if contained in the ATIS broadcast and the pilot states the appropriate ATIS code or if the pilot uses the phrase, have numbers.' 7-1-3 note: 'Pilot use of have numbers does not indicate receipt of the ATIS broadcast.'",
+      "match": {
+        "question_text": "What does a pilot's use of the phrase 'have numbers' indicate regarding ATIS receipt and the controller's obligation to issue landing information?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What does a pilot's use of the phrase 'have numbers' indicate regarding ATIS receipt and the controller's obligation to issue landing information?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When the pilot uses the phrase 'have numbers,' the controller may omit wind, runway, and altimeter setting. However, use of 'have numbers' does not indicate receipt of the ATIS broadcast. The controller must still provide traffic information on a workload-permitting basis and advise the aircraft of the time or place to contact the tower on local control frequency.",
+          "choices": [
+            {
+              "text": "The pilot has received the ATIS broadcast and the controller may omit all landing information.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot has received the required landing data, but this does not indicate ATIS receipt; the controller may omit wind, runway, and altimeter.",
+              "is_correct": true
+            },
+            {
+              "text": "The pilot is reporting that they have the current METAR and the controller should issue only traffic information.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller must still issue full landing information because 'have numbers' is not a recognized phraseology.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "7-1-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The back states 'The pilot has received the required landing data (wind, runway, altimeter)' as if the source defines what 'have numbers' means. The source blocks state only the procedural consequence (controller may omit wind, runway, altimeter) and the negative clarification (does not indicate ATIS receipt). The back also omits that the controller must advise the time or place to contact the tower.",
+      "source_basis": "7-1-3 body: controller may omit wind, runway, altimeter when pilot uses 'have numbers.' 7-1-3 note: does not indicate ATIS receipt. 7-1-3 body item c: time or place to contact tower.",
+      "match": {
+        "front": "What does a pilot's use of the phrase 'have numbers' indicate to approach control?",
+        "back": "The pilot has received the required landing data (wind, runway, altimeter). It does NOT indicate receipt of the ATIS broadcast. The controller may omit wind, runway, and altimeter information but must still provide traffic information on a workload-permitting basis.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "What does a pilot's use of the phrase 'have numbers' permit the controller to do, and what does it NOT indicate?",
+          "back": "The controller may omit wind, runway, and altimeter setting. It does NOT indicate receipt of the ATIS broadcast. The controller must still provide traffic information on a workload-permitting basis and advise the time or place to contact the tower.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-2-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "The entire activity is structured around identifying which subparagraph (7-2-1a1 or 7-2-1a2) applies. The source_label, task, instruction, and correct choice all cite subparagraph identifiers and condition letters. This teaches document-location trivia rather than the operational distinction between tower-applied and pilot-applied visual separation.",
+      "source_basis": "7-2-1a1: tower visually observes aircraft, issues timely traffic advisories, and provides visual separation. 7-2-1a2: pilot sees another aircraft and is instructed to maintain visual separation from it.",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "source_kind": "conditional",
+          "source_label": "FAA Order JO 7110.65, Paragraph 7-2-1a1 and 7-2-1a2",
+          "lookup_context": [
+            "Tower-applied visual separation has six conditions under 7-2-1a1; pilot-applied visual separation has different procedures under 7-2-1a2."
+          ],
+          "task": "Determine under which subparagraph — tower-applied (7-2-1a1) or pilot-applied (7-2-1a2) — the controller in each scenario should operate, and identify the controlling condition.",
+          "instruction": "For each of the following operational situations, identify whether the controller should apply tower-applied visual separation (7-2-1a1) or pilot-applied visual separation (7-2-1a2), and cite the specific condition that controls.",
+          "question_text": "A terminal controller observes two aircraft on the tower radar display and wants to apply visual separation. The tower visually observes both aircraft. One pilot has been told about the other aircraft. Under which subparagraph does this fall, and what is the controlling requirement?",
+          "choices": [
+            {
+              "text": "Tower-applied (7-2-1a1): the tower visually observes the aircraft, issues timely traffic advisories, and provides visual separation — this matches (b).",
+              "is_correct": true
+            },
+            {
+              "text": "Pilot-applied (7-2-1a2): the pilot must see the other aircraft and be instructed to maintain visual separation.",
+              "is_correct": false
+            },
+            {
+              "text": "Neither; visual separation requires both the tower and the pilot to have the aircraft in sight simultaneously.",
+              "is_correct": false
+            },
+            {
+              "text": "Tower-applied (7-2-1a1) only if wake turbulence separation is also required.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "In this situation, the tower is applying visual separation by visually observing both aircraft and issuing traffic advisories. This is tower-applied visual separation under 7-2-1a1(b). The controller must also maintain communication with at least one aircraft (a) and issue control instructions as necessary (c). Pilot-applied visual separation under 7-2-1a2 requires the pilot to report the other aircraft in sight and accept responsibility for maintaining visual separation.",
+          "publication_id": "content-expansion-pass-02:chapter-07:activities:7-2-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Identify which type of visual separation is being applied and what the controlling requirement is.",
+            "question_text": "A terminal controller observes two aircraft on the tower radar display and wants to apply visual separation. The tower visually observes both aircraft and issues traffic advisories. One pilot has been told about the other aircraft. What type of visual separation is being used, and what is the controlling requirement?",
+            "choices": [
+              {
+                "text": "Tower-applied visual separation — the tower visually observes the aircraft, issues timely traffic advisories, and provides visual separation between the aircraft.",
+                "is_correct": true
+              },
+              {
+                "text": "Pilot-applied visual separation — the pilot must see the other aircraft and be instructed to maintain visual separation.",
+                "is_correct": false
+              },
+              {
+                "text": "Neither; visual separation requires both the tower and the pilot to have the aircraft in sight simultaneously.",
+                "is_correct": false
+              },
+              {
+                "text": "Tower-applied visual separation only if wake turbulence separation is also required.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "When the tower visually observes the aircraft, issues timely traffic advisories, and provides visual separation between aircraft, this is tower-applied visual separation. The controller must also maintain communication with at least one aircraft and issue control instructions as necessary. Pilot-applied visual separation requires the pilot to report the other aircraft in sight and accept responsibility for maintaining visual separation.",
+            "publication_id": "content-expansion-pass-02:chapter-07:activities:7-2-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "7-2-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "educational_coherence",
+        "format_fit"
+      ],
+      "problem": "The front asks for 'two conditions' but the back lists three items. Additionally, the second and third conditions ('wake turbulence separation required' and 'successive departures when routes preclude separation') are specific to tower-applied visual separation, while the front claims they apply 'regardless of other factors.' Only the super prohibition applies universally to all visual separation.",
+      "source_basis": "7-2-1 body: 'Visual separation is not authorized when the lead aircraft is a super.' 7-2-1a1(d): tower-applied not authorized between successive departures when routes/performance preclude separation. 7-2-1a1(e): tower-applied not authorized when wake turbulence separation is required.",
+      "match": {
+        "front": "Under what two conditions is visual separation NOT authorized regardless of other factors?",
+        "back": "1. When the lead aircraft is a super. 2. When wake turbulence separation is required (for tower-applied visual separation). Additionally, tower-applied visual separation is not authorized between successive departures when departure routes and/or aircraft performance preclude maintaining separation.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "When is visual separation NOT authorized?",
+          "back": "1. When the lead aircraft is a super (this applies to all visual separation). 2. For tower-applied visual separation: when wake turbulence separation is required, and between successive departures when departure routes or aircraft performance preclude maintaining separation.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-3-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "explanation_quality",
+        "source_fidelity"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-3-1c') and adds an unsupported safety rationale ('The concern is that visual see-and-avoid is compromised in darkness, so IFR separation must be maintained'). The source blocks state only the procedural prohibition and the exception — they do not explain why the restriction exists.",
+      "source_basis": "7-3-1c: 'Do not clear an aircraft to maintain VFR-on-top between sunset and sunrise to separate holding aircraft from each other or from en route aircraft unless restrictions are applied to ensure the appropriate IFR vertical separation.'",
+      "match": {
+        "question_text": "Between sunset and sunrise, may a controller use VFR-on-top to separate aircraft holding at the same fix from each other or from en route aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Between sunset and sunrise, may a controller use VFR-on-top to separate aircraft holding at the same fix from each other or from en route aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Between sunset and sunrise, a controller must not clear an aircraft to maintain VFR-on-top to separate holding aircraft from each other or from en route aircraft unless restrictions are applied to ensure the appropriate IFR vertical separation. Without such restrictions, VFR-on-top may not be used for this purpose during nighttime hours.",
+          "choices": [
+            {
+              "text": "Yes, VFR-on-top may be used to separate holding aircraft at any time provided the aircraft remain in VMC.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes, but only if both pilots report the other aircraft in sight and accept visual separation.",
+              "is_correct": false
+            },
+            {
+              "text": "No, unless restrictions are applied to ensure appropriate IFR vertical separation.",
+              "is_correct": true
+            },
+            {
+              "text": "No, because VFR-on-top is never authorized for holding aircraft regardless of time of day.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-3-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-3-1b, the five conditions are: (1) pilot requests the clearance, (2) pilot is informed of reported tops height...'). The operational content is correct; only the document-location framing needs removal.",
+      "source_basis": "7-3-1b: five conditions for climb-through-clouds VFR-on-top clearance: pilot request, inform pilot of tops height or no report available, ensure separation with alternative clearance when necessary, reclear VFR-on-top upon reaching.",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "source_kind": "procedure",
+          "source_label": "FAA Order JO 7110.65, Paragraph 7-3-1b",
+          "lookup_context": [
+            "Paragraph 7-3-1b lists five conditions that must be met before an aircraft may be cleared to climb through clouds to VFR-on-top."
+          ],
+          "task": "Determine which conditions from 7-3-1b are met in the scenario and whether the controller may issue the clearance.",
+          "instruction": "Review the five conditions in 7-3-1b. For the scenario below, identify which conditions are satisfied and whether the clearance may be issued.",
+          "question_text": "A pilot on an IFR flight plan at 6,000 feet requests a climb through an overcast layer to reach VFR-on-top conditions. The controller has a tops report of 9,000 feet. The controller issues a clearance to climb to 9,000 feet and report reaching VFR-on-top, with an alternative to maintain 9,000 feet and advise if not on top. Upon reaching 9,000 feet, the pilot reports VFR-on-top. Is the controller's handling correct?",
+          "choices": [
+            {
+              "text": "Yes — all five conditions are met: pilot requested, tops reported, alternative clearance issued, separation ensured, and aircraft recleared VFR-on-top upon reaching.",
+              "is_correct": true
+            },
+            {
+              "text": "No — the controller failed to issue the correct phraseology for the alternative clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "No — VFR-on-top through a cloud layer requires the pilot to be IFR-rated and current, which was not verified.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes — but only the first three conditions apply when tops are reported; conditions 4 and 5 are not required.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-3-1b, the five conditions are: (1) pilot requests the clearance, (2) pilot is informed of reported tops height, (3) pilot is informed if no tops report is available, (4) when necessary, separation is ensured by issuing an alternative clearance, and (5) aircraft is recleared VFR-on-top upon reaching. All five conditions are satisfied in this scenario.",
+          "publication_id": "content-expansion-pass-02:chapter-07:activities:7-3-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_lookup",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "source_kind": "procedure",
+            "source_label": "FAA Order JO 7110.65, Paragraph 7-3-1b",
+            "lookup_context": [
+              "Five conditions must be met before an aircraft may be cleared to climb through clouds to VFR-on-top: (1) pilot requests clearance, (2) pilot is informed of reported tops height or (3) that no tops report is available, (4) when necessary, separation is ensured by issuing an alternative clearance, and (5) aircraft is recleared VFR-on-top upon reaching."
+            ],
+            "task": "Determine which conditions are met in the scenario and whether the controller may issue the clearance.",
+            "instruction": "Review the five conditions for a climb-to-VFR-on-top clearance. For the scenario below, identify which conditions are satisfied and whether the clearance may be issued.",
+            "question_text": "A pilot on an IFR flight plan at 6,000 feet requests a climb through an overcast layer to reach VFR-on-top conditions. The controller has a tops report of 9,000 feet. The controller issues a clearance to climb to 9,000 feet and report reaching VFR-on-top, with an alternative to maintain 9,000 feet and advise if not on top. Upon reaching 9,000 feet, the pilot reports VFR-on-top. Is the controller's handling correct?",
+            "choices": [
+              {
+                "text": "Yes — all five conditions are met: pilot requested, tops reported, alternative clearance issued, separation ensured, and aircraft recleared VFR-on-top upon reaching.",
+                "is_correct": true
+              },
+              {
+                "text": "No — the controller failed to issue the correct phraseology for the alternative clearance.",
+                "is_correct": false
+              },
+              {
+                "text": "No — VFR-on-top through a cloud layer requires the pilot to be IFR-rated and current, which was not verified.",
+                "is_correct": false
+              },
+              {
+                "text": "Yes — but only the first three conditions apply when tops are reported; conditions 4 and 5 are not required.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "All five conditions are met: the pilot requested the clearance, the controller informed the pilot of the reported tops height at 9,000 feet, the alternative clearance was issued with 'maintain 9,000 feet and advise,' separation from other traffic is ensured, and the aircraft was recleared to maintain VFR-on-top upon reaching.",
+            "publication_id": "content-expansion-pass-02:chapter-07:activities:7-3-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-4-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-4-1a (towered airport),' 'Per 7-4-1b (non-towered airport)'). The operational content is accurate; only the document-structure framing needs removal.",
+      "source_basis": "7-4-1a: at towered airports, go-around aircraft may enter traffic pattern (no altitude assignment required) or proceed as instructed; ATC provides approved or visual separation. 7-4-1b: at non-towered airports, pilot lands as soon as possible or contacts ATC; ATC maintains approved separation.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Choose the response that correctly describes the controller's obligation.",
+          "question_text": "Compare the controller's responsibility during a go-around from a visual approach at an airport with an operating control tower versus at an airport without an operating control tower. Which statement is correct?",
+          "choices": [
+            {
+              "text": "At both types of airports, the pilot assumes full responsibility and the controller has no further separation obligations.",
+              "is_correct": false
+            },
+            {
+              "text": "At a towered airport, the aircraft may enter the traffic pattern or proceed as instructed, with ATC providing separation. At a non-towered airport, the pilot lands as soon as possible or contacts ATC.",
+              "is_correct": true
+            },
+            {
+              "text": "At a towered airport, the pilot must always execute the published missed approach procedure. At a non-towered airport, the pilot must contact ATC for an IFR clearance.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller must issue a go-around instruction with a specific altitude in both cases.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-4-1a (towered airport), the aircraft may be directed to enter the traffic pattern with no altitude assignment required, or proceed as instructed; ATC must provide approved or visual separation. Per 7-4-1b (non-towered airport), the pilot is expected to complete a landing as soon as possible or contact ATC; ATC must maintain approved separation. A visual approach has no missed approach segment — the go-around is handled as any go-around.",
+          "publication_id": "content-expansion-pass-02:chapter-07:activities:7-4-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Choose the response that correctly describes the controller's obligation.",
+            "question_text": "Compare the controller's responsibility during a go-around from a visual approach at an airport with an operating control tower versus at an airport without an operating control tower. Which statement is correct?",
+            "choices": [
+              {
+                "text": "At both types of airports, the pilot assumes full responsibility and the controller has no further separation obligations.",
+                "is_correct": false
+              },
+              {
+                "text": "At a towered airport, the aircraft may enter the traffic pattern or proceed as instructed, with ATC providing separation. At a non-towered airport, the pilot lands as soon as possible or contacts ATC.",
+                "is_correct": true
+              },
+              {
+                "text": "At a towered airport, the pilot must always execute the published missed approach procedure. At a non-towered airport, the pilot must contact ATC for an IFR clearance.",
+                "is_correct": false
+              },
+              {
+                "text": "The controller must issue a go-around instruction with a specific altitude in both cases.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "At an airport with an operating control tower, an aircraft executing a go-around from a visual approach may be directed to enter the traffic pattern with no altitude assignment required, or proceed as otherwise instructed. ATC must provide approved separation or visual separation from other IFR aircraft. At an airport without an operating control tower, the pilot is expected to complete a landing as soon as possible or contact ATC for further clearance; ATC must maintain approved separation. A visual approach has no missed approach segment — the go-around is handled as any go-around.",
+            "publication_id": "content-expansion-pass-02:chapter-07:activities:7-4-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-4-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality",
+        "answer_defensibility"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-4-3c'). Additionally, the correct answer is notably longer than all distractors, creating a length cue that may reveal the answer independently of knowledge. The answer covers two distinct operational conditions, which is inherently longer, but the explanation framing needs correction.",
+      "source_basis": "7-4-3c: an aircraft may be cleared for a visual approach when: (1) number one in sequence; (2) at towered airport, to follow preceding aircraft and pilot reports it in sight and is instructed to follow; or (3) at towered airport, pilot reports airport/runway in sight but not preceding aircraft — radar separation maintained until visual separation provided.",
+      "match": {
+        "question_text": "When another aircraft is already in the approach sequence ahead of it, under which conditions may a controller still clear a trailing aircraft for a visual approach?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When another aircraft is already in the approach sequence ahead of it, under which conditions may a controller clear a trailing aircraft for a visual approach at an airport with an operating control tower?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "At an airport with an operating control tower, a trailing aircraft may be cleared for a visual approach when: the pilot reports the preceding aircraft in sight and is instructed to follow it to the same runway, or the pilot reports the airport or runway in sight (but not the preceding aircraft) and radar separation is maintained until visual separation is provided. If the aircraft is number one in the approach sequence, no preceding aircraft constraint applies.",
+          "choices": [
+            {
+              "text": "Only when the pilot reports the preceding aircraft in sight and is instructed to follow.",
+              "is_correct": false
+            },
+            {
+              "text": "When the pilot reports the preceding aircraft in sight and is instructed to follow, OR when the pilot reports the airport/runway in sight and radar separation is maintained until visual separation is established.",
+              "is_correct": true
+            },
+            {
+              "text": "Whenever the pilot reports the airport in sight, regardless of preceding traffic and without any separation requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when approved separation exists and the aircraft is within 10 miles of the airport.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-4-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-4-4c1, for parallel runways separated by less than 2,500 feet...'). The operational content is correct; only the document-structure framing needs removal.",
+      "source_basis": "7-4-4c1: for parallel runways separated by less than 2,500 feet, unless approved separation is provided, an aircraft must report sighting a preceding aircraft on the adjacent parallel runway. When visual separation is applied, controllers must advise the succeeding aircraft to maintain visual separation.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Identify the correct statement about the requirement.",
+          "question_text": "A controller is conducting simultaneous visual approaches to parallel runways separated by 2,000 feet. An aircraft on approach to Runway 27L reports the preceding aircraft on approach to Runway 27R in sight. What must the controller do?",
+          "choices": [
+            {
+              "text": "Issue the visual approach clearance to Runway 27L without further action, since the pilot has reported the parallel traffic in sight.",
+              "is_correct": false
+            },
+            {
+              "text": "Advise the aircraft to maintain visual separation from the preceding aircraft on the adjacent parallel runway, because for runways separated by less than 2,500 feet, sighting the preceding aircraft triggers the visual separation instruction.",
+              "is_correct": true
+            },
+            {
+              "text": "Cancel the visual approach to Runway 27L because simultaneous visual approaches are never authorized to parallel runways separated by less than 2,500 feet.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue the clearance but vector the aircraft 30 degrees from the extended centerline to reduce overshoot potential.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-4-4c1, for parallel runways separated by less than 2,500 feet, unless approved separation is provided, an aircraft must report sighting a preceding aircraft making an approach to the adjacent parallel runway. When the pilot reports the other aircraft in sight and visual separation is applied, the controller must advise the succeeding aircraft to maintain visual separation. The 30-degree intercept angle mentioned in the notes relates to reducing overshoot potential but is not the controlling requirement here.",
+          "publication_id": "content-expansion-pass-02:chapter-07:activities:7-4-4:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Identify the correct statement about the requirement.",
+            "question_text": "A controller is conducting simultaneous visual approaches to parallel runways separated by 2,000 feet. An aircraft on approach to Runway 27L reports the preceding aircraft on approach to Runway 27R in sight. What must the controller do?",
+            "choices": [
+              {
+                "text": "Issue the visual approach clearance to Runway 27L without further action, since the pilot has reported the parallel traffic in sight.",
+                "is_correct": false
+              },
+              {
+                "text": "Advise the aircraft to maintain visual separation from the preceding aircraft on the adjacent parallel runway, because for runways separated by less than 2,500 feet, sighting the preceding aircraft triggers the visual separation instruction.",
+                "is_correct": true
+              },
+              {
+                "text": "Cancel the visual approach to Runway 27L because simultaneous visual approaches are never authorized to parallel runways separated by less than 2,500 feet.",
+                "is_correct": false
+              },
+              {
+                "text": "Issue the clearance but vector the aircraft 30 degrees from the extended centerline to reduce overshoot potential.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "For parallel runways separated by less than 2,500 feet, unless approved separation is provided, an aircraft must report sighting a preceding aircraft making an approach to the adjacent parallel runway. When the pilot reports the other aircraft in sight and visual separation is applied, controllers must advise the succeeding aircraft to maintain visual separation. The 30-degree intercept angle relates to overshoot reduction during vectoring and is not the controlling requirement when visual separation has been established.",
+            "publication_id": "content-expansion-pass-02:chapter-07:activities:7-4-4:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-4-7",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "explanation_quality",
+        "answer_defensibility"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-4-7, all five conditions are met: (a) pilot requested it...'). Distractor C is internally contradictory: it first claims the controller initiated the contact approach (false), then acknowledges the pilot did request it (contradicting the first claim), then asserts an unsupported 5-mile visibility requirement. This distractor is confusing and implausible.",
+      "source_basis": "7-4-7: five conditions for contact approach — (a) pilot requested, (b) ground visibility at least 1 statute mile, (c) published and functioning instrument approach, (d) approved separation applied with vertical at or below at least 1,000 feet below IFR traffic but not below MSA, (e) alternative clearance if weather impracticable.",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "source_kind": "procedure",
+          "source_label": "FAA Order JO 7110.65, Paragraph 7-4-7",
+          "lookup_context": [
+            "Paragraph 7-4-7 lists five conditions (a through e) that must be met before clearing an aircraft for a contact approach."
+          ],
+          "task": "Identify which condition from the source text is not met in each scenario, or confirm that all conditions are met.",
+          "instruction": "Review the conditions for a contact approach in 7-4-7a through 7-4-7e. Determine whether the controller may issue the clearance.",
+          "question_text": "An IFR aircraft requests a contact approach to a non-towered airport. The reported ground visibility is 3 miles. The airport has a published and functioning VOR approach. The controller applies approved separation from other IFR traffic by clearing the aircraft at or below 3,000 feet (1,000 feet below the lowest IFR traffic at 4,000 feet) but not below the MSA of 2,200 feet. May the contact approach be issued?",
+          "choices": [
+            {
+              "text": "Yes — all conditions are met: pilot requested, visibility at least 1 mile, functioning instrument approach published, approved separation applied with correct vertical separation, and no indication weather makes it impracticable.",
+              "is_correct": true
+            },
+            {
+              "text": "No — contact approaches may only be issued at airports with operating control towers.",
+              "is_correct": false
+            },
+            {
+              "text": "No — the controller initiated the contact approach, which is prohibited; only the pilot may request it. Since the pilot did request it, this is met, but the visibility must be at least 5 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "No — the vertical separation minimum for a contact approach is 2,000 feet below any IFR traffic, not 1,000 feet.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-4-7, all five conditions are met: (a) pilot requested it, (b) ground visibility at least 1 statute mile, (c) published standard or special instrument approach is functioning, (d) approved separation applied — vertical separation uses 'at or below an altitude which is at least 1,000 feet below any IFR traffic but not below the MSA prescribed in 14 CFR 91.119,' and (e) no indication weather makes it impracticable.",
+          "publication_id": "content-expansion-pass-02:chapter-07:activities:7-4-7:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_lookup",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "source_kind": "procedure",
+            "source_label": "FAA Order JO 7110.65, Paragraph 7-4-7",
+            "lookup_context": [
+              "Five conditions must be met before clearing an aircraft for a contact approach: (a) pilot requested it, (b) reported ground visibility at least 1 statute mile, (c) published and functioning standard or special instrument approach at the airport, (d) approved separation from other IFR or SVFR aircraft, (e) alternative clearance issued when weather makes contact approach impracticable."
+            ],
+            "task": "Identify which condition from the source text is not met in each scenario, or confirm that all conditions are met.",
+            "instruction": "Review the five conditions for a contact approach. Determine whether the controller may issue the clearance.",
+            "question_text": "An IFR aircraft requests a contact approach to a non-towered airport. The reported ground visibility is 3 miles. The airport has a published and functioning VOR approach. The controller applies approved separation from other IFR traffic by clearing the aircraft at or below 3,000 feet (1,000 feet below the lowest IFR traffic at 4,000 feet) but not below the MSA of 2,200 feet. May the contact approach be issued?",
+            "choices": [
+              {
+                "text": "Yes — all conditions are met: pilot requested, visibility at least 1 mile, functioning instrument approach published, approved separation applied with correct vertical separation, and no indication weather makes it impracticable.",
+                "is_correct": true
+              },
+              {
+                "text": "No — contact approaches may only be issued at airports with operating control towers.",
+                "is_correct": false
+              },
+              {
+                "text": "No — the reported ground visibility must be at least 5 statute miles for a contact approach.",
+                "is_correct": false
+              },
+              {
+                "text": "No — the vertical separation minimum for a contact approach is 2,000 feet below any IFR traffic, not 1,000 feet.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "All five conditions are met: the pilot requested the contact approach, the reported ground visibility of 3 miles exceeds the 1 statute mile minimum, a published VOR approach is functioning, approved separation is applied with the correct vertical separation (at or below an altitude at least 1,000 feet below any IFR traffic but not below the MSA), and there is no indication that weather conditions make the contact approach impracticable.",
+            "publication_id": "content-expansion-pass-02:chapter-07:activities:7-4-7:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-5-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "explanation_quality",
+        "answer_defensibility"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-5-1a, all six conditions are met...'). Distractor D is confusingly worded: it begins with 'Yes — but' suggesting a problem, then correctly states that an SVFR clearance is required when the ceiling is below 1,000 feet, which actually supports rather than refutes the correct answer. The distractor embeds a paragraph reference ('7-5-1b') and presents the correct operational relationship as if it were an objection.",
+      "source_basis": "7-5-1a: six conditions for SVFR authorization. 7-5-1b: do not authorize VFR operations beneath a broken or overcast ceiling when reported ceiling is less than 1,000 feet; SVFR clearance is required.",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "source_kind": "conditional",
+          "source_label": "FAA Order JO 7110.65, Paragraph 7-5-1a",
+          "lookup_context": [
+            "Paragraph 7-5-1a lists six numbered conditions under which SVFR operations are authorized."
+          ],
+          "task": "For each scenario, determine whether all required SVFR authorization conditions are met. Identify any missing condition by number and content.",
+          "instruction": "A pilot requests an SVFR clearance. Using the six conditions in 7-5-1a, determine whether the controller may authorize SVFR.",
+          "question_text": "A pilot of a fixed-wing aircraft requests an SVFR clearance to depart an airport within Class D surface area. The airport weather reports a 600-foot overcast ceiling and 2 miles visibility. The pilot states that VFR cannot be maintained. The airport is not listed in 14 CFR part 91, Appendix D. May the controller issue the SVFR clearance?",
+          "choices": [
+            {
+              "text": "Yes — all applicable conditions are met: not prohibited by Appendix D, within Class D surface area below 10,000 feet MSL, pilot requested, based on reported weather, and weather is below basic VFR minima.",
+              "is_correct": true
+            },
+            {
+              "text": "No — SVFR is never authorized for fixed-wing aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "No — the ceiling must be at least 1,000 feet before SVFR can be authorized.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes — but the controller must also apply the provisions of 7-5-1b which prohibits VFR operations beneath a broken or overcast ceiling when the reported ceiling is less than 1,000 feet; an SVFR clearance satisfies this requirement.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-5-1a, all six conditions are met: (1) the location is not prohibited by 14 CFR part 91 Appendix D, (2) N/A for fixed-wing, (3) within lateral boundaries of Class D surface area below 10,000 feet MSL, (4) pilot requested, (5) based on weather reported at the airport, and (6) N/A — weather IS reported. Per 7-5-1b, VFR operations beneath a broken or overcast ceiling when the reported ceiling is less than 1,000 feet require an SVFR clearance — which is exactly what the pilot is requesting. This condition actually triggers the need for SVFR rather than prohibiting it.",
+          "publication_id": "content-expansion-pass-02:chapter-07:activities:7-5-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_lookup",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "source_kind": "conditional",
+            "source_label": "FAA Order JO 7110.65, Paragraph 7-5-1a",
+            "lookup_context": [
+              "Six conditions must be met for SVFR authorization: (1) location not prohibited by 14 CFR part 91 Appendix D, (2) powered-lift handled as helicopters, (3) within lateral boundaries of Class B/C/D/E surface area below 10,000 feet MSL (not Class E extensions), (4) pilot requested, (5) based on weather reported at the airport, (6) if weather not reported, pilot advises VFR cannot be maintained and requests SVFR."
+            ],
+            "task": "Determine whether all required SVFR authorization conditions are met in each scenario.",
+            "instruction": "A pilot requests an SVFR clearance. Using the six required conditions, determine whether the controller may authorize SVFR.",
+            "question_text": "A pilot of a fixed-wing aircraft requests an SVFR clearance to depart an airport within Class D surface area. The airport weather reports a 600-foot overcast ceiling and 2 miles visibility. The pilot states that VFR cannot be maintained. The airport is not listed in 14 CFR part 91, Appendix D. May the controller issue the SVFR clearance?",
+            "choices": [
+              {
+                "text": "Yes — all applicable conditions are met: not prohibited by Appendix D, within Class D surface area below 10,000 feet MSL, pilot requested, based on reported weather, and weather is below basic VFR minima.",
+                "is_correct": true
+              },
+              {
+                "text": "No — SVFR is never authorized for fixed-wing aircraft.",
+                "is_correct": false
+              },
+              {
+                "text": "No — the ceiling must be at least 1,000 feet before SVFR can be authorized.",
+                "is_correct": false
+              },
+              {
+                "text": "No — the reported ceiling below 1,000 feet prohibits all operations; VFR and SVFR are both unavailable.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "All applicable conditions for SVFR authorization are met: the airport is not prohibited by 14 CFR part 91 Appendix D, the aircraft is within the lateral boundaries of a Class D surface area below 10,000 feet MSL, the pilot requested SVFR, weather is reported at the airport, and the reported ceiling of 600 feet is below basic VFR minima. When the reported ceiling is less than 1,000 feet, VFR operations beneath the ceiling are not authorized — an SVFR clearance is required.",
+            "publication_id": "content-expansion-pass-02:chapter-07:activities:7-5-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-5-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-5-3a, only nonradar or visual separation may be applied between SVFR fixed-wing aircraft and IFR aircraft. Radar separation is not authorized due to the cloud clearance and 1-mile flight visibility requirements. Per 7-5-3b, SVFR helicopters may use nonradar, visual, or IFR radar separation.'). The operational content is correct.",
+      "source_basis": "7-5-3a: nonradar or visual separation between SVFR fixed-wing aircraft, SVFR fixed-wing and helicopters, and SVFR fixed-wing and IFR aircraft. 7-5-3b: nonradar, visual, or IFR radar separation between SVFR helicopters and between SVFR helicopters and IFR aircraft.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Identify the correct statement about the separation requirement.",
+          "question_text": "Compare the SVFR separation requirements for a fixed-wing aircraft versus a helicopter. Which correctly states the difference?",
+          "choices": [
+            {
+              "text": "SVFR fixed-wing aircraft may be separated using radar, visual, or nonradar separation, while helicopters may only use visual separation.",
+              "is_correct": false
+            },
+            {
+              "text": "SVFR fixed-wing aircraft require nonradar or visual separation only; SVFR helicopters may use nonradar, visual, or IFR radar separation.",
+              "is_correct": true
+            },
+            {
+              "text": "Both SVFR fixed-wing aircraft and helicopters may use any separation method including radar separation.",
+              "is_correct": false
+            },
+            {
+              "text": "SVFR fixed-wing aircraft require radar separation only; helicopters may use visual separation only.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-5-3a, only nonradar or visual separation may be applied between SVFR fixed-wing aircraft and IFR aircraft. Radar separation is not authorized due to the cloud clearance and 1-mile flight visibility requirements. Per 7-5-3b, SVFR helicopters may use nonradar, visual, or IFR radar separation. This is a critical operational distinction — controllers must know which separation methods are available based on the aircraft category operating under SVFR.",
+          "publication_id": "content-expansion-pass-02:chapter-07:activities:7-5-3:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Identify the correct statement about the separation requirement.",
+            "question_text": "Compare the SVFR separation requirements for a fixed-wing aircraft versus a helicopter. Which correctly states the difference?",
+            "choices": [
+              {
+                "text": "SVFR fixed-wing aircraft may be separated using radar, visual, or nonradar separation, while helicopters may only use visual separation.",
+                "is_correct": false
+              },
+              {
+                "text": "SVFR fixed-wing aircraft require nonradar or visual separation only; SVFR helicopters may use nonradar, visual, or IFR radar separation.",
+                "is_correct": true
+              },
+              {
+                "text": "Both SVFR fixed-wing aircraft and helicopters may use any separation method including radar separation.",
+                "is_correct": false
+              },
+              {
+                "text": "SVFR fixed-wing aircraft require radar separation only; helicopters may use visual separation only.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Only nonradar or visual separation may be applied between SVFR fixed-wing aircraft and each other or IFR aircraft. Radar separation is not authorized for SVFR fixed-wing operations because those aircraft must maintain 1-mile flight visibility and remain clear of clouds. SVFR helicopters may use nonradar, visual, or IFR radar separation. This is a critical operational distinction — controllers must know which separation methods are available based on the aircraft category operating under SVFR.",
+            "publication_id": "content-expansion-pass-02:chapter-07:activities:7-5-3:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-5-8",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "context"
+      ],
+      "problem": "The question compares controller responses for pilot-reported flight visibility below 1 mile versus officially reported ground visibility below 1 mile. The correct answer references phraseology ('(Airport) VISIBILITY LESS THAN 1 MILE. ADVISE INTENTIONS') and procedures for officially-reported visibility that are from paragraph 7-5-7, which is not in this shard's source blocks. The item's source basis crosses beyond this shard's scope. The question must be limited to 7-5-8 content: what to do when weather is NOT reported and the pilot advises flight visibility is less than 1 mile.",
+      "source_basis": "7-5-8: when weather conditions are not reported at an airport and pilot advises flight visibility is less than 1 mile: (a) inform departing aircraft clearance cannot be issued, (b) inform arriving aircraft outside surface area clearance cannot be issued unless emergency exists, (c) request intentions of arriving aircraft within surface area.",
+      "match": {
+        "question_text": "How does the controller's response differ when handling a pilot-reported flight visibility below 1 mile at an airport with no weather reporting, compared to officially reported ground visibility below 1 mile at an airport with weather reporting?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When weather conditions are not reported at an airport and a fixed-wing pilot on an SVFR flight advises that flight visibility is less than 1 mile, how does the controller handle an arriving aircraft already operating within the surface area?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When weather conditions are not reported at an airport and a pilot advises flight visibility is less than 1 mile, the controller must request the intentions of an arriving aircraft already operating within the Class B, Class C, Class D, or Class E surface area. The controller does not deny the clearance outright as with departing or outside-surface-area aircraft. The pilot is best suited to determine the action since flight visibility may differ from ground visibility and the pilot may need to exercise emergency authority to land.",
+          "choices": [
+            {
+              "text": "Request the pilot's intentions.",
+              "is_correct": true
+            },
+            {
+              "text": "Inform the pilot that a clearance cannot be issued under any circumstances.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue an SVFR clearance without restriction, since the pilot is already in the surface area.",
+              "is_correct": false
+            },
+            {
+              "text": "Instruct the aircraft to exit the surface area immediately and contact the nearest FSS.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-5-8",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "context"
+      ],
+      "problem": "The activity compares controller responses between an airport with officially reported ground visibility below 1 mile and an airport with no reported weather and pilot-reported flight visibility below 1 mile. The officially-reported side of the comparison draws on content from 7-5-7, which is not in this shard's source blocks. The activity must be limited to 7-5-8 content: what to do when weather is NOT reported and the pilot advises flight visibility is less than 1 mile.",
+      "source_basis": "7-5-8: three distinct responses based on aircraft situation when no weather reported and flight visibility below 1 mile: (a) departing — clearance cannot be issued, (b) arriving outside surface area — clearance cannot be issued unless emergency, (c) arriving within surface area — request intentions.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Choose the statement that correctly identifies the operational difference.",
+          "question_text": "A controller is handling a fixed-wing SVFR aircraft in low visibility at two different airports. At Airport A, the ground visibility is officially reported as 3/4 mile. At Airport B, no weather is reported and the pilot advises that flight visibility is 3/4 mile. Both aircraft are inside their respective surface areas. What is the key operational trigger that distinguishes how the controller handles each aircraft?",
+          "choices": [
+            {
+              "text": "The distinction is based on aircraft type: helicopters receive different treatment than fixed-wing aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "An official measurement triggers an advisory citing the reported value; a pilot's estimate triggers a request for intentions without an official measurement.",
+              "is_correct": true
+            },
+            {
+              "text": "The distinction is based on arrival versus departure: arriving aircraft receive different treatment than departing aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "There is no operational difference; the controller handles both aircraft identically.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "When ground visibility is officially reported below 1 mile at the airport, the controller uses the specific phraseology '(Airport) VISIBILITY LESS THAN 1 MILE. ADVISE INTENTIONS' and informs the pilot of the reported value. When weather is not reported and the pilot advises flight visibility is below 1 mile, the controller requests the pilot's intentions without citing an official visibility value. The key distinction is the source and nature of the visibility information — official ground report versus pilot-reported flight visibility.",
+          "publication_id": "content-expansion-pass-02:chapter-07:activities:7-5-8:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Choose the statement that correctly identifies the appropriate controller action.",
+            "question_text": "A controller is handling three fixed-wing SVFR aircraft at an airport where no weather is reported. All three pilots advise flight visibility is less than 1 mile. Aircraft A is departing. Aircraft B is arriving and is currently 15 miles from the airport, outside the Class D surface area. Aircraft C is arriving and is already inside the Class D surface area. What is the correct controller response for each?",
+            "choices": [
+              {
+                "text": "A — clearance cannot be issued. B — clearance cannot be issued unless an emergency exists. C — request intentions.",
+                "is_correct": true
+              },
+              {
+                "text": "All three — clearance cannot be issued under any circumstances.",
+                "is_correct": false
+              },
+              {
+                "text": "All three — request intentions and issue SVFR clearances on a workload-permitting basis.",
+                "is_correct": false
+              },
+              {
+                "text": "A — request intentions. B — clearance cannot be issued. C — clearance cannot be issued unless an emergency exists.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "When weather is not reported and the pilot advises flight visibility below 1 mile: departing aircraft must be informed that a clearance cannot be issued. Arriving aircraft outside the surface area must be informed that a clearance cannot be issued unless an emergency exists. Arriving aircraft already within the surface area — the controller requests intentions. The pilot is best suited to determine the action since flight visibility may differ from ground conditions and the pilot may need to exercise emergency authority.",
+            "publication_id": "content-expansion-pass-02:chapter-07:activities:7-5-8:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-6-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-6-1a, basic radar services for VFR aircraft must include: (1) safety alerts...'). The operational content is correct.",
+      "source_basis": "7-6-1a: basic radar services for VFR aircraft must include safety alerts, traffic advisories, limited radar vectoring when requested, and sequencing where procedures established or covered by LOA.",
+      "match": {
+        "activity_type": "ordering_or_list",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 1,
+          "instruction": "Select the choice that lists all four required basic radar services for VFR aircraft in the correct order as specified.",
+          "question_text": "What are the four components of basic radar services for VFR aircraft that a terminal controller must provide?",
+          "choices": [
+            {
+              "text": "Safety alerts, traffic advisories, limited radar vectoring when requested, and sequencing where procedures exist.",
+              "is_correct": true
+            },
+            {
+              "text": "Traffic advisories, safety alerts, approach clearances, and landing sequence assignments.",
+              "is_correct": false
+            },
+            {
+              "text": "Radar identification, speed adjustments, vectoring for approaches, and traffic advisories.",
+              "is_correct": false
+            },
+            {
+              "text": "Sequencing, separation from IFR aircraft, altitude assignments, and traffic advisories.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-6-1a, basic radar services for VFR aircraft must include: (1) safety alerts, (2) traffic advisories, (3) limited radar vectoring when requested by the pilot, and (4) sequencing at locations where procedures have been established and/or when covered by a LOA. These are the four mandatory components; approach clearances, landing sequence assignments, and IFR separation are not part of basic radar services for VFR aircraft.",
+          "publication_id": "content-expansion-pass-02:chapter-07:activities:7-6-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "ordering_or_list",
+          "difficulty": 1,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 1,
+            "instruction": "Select the choice that lists all four required basic radar services for VFR aircraft.",
+            "question_text": "What are the four components of basic radar services for VFR aircraft that a terminal controller must provide?",
+            "choices": [
+              {
+                "text": "Safety alerts, traffic advisories, limited radar vectoring when requested, and sequencing where procedures exist.",
+                "is_correct": true
+              },
+              {
+                "text": "Traffic advisories, safety alerts, approach clearances, and landing sequence assignments.",
+                "is_correct": false
+              },
+              {
+                "text": "Radar identification, speed adjustments, vectoring for approaches, and traffic advisories.",
+                "is_correct": false
+              },
+              {
+                "text": "Sequencing, separation from IFR aircraft, altitude assignments, and traffic advisories.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Basic radar services for VFR aircraft must include: safety alerts, traffic advisories, limited radar vectoring when requested by the pilot, and sequencing at locations where procedures have been established or when covered by a letter of agreement. These four components are mandatory. Approach clearances, landing sequence assignments, altitude assignments, and IFR separation are not part of basic radar services for VFR aircraft.",
+            "publication_id": "content-expansion-pass-02:chapter-07:activities:7-6-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-6-12",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-6-12, when the tower is not in operation, the controller must provide...' and 'Assigning a landing sequence is explicitly prohibited per 7-6-12b'). The operational content is correct.",
+      "source_basis": "7-6-12: when tower is not in operation, provide wind direction and velocity, traffic information, and inform when radar service terminated. Do not assign landing sequence.",
+      "match": {
+        "question_text": "When a control tower is closed, which services is the approach controller authorized to provide to VFR aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When a control tower is closed, which services is the approach controller authorized to provide to VFR aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When the control tower is not in operation, the approach controller must provide wind direction and velocity, traffic information, and notification when radar service is terminated. The controller must not assign a landing sequence — the tower normally controls the landing order, and without an operating tower, this function is not transferred to approach control.",
+          "choices": [
+            {
+              "text": "Issue wind direction and velocity information, provide traffic information, and inform aircraft when radar service is terminated.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue wind direction and velocity information, assign a landing sequence, and provide traffic information.",
+              "is_correct": false
+            },
+            {
+              "text": "Assign a landing sequence, issue approach clearances, and provide traffic information.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate all services and instruct aircraft to contact the nearest FSS for advisories.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-6-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-6-3, an aircraft sighted by the local controller at the time of first radio contact may be positioned in the landing sequence only after coordination with approach control.'). The operational content is correct.",
+      "source_basis": "7-6-3: an aircraft sighted by the local controller at the time of first radio contact may be positioned in the landing sequence after coordination with approach control.",
+      "match": {
+        "question_text": "What must a local controller accomplish before positioning a visually sighted VFR aircraft into the landing sequence?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What must a local controller accomplish before positioning a visually sighted VFR aircraft into the landing sequence?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "An aircraft sighted by the local controller at the time of first radio contact may be positioned in the landing sequence only after coordination with approach control. The controller cannot unilaterally insert the aircraft into the sequence — coordination with the radar facility is a prerequisite.",
+          "choices": [
+            {
+              "text": "Verify that the aircraft has received the current ATIS broadcast.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate with approach control before positioning the aircraft in the landing sequence.",
+              "is_correct": true
+            },
+            {
+              "text": "Confirm the aircraft's transponder is operating and squawking the assigned code.",
+              "is_correct": false
+            },
+            {
+              "text": "No additional step is required; the local controller may position any sighted aircraft at their discretion.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-6-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-6-7b, when a position is not available in the approach sequence for the runway in use, the controller directs the VFR aircraft to a point near the airport to hold.'). The operational content is correct.",
+      "source_basis": "7-6-7b: direct a VFR aircraft to a point near the airport to hold when a position is not available in the approach sequence for the runway in use. Aircraft may be vectored to another runway after coordination with the tower.",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "source_kind": "procedure",
+          "source_label": "FAA Order JO 7110.65, Paragraph 7-6-7a and 7-6-7b",
+          "lookup_context": [
+            "Paragraph 7-6-7a requires radar contact before instructing a VFR aircraft to enter the traffic pattern or vectoring to the approach sequence. Paragraph 7-6-7b provides for holding when no position is available."
+          ],
+          "task": "Identify the required controller action based on the conditions described.",
+          "instruction": "Use the procedures in 7-6-7 to determine the correct controller action.",
+          "question_text": "A VFR aircraft calls approach control for sequencing to the primary airport. The approach sequence for the active runway is full. The controller has radar contact with the aircraft. What should the controller do?",
+          "choices": [
+            {
+              "text": "Vector the aircraft into the approach sequence anyway, fitting it between two IFR arrivals.",
+              "is_correct": false
+            },
+            {
+              "text": "Direct the aircraft to a point near the airport to hold until a position becomes available in the approach sequence.",
+              "is_correct": true
+            },
+            {
+              "text": "Instruct the aircraft to contact tower directly and coordinate with approach control for landing sequence.",
+              "is_correct": false
+            },
+            {
+              "text": "Terminate radar service and have the aircraft proceed VFR to the airport.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-6-7b, when a position is not available in the approach sequence for the runway in use, the controller directs the VFR aircraft to a point near the airport to hold. The aircraft may be vectored to another runway after coordination with the tower. This is the appropriate action — not forcing the aircraft into a full sequence or terminating service prematurely.",
+          "publication_id": "content-expansion-pass-02:chapter-07:activities:7-6-7:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_lookup",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "source_kind": "procedure",
+            "source_label": "FAA Order JO 7110.65, Paragraph 7-6-7",
+            "lookup_context": [
+              "When radar contact is established with a VFR aircraft, the controller may instruct it to enter the traffic pattern or vector it to a position in the approach sequence. When no position is available in the approach sequence, the aircraft must be directed to hold near the airport."
+            ],
+            "task": "Identify the required controller action based on the conditions described.",
+            "instruction": "Use the sequencing procedures to determine the correct controller action.",
+            "question_text": "A VFR aircraft calls approach control for sequencing to the primary airport. The approach sequence for the active runway is full. The controller has radar contact with the aircraft. What should the controller do?",
+            "choices": [
+              {
+                "text": "Vector the aircraft into the approach sequence anyway, fitting it between two IFR arrivals.",
+                "is_correct": false
+              },
+              {
+                "text": "Direct the aircraft to a point near the airport to hold until a position becomes available in the approach sequence.",
+                "is_correct": true
+              },
+              {
+                "text": "Instruct the aircraft to contact tower directly and coordinate with approach control for landing sequence.",
+                "is_correct": false
+              },
+              {
+                "text": "Terminate radar service and have the aircraft proceed VFR to the airport.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "When a position is not available in the approach sequence for the runway in use, the controller directs the VFR aircraft to a point near the airport to hold. The aircraft may be vectored to another runway after coordination with the tower. Forcing the aircraft into a full sequence or terminating radar service prematurely is not the correct action.",
+            "publication_id": "content-expansion-pass-02:chapter-07:activities:7-6-7:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-6-8",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-6-8b, the aircraft may be instructed to contact the tower prior to the tower being advised of the aircraft's position only when both conditions are met: (1) the tower advises the aircraft is in sight, and (2) space is available in the landing sequence.'). The operational content is correct.",
+      "source_basis": "7-6-8b: aircraft may be instructed to contact the tower prior to the tower being advised of position provided: (1) tower advises aircraft is in sight, and (2) space is available in the landing sequence.",
+      "match": {
+        "question_text": "Under what two conditions may an approach controller instruct a VFR aircraft to contact the tower before advising the tower of the aircraft's position?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Under what two conditions may an approach controller instruct a VFR aircraft to contact the tower before advising the tower of the aircraft's position?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The approach controller may instruct a VFR aircraft to contact the tower before advising the tower of the aircraft's position only when both conditions are met: the tower advises the aircraft is in sight, and space is available in the landing sequence. Both conditions must be satisfied for early transfer of communications.",
+          "choices": [
+            {
+              "text": "When the aircraft is within 5 miles of the airport and the tower frequency is not congested.",
+              "is_correct": false
+            },
+            {
+              "text": "When both conditions are met: the tower advises the aircraft is in sight AND space is available in the landing sequence.",
+              "is_correct": true
+            },
+            {
+              "text": "When the tower has a BRITE or TDW display showing the aircraft's position.",
+              "is_correct": false
+            },
+            {
+              "text": "Early transfer is never authorized; the tower must always be advised of position first.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-7-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-7-1, TRSA procedures are applied IN ADDITION TO the basic services described in Chapter 7, Section 6 (Basic Radar Service to VFR Aircraft - Terminal).'). The operational content is correct.",
+      "source_basis": "7-7-1: apply TRSA procedures within the designated TRSA in addition to the basic services described in Chapter 7, Section 6, Basic Radar Service to VFR Aircraft - Terminal.",
+      "match": {
+        "question_text": "Does TRSA service replace the basic radar services for VFR aircraft, or is it applied in addition to them?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Does TRSA service replace the basic radar services for VFR aircraft, or is it applied in addition to them?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "TRSA procedures are applied in addition to the basic radar services for VFR aircraft. TRSA is an overlay — it does not replace basic radar services. The controller must provide both the basic services (safety alerts, traffic advisories, limited radar vectoring, sequencing) and the additional TRSA procedures within the designated TRSA.",
+          "choices": [
+            {
+              "text": "Yes, TRSA procedures replace basic radar services entirely within the TRSA boundary.",
+              "is_correct": false
+            },
+            {
+              "text": "No, TRSA procedures are applied in addition to the basic radar services.",
+              "is_correct": true
+            },
+            {
+              "text": "TRSA procedures replace basic services only for participating VFR aircraft; non-participating aircraft still receive basic services.",
+              "is_correct": false
+            },
+            {
+              "text": "TRSA and basic services are identical; the controller may choose either one.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-7-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-7-2, the controller must inform the pilot when to expect further clearance when VFR aircraft are held either inside OR outside the TRSA.'). The operational content is correct.",
+      "source_basis": "7-7-2: inform the pilot when to expect further clearance when VFR aircraft are held either inside or outside the TRSA.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Choose the statement that correctly describes the controller's obligation.",
+          "question_text": "A controller is holding two VFR aircraft in the TRSA — one inside the TRSA boundary and one outside the TRSA boundary. Does the controller have the same obligation to issue an expected further clearance time for both aircraft?",
+          "choices": [
+            {
+              "text": "The controller must inform both aircraft when to expect further clearance, because 7-7-2 requires EFC issuance when VFR aircraft are held either inside or outside the TRSA.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller must inform only the aircraft inside the TRSA; the aircraft outside the TRSA does not receive TRSA services.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller must issue an EFC only if the delay exceeds 10 minutes, regardless of where the aircraft is holding.",
+              "is_correct": false
+            },
+            {
+              "text": "EFC issuance is optional in a TRSA; the pilot must request it.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-7-2, the controller must inform the pilot when to expect further clearance when VFR aircraft are held either inside OR outside the TRSA. The obligation extends to both locations. This is a specific TRSA requirement that differs from some other airspace types where holding procedures may be less prescriptive.",
+          "publication_id": "content-expansion-pass-02:chapter-07:activities:7-7-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Choose the statement that correctly describes the controller's obligation.",
+            "question_text": "A controller is holding two VFR aircraft in the TRSA — one inside the TRSA boundary and one outside the TRSA boundary. Does the controller have the same obligation to issue an expected further clearance time for both aircraft?",
+            "choices": [
+              {
+                "text": "The controller must inform both aircraft when to expect further clearance, because the requirement applies when VFR aircraft are held either inside or outside the TRSA.",
+                "is_correct": true
+              },
+              {
+                "text": "The controller must inform only the aircraft inside the TRSA; the aircraft outside the TRSA does not receive TRSA services.",
+                "is_correct": false
+              },
+              {
+                "text": "The controller must issue an EFC only if the delay exceeds 10 minutes, regardless of where the aircraft is holding.",
+                "is_correct": false
+              },
+              {
+                "text": "EFC issuance is optional in a TRSA; the pilot must request it.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The controller must inform the pilot when to expect further clearance when VFR aircraft are held either inside or outside the TRSA. The obligation extends to both locations. This requirement applies regardless of the delay duration and is not optional.",
+            "publication_id": "content-expansion-pass-02:chapter-07:activities:7-7-2:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-7-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "explanation_quality"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per 7-7-3, TRSA separation may be achieved by: (a) visual separation, (b) 500 feet vertical separation, or (c) target resolution — except when ISR is being displayed.'). The operational content is correct.",
+      "source_basis": "7-7-3: separate participating VFR aircraft from IFR and other participating VFR by: (a) visual separation, (b) 500 feet vertical separation, or (c) target resolution except when ISR is being displayed.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Select the choice that correctly identifies which separation method is available under which condition.",
+          "question_text": "A TRSA controller needs to separate a participating VFR aircraft from an IFR aircraft. The controller is using a display that shows Increased Situation Recognition (ISR). Which separation methods are available and which is affected by ISR?",
+          "choices": [
+            {
+              "text": "Visual separation and 500 feet vertical separation remain available. Target resolution is available except when ISR is being displayed.",
+              "is_correct": true
+            },
+            {
+              "text": "All three methods (visual, vertical, target resolution) are equally available regardless of ISR status.",
+              "is_correct": false
+            },
+            {
+              "text": "Only visual separation is available when ISR is being displayed.",
+              "is_correct": false
+            },
+            {
+              "text": "Target resolution is only available when ISR is being displayed.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-7-3, TRSA separation may be achieved by: (a) visual separation, (b) 500 feet vertical separation, or (c) target resolution — except when ISR is being displayed. ISR affects only the third method (target resolution). The other two methods remain fully available.",
+          "publication_id": "content-expansion-pass-02:chapter-07:activities:7-7-3:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Select the choice that correctly identifies which separation method is available under which condition.",
+            "question_text": "A TRSA controller needs to separate a participating VFR aircraft from an IFR aircraft. The controller is using a display that shows Increased Situation Recognition (ISR). Which separation methods are available and which is affected by ISR?",
+            "choices": [
+              {
+                "text": "Visual separation and 500 feet vertical separation remain available. Target resolution is available except when ISR is being displayed.",
+                "is_correct": true
+              },
+              {
+                "text": "All three methods (visual, vertical, target resolution) are equally available regardless of ISR status.",
+                "is_correct": false
+              },
+              {
+                "text": "Only visual separation is available when ISR is being displayed.",
+                "is_correct": false
+              },
+              {
+                "text": "Target resolution is only available when ISR is being displayed.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Three separation methods are available for participating VFR aircraft in a TRSA: visual separation, 500 feet vertical separation, and target resolution. Target resolution is not available when Increased Situation Recognition (ISR) is being displayed. Visual separation and 500 feet vertical separation remain fully available regardless of ISR status.",
+            "publication_id": "content-expansion-pass-02:chapter-07:activities:7-7-3:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "7-7-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The back includes a comparison with Class B and Class C helicopter separation exceptions ('This differs from Class B and Class C helicopter exceptions which specify separation relief only from IFR helicopters (Class C) or from VFR/IFR helicopters (Class B)'). This comparison is not present in the 7-7-4 source blocks. The source states only the TRSA rule: helicopters and powered-lift need not be separated from each other, and traffic information must be exchanged.",
+      "source_basis": "7-7-4: helicopters and powered-lift aircraft need not be separated from other helicopters or powered-lift aircraft. Traffic information must be exchanged, as necessary.",
+      "match": {
+        "front": "In TRSA operations, what separation is required between two VFR helicopters?",
+        "back": "Helicopters and powered-lift aircraft need not be separated from other helicopters or powered-lift aircraft. Traffic information must be exchanged as necessary. This differs from Class B and Class C helicopter exceptions which specify separation relief only from IFR helicopters (Class C) or from VFR/IFR helicopters (Class B).",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "In TRSA operations, what separation is required between two VFR helicopters?",
+          "back": "Helicopters and powered-lift aircraft need not be separated from other helicopters or powered-lift aircraft. Traffic information must be exchanged, as necessary.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-7-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Explanation begins with 'Per 7-7-5c,' teaching paragraph-location instead of stating the operating requirement directly.",
+      "source_basis": "7-7-5c: 'When necessary to assign an altitude for separation purposes to VFR aircraft contrary to 14 CFR section 91.159, advise the aircraft to resume altitudes appropriate for the direction of flight when the altitude assignment is no longer needed for separation or when leaving the TRSA.' Phraseology: 'RESUME APPROPRIATE VFR ALTITUDES.'",
+      "match": {
+        "question_text": "When a VFR aircraft in a TRSA is assigned an altitude contrary to 14 CFR 91.159 for separation purposes, when must the controller instruct the aircraft to resume appropriate VFR altitudes?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When a VFR aircraft in a TRSA is assigned an altitude contrary to 14 CFR 91.159 for separation purposes, when must the controller instruct the aircraft to resume appropriate VFR altitudes?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When a VFR aircraft in a TRSA is assigned an altitude contrary to 14 CFR 91.159 for separation purposes, the controller must advise the aircraft to resume altitudes appropriate for the direction of flight when the altitude assignment is no longer needed for separation or when leaving the TRSA. The prescribed phraseology is RESUME APPROPRIATE VFR ALTITUDES.",
+          "choices": [
+            {
+              "text": "Immediately after issuing the altitude assignment, so the pilot knows it is temporary.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "When the altitude is no longer needed for separation or when the aircraft leaves the TRSA.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Only when the pilot requests to return to a standard VFR cruising altitude.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Never, because altitude assignments for separation override 14 CFR 91.159 permanently.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-8-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Explanation begins with 'Per 7-8-1' and uses document-structure language 'The paragraph explicitly states' and an interpretive gloss 'Class C is about awareness and coordination, not exclusion.' The source states the purpose directly; the explanation should do the same without scaffolding or invented framing.",
+      "source_basis": "7-8-1: 'Class C services are designed to keep ATC informed of all aircraft within Class C airspace, not to exclude operations. Two-way radio communications and operational transponder are normally required for operations within Class C airspace, but operations without radio communications or transponder can be conducted by LOA, facility directive, or special arrangement with Class C airspace controlling facility.'",
+      "match": {
+        "question_text": "What is the operational purpose of Class C services?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the operational purpose of Class C services?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Class C services are designed to keep ATC informed of all aircraft within Class C airspace, not to exclude operations. Two-way radio communications and an operational transponder are normally required, but operations without them can be conducted through a letter of agreement, facility directive, or special arrangement with the Class C controlling facility.",
+          "choices": [
+            {
+              "text": "To exclude all VFR aircraft from the airspace surrounding primary airports.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "To keep ATC informed of all aircraft within Class C airspace, not to exclude operations.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "To provide full IFR separation services to all aircraft regardless of flight rules.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "To ensure that only aircraft with two-way radio communications and transponders may ever operate in the area.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-8-3",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Source_label, lookup_context, instruction, and explanation all reference paragraphs by number (7-8-3, 7-9-4) rather than identifying sources by airspace class and subject. The explanation begins with 'Per 7-8-3' and 'Per 7-9-4' and ends with the interpretive gloss 'The Class B framework is more complex with weight as the differentiator.' The instruction tells the student to 'Review the separation methods in 7-8-3 (Class C) and 7-9-4 (Class B)' — teaching document-location alongside operational comparison.",
+      "source_basis": "7-8-3 lists three separation methods for VFR from IFR in Class C: visual, 500 feet vertical, or target resolution except when ISR displayed. 7-9-4 separates Class B VFR-from-IFR/VFR methods by weight: over 19,000 lbs and turbojets use 1.5 miles, 500 feet vertical, or visual; 19,000 lbs or less use target resolution except ISR, 500 feet vertical, or visual.",
+      "match": {
+        "activity_type": "source_lookup",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "source_kind": "comparative",
+          "source_label": "FAA Order JO 7110.65, Paragraph 7-8-3 and Paragraph 7-9-4",
+          "lookup_context": [
+            "Paragraph 7-8-3 lists three separation methods for Class C. Paragraph 7-9-4 lists separation methods for Class B with two weight-based tiers."
+          ],
+          "task": "Compare the separation methods available in Class C versus Class B airspace and identify the key operational difference.",
+          "instruction": "Review the separation methods in 7-8-3 (Class C) and 7-9-4 (Class B). Identify the key structural difference.",
+          "question_text": "A controller is separating VFR aircraft from IFR aircraft in Class C airspace. How does the separation framework differ from Class B airspace?",
+          "choices": [
+            {
+              "text": "Class C uses uniform separation methods for all aircraft. Class B separates methods by weight: 1.5 miles for heavier aircraft, target resolution for lighter ones.",
+              "is_correct": true
+            },
+            {
+              "text": "Class C and Class B use identical separation frameworks; there is no difference.",
+              "is_correct": false
+            },
+            {
+              "text": "Class C requires 3 miles separation between all VFR and IFR aircraft; Class B requires 5 miles.",
+              "is_correct": false
+            },
+            {
+              "text": "Class C has no visual separation option; Class B permits visual separation.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-8-3, Class C separation applies uniformly to all VFR aircraft being separated from IFR: visual, 500 feet vertical, or target resolution (except when ISR displayed). Per 7-9-4, Class B has a two-tier weight-based system: VFR aircraft separated from aircraft over 19,000 lbs/turbojets must use 1.5 miles, 500 feet vertical, or visual; VFR aircraft separated from aircraft 19,000 lbs or less use target resolution (except ISR), 500 feet vertical, or visual. The Class B framework is more complex with weight as the differentiator.",
+          "publication_id": "content-expansion-pass-02:chapter-07:activities:7-8-3:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "source_lookup",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "source_kind": "comparative",
+            "source_label": "FAA Order JO 7110.65, Class C Separation and Class B Separation",
+            "lookup_context": [
+              "Class C separation rules list three methods for separating VFR aircraft from IFR aircraft, applied uniformly regardless of aircraft type. Class B separation rules divide methods into two weight-based tiers: aircraft over 19,000 pounds and turbojets, and aircraft 19,000 pounds or less."
+            ],
+            "task": "Compare the separation methods available in Class C versus Class B airspace and identify the key operational difference.",
+            "instruction": "Review the Class C and Class B separation methods. Identify the key structural difference between how VFR-from-IFR separation is handled in each airspace class.",
+            "question_text": "A controller is separating VFR aircraft from IFR aircraft in Class C airspace. How does the separation framework differ from Class B airspace?",
+            "choices": [
+              {
+                "text": "Class C uses uniform separation methods for all aircraft. Class B separates methods by weight: 1.5 miles for heavier aircraft, target resolution for lighter ones.",
+                "is_correct": true
+              },
+              {
+                "text": "Class C and Class B use identical separation frameworks; there is no difference.",
+                "is_correct": false
+              },
+              {
+                "text": "Class C requires 3 miles separation between all VFR and IFR aircraft; Class B requires 5 miles.",
+                "is_correct": false
+              },
+              {
+                "text": "Class C has no visual separation option; Class B permits visual separation.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "In Class C airspace, VFR aircraft are separated from IFR aircraft using any of three methods applied uniformly: visual separation, 500 feet vertical separation, or target resolution except when ISR is displayed. In Class B airspace, the separation framework depends on aircraft weight. VFR aircraft must be separated from aircraft weighing more than 19,000 pounds and turbojets by 1.5 miles, 500 feet vertical, or visual separation. VFR aircraft must be separated from aircraft weighing 19,000 pounds or less by target resolution except when ISR is displayed, 500 feet vertical, or visual separation.",
+            "publication_id": "content-expansion-pass-02:chapter-07:activities:7-8-3:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-8-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Explanation begins with 'Per 7-8-6b' and ends with 'This is a specific exception to the general Class C separation requirement,' teaching paragraph-location and document-structure classification instead of stating the operational rule directly.",
+      "source_basis": "7-8-6b: 'Hot air balloons need not be separated from IFR aircraft. Traffic information and safety alerts must be issued as appropriate.'",
+      "match": {
+        "question_text": "What separation is required between a hot air balloon and an IFR aircraft in Class C airspace?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What separation is required between a hot air balloon and an IFR aircraft in Class C airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Hot air balloons need not be separated from IFR aircraft in Class C airspace. Traffic information and safety alerts must be issued as appropriate.",
+          "choices": [
+            {
+              "text": "Standard Class C separation must be applied; the hot air balloon is a VFR aircraft.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "No separation is required; traffic information and safety alerts must be issued as appropriate.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "The balloon must be kept at least 500 feet vertically from all IFR aircraft.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Target resolution separation must be maintained until the balloon exits Class C airspace.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-8-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Explanation begins with 'Per 7-8-7a,' teaching paragraph-location instead of stating the service requirement directly.",
+      "source_basis": "7-8-7a: 'Aircraft that will penetrate Class C airspace after departing controlled airports within or adjacent to Class C airspace must be provided the same services as those aircraft departing the primary airport. Procedures for handling this situation must be covered in a LOA or a facility directive, as appropriate.'",
+      "match": {
+        "question_text": "What level of Class C service must aircraft departing satellite controlled airports receive when their route will penetrate Class C airspace?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What level of Class C service must aircraft departing satellite controlled airports receive when their route will penetrate Class C airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Aircraft that will penetrate Class C airspace after departing controlled airports within or adjacent to Class C airspace must be provided the same services as aircraft departing the primary airport. Procedures for handling this situation must be covered in a letter of agreement or facility directive.",
+          "choices": [
+            {
+              "text": "Basic radar services only, since the aircraft is not departing the primary airport.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The same services as aircraft departing the primary airport, with procedures covered in a LOA or facility directive.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "No special services; the aircraft must establish contact with approach control after departure.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Only traffic advisories until the aircraft is radar identified inside Class C airspace.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-8-8",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Explanation begins with 'Per 7-8-8,' teaching paragraph-location instead of stating the termination rule directly.",
+      "source_basis": "7-8-8: 'Terminate Class C service to aircraft landing at other than the primary airport at a sufficient distance from the airport to allow the pilot to change to the appropriate frequency for traffic and airport information.'",
+      "match": {
+        "question_text": "When does Class C service terminate for an aircraft landing at a secondary airport within the outer area?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When does Class C service terminate for an aircraft landing at a secondary airport within the outer area?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "For an aircraft landing at a secondary airport, Class C service is terminated at a sufficient distance from the airport to allow the pilot to change to the appropriate frequency for traffic and airport information. The prescribed phraseology is CHANGE TO ADVISORY FREQUENCY APPROVED or CONTACT (facility identification).",
+          "choices": [
+            {
+              "text": "Class C service continues until the aircraft lands at the secondary airport.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Service is terminated at a sufficient distance from the secondary airport to allow the pilot to change to the appropriate advisory frequency.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Class C service never terminates for aircraft within the outer area, even after landing.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Service terminates automatically when the aircraft leaves Class C airspace proper, regardless of outer area position.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "7-9-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Explanation begins with 'Per 7-9-4b' and 'Per 7-9-4c' and ends with the interpretive gloss 'The weight threshold creates two distinct separation tiers,' which is not stated in the source blocks. The instruction and stem are clean; only the explanation needs correction.",
+      "source_basis": "7-9-4b: VFR aircraft must be separated from VFR/IFR aircraft that weigh more than 19,000 pounds and turbojets by no less than 1.5 miles, 500 feet vertical, or visual. 7-9-4c: VFR aircraft must be separated from all VFR/IFR aircraft which weigh 19,000 pounds or less by a minimum of target resolution except when ISR displayed, 500 feet vertical, or visual.",
+      "match": {
+        "activity_type": "discrimination",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 3,
+          "instruction": "Identify the correct separation requirement for each scenario.",
+          "question_text": "A Class B controller needs to separate VFR aircraft from two different IFR aircraft: an Airbus A320 (turbojet, over 19,000 lbs) and a Cessna 172 (under 19,000 lbs). Which separation methods are available for each?",
+          "choices": [
+            {
+              "text": "From the A320: 1.5 miles, 500 feet vertical, or visual. From the Cessna 172: target resolution (except when ISR displayed), 500 feet vertical, or visual.",
+              "is_correct": true
+            },
+            {
+              "text": "From both: 1.5 miles, 500 feet vertical, or visual; target resolution is available for both.",
+              "is_correct": false
+            },
+            {
+              "text": "From the A320: 3 miles only. From the Cessna 172: 1.5 miles only.",
+              "is_correct": false
+            },
+            {
+              "text": "From both: 500 feet vertical or visual only; radar miles separation is not available in Class B.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Per 7-9-4b, VFR aircraft must be separated from VFR/IFR aircraft weighing more than 19,000 lbs and turbojets by: 1.5 miles (except when ISR displayed), 500 feet vertical, or visual. Per 7-9-4c, VFR aircraft must be separated from VFR/IFR aircraft weighing 19,000 lbs or less by: target resolution (except when ISR displayed), 500 feet vertical, or visual. The weight threshold creates two distinct separation tiers.",
+          "publication_id": "content-expansion-pass-02:chapter-07:activities:7-9-4:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "discrimination",
+          "difficulty": 3,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 3,
+            "instruction": "Identify the correct separation requirement for each scenario.",
+            "question_text": "A Class B controller needs to separate VFR aircraft from two different IFR aircraft: an Airbus A320 (turbojet, over 19,000 lbs) and a Cessna 172 (under 19,000 lbs). Which separation methods are available for each?",
+            "choices": [
+              {
+                "text": "From the A320: 1.5 miles, 500 feet vertical, or visual. From the Cessna 172: target resolution (except when ISR displayed), 500 feet vertical, or visual.",
+                "is_correct": true
+              },
+              {
+                "text": "From both: 1.5 miles, 500 feet vertical, or visual; target resolution is available for both.",
+                "is_correct": false
+              },
+              {
+                "text": "From the A320: 3 miles only. From the Cessna 172: 1.5 miles only.",
+                "is_correct": false
+              },
+              {
+                "text": "From both: 500 feet vertical or visual only; radar miles separation is not available in Class B.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "In Class B airspace, VFR aircraft must be separated from VFR/IFR aircraft weighing more than 19,000 pounds and turbojets by no less than 1.5 miles (discontinue 1.5 NM separation when ISR is displayed), 500 feet vertical, or visual separation. VFR aircraft must be separated from VFR/IFR aircraft weighing 19,000 pounds or less by a minimum of target resolution except when ISR is displayed, 500 feet vertical, or visual separation.",
+            "publication_id": "content-expansion-pass-02:chapter-07:activities:7-9-4:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "7-9-6",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Question stem contains parenthetical paragraph-number citations '(7-9-6)' and '(7-8-6),' teaching document-location trivia rather than testing operational knowledge of the separation exceptions. Explanation uses 'In Class B (7-9-6)' and 'In Class C (7-8-6a),' reinforcing the scaffolding.",
+      "source_basis": "7-9-6: 'VFR helicopters and powered-lift aircraft need not be separated from VFR or IFR helicopters or powered-lift aircraft. Traffic advisories and safety alerts must be issued as appropriate.' 7-8-6a: 'VFR helicopters and powered-lift aircraft need not be separated from IFR helicopters or powered-lift aircraft. Traffic information and safety alerts must be issued as appropriate.'",
+      "match": {
+        "question_text": "How does the helicopter separation exception in Class B airspace (7-9-6) differ from the helicopter separation exception in Class C airspace (7-8-6)?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "How does the helicopter and powered-lift separation exception in Class B airspace differ from the helicopter and powered-lift separation exception in Class C airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "In Class B airspace, VFR helicopters and powered-lift aircraft need not be separated from VFR or IFR helicopters or powered-lift aircraft. In Class C airspace, VFR helicopters and powered-lift aircraft need not be separated from IFR helicopters or powered-lift aircraft. The Class B exception is broader — it exempts separation from both VFR and IFR helicopters and powered-lift aircraft, while the Class C exception exempts separation only from IFR helicopters and powered-lift aircraft. Traffic information or advisories and safety alerts must be issued as appropriate in both airspace classes.",
+          "choices": [
+            {
+              "text": "There is no difference; both airspace classes contain identical helicopter separation exceptions.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Class B exempts VFR helicopters from separation from VFR or IFR helicopters/powered-lift; Class C exempts separation only from IFR helicopters/powered-lift.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Class C has no helicopter exception; only Class B provides helicopter separation relief.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Class C exempts all helicopter separation; Class B requires full separation for all helicopters.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

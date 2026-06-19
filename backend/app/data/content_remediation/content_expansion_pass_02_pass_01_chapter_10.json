@@ -1,0 +1,2575 @@
+{
+  "version": 1,
+  "chapter": 10,
+  "target_generation_source": "content_expansion_pass_02",
+  "packet_sha256": "f928c4592cf1778e081c85f566987859f343e1901125d58f60c37e21a8110538",
+  "manifest_sha256": "98656fcf88e7d38ae0f15719a9cfe92ef0a45f3c1d163b5bded6dbe52a99121d",
+  "summary": {
+    "overall": "Chapter 10 was reviewed in 3 bounded source-grounded shards. Proposed changes: 50 replacements, 0 splits, and 0 removals.",
+    "patterns": [
+      "Pervasive paragraph-location scaffolding: 16 of 16 non-flashcard items use phrases like 'Per paragraph X,' 'Paragraph X states,' or 'Per Note Y' in their explanations, teaching document trivia instead of operational requirements.",
+      "Three major source-fidelity defects: 10-2-18 question teaches a climb-clearance rule that contradicts the source; 10-2-19 question has a correct answer listing fabricated information items not in the source; 10-2-4 question stem refers to a document note instead of asking an operational question.",
+      "Flashcards are uniformly well-constructed with clear fronts, concise backs, and appropriate operational focus. No flashcards required intervention.",
+      "All non-flashcard distractors and activity choices are plausible operational misconceptions; no length-cue, specificity-cue, or implausible-distractor issues were found.",
+      "Pervasive paragraph-location scaffolding: 18 of 23 items reference paragraph numbers in explanations rather than stating the operational requirement directly. This teaches document navigation trivia instead of ATC substance.",
+      "Blocker source-fidelity errors in 10-2-8: the question, activity, and flashcard all teach that radar assistance may be provided when 'the controller determines an emergency condition exists' — the source actually requires 'the exact nature of the radar services the pilot desires.' The condition taught is materially different.",
+      "Blocker source-fidelity errors in 10-4-1: the question, activity, and flashcard replace 'the release time and clearance void time' with 'the flight plan filing time,' and invent a priority-ordering scheme not present in the source (which lists applicable times without establishing precedence).",
+      "Invented rationale in 10-2-9: the question explanation adds 'as this increases spatial disorientation risk' — a safety rationale not stated in the source blocks.",
+      "Minor imprecision in 10-2-7 flashcard: front says 'three steps' but back includes a fourth conditional relay obligation, creating a count mismatch.",
+      "Explanations for activities tend to restate answer mechanics through paragraph enumeration rather than teaching the operational decision tree.",
+      "Paragraph-location scaffolding is the dominant defect: nine explanations begin with 'Per paragraph X' or equivalent, affecting seven of nine questions and all four activities.",
+      "Three items in 10-5-2 share an identically fabricated reissue interval ('every 5 minutes for 20 minutes') that contradicts the source ('approximately every 15 minutes, when workload permits').",
+      "Correct answer for question 2936daca (10-5-2) invents actions ('issue the DRA location, provide hazard information') not listed in the relevant subparagraph for airborne aircraft within a DRA.",
+      "Two multiple-choice questions (8d0cd381 and 31c607cc) have correct answers that are markedly shorter than all distractors, leaking the correct response by length.",
+      "The 10-6-2 activity explanation oversimplifies ALERFA triggers, omitting the 60-minute communication failure trigger and the impaired-efficiency trigger.",
+      "Six flashcards are well-formed and accurate; the one inaccurate flashcard (9d0935b6) carries the same fabricated reissue interval as the 10-5-2 question and activity.",
+      "All 11 source paragraphs are represented by at least one learning item, though several paragraphs (10-5-1, 10-6-1, 10-7-4, 10-7-5) have only a single format type covering them."
+    ],
+    "generation_guidance": [
+      "Do not use paragraph-number, note-number, or section-reference scaffolding in explanations. State the operational rule, condition, or duty directly.",
+      "For 10-2-18 (volcanic ash), the climb restriction is 'do not initiate any climb clearances until the aircraft has exited the ash cloud' — it is NOT gated on pilot concurrence. The pilot-concurrence rule applies to escape vectors only.",
+      "For 10-2-19 (public health risk), the seven information items are exactly: call sign, number of suspected illness cases, nature of illness if known, number of persons on board, number of deaths if applicable, pilot's intent, and any request for assistance. Do not fabricate 'departure and destination airports.'",
+      "For 10-2-4 (altitude change), the stem should ask about the operational hazard, not about what a note says. Ask why climbing in ash is dangerous for high-bypass engines, not what the note identifies.",
+      "Continue the flashcard construction pattern used in this shard — clean fronts, backs that state the requirement, and focus on operational recall targets rather than document trivia.",
+      "Never embed paragraph numbers, subparagraph letters, or document structure references in explanations. State the operational requirement directly: what the controller must do, under what conditions, and why the distractors are wrong in operational terms.",
+      "Cross-check every answer condition against the exact source wording before publishing. The 10-2-8 error ('controller determines emergency exists' vs 'controller knows exact nature of radar services desired') is a plausible misinterpretation that a source-verification pass must catch.",
+      "Do not infer priority order from the sequence of subparagraphs. The 10-4-1 time references are listed as alternative applicable times; the source does not say 'a' takes precedence over 'b.' Teach recognition of the five references rather than selection among them.",
+      "Do not add explanatory rationales (safety reasons, policy purposes) unless the source blocks explicitly state them. If the source says 'avoid requiring climb or descent while turning in IFR conditions,' teach the prohibition; do not add 'because this increases spatial disorientation risk.'",
+      "Flashcard fronts should not embed counts that the back exceeds. If a procedure has three unconditional steps plus a conditional step, frame the front without the number or count all elements.",
+      "For cross-paragraph comparison items (e.g., 10-3-2 vs 10-3-3 notification lists), the explanation should describe what differs operationally rather than enumerating which paragraph says what.",
+      "Strip all paragraph-location scaffolding from explanations during generation. Write explanations that state the operating requirement directly — 'The minima are 1 mile lateral and 6,000 feet vertical' rather than 'Paragraph 10-7-2 specifies...'",
+      "Verify numeric thresholds (times, distances, altitudes) against source blocks before writing any item into the packet. The 5-minutes/20-minutes vs. 15-minutes error appeared across three items, suggesting a generation-prompt or source-parsing defect.",
+      "Match correct multiple-choice answers to the specific subparagraph the question targets. Question 2936daca's answer drew from the alert-broadcast subparagraph instead of the airborne-aircraft-in-DRA subparagraph the stem asked about.",
+      "Equalize choice lengths: when a correct answer is a single short phrase and distractors are multi-clause sentences, pad the correct answer with a brief clarifying clause that matches the cadence of the distractors without adding new content not in the source.",
+      "Activity explanations for knowledge_check items should be no less precise than question explanations. The oversimplified ALERFA trigger description in the 10-6-2 activity omitted two of three ALERFA entry conditions.",
+      "Expand single-format coverage for paragraphs 10-5-1, 10-6-1, 10-7-4, and 10-7-5 with additional retrieval modes so each paragraph has at least two distinct format types.",
+      "Flashcards testing numeric or temporal procedures should include the conditional qualifier from the source ('when workload permits') rather than presenting the interval as an unconditional requirement."
+    ],
+    "shard_overviews": [
+      "The shard contains 23 items across 15 paragraphs. All 7 flashcards are sound. All 11 questions and all 5 activities contain paragraph-location scaffolding in their explanations; three questions also have source-fidelity or context defects that make their correct answers wrong or their stems document-focused.",
+      "The shard covers 13 paragraphs of Chapter 10 emergency and overdue aircraft procedures with 23 items. Content accuracy is mixed: most items teach the correct operational substance but suffer from pervasive paragraph-location scaffolding in explanations. Two paragraphs (10-2-8 and 10-4-1) contain blocker-level source fidelity errors where the taught condition or time reference is factually wrong against the source blocks. One item invents a safety rationale (spatial disorientation) not present in the source. The flashcard and activity formats are generally well-chosen for the tested concepts. No items require removal; all errors are correctable through replacement with source-aligned content.",
+      "The shard covers eight distinct emergencies and unusual situations (lost communications, explosive cargo, space debris, oceanic emergencies including phase definitions, inflight contingencies, SAR services, ground missile emergencies, smoke avoidance, and extended notification) across 11 paragraphs. Seven of nine questions contain paragraph-location scaffolding in their explanations. Three items under paragraph 10-5-2 share a single fabricated source detail: the alert broadcast reissue interval is stated as 'every 5 minutes for 20 minutes' when the source requires 'approximately every 15 minutes, when workload permits.' One question under 10-5-2 also has a correct answer that does not match the source actions for airborne aircraft already within a DRA. Two questions have a correct choice that is conspicuously shorter than all distractors, creating an answer-length cue. Apart from these defects, the shard's items are substantively accurate to their source paragraphs, distractor sets are plausible, and the balance of question, activity, and flashcard formats provides reasonable retrieval diversity across most paragraphs."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "question",
+      "para_id": "10-1-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per paragraph 10-1-3') instead of stating the operational requirement directly.",
+      "source_basis": "10-1-3: 'Provide maximum assistance to aircraft in distress. Enlist the services of available radar facilities operated by the FAA, the military services, and the Federal Communications Commission, as well as their emergency services and facilities, when the pilot requests or when you deem necessary.'",
+      "match": {
+        "question_text": "When may a controller enlist the services of military radar facilities and other emergency resources to assist an aircraft in distress?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When may a controller enlist the services of military radar facilities and other emergency resources to assist an aircraft in distress?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Controllers must provide maximum assistance to aircraft in distress. Available radar facilities operated by the FAA, military services, and the Federal Communications Commission, as well as their emergency services and facilities, may be enlisted when the pilot requests assistance or when the controller deems it necessary.",
+          "choices": [
+            {
+              "text": "Only after the pilot specifically requests the additional resource by name.",
+              "is_correct": false
+            },
+            {
+              "text": "When the pilot requests assistance or when the controller deems it necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the FAA facility becomes inoperable and can no longer provide any radar service.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after obtaining written authorization from the facility air traffic manager.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-1-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per paragraph 10-1-5') instead of stating the operational requirement directly.",
+      "source_basis": "10-1-5: 'Coordinate efforts to the extent possible to assist any aircraft believed overdue, lost, or in emergency status.'",
+      "match": {
+        "question_text": "What obligation does a controller have upon learning that a VFR aircraft without a flight plan is overdue?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What obligation does a controller have upon learning that a VFR aircraft without a flight plan is overdue?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Controllers must coordinate efforts to the extent possible to assist any aircraft believed to be overdue, lost, or in emergency status. This obligation applies regardless of whether the aircraft is operating under IFR or VFR and regardless of whether a flight plan was filed.",
+          "choices": [
+            {
+              "text": "Wait for the aircraft operator to file a missing aircraft report before initiating any action.",
+              "is_correct": false
+            },
+            {
+              "text": "Coordinate efforts to the extent possible, because the obligation applies regardless of flight plan status.",
+              "is_correct": true
+            },
+            {
+              "text": "Notify only the local FSS and take no further action for VFR aircraft without flight plans.",
+              "is_correct": false
+            },
+            {
+              "text": "No obligation exists because VFR aircraft operating without flight plans are outside ATC jurisdiction.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-1-6",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per paragraph 10-1-6a') instead of stating the operational requirement directly.",
+      "source_basis": "10-1-6a: 'When an emergency occurs on the airport proper, control other air and ground traffic to avoid conflicts in the area where the emergency is being handled. This also applies when routes within the airport proper are required for movement of local emergency equipment going to or from an emergency which occurs outside the airport proper.'",
+      "match": {
+        "question_text": "When emergency equipment from outside the airport proper must cross active movement areas to reach an accident scene, what is the controller's traffic management obligation?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When emergency equipment from outside the airport proper must cross active movement areas to reach an accident scene, what is the controller's traffic management obligation?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When emergency equipment must use routes within the airport proper to go to or from an emergency—including an emergency that occurs outside the airport proper—the controller must control other air and ground traffic to avoid conflicts along those routes.",
+          "choices": [
+            {
+              "text": "Close the airport until emergency vehicles confirm they have reached their destination.",
+              "is_correct": false
+            },
+            {
+              "text": "Control other air and ground traffic to avoid conflicts along the routes the emergency vehicles need to use.",
+              "is_correct": true
+            },
+            {
+              "text": "No obligation exists because off-airport emergency vehicles are not FAA-operated equipment.",
+              "is_correct": false
+            },
+            {
+              "text": "Provide traffic advisories only — emergency vehicles are responsible for their own separation on the movement area.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per Note 3 to paragraph 10-2-1b') instead of stating the operational requirement directly.",
+      "source_basis": "10-2-1 Note 3: 'Normally, do not request this information from military fighter−type aircraft that are at low altitudes (for example, on approach, immediately after departure, on a low level route). However, request the position of an aircraft that is not visually sighted or displayed on radar if the location is not given by the pilot.'",
+      "match": {
+        "question_text": "A military fighter-type aircraft at low altitude declares an emergency and the controller has the minimum required information. The controller wants to ask the pilot several items from the supplementary list. What does the guidance say about requesting supplementary information from low-altitude military fighters?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A military fighter-type aircraft at low altitude declares an emergency and the controller has the minimum required information. The controller wants to ask the pilot several items from the supplementary list. What does the guidance say about requesting supplementary information from low-altitude military fighters?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Controllers should normally not request supplementary information from military fighter-type aircraft operating at low altitudes. The single exception is that the controller should request the aircraft's position if it is not visually sighted, not displayed on radar, and the location has not been given by the pilot.",
+          "choices": [
+            {
+              "text": "There is no exception — the prohibition on requesting supplementary information from low-altitude fighters is absolute.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller should request fuel remaining, since fuel status is always critical regardless of aircraft type.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller should request the aircraft's position if it is not visually sighted, on radar, or given by the pilot.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller should request all 14 supplementary items because the emergency makes every piece of information critical.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per paragraph 10-2-1a') instead of stating the operational requirement directly.",
+      "source_basis": "10-2-1a: 'Start assistance as soon as enough information has been obtained upon which to act. Information requirements will vary, depending on the existing situation. Minimum required information for inflight emergencies is: 1. Aircraft identification and type. 2. Nature of the emergency. 3. Pilot's desires.'",
+      "match": {
+        "question_text": "What is the minimum required information that must be obtained before beginning assistance to an aircraft in an inflight emergency?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the minimum required information that must be obtained before beginning assistance to an aircraft in an inflight emergency?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Before beginning assistance to an aircraft in an inflight emergency, the controller must obtain at minimum: aircraft identification and type, the nature of the emergency, and the pilot's desires. Assistance must start as soon as enough information has been obtained upon which to act.",
+          "choices": [
+            {
+              "text": "Aircraft identification, fuel remaining in time, and number of people on board.",
+              "is_correct": false
+            },
+            {
+              "text": "Aircraft identification and type, nature of the emergency, and pilot's desires.",
+              "is_correct": true
+            },
+            {
+              "text": "Nature of the emergency, pilot's qualifications, and aircraft altitude.",
+              "is_correct": false
+            },
+            {
+              "text": "All 17 items listed in the paragraph including both minimum and supplementary information.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-2-11",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per paragraph 10-2-11a6') instead of stating the operational requirement directly.",
+      "source_basis": "10-2-11a6: 'When a pilot requests technical assistance or if it is apparent that a pilot may need such assistance, do NOT suggest what actions the pilot should take concerning a bomb, but obtain the following information and notify your supervisor who will contact the FAA aviation explosives expert: (a) Type, series, and model of the aircraft. (b) Precise location/description of the bomb device if known. (c) Other details which may be pertinent.'",
+      "match": {
+        "question_text": "What information must a controller obtain when a pilot facing a bomb threat requests or appears to need technical assistance, and what must the controller refrain from doing?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What information must a controller obtain when a pilot facing a bomb threat requests or appears to need technical assistance, and what must the controller refrain from doing?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When a pilot facing a bomb threat requests or appears to need technical assistance, the controller must obtain the aircraft type, series, and model; the precise location or description of the device if known; and other pertinent details. The controller must then notify the supervisor, who will contact the FAA aviation explosives expert. The controller must not suggest what actions the pilot should take concerning the bomb.",
+          "choices": [
+            {
+              "text": "Suggest that the pilot land immediately and evacuate; then notify the supervisor of the pilot's intended actions.",
+              "is_correct": false
+            },
+            {
+              "text": "Obtain aircraft type, device location and description, and other pertinent details; notify the supervisor; refrain from suggesting pilot actions.",
+              "is_correct": true
+            },
+            {
+              "text": "Ask the pilot to describe the device in detail so the controller can provide step-by-step bomb-handling instructions.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer the aircraft to the supervisor's frequency so the supervisor can directly advise the pilot on security procedures.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-2-12",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per paragraph 10-2-12') instead of stating the operational requirement directly.",
+      "source_basis": "10-2-12: 'Take the following actions should you receive an aircraft request for the location of the nearest explosive detection K−9 team. a. Obtain the aircraft identification and position and advise your supervisor of the pilot request. b. When you receive the nearest location of the explosive detection K−9 team, relay the information to the pilot. c. If the aircraft wishes to divert to the airport location provided, obtain an estimated arrival time from the pilot and advise your supervisor.'",
+      "match": {
+        "question_text": "What are the three sequential steps a controller takes when an aircraft requests the location of the nearest explosive detection K-9 team?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What are the three sequential steps a controller takes when an aircraft requests the location of the nearest explosive detection K-9 team?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When an aircraft requests the location of the nearest explosive detection K-9 team, the controller must: (1) obtain the aircraft identification and position and advise the supervisor of the pilot's request; (2) when the nearest K-9 team location is received, relay the information to the pilot; (3) if the aircraft wishes to divert to that airport, obtain an estimated arrival time from the pilot and advise the supervisor.",
+          "choices": [
+            {
+              "text": "Contact the K-9 team directly; relay the aircraft's position to the team; issue a landing clearance to the team's airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Obtain aircraft ID and position, advise supervisor; relay the K-9 location to the pilot; if diverting, obtain ETA and advise supervisor.",
+              "is_correct": true
+            },
+            {
+              "text": "Advise the supervisor; wait for the supervisor to coordinate with the K-9 team; relay the supervisor's instructions to the pilot.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue an immediate clearance to the nearest suitable airport; coordinate K-9 availability after the aircraft has landed.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-2-15",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per paragraph 10-2-15a') instead of stating the operational requirement directly. The explanation also references a note with 'The note indicates' scaffolding.",
+      "source_basis": "10-2-15a: 'Consider the following factors when recommending an emergency airport: 1. Remaining fuel in relation to airport distances. 2. Weather conditions. [Note: Depending on the nature of the emergency, certain weather phenomena may deserve weighted consideration...] 3. Airport conditions. 4. NAVAID status. 5. Aircraft type. 6. Pilot's qualifications. 7. Vectoring or homing capability to the emergency airport.'",
+      "match": {
+        "question_text": "What seven factors must a controller consider when recommending an emergency airport?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What seven factors must a controller consider when recommending an emergency airport?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When recommending an emergency airport, controllers must consider: remaining fuel in relation to airport distances, weather conditions, airport conditions, NAVAID status, aircraft type, pilot's qualifications, and vectoring or homing capability to the emergency airport. Depending on the nature of the emergency, certain weather phenomena may deserve weighted consideration.",
+          "choices": [
+            {
+              "text": "Fuel remaining, weather, runway length, firefighting capability, aircraft type, and pilot's total flight hours.",
+              "is_correct": false
+            },
+            {
+              "text": "Fuel remaining, weather, airport conditions, NAVAID status, aircraft type, pilot qualifications, and vectoring or homing capability.",
+              "is_correct": true
+            },
+            {
+              "text": "Distance to airport, fuel remaining, weather, aircraft weight, number of passengers, and emergency equipment availability.",
+              "is_correct": false
+            },
+            {
+              "text": "NAVAID status, weather, airport elevation, runway surface type, aircraft category, and pilot's medical certificate class.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-2-18",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location and note-reference scaffolding ('Per paragraph 10-2-18b,' 'per Note to 10-2-4'). More critically, the question's correct answer is factually wrong. The source states: 'Do not initiate any climb clearances to turbine-powered aircraft until the aircraft has exited the ash cloud.' The current correct choice says climb may be initiated 'Only when the pilot requests a climb or after ATC obtains the pilot's concurrence,' which conflates the climb restriction with the separate escape-vector rule. The source does not make the climb restriction dependent on pilot concurrence—it is an unconditional restriction until the aircraft exits the ash cloud.",
+      "source_basis": "10-2-18b: 'If advised by an aircraft that it has entered a volcanic ash cloud and indicates that a distress situation exists: 1. Consider the aircraft to be in an emergency situation. 2. Do not initiate any climb clearances to turbine−powered aircraft until the aircraft has exited the ash cloud. 3. Do not attempt to provide escape vectors without pilot concurrence.' Note: 'Damage to engines due to volcanic ash ingestion increases as engine power is increased, therefore, climb while in the ash cloud is to be avoided where terrain permits.'",
+      "match": {
+        "question_text": "For a turbine-powered aircraft that has entered a volcanic ash cloud and indicated a distress situation exists, when may a climb clearance be initiated by ATC?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "For a turbine-powered aircraft that has entered a volcanic ash cloud and indicates a distress situation exists, when may ATC initiate a climb clearance?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Do not initiate any climb clearances to turbine-powered aircraft until the aircraft has exited the ash cloud. Engine damage from volcanic ash ingestion increases as engine power increases, so climbing while still in the ash cloud must be avoided where terrain permits.",
+          "choices": [
+            {
+              "text": "Immediately, because exiting the ash cloud is the highest priority regardless of engine damage risk.",
+              "is_correct": false
+            },
+            {
+              "text": "Only after the aircraft has exited the ash cloud.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when the pilot requests a climb or after ATC obtains the pilot's concurrence.",
+              "is_correct": false
+            },
+            {
+              "text": "Climb is prohibited for all turbine-powered aircraft in ash clouds under all circumstances.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-2-19",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Per paragraph 10-2-19a') and includes a fabricated information item. The current correct answer lists 'departure and destination airports,' which is not among the seven information items in the source. The actual source list includes pilot's intent and any request for assistance—both of which are missing from the correct answer. The explanation repeats the same fabricated item.",
+      "source_basis": "10-2-19a: 'If an air traffic controller receives a report of the death of person, an illness, and/or other public health risk obtain the following information and notify the operations manager in charge (OMIC)/operations supervisor (OS)/controller-in-charge (CIC) as soon as possible. 1. Call sign. 2. Number of suspected cases of illness on board. 3. Nature of the illnesses or other public health risk, if known. 4. Number of persons on board. 5. Number of deaths, if applicable. 6. Pilot's intent (for example, continue to destination or divert). 7. Any request for assistance (for example, needing emergency medical services to meet the aircraft at arrival).'",
+      "match": {
+        "question_text": "What information must a controller obtain upon receiving a report of a death, illness, or other public health risk on board an aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What information must a controller obtain upon receiving a report of a death, illness, or other public health risk on board an aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When a controller receives a report of a death, illness, or other public health risk on board an aircraft, the controller must obtain: call sign, number of suspected cases of illness on board, nature of the illnesses or other public health risk (if known), number of persons on board, number of deaths (if applicable), pilot's intent, and any request for assistance. This information must be relayed to the OMIC/OS/CIC as soon as possible.",
+          "choices": [
+            {
+              "text": "Call sign, aircraft type, pilot's name, number of persons on board, and estimated time of arrival.",
+              "is_correct": false
+            },
+            {
+              "text": "Call sign, number of suspected illness cases, nature of illness if known, number of persons on board, number of deaths if any, pilot's intent, and any request for assistance.",
+              "is_correct": true
+            },
+            {
+              "text": "Call sign, nature of illness, fuel remaining, aircraft color, and number of deaths.",
+              "is_correct": false
+            },
+            {
+              "text": "Call sign, number of persons on board, pilot's intent, departure and destination airports, and emergency equipment on board.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-2-4",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "The question stem references document structure ('What hazard does the note to the altitude-change guidance identify...') instead of asking an operational question about the hazard itself. The explanation also uses paragraph-location and note-reference scaffolding ('Per the Note to paragraph 10-2-4'). The question should ask about the operational hazard directly, not about what a document note says.",
+      "source_basis": "10-2-4 Note: 'Aircraft with high-bypass turbofan engines (such as B747) encountering volcanic ash clouds have experienced total loss of power to all engines. Damage to engines due to volcanic ash ingestion increases as engine power is increased, therefore, climb while in the ash cloud is to be avoided where terrain permits.'",
+      "match": {
+        "question_text": "What hazard does the note to the altitude-change guidance identify for aircraft with high-bypass turbofan engines that have entered a volcanic ash cloud?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Why is climbing particularly hazardous for an aircraft with high-bypass turbofan engines that is inside a volcanic ash cloud?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Engine damage due to volcanic ash ingestion increases as engine power is increased. Therefore, climb while in the ash cloud is to be avoided where terrain permits. Aircraft with high-bypass turbofan engines, such as the B747, have experienced total loss of power to all engines after encountering volcanic ash clouds.",
+          "choices": [
+            {
+              "text": "Ash particles clog pitot-static systems at higher altitudes, causing unreliable airspeed and altitude indications.",
+              "is_correct": false
+            },
+            {
+              "text": "Engine damage from ash ingestion increases as engine power increases, so climb in the ash cloud is avoided where terrain permits.",
+              "is_correct": true
+            },
+            {
+              "text": "The ash cloud's electrical properties cause complete communications blackout above a certain altitude threshold.",
+              "is_correct": false
+            },
+            {
+              "text": "Engine thrust actually improves in ash because the particles act as an abrasive that cleans turbine blades.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Paragraph 10-1-2a requires') instead of stating the operational requirement directly.",
+      "source_basis": "10-1-2a: 'Use the information provided or solicit more information as necessary to assist the distressed aircraft. Provide assistance that is consistent with the requests of the pilot. If you believe an alternative course of action may prove more beneficial, transmit your recommendation(s) to the pilot.' 14 CFR § 91.3 reinforces pilot-in-command authority.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Choose the action that respects the pilot in command's emergency decision.",
+          "question_text": "A controller recommends an alternative diversion airport to a distressed pilot, but the pilot insists on the original destination. What is the correct controller action?",
+          "choices": [
+            {
+              "text": "Continue assisting toward the original destination — the controller recommends, the pilot decides.",
+              "is_correct": true
+            },
+            {
+              "text": "Override the pilot and issue an amended clearance to the alternative airport the controller recommended.",
+              "is_correct": false
+            },
+            {
+              "text": "Withhold further vectors until the pilot acknowledges the safety advantages of the recommended airport.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer the aircraft to a supervisor to resolve the destination disagreement.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 10-1-2a requires assistance consistent with the pilot's requests. The controller may recommend alternatives but must not override the pilot's decision. 14 CFR § 91.3 reinforces pilot-in-command authority.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-1-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Choose the action that respects the pilot in command's emergency decision.",
+            "question_text": "A controller recommends an alternative diversion airport to a distressed pilot, but the pilot insists on the original destination. What is the correct controller action?",
+            "choices": [
+              {
+                "text": "Continue assisting toward the original destination — the controller recommends, the pilot decides.",
+                "is_correct": true
+              },
+              {
+                "text": "Override the pilot and issue an amended clearance to the alternative airport the controller recommended.",
+                "is_correct": false
+              },
+              {
+                "text": "Withhold further vectors until the pilot acknowledges the safety advantages of the recommended airport.",
+                "is_correct": false
+              },
+              {
+                "text": "Transfer the aircraft to a supervisor to resolve the destination disagreement.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The controller must provide assistance consistent with the pilot's requests. The controller may recommend an alternative course of action if it appears more beneficial, but must not override the pilot's decision. The pilot in command has final authority for the operation of the aircraft.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-1-2:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-1-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Paragraph 10-1-7a states') instead of stating the operational requirement directly.",
+      "source_basis": "10-1-7a: 'The design and complexity of military fighter-type aircraft places an extremely high workload on the pilot during an inflight emergency. The pilot's full attention is required to maintain control of the aircraft. Therefore, radio frequency and transponder code changes should be avoided and radio transmissions held to a minimum, especially when the aircraft experiencing the emergency is at low altitude.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Select the correct combination of controller actions for a military fighter-type aircraft emergency at low altitude.",
+          "question_text": "Which combination of controller actions correctly follows the guidance for an inflight emergency involving a military fighter-type aircraft at low altitude?",
+          "choices": [
+            {
+              "text": "Keep the current frequency and transponder code, and transmit only essential communications.",
+              "is_correct": true
+            },
+            {
+              "text": "Switch to 121.5 MHz, assign a discrete emergency squawk, and request a full aircraft status report.",
+              "is_correct": false
+            },
+            {
+              "text": "Change to a clear frequency, assign a new transponder code for better tracking, and maintain normal communication flow.",
+              "is_correct": false
+            },
+            {
+              "text": "Transfer communications to the military base frequency and instruct the pilot to report all system statuses.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 10-1-7a states that frequency and transponder code changes should be avoided and radio transmissions held to a minimum, especially at low altitude. The pilot's full attention is required to maintain control of the aircraft.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-1-7:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Select the correct combination of controller actions for a military fighter-type aircraft emergency at low altitude.",
+            "question_text": "Which combination of controller actions correctly follows the guidance for an inflight emergency involving a military fighter-type aircraft at low altitude?",
+            "choices": [
+              {
+                "text": "Keep the current frequency and transponder code, and transmit only essential communications.",
+                "is_correct": true
+              },
+              {
+                "text": "Switch to 121.5 MHz, assign a discrete emergency squawk, and request a full aircraft status report.",
+                "is_correct": false
+              },
+              {
+                "text": "Change to a clear frequency, assign a new transponder code for better tracking, and maintain normal communication flow.",
+                "is_correct": false
+              },
+              {
+                "text": "Transfer communications to the military base frequency and instruct the pilot to report all system statuses.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "During an inflight emergency involving a military fighter-type aircraft, frequency and transponder code changes should be avoided and radio transmissions held to a minimum, especially when the aircraft is at low altitude. The design and complexity of these aircraft places an extremely high workload on the pilot, whose full attention is required to maintain control of the aircraft.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-1-7:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-2-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Paragraph 10-2-1a requires' and 'in paragraph 10-2-1b') instead of stating the operational requirement directly.",
+      "source_basis": "10-2-1a: 'Start assistance as soon as enough information has been obtained upon which to act. Information requirements will vary, depending on the existing situation. Minimum required information for inflight emergencies is: 1. Aircraft identification and type. 2. Nature of the emergency. 3. Pilot's desires.' 10-2-1b: 'After initiating action, obtain the following items or any other pertinent information from the pilot or aircraft operator, as necessary.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify the correct sequence for gathering and acting on emergency information.",
+          "question_text": "Which sequence correctly describes how a controller should gather information and begin assisting an inflight emergency?",
+          "choices": [
+            {
+              "text": "Obtain the three minimum items, begin assistance, then gather supplementary items as necessary.",
+              "is_correct": true
+            },
+            {
+              "text": "Gather all 17 information items, then begin assistance once the complete operational picture is known.",
+              "is_correct": false
+            },
+            {
+              "text": "Begin assistance immediately upon hearing any distress call, without waiting for any specific information items.",
+              "is_correct": false
+            },
+            {
+              "text": "Gather the 14 supplementary items first, then ask for aircraft identification and emergency nature last.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 10-2-1a requires starting assistance as soon as the three minimum items are obtained. The 14 supplementary items in paragraph 10-2-1b are obtained after initiating action, as necessary.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-2-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify the correct sequence for gathering and acting on emergency information.",
+            "question_text": "Which sequence correctly describes how a controller should gather information and begin assisting an inflight emergency?",
+            "choices": [
+              {
+                "text": "Obtain the three minimum items, begin assistance, then gather supplementary items as necessary.",
+                "is_correct": true
+              },
+              {
+                "text": "Gather all 17 information items, then begin assistance once the complete operational picture is known.",
+                "is_correct": false
+              },
+              {
+                "text": "Begin assistance immediately upon hearing any distress call, without waiting for any specific information items.",
+                "is_correct": false
+              },
+              {
+                "text": "Gather the 14 supplementary items first, then ask for aircraft identification and emergency nature last.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Assistance must start as soon as enough information has been obtained upon which to act. The three minimum required items are aircraft identification and type, nature of the emergency, and pilot's desires. After initiating action, the controller obtains supplementary information from the pilot or aircraft operator as necessary.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-2-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-2-10",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Paragraph 10-2-10a establishes' and 'Paragraph 10-2-10b establishes') instead of stating the operational requirement directly. It also adds the unsupported claim 'Terminal facilities never contact the RCC directly for ELT events' which the source does not explicitly state—the source says terminal notifies ARTCC which coordinates with RCC but does not use the word 'never.'",
+      "source_basis": "10-2-10a: 'EN ROUTE. Notify the Rescue Coordination Center (RCC).' 10-2-10b: 'TERMINAL. Notify the ARTCC which will coordinate with the RCC.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify the correct ELT notification responsibility.",
+          "question_text": "How does the ELT signal notification responsibility differ between en route and terminal facilities?",
+          "choices": [
+            {
+              "text": "En route notifies the RCC directly; terminal notifies the ARTCC, which coordinates with the RCC.",
+              "is_correct": true
+            },
+            {
+              "text": "Both facility types notify the RCC directly, and terminal facilities make an additional courtesy call to the ARTCC.",
+              "is_correct": false
+            },
+            {
+              "text": "En route notifies the ARTCC; terminal notifies the RCC directly.",
+              "is_correct": false
+            },
+            {
+              "text": "Both facility types notify only the ARTCC, which determines whether RCC notification is warranted.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 10-2-10a establishes en route facilities notify the RCC directly. Paragraph 10-2-10b establishes terminal facilities notify the ARTCC, which coordinates with the RCC. Terminal facilities never contact the RCC directly for ELT events.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-2-10:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify the correct ELT notification responsibility.",
+            "question_text": "How does the ELT signal notification responsibility differ between en route and terminal facilities?",
+            "choices": [
+              {
+                "text": "En route notifies the RCC directly; terminal notifies the ARTCC, which coordinates with the RCC.",
+                "is_correct": true
+              },
+              {
+                "text": "Both facility types notify the RCC directly, and terminal facilities make an additional courtesy call to the ARTCC.",
+                "is_correct": false
+              },
+              {
+                "text": "En route notifies the ARTCC; terminal notifies the RCC directly.",
+                "is_correct": false
+              },
+              {
+                "text": "Both facility types notify only the ARTCC, which determines whether RCC notification is warranted.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "When an ELT signal is heard or reported, en route facilities must notify the Rescue Coordination Center directly. Terminal facilities must notify the ARTCC, which will coordinate with the RCC.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-2-10:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-2-17",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The explanation uses paragraph-location scaffolding ('Paragraph 10-2-17a states') instead of stating the operational requirement directly.",
+      "source_basis": "10-2-17a: 'It must only be used, and the service provided under the following conditions: 1. The pilot has declared an emergency, or 2. The controller has determined that an emergency condition exists or is imminent because of the pilot's inability to maintain an appropriate terrain/obstacle clearance minimum altitude.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify when use of the EOVM or EAM is authorized.",
+          "question_text": "Under which condition may the EOVM or EAM be used to provide emergency advisory service to an aircraft?",
+          "choices": [
+            {
+              "text": "The pilot has declared an emergency, or the controller has determined an emergency condition exists or is imminent.",
+              "is_correct": true
+            },
+            {
+              "text": "The controller wants to provide a more direct route that would descend an aircraft below the MVA during routine operations.",
+              "is_correct": false
+            },
+            {
+              "text": "The pilot asks for a demonstration of the EOVM capabilities during a routine VFR training flight.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller needs to vector an aircraft around weather and the shortest available path goes below the published minimum altitude.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 10-2-17a states the EOVM/EAM must only be used under two conditions: the pilot has declared an emergency, or the controller has determined that an emergency condition exists or is imminent because the pilot cannot maintain appropriate terrain/obstacle clearance. Routine operations do not qualify.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-2-17:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify when use of the EOVM or EAM is authorized.",
+            "question_text": "Under which condition may the EOVM or EAM be used to provide emergency advisory service to an aircraft?",
+            "choices": [
+              {
+                "text": "The pilot has declared an emergency, or the controller has determined an emergency condition exists or is imminent.",
+                "is_correct": true
+              },
+              {
+                "text": "The controller wants to provide a more direct route that would descend an aircraft below the MVA during routine operations.",
+                "is_correct": false
+              },
+              {
+                "text": "The pilot asks for a demonstration of the EOVM capabilities during a routine VFR training flight.",
+                "is_correct": false
+              },
+              {
+                "text": "The controller needs to vector an aircraft around weather and the shortest available path goes below the published minimum altitude.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The EOVM and EAM must only be used when the pilot has declared an emergency, or when the controller has determined that an emergency condition exists or is imminent because of the pilot's inability to maintain an appropriate terrain or obstacle clearance minimum altitude. These tools are not authorized for routine operations.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-2-17:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-2-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation opens with 'Per paragraph 10-2-5b' — paragraph-location scaffolding that teaches document navigation instead of the operational requirement. The stem and choices are accurate against the source block.",
+      "source_basis": "10-2-5b: 'There is unexpected loss of radar contact and radio communications with any IFR or VFR aircraft.' The conjunction 'and' establishes that both conditions must be present.",
+      "match": {
+        "question_text": "What is required before an unexpected loss of radar contact combined with loss of radio communications triggers the obligation to consider an aircraft emergency exists?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is required before an unexpected loss of radar contact combined with loss of radio communications triggers the obligation to consider an aircraft emergency exists?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The obligation to consider an aircraft emergency exists and inform the RCC or ARTCC is triggered when there is an unexpected loss of both radar contact and radio communications with any IFR or VFR aircraft. Both conditions must be present simultaneously — loss of only one does not satisfy the requirement.",
+          "choices": [
+            {
+              "text": "Loss of radar contact alone is sufficient, because radar is the primary means of aircraft surveillance.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Both radar contact and radio communications must be unexpectedly lost — loss of only one does not trigger the requirement.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Loss of radio communications alone is sufficient, because voice contact is essential for emergency coordination.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Either loss of radar contact or loss of radio communications independently triggers the requirement.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-2-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation leads with 'Paragraph 10-2-5a lists specific emergency declaration sources' — paragraph-location scaffolding. The content, stem, and choices are otherwise accurate.",
+      "source_basis": "10-2-5a item 4: 'A system-generated transmission from an aircraft' is among the events that trigger the requirement to consider an aircraft emergency exists and inform the RCC or ARTCC.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify which event triggers the requirement to consider an aircraft emergency exists.",
+          "question_text": "Which situation requires a controller to consider that an aircraft emergency exists and inform the RCC or ARTCC?",
+          "choices": [
+            {
+              "text": "An emergency is declared by a system-generated transmission from an aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "An aircraft makes a routine position report two minutes later than the expected reporting time.",
+              "is_correct": false
+            },
+            {
+              "text": "A pilot reports a minor avionics cooling fan failure that has no effect on flight safety.",
+              "is_correct": false
+            },
+            {
+              "text": "An aircraft requests a deviation around a small area of light precipitation while remaining in VMC.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 10-2-5a lists specific emergency declaration sources including system-generated transmissions. Routine operational events, minor equipment issues without safety impact, and standard weather deviations do not trigger the emergency consideration requirement.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-2-5:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify which event triggers the requirement to consider an aircraft emergency exists.",
+            "question_text": "Which situation requires a controller to consider that an aircraft emergency exists and inform the RCC or ARTCC?",
+            "choices": [
+              {
+                "text": "An emergency is declared by a system-generated transmission from an aircraft.",
+                "is_correct": true
+              },
+              {
+                "text": "An aircraft makes a routine position report two minutes later than the expected reporting time.",
+                "is_correct": false
+              },
+              {
+                "text": "A pilot reports a minor avionics cooling fan failure that has no effect on flight safety.",
+                "is_correct": false
+              },
+              {
+                "text": "An aircraft requests a deviation around a small area of light precipitation while remaining in VMC.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "A system-generated transmission from an aircraft is one of the events that requires a controller to consider an aircraft emergency exists and inform the RCC or ARTCC. Routine operational events such as a slightly late position report, a minor equipment issue with no safety impact, and standard weather deviations in VMC do not trigger the emergency consideration requirement.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-2-5:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-2-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation begins with 'Per paragraph 10-2-7a' — paragraph-location scaffolding. The stem, choices, and operational content are accurate.",
+      "source_basis": "10-2-7a: 'If a frequency change is necessary, advise the pilot of the reason for the change, and request the aircraft contact the appropriate control facility. Inform that facility of the situation. If the aircraft is unable to communicate with the control facility, relay information and clearances.'",
+      "match": {
+        "question_text": "What steps must a controller complete when a VFR aircraft in weather difficulty requires a frequency change to another facility for better service?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What steps must a controller complete when a VFR aircraft in weather difficulty requires a frequency change to another facility for better service?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When a VFR aircraft in weather difficulty requires a frequency change, the controller must advise the pilot of the reason for the change and request the aircraft contact the appropriate control facility. That facility must be informed of the situation. If the aircraft is unable to communicate with the new facility, the original controller must relay information and clearances.",
+          "choices": [
+            {
+              "text": "Issue the new frequency without explanation to keep transmissions brief during the weather emergency.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Advise the pilot of the reason for the change, request contact with the new facility, and inform that facility of the situation.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Hand off using standard radar procedures — no special coordination is required before an emergency is formally declared.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Transfer communications only after the receiving facility confirms it has established radar contact with the aircraft.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "10-2-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "educational_coherence"
+      ],
+      "problem": "The front says 'three steps' but the back includes the conditional relay obligation as a fourth element. The count mismatch between front and back creates confusion about whether the procedure has three or four steps.",
+      "source_basis": "10-2-7a lists three unconditional steps (advise pilot, request contact, inform facility) plus a conditional step (relay information and clearances if unable to communicate).",
+      "match": {
+        "front": "What three steps must a controller take when a VFR aircraft in weather difficulty needs a frequency change?",
+        "back": "1. Advise the pilot of the reason. 2. Request contact with the appropriate facility. 3. Inform that facility of the situation. If the aircraft cannot communicate with the new facility, relay information and clearances.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "What steps must a controller take when a VFR aircraft in weather difficulty needs a frequency change to another facility?",
+          "back": "1. Advise the pilot of the reason for the change. 2. Request the aircraft contact the appropriate control facility. 3. Inform that facility of the situation. If the aircraft cannot communicate with the new facility, relay information and clearances.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-2-8",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "context"
+      ],
+      "problem": "The entire item teaches a factually wrong condition. The correct answer claims radar assistance may be provided when 'the controller determines an emergency condition exists or is imminent.' The source (10-2-8c2b) requires that the pilot 'Refuses to declare an emergency and you have determined the exact nature of the radar services the pilot desires.' The controller determines what services the pilot wants, not whether an emergency exists. The stem also adds 'has an unequipped aircraft' which does not appear in the source — the source addresses qualifications and capability, not equipment. The explanation references paragraph 10-1-1c, which is outside this shard's source blocks.",
+      "source_basis": "10-2-8c2b: 'Refuses to declare an emergency and you have determined the exact nature of the radar services the pilot desires.' The controlling condition is the controller's determination of the specific radar services needed, not an independent emergency determination.",
+      "match": {
+        "question_text": "What condition permits a controller to provide radar assistance to a VFR pilot who lacks IFR qualifications, has an unequipped aircraft, and declines to declare an emergency?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "A VFR pilot in IMC lacks IFR qualifications, has been offered VFR airport options but declined, and refuses to declare an emergency. Under what condition may the controller provide radar assistance?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "Radar assistance may be provided when the pilot refuses to declare an emergency and the controller has determined the exact nature of the radar services the pilot desires. The operative condition is the controller's understanding of what specific radar help the pilot needs — not an independent controller determination that an emergency condition exists.",
+          "choices": [
+            {
+              "text": "The controller must first obtain supervisory approval before providing any radar assistance without a pilot declaration.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Radar assistance is automatic for any aircraft in IMC regardless of pilot qualifications or declarations.",
+              "is_correct": false,
+              "sort_order": 1
+            },
+            {
+              "text": "The controller has determined the exact nature of the radar services the pilot desires.",
+              "is_correct": true,
+              "sort_order": 2
+            },
+            {
+              "text": "Radar assistance may never be provided to a pilot who is not IFR qualified and refuses to declare an emergency.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-2-8",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "context"
+      ],
+      "problem": "Same blocker error as the companion question: the correct answer teaches that the controller may provide radar assistance when 'the controller determines an emergency condition exists or is imminent.' The source requires that the controller has determined the exact nature of the radar services the pilot desires. The stem also omits the intermediate procedural steps (offering VFR airport options, pilot declining) that must precede the radar assistance determination.",
+      "source_basis": "10-2-8c2b: 'Refuses to declare an emergency and you have determined the exact nature of the radar services the pilot desires.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Select the condition that allows radar assistance to a VFR pilot who is not IFR qualified and refuses to declare an emergency.",
+          "question_text": "A VFR pilot in IMC is not IFR qualified and refuses to declare an emergency. Under which condition may the controller provide radar assistance?",
+          "choices": [
+            {
+              "text": "The controller determines an emergency condition exists or is imminent, regardless of the pilot's refusal to declare one.",
+              "is_correct": true
+            },
+            {
+              "text": "Radar assistance is automatic for any aircraft that enters IMC, regardless of pilot qualifications or declarations.",
+              "is_correct": false
+            },
+            {
+              "text": "Radar assistance may be provided only after the pilot files an IFR flight plan with the appropriate controlling agency.",
+              "is_correct": false
+            },
+            {
+              "text": "Radar assistance is prohibited unless the pilot explicitly declares an emergency or holds a valid instrument rating.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 10-2-8c allows radar assistance when the pilot refuses to declare an emergency but the controller independently determines emergency conditions exist or are imminent. The controller's determination under 10-1-1c operates independently of the pilot's declaration.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-2-8:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Select the condition that allows radar assistance to a VFR pilot who is not IFR qualified and refuses to declare an emergency.",
+            "question_text": "A VFR pilot in IMC is not IFR qualified, has declined to conduct VFR flight to another airport, and refuses to declare an emergency. Under which condition may the controller provide radar assistance?",
+            "choices": [
+              {
+                "text": "The controller has determined the exact nature of the radar services the pilot desires.",
+                "is_correct": true
+              },
+              {
+                "text": "The controller independently determines that an emergency condition exists or is imminent.",
+                "is_correct": false
+              },
+              {
+                "text": "Radar assistance may be provided only after the pilot files an IFR flight plan with the appropriate controlling agency.",
+                "is_correct": false
+              },
+              {
+                "text": "Radar assistance is prohibited unless the pilot explicitly declares an emergency or holds a valid instrument rating.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "When a VFR pilot not qualified for IFR flight declines VFR airport options and refuses to declare an emergency, radar assistance may still be provided if the controller has determined the exact nature of the radar services the pilot desires. This requires knowing specifically what radar help the pilot needs — it is distinct from the controller independently determining that an emergency exists.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-2-8:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "10-2-8",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "Path 3 incorrectly teaches 'controller determines emergency conditions exist — may still assist.' The source condition is that the controller has determined the exact nature of the radar services desired, not that an emergency exists. Path 2 oversimplifies by skipping the intermediate step of offering VFR airport options before radar assistance is provided to a non-qualified pilot.",
+      "source_basis": "10-2-8c2b: 'Refuses to declare an emergency and you have determined the exact nature of the radar services the pilot desires.' The decision tree includes the intermediate step (c1) of offering VFR airport options before moving to radar assistance under (c2).",
+      "match": {
+        "front": "What three paths allow radar assistance to a VFR pilot who encounters IFR weather?",
+        "back": "1. Pilot is IFR qualified/capable — file IFR and issue clearance. 2. Pilot not qualified but emergency exists — provide assistance. 3. Pilot refuses to declare emergency but controller determines emergency conditions exist — may still assist.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "What paths allow radar assistance to a VFR pilot who encounters IFR weather?",
+          "back": "1. Pilot is IFR qualified and capable: request IFR flight plan and issue clearance. 2. Pilot is not qualified or capable — first offer VFR airport options. If pilot declares an emergency: provide radar assistance. 3. If pilot refuses to declare an emergency but the controller has determined the exact nature of the radar services the pilot desires: provide radar assistance.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-2-9",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "Paragraph-location scaffolding ('Per paragraph 10-2-9b and 10-2-9d') plus an invented safety rationale: 'as this increases spatial disorientation risk.' The source blocks state the prohibition on climb/descent while turning in IFR conditions but do not provide a reason. Adding a safety rationale not present in the source violates the prohibition against inventing policy purposes.",
+      "source_basis": "10-2-9b: 'Make turns while the aircraft is in VFR conditions so it will be in a position to fly a straight course while in IFR conditions.' 10-2-9d: 'Avoid requiring a climb or descent while in a turn if in IFR conditions.' Neither block states a reason for the climb/descent prohibition.",
+      "match": {
+        "question_text": "When providing radar assistance to a pilot who lacks IFR qualifications, when should turns be executed and which maneuver should be deferred while the aircraft is in IFR conditions?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When providing radar assistance to a pilot who lacks IFR qualifications, when should turns be executed and which maneuver should be deferred while the aircraft is in IFR conditions?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "When providing radar assistance to a pilot not qualified for IFR operations, turns should be made while the aircraft is in VFR conditions so it can fly a straight course while in IFR conditions. A climb or descent should be avoided while the aircraft is turning in IFR conditions.",
+          "choices": [
+            {
+              "text": "Make all turns in IFR conditions so the pilot can practice instrument scanning during the emergency.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Make turns in VFR conditions; avoid requiring climb or descent while turning in IFR conditions.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Combine turns with altitude changes to minimize total time spent in instrument meteorological conditions.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Make turns only after the aircraft has descended to the MVA, regardless of whether in VFR or IFR conditions.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-2-9",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation enumerates four paragraph references ('Paragraph 10-2-9b instructs... Paragraph 10-2-9d states... Paragraph 10-2-9a advises... Paragraph 10-2-9c says...') instead of teaching the operational principle. The stem and choices are accurate.",
+      "source_basis": "10-2-9a through 10-2-9d provide radar assistance techniques for pilots not qualified for IFR operations, covering frequency changes, turns, aircraft configuration, and combined maneuvers.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Choose the correct radar-assistance technique for a non-IFR-qualified pilot.",
+          "question_text": "Which technique should a controller apply when providing radar assistance to a pilot not qualified for IFR operations?",
+          "choices": [
+            {
+              "text": "Make turns while the aircraft is in VFR conditions so it can fly a straight course while in IFR conditions.",
+              "is_correct": true
+            },
+            {
+              "text": "Require a descent while the aircraft is in a turn, because combining maneuvers reduces total time spent in IMC.",
+              "is_correct": false
+            },
+            {
+              "text": "Change frequencies frequently to identify the clearest communications channel available.",
+              "is_correct": false
+            },
+            {
+              "text": "Have the pilot lower the landing gear after entering IMC, since configuration changes are less disorienting in clouds.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 10-2-9b instructs controllers to make turns while the aircraft is in VFR conditions. Paragraph 10-2-9d states that climb or descent should be avoided while turning in IFR conditions. Paragraph 10-2-9a advises against frequency changes except when necessary. Paragraph 10-2-9c says to configure the aircraft while in VFR conditions.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-2-9:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Choose the correct radar-assistance technique for a non-IFR-qualified pilot.",
+            "question_text": "Which technique should a controller apply when providing radar assistance to a pilot not qualified for IFR operations?",
+            "choices": [
+              {
+                "text": "Make turns while the aircraft is in VFR conditions so it can fly a straight course while in IFR conditions.",
+                "is_correct": true
+              },
+              {
+                "text": "Require a descent while the aircraft is in a turn, because combining maneuvers reduces total time spent in IMC.",
+                "is_correct": false
+              },
+              {
+                "text": "Change frequencies frequently to identify the clearest communications channel available.",
+                "is_correct": false
+              },
+              {
+                "text": "Have the pilot lower the landing gear after entering IMC, since configuration changes are less disorienting in clouds.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "When providing radar assistance to a pilot not qualified for IFR operations, controllers should make turns while the aircraft is in VFR conditions so it can fly straight in IFR conditions. Frequency changes should be avoided except when necessary for a clear communications channel. Aircraft configuration changes such as lowering landing gear should be done while the aircraft is in VFR conditions. Climb or descent should be avoided while the aircraft is turning in IFR conditions.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-2-9:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-3-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation opens with 'Per paragraph 10-3-1a' — paragraph-location scaffolding. The stem, choices, and operational content are accurate against the source.",
+      "source_basis": "10-3-1a: an aircraft is considered overdue when 30 minutes have passed with neither communications nor radar contact since: (1) ETA over a reporting point or clearance limit, (2) clearance void time, or (3) a VFR or IFR aircraft at an airport without tower/FSS fails to cancel its flight plan after receiving cancellation instructions.",
+      "match": {
+        "question_text": "After what three trigger events, combined with 30 minutes without communications or radar contact, is an aircraft considered overdue for ALNOT purposes?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "After what three trigger events, combined with 30 minutes without communications or radar contact, is an aircraft considered overdue for ALNOT purposes?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "An aircraft is considered overdue and ALNOT procedures are initiated when 30 minutes have passed with neither communications nor radar contact since: the aircraft's ETA over a specified or compulsory reporting point or at a clearance limit; its clearance void time; or the failure of a VFR or IFR aircraft arriving at an airport not served by a control tower or flight service station to cancel its flight plan after receiving instructions on how to cancel.",
+          "choices": [
+            {
+              "text": "The time the flight plan was filed, the time of last radar contact, or the time the pilot last requested a weather briefing.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "ETA over a reporting point or clearance limit, clearance void time, or failure to cancel a flight plan within 30 minutes of destination ETA.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "The time the aircraft departed, the time of last fuel stop, or the time the flight plan was activated.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The time of last position report, the time of last altitude change, or the time the aircraft entered the controller's airspace.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-3-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation opens with 'Per paragraphs 10-3-2 and 10-3-3' — paragraph-location scaffolding. The cross-paragraph comparison is operationally valid and the answer is accurate.",
+      "source_basis": "10-3-2 lists terminal-to-ARTCC notification items (a-k). 10-3-3 lists ARTCC-to-RCC notification items (a-m). Comparing the two: 'Facility and person calling' (10-3-3a) and 'Action taken by reporting facility and proposed action' (10-3-3f) are unique to the RCC notification.",
+      "match": {
+        "question_text": "When comparing the information forwarded by a terminal facility to the ARTCC with the information the ARTCC later forwards to the RCC, which items are unique to the RCC notification?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When comparing the information forwarded by a terminal facility to the ARTCC with the information the ARTCC later forwards to the RCC, which items are unique to the RCC notification?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "explanation": "When notifying the RCC about an overdue or emergency-status aircraft, the ARTCC adds two items not included in the terminal facility's notification: the facility and person calling, and the action taken by the reporting facility and proposed action. All other information items — flight plan, last transmission details, last position, beacon code, persons on board, fuel status, facility working the aircraft, ELT information, and other pertinent information — are common to both the terminal-to-ARTCC and ARTCC-to-RCC notification lists.",
+          "choices": [
+            {
+              "text": "The notification lists are identical — the ARTCC simply forwards the same information the terminal facility provided.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Facility and person calling, and action taken by reporting facility and proposed action.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Aircraft beacon code and number of persons on board — these are terminal-only items withheld from the RCC.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Fuel status and ELT signal information — these are added by the ARTCC when the terminal facility omits them.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-3-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Explanation contains paragraph-location scaffolding ('paragraph 10-3-2'). The stem uses 'which item' (singular) when the ARTCC actually adds two items (facility and person calling; action taken by reporting facility and proposed action). The activity correctly tests one of the two added items, but the singular framing could mislead.",
+      "source_basis": "10-3-3a and 10-3-3f are the two items unique to the ARTCC-to-RCC notification list that do not appear on the terminal-to-ARTCC list in 10-3-2.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify which information item is added when the ARTCC forwards an overdue aircraft report to the RCC.",
+          "question_text": "When the ARTCC forwards information about an overdue aircraft to the RCC, which item is added that was not on the terminal facility's notification to the ARTCC?",
+          "choices": [
+            {
+              "text": "Action taken by the reporting facility and proposed action.",
+              "is_correct": true
+            },
+            {
+              "text": "Aircraft beacon code.",
+              "is_correct": false
+            },
+            {
+              "text": "Flight plan including color of aircraft.",
+              "is_correct": false
+            },
+            {
+              "text": "Last position report and how determined.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "The ARTCC adds 'facility and person calling' and 'action taken by reporting facility and proposed action' when forwarding to the RCC. These two items are not on the terminal-to-ARTCC list in paragraph 10-3-2. Items like beacon code, flight plan, and position report appear on both lists.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-3-3:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify which information item is added when the ARTCC forwards an overdue aircraft report to the RCC.",
+            "question_text": "When the ARTCC forwards information about an overdue aircraft to the RCC, which of the following is an information item that was not on the terminal facility's notification to the ARTCC?",
+            "choices": [
+              {
+                "text": "Action taken by the reporting facility and proposed action.",
+                "is_correct": true
+              },
+              {
+                "text": "Aircraft beacon code.",
+                "is_correct": false
+              },
+              {
+                "text": "Flight plan including color of aircraft.",
+                "is_correct": false
+              },
+              {
+                "text": "Last position report and how determined.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The ARTCC adds two information items when forwarding to the RCC that are not on the terminal facility's notification: 'facility and person calling' and 'action taken by the reporting facility and proposed action.' Items such as beacon code, flight plan, and last position report appear on both the terminal-to-ARTCC and ARTCC-to-RCC notification lists.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-3-3:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-3-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "source_fidelity"
+      ],
+      "problem": "Explanation opens with 'Per paragraph 10-3-4a' — paragraph-location scaffolding. Additionally, the correct answer says 'last known position' but the source states 'last reported position' for the geographic scope. The source uses 'last reported position' for the ALNOT scope and 'last known position' for the information included in the ALNOT message — these are distinct concepts.",
+      "source_basis": "10-3-4a: 'issue an ALNOT to all centers and Area B circuits, generally 50 miles on either side of the route of flight from the last reported position to destination.' The geographic scope uses 'last reported position,' not 'last known position.' 10-3-4a separately references including 'the last known position of the aircraft' as information within the ALNOT.",
+      "match": {
+        "question_text": "What is the normal geographic scope of an ALNOT, and under what circumstances may it be expanded?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the normal geographic scope of an ALNOT, and under what circumstances may it be expanded?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "An ALNOT is normally issued to all centers and Area B circuits covering 50 miles on either side of the route of flight from the last reported position to the destination. At the recommendation of the RCC or at the controller's discretion, the ALNOT may be expanded to cover the maximum range of the aircraft. The ALNOT must include the original or amended flight plan and the last known position of the aircraft.",
+          "choices": [
+            {
+              "text": "100 miles either side of the route — the 50-mile figure in the regulation refers to nautical miles from each reporting point.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "50 miles either side of the route from last reported position to destination; expandable at RCC recommendation or controller discretion.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "The entire ARTCC airspace — ALNOTs automatically cover all sectors within the issuing center's boundary.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "50 miles either side, and this scope is mandatory — there is no authority to expand the distribution area.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-3-6",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "Paragraph-location scaffolding ('Per paragraph 10-3-6b') plus an invented rationale: 'This balances SAR urgency with accuracy.' The source states the procedure is 'to prevent an undue delay' but does not characterize it as balancing urgency with accuracy. Adding a policy-purpose characterization not present in the source violates the harness rules.",
+      "source_basis": "10-3-6b: 'If necessary to prevent an undue delay, utilize any available method to determine the initial latitude and longitude. Follow-up as soon as possible with a formal latitude and longitude using the appropriate terminal or en route facility data extraction tools.' The stated purpose is solely 'to prevent an undue delay.'",
+      "match": {
+        "question_text": "What is the two-tier procedure for providing an overdue aircraft's last known position to the RCC when the formal extraction tool will cause delay?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the two-tier procedure for providing an overdue aircraft's last known position to the RCC when the formal extraction tool will cause delay?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "To prevent an undue delay, any available method must be used to determine an initial latitude and longitude for the aircraft's last known position. A formal latitude and longitude using the appropriate terminal or en route facility data extraction tools must follow as soon as possible. If available, other aircraft operating near the aircraft in distress should be solicited for assistance.",
+          "choices": [
+            {
+              "text": "Wait for the formal extraction — only the most accurate position data meets the standard for SAR coordination.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Provide an initial position using any available method immediately, then follow up with the formal lat/long as soon as possible.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Advise the RCC that position data is unavailable and request they proceed using the aircraft's last reported waypoint.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Use only the formal extraction tool but request the RCC expedite planning using a rough estimate in the interim.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-3-7",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation opens with 'Per paragraph 10-3-7' — paragraph-location scaffolding. The stem, choices, and operational content are accurate.",
+      "source_basis": "10-3-7: 'When directed by the RCC, cancel the ALNOT when the aircraft is located or the search is abandoned. Include pertinent information in the cancellation that will aid the RCC, SAR Teams, and FAA SAR management to include the location where the aircraft or wreckage was found.'",
+      "match": {
+        "question_text": "Who directs the cancellation of an ALNOT, and what information must the cancellation include?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Who directs the cancellation of an ALNOT, and what information must the cancellation include?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "An ALNOT is canceled when directed by the RCC after the aircraft is located or the search is abandoned. The cancellation must include pertinent information to aid the RCC, SAR teams, and FAA SAR management, including the location where the aircraft or wreckage was found.",
+          "choices": [
+            {
+              "text": "The issuing ARTCC cancels the ALNOT autonomously once the aircraft is located; no additional information is required.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The RCC directs cancellation; the cancellation includes the location of the aircraft or wreckage and other pertinent information.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "The ALNOT expires automatically 24 hours after issuance; no formal cancellation message is needed.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The terminal facility that originated the overdue report directs cancellation after confirming the aircraft has landed safely.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-4-1",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "context"
+      ],
+      "problem": "Two critical source fidelity errors: (1) The fifth time reference is taught as 'the time the flight plan was filed' — the source (10-4-1e) states 'The release time and, if issued, the clearance void time.' Flight plan filing time is not in the source. (2) The stem, answer, and explanation all assert an 'in order of priority' scheme. The source lists applicable times in subparagraphs a through e but does not establish priority among them — it says 'the applicable time' (singular), meaning whichever time applies to the situation. The priority-order teaching is invented. The correct answer also uses 'flight plan filing time as a last resort,' compounding both errors.",
+      "source_basis": "10-4-1e: 'The release time and, if issued, the clearance void time.' The source lists subparagraphs a-e as alternative applicable times without establishing priority: 'restrict or suspend IFR traffic for a period of 30 minutes following the applicable time listed in subparagraphs a through e.'",
+      "match": {
+        "question_text": "What five time references, in order of priority, determine when the 30-minute IFR traffic restriction period begins for an overdue or unreported aircraft?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which of the following is one of the five time references that starts the 30-minute IFR traffic restriction period for an overdue or unreported aircraft?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The five applicable time references for the 30-minute IFR traffic restriction period are: the approach clearance delivery time; the EFC time delivered to the pilot; the arrival time over the NAVAID serving the destination airport; the current estimate (controller's or pilot's, whichever is later) at the en route NAVAID or fix and at the destination NAVAID; and the release time and clearance void time. The time the flight plan was filed is not among these references. IFR traffic that could be affected must be restricted or suspended for 30 minutes following the applicable time, unless radar separation is used.",
+          "choices": [
+            {
+              "text": "The time the flight plan was filed.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "The release time and, if issued, the clearance void time.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "The time the pilot last communicated with ATC.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "The time the aircraft departed its origin airport.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-4-1",
+      "action": "replace",
+      "severity": "major",
+      "categories": [
+        "source_fidelity",
+        "context"
+      ],
+      "problem": "The activity invents a priority rule between approach clearance time and EFC time that is not in the source. 10-4-1 lists applicable time references without establishing that 'a' takes precedence over 'b.' The correct answer '1415Z — the approach clearance time takes precedence over the EFC time' teaches a selection rule the source does not provide. Additionally, the explanation contains paragraph-location scaffolding and reinforces the invented priority concept.",
+      "source_basis": "10-4-1: 'restrict or suspend IFR traffic for a period of 30 minutes following the applicable time listed in subparagraphs a through e.' The source does not establish priority among the listed times — it says 'the applicable time' (singular) for the specific situation.",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify the correct time reference for the 30-minute traffic restriction.",
+          "question_text": "An overdue IFR aircraft was both given an approach clearance at 1415Z and assigned an EFC time of 1430Z. Which time reference starts the 30-minute IFR traffic restriction clock?",
+          "choices": [
+            {
+              "text": "1415Z — the approach clearance time takes precedence over the EFC time.",
+              "is_correct": true
+            },
+            {
+              "text": "1430Z — the EFC time is the mandatory reference for all lost-communication time calculations.",
+              "is_correct": false
+            },
+            {
+              "text": "1445Z — the restriction clock begins 30 minutes after the earlier of the two references.",
+              "is_correct": false
+            },
+            {
+              "text": "The time the flight plan was filed — it is the only time reference common to all overdue aircraft situations.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 10-4-1 lists five time references in priority order. The approach clearance time (subpara a) has higher priority than EFC time (subpara b). When multiple references apply, use the highest-priority one that is available.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-4-1:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify the correct rule for IFR traffic restrictions when an aircraft is overdue.",
+            "question_text": "An IFR aircraft is overdue and its flight path could affect other IFR traffic. What must the responsible facility do?",
+            "choices": [
+              {
+                "text": "Restrict or suspend the affected IFR traffic for 30 minutes following the applicable time reference, unless radar separation is used.",
+                "is_correct": true
+              },
+              {
+                "text": "Issue an immediate ALNOT and wait for the RCC to authorize any traffic restriction.",
+                "is_correct": false
+              },
+              {
+                "text": "Continue normal operations unless the pilot of the overdue aircraft has declared an emergency.",
+                "is_correct": false
+              },
+              {
+                "text": "Restrict IFR traffic for exactly 30 minutes regardless of whether radar separation is available.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "IFR traffic that could be affected by an overdue or unreported aircraft must be restricted or suspended for 30 minutes following the applicable time reference, unless radar separation is used. The five applicable time references are: approach clearance delivery time, EFC time, NAVAID arrival estimate, the current estimate at the en route NAVAID/fix and destination NAVAID, and the release time and clearance void time. Radar separation exempts the traffic from the restriction requirement.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-4-1:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "10-4-1",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity"
+      ],
+      "problem": "The back teaches: (1) 'In priority order' — the source does not establish priority among the five time references. (2) 'Flight plan filing time (last resort)' — the source (10-4-1e) states 'The release time and, if issued, the clearance void time.' Flight plan filing time is factually wrong. The 'last resort' characterization is also invented.",
+      "source_basis": "10-4-1e: 'The release time and, if issued, the clearance void time.' The source does not rank the time references or label any as a 'last resort.'",
+      "match": {
+        "front": "What five time references start the 30-minute traffic restriction period for an overdue aircraft?",
+        "back": "In priority order: 1. Approach clearance delivery time. 2. EFC time. 3. NAVAID arrival estimate. 4. Controller's current estimate. 5. Flight plan filing time (last resort).",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "What five time references determine when the 30-minute traffic restriction period begins for an overdue aircraft?",
+          "back": "1. Approach clearance delivery time. 2. EFC time delivered to the pilot. 3. Arrival time over the NAVAID serving the destination airport. 4. Current estimate (controller's or pilot's, whichever is later) at the en route NAVAID or fix and at the destination NAVAID. 5. Release time and clearance void time.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-4-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation opens with 'Per paragraph 10-4-2' — paragraph-location scaffolding. The stem, choices, and operational content are accurate.",
+      "source_basis": "10-4-2a (en route): 'request the airport management to light all runway lights, approach lights, and all other required airport lighting systems for at least 30 minutes before the ETA of the unreported aircraft until the aircraft has been located or for 30 minutes after its fuel supply is estimated to be exhausted.' 10-4-2b (terminal): 'Operate runway lights, approach lights, and all other required airport lighting systems' for the same duration.",
+      "match": {
+        "question_text": "For what duration must airport lighting systems be operated for an unreported aircraft, and how does the responsibility differ between en route and terminal facilities?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "For what duration must airport lighting systems be operated for an unreported aircraft, and how does the responsibility differ between en route and terminal facilities?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Airport lighting for an unreported aircraft must be activated at least 30 minutes before the aircraft's ETA and continue until the aircraft is located or for 30 minutes after its fuel supply is estimated to be exhausted. At nontower or non-FSS locations, en route facilities request airport management to activate the lights. Terminal facilities operate the runway lights, approach lights, and other required airport lighting systems directly.",
+          "choices": [
+            {
+              "text": "Exactly 30 minutes before ETA until exactly 30 minutes after ETA, regardless of whether the aircraft is located sooner.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "At least 30 minutes before ETA until located or 30 minutes after fuel exhaustion; en route requests airport management, terminal operates directly.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "Only the runway edge lights are required — approach lights and other systems are activated at the controller's discretion.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "Lighting is a pilot responsibility at nontower airports; ATC has no obligation to activate or request airport lighting.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-4-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation opens with 'Per paragraph 10-4-3' — paragraph-location scaffolding. The explanation also adds operational consequences: 'If concurrence is withdrawn during that 30-minute window, normal ATC must be suspended again' and 'Concurrence is required from all affected operators/pilots.' While these are reasonable logical applications of the maintenance requirement, the source states only that concurrence must be maintained — it does not explicitly state the withdrawal consequence or quantify 'all.' The replacement explanation stays within the source's stated requirements.",
+      "source_basis": "10-4-3: 'After the 30-minute traffic suspension period has expired, resume normal air traffic control if the operators or pilots of other aircraft concur. This concurrence must be maintained for a period of 30 minutes after the suspension period has expired.'",
+      "match": {
+        "question_text": "After the 30-minute traffic suspension period for an overdue aircraft expires, what are the requirements for resuming normal ATC?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "After the 30-minute traffic suspension period for an overdue aircraft expires, what are the requirements for resuming normal ATC?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Normal air traffic control may resume after the 30-minute traffic suspension period expires if the operators or pilots of other aircraft concur. This concurrence must be maintained for a period of 30 minutes after the suspension period has expired.",
+          "choices": [
+            {
+              "text": "Normal ATC resumes automatically once the suspension period expires — no concurrence or further action is required.",
+              "is_correct": false,
+              "sort_order": 0
+            },
+            {
+              "text": "Affected operators or pilots must concur, and that concurrence must be maintained for 30 minutes after the suspension period expires.",
+              "is_correct": true,
+              "sort_order": 1
+            },
+            {
+              "text": "The facility air traffic manager must authorize resumption in writing after verifying the suspension period has fully elapsed.",
+              "is_correct": false,
+              "sort_order": 2
+            },
+            {
+              "text": "A simple majority of affected pilots must concur — unanimous concurrence from all affected operators is not required.",
+              "is_correct": false,
+              "sort_order": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-4-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context"
+      ],
+      "problem": "Explanation opens with 'Paragraph 10-4-3 requires' — paragraph-location scaffolding. The activity tests a logical application of the concurrence maintenance requirement, which is a reasonable operational scenario.",
+      "source_basis": "10-4-3: 'This concurrence must be maintained for a period of 30 minutes after the suspension period has expired.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Determine the effect of withdrawing concurrence after the traffic suspension period expires.",
+          "question_text": "After the 30-minute suspension period for an overdue aircraft expires, all affected pilots concur to resume normal ATC. Fifteen minutes later, one pilot withdraws that concurrence. What happens to normal ATC operations?",
+          "choices": [
+            {
+              "text": "Normal ATC must be suspended again because concurrence must be maintained for a full 30 minutes after the suspension period expires.",
+              "is_correct": true
+            },
+            {
+              "text": "Normal ATC continues because concurrence was valid at the moment the suspension period originally expired.",
+              "is_correct": false
+            },
+            {
+              "text": "Normal ATC continues for all aircraft except the one whose pilot withdrew concurrence.",
+              "is_correct": false
+            },
+            {
+              "text": "The controller must restart the 30-minute suspension period from the time concurrence was withdrawn.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 10-4-3 requires that concurrence be maintained for a period of 30 minutes after the suspension period expires. If concurrence is withdrawn during that 30-minute window, normal ATC must be suspended again.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-4-3:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Determine the effect of withdrawing concurrence after the traffic suspension period expires.",
+            "question_text": "After the 30-minute suspension period for an overdue aircraft expires, all affected pilots concur to resume normal ATC. Fifteen minutes later, one pilot withdraws that concurrence. What happens to normal ATC operations?",
+            "choices": [
+              {
+                "text": "Normal ATC must be suspended again because concurrence must be maintained for a full 30 minutes after the suspension period expires.",
+                "is_correct": true
+              },
+              {
+                "text": "Normal ATC continues because concurrence was valid at the moment the suspension period originally expired.",
+                "is_correct": false
+              },
+              {
+                "text": "Normal ATC continues for all aircraft except the one whose pilot withdrew concurrence.",
+                "is_correct": false
+              },
+              {
+                "text": "The controller must restart the 30-minute suspension period from the time concurrence was withdrawn.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "Concurrence from the operators or pilots of other aircraft must be maintained for a period of 30 minutes after the traffic suspension period expires. If concurrence is withdrawn during that 30-minute window, the required condition for resumed normal ATC is no longer met, and normal ATC must be suspended again.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-4-3:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-5-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with 'Per paragraph 10-5-1,' which is paragraph-location scaffolding that teaches document structure rather than operational substance.",
+      "source_basis": "Para 10-5-1: 'Relay the explosive cargo information to: a. The emergency equipment crew. b. The airport management. c. The appropriate military agencies, when requested by the pilot.'",
+      "match": {
+        "question_text": "When an aircraft carrying explosive cargo is making an emergency landing, to which entities must the explosive cargo information be relayed?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When an aircraft carrying explosive cargo is making an emergency landing, to which entities must the explosive cargo information be relayed?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The explosive cargo information must be relayed to the emergency equipment crew, the airport management, and — when requested by the pilot — the appropriate military agencies. The controller must also inform the pilot of the safest or least congested airport areas.",
+          "choices": [
+            {
+              "text": "Only the emergency equipment crew, because they are the primary first responders to any aircraft emergency.",
+              "is_correct": false
+            },
+            {
+              "text": "The emergency equipment crew, airport management, and — when the pilot requests — the appropriate military agencies.",
+              "is_correct": true
+            },
+            {
+              "text": "The airport management only, who then assumes responsibility for notifying all other relevant entities.",
+              "is_correct": false
+            },
+            {
+              "text": "The emergency equipment crew, airport management, and military agencies — military notification is mandatory regardless of pilot request.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-5-2",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "explanation_quality",
+        "context"
+      ],
+      "problem": "The correct answer invents actions ('issue the DRA location, provide hazard information, and advise the pilot to exit') not listed in subparagraph 10-5-2b2 for airborne aircraft already within a DRA. The source requires (a) assist aircraft to exit the DRA expeditiously and (b) do not withhold landing or approach clearances. The explanation also fabricates the alert broadcast reissue interval as 'every 5 minutes for 20 minutes' when the source states 'approximately every 15 minutes, when workload permits.'",
+      "source_basis": "Para 10-5-2b2: 'For airborne aircraft already within an activated DRA: (a) Assist aircraft to exit the DRA expeditiously; (b) Do not withhold landing or approach clearances.' Alert broadcast reissue: 'When workload permits, reissue the alert broadcast approximately every 15 minutes.'",
+      "match": {
+        "question_text": "What actions must a controller take for an airborne aircraft already within an activated Debris Response Area (DRA) following a space launch mishap?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What actions must a controller take for an airborne aircraft already within an activated Debris Response Area (DRA) following a space launch mishap?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "For airborne aircraft already within an activated DRA, assist the aircraft to exit the DRA expeditiously and do not withhold landing or approach clearances. Aircraft must be prevented from entering the DRA unless a higher-priority duty exists.",
+          "choices": [
+            {
+              "text": "Clear the aircraft to land at the nearest airport immediately, regardless of position relative to the debris field.",
+              "is_correct": false
+            },
+            {
+              "text": "Assist the aircraft to exit the DRA expeditiously and do not withhold landing or approach clearances.",
+              "is_correct": true
+            },
+            {
+              "text": "Maintain normal ATC services — once inside the DRA, changing course could increase collision risk with debris.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue only the DRA location and let the pilot determine whether to remain in or exit the area.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-5-2",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "explanation_quality",
+        "context"
+      ],
+      "problem": "The explanation fabricates the alert broadcast reissue interval as 'every 5 minutes for 20 minutes following the last known event' when the source states 'approximately every 15 minutes, when workload permits.' The explanation also asserts that paragraph 10-5-2 prohibits landing clearances at underlying airports, but the source prohibits only departure releases and takeoff clearances there.",
+      "source_basis": "Para 10-5-2b3: '(a) Do not issue departure releases or takeoff clearances; (b) To the extent possible do not clear aircraft onto the movement area.' Alert broadcast reissue: 'When workload permits, reissue the alert broadcast approximately every 15 minutes.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify which ATC action is permitted at an airport underlying an active Debris Response Area.",
+          "question_text": "A DRA has been activated and an airport lies underneath it. Which action may ATC take at that airport?",
+          "choices": [
+            {
+              "text": "Continue broadcasting the mishap alert to affected aircraft on all appropriate frequencies.",
+              "is_correct": true
+            },
+            {
+              "text": "Issue a takeoff clearance to an aircraft holding short of the runway.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue a landing clearance to an arriving aircraft on final approach.",
+              "is_correct": false
+            },
+            {
+              "text": "Issue taxi instructions for an aircraft to reposition from the ramp to the active runway.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 10-5-2 prohibits ATC from issuing takeoff or landing clearances at airports underlying an active DRA. However, the alert broadcast obligation continues — it must be reissued every 5 minutes for 20 minutes following the last known event.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-5-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify which ATC action is permitted at an airport underlying an active Debris Response Area.",
+            "question_text": "A DRA has been activated and an airport lies underneath it. Which action may ATC take at that airport?",
+            "choices": [
+              {
+                "text": "Continue broadcasting the mishap alert to affected aircraft on all appropriate frequencies.",
+                "is_correct": true
+              },
+              {
+                "text": "Issue a takeoff clearance to an aircraft holding short of the runway.",
+                "is_correct": false
+              },
+              {
+                "text": "Issue a landing clearance to an arriving aircraft on final approach.",
+                "is_correct": false
+              },
+              {
+                "text": "Issue taxi instructions for an aircraft to reposition from the ramp to the active runway.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "At airports underlying an active DRA, do not issue departure releases or takeoff clearances and, to the extent possible, do not clear aircraft onto the movement area. The alert broadcast about the mishap is reissued approximately every 15 minutes when workload permits and continues until the DRA is deactivated or falling debris is no longer a factor.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-5-2:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "10-5-2",
+      "action": "replace",
+      "severity": "blocker",
+      "categories": [
+        "source_fidelity",
+        "format_fit"
+      ],
+      "problem": "The back of the card states 'Every 5 minutes for 20 minutes following the last known event' which is fabricated. The source states 'When workload permits, reissue the alert broadcast approximately every 15 minutes.' The front uses 'must' which overstates the obligation — the source makes the reissue conditional on workload.",
+      "source_basis": "Para 10-5-2: 'When workload permits, reissue the alert broadcast approximately every 15 minutes. When advised that falling debris is no longer a factor, or the DRA has been deactivated, issue a broadcast to advise all aircraft of this information.'",
+      "match": {
+        "front": "How often must the debris mishap alert broadcast be reissued after a space launch or reentry vehicle mishap?",
+        "back": "Every 5 minutes for 20 minutes following the last known event, or until the DRA is deactivated.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "How often should the debris mishap alert broadcast be reissued during a space launch or reentry vehicle mishap?",
+          "back": "Approximately every 15 minutes, when workload permits. The broadcast continues until the DRA is deactivated or falling debris is no longer a factor.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-6-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality",
+        "answer_defensibility"
+      ],
+      "problem": "The explanation opens with 'Per paragraph 10-6-2a,' which is paragraph-location scaffolding. The correct choice 'Uncertainty Phase (INCERFA).' is also conspicuously shorter than every distractor, leaking the answer by length.",
+      "source_basis": "Para 10-6-2a: 'Uncertainty phase (INCERFA). When there is concern about the safety of an aircraft or its occupants, an INCERFA exists: 1. When communication from an aircraft has not been received within 30 minutes after the time a communication should have been received...'",
+      "match": {
+        "question_text": "An oceanic aircraft's expected communication time has passed and 35 minutes have elapsed without contact. Which emergency phase applies?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "An oceanic aircraft's expected communication time has passed and 35 minutes have elapsed without contact. Which emergency phase applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The Uncertainty Phase (INCERFA) exists when communication has not been received within 30 minutes after the time a communication should have been received, or after the first unsuccessful attempt to establish communication, whichever is earlier.",
+          "choices": [
+            {
+              "text": "Alert Phase (ALERFA), because any communication failure beyond 30 minutes escalates to the alert level.",
+              "is_correct": false
+            },
+            {
+              "text": "Uncertainty Phase (INCERFA), because the 30-minute communication window has been exceeded.",
+              "is_correct": true
+            },
+            {
+              "text": "Distress Phase (DETRESFA), because loss of communication in oceanic airspace always indicates grave danger.",
+              "is_correct": false
+            },
+            {
+              "text": "No emergency phase exists until the aircraft also fails to arrive at its destination.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-6-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with 'Paragraph 10-6-2 describes' which is paragraph-location scaffolding. The description of ALERFA triggers oversimplifies, stating only 'subsequent communication attempts fail' while omitting the 60-minute communication-failure trigger and the impaired-operating-efficiency trigger from the source.",
+      "source_basis": "Para 10-6-2b: 'Alert phase (ALERFA)... 1. Following the uncertainty phase when subsequent attempts to establish communications...have failed... 2. When information has been received which indicates that the operating efficiency of the aircraft has been impaired... 3. When communication from an aircraft has not been received within 60 minutes...'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify the correct ordering of oceanic emergency phases.",
+          "question_text": "Which sequence correctly orders the three oceanic emergency phases from least to most severe?",
+          "choices": [
+            {
+              "text": "INCERFA (Uncertainty), ALERFA (Alert), DETRESFA (Distress).",
+              "is_correct": true
+            },
+            {
+              "text": "ALERFA (Alert), INCERFA (Uncertainty), DETRESFA (Distress).",
+              "is_correct": false
+            },
+            {
+              "text": "DETRESFA (Distress), ALERFA (Alert), INCERFA (Uncertainty).",
+              "is_correct": false
+            },
+            {
+              "text": "INCERFA (Uncertainty), DETRESFA (Distress), ALERFA (Alert).",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 10-6-2 describes three escalating emergency phases. INCERFA (Uncertainty) is the least severe, triggered by loss of communication for 30+ minutes. ALERFA (Alert) is intermediate, triggered when communication attempts fail. DETRESFA (Distress) is most severe, triggered when fuel is exhausted or forced landing is imminent.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-6-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify the correct ordering of oceanic emergency phases.",
+            "question_text": "Which sequence correctly orders the three oceanic emergency phases from least to most severe?",
+            "choices": [
+              {
+                "text": "INCERFA (Uncertainty), ALERFA (Alert), DETRESFA (Distress).",
+                "is_correct": true
+              },
+              {
+                "text": "ALERFA (Alert), INCERFA (Uncertainty), DETRESFA (Distress).",
+                "is_correct": false
+              },
+              {
+                "text": "DETRESFA (Distress), ALERFA (Alert), INCERFA (Uncertainty).",
+                "is_correct": false
+              },
+              {
+                "text": "INCERFA (Uncertainty), DETRESFA (Distress), ALERFA (Alert).",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The three escalating emergency phases are INCERFA (Uncertainty Phase), ALERFA (Alert Phase), and DETRESFA (Distress Phase), ordered from least to most severe. INCERFA is triggered when communication is not received within 30 minutes after the expected time or after the first unsuccessful contact attempt. ALERFA follows when subsequent communication attempts fail, when no communication is received within 60 minutes, or when information indicates impaired operating efficiency short of a likely forced landing. DETRESFA exists when fuel is exhausted or insufficient to reach safety, a forced landing is likely or has occurred, or widespread inquiries after the alert phase are unsuccessful.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-6-2:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-6-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with 'Per paragraph 10-6-4a,' which is paragraph-location scaffolding.",
+      "source_basis": "Para 10-6-4a: 'If an aircraft over water requests weather, sea conditions, ditching information, and/or assistance from surface vessels...it should be requested from the RCC. Also, an appropriate AMVER SURPIC should be asked for if requested by the aircraft or deemed beneficial by control personnel.'",
+      "match": {
+        "question_text": "When an aircraft over water requests sea condition information or surface vessel assistance, from what source is this information obtained?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When an aircraft over water requests sea condition information or surface vessel assistance, from what source is this information obtained?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Weather, sea conditions, ditching information, and surface vessel assistance should be requested from the RCC. An AMVER SURPIC should also be requested if the aircraft asks or if control personnel deem it beneficial.",
+          "choices": [
+            {
+              "text": "From the aircraft's company dispatch, because the operator arranges maritime assistance for its own flights.",
+              "is_correct": false
+            },
+            {
+              "text": "From the nearest Coast Guard station, because maritime rescue coordination is a Coast Guard responsibility.",
+              "is_correct": false
+            },
+            {
+              "text": "From the RCC, with an AMVER SURPIC requested if the aircraft asks or the controller deems it beneficial.",
+              "is_correct": true
+            },
+            {
+              "text": "From the AMVER Center only, because the automated system provides all necessary weather and sea condition data.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-6-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with 'Per paragraph 10-6-5b,' which is paragraph-location scaffolding. The trailing clause 'A moving fix creates an unstable clearance boundary' adds an explanatory rationale not stated in the source.",
+      "source_basis": "Para 10-6-5b: 'Clear the SAR aircraft to a fixed clearance limit rather than to the aircraft in distress, which is a moving fix. Issue route clearances that are consistent with that of the distressed aircraft.'",
+      "match": {
+        "question_text": "What type of clearance limit should be used for a SAR aircraft being positioned to assist a distressed aircraft in oceanic airspace?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What type of clearance limit should be used for a SAR aircraft being positioned to assist a distressed aircraft in oceanic airspace?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The SAR aircraft must be cleared to a fixed clearance limit rather than to the aircraft in distress, which is a moving fix. Route clearances should be consistent with that of the distressed aircraft.",
+          "choices": [
+            {
+              "text": "The distressed aircraft's current position, to minimize the time needed to establish visual contact.",
+              "is_correct": false
+            },
+            {
+              "text": "A fixed clearance limit, because the distressed aircraft is a moving fix that cannot serve as a stable clearance boundary.",
+              "is_correct": true
+            },
+            {
+              "text": "The nearest suitable airport, since all SAR operations in oceanic airspace must terminate at a landing facility.",
+              "is_correct": false
+            },
+            {
+              "text": "No clearance limit — SAR aircraft operating under emergency authority receive only heading and altitude assignments.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-6-5",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with 'Paragraph 10-6-5a requires' which is paragraph-location scaffolding.",
+      "source_basis": "Para 10-6-5a: 'Provide IFR separation between the SAR and the aircraft in distress, except when visual or radar contact has been established by the search and rescue aircraft and the pilots of both aircraft concur, IFR separation may be discontinued.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify the correct conditions for discontinuing IFR separation between SAR and distressed aircraft.",
+          "question_text": "A SAR aircraft has established visual contact with a distressed aircraft in oceanic airspace. The SAR pilot concurs to discontinue IFR separation, but the distressed pilot has not yet responded. May IFR separation be discontinued?",
+          "choices": [
+            {
+              "text": "No — both pilots must concur in addition to visual or radar contact being established by the SAR aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "Yes — the SAR pilot's concurrence alone is sufficient once visual contact has been established.",
+              "is_correct": false
+            },
+            {
+              "text": "Yes — visual contact by the SAR aircraft automatically terminates the IFR separation requirement.",
+              "is_correct": false
+            },
+            {
+              "text": "No — IFR separation may never be discontinued between SAR aircraft and aircraft in distress in oceanic airspace.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 10-6-5a requires BOTH visual or radar contact by the SAR aircraft AND concurrence of pilots of BOTH aircraft before IFR separation may be discontinued.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-6-5:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify the correct conditions for discontinuing IFR separation between SAR and distressed aircraft.",
+            "question_text": "A SAR aircraft has established visual contact with a distressed aircraft in oceanic airspace. The SAR pilot concurs to discontinue IFR separation, but the distressed pilot has not yet responded. May IFR separation be discontinued?",
+            "choices": [
+              {
+                "text": "No — both pilots must concur in addition to visual or radar contact being established by the SAR aircraft.",
+                "is_correct": true
+              },
+              {
+                "text": "Yes — the SAR pilot's concurrence alone is sufficient once visual contact has been established.",
+                "is_correct": false
+              },
+              {
+                "text": "Yes — visual contact by the SAR aircraft automatically terminates the IFR separation requirement.",
+                "is_correct": false
+              },
+              {
+                "text": "No — IFR separation may never be discontinued between SAR aircraft and aircraft in distress in oceanic airspace.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "IFR separation between the SAR and distressed aircraft may be discontinued only when visual or radar contact has been established by the SAR aircraft and the pilots of both aircraft concur.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-6-5:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-7-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with 'Per paragraph 10-7-1,' which is paragraph-location scaffolding. The trailing clause about terminal-facility actions is appended to an explanation for a question asking only about en route entities, diluting the answer.",
+      "source_basis": "Para 10-7-1a/b: 'EN ROUTE. Air carrier company radio stations for each VFR company aircraft which is or will be operating in the vicinity of the emergency. EN ROUTE. FSSs adjacent to the emergency location.'",
+      "match": {
+        "question_text": "What entities must issue alerting advisories for a ground missile emergency in the en route environment?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What entities must issue alerting advisories for a ground missile emergency in the en route environment?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "For a ground missile emergency in the en route environment, alerting advisories must be issued by air carrier company radio stations for VFR company aircraft operating in the vicinity and by FSSs adjacent to the emergency location.",
+          "choices": [
+            {
+              "text": "Only the ARTCC, which assumes all alerting responsibility for ground missile emergencies regardless of facility type.",
+              "is_correct": false
+            },
+            {
+              "text": "Air carrier company radio stations for VFR company aircraft and FSSs adjacent to the emergency location.",
+              "is_correct": true
+            },
+            {
+              "text": "The nearest approach control facility and the overlying ARTCC, operating jointly.",
+              "is_correct": false
+            },
+            {
+              "text": "Only air carrier company radio stations — FSS participation is limited to terminal-area emergencies.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-7-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with 'Per paragraph 10-7-2,' which is paragraph-location scaffolding.",
+      "source_basis": "Para 10-7-2: 'Reroute IFR and SVFR aircraft as necessary to avoid the emergency location by one of the following minima... a. Lateral separation 1 mile... b. Vertical separation 6,000 feet above the surface over the emergency location.'",
+      "match": {
+        "question_text": "What lateral and vertical separation minima apply when rerouting IFR and SVFR aircraft around a ground missile emergency location?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What lateral and vertical separation minima apply when rerouting IFR and SVFR aircraft around a ground missile emergency location?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "The minima for rerouting IFR and SVFR aircraft around a ground missile emergency location are 1 mile lateral separation and 6,000 feet vertical separation above the surface over the emergency location. Greater minima apply when suggested by the notifying official.",
+          "choices": [
+            {
+              "text": "3 miles lateral and 2,000 feet vertical — the standard IFR separation minima applied to all ground hazards.",
+              "is_correct": false
+            },
+            {
+              "text": "1 mile lateral and 6,000 feet vertical, or greater when suggested by the notifying official.",
+              "is_correct": true
+            },
+            {
+              "text": "5 miles lateral and 4,000 feet vertical, which is the standard en route emergency separation minimum.",
+              "is_correct": false
+            },
+            {
+              "text": "2 miles lateral and 3,000 feet vertical, which is the reduced separation standard authorized for emergency operations.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "activity",
+      "para_id": "10-7-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality"
+      ],
+      "problem": "The explanation opens with 'Paragraph 10-7-2a specifies' which is paragraph-location scaffolding.",
+      "source_basis": "Para 10-7-2a: 'Lateral separation 1 mile between the emergency location and either of the following: 1. An aircraft under radar control and the emergency location which can be accurately determined by reference to the radar scope.'",
+      "match": {
+        "activity_type": "knowledge_check",
+        "content": {
+          "generation_source": "content_expansion_pass_02",
+          "difficulty": 2,
+          "instruction": "Identify the correct IFR/SVFR lateral separation minimum for a ground missile emergency.",
+          "question_text": "When rerouting an IFR aircraft under radar control around a ground missile emergency location that is accurately depicted on radar, what lateral separation minimum applies?",
+          "choices": [
+            {
+              "text": "1 mile between the emergency location and the aircraft.",
+              "is_correct": true
+            },
+            {
+              "text": "3 miles, which is the standard terminal radar separation minimum.",
+              "is_correct": false
+            },
+            {
+              "text": "5 miles, which is the standard en route radar separation minimum.",
+              "is_correct": false
+            },
+            {
+              "text": "2 miles, which is the reduced separation standard authorized for emergency reroutes.",
+              "is_correct": false
+            }
+          ],
+          "explanation": "Paragraph 10-7-2a specifies 1 mile lateral separation between the emergency location and an aircraft under radar control when the location can be accurately determined by reference to the radar scope.",
+          "publication_id": "content-expansion-pass-02:chapter-10:activities:10-7-2:0"
+        }
+      },
+      "replacements": [
+        {
+          "activity_type": "knowledge_check",
+          "difficulty": 2,
+          "content": {
+            "generation_source": "content_expansion_pass_02",
+            "difficulty": 2,
+            "instruction": "Identify the correct IFR/SVFR lateral separation minimum for a ground missile emergency.",
+            "question_text": "When rerouting an IFR aircraft under radar control around a ground missile emergency location that is accurately depicted on radar, what lateral separation minimum applies?",
+            "choices": [
+              {
+                "text": "1 mile between the emergency location and the aircraft.",
+                "is_correct": true
+              },
+              {
+                "text": "3 miles, which is the standard terminal radar separation minimum.",
+                "is_correct": false
+              },
+              {
+                "text": "5 miles, which is the standard en route radar separation minimum.",
+                "is_correct": false
+              },
+              {
+                "text": "2 miles, which is the reduced separation standard authorized for emergency reroutes.",
+                "is_correct": false
+              }
+            ],
+            "explanation": "The lateral separation minimum is 1 mile between the emergency location and an aircraft under radar control when the location can be accurately determined by reference to the radar scope.",
+            "publication_id": "content-expansion-pass-02:chapter-10:activities:10-7-2:0"
+          }
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "10-7-4",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality",
+        "answer_defensibility"
+      ],
+      "problem": "The explanation opens with 'Per paragraph 10-7-4,' which is paragraph-location scaffolding. The correct choice 'Avoid any observed smoke columns.' is also markedly shorter than all distractors, creating an answer-length cue.",
+      "source_basis": "Para 10-7-4: 'Advise all aircraft to avoid any observed smoke columns in the vicinity of a ground missile emergency.'",
+      "match": {
+        "question_text": "What must controllers advise all aircraft to do regarding smoke columns in the vicinity of a ground missile emergency?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What must controllers advise all aircraft to do regarding smoke columns in the vicinity of a ground missile emergency?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "Controllers must advise all aircraft to avoid any observed smoke columns in the vicinity of a ground missile emergency.",
+          "choices": [
+            {
+              "text": "Fly above the smoke column, since vertical separation is the approved avoidance method.",
+              "is_correct": false
+            },
+            {
+              "text": "Avoid any observed smoke columns in the vicinity of the ground missile emergency.",
+              "is_correct": true
+            },
+            {
+              "text": "Report the smoke column's position and estimated height for inclusion in the next ATIS broadcast.",
+              "is_correct": false
+            },
+            {
+              "text": "No specific smoke advisory is required — the standard separation minima cover all associated hazards.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
