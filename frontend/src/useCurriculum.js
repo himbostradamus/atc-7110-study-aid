@@ -856,7 +856,7 @@ function sourceAssetLabelsFromContent(content) {
     const text = Array.isArray(value) || typeof value === "object"
       ? JSON.stringify(value)
       : String(value);
-    for (const match of text.matchAll(/\b(?:TBL|FIG)\s+\d{1,2}-\d{1,2}-\d{1,2}\b/gi)) {
+    for (const match of text.matchAll(/\b(?:(?:TBL|FIG)\s+\d{1,2}-\d{1,2}-\d{1,2}|TABLE\s+\d{1,2}-\d{1,2}-\d{1,2}\s+#\d+)\b/gi)) {
       labels.add(normalizeSourceAssetLabel(match[0]));
     }
   }
