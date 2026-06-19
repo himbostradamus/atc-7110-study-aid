@@ -5,7 +5,7 @@ Sources audited: `curated, question_agent, deepseek, content_expansion_pass_01, 
 ## Corpus Summary
 
 - Questions: 4635 across 688 paragraphs.
-- Flashcards: 4663 across 688 paragraphs.
+- Flashcards: 4641 across 688 paragraphs.
 - Activities: 2642 across 687 paragraphs.
 - Paragraphs represented by all three formats: 687 of 688.
 
@@ -16,24 +16,24 @@ Sources audited: `curated, question_agent, deepseek, content_expansion_pass_01, 
 - Covered by flashcards: 2517 (65.0%).
 - Covered by activities: 1492 (38.5%).
 - Covered by at least one format: 2948 (76.1%).
-- Reinforced through two or more formats: 2359 (60.9%).
-- Reinforced through all three formats: 1300 (33.6%).
-- Cross-format near-duplicate pairs: 509.
+- Reinforced through two or more formats: 2361 (61.0%).
+- Reinforced through all three formats: 1298 (33.5%).
+- Cross-format near-duplicate pairs: 505.
 
 Coverage is a lexical triage signal, not a legal or semantic determination. Cross-format reinforcement only counts when each format independently overlaps the same controlling source statement.
 
 ## Flashcard Findings
 
-- Card types: {"advisory": 1, "authority": 1, "authorization": 1, "basic": 43, "boundary": 5, "capability": 14, "caution": 7, "comparison": 14, "concept": 438, "concept_reverse": 6, "condition": 121, "condition_change": 1, "conditions": 6, "contrast": 18, "definition": 1323, "detail": 5, "directive": 2, "discretion": 1, "discrimination": 7, "document": 3, "effect": 4, "exact_recall": 1, "example": 9, "exception": 241, "expectation": 2, "fact": 2, "focus": 1, "format": 6, "guidance": 1, "hazard": 1, "interval": 4, "judgment": 1, "limit": 2, "limitation": 6, "list": 80, "list_recall": 3, "minima": 21, "minimum": 29, "note": 10, "numeric": 6, "numeric_recall": 2, "order": 2, "phraseology": 216, "preference": 2, "principle": 3, "priority": 3, "procedure": 1217, "prohibition": 12, "purpose": 3, "reason": 1, "reasoning": 49, "recordkeeping": 1, "reference": 31, "requirement": 318, "responsibility": 9, "restriction": 51, "risk": 1, "rule": 76, "scope": 62, "sequence": 3, "source_reference": 1, "standard": 1, "table": 56, "technique": 1, "threshold": 77, "timing": 4, "trigger": 3, "use": 5, "visual": 4, "warning": 2}
-- Retrieval modes: {"boundary_recall": 495, "concept_recall": 1147, "definition_recall": 1323, "discrimination": 32, "exact_recall": 222, "list_recall": 80, "numeric_recall": 106, "procedure_recall": 1220, "reverse_recall": 6, "source_navigation": 32}
-- 41 cards use context-light label prompts shorter than four words.
-- 690 cards have answers shorter than four words.
+- Card types: {"advisory": 1, "authority": 1, "authorization": 1, "basic": 43, "boundary": 5, "capability": 14, "caution": 7, "comparison": 14, "concept": 438, "concept_reverse": 6, "condition": 121, "condition_change": 1, "conditions": 6, "contrast": 18, "definition": 1308, "detail": 5, "directive": 2, "discretion": 1, "discrimination": 7, "document": 3, "effect": 4, "exact_recall": 1, "example": 9, "exception": 239, "expectation": 2, "fact": 2, "focus": 1, "format": 6, "guidance": 1, "hazard": 1, "interval": 4, "judgment": 1, "limit": 2, "limitation": 6, "list": 80, "list_recall": 3, "minima": 21, "minimum": 29, "note": 10, "numeric": 6, "numeric_recall": 2, "order": 2, "phraseology": 216, "preference": 2, "principle": 3, "priority": 3, "procedure": 1215, "prohibition": 12, "purpose": 3, "reason": 1, "reasoning": 49, "recordkeeping": 1, "reference": 31, "requirement": 318, "responsibility": 9, "restriction": 51, "risk": 1, "rule": 74, "scope": 62, "sequence": 3, "source_reference": 1, "standard": 1, "table": 56, "technique": 1, "threshold": 76, "timing": 4, "trigger": 3, "use": 5, "visual": 4, "warning": 2}
+- Retrieval modes: {"boundary_recall": 493, "concept_recall": 1145, "definition_recall": 1308, "discrimination": 32, "exact_recall": 222, "list_recall": 80, "numeric_recall": 105, "procedure_recall": 1218, "reverse_recall": 6, "source_navigation": 32}
+- 37 cards use context-light label prompts shorter than four words.
+- 692 cards have answers shorter than four words.
 - 22 cards overload one reveal with more than 50 words or a long list.
 - 0 reverse cards do not provide a clear reverse-side prompt.
-- 453 non-reference cards use paragraph-location scaffolding.
+- 56 non-reference cards use paragraph-location scaffolding.
 - 7 cards substantially repeat prompt language in the answer.
-- 412 within-paragraph prompt pairs have at least 0.78 token similarity.
-- 400 paragraphs have at least three flashcard retrieval modes.
+- 381 within-paragraph prompt pairs have at least 0.78 token similarity.
+- 399 paragraphs have at least three flashcard retrieval modes.
 
 ## Activity Findings
 
@@ -66,11 +66,11 @@ Coverage is a lexical triage signal, not a legal or semantic determination. Cros
 | 2 | 793 | 14 | 18 | 442 | 37 | 23 |
 | 3 | 789 | 0 | 10 | 547 | 6 | 4 |
 | 4 | 651 | 7 | 15 | 336 | 0 | 6 |
-| 5 | 619 | 4 | 168 | 446 | 3 | 25 |
-| 6 | 161 | 0 | 85 | 105 | 5 | 0 |
+| 5 | 605 | 0 | 0 | 446 | 3 | 25 |
+| 6 | 157 | 0 | 0 | 105 | 5 | 0 |
 | 7 | 177 | 15 | 5 | 188 | 3 | 6 |
-| 8 | 176 | 0 | 43 | 147 | 5 | 7 |
-| 9 | 188 | 0 | 101 | 107 | 3 | 2 |
+| 8 | 174 | 0 | 0 | 147 | 5 | 7 |
+| 9 | 186 | 0 | 0 | 107 | 3 | 2 |
 | 10 | 216 | 0 | 4 | 138 | 2 | 6 |
 | 11 | 34 | 0 | 0 | 9 | 1 | 0 |
 | 12 | 39 | 0 | 0 | 24 | 1 | 2 |
@@ -112,18 +112,18 @@ Coverage is a lexical triage signal, not a legal or semantic determination. Cros
 
 ## Example Cross-Format Near-Duplicates
 
-- `3-6-3` `question/flashcard` (1.00): “Who remains responsible for visual navigation to the clearance limit and for avoiding parked or taxiing aircraft, vehicles, or persons?” / “Who remains responsible for visual navigation to the clearance limit and for avoiding parked or taxiing aircraft, vehicles, or persons?”
-- `8-10-1` `question/flashcard` (1.00): “What procedures and minima govern ATC services in the North American ICAO Region?” / “What procedures and minima govern ATC services in the North American ICAO Region?”
-- `8-10-1` `question/flashcard` (1.00): “What procedures and minima govern ATC services in the North American ICAO Region?” / “What procedures and minima govern ATC services in the North American ICAO Region?”
-- `3-10-13` `question/flashcard` (1.00): “What altitude information must be obtained before approving the approach?” / “What altitude information must be obtained before approving the approach?”
-- `3-10-13` `question/flashcard` (1.00): “What must be in effect before military SFO, ELP, or practice precautionary approaches may be authorized?” / “What must be in effect before military SFO, ELP, or practice precautionary approaches may be authorized?”
-- `3-10-13` `question/flashcard` (1.00): “What report request applies at the entry point for overhead SFO or ELP approaches?” / “What report request applies at the entry point for overhead SFO or ELP approaches?”
-- `3-10-13` `question/flashcard` (1.00): “What report request applies to straight-in simulated flameout approaches?” / “What report request applies to straight-in simulated flameout approaches?”
-- `4-1-2` `question/flashcard` (1.00): “What approval is required when operational necessity requires exceeding the limitations?” / “What approval is required when operational necessity requires exceeding the limitations?”
-- `5-3-8` `question/flashcard` (1.00): “What minimum information must an en route data block display?” / “What minimum information must an en route data block display?”
-- `2-3-9` `question/flashcard` (1.00): “What symbols indicate the clearance limit when a delay is not anticipated?” / “What symbols indicate the clearance limit when delay is not anticipated?”
-- `3-10-4` `question/flashcard` (1.00): “What must be issued to each aircraft operating on intersecting runways during arrival operations?” / “What must be issued to each aircraft operating on intersecting runways during arrival operations?”
-- `3-2-1` `question/flashcard` (1.00): “What does a flashing green light-gun signal mean for an aircraft on the ground?” / “What does a flashing green light-gun signal mean for an aircraft on the ground?”
+- `3-9-10` `question/flashcard` (1.00): “When is FULL LENGTH included in a takeoff clearance?” / “When is full length included in the takeoff clearance?”
+- `3-9-10` `question/flashcard` (1.00): “When must the runway intersection be stated in the takeoff clearance?” / “When must the runway intersection be stated in the takeoff clearance?”
+- `2-1-7` `question/flashcard` (1.00): “When a pilot reports an inflight equipment malfunction, what should the controller determine first?” / “What should a controller determine first when a pilot reports an inflight equipment malfunction?”
+- `3-4-9` `question/flashcard` (1.00): “When is the ALSF-2 system operated?” / “When is the ALSF-2 system operated?”
+- `3-10-8` `question/flashcard` (1.00): “When must a landing clearance be withheld?” / “When must a landing clearance be withheld?”
+- `5-1-4` `question/flashcard` (1.00): “Which aircraft receive merging target procedures, except while established in a holding pattern?” / “Which aircraft receive merging target procedures, except while established in a holding pattern?”
+- `5-9-9` `question/flashcard` (1.00): “What is SOIA?” / “What is SOIA?”
+- `3-10-1` `question/flashcard` (1.00): “What kind of fixes should be used for additional position reports?” / “What kind of fixes should be used for additional position reports?”
+- `2-4-12` `question/flashcard` (1.00): “When may gate or fix names be substituted for interphone position identification?” / “When may gate or fix names be substituted for interphone position identification?”
+- `11-1-1` `question/flashcard` (1.00): “What is the mission of the traffic management system?” / “What is the mission of the traffic management system?”
+- `2-1-1` `question/flashcard` (1.00): “What is the primary purpose of the ATC system?” / “ATC system: primary purpose”
+- `2-1-1` `question/flashcard` (1.00): “What is the primary purpose of the ATC system?” / “What is the primary purpose of the ATC system?”
 
 ## Lowest Multi-Format Reinforcement
 
