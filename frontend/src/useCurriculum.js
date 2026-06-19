@@ -166,6 +166,7 @@ const PRACTICE_MODE_CONFIG = {
     conceptIds: ["runway-separation", "approach-clearance", "approach-vectors"],
   },
 };
+const SOURCE_ASSET_ACTIVITY_TYPES = new Set(["table_lookup", "visual_interpretation", "minima_rule_check"]);
 const CONCEPT_RULES = [
   {
     id: "runway-separation",
@@ -827,6 +828,38 @@ function withSourceRef(item, paraId, page, options = {}) {
   };
 }
 
+function normalizeSourceAssetLabel(value) {
+  return String(value || "")
+    .toUpperCase()
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function sourceAssetLabelsFromContent(content) {
+  const values = [
+    content?.source_label,
+    content?.source_ref,
+    content?.table_ref,
+    content?.figure_ref,
+    content?.visual_ref,
+    content?.image_asset,
+    content?.question_text,
+    content?.prompt,
+    content?.instruction,
+    content?.task,
+  ];
+  const labels = new Set();
+  for (const value of values) {
+    if (!value) continue;
+    const text = Array.isArray(value) || typeof value === "object"
+      ? JSON.stringify(value)
+      : String(value);
+    for (const match of text.matchAll(/\b(?:TBL|FIG)\s+\d{1,2}-\d{1,2}-\d{1,2}\b/gi)) {
+      labels.add(normalizeSourceAssetLabel(match[0]));
+    }
+  }
+  return labels;
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // HOOK
@@ -852,6 +885,7 @@ export default function useCurriculum() {
 
   const sqlRef = useRef(null);   // SQL.Database instance
   const reviewApiBaseRef = useRef(null);
+  const sourceAssetsRef = useRef(null);
 
   // ── Load sql.js and curriculum.db ─────────────────────────────────────────
   useEffect(() => {
@@ -989,6 +1023,63 @@ export default function useCurriculum() {
     reviewPersistenceMode: reviewPersistence.mode,
     reviewPersistenceError: reviewPersistence.error,
   };
+
+  const getSourceAssetsIndex = useCallback(() => {
+    if (sourceAssetsRef.current) return sourceAssetsRef.current;
+    const rows = query(`
+      SELECT id, para_id, chapter, section, asset_type, label, title,
+             source_url, source_page_url, pdf_url, html, image_url, alt_text
+      FROM source_assets
+      ORDER BY chapter, section, para_id, asset_type, label
+    `);
+    const byPara = {};
+    const byLabel = {};
+    for (const row of rows) {
+      const item = {
+        id: row.id,
+        para_id: row.para_id,
+        chapter: Number(row.chapter || 0),
+        section: Number(row.section || 0),
+        asset_type: row.asset_type,
+        label: row.label,
+        title: row.title,
+        source_url: row.source_url,
+        source_page_url: row.source_page_url,
+        pdf_url: row.pdf_url,
+        html: row.html,
+        image_url: row.image_url,
+        alt_text: row.alt_text,
+      };
+      byPara[item.para_id] = byPara[item.para_id] || [];
+      byPara[item.para_id].push(item);
+      const label = normalizeSourceAssetLabel(item.label);
+      byLabel[label] = byLabel[label] || [];
+      byLabel[label].push(item);
+    }
+    sourceAssetsRef.current = { byPara, byLabel };
+    return sourceAssetsRef.current;
+  }, [query]);
+
+  const sourceAssetsForContent = useCallback((paraId, content = {}, options = {}) => {
+    if (!paraId) return [];
+    const index = getSourceAssetsIndex();
+    const assets = index.byPara[paraId] || [];
+    const labels = sourceAssetLabelsFromContent(content);
+    if (labels.size) {
+      const matched = [];
+      const seen = new Set();
+      for (const label of labels) {
+        for (const asset of index.byLabel[label] || []) {
+          if (seen.has(asset.id)) continue;
+          seen.add(asset.id);
+          matched.push(asset);
+        }
+      }
+      return matched;
+    }
+    if (!assets.length) return [];
+    return options.includeAll ? assets.slice(0, options.limit || 8) : [];
+  }, [getSourceAssetsIndex]);
 
   function computeSectionMastery(chapter, section) {
     const paraRows = query(
@@ -1407,22 +1498,30 @@ export default function useCurriculum() {
 
   const mapActivityRows = useCallback((rows) => rows
     .filter((row) => isParagraphPublished(row.para_id))
-    .map((r) => withSourceRef({
-      id:            r.id,
-      para_id:       r.para_id,
-      para_title:    r.para_title,
-      activity_type: r.activity_type,
-      difficulty:    r.difficulty,
-      content:       safeJsonParse(r.content_json, {}),
-      concepts:      conceptTagsForText({
+    .map((r) => {
+      const content = safeJsonParse(r.content_json, {});
+      const sourceAssets = sourceAssetsForContent(r.para_id, content, {
+        includeAll: SOURCE_ASSET_ACTIVITY_TYPES.has(r.activity_type),
+        limit: 6,
+      });
+      return withSourceRef({
+        id:            r.id,
+        para_id:       r.para_id,
+        para_title:    r.para_title,
+        activity_type: r.activity_type,
+        difficulty:    r.difficulty,
+        content,
+        source_assets: sourceAssets,
+        concepts:      conceptTagsForText({
+          title: r.para_title,
+          text: blockSearchText(r.para_content_json),
+          activityType: r.activity_type,
+        }),
+      }, r.para_id, r.page, {
         title: r.para_title,
-        text: blockSearchText(r.para_content_json),
-        activityType: r.activity_type,
-      }),
-    }, r.para_id, r.page, {
-      title: r.para_title,
-      blocks: safeJsonParse(r.para_content_json, []),
-    })), [isParagraphPublished]);
+        blocks: safeJsonParse(r.para_content_json, []),
+      });
+    }), [isParagraphPublished, sourceAssetsForContent]);
 
   const mapQuestionRows = useCallback((rows) => {
     const publishedRows = rows.filter((row) => isParagraphPublished(row.para_id));

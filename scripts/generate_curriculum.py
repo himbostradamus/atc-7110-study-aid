@@ -210,6 +210,26 @@ CREATE TABLE IF NOT EXISTS question_choices (
 );
 CREATE INDEX IF NOT EXISTS idx_qc_question ON question_choices(question_id);
 
+CREATE TABLE IF NOT EXISTS source_assets (
+    id              TEXT PRIMARY KEY,
+    para_id         TEXT NOT NULL,
+    chapter         INTEGER NOT NULL,
+    section         INTEGER NOT NULL,
+    asset_type      TEXT NOT NULL,
+    label           TEXT NOT NULL,
+    title           TEXT,
+    source_url      TEXT NOT NULL,
+    source_page_url TEXT NOT NULL,
+    pdf_url         TEXT,
+    html            TEXT,
+    image_url       TEXT,
+    alt_text        TEXT,
+    created_at      TEXT DEFAULT (datetime('now')),
+    UNIQUE(label, source_url)
+);
+CREATE INDEX IF NOT EXISTS idx_source_assets_para ON source_assets(para_id);
+CREATE INDEX IF NOT EXISTS idx_source_assets_label ON source_assets(label);
+
 CREATE TABLE IF NOT EXISTS generation_log (
     para_id     TEXT PRIMARY KEY,
     status      TEXT NOT NULL,   -- 'complete' | 'partial' | 'failed'

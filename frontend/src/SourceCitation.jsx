@@ -3,6 +3,11 @@ import { useEffect, useState } from "react";
 const SOURCE_CITATION_CSS = `
 .source-citation,.source-citation *,.source-drawer,.source-drawer *{font-family:'Share Tech Mono',ui-monospace,monospace!important;border-radius:2px!important;box-shadow:none!important}
 .source-drawer-panel{background:#11120e!important;color:#f1ead7!important;border-color:rgba(226,219,193,.22)!important}
+.source-asset-table{overflow:auto;max-width:100%;border:1px solid rgba(226,219,193,.16);background:rgba(241,234,215,.03);padding:8px}
+.source-asset-table table{width:max-content;min-width:100%;border-collapse:collapse;color:#f1ead7;font-size:11px;line-height:1.35}
+.source-asset-table td,.source-asset-table th{border:1px solid rgba(226,219,193,.28);padding:5px 7px;vertical-align:top}
+.source-asset-table p{margin:0 0 4px}
+.source-asset-image{display:block;max-width:100%;height:auto;border:1px solid rgba(226,219,193,.18);background:#f1ead7}
 @media (max-width: 520px){
   .source-citation-actions button,.source-citation-actions a{min-height:44px;touch-action:manipulation}
   .source-drawer{justify-content:stretch!important}
@@ -35,7 +40,8 @@ function sourceBlockLabel(value) {
 
 export default function SourceCitation({ source, compact = false, style = "panel", defaultOpen = null }) {
   const sourceBlocks = Array.isArray(source?.source_blocks) ? source.source_blocks : [];
-  const hasContext = Boolean(source?.source_heading || source?.source_locator || source?.source_excerpt || sourceBlocks.length);
+  const sourceAssets = Array.isArray(source?.source_assets) ? source.source_assets : [];
+  const hasContext = Boolean(source?.source_heading || source?.source_locator || source?.source_excerpt || sourceBlocks.length || sourceAssets.length);
   const [open, setOpen] = useState(defaultOpen ?? !compact);
   const [drawerOpen, setDrawerOpen] = useState(false);
   useEffect(() => {
@@ -212,6 +218,11 @@ export default function SourceCitation({ source, compact = false, style = "panel
           {source.source_excerpt}
         </div>
       )}
+      {open && sourceAssets.length > 0 && (
+        <div style={{ fontSize: 11, lineHeight: 1.55, color: palette.text, marginTop: 7 }}>
+          {sourceAssets.length} official FAA {sourceAssets.length === 1 ? "asset" : "assets"} available in the source drawer.
+        </div>
+      )}
       {drawerOpen && (
         <div
           className="source-drawer"
@@ -367,6 +378,94 @@ export default function SourceCitation({ source, compact = false, style = "panel
                     <div style={{ color: "#e4ece2", fontSize: 12, lineHeight: 1.6 }}>
                       {block.content}
                     </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {sourceAssets.length > 0 && (
+              <div style={{ display: "grid", gap: 10, marginBottom: 14 }}>
+                <div style={{
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontSize: 11,
+                  fontWeight: 700,
+                  letterSpacing: ".08em",
+                  textTransform: "uppercase",
+                  color: "#e0a30a",
+                }}>
+                  Official FAA Tables / Figures
+                </div>
+                {sourceAssets.map((asset) => (
+                  <div
+                    key={asset.id || `${asset.label}-${asset.source_url}`}
+                    style={{
+                      border: "1px solid rgba(219,229,216,.13)",
+                      background: "rgba(17,22,20,.92)",
+                      borderRadius: 10,
+                      padding: "11px 12px",
+                    }}
+                  >
+                    <div style={{
+                      display: "flex",
+                      alignItems: "baseline",
+                      justifyContent: "space-between",
+                      gap: 10,
+                      flexWrap: "wrap",
+                      marginBottom: 8,
+                    }}>
+                      <div>
+                        <div style={{
+                          fontFamily: "'Barlow Condensed', sans-serif",
+                          fontSize: 10,
+                          fontWeight: 700,
+                          letterSpacing: ".08em",
+                          textTransform: "uppercase",
+                          color: "#7aa7d9",
+                        }}>
+                          {asset.label || asset.asset_type}
+                        </div>
+                        {asset.title && (
+                          <div style={{ color: "#e4ece2", fontSize: 13, lineHeight: 1.35, marginTop: 3 }}>
+                            {asset.title}
+                          </div>
+                        )}
+                      </div>
+                      {asset.source_url && (
+                        <a
+                          href={asset.source_url}
+                          target="_blank"
+                          rel="noreferrer"
+                          style={{
+                            color: "#e0a30a",
+                            textDecoration: "none",
+                            fontFamily: "'Barlow Condensed', sans-serif",
+                            fontSize: 11,
+                            fontWeight: 700,
+                            letterSpacing: ".05em",
+                            textTransform: "uppercase",
+                          }}
+                        >
+                          Open Asset ↗
+                        </a>
+                      )}
+                    </div>
+                    {asset.image_url ? (
+                      <img
+                        className="source-asset-image"
+                        src={asset.image_url}
+                        alt={asset.alt_text || asset.title || asset.label || "FAA figure"}
+                        loading="lazy"
+                      />
+                    ) : asset.html ? (
+                      <div
+                        className="source-asset-table"
+                        dangerouslySetInnerHTML={{ __html: asset.html }}
+                      />
+                    ) : (
+                      <div style={{ color: "#8c9c91", fontSize: 12, lineHeight: 1.55 }}>
+                        Asset metadata is available, but no renderable table or image was captured.
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
