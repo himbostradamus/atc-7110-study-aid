@@ -587,6 +587,9 @@ function ChoiceActivity({ activity, content, choiceOrder, questionTextOverride, 
       {SOURCE_LOOKUP_TYPES.has(activity?.activity_type) && (
         <SourceLookupPanel activity={activity} content={content} />
       )}
+      {!SOURCE_LOOKUP_TYPES.has(activity?.activity_type) && activity?.source_assets?.length > 0 && (
+        <SourceCitation source={activity} compact defaultOpen={false} />
+      )}
       {clearance && (
         <div className="atc-card">
           <span className="atc-tag">Clearance</span>

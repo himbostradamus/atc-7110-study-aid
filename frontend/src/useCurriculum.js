@@ -847,6 +847,8 @@ function sourceAssetLabelsFromContent(content) {
     content?.prompt,
     content?.instruction,
     content?.task,
+    content?.explanation,
+    content?.choices,
   ];
   const labels = new Set();
   for (const value of values) {
@@ -1550,6 +1552,12 @@ export default function useCurriculum() {
         if (choices.length < 2) return null;
         const paraText = blockSearchText(r.para_content_json);
         const questionText = compactText(r.question_text);
+        const content = {
+          question_text: questionText,
+          choices,
+          explanation: r.explanation,
+        };
+        const sourceAssets = sourceAssetsForContent(r.para_id, content);
         return withSourceRef({
           id: `q:${r.id}`,
           quiz_question_id: r.id,
@@ -1557,11 +1565,8 @@ export default function useCurriculum() {
           para_title: r.para_title,
           activity_type: "knowledge_check",
           difficulty: Number(r.difficulty || 0),
-          content: {
-            question_text: questionText,
-            choices,
-            explanation: r.explanation,
-          },
+          content,
+          source_assets: sourceAssets,
           concepts: conceptTagsForText({
             title: r.para_title,
             text: `${paraText} ${questionText}`,
@@ -1573,7 +1578,7 @@ export default function useCurriculum() {
         });
       })
       .filter(Boolean);
-  }, [isParagraphPublished, query]);
+  }, [isParagraphPublished, query, sourceAssetsForContent]);
 
   const questionRowsForParagraphs = useCallback((paraIds) => {
     const ids = [...new Set((paraIds || []).map((paraId) => String(paraId || "").trim()).filter(Boolean))];
