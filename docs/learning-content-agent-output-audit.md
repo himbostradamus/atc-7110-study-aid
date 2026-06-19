@@ -4,55 +4,54 @@ Sources audited: `question_agent`
 
 ## Corpus Summary
 
-- Questions: 1544 across 614 paragraphs.
-- Flashcards: 1343 across 624 paragraphs.
-- Activities: 325 across 255 paragraphs.
-- Paragraphs represented by all three formats: 224 of 652.
+- Questions: 1838 across 653 paragraphs.
+- Flashcards: 1642 across 643 paragraphs.
+- Activities: 287 across 234 paragraphs.
+- Paragraphs represented by all three formats: 220 of 672.
 
 ## Cross-Format Essential-Element Coverage
 
-- Heuristic essential statements in represented paragraphs: 3769.
-- Covered by questions: 1490 (39.5%).
-- Covered by flashcards: 1542 (40.9%).
-- Covered by activities: 254 (6.7%).
-- Covered by at least one format: 1885 (50.0%).
-- Reinforced through two or more formats: 1231 (32.7%).
-- Reinforced through all three formats: 170 (4.5%).
-- Cross-format near-duplicate pairs: 16.
+- Heuristic essential statements in represented paragraphs: 3839.
+- Covered by questions: 1618 (42.1%).
+- Covered by flashcards: 1698 (44.2%).
+- Covered by activities: 219 (5.7%).
+- Covered by at least one format: 2054 (53.5%).
+- Reinforced through two or more formats: 1326 (34.5%).
+- Reinforced through all three formats: 155 (4.0%).
+- Cross-format near-duplicate pairs: 37.
 
 Coverage is a lexical triage signal, not a legal or semantic determination. Cross-format reinforcement only counts when each format independently overlaps the same controlling source statement.
 
 ## Flashcard Findings
 
-- Card types: {"capability": 3, "comparison": 7, "concept": 323, "concept_reverse": 23, "condition": 25, "conditions": 3, "contrast": 14, "definition": 110, "exception": 23, "format": 4, "list": 57, "minimum": 12, "note": 2, "phraseology": 49, "preference": 1, "procedure": 455, "reasoning": 9, "reference": 40, "requirement": 40, "restriction": 6, "reverse": 1, "rule": 63, "scope": 8, "sequence": 3, "source_reference": 1, "table": 3, "threshold": 57, "warning": 1}
-- Retrieval modes: {"boundary_recall": 68, "concept_recall": 442, "definition_recall": 110, "discrimination": 21, "exact_recall": 53, "list_recall": 57, "numeric_recall": 69, "procedure_recall": 458, "reverse_recall": 24, "source_navigation": 41}
-- 27 cards use context-light label prompts shorter than four words.
-- 34 cards have answers shorter than four words.
-- 16 cards overload one reveal with more than 50 words or a long list.
-- 19 reverse cards do not provide a clear reverse-side prompt.
-- 206 non-reference cards use paragraph-location scaffolding.
+- Card types: {"authorization": 1, "basic": 43, "capability": 3, "comparison": 8, "concept": 388, "concept_reverse": 6, "condition": 28, "condition_change": 1, "conditions": 6, "contrast": 17, "definition": 121, "exception": 34, "fact": 2, "format": 6, "limitation": 1, "list": 69, "minimum": 12, "note": 2, "phraseology": 60, "preference": 1, "principle": 3, "priority": 1, "procedure": 564, "prohibition": 2, "reasoning": 10, "reference": 28, "requirement": 57, "responsibility": 1, "restriction": 6, "rule": 71, "scope": 12, "sequence": 3, "source_reference": 1, "table": 3, "threshold": 69, "trigger": 1, "warning": 1}
+- Retrieval modes: {"boundary_recall": 89, "concept_recall": 589, "definition_recall": 121, "discrimination": 25, "exact_recall": 66, "list_recall": 69, "numeric_recall": 81, "procedure_recall": 567, "reverse_recall": 6, "source_navigation": 29}
+- 41 cards use context-light label prompts shorter than four words.
+- 4 cards have answers shorter than four words.
+- 7 cards overload one reveal with more than 50 words or a long list.
+- 0 reverse cards do not provide a clear reverse-side prompt.
+- 433 non-reference cards use paragraph-location scaffolding.
 - 0 cards substantially repeat prompt language in the answer.
-- 28 within-paragraph prompt pairs have at least 0.78 token similarity.
-- 59 paragraphs have at least three flashcard retrieval modes.
+- 46 within-paragraph prompt pairs have at least 0.78 token similarity.
+- 83 paragraphs have at least three flashcard retrieval modes.
 
 ## Activity Findings
 
-- Activity types: {"discrimination": 1, "discrimination_check": 16, "format_check": 1, "identification_decision": 1, "knowledge_check": 111, "list_membership": 4, "phraseology_decision": 1, "readback_check": 9, "requirement_check": 5, "responsibility_check": 1, "scenario": 1, "sequence_check": 1, "situation_action": 160, "source_lookup": 7, "source_use": 3, "spot_the_error": 2, "traffic_advisory_decision": 1}
-- Learning modes: {"discrimination": 19, "exact_application": 11, "knowledge_check": 111, "list_or_sequence": 5, "requirement_recall": 5, "scenario_application": 164, "source_use": 10}
-- Correct-answer positions: {"0": 195, "1": 79, "2": 35, "3": 14}
-- Correct answer is first in 60.4% of valid choice activities.
-- 60 activities make the correct answer conspicuously longer than the distractors.
+- Activity types: {"discrimination": 1, "format_check": 1, "identification_decision": 1, "knowledge_check": 108, "list_membership": 1, "phraseology_decision": 1, "readback_check": 9, "responsibility_check": 1, "sequence_check": 1, "situation_action": 154, "source_lookup": 5, "source_use": 1, "spot_the_error": 2, "traffic_advisory_decision": 1}
+- Learning modes: {"discrimination": 3, "exact_application": 11, "knowledge_check": 108, "list_or_sequence": 2, "scenario_application": 157, "source_use": 6}
+- Stored correct-answer position is not scored because the application shuffles choices at runtime.
+- 40 activities make the correct answer conspicuously longer than the distractors.
 - 0 activities have fewer than two choices or do not have exactly one correct choice.
 - 0 activities contain normalized duplicate choices.
-- 1 scenario/decision activities provide fewer than twelve words of decision context.
-- 85 activities use negative framing.
-- 36 non-source-use activities rely on paragraph-location scaffolding.
+- 4 scenario/decision activities provide fewer than twelve words of decision context.
+- 4 activities use negative framing.
+- 9 non-source-use activities rely on paragraph-location scaffolding.
 - 0 within-paragraph activity pairs have at least 0.78 prompt similarity.
-- 8 paragraphs have at least three activity modes.
+- 5 paragraphs have at least three activity modes.
 
 ## Highest-Priority Remediation
 
-1. Rebalance activity answer positions and equalize answer/distractor specificity before adding more choice items.
+1. Equalize answer/distractor specificity before adding more choice items.
 2. Replace flashcard labels with explicit retrieval cues; keep each card focused on one answerable target.
 3. Repair reverse cards so the reverse side asks a real question instead of naming a paragraph or topic.
 4. Plan coverage by essential source element, then use card recall, question discrimination, and activity application as complementary tasks.
@@ -61,22 +60,22 @@ Coverage is a lexical triage signal, not a legal or semantic determination. Cros
 
 ## Chapter Pattern
 
-| Chapter | Cards | Context-light cards | Card location scaffold | Activities | Activity location scaffold | First-answer rate | Length cues |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 1 | 45 | 0 | 3 | 22 | 0 | 77% | 4 |
-| 2 | 161 | 14 | 110 | 19 | 7 | 58% | 1 |
-| 3 | 146 | 0 | 16 | 10 | 1 | 20% | 0 |
-| 4 | 200 | 7 | 4 | 34 | 0 | 41% | 5 |
-| 5 | 225 | 3 | 3 | 35 | 0 | 86% | 18 |
-| 6 | 86 | 0 | 0 | 5 | 1 | 40% | 0 |
-| 7 | 67 | 2 | 1 | 41 | 1 | 49% | 4 |
-| 8 | 82 | 0 | 0 | 37 | 17 | 41% | 6 |
-| 9 | 106 | 0 | 0 | 37 | 2 | 94% | 8 |
-| 10 | 86 | 0 | 68 | 33 | 6 | 100% | 6 |
-| 11 | 24 | 0 | 0 | 6 | 0 | 17% | 0 |
-| 12 | 26 | 0 | 0 | 5 | 0 | 80% | 2 |
-| 13 | 46 | 0 | 1 | 26 | 1 | 27% | 5 |
-| 14 | 43 | 1 | 0 | 15 | 0 | 40% | 1 |
+| Chapter | Cards | Context-light cards | Card location scaffold | Activities | Activity location scaffold | Length cues |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 1 | 55 | 0 | 2 | 21 | 0 | 1 |
+| 2 | 207 | 14 | 2 | 19 | 1 | 1 |
+| 3 | 166 | 0 | 9 | 10 | 1 | 0 |
+| 4 | 221 | 7 | 15 | 0 | 0 | 0 |
+| 5 | 273 | 4 | 166 | 35 | 0 | 18 |
+| 6 | 108 | 0 | 85 | 5 | 1 | 0 |
+| 7 | 100 | 15 | 5 | 39 | 0 | 3 |
+| 8 | 91 | 0 | 43 | 37 | 0 | 5 |
+| 9 | 126 | 0 | 101 | 37 | 2 | 0 |
+| 10 | 139 | 0 | 3 | 33 | 1 | 6 |
+| 11 | 27 | 0 | 0 | 5 | 1 | 0 |
+| 12 | 25 | 0 | 0 | 5 | 0 | 2 |
+| 13 | 55 | 0 | 2 | 26 | 1 | 4 |
+| 14 | 49 | 1 | 0 | 15 | 1 | 0 |
 
 ## Example Context-Light Flashcards
 
@@ -95,25 +94,10 @@ Coverage is a lexical triage signal, not a legal or semantic determination. Cros
 
 ## Example Malformed Reverse Cards
 
-- `1-1-1`: “Exercise best judgment when a situation is not covered by the order.” → “Catch-all rule for controllers from 1-1-1.”
-- `1-1-6`: “AIRAC dates for order publication.” → “The schedule to which JO 7110.65 and its changes are published; listed in TBL 1-1-1.”
-- `12-1-2`: “Above 12,500 feet ASL or MEA (whichever higher) up to but not including 18,000 feet ASL. Only IFR and CVFR flights. IFR procedures applied to CVFR.” → “Canadian Class B airspace.”
-- `12-1-2`: “Base of all controlled high level airspace up to and including FL 600. Only IFR flights permitted.” → “Canadian Class A airspace.”
-- `12-1-2`: “Uncontrolled airspace where ATC has neither the authority nor responsibility for exercising control over air traffic.” → “Canadian Class G airspace.”
-- `12-1-3`: “Pilot must ensure at least 1,000 feet above all cloud, haze, smoke, or other formation, with 3 miles or more flight visibility. Pilot's request = confirmation conditions are adequate.” → “Pilot's weather responsibility for the 1,000-feet-on-top clearance in Canada.”
-- `12-1-4`: “Does good weather eliminate the separation requirement between IFR and CVFR aircraft in Canadian airspace?” → “No. The separation minimum applies regardless of the weather conditions. CVFR aircraft receive IFR-equivalent separation treatment.”
-- `12-1-6`: “Written authority from the Ministry of Transport is required before ATC may authorize parachute jumping.” → “Canadian parachute jumping rule, per 12-1-6 and its note.”
-- `12-1-7`: “1 mile flight visibility (ground visibility when reported) for SVFR.” → “Canadian SVFR weather minimum for aircraft other than helicopters.”
-- `12-1-7`: “1/2 mile flight visibility (ground visibility when available) for SVFR.” → “Canadian SVFR weather minimum for helicopters.”
-- `5-3-1`: “Establish and maintain radar identification of the aircraft involved before providing radar service.” → “5-3-1. Exceptions: 5-5-1 subparagraphs b2, b3 and 8-5-5 Radar Identification Application.”
-- `7-1-1`: “Do not apply visual separation or issue VFR or VFR-on-top clearances in Class A airspace.” → “7-1-1: Class A airspace restrictions — three prohibitions.”
 
 ## Example Activity Answer-Length Cues
 
-- `1-1-11` `knowledge_check`: correct answer “Waiver approval is governed by FAA Order JO 7210.3, Chapter 19, Section 7, which is a different order and chapter from the 1-1-8 change process.” (distractor average: 11.3 words)
-- `1-1-11` `situation_action`: correct answer “No; military operations require prior approval by the appropriate military headquarters, and for USAF procedures involving military aircraft only, HQ Air Force Flight Standards Agency is the approval authority.” (distractor average: 14.0 words)
 - `1-1-3` `source_lookup`: correct answer “The FAA Air Traffic Plans and Publications website, and the FAA Orders and Notices website.” (distractor average: 5.3 words)
-- `1-2-1` `situation_action`: correct answer “No; 'will' means futurity, not a requirement for the application of a procedure. 'Must' is the term that means mandatory.” (distractor average: 8.7 words)
 - `10-1-6` `situation_action`: correct answer “No — control the traffic to avoid conflicts in the area where the emergency is being handled and along routes needed by emergency equipment.” (distractor average: 11.7 words)
 - `10-4-2` `knowledge_check`: correct answer “From at least 30 minutes before the ETA until the aircraft is located or for 30 minutes after fuel is estimated exhausted.” (distractor average: 11.7 words)
 - `10-5-1` `list_membership`: correct answer “The emergency equipment crew, the airport management, and the appropriate military agencies when requested by the pilot.” (distractor average: 9.3 words)
@@ -121,37 +105,40 @@ Coverage is a lexical triage signal, not a legal or semantic determination. Cros
 - `10-6-4` `knowledge_check`: correct answer “The RCC determines the airspace required for SAR operations, the ACC blocks that airspace until the RCC releases it, and an International NOTAM is issued describing the affected airspace.” (distractor average: 12.0 words)
 - `10-7-1` `knowledge_check`: correct answer “En route: notify air carrier company radio stations for VFR company aircraft in the vicinity and FSSs adjacent to the emergency. Terminal: relay all information to the ARTCC where the emergency exists and disseminate as a NOTAM.” (distractor average: 13.7 words)
 - `12-1-3` `situation_action`: correct answer “Approve it if the pilot has requested it and will not operate in Class A or B. The pilot's request serves as confirmation that weather conditions are adequate.” (distractor average: 15.0 words)
-- `12-1-5` `situation_action`: correct answer “Plan for the aircraft to maintain the last assigned altitude or MEA (whichever is higher) until 10 minutes beyond the clearance limit, then proceed at filed altitude(s) or flight level(s). Because U.S. airspace is within 10 minutes of the clearance limit (50 NM in a turbojet), the climb to border-crossing altitude will commence at the estimated time of crossing the Canada/U.S. boundary.” (distractor average: 24.0 words)
+- `12-1-5` `situation_action`: correct answer “Plan for the aircraft to maintain the last assigned altitude or MEA (whichever higher) until 10 minutes beyond the clearance limit, then proceed at filed altitudes. Because U.S. airspace is within 10 minutes of the clearance limit, the climb to the border-crossing altitude will commence at the estimated time of crossing the Canada/U.S. boundary.” (distractor average: 24.0 words)
+- `13-1-1` `situation_action`: correct answer “Use EDST for strategic planning and conflict prediction, but maintain radar separation using actual radar track data. EDST is a strategic planning tool that uses current plans which may include unissued clearances.” (distractor average: 16.7 words)
+- `13-1-15` `knowledge_check`: correct answer “Both require continued use of the affected tools with recognition that certain data may be affected—but the specific data that may be affected differs between the two situations.” (distractor average: 13.3 words)
+- `13-1-7` `knowledge_check`: correct answer “Yes, if used in accordance with facility directives. Hold View is one of the five approved annotation methods, and no method requires supplementation by another.” (distractor average: 12.7 words)
 
 ## Example Cross-Format Near-Duplicates
 
-- `9-8-1` `question/flashcard` (1.00): “Under 9-8-1, what does 'UAP' stand for?” / “9-8-1: What does UAP stand for?”
+- `3-10-2` `question/flashcard` (1.00): “Nonapproach control towers must forward what to arriving aircraft?” / “What must nonapproach control towers forward to arriving aircraft?”
+- `7-2-1` `question/flashcard` (1.00): “When is tower-applied visual separation not authorized?” / “Tower-applied visual separation: when NOT authorized”
+- `7-5-5` `question/flashcard` (1.00): “What is the key condition for authorizing local SVFR operations for a specified period?” / “What is the key condition for authorizing local SVFR operations for a specified period?”
+- `8-2-2` `question/flashcard` (1.00): “How many ATC units may control an aircraft at any given time?” / “How many ATC units may control an aircraft at any given time?”
+- `10-1-4` `question/flashcard` (1.00): “Which two conditions must both be met before aircraft may join up in formation during emergency conditions?” / “What two conditions must both be met before aircraft may join up in formation during emergency conditions?”
 - `2-1-1` `question/flashcard` (1.00): “What is the primary purpose of the ATC system?” / “ATC system: primary purpose”
-- `5-9-4` `question/flashcard` (1.00): “When may approach clearance be issued?” / “When approach clearance may be issued (5-9-4c)”
-- `3-4-7` `question/flashcard` (1.00): “Under 3-4-7, when must SFL be operated?” / “When must SFL be operated?”
-- `9-1-3` `question/flashcard` (1.00): “Under 9-1-3, what is the altitude range for a preplanned automatic flight check?” / “9-1-3: Altitude range for preplanned automatic flight check”
-- `3-4-6` `question/flashcard` (1.00): “What table controls ALS intensity settings under 3-4-6?” / “What table controls ALS intensity settings?”
-- `3-10-8` `question/flashcard` (1.00): “Under 3-10-8, when must a landing clearance be withheld?” / “When must a landing clearance be withheld?”
-- `2-2-12` `question/flashcard` (1.00): “Under 2-2-12, what two categories of information from airborne military aircraft must be forwarded to FSSs?” / “Under 2-2-12, what two categories of information from airborne military aircraft must be forwarded to FSSs?”
-- `3-10-2` `question/flashcard` (1.00): “Under 3-10-2, nonapproach control towers must forward what to arriving aircraft?” / “What must nonapproach control towers forward to arriving aircraft?”
-- `7-1-1` `question/flashcard` (0.91): “Complete: Do not apply visual separation or issue _____ or VFR-on-top clearances in Class A airspace.” / “Do not apply visual separation or issue VFR or VFR-on-top clearances in Class A airspace.”
-- `4-8-4` `question/flashcard` (0.90): “What altitudes may be specified for military high altitude instrument approaches when required for separation?” / “What altitudes may be specified for military high altitude instrument approaches for separation?”
-- `11-1-2` `question/flashcard` (0.90): “Under 11-1-2, when departure scheduling is in effect and an ATCT is equipped, how must the ATCT obtain a departure release time?” / “How must an ATCT obtain a departure release time when departure scheduling is in effect and the tower is equipped?”
+- `4-5-8` `question/flashcard` (1.00): “When should a controller inform an aircraft about when to expect a climb or descent clearance?” / “When should a controller inform an aircraft about when to expect a climb or descent clearance?”
+- `9-8-1` `question/flashcard` (1.00): “What does 'UAP' stand for?” / “9-8-1: What does UAP stand for?”
+- `9-2-20` `question/flashcard` (1.00): “What is the total altitude block within which the evasive action maneuver must be confined?” / “What is the total altitude block within which an evasive action maneuver must be confined?”
+- `3-1-14` `question/flashcard` (1.00): “What two operational harms does newly airborne volcanic ash cause to following aircraft?” / “What two operational harms does newly airborne volcanic ash cause to following aircraft?”
+- `9-2-18` `question/flashcard` (1.00): “How are AWACS/NORAD Special flights identified in the flight plan?” / “How are AWACS/NORAD Special flights identified in the flight plan?”
+- `2-2-12` `question/flashcard` (1.00): “What two categories of information from airborne military aircraft must be forwarded to FSSs?” / “What two categories of information from airborne military aircraft must be forwarded to FSSs?”
 
 ## Lowest Multi-Format Reinforcement
 
 - `2-6-4`: 0/34 essential statements covered by two or more formats; Q 1, cards 0, activities 0.
-- `8-9-3`: 0/30 essential statements covered by two or more formats; Q 0, cards 0, activities 0.
-- `8-8-3`: 0/29 essential statements covered by two or more formats; Q 1, cards 0, activities 0.
-- `8-10-3`: 0/28 essential statements covered by two or more formats; Q 0, cards 0, activities 0.
-- `8-7-3`: 0/26 essential statements covered by two or more formats; Q 0, cards 0, activities 0.
 - `2-10-1`: 0/20 essential statements covered by two or more formats; Q 0, cards 1, activities 0.
 - `2-9-3`: 0/17 essential statements covered by two or more formats; Q 0, cards 0, activities 0.
 - `5-8-3`: 0/17 essential statements covered by two or more formats; Q 0, cards 1, activities 0.
 - `3-10-5`: 0/14 essential statements covered by two or more formats; Q 0, cards 0, activities 0.
 - `3-9-7`: 0/14 essential statements covered by two or more formats; Q 1, cards 1, activities 0.
-- `10-6-4`: 0/13 essential statements covered by two or more formats; Q 0, cards 5, activities 2.
-- `2-10-3`: 0/10 essential statements covered by two or more formats; Q 0, cards 1, activities 0.
+- `5-2-1`: 0/12 essential statements covered by two or more formats; Q 3, cards 0, activities 0.
+- `2-10-3`: 0/10 essential statements covered by two or more formats; Q 1, cards 1, activities 0.
 - `10-4-4`: 0/9 essential statements covered by two or more formats; Q 0, cards 2, activities 0.
-- `2-4-3`: 0/9 essential statements covered by two or more formats; Q 3, cards 2, activities 0.
 - `3-10-12`: 0/9 essential statements covered by two or more formats; Q 0, cards 4, activities 0.
+- `5-2-7`: 0/9 essential statements covered by two or more formats; Q 3, cards 0, activities 0.
+- `5-5-9`: 0/9 essential statements covered by two or more formats; Q 0, cards 5, activities 0.
+- `3-10-13`: 0/8 essential statements covered by two or more formats; Q 0, cards 1, activities 0.
+- `3-12-3`: 0/8 essential statements covered by two or more formats; Q 0, cards 0, activities 0.
+- `3-9-10`: 0/8 essential statements covered by two or more formats; Q 0, cards 1, activities 0.

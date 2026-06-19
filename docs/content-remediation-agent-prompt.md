@@ -22,11 +22,16 @@ Non-negotiable constraints:
 - Do not overwrite another pass or another chapter's files.
 - Review every target ID and include complete coverage in `reviewed_item_ids`.
 - Write changed-item decisions only. Do not produce redundant keep decisions.
+- Use only `minor`, `major`, or `blocker` for decision severity.
 - Do not replace an item solely to reorder its choices. Runtime order is shuffled.
 - Do not invent explanatory rationales that are absent from the source blocks.
 - A validator error for unsupported rationale requires correction unless the
   source basis is expanded with the explicit supporting source statement. Do
   not merely add an inferred rationale to `source_basis`.
+- Replacement explanations must state the operating requirement directly. Do
+  not write explanations that lean on document-location scaffolding such as
+  "the paragraph says," "this section requires," "per paragraph X," or "the
+  source states."
 - Inspect each activity's full content object; activity types use different fields.
 - Finish the full chapter before setting `status` to `complete`.
 
@@ -46,4 +51,5 @@ The Markdown summary must state:
 - counts of replacements, removals, and splits by format;
 - concrete guidance for the later content-generation pass.
 
-Run the supplied validator before completing.
+The orchestrator validates the manifest after you write it. Do not run shell
+commands or validators yourself.

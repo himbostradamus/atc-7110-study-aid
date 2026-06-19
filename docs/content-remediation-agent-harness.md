@@ -65,6 +65,7 @@ Every decision requires:
 - stable `item_id`;
 - matching `entity_type` and `para_id`;
 - severity and defect categories;
+- severity must be exactly one of `minor`, `major`, or `blocker`;
 - a concrete explanation of the problem;
 - source basis stated from the packet;
 - a complete replacement payload for `replace` or `split`.
@@ -78,6 +79,10 @@ Every decision requires:
 - Distractors must represent plausible operational mistakes.
 - Explanation must teach the controlling rule, condition, or exception. It may
   teach a reason only when the source blocks explicitly state that reason.
+- Explanations must not refer to the document structure as the thing being
+  tested. Avoid phrases such as "the paragraph says," "this section requires,"
+  "per paragraph X," "the source states," and "the rule in this paragraph." Say
+  the operational requirement directly.
 - Do not invent a safety rationale, policy purpose, or operational consequence
   that is not supported by the packet's source blocks.
 - If the source states only a duty, threshold, sequence, or coordination
@@ -115,6 +120,9 @@ Every decision requires:
   not merely ask whether an isolated value is “approved.”
 - Choice activities follow the same answer and distractor standards as questions.
 - Explanations must connect the answer to the operational principle.
+- Activity explanations follow the same document-structure rule as question
+  explanations: state the operating requirement directly, not that a paragraph
+  or section says it.
 
 ## Output Files
 
@@ -184,12 +192,6 @@ For `split`, `replacement` is an array of complete replacement objects.
 
 ## Completion
 
-Before finishing, run:
-
-```bash
-python scripts/validate_content_remediation_manifest.py \
-  --packet ASSIGNED_PACKET \
-  --manifest OUTPUT_JSON
-```
-
-Fix all errors. Warnings require review but do not necessarily block completion.
+Write both required output files and stop. The parent orchestrator runs the
+validator after each attempt and retries failed shards. Do not run shell
+commands or validators from inside the agent session.

@@ -63,17 +63,10 @@ Required Markdown summary:
 {output_markdown_display}
 ```
 
-Validator command:
-
-```bash
-python scripts/validate_content_remediation_manifest.py \
-  --packet {shlex.quote(str(packet_display))} \
-  --manifest {shlex.quote(str(output_json_display))}
-```
-
 Read the harness at `{HARNESS}` before beginning. Use the exact output paths
 above. Do not mark the manifest complete until every target item is reviewed and
-the validator exits successfully.
+both output files are written. Do not run shell commands or validators yourself;
+the orchestrator validates generated manifests.
 """
 
 
@@ -99,7 +92,6 @@ def launch_agent(prompt_path: Path, log_path: Path) -> subprocess.Popen:
         "Grep",
         "LS",
         "BatchTool",
-        "Bash(python scripts/validate_content_remediation_manifest.py *)",
     ])
     disallowed_tools = ",".join([
         "Task",

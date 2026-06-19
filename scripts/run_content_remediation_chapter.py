@@ -81,17 +81,10 @@ Required Markdown summary:
 {output_markdown_display}
 ```
 
-Validator command:
-
-```bash
-python scripts/validate_content_remediation_manifest.py \
-  --packet {shlex.quote(str(shard_display))} \
-  --manifest {shlex.quote(str(output_json_display))}
-```
-
 Read the harness at `{HARNESS}` before beginning. Use the exact output paths.
-Write the JSON manifest before the Markdown summary, validate it, and finish
-only after the validator exits successfully.
+Write the JSON manifest before the Markdown summary. Do not run shell commands
+or validators yourself; the orchestrator validates each attempt after you write
+the files. Finish only after the complete shard output is written.
 """
 
 
@@ -104,7 +97,6 @@ def run_agent(prompt_path: Path, log_path: Path) -> int:
         "Grep",
         "LS",
         "BatchTool",
-        "Bash(python scripts/validate_content_remediation_manifest.py *)",
     ])
     disallowed_tools = ",".join([
         "Task",
@@ -168,7 +160,7 @@ def main() -> int:
     parser.add_argument("--shard-dir", type=Path, required=True)
     parser.add_argument("--output-json", type=Path, required=True)
     parser.add_argument("--output-markdown", type=Path, required=True)
-    parser.add_argument("--attempts", type=int, default=2)
+    parser.add_argument("--attempts", type=int, default=4)
     args = parser.parse_args()
 
     shard_paths = sorted(args.shard_dir.glob("chapter_*_shard_*.json"))

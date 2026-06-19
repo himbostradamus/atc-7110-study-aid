@@ -1,0 +1,475 @@
+{
+  "version": 1,
+  "chapter": 11,
+  "target_generation_source": "curated",
+  "packet_sha256": "17be16ab852b9d9d4e9059603442603aae5ff2812f9da587886d9e2eab191626",
+  "manifest_sha256": "25b5de1765a2855425a4c7568d6fccd7827f28383e433911b4b0fb03984437b3",
+  "summary": {
+    "overall": "Chapter 11 was reviewed in 1 bounded source-grounded shards. Proposed changes: 9 replacements, 3 splits, and 0 removals.",
+    "patterns": [
+      "Paragraph-location scaffolding is universal across all 9 question stems and explanations — every stem begins 'Under 11-1-X' and every explanation begins 'Per 11-1-X'. This is a systematic generation defect, not an artifact of individual items.",
+      "All three true/false questions share the same thin-explanation pattern: 'That statement appears directly in 11-1-X.' The validator enforces a minimum 10-word explanation, and these must teach the controlling principle, not just cite a paragraph.",
+      "Two flashcards (b088fd79 from 11-1-1, 74709722 from 11-1-3) combine 3-4 distinct retrieval targets on one card back. The questions already test these concepts separately, so split cards complement rather than duplicate.",
+      "Flashcard a8466f2f (11-1-2) has a vague back — 'the required participants' and 'key operational topics' are never named. The STMCIC duties in the source are specific; the card back must reflect that specificity.",
+      "Automated flags for 'negative_stem' on items f3d78095 and f77ee7ae are false positives. Both stems use negation directly from the source text ('do not have priority', 'not possible') to represent the actual conditional operational rule.",
+      "Source content fidelity is strong — all answers, distractors, and true/false statements accurately reflect the source blocks. Distractors are plausible operational mistakes (e.g., wrong time windows, conditional-only triggers, wrong display locations)."
+    ],
+    "generation_guidance": [
+      "Do not prefix stems with 'Under 11-1-X' or explanations with 'Per 11-1-X'. The platform presents questions in mixed chapter order; paragraph numbers are meaningless to the learner and teach document navigation instead of operational knowledge.",
+      "True/false explanations must teach the controlling principle, not identify a paragraph. Target at least 15-20 words explaining why the statement is true (or false), what operational condition or limitation it represents, and how it fits into controller responsibilities.",
+      "Flashcards must target one retrieval concept per card. If a source paragraph contains multiple distinct duties, compliance requirements, or participant lists, generate separate cards for each. Split any card whose back exceeds roughly 30 words or covers more than two closely related facts.",
+      "When generating flashcards for procedure paragraphs like 11-1-2 (multi-role duties), prefer focused cards on specific, testable details (e.g., briefing participants, briefing topics, specific time windows) over summary cards that use vague language like 'required participants' or 'key topics'.",
+      "The three paragraphs in this shard have substantial untested content: OS/CIC duties (b1-b7), ARTCC/TRACON/ATCT facility-specific responsibilities (d, e, f), the TBFM note about accuracy factors, and the EDST outage/degradation actions. The generation pass should create items covering these gaps to improve cross-format reinforcement.",
+      "Retain use of 'do not have priority' and 'not possible' language when it directly represents the source's operational rule. These are not negative-stem defects — they accurately test conditional actions and priority hierarchies that controllers must know."
+    ],
+    "shard_overviews": [
+      "This shard covers 11-1-1 through 11-1-3 (Traffic Management general policy, STMCIC/OS-CIC/personnel duties, and TBFM compliance). All 12 items are factually correct with no source-fidelity errors. However, every item carries a systematic paragraph-location scaffolding defect: stems and explanations reference paragraph numbers directly, substituting document trivia for self-contained context. Three true/false questions have thin explanations that merely state the paragraph location. One flashcard is an overloaded multi-concept dump, another combines four compliance responsibilities on a single back, and a third uses vague placeholder language instead of naming specific participants and topics. No activities are present in this shard. No items require removal — the fixed items remain educationally sound after scaffolding and overload issues are corrected."
+    ]
+  },
+  "operations": [
+    {
+      "entity_type": "question",
+      "para_id": "11-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Stem begins 'Under 11-1-1' and explanation begins 'Per 11-1-1a', embedding paragraph-location scaffolding that teaches document navigation instead of operational knowledge. The platform shuffles questions across chapters; paragraph numbers carry no meaning for the learner.",
+      "source_basis": "11-1-1a states the traffic management mission is to balance air traffic demand with system capacity to ensure the maximum efficient utilization of the NAS.",
+      "match": {
+        "question_text": "Under 11-1-1, what is the mission of the traffic management system?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "What is the mission of the traffic management system?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "The traffic management system's mission is to balance air traffic demand with system capacity to ensure the maximum efficient utilization of the NAS. This balance, not simply reducing all demand or delegating decisions to automation, is the core responsibility.",
+          "choices": [
+            {
+              "text": "To balance air traffic demand with system capacity to ensure maximum efficient utilization of the NAS.",
+              "is_correct": true
+            },
+            {
+              "text": "To reduce demand whenever traffic increases, regardless of available capacity.",
+              "is_correct": false
+            },
+            {
+              "text": "To prioritize miles-in-trail restrictions over all other flow-management tools.",
+              "is_correct": false
+            },
+            {
+              "text": "To shift all capacity decisions from ATCS personnel to automation systems.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Stem begins 'Under 11-1-1' and explanation begins 'Per 11-1-1b', embedding paragraph-location scaffolding. The stem and explanation must be self-contained.",
+      "source_basis": "11-1-1b requires that TBFM must be used to the maximum extent feasible in preference to miles-in-trail initiatives.",
+      "match": {
+        "question_text": "Under 11-1-1, which should be used to the maximum extent feasible in preference to miles-in-trail initiatives?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "Which traffic management tool should be used to the maximum extent feasible in preference to miles-in-trail initiatives?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "TBFM (Time Based Flow Management) must be used to the maximum extent feasible in preference to miles-in-trail initiatives. It is the preferred tool for managing traffic flow whenever operational conditions allow its application.",
+          "choices": [
+            {
+              "text": "TBFM.",
+              "is_correct": true
+            },
+            {
+              "text": "MIT initiatives.",
+              "is_correct": false
+            },
+            {
+              "text": "Ground stop procedures.",
+              "is_correct": false
+            },
+            {
+              "text": "Departure holds only.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-1",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality",
+        "educational_coherence"
+      ],
+      "problem": "Stem begins 'Under 11-1-1' and the explanation only states where the statement appears ('That statement appears directly in 11-1-1c'), failing to teach the operational principle. A true/false explanation must explain why the statement is true and what it means for controller responsibilities.",
+      "source_basis": "11-1-1c recognizes that the ATCS is integral in the execution of the traffic management mission.",
+      "match": {
+        "question_text": "Under 11-1-1, the ATCS is recognized as integral in the execution of the traffic management mission.",
+        "question_type": "true_false"
+      },
+      "replacements": [
+        {
+          "question_text": "The ATCS is recognized as integral in the execution of the traffic management mission.",
+          "question_type": "true_false",
+          "difficulty": 1,
+          "explanation": "The air traffic control specialist is formally recognized as integral to executing the traffic management mission. The statement assigns the ATCS an integral role rather than treating traffic management as solely a TMU or automation function.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "11-1-1",
+      "action": "split",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Card front asks two questions ('What is the traffic management mission, and what tool is preferred?') and the back combines three distinct retrieval targets: the mission statement, TBFM preference, and controller role. Flashcards must target one retrieval concept per card for effective spaced repetition.",
+      "source_basis": "11-1-1a defines the traffic management mission; 11-1-1b establishes TBFM preference over MIT initiatives; 11-1-1c recognizes ATCS integral role.",
+      "match": {
+        "front": "What is the traffic management mission, and what tool is preferred when feasible?",
+        "back": "Balance air traffic demand with system capacity for the most efficient use of the NAS. When feasible, use TBFM in preference to miles-in-trail initiatives, and remember controllers are part of that mission.",
+        "card_type": "definition"
+      },
+      "replacements": [
+        {
+          "front": "What is the mission of the traffic management system?",
+          "back": "Balance air traffic demand with system capacity to ensure the maximum efficient utilization of the NAS.",
+          "card_type": "definition"
+        },
+        {
+          "front": "What tool must be used to the maximum extent feasible in preference to miles-in-trail initiatives?",
+          "back": "TBFM (Time Based Flow Management) must be used whenever feasible rather than miles-in-trail restrictions.",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Stem begins 'Under 11-1-2' and explanation begins 'Per 11-1-2a1', embedding paragraph-location scaffolding. The stem and explanation must be self-contained.",
+      "source_basis": "11-1-2a1 requires the STMCIC to ensure an operational briefing is conducted at least once during the day and evening shifts.",
+      "match": {
+        "question_text": "Under 11-1-2, how often must the STMCIC ensure an operational briefing is conducted during the day and evening shifts?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "How often must the STMCIC ensure an operational briefing is conducted during the day and evening shifts?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "The STMCIC must ensure an operational briefing is conducted at least once during the day shift and at least once during the evening shift. This is a minimum daily requirement, not a conditional or weekly obligation triggered only by weather or staffing conditions.",
+          "choices": [
+            {
+              "text": "At least once during the day and evening shifts.",
+              "is_correct": true
+            },
+            {
+              "text": "Only when weather is below minimums or staffing is critical.",
+              "is_correct": false
+            },
+            {
+              "text": "Once per week unless a facility directive requires more.",
+              "is_correct": false
+            },
+            {
+              "text": "Only when the TMU requests one.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Stem begins 'Under 11-1-2' and explanation begins 'Per 11-1-2f3', embedding paragraph-location scaffolding. The stem and explanation must be self-contained.",
+      "source_basis": "11-1-2f3 requires ATCTs to release aircraft airborne within a window from 2 minutes prior to 1 minute after the assigned time, unless otherwise coordinated.",
+      "match": {
+        "question_text": "Under 11-1-2, when departure scheduling or Call for Release is in effect, what airborne release window applies unless otherwise coordinated?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "When departure scheduling or Call for Release is in effect, what airborne release window applies unless otherwise coordinated?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Aircraft must be airborne within a window that extends from 2 minutes prior to 1 minute after the assigned time. This specific window applies unless otherwise coordinated with the affected facilities. The tolerance is not zero and does not extend to five minutes in either direction.",
+          "choices": [
+            {
+              "text": "From 2 minutes prior to 1 minute after the assigned time.",
+              "is_correct": true
+            },
+            {
+              "text": "From 5 minutes prior to 5 minutes after the assigned time.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly at the assigned time with no tolerance.",
+              "is_correct": false
+            },
+            {
+              "text": "From 1 minute prior to 2 minutes after the assigned time.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-2",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality",
+        "educational_coherence"
+      ],
+      "problem": "Stem begins 'Under 11-1-2' and the explanation only states where the limitation appears ('That limitation appears in 11-1-2c1'), failing to teach the operational priority rule. The stem's 'do not have priority' language is directly from the source and is not a negative-stem defect — it accurately represents the requirement that separation and procedural integrity take priority over flow-management compliance.",
+      "source_basis": "11-1-2c1 requires personnel providing air traffic services to enforce TBM operations and TMIs, but states they do not have priority over maintaining separation of aircraft and procedural integrity of the sector.",
+      "match": {
+        "question_text": "Under 11-1-2, personnel providing air traffic services must enforce TBM operations and TMIs within their area of responsibility, but those actions do not have priority over maintaining separation of aircraft and procedural integrity of the sector.",
+        "question_type": "true_false"
+      },
+      "replacements": [
+        {
+          "question_text": "Personnel providing air traffic services must enforce TBM operations and TMIs within their area of responsibility, but those actions do not have priority over maintaining separation of aircraft and procedural integrity of the sector.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "explanation": "TBM operations and TMIs must be enforced, but they do not have priority over maintaining aircraft separation and the procedural integrity of the sector. A metering time or restriction does not override either requirement.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "11-1-2",
+      "action": "split",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Card back uses vague language — 'the required participants' and 'key operational topics' — without naming them, making it useless as a retrieval card. The STMCIC's operational briefing requirement names specific participants and discussion topics in the source; the card must include them to be an effective retrieval target. Additionally, the back tries to cover both briefing requirements and TBM/TMI implementation oversight in one card.",
+      "source_basis": "11-1-2a1 lists briefing participants (STMCIC, OS/CIC, and other interested personnel as designated by facility management) and discussion topics (meteorological conditions, staffing, equipment status, runways in use, AAR, TBM use, and TMIs).",
+      "match": {
+        "front": "What must the STMCIC ensure during day and evening shifts?",
+        "back": "Ensure a day or evening operational briefing happens with the required participants and key operational topics, and ensure TBM operations and TMIs are implemented and updated promptly.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "At a minimum, who must participate in the STMCIC's operational briefing during day and evening shifts?",
+          "back": "The STMCIC, OS/CIC, and other interested personnel as designated by facility management.",
+          "card_type": "procedure"
+        },
+        {
+          "front": "What topics must be discussed at the STMCIC's operational briefing?",
+          "back": "Meteorological conditions (present and forecasted), staffing, equipment status, runways in use, Airport Arrival Rate (AAR), TBM use, and Traffic Management Initiatives (TMIs) (present and anticipated).",
+          "card_type": "procedure"
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Stem begins 'Under 11-1-3' and explanation begins 'Per 11-1-3a', embedding paragraph-location scaffolding. The stem and explanation must be self-contained.",
+      "source_basis": "11-1-3a requires personnel providing air traffic services to display TBFM schedule information on the situation display during periods of metering.",
+      "match": {
+        "question_text": "Under 11-1-3, during periods of metering, where must TBFM schedule information be displayed?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "During periods of metering, where must personnel providing air traffic services display TBFM schedule information?",
+          "question_type": "multiple_choice",
+          "difficulty": 1,
+          "explanation": "During periods of metering, personnel providing air traffic services must display TBFM schedule information on the situation display. The required display location is the situation display, not a separate location named by the distractors.",
+          "choices": [
+            {
+              "text": "On the situation display.",
+              "is_correct": true
+            },
+            {
+              "text": "Only on the TMU planning display.",
+              "is_correct": false
+            },
+            {
+              "text": "Only on paper strips or printed schedules.",
+              "is_correct": false
+            },
+            {
+              "text": "Only at the supervisor's position.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "educational_coherence"
+      ],
+      "problem": "Stem begins 'Under 11-1-3' and explanation begins 'Per 11-1-3b', embedding paragraph-location scaffolding. The stem and explanation must be self-contained.",
+      "source_basis": "11-1-3b requires personnel providing air traffic services to comply with TBFM-generated metering times within plus or minus 1 minute.",
+      "match": {
+        "question_text": "Under 11-1-3, what normal metering-time accuracy standard applies during periods of metering?",
+        "question_type": "multiple_choice"
+      },
+      "replacements": [
+        {
+          "question_text": "During periods of metering, what is the normal accuracy standard for complying with TBFM-generated metering times?",
+          "question_type": "multiple_choice",
+          "difficulty": 2,
+          "explanation": "Controllers must comply with TBFM-generated metering times within plus or minus 1 minute. This is the standard accuracy requirement. Exceptions include when DCT jumps make timing unstable (in which case MIT or MINIT may be used) and certain ARTCC sectors with explicit facility directive authorization.",
+          "choices": [
+            {
+              "text": "Within plus or minus 1 minute.",
+              "is_correct": true
+            },
+            {
+              "text": "Within plus or minus 3 minutes.",
+              "is_correct": false
+            },
+            {
+              "text": "Exactly on time with no tolerance.",
+              "is_correct": false
+            },
+            {
+              "text": "Within plus or minus 5 minutes unless TMU specifies otherwise.",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "question",
+      "para_id": "11-1-3",
+      "action": "replace",
+      "severity": "minor",
+      "categories": [
+        "context",
+        "explanation_quality",
+        "educational_coherence"
+      ],
+      "problem": "Stem begins 'Under 11-1-3' and the explanation only states where the requirement appears ('That coordination requirement appears in 11-1-3c'), failing to teach when and why coordination is required. The stem's 'not possible' language is directly from the source and is not a negative-stem defect — it accurately represents the operational trigger condition for coordination.",
+      "source_basis": "11-1-3c states that when compliance is not possible, personnel must coordinate with OS/CIC, personnel providing traffic management services, and adjacent facilities/sectors as appropriate.",
+      "match": {
+        "question_text": "Under 11-1-3, when compliance with TBFM-generated metering times is not possible, personnel should coordinate with OS/CIC, traffic management services, and adjacent facilities or sectors as appropriate.",
+        "question_type": "true_false"
+      },
+      "replacements": [
+        {
+          "question_text": "When compliance with TBFM-generated metering times is not possible, personnel should coordinate with the OS/CIC, personnel providing traffic management services, and adjacent facilities or sectors as appropriate.",
+          "question_type": "true_false",
+          "difficulty": 2,
+          "explanation": "When controllers cannot comply with TBFM-generated metering times, they must coordinate with the OS/CIC, personnel providing traffic management services, and adjacent facilities or sectors as appropriate.",
+          "choices": [
+            {
+              "text": "True",
+              "is_correct": true
+            },
+            {
+              "text": "False",
+              "is_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity_type": "flashcard",
+      "para_id": "11-1-3",
+      "action": "split",
+      "severity": "minor",
+      "categories": [
+        "format_fit",
+        "educational_coherence"
+      ],
+      "problem": "Card back combines four distinct compliance responsibilities on a single back: display schedule information, comply within +/-1 minute, use MIT/MINIT for unstable aircraft, and coordinate when unable to comply. Flashcards must target one retrieval concept per card for effective recall. The questions in this paragraph already test display location, accuracy standard, and coordination separately; split cards complement rather than duplicate.",
+      "source_basis": "11-1-3 requires personnel to: (a) display TBFM schedule information on the situation display; (b) comply with TBFM-generated metering times within +/-1 minute, with exceptions for DCT instability and certain ARTCC sectors; (c) coordinate when compliance is not possible.",
+      "match": {
+        "front": "During metering, what are the basic TBFM compliance responsibilities?",
+        "back": "Display TBFM schedule information, meet generated metering times within plus or minus 1 minute, use MIT or MINIT for specific unstable aircraft if needed, and coordinate when you cannot comply.",
+        "card_type": "procedure"
+      },
+      "replacements": [
+        {
+          "front": "During metering, what are the primary TBFM compliance requirements?",
+          "back": "Display TBFM schedule information on the situation display. Comply with TBFM-generated metering times within +/- 1 minute.",
+          "card_type": "procedure"
+        },
+        {
+          "front": "What alternatives apply when TBFM metering times are unstable or cannot be met?",
+          "back": "When DCT jumps prevent accurate +/- 1 minute compliance, use MIT or MINIT to absorb delay until stability resumes. When compliance is not possible, coordinate with OS/CIC, TMU, and adjacent facilities or sectors.",
+          "card_type": "procedure"
+        }
+      ]
+    }
+  ]
+}

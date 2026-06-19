@@ -378,7 +378,11 @@ def validate_replacement(
             validate_flashcard(reporter, item_location, item)
 
 
-def validate(packet: dict[str, Any], manifest: dict[str, Any]) -> Reporter:
+def validate(
+    packet: dict[str, Any],
+    manifest: dict[str, Any],
+    allow_bulk_removal: bool = False,
+) -> Reporter:
     reporter = Reporter()
     inventory, lookup, originals = packet_inventory(packet)
     chapter = packet.get("chapter")
@@ -506,14 +510,15 @@ def validate(packet: dict[str, Any], manifest: dict[str, Any]) -> Reporter:
 
     if decisions and action_counts["replace"] + action_counts["split"] == 0:
         reporter.warn("decisions", "all interventions are removals; verify useful content was not discarded")
-    for entity_type, target_ids in inventory.items():
-        target_count = len(target_ids)
-        removed = removal_counts[entity_type]
-        if target_count >= 10 and removed > max(5, target_count * 0.25):
-            reporter.error(
-                f"decisions.{entity_type}",
-                f"removes {removed} of {target_count} targets; bulk deletion requires manual review",
-            )
+    if not allow_bulk_removal:
+        for entity_type, target_ids in inventory.items():
+            target_count = len(target_ids)
+            removed = removal_counts[entity_type]
+            if target_count >= 10 and removed > max(5, target_count * 0.25):
+                reporter.error(
+                    f"decisions.{entity_type}",
+                    f"removes {removed} of {target_count} targets; bulk deletion requires manual review",
+                )
     return reporter
 
 
@@ -521,10 +526,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--packet", type=Path, required=True)
     parser.add_argument("--manifest", type=Path, required=True)
+    parser.add_argument("--allow-bulk-removal", action="store_true")
     args = parser.parse_args()
     packet = load_object(args.packet)
     manifest = load_object(args.manifest)
-    reporter = validate(packet, manifest)
+    reporter = validate(packet, manifest, allow_bulk_removal=args.allow_bulk_removal)
     for warning in reporter.warnings:
         print(f"WARNING: {warning}")
     for error in reporter.errors:

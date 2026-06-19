@@ -25,6 +25,7 @@ def main() -> int:
     parser.add_argument("--pass-number", type=int, required=True)
     parser.add_argument("--out-json", type=Path, required=True)
     parser.add_argument("--out-markdown", type=Path, required=True)
+    parser.add_argument("--allow-bulk-removal", action="store_true")
     args = parser.parse_args()
 
     packet = load_object(args.packet)
@@ -89,7 +90,7 @@ def main() -> int:
         },
         "decisions": decisions,
     }
-    reporter = validate(packet, merged)
+    reporter = validate(packet, merged, allow_bulk_removal=args.allow_bulk_removal)
     if reporter.errors:
         for error in reporter.errors:
             print(f"ERROR merged: {error}")

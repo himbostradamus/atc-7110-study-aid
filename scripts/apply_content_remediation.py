@@ -47,6 +47,7 @@ class ApplyStats:
     operations: int = 0
     removed: int = 0
     inserted: int = 0
+    updated: int = 0
     already_applied: int = 0
 
 
@@ -313,6 +314,43 @@ def insert_flashcard(
     )
 
 
+def update_flashcard(
+    db: sqlite3.Connection,
+    flashcard_id: str,
+    generation_source: str,
+    item: dict[str, Any],
+) -> None:
+    db.execute(
+        """
+        UPDATE flashcards
+        SET back = ?, generation_src = ?
+        WHERE id = ?
+        """,
+        (
+            item["back"],
+            generation_source,
+            flashcard_id,
+        ),
+    )
+
+
+def find_flashcard_slot(
+    db: sqlite3.Connection,
+    para_id: str,
+    card_type: str,
+    front: str,
+) -> str | None:
+    row = db.execute(
+        """
+        SELECT id FROM flashcards
+        WHERE para_id = ? AND card_type = ? AND front = ?
+        ORDER BY id LIMIT 1
+        """,
+        (para_id, card_type, front),
+    ).fetchone()
+    return None if row is None else str(row[0])
+
+
 def insert_activity(
     db: sqlite3.Connection,
     paragraph_id: str,
@@ -339,6 +377,45 @@ def insert_activity(
             generation_source,
         ),
     )
+
+
+def update_activity(
+    db: sqlite3.Connection,
+    activity_id: str,
+    generation_source: str,
+    item: dict[str, Any],
+) -> None:
+    content = dict(item["content"])
+    content["generation_source"] = generation_source
+    db.execute(
+        """
+        UPDATE activities
+        SET content_json = ?, difficulty = ?, is_verified = 1
+        WHERE id = ?
+        """,
+        (
+            json.dumps(content, ensure_ascii=False),
+            int(item.get("difficulty", content.get("difficulty", 2))),
+            activity_id,
+        ),
+    )
+
+
+def find_activity_slot(
+    db: sqlite3.Connection,
+    para_id: str,
+    generation_source: str,
+    activity_type: str,
+) -> str | None:
+    row = db.execute(
+        """
+        SELECT id FROM activities
+        WHERE para_id = ? AND generation_src = ? AND activity_type = ?
+        ORDER BY id LIMIT 1
+        """,
+        (para_id, generation_source, activity_type),
+    ).fetchone()
+    return None if row is None else str(row[0])
 
 
 def insert_replacement(
@@ -409,6 +486,46 @@ def apply_content_remediation(
                     (fingerprint,),
                 )
                 continue
+            if entity_type == "activity" and operation["action"] == "replace" and replacements:
+                updated_any = False
+                for replacement in replacements:
+                    existing_activity_id = find_activity_slot(
+                        db,
+                        para_id,
+                        generation_source,
+                        replacement["activity_type"],
+                    )
+                    if existing_activity_id is None:
+                        continue
+                    update_activity(db, existing_activity_id, generation_source, replacement)
+                    stats.updated += 1
+                    updated_any = True
+                if updated_any:
+                    db.execute(
+                        "INSERT INTO content_remediation_log (operation_hash) VALUES (?)",
+                        (fingerprint,),
+                    )
+                    continue
+            if entity_type == "flashcard" and operation["action"] == "replace" and replacements:
+                updated_any = False
+                for replacement in replacements:
+                    existing_flashcard_id = find_flashcard_slot(
+                        db,
+                        para_id,
+                        replacement.get("card_type", "definition"),
+                        replacement["front"],
+                    )
+                    if existing_flashcard_id is None:
+                        continue
+                    update_flashcard(db, existing_flashcard_id, generation_source, replacement)
+                    stats.updated += 1
+                    updated_any = True
+                if updated_any:
+                    db.execute(
+                        "INSERT INTO content_remediation_log (operation_hash) VALUES (?)",
+                        (fingerprint,),
+                    )
+                    continue
             raise ValueError(
                 f"Missing {entity_type} remediation target in {para_id}: "
                 f"{operation['match']}"
@@ -437,6 +554,28 @@ def apply_content_remediation(
                 replacement_match(entity_type, replacement),
             ):
                 continue
+            if entity_type == "activity":
+                existing_activity_id = find_activity_slot(
+                    db,
+                    para_id,
+                    generation_source,
+                    replacement["activity_type"],
+                )
+                if existing_activity_id is not None:
+                    update_activity(db, existing_activity_id, generation_source, replacement)
+                    stats.updated += 1
+                    continue
+            if entity_type == "flashcard":
+                existing_flashcard_id = find_flashcard_slot(
+                    db,
+                    para_id,
+                    replacement.get("card_type", "definition"),
+                    replacement["front"],
+                )
+                if existing_flashcard_id is not None:
+                    update_flashcard(db, existing_flashcard_id, generation_source, replacement)
+                    stats.updated += 1
+                    continue
             insert_replacement(
                 db,
                 entity_type,
@@ -476,7 +615,8 @@ def main() -> int:
 
     print(
         f"operations={stats.operations} removed={stats.removed} "
-        f"inserted={stats.inserted} already_applied={stats.already_applied}"
+        f"inserted={stats.inserted} updated={stats.updated} "
+        f"already_applied={stats.already_applied}"
     )
     return 0
 
