@@ -1,0 +1,183 @@
+{
+  "questions": {
+    "14-2-4": {
+      "append_items": true,
+      "items": [
+        {
+          "question_text": "Use TBL 14-2-2 and TBL 14-2-3. In domestic en route CPDLC, which table family should you use to distinguish controller-issued route clearances from pilot route requests or confirmations?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated_table_figure_batch_09",
+          "explanation": "TBL 14-2-2 contains Route Uplink Message Elements, while TBL 14-2-3 contains Route Downlink Message Elements. The direction of the CPDLC message determines which source table applies.",
+          "choices": [
+            {"text": "Route uplink for controller-issued route messages; route downlink for pilot route requests or confirmations.", "is_correct": true},
+            {"text": "Standard response uplink for route clearances; free text downlink for route confirmations.", "is_correct": false},
+            {"text": "Emergency uplink for all route changes.", "is_correct": false},
+            {"text": "System management downlink for route clearances.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-2-4 and TBL 14-2-5. A CPDLC message concerns lateral navigation rather than altitude or speed. What is the first source-use decision?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated_table_figure_batch_09",
+          "explanation": "TBL 14-2-4 contains Lateral Uplink Message Elements and TBL 14-2-5 contains Lateral Downlink Message Elements. Decide whether ATC is sending an instruction or the aircraft is sending a request/report.",
+          "choices": [
+            {"text": "Determine whether the lateral message is an uplink from ATC or a downlink from the aircraft.", "is_correct": true},
+            {"text": "Treat every lateral message as a voice communications message.", "is_correct": false},
+            {"text": "Use only the speed table because lateral messages imply speed control.", "is_correct": false},
+            {"text": "Use emergency/urgency tables for all lateral messages.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-2-7, TBL 14-2-8, TBL 14-2-9, and TBL 14-2-10. Which pairing correctly maps domestic CPDLC message subject to table family?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_batch_09",
+          "explanation": "TBL 14-2-7 is Altitude Downlink, TBL 14-2-8 is Crossing Constraint Uplink, TBL 14-2-9 is Speed Uplink, and TBL 14-2-10 is Speed Downlink.",
+          "choices": [
+            {"text": "Altitude downlink, crossing-constraint uplink, speed uplink, and speed downlink are separate table families.", "is_correct": true},
+            {"text": "All altitude, crossing, and speed messages are route uplinks.", "is_correct": false},
+            {"text": "Crossing constraints are only emergency downlinks.", "is_correct": false},
+            {"text": "Speed uplinks and speed downlinks use the same table regardless of message direction.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-2-11, TBL 14-2-12, TBL 14-2-13, TBL 14-2-14, and TBL 14-2-15. Which source-use rule prevents mixing advisory, voice-communications, and emergency/urgency CPDLC messages?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_batch_09",
+          "explanation": "TBL 14-2-11 covers Air Traffic Advisory Uplink, TBL 14-2-12 and TBL 14-2-13 cover Voice Communications Uplink/Downlink, and TBL 14-2-14 and TBL 14-2-15 cover Emergency/Urgency Uplink/Downlink.",
+          "choices": [
+            {"text": "Select the table by message purpose and direction: advisory, voice communications, or emergency/urgency; uplink versus downlink still matters.", "is_correct": true},
+            {"text": "Use advisory uplinks for all voice and emergency messages.", "is_correct": false},
+            {"text": "Use emergency downlink tables whenever ATC sends a message.", "is_correct": false},
+            {"text": "Ignore direction because all CPDLC message elements have the same intended use.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-2-16, TBL 14-2-17, TBL 14-2-18, and TBL 14-2-19. Which domestic CPDLC table split keeps response-message elements separate from supplemental-message elements?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_batch_09",
+          "explanation": "TBL 14-2-16 and TBL 14-2-17 are Standard Response Uplink/Downlink tables. TBL 14-2-18 and TBL 14-2-19 are Supplemental Uplink/Downlink tables.",
+          "choices": [
+            {"text": "Standard response and supplemental messages each have separate uplink and downlink tables.", "is_correct": true},
+            {"text": "Supplemental messages are always entered through standard response downlinks.", "is_correct": false},
+            {"text": "Standard response messages are only route uplinks.", "is_correct": false},
+            {"text": "Downlink response messages are stored in the voice communications table.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-2-20, TBL 14-2-21, TBL 14-2-22, and TBL 14-2-23. For domestic CPDLC, what distinction separates free-text tables from system-management tables?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_batch_09",
+          "explanation": "TBL 14-2-20 and TBL 14-2-21 contain Free Text Uplink/Downlink elements. TBL 14-2-22 and TBL 14-2-23 contain System Management Uplink/Downlink elements.",
+          "choices": [
+            {"text": "Free-text elements carry text message content; system-management elements manage the data-link service or connection context.", "is_correct": true},
+            {"text": "Free-text tables are only for emergency messages.", "is_correct": false},
+            {"text": "System-management tables are only for speed assignments.", "is_correct": false},
+            {"text": "Free-text and system-management tables are interchangeable.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "14-3-3": {
+      "append_items": true,
+      "items": [
+        {
+          "question_text": "Use TBL 14-3-2 and TBL 14-3-3. In oceanic ATOP CPDLC abnormal-condition context, which table family separates route uplinks from route downlinks?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated_table_figure_batch_09",
+          "explanation": "TBL 14-3-2 contains Route Uplink Message Elements and TBL 14-3-3 contains Route Downlink Message Elements. Message direction remains the first sorting decision.",
+          "choices": [
+            {"text": "TBL 14-3-2 for route uplinks and TBL 14-3-3 for route downlinks.", "is_correct": true},
+            {"text": "TBL 14-3-10 for route uplinks and TBL 14-3-24 for route downlinks.", "is_correct": false},
+            {"text": "Emergency/urgency tables for every route message.", "is_correct": false},
+            {"text": "System-management tables for every route clearance.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-4 and TBL 14-3-5. An oceanic CPDLC message concerns lateral navigation. What determines which lateral table applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated_table_figure_batch_09",
+          "explanation": "TBL 14-3-4 is Lateral Uplink Message Elements, while TBL 14-3-5 is Lateral Downlink Message Elements.",
+          "choices": [
+            {"text": "Whether ATC sends the lateral message as an uplink or the aircraft sends it as a downlink.", "is_correct": true},
+            {"text": "Whether the aircraft is above FL390.", "is_correct": false},
+            {"text": "Whether the message mentions weather abbreviations.", "is_correct": false},
+            {"text": "Whether the aircraft is using voice only.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-6, TBL 14-3-7, TBL 14-3-8, TBL 14-3-9, and TBL 14-3-10. Which grouping correctly describes the oceanic altitude, crossing, and speed message tables?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_batch_09",
+          "explanation": "TBL 14-3-6 and TBL 14-3-7 are Altitude Uplink/Downlink, TBL 14-3-8 is Crossing Constraint Uplink, and TBL 14-3-9 and TBL 14-3-10 are Speed Uplink/Downlink.",
+          "choices": [
+            {"text": "Altitude has uplink/downlink tables, crossing constraints have an uplink table, and speed has uplink/downlink tables.", "is_correct": true},
+            {"text": "Altitude, crossing, and speed are all handled only as route downlinks.", "is_correct": false},
+            {"text": "Crossing constraints are system-management messages.", "is_correct": false},
+            {"text": "Speed messages are always emergency/urgency messages.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-11, TBL 14-3-12, TBL 14-3-13, TBL 14-3-14, TBL 14-3-15, and TBL 14-3-16. Which source-use distinction keeps advisory, voice-communications, and emergency/urgency messages from being conflated?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_batch_09",
+          "explanation": "TBL 14-3-11 and TBL 14-3-12 cover Air Traffic Advisory Uplink/Downlink, TBL 14-3-13 and TBL 14-3-14 cover Voice Communications Uplink/Downlink, and TBL 14-3-15 and TBL 14-3-16 cover Emergency/Urgency Uplink/Downlink.",
+          "choices": [
+            {"text": "Use both message purpose and direction: advisory, voice, and emergency/urgency each have their own uplink/downlink source tables.", "is_correct": true},
+            {"text": "All advisory, voice, and emergency messages use the route uplink table.", "is_correct": false},
+            {"text": "Only emergency/urgency messages have a downlink form.", "is_correct": false},
+            {"text": "Voice communications tables are used only for speed restrictions.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-17, TBL 14-3-18, TBL 14-3-19, and TBL 14-3-20. In oceanic CPDLC, how are standard response messages separated from supplemental messages?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_batch_09",
+          "explanation": "TBL 14-3-17 and TBL 14-3-18 are Standard Response Uplink/Downlink. TBL 14-3-19 and TBL 14-3-20 are Supplemental Uplink/Downlink.",
+          "choices": [
+            {"text": "Standard response and supplemental messages have distinct uplink and downlink table families.", "is_correct": true},
+            {"text": "Supplemental messages are always emergency downlinks.", "is_correct": false},
+            {"text": "Standard response messages are only advisory uplinks.", "is_correct": false},
+            {"text": "Both families are covered only by the route downlink table.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-21, TBL 14-3-22, TBL 14-3-23, and TBL 14-3-24. What is the difference between free-text and system-management CPDLC table families in oceanic operations?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_batch_09",
+          "explanation": "TBL 14-3-21 and TBL 14-3-22 contain Free Text Uplink/Downlink elements, while TBL 14-3-23 and TBL 14-3-24 contain System Management Uplink/Downlink elements.",
+          "choices": [
+            {"text": "Free-text tables contain text-message elements; system-management tables contain service/connection-management elements.", "is_correct": true},
+            {"text": "Free-text tables are used only for altitude clearances.", "is_correct": false},
+            {"text": "System-management tables are used only for aircraft speed.", "is_correct": false},
+            {"text": "The two families are interchangeable because both are downlinks.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-26. What role does the additional downlink message table serve relative to the named route, lateral, altitude, speed, advisory, voice, emergency, response, supplemental, free-text, and system-management tables?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_batch_09",
+          "explanation": "TBL 14-3-26 is the Additional Downlink Messages table. It is a residual source for downlink message elements that are not handled by the more specific named downlink families.",
+          "choices": [
+            {"text": "It captures additional downlink message elements outside the more specific named downlink families.", "is_correct": true},
+            {"text": "It replaces all uplink message-element tables.", "is_correct": false},
+            {"text": "It is used only for runway separation.", "is_correct": false},
+            {"text": "It is the domestic route-uplink table.", "is_correct": false}
+          ]
+        }
+      ]
+    }
+  }
+}
