@@ -12457,27 +12457,35 @@
           "activity_type": "table_lookup",
           "generation_source": "content_expansion_pass_02",
           "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 6-5-1",
+          "lookup_context": [
+            "Non-DME diverging-radials table",
+            "Same VOR radial divergence",
+            "Actual divergence angle falls between two table rows"
+          ],
+          "task": "Apply the table rule for an angle between listed values.",
           "instruction": "Use the diverging-radials table interpolation rule.",
-          "question_text": "Two aircraft are on radials of the same VOR diverging by 25 degrees. The non-DME divergence table does not list 25 degrees directly \u2014 it lists values for 20 degrees and 30 degrees. What interpolation rule applies?",
+          "question_text": "Two aircraft are on radials of the same VOR diverging by 22 degrees. The non-DME divergence table lists values for 20 degrees and 25 degrees. What distance applies under the table rule?",
           "choices": [
             {
-              "text": "Use the next higher value from the table.",
+              "text": "Use the 20-degree row, requiring 12 NM.",
               "is_correct": true
             },
             {
-              "text": "Use the next lower value from the table.",
+              "text": "Use the 25-degree row, requiring 10 NM.",
               "is_correct": false
             },
             {
-              "text": "Average the values for the two adjacent entries.",
+              "text": "Average the adjacent values and use 11 NM.",
               "is_correct": false
             },
             {
-              "text": "Round the divergence angle to the nearest table entry.",
+              "text": "Treat the aircraft as separated once the radials diverge by 15 degrees.",
               "is_correct": false
             }
           ],
-          "explanation": "When the divergence angle falls between two table values, the rule specifies using the next higher distance value. This is conservative: it ensures separation is never understated when the exact angle doesn't match a table entry.",
+          "explanation": "When the divergence angle falls between two table values, use the lesser divergence value to obtain the distance. With 22 degrees between 20 and 25 degrees, use the 20-degree row and the larger 12 NM distance.",
           "publication_id": "content-expansion-pass-02:chapter-06:activities:6-5-2:0"
         }
       ]
@@ -15228,6 +15236,14 @@
           "activity_type": "table_lookup",
           "generation_source": "content_expansion_pass_02",
           "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 13-1-1",
+          "lookup_context": [
+            "ERAM ACL or DL Free Text Area entry",
+            "Clearance abbreviation",
+            "Meaning: cleared to airport, point of intended landing"
+          ],
+          "task": "Use the clearance-abbreviation table.",
           "instruction": "Using TBL 13-1-1 Clearance Abbreviations, select the correct abbreviation for the clearance described.",
           "question_text": "A controller needs to annotate that an aircraft has been cleared to the airport (its point of intended landing). Which clearance abbreviation should be used?",
           "choices": [
@@ -15255,6 +15271,14 @@
           "activity_type": "table_lookup",
           "generation_source": "content_expansion_pass_02_2",
           "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 13-1-2",
+          "lookup_context": [
+            "ERAM ACL or DL Free Text Area entry",
+            "Miscellaneous abbreviation",
+            "Pilot reports a TCAS resolution advisory"
+          ],
+          "task": "Use the miscellaneous-abbreviation table.",
           "instruction": "Using TBL 13-1-2 Miscellaneous Abbreviations, select the correct abbreviation for the situation described.",
           "question_text": "A pilot reports a TCAS Resolution Advisory during a climb. Which abbreviation should the controller use to annotate this event in the Free Text Area?",
           "choices": [
