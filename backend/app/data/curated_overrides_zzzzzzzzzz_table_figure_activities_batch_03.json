@@ -1,0 +1,451 @@
+{
+  "publication_batch": "table-figure-activity-depth-03",
+  "activities": {
+    "3-11-3": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_03_3_11_3_departure_area",
+          "difficulty": 3,
+          "source_kind": "figure",
+          "source_label": "FIG 3-11-1 and FIG 3-11-2",
+          "lookup_context": [
+            "Helicopter or powered-lift departure",
+            "Departure is from a takeoff or landing area",
+            "A preceding helicopter/powered-lift operation is still relevant to that area"
+          ],
+          "task": "Choose the condition that releases the departure.",
+          "instruction": "Use the helicopter/powered-lift departure separation figures.",
+          "question_text": "Which condition permits the next helicopter or powered-lift departure?",
+          "choices": [
+            {"text": "The preceding departing aircraft has left the takeoff area, or the preceding arriving aircraft has taxied off the landing area.", "is_correct": true},
+            {"text": "The preceding aircraft has been issued traffic information.", "is_correct": false},
+            {"text": "The following aircraft reports the preceding aircraft in sight.", "is_correct": false},
+            {"text": "The aircraft are assigned different frequencies.", "is_correct": false}
+          ],
+          "explanation": "The departure figures are area-clearance rules. For the next departure, the preceding departure must have left the takeoff area, or the preceding arrival must have taxied off the landing area.",
+          "publication_id": "table-figure-activity-depth-03:3-11-3:visual_interpretation:0"
+        }
+      ]
+    },
+    "3-11-4": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_03_3_11_4_arrival_area",
+          "difficulty": 3,
+          "source_kind": "figure",
+          "source_label": "FIG 3-11-3 through FIG 3-11-5",
+          "lookup_context": [
+            "Helicopter or powered-lift arrival",
+            "The arriving aircraft is about to use a landing area",
+            "A preceding helicopter or powered-lift aircraft is still relevant"
+          ],
+          "task": "Choose the condition that protects the landing area.",
+          "instruction": "Use the helicopter/powered-lift arrival separation figures.",
+          "question_text": "Which condition must exist before the arriving aircraft lands?",
+          "choices": [
+            {"text": "The preceding arrival has stopped or taxied off the landing area, or the preceding departure has left the landing area.", "is_correct": true},
+            {"text": "The preceding aircraft has crossed the airport boundary.", "is_correct": false},
+            {"text": "The arriving pilot has the preceding aircraft in sight.", "is_correct": false},
+            {"text": "The landing clearance has been read back correctly.", "is_correct": false}
+          ],
+          "explanation": "The arrival figures require the landing area to be clear: a preceding arrival must have stopped or taxied off, or a preceding departure must have left the landing area.",
+          "publication_id": "table-figure-activity-depth-03:3-11-4:visual_interpretation:0"
+        }
+      ]
+    },
+    "3-12-2": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated_table_figure_activity_depth_03_3_12_2_category_iii",
+          "difficulty": 4,
+          "source_kind": "minima_rule",
+          "source_label": "FIG 3-12-1 and FIG 3-12-2",
+          "lookup_context": [
+            "Sea-lane departure separation",
+            "Distances can be determined by suitable landmarks",
+            "Either aircraft is Category III"
+          ],
+          "task": "Choose the required distance before the following takeoff starts.",
+          "instruction": "Apply sea-lane departure separation.",
+          "question_text": "What minimum distance is required when either aircraft is Category III?",
+          "choices": [
+            {"text": "1,500 feet.", "is_correct": false},
+            {"text": "3,000 feet.", "is_correct": false},
+            {"text": "4,500 feet.", "is_correct": false},
+            {"text": "6,000 feet.", "is_correct": true}
+          ],
+          "explanation": "For sea-lane departures, when either aircraft is Category III and distance can be determined by suitable landmarks, the required minimum distance is 6,000 feet.",
+          "publication_id": "table-figure-activity-depth-03:3-12-2:minima_rule_check:0"
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated_table_figure_activity_depth_03_3_12_2_category_i",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "FIG 3-12-1 and FIG 3-12-2",
+          "lookup_context": [
+            "Sea-lane departure separation",
+            "Distances can be determined by suitable landmarks",
+            "Only Category I aircraft are involved"
+          ],
+          "task": "Choose the required distance before the following takeoff starts.",
+          "instruction": "Apply sea-lane departure separation.",
+          "question_text": "What minimum distance is required when only Category I aircraft are involved?",
+          "choices": [
+            {"text": "1,500 feet.", "is_correct": true},
+            {"text": "3,000 feet.", "is_correct": false},
+            {"text": "6,000 feet.", "is_correct": false},
+            {"text": "10,000 feet.", "is_correct": false}
+          ],
+          "explanation": "For sea-lane departures, when only Category I aircraft are involved and landmark distance can be determined, the minimum distance is 1,500 feet.",
+          "publication_id": "table-figure-activity-depth-03:3-12-2:minima_rule_check:1"
+        }
+      ]
+    },
+    "4-8-1": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_03_4_8_1_rnav_rf",
+          "difficulty": 4,
+          "source_kind": "figure",
+          "source_label": "FIG 4-8-5",
+          "lookup_context": [
+            "RNAV approach contains RF and TF legs",
+            "Controller is considering a direct clearance",
+            "A waypoint begins or lies within an RF leg"
+          ],
+          "task": "Choose the correct RNAV approach-clearance limitation.",
+          "instruction": "Use the RF/TF approach-clearance figure.",
+          "question_text": "What limitation applies to a waypoint that begins or lies within an RF leg?",
+          "choices": [
+            {"text": "Do not clear aircraft direct to that waypoint.", "is_correct": true},
+            {"text": "Clear direct only if the pilot reports the runway in sight.", "is_correct": false},
+            {"text": "Clear direct if the aircraft is below the TAA altitude.", "is_correct": false},
+            {"text": "Clear direct whenever the intercept angle is 30 degrees or less.", "is_correct": false}
+          ],
+          "explanation": "For RNAV approaches with RF legs, aircraft may be cleared via published transitions or under the RNAV direct-fix rules, but not direct to any waypoint beginning or within an RF leg.",
+          "publication_id": "table-figure-activity-depth-03:4-8-1:visual_interpretation:0"
+        },
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_03_4_8_1_taa",
+          "difficulty": 4,
+          "source_kind": "figure",
+          "source_label": "FIG 4-8-6 and FIG 4-8-7",
+          "lookup_context": [
+            "Terminal Arrival Area supports the approach",
+            "Aircraft is within the lateral boundary of the TAA",
+            "Aircraft is at or above the TAA minimum altitude"
+          ],
+          "task": "Choose whether an altitude restriction is needed.",
+          "instruction": "Use the TAA approach-clearance figures.",
+          "question_text": "How may the controller issue the approach clearance?",
+          "choices": [
+            {"text": "Issue the approach clearance without an altitude restriction.", "is_correct": true},
+            {"text": "Always assign the MVA until the final approach fix.", "is_correct": false},
+            {"text": "Clear direct to the FAF without considering whether it is also an IAF.", "is_correct": false},
+            {"text": "Require radar vectors to final for every TAA-supported approach.", "is_correct": false}
+          ],
+          "explanation": "An aircraft within the lateral boundary of a TAA and at or above the TAA minimum altitude is established on the approach and may be issued an approach clearance without an altitude restriction.",
+          "publication_id": "table-figure-activity-depth-03:4-8-1:visual_interpretation:1"
+        }
+      ]
+    },
+    "6-5-3": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated_table_figure_activity_depth_03_6_5_3_arc_to_arc",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "FIG 6-5-2",
+          "lookup_context": [
+            "DME arc separation",
+            "Aircraft are on different arcs about the same NAVAID",
+            "Both arcs are 35 miles or less from the NAVAID"
+          ],
+          "task": "Choose the lateral DME arc minimum.",
+          "instruction": "Apply DME arc minima.",
+          "question_text": "What minimum spacing is required between the arcs?",
+          "choices": [
+            {"text": "5 miles.", "is_correct": false},
+            {"text": "10 miles.", "is_correct": true},
+            {"text": "20 miles.", "is_correct": false},
+            {"text": "35 miles.", "is_correct": false}
+          ],
+          "explanation": "Between different DME arcs about a NAVAID, use 10 miles when the arcs are 35 miles or less from the NAVAID.",
+          "publication_id": "table-figure-activity-depth-03:6-5-3:minima_rule_check:0"
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated_table_figure_activity_depth_03_6_5_3_arc_airspace",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "FIG 6-5-3",
+          "lookup_context": [
+            "DME arc separation",
+            "Arc is being protected from other airspace",
+            "Arc is more than 35 miles from the NAVAID"
+          ],
+          "task": "Choose the arc-to-airspace minimum.",
+          "instruction": "Apply DME arc minima.",
+          "question_text": "What minimum spacing is required between the arc and the other protected airspace?",
+          "choices": [
+            {"text": "5 miles.", "is_correct": false},
+            {"text": "10 miles.", "is_correct": true},
+            {"text": "20 miles.", "is_correct": false},
+            {"text": "35 miles.", "is_correct": false}
+          ],
+          "explanation": "Between a DME arc and other protected airspace, use 10 miles when the arc is more than 35 miles from the NAVAID.",
+          "publication_id": "table-figure-activity-depth-03:6-5-3:minima_rule_check:1"
+        }
+      ]
+    },
+    "6-5-4": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated_table_figure_activity_depth_03_6_5_4_overflown_16_90",
+          "difficulty": 4,
+          "source_kind": "minima_rule",
+          "source_label": "FIG 6-5-5",
+          "lookup_context": [
+            "Course change is 16 through 90 degrees",
+            "Overflown-side protection begins at the point where the course changes",
+            "Altitude is FL 180 to FL 230 inclusive"
+          ],
+          "task": "Choose the overflown-side protected-airspace value.",
+          "instruction": "Apply nonairway/nonroute lateral minima.",
+          "question_text": "What minimum protected airspace is required on the overflown side?",
+          "choices": [
+            {"text": "10 miles.", "is_correct": false},
+            {"text": "14 miles.", "is_correct": true},
+            {"text": "17 miles.", "is_correct": false},
+            {"text": "28 miles.", "is_correct": false}
+          ],
+          "explanation": "For a 16- to 90-degree course change, the overflown-side minimum at FL 180 through FL 230 inclusive is 14 miles.",
+          "publication_id": "table-figure-activity-depth-03:6-5-4:minima_rule_check:0"
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated_table_figure_activity_depth_03_6_5_4_overflown_91_180",
+          "difficulty": 4,
+          "source_kind": "minima_rule",
+          "source_label": "FIG 6-5-6",
+          "lookup_context": [
+            "Course change is 91 through 180 degrees",
+            "Overflown-side protection begins at the point where the course changes",
+            "Altitude is above FL 230 to FL 600 inclusive"
+          ],
+          "task": "Choose the overflown-side protected-airspace value.",
+          "instruction": "Apply nonairway/nonroute lateral minima.",
+          "question_text": "What minimum protected airspace is required on the overflown side?",
+          "choices": [
+            {"text": "17 miles.", "is_correct": false},
+            {"text": "28 miles.", "is_correct": false},
+            {"text": "34 miles.", "is_correct": true},
+            {"text": "51 miles.", "is_correct": false}
+          ],
+          "explanation": "For a 91- to 180-degree course change, the overflown-side minimum above FL 230 through FL 600 inclusive is 34 miles.",
+          "publication_id": "table-figure-activity-depth-03:6-5-4:minima_rule_check:1"
+        }
+      ]
+    },
+    "6-5-5": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated_table_figure_activity_depth_03_6_5_5_rnav_width",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "FIG 6-5-7 and FIG 6-5-8",
+          "lookup_context": [
+            "RNAV diverging or crossing courses",
+            "Route width is greater than 8 miles",
+            "The segment does not require extended usable distance limitation beyond 130 miles"
+          ],
+          "task": "Choose the required non-overlap distance.",
+          "instruction": "Apply RNAV lateral minima.",
+          "question_text": "What minimum distance beyond the point of protected-airspace non-overlap is required?",
+          "choices": [
+            {"text": "4 miles.", "is_correct": false},
+            {"text": "9 miles.", "is_correct": true},
+            {"text": "15 miles.", "is_correct": false},
+            {"text": "30 miles.", "is_correct": false}
+          ],
+          "explanation": "For RNAV routes greater than 8 miles wide, use 9 miles beyond the point where lateral protected airspace has ceased to overlap, except for the extended-distance case requiring 15 miles.",
+          "publication_id": "table-figure-activity-depth-03:6-5-5:minima_rule_check:0"
+        }
+      ]
+    },
+    "8-3-2": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_03_8_3_2_reciprocal",
+          "difficulty": 4,
+          "source_kind": "figure",
+          "source_label": "FIG 8-3-3 and FIG 8-3-4",
+          "lookup_context": [
+            "Oceanic/offshore longitudinal separation",
+            "Aircraft are on reciprocal tracks",
+            "Applicable longitudinal minimum is being used as a time interval"
+          ],
+          "task": "Choose how vertical separation is protected.",
+          "instruction": "Use the reciprocal-track longitudinal-separation figures.",
+          "question_text": "How long must vertical separation be protected around the estimated passing time?",
+          "choices": [
+            {"text": "For a time interval equal to the applicable minimum before and after the aircraft are estimated to pass.", "is_correct": true},
+            {"text": "Only until the first aircraft reaches the common point.", "is_correct": false},
+            {"text": "Only until both aircraft report the same Mach number.", "is_correct": false},
+            {"text": "For 5 minutes after the following aircraft starts climb.", "is_correct": false}
+          ],
+          "explanation": "For reciprocal tracks, vertical separation is maintained for a time interval equal to the applicable minimum before and after the aircraft are estimated to pass, unless the later discontinuation conditions are met.",
+          "publication_id": "table-figure-activity-depth-03:8-3-2:visual_interpretation:0"
+        }
+      ]
+    },
+    "8-3-3": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_03_8_3_3_mach_004",
+          "difficulty": 4,
+          "source_kind": "table",
+          "source_label": "TBL 8-3-1",
+          "lookup_context": [
+            "Mach number technique",
+            "Following aircraft is faster by Mach 0.04",
+            "Distance to fly is 1201 to 1800 NM"
+          ],
+          "task": "Choose the required entry-point separation.",
+          "instruction": "Use the Mach number technique table.",
+          "question_text": "What minimum separation is required at the entry point?",
+          "choices": [
+            {"text": "18 minutes.", "is_correct": false},
+            {"text": "22 minutes.", "is_correct": true},
+            {"text": "26 minutes.", "is_correct": false},
+            {"text": "30 minutes.", "is_correct": false}
+          ],
+          "explanation": "TBL 8-3-1 gives 22 minutes for a Mach 0.04 difference when the distance to fly is 1201 to 1800 NM.",
+          "publication_id": "table-figure-activity-depth-03:8-3-3:table_lookup:0"
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_03_8_3_3_mach_010",
+          "difficulty": 4,
+          "source_kind": "table",
+          "source_label": "TBL 8-3-1",
+          "lookup_context": [
+            "Mach number technique",
+            "Following aircraft is faster by Mach 0.10",
+            "Distance to fly is 2401 to 3000 NM"
+          ],
+          "task": "Choose the required entry-point separation.",
+          "instruction": "Use the Mach number technique table.",
+          "question_text": "What minimum separation is required at the entry point?",
+          "choices": [
+            {"text": "40 minutes.", "is_correct": false},
+            {"text": "50 minutes.", "is_correct": false},
+            {"text": "55 minutes.", "is_correct": false},
+            {"text": "60 minutes.", "is_correct": true}
+          ],
+          "explanation": "TBL 8-3-1 gives 60 minutes for a Mach 0.10 difference when the distance to fly is 2401 to 3000 NM.",
+          "publication_id": "table-figure-activity-depth-03:8-3-3:table_lookup:1"
+        }
+      ]
+    },
+    "8-5-4": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated_table_figure_activity_depth_03_8_5_4_same_direction",
+          "difficulty": 4,
+          "source_kind": "minima_rule",
+          "source_label": "FIG 8-5-3",
+          "lookup_context": [
+            "Offshore/oceanic same-direction transition",
+            "Following aircraft is climbing through the preceding aircraft's altitude",
+            "Preceding aircraft is level and at least as fast as the following aircraft"
+          ],
+          "task": "Choose the transition separation minimum.",
+          "instruction": "Apply the same-direction transition rule.",
+          "question_text": "What minimum time separation must be maintained between the aircraft?",
+          "choices": [
+            {"text": "5 minutes.", "is_correct": true},
+            {"text": "10 minutes.", "is_correct": false},
+            {"text": "15 minutes.", "is_correct": false},
+            {"text": "20 minutes.", "is_correct": false}
+          ],
+          "explanation": "For this same-direction offshore/oceanic transition, the rule uses 5 minutes minimum separation when all listed conditions are met, including speed, altitude difference, timing, and direct communication conditions.",
+          "publication_id": "table-figure-activity-depth-03:8-5-4:minima_rule_check:0"
+        }
+      ]
+    },
+    "8-10-3": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_03_8_10_3_ads_c",
+          "difficulty": 4,
+          "source_kind": "table",
+          "source_label": "TBL 8-10-1",
+          "lookup_context": [
+            "Anchorage Oceanic/Continental ADS-C longitudinal separation",
+            "Minimum is 50 NM",
+            "RNP 10, RCP 240, and RSP 180 are available"
+          ],
+          "task": "Choose the maximum ADS-C periodic reporting interval.",
+          "instruction": "Use the North American ADS-C criteria table.",
+          "question_text": "What maximum ADS-C periodic reporting interval applies?",
+          "choices": [
+            {"text": "10 minutes.", "is_correct": false},
+            {"text": "27 minutes.", "is_correct": true},
+            {"text": "32 minutes.", "is_correct": false},
+            {"text": "192 seconds.", "is_correct": false}
+          ],
+          "explanation": "TBL 8-10-1 pairs 50 NM with RNP 10, RCP 240, and RSP 180 with a maximum ADS-C periodic reporting interval of 27 minutes.",
+          "publication_id": "table-figure-activity-depth-03:8-10-3:table_lookup:0"
+        },
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated_table_figure_activity_depth_03_8_10_3_same_track_climb",
+          "difficulty": 4,
+          "source_kind": "minima_rule",
+          "source_label": "TBL 8-10-1",
+          "lookup_context": [
+            "Same-track ADS-C climb/descent through another aircraft's level",
+            "Near-simultaneous ADS-C demand reports are used",
+            "Following aircraft is not more than Mach 0.02 faster than the preceding aircraft"
+          ],
+          "task": "Choose the minimum longitudinal distance condition.",
+          "instruction": "Apply the ADS-C same-track climb/descent conditions.",
+          "question_text": "What minimum longitudinal distance is required in this speed relationship?",
+          "choices": [
+            {"text": "15 NM.", "is_correct": false},
+            {"text": "20 NM.", "is_correct": false},
+            {"text": "25 NM.", "is_correct": true},
+            {"text": "50 NM.", "is_correct": false}
+          ],
+          "explanation": "For same-track climb/descent through another aircraft's level, use 25 NM when the following aircraft is not more than Mach 0.02 faster than the preceding aircraft. The 15 NM condition applies when the preceding aircraft is the same speed or faster.",
+          "publication_id": "table-figure-activity-depth-03:8-10-3:minima_rule_check:0"
+        }
+      ]
+    }
+  }
+}
