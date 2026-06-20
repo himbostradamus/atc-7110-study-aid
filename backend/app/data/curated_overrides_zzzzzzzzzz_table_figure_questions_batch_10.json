@@ -1,0 +1,352 @@
+{
+  "questions": {
+    "14-3-3": {
+      "append_items": true,
+      "items": [
+        {
+          "question_text": "Use TBL 14-3-6. ATC needs to send an oceanic CPDLC instruction for an aircraft to begin a climb now and then maintain the assigned altitude. Which message element family fits that action?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-6 separates altitude uplinks by what the controller is doing. A current climb-to-and-maintain instruction is the UM20 family; maintain-only is UM19, while timed or position-delayed climbs are UM21 or UM22.",
+          "choices": [
+            {"text": "UM19, because any altitude entry means climb immediately.", "is_correct": false},
+            {"text": "UM20, because it instructs the aircraft to climb to the specified altitude and then maintain it.", "is_correct": true},
+            {"text": "DM9, because climb requests are downlinks.", "is_correct": false},
+            {"text": "UM13, because it is only an expectation notice for a future climb.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-6. A clearance is intended to start at a named fix: climb to and maintain FL370 when crossing that fix. Which altitude uplink pattern is the best match?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-6 distinguishes immediate altitude changes from altitude changes triggered by time or position. The position-triggered climb-to-and-maintain form is UM22.",
+          "choices": [
+            {"text": "UM22: AT (position) CLIMB TO AND MAINTAIN (altitude).", "is_correct": true},
+            {"text": "UM24: AT (time) DESCEND TO AND MAINTAIN (altitude).", "is_correct": false},
+            {"text": "UM30: MAINTAIN BLOCK (altitude) TO (altitude).", "is_correct": false},
+            {"text": "UM133: CONFIRM ALTITUDE.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-6. ATC wants the aircraft to be at FL350 before a specified waypoint, rather than simply begin descent at that waypoint. Which distinction matters?",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-6 has separate elements for commencing a descent at a time/position and for reaching an altitude by a time/position. Reaching an altitude before passing a position uses the reach-by-position logic, not merely an at-position descent start.",
+          "choices": [
+            {"text": "Use the report-altitude elements because the aircraft is only reporting altitude.", "is_correct": false},
+            {"text": "Use the block-altitude elements because every waypoint crossing creates a block clearance.", "is_correct": false},
+            {"text": "Use the expectation-notice elements because no clearance is being issued.", "is_correct": false},
+            {"text": "Use a reach-by-position descent element, not an at-position descent-start element.", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-6. Which table-use choice best handles an oceanic CPDLC altitude assignment that gives the pilot discretion for when to start climb or descent?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-6 includes UM177 AT PILOTS DISCRETION, used with an altitude clearance or instruction to indicate the pilot may execute when prepared, subject to the constraint that an altitude once vacated may not be returned to.",
+          "choices": [
+            {"text": "Use only UM135 because a pilot discretion clearance is just a request to confirm assigned altitude.", "is_correct": false},
+            {"text": "Use UM177 with the altitude assignment because it conveys pilot discretion execution.", "is_correct": true},
+            {"text": "Use DM75 because ATC altitude uplinks are always downlinks.", "is_correct": false},
+            {"text": "Use TBL 14-3-5 because pilot discretion is a lateral offset.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-7. A pilot sends an oceanic CPDLC request to fly a vertical range, for example FL340 to FL360. Which downlink family applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-7 lists DM7 as REQUEST BLOCK (altitude) TO (altitude), which is the request to fly a specified vertical range.",
+          "choices": [
+            {"text": "DM7, because the request is for a block altitude range.", "is_correct": true},
+            {"text": "UM30, because maintain-block is always a pilot downlink.", "is_correct": false},
+            {"text": "DM28, because leaving an altitude is the same as requesting a block.", "is_correct": false},
+            {"text": "UM177, because pilot discretion is required for every block altitude request.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-7. The aircraft downlinks: WHEN CAN WE EXPECT HIGHER ALTITUDE. What is the operational meaning of that message element?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-7 defines DM53 as a request for the earliest time or position that a climb can be expected.",
+          "choices": [
+            {"text": "It confirms the aircraft has reached the assigned higher altitude.", "is_correct": false},
+            {"text": "It is an ATC instruction to climb immediately.", "is_correct": false},
+            {"text": "It asks for the earliest time or position that a climb can be expected.", "is_correct": true},
+            {"text": "It reports an emergency descent in progress.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-7. Which interpretation correctly separates pilot altitude requests from altitude reports?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-7 includes request elements such as DM9/DM10 for climb or descent requests and report/notification elements such as DM28, DM29, DM30, DM32, and DM37 for leaving, climbing, descending, present altitude, or maintaining reports.",
+          "choices": [
+            {"text": "Every altitude downlink requests a new clearance.", "is_correct": false},
+            {"text": "Every altitude downlink is an emergency alert.", "is_correct": false},
+            {"text": "Only ATC can send altitude-related CPDLC content.", "is_correct": false},
+            {"text": "Some downlinks request altitude changes, while others report altitude status or confirmation.", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-4. ATC authorizes an aircraft to fly 10 NM right of route because of weather. Which lateral uplink concept should be used?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-4 includes lateral uplinks for offsets and deviations. A clearance to deviate up to a specified distance and direction off route is the UM82 concept.",
+          "choices": [
+            {"text": "DM27, because weather-deviation requests are sent by ATC.", "is_correct": false},
+            {"text": "UM82, because ATC is clearing deviation up to a specified distance and direction off route.", "is_correct": true},
+            {"text": "UM132, because the issue is present-position confirmation.", "is_correct": false},
+            {"text": "DM41, because the aircraft has already reported back on route.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-4. After issuing vectors or tracking instructions, ATC wants the aircraft to resume its own navigation. Which lateral uplink concept applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-4 lists RESUME OWN NAVIGATION as a lateral uplink used after a period of tracking or heading clearances, possibly with instructions on where or how to rejoin route.",
+          "choices": [
+            {"text": "REPORT GROUND TRACK.", "is_correct": false},
+            {"text": "REQUEST OFFSET.", "is_correct": false},
+            {"text": "RESUME OWN NAVIGATION.", "is_correct": true},
+            {"text": "CONFIRM ASSIGNED ALTITUDE.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-4. Which lateral uplink is the controller instruction for the aircraft to return to the cleared route?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-4 separates route-rejoin instructions such as PROCEED BACK ON ROUTE from position confirmation messages such as CONFIRM POSITION.",
+          "choices": [
+            {"text": "CONFIRM POSITION.", "is_correct": false},
+            {"text": "CONFIRM NEXT WAYPOINT ETA.", "is_correct": false},
+            {"text": "WHEN CAN YOU ACCEPT OFFSET.", "is_correct": false},
+            {"text": "PROCEED BACK ON ROUTE.", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-5. A pilot asks to offset left of route beginning at a specified waypoint. Which downlink pattern is the best source match?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-5 distinguishes an immediate offset request from one that starts at a position or time. A request to start at a specified waypoint uses the AT (position) REQUEST OFFSET pattern.",
+          "choices": [
+            {"text": "AT (position) REQUEST OFFSET (specified distance) (direction) OF ROUTE.", "is_correct": true},
+            {"text": "REQUEST WEATHER DEVIATION UP TO (specified distance) (direction) OF ROUTE.", "is_correct": false},
+            {"text": "BACK ON ROUTE.", "is_correct": false},
+            {"text": "PROCEED BACK ON ROUTE.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-5. Which downlink reports that the aircraft has rejoined the cleared route after an offset or deviation?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-5 lists BACK ON ROUTE as the report indicating that the cleared route has been rejoined.",
+          "choices": [
+            {"text": "REQUEST OFFSET.", "is_correct": false},
+            {"text": "OFFSETTING (distance offset) (direction) OF ROUTE.", "is_correct": false},
+            {"text": "BACK ON ROUTE.", "is_correct": true},
+            {"text": "CONFIRM NEXT WAYPOINT.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-5. A pilot sends REQUEST WEATHER DEVIATION UP TO 20 NM RIGHT OF ROUTE. What is the correct table-use interpretation?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-5 uses DM27 for a pilot request for weather deviation up to a specified distance and direction off route. It is a downlink request, not an ATC uplink clearance.",
+          "choices": [
+            {"text": "It is a pilot downlink request for a weather deviation off route.", "is_correct": true},
+            {"text": "It is an ATC uplink instruction to turn immediately to a heading.", "is_correct": false},
+            {"text": "It is a report that the aircraft is already back on route.", "is_correct": false},
+            {"text": "It is a system-management connection message.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-2. ATC wants to clear an aircraft from its present clearance to a specified fix by a specified route. Which route uplink concept fits?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-2 includes CLEARED TO (position) VIA (route clearance) for instructing the aircraft to proceed to the specified position via the specified route.",
+          "choices": [
+            {"text": "CONFIRM ASSIGNED ROUTE.", "is_correct": false},
+            {"text": "CLEARED TO (position) VIA (route clearance).", "is_correct": true},
+            {"text": "REQUEST OFFSET.", "is_correct": false},
+            {"text": "WHEN CAN WE EXPECT HIGHER ALTITUDE.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-2. Which route uplink distinction matters when ATC says to proceed direct only after reaching a specified altitude?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-2 has separate direct-to forms for direct now, at time, at position, and at altitude. A direct-to instruction triggered by altitude uses the AT (altitude) PROCEED DIRECT TO pattern.",
+          "choices": [
+            {"text": "Use the direct-to-at-altitude pattern, not the immediate direct-to pattern.", "is_correct": true},
+            {"text": "Use only a lateral offset table because all direct-to messages are offsets.", "is_correct": false},
+            {"text": "Use a free-text table because route uplinks do not include direct-to instructions.", "is_correct": false},
+            {"text": "Use a downlink request because ATC cannot issue route uplinks.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-3-2. ATC needs the aircraft to verify what route it has assigned. Which message element purpose is being used?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-3-2 includes CONFIRM ASSIGNED ROUTE as a route uplink request to confirm the assigned route.",
+          "choices": [
+            {"text": "A request to confirm the assigned route.", "is_correct": true},
+            {"text": "A request to descend to the assigned route.", "is_correct": false},
+            {"text": "A report that the aircraft is offsetting from route.", "is_correct": false},
+            {"text": "A system-management logon rejection.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    "14-2-4": {
+      "append_items": true,
+      "items": [
+        {
+          "question_text": "Use TBL 14-2-2. In domestic en route CPDLC, ATC wants the aircraft to enter a published holding pattern at a fix and maintain an assigned altitude. Which route uplink family is relevant?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-2-2 includes holding route uplinks. UM92 is the published-hold form; UM91 is the more fully specified holding-pattern instruction.",
+          "choices": [
+            {"text": "UM92, because it is the route uplink for HOLD AT (position) AS PUBLISHED MAINTAIN (altitude).", "is_correct": true},
+            {"text": "UM135, because all holds are altitude confirmations.", "is_correct": false},
+            {"text": "DM15, because all route changes are pilot offset requests.", "is_correct": false},
+            {"text": "UM169, because holds must be free text.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-2-2. What is the source-use difference between UM74/UM75 direct-to route uplinks and UM137 CONFIRM ASSIGNED ROUTE?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-2-2 separates route instructions from confirmation requests. UM74/UM75 instruct the aircraft to proceed directly to a position; UM137 asks the aircraft to confirm the assigned route.",
+          "choices": [
+            {"text": "There is no difference; all three are free-text messages.", "is_correct": false},
+            {"text": "UM137 is an emergency descent instruction; UM74/UM75 are altitude requests.", "is_correct": false},
+            {"text": "UM74/UM75 are direct-to instructions; UM137 requests confirmation of the assigned route.", "is_correct": true},
+            {"text": "UM74/UM75 are pilot downlinks; UM137 is the only route uplink.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-2-6. A domestic CPDLC altitude uplink tells the aircraft to descend to an assigned altitude and maintain it. Which source concept should the learner select?",
+          "question_type": "multiple_choice",
+          "difficulty": 3,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "The controlling distinction is climb versus descent. TBL 14-2-6 lists UM23 as the descent-to-and-maintain altitude instruction; the strongest distractor, UM20, is the parallel climb-to-and-maintain concept.",
+          "choices": [
+            {"text": "UM20, because it is a climb-to-and-maintain instruction.", "is_correct": false},
+            {"text": "UM23, because it is a descent-to-and-maintain instruction.", "is_correct": true},
+            {"text": "UM135, because it asks for altitude confirmation.", "is_correct": false},
+            {"text": "UM177, because every descent is pilot discretion.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-2-6. ATC assigns a block altitude range and wants the aircraft to maintain within that range. Which altitude uplink pattern applies?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-2-6 separates maintain-block, climb-to-block, and descend-to-block instructions. A maintain-within-range instruction is MAINTAIN BLOCK (altitude) TO (altitude).",
+          "choices": [
+            {"text": "CONFIRM ASSIGNED ALTITUDE.", "is_correct": false},
+            {"text": "AT PILOTS DISCRETION.", "is_correct": false},
+            {"text": "MAINTAIN BLOCK (altitude) TO (altitude).", "is_correct": true},
+            {"text": "CROSS (position) AT (altitude).", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-2-6. What does AT PILOTS DISCRETION add when used with a domestic CPDLC altitude assignment?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-2-6 explains that AT PILOTS DISCRETION lets the pilot start climb or descent when they wish and at any rate, with temporary level-offs permitted, but an altitude once vacated may not be returned to.",
+          "choices": [
+            {"text": "It means the pilot may ignore the assigned altitude.", "is_correct": false},
+            {"text": "It is only a request to confirm assigned route.", "is_correct": false},
+            {"text": "It converts the message into a free-text advisory.", "is_correct": false},
+            {"text": "It gives the pilot timing/rate discretion for the climb or descent while preserving the altitude-assignment constraints.", "is_correct": true}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-2-8. ATC needs a crossing restriction requiring an aircraft to cross a fix at a specified altitude and maintain that altitude. Which crossing-constraint pattern fits?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-2-8 includes CROSS (position) AT AND MAINTAIN (altitude) for crossing at a specified altitude with a maintain requirement.",
+          "choices": [
+            {"text": "CROSS (position) AT OR BEFORE (time).", "is_correct": false},
+            {"text": "CROSS (position) AT AND MAINTAIN (altitude).", "is_correct": true},
+            {"text": "CROSS (position) AT OR LESS THAN (speed).", "is_correct": false},
+            {"text": "MAINTAIN BLOCK (altitude) TO (altitude).", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-2-8. Which source-use distinction keeps a crossing-time restriction from being confused with a crossing-speed restriction?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-2-8 has separate rows for crossing at, before, or after a time and for crossing at, at-or-less-than, or at-or-greater-than a speed. The constrained variable determines the row family.",
+          "choices": [
+            {"text": "The constrained variable matters: time restrictions use the time rows; speed restrictions use the speed rows.", "is_correct": true},
+            {"text": "All crossing restrictions are altitude-only.", "is_correct": false},
+            {"text": "All crossing restrictions must be entered as free text.", "is_correct": false},
+            {"text": "Speed restrictions are route downlinks, not crossing constraints.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-2-8. ATC wants the aircraft to cross a fix at FL300 and at 280 knots. What makes this a combined crossing-constraint element rather than a simple altitude crossing?",
+          "question_type": "multiple_choice",
+          "difficulty": 5,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-2-8 includes a combined crossing constraint for CROSS (position) AT AND MAINTAIN (altitude) AT (speed). It carries both an altitude and a speed condition.",
+          "choices": [
+            {"text": "It includes both an altitude condition and a speed condition at the crossing point.", "is_correct": true},
+            {"text": "It is a downlink because pilots always issue crossing constraints.", "is_correct": false},
+            {"text": "It only asks the pilot to confirm present speed.", "is_correct": false},
+            {"text": "It is an emergency/urgency message because two variables are present.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-2-20. Which use of domestic CPDLC free text is consistent with the table's role?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-2-20 is for free text that does not conform to a standard message element. It should not replace available standard message elements when a structured route, altitude, crossing, speed, or other standard element exists.",
+          "choices": [
+            {"text": "Use free text for every altitude clearance because standard altitude elements are optional.", "is_correct": false},
+            {"text": "Use free text when the message content does not conform to an available standard message element.", "is_correct": true},
+            {"text": "Use free text only for aircraft emergency downlinks.", "is_correct": false},
+            {"text": "Use free text to avoid selecting route, altitude, or speed tables.", "is_correct": false}
+          ]
+        },
+        {
+          "question_text": "Use TBL 14-2-20. When a domestic CPDLC message has a matching structured element elsewhere, what table-use principle should guide the lookup?",
+          "question_type": "multiple_choice",
+          "difficulty": 4,
+          "generation_source": "curated_table_figure_depth_01",
+          "explanation": "TBL 14-2-20 defines free text as text that does not conform to a standard message element. If a structured element exists in the applicable table family, the structured source is the better match.",
+          "choices": [
+            {"text": "Because free text is only available for aircraft-to-aircraft messages.", "is_correct": false},
+            {"text": "Because free text means the message has no response attribute.", "is_correct": false},
+            {"text": "Because the free-text table is only a runway-separation table.", "is_correct": false},
+            {"text": "Because free text is for content outside the standard message-element set, not for bypassing an available standard element.", "is_correct": true}
+          ]
+        }
+      ]
+    }
+  }
+}
