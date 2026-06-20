@@ -1,0 +1,355 @@
+{
+  "publication_batch": "table-figure-activity-depth-01",
+  "activities": {
+    "14-2-4": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_01_14_2_4_altitude",
+          "difficulty": 3,
+          "source_kind": "table",
+          "source_label": "TBL 14-2-6",
+          "lookup_context": [
+            "Domestic en route CPDLC uplink",
+            "Controller needs an altitude assignment",
+            "Instruction is to descend to an assigned altitude and maintain it"
+          ],
+          "task": "Select the structured altitude uplink family.",
+          "instruction": "Use the domestic CPDLC altitude uplink table.",
+          "question_text": "Which table entry family fits the described CPDLC altitude instruction?",
+          "choices": [
+            {"text": "UM20 climb-to-and-maintain altitude.", "is_correct": false},
+            {"text": "UM23 descend-to-and-maintain altitude.", "is_correct": true},
+            {"text": "UM135 confirm assigned altitude.", "is_correct": false},
+            {"text": "UM177 pilot discretion only.", "is_correct": false}
+          ],
+          "explanation": "TBL 14-2-6 separates climb, descent, confirmation, and pilot-discretion functions. A descent to an assigned altitude and maintain instruction is the UM23 family.",
+          "publication_id": "table-figure-activity-depth-01:14-2-4:table_lookup:0"
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_01_14_2_4_crossing",
+          "difficulty": 4,
+          "source_kind": "table",
+          "source_label": "TBL 14-2-8",
+          "lookup_context": [
+            "Domestic en route CPDLC uplink",
+            "Crossing fix restriction",
+            "Restriction contains both altitude and speed"
+          ],
+          "task": "Choose the crossing-constraint family.",
+          "instruction": "Use the domestic CPDLC crossing-constraint table.",
+          "question_text": "Which crossing-constraint entry is the best source match?",
+          "choices": [
+            {"text": "CROSS (position) AT (time).", "is_correct": false},
+            {"text": "CROSS (position) AT (speed).", "is_correct": false},
+            {"text": "CROSS (position) AT AND MAINTAIN (altitude) AT (speed).", "is_correct": true},
+            {"text": "MAINTAIN BLOCK (altitude) TO (altitude).", "is_correct": false}
+          ],
+          "explanation": "TBL 14-2-8 has separate crossing rows for time, speed, altitude, and combined altitude-plus-speed restrictions. The combined altitude and speed case uses the combined crossing-constraint entry.",
+          "publication_id": "table-figure-activity-depth-01:14-2-4:table_lookup:1"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated_table_figure_activity_depth_01_14_2_4_source_use",
+          "difficulty": 4,
+          "instruction": "Choose the best action.",
+          "situation": "A controller needs to send a domestic CPDLC route clearance, and a structured route uplink entry in the CPDLC route table matches the clearance. A trainee suggests sending it as free text because the wording would be quicker to type.",
+          "question_text": "Which source-use choice is correct?",
+          "para_context": "Domestic CPDLC message elements",
+          "choices": [
+            {"text": "Use the matching structured route uplink entry instead of free text.", "is_correct": true},
+            {"text": "Use free text whenever it is faster than selecting a structured element.", "is_correct": false},
+            {"text": "Use an emergency/urgency message because route changes affect safety.", "is_correct": false},
+            {"text": "Use a downlink table because the pilot will acknowledge the clearance.", "is_correct": false}
+          ],
+          "explanation": "Free text is for content that does not conform to a standard message element. When a structured CPDLC element fits, the source-use decision should favor that structured element.",
+          "publication_id": "table-figure-activity-depth-01:14-2-4:situation_action:0"
+        }
+      ]
+    },
+    "14-3-3": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_01_14_3_3_altitude",
+          "difficulty": 4,
+          "source_kind": "table",
+          "source_label": "TBL 14-3-6",
+          "lookup_context": [
+            "Oceanic CPDLC uplink",
+            "Altitude change begins at a specified waypoint",
+            "Instruction is climb to and maintain"
+          ],
+          "task": "Select the correct altitude uplink pattern.",
+          "instruction": "Use the oceanic CPDLC altitude uplink table.",
+          "question_text": "Which altitude uplink family fits this clearance?",
+          "choices": [
+            {"text": "AT (position) CLIMB TO AND MAINTAIN (altitude).", "is_correct": true},
+            {"text": "AT (time) DESCEND TO AND MAINTAIN (altitude).", "is_correct": false},
+            {"text": "REPORT GROUND TRACK.", "is_correct": false},
+            {"text": "REQUEST BLOCK (altitude) TO (altitude).", "is_correct": false}
+          ],
+          "explanation": "TBL 14-3-6 distinguishes immediate altitude changes from time- or position-triggered changes. A climb beginning at a waypoint uses the position-triggered climb-to-and-maintain pattern.",
+          "publication_id": "table-figure-activity-depth-01:14-3-3:table_lookup:0"
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_01_14_3_3_lateral",
+          "difficulty": 4,
+          "source_kind": "table",
+          "source_label": "TBL 14-3-5",
+          "lookup_context": [
+            "Oceanic CPDLC downlink",
+            "Pilot requests a weather deviation",
+            "Deviation is up to a specified distance and direction off route"
+          ],
+          "task": "Select the downlink message purpose.",
+          "instruction": "Use the oceanic lateral downlink table.",
+          "question_text": "What is the correct source-use interpretation of this downlink?",
+          "choices": [
+            {"text": "A pilot request for weather deviation off route.", "is_correct": true},
+            {"text": "An ATC clearance to deviate off route.", "is_correct": false},
+            {"text": "A report that the aircraft is back on route.", "is_correct": false},
+            {"text": "A system-management connection message.", "is_correct": false}
+          ],
+          "explanation": "TBL 14-3-5 is the lateral downlink table. A REQUEST WEATHER DEVIATION message is a pilot request, not the ATC uplink clearance.",
+          "publication_id": "table-figure-activity-depth-01:14-3-3:table_lookup:1"
+        },
+        {
+          "activity_type": "situation_action",
+          "generation_source": "curated_table_figure_activity_depth_01_14_3_3_back_on_route",
+          "difficulty": 4,
+          "instruction": "Choose the best action.",
+          "situation": "An oceanic aircraft is offsetting around weather and later sends BACK ON ROUTE. Another trainee treats the message as a new request for an offset clearance.",
+          "question_text": "How should the message be classified?",
+          "para_context": "Oceanic CPDLC lateral downlink use",
+          "choices": [
+            {"text": "As a lateral downlink report that the cleared route has been rejoined.", "is_correct": true},
+            {"text": "As a lateral uplink clearance to start an offset.", "is_correct": false},
+            {"text": "As a route uplink direct-to clearance.", "is_correct": false},
+            {"text": "As a free-text emergency message.", "is_correct": false}
+          ],
+          "explanation": "In TBL 14-3-5, BACK ON ROUTE reports that the aircraft has rejoined the cleared route. It is not an offset request or a controller-issued clearance.",
+          "publication_id": "table-figure-activity-depth-01:14-3-3:situation_action:0"
+        }
+      ]
+    },
+    "6-2-1": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated_table_figure_activity_depth_01_6_2_1_dme",
+          "difficulty": 4,
+          "source_kind": "minima_rule",
+          "source_label": "FIG 6-2-1 through FIG 6-2-3",
+          "lookup_context": [
+            "Successive departures from the same or adjacent airports",
+            "Courses diverge by at least 45 degrees",
+            "Divergence occurs within 13 miles DME/ATD after takeoff"
+          ],
+          "task": "Select the applicable diverging-course minimum.",
+          "instruction": "Apply the diverging-course departure minimum.",
+          "question_text": "For this DME/ATD-based diverging-course case, what minimum applies until courses diverge?",
+          "choices": [
+            {"text": "1 minute.", "is_correct": false},
+            {"text": "2 minutes.", "is_correct": false},
+            {"text": "3 miles.", "is_correct": true},
+            {"text": "5 miles.", "is_correct": false}
+          ],
+          "explanation": "When courses diverge within 13 miles DME/ATD after takeoff, the listed minimum is 3 miles until courses diverge.",
+          "publication_id": "table-figure-activity-depth-01:6-2-1:minima_rule_check:0"
+        },
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_01_6_2_1_intersecting",
+          "difficulty": 5,
+          "source_kind": "figure",
+          "source_label": "FIG 6-2-5 through FIG 6-2-7",
+          "lookup_context": [
+            "Terminal diverging runway departures",
+            "Compare nonintersecting and intersecting runway cases",
+            "Runway divergence is 15 to 29 degrees inclusive"
+          ],
+          "task": "Identify the additional condition for the intersecting-runway case.",
+          "instruction": "Use the diverging runway figures.",
+          "question_text": "What extra condition applies to the 15-to-29-degree intersecting-runway case?",
+          "choices": [
+            {"text": "The preceding aircraft has commenced a turn after passing the runway intersection.", "is_correct": true},
+            {"text": "The runways must be at least 3,500 feet apart at all points.", "is_correct": false},
+            {"text": "The aircraft must remain on the same heading for 5 minutes.", "is_correct": false},
+            {"text": "Both aircraft must use DME/ATD distance separation.", "is_correct": false}
+          ],
+          "explanation": "For intersecting runways diverging by 15 to 29 degrees inclusive, the preceding aircraft must have passed the intersection and commenced a turn.",
+          "publication_id": "table-figure-activity-depth-01:6-2-1:visual_interpretation:0"
+        }
+      ]
+    },
+    "6-4-2": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated_table_figure_activity_depth_01_6_4_2_speed",
+          "difficulty": 4,
+          "source_kind": "minima_rule",
+          "source_label": "FIG 6-4-4 through FIG 6-4-6",
+          "lookup_context": [
+            "Same, converging, or crossing courses",
+            "Leading aircraft is at least 22 knots faster",
+            "Conditions for the 22-knot family are met"
+          ],
+          "task": "Select the longitudinal separation minimum.",
+          "instruction": "Apply the 22-knot longitudinal separation family.",
+          "question_text": "What minimum applies in the 22-knots-or-more family?",
+          "choices": [
+            {"text": "5 miles DME/ATD or 3 minutes between other aircraft.", "is_correct": false},
+            {"text": "10 miles DME/ATD or 5 minutes between other aircraft.", "is_correct": true},
+            {"text": "20 miles DME/ATD or 10 minutes between other aircraft.", "is_correct": false},
+            {"text": "30 miles in all cases.", "is_correct": false}
+          ],
+          "explanation": "When the leading aircraft is at least 22 knots faster and a listed condition is met, the applicable minimum is 10 miles for DME/ATD cases or 5 minutes between other aircraft.",
+          "publication_id": "table-figure-activity-depth-01:6-4-2:minima_rule_check:0"
+        },
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_01_6_4_2_altitude_crossing",
+          "difficulty": 5,
+          "source_kind": "figure",
+          "source_label": "FIG 6-4-7 through FIG 6-4-10",
+          "lookup_context": [
+            "One aircraft is climbing or descending through another aircraft's altitude",
+            "Compare DME/ATD distance option with timed option",
+            "Sequence and altitude-change timing matter"
+          ],
+          "task": "Identify the required sequence geometry.",
+          "instruction": "Use the altitude-crossing longitudinal separation figures.",
+          "question_text": "Which sequence geometry supports the altitude-crossing minimum?",
+          "choices": [
+            {"text": "The descending aircraft is leading, or the climbing aircraft is following.", "is_correct": true},
+            {"text": "The descending aircraft must always be following.", "is_correct": false},
+            {"text": "The climbing aircraft must always be leading.", "is_correct": false},
+            {"text": "Aircraft sequence does not matter if both aircraft report the same fix.", "is_correct": false}
+          ],
+          "explanation": "The altitude-crossing figures depend on sequence: the descending aircraft is leading or the climbing aircraft is following. Timed separation adds the listed 4,000-foot and timing conditions.",
+          "publication_id": "table-figure-activity-depth-01:6-4-2:visual_interpretation:0"
+        }
+      ]
+    },
+    "3-9-8": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_01_3_9_8_intersecting",
+          "difficulty": 4,
+          "source_kind": "figure",
+          "source_label": "FIG 3-9-9 through FIG 3-9-13",
+          "lookup_context": [
+            "Departure using an intersecting runway",
+            "Another aircraft is using or has used the intersecting runway",
+            "Projected runway or flight path conflict must be protected"
+          ],
+          "task": "Choose the operational test before takeoff roll.",
+          "instruction": "Use the intersecting runway departure figures.",
+          "question_text": "What must be true before the departure begins takeoff roll?",
+          "choices": [
+            {"text": "The preceding aircraft has passed or avoided the intersection conflict, or the preceding arrival has met a listed clear, hold-short, exit, or passed-intersection condition.", "is_correct": true},
+            {"text": "The preceding aircraft has merely accepted a clearance.", "is_correct": false},
+            {"text": "The following aircraft is ready for immediate departure.", "is_correct": false},
+            {"text": "The controller expects the preceding aircraft to clear before liftoff.", "is_correct": false}
+          ],
+          "explanation": "The intersecting runway figures protect the intersection or intersecting flight path. Takeoff roll waits until one of the listed conflict-resolving conditions exists.",
+          "publication_id": "table-figure-activity-depth-01:3-9-8:visual_interpretation:0"
+        }
+      ]
+    },
+    "3-10-4": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_01_3_10_4_intersecting",
+          "difficulty": 4,
+          "source_kind": "figure",
+          "source_label": "FIG 3-10-6 through FIG 3-10-13",
+          "lookup_context": [
+            "Arrival using an intersecting runway or intersecting flight path",
+            "Another aircraft is departing or arriving on the protected path",
+            "Traffic information and runway/flight path protection are required"
+          ],
+          "task": "Select the protection needed before the arrival crosses threshold or flight path.",
+          "instruction": "Use the intersecting runway arrival figures.",
+          "question_text": "Which condition protects the arriving aircraft's threshold or flight path?",
+          "choices": [
+            {"text": "The preceding departure has passed the intersection/flight path or is airborne and turning to avert conflict, or the preceding arrival is clear, holding short, or past the intersection/flight path.", "is_correct": true},
+            {"text": "The preceding aircraft has been issued traffic information only.", "is_correct": false},
+            {"text": "The following arrival is on final and expects to land before the other aircraft reaches the intersection.", "is_correct": false},
+            {"text": "The aircraft are on different frequencies.", "is_correct": false}
+          ],
+          "explanation": "The arrival figures focus on protecting the threshold or intersecting flight path before the arriving aircraft crosses it. Traffic information alone does not establish the required separation condition.",
+          "publication_id": "table-figure-activity-depth-01:3-10-4:visual_interpretation:0"
+        }
+      ]
+    },
+    "3-11-5": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated_table_figure_activity_depth_01_3_11_5_simultaneous",
+          "difficulty": 3,
+          "source_kind": "minima_rule",
+          "source_label": "FIG 3-11-6",
+          "lookup_context": [
+            "Simultaneous helicopter or powered-lift landings or takeoffs",
+            "Two landing or takeoff points",
+            "Courses to be flown must not conflict"
+          ],
+          "task": "Choose the spacing minimum.",
+          "instruction": "Apply the simultaneous helicopter/powered-lift rule.",
+          "question_text": "What minimum spacing is required between landing or takeoff points?",
+          "choices": [
+            {"text": "At least 200 feet.", "is_correct": true},
+            {"text": "At least 700 feet.", "is_correct": false},
+            {"text": "At least 1,500 feet.", "is_correct": false},
+            {"text": "At least 3,000 feet.", "is_correct": false}
+          ],
+          "explanation": "Simultaneous helicopter or powered-lift landings or takeoffs require at least 200 feet between points and nonconflicting courses.",
+          "publication_id": "table-figure-activity-depth-01:3-11-5:minima_rule_check:0"
+        }
+      ]
+    },
+    "3-12-3": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "minima_rule_check",
+          "generation_source": "curated_table_figure_activity_depth_01_3_12_3_sealane",
+          "difficulty": 4,
+          "source_kind": "minima_rule",
+          "source_label": "FIG 3-12-3 through FIG 3-12-6",
+          "lookup_context": [
+            "Sea-lane arrival separation",
+            "Arrival follows a preceding aircraft still relevant to the sea lane",
+            "Suitable landmarks allow distance determination"
+          ],
+          "task": "Choose the controlling basis for the minimum.",
+          "instruction": "Apply sea-lane arrival separation.",
+          "question_text": "What controls the minimum distance needed before the arriving aircraft crosses the landing threshold?",
+          "choices": [
+            {"text": "The aircraft categories and whether the preceding aircraft landed or departed.", "is_correct": true},
+            {"text": "Only the surface wind direction.", "is_correct": false},
+            {"text": "Only whether the operation is IFR.", "is_correct": false},
+            {"text": "Only whether the aircraft is turbine powered.", "is_correct": false}
+          ],
+          "explanation": "Sea-lane arrival distances vary by aircraft category and by whether the arrival follows a landed aircraft still in the sea lane or an airborne departure before the sea-lane end.",
+          "publication_id": "table-figure-activity-depth-01:3-12-3:minima_rule_check:0"
+        }
+      ]
+    }
+  }
+}
