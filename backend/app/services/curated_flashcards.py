@@ -103,14 +103,14 @@ def _load_table_1_2_1_mochi_override() -> dict[str, dict]:
         else:
             forward_front = f"What can {abbr} stand for in FAA Order JO 7110.65?"
             forward_back = "; ".join(meanings)
-        _append_unique(items, seen_cards, forward_front, forward_back)
+        _append_unique(items, seen_cards, forward_front, forward_back, "table_lookup")
 
         for meaning in meanings:
             reverse_front = LONG_REVERSE_FRONTS.get(
                 meaning,
                 f"Which abbreviation stands for {meaning}?",
             )
-            _append_unique(items, seen_cards, reverse_front, abbr)
+            _append_unique(items, seen_cards, reverse_front, abbr, "table_lookup")
 
     _append_unique(
         items,

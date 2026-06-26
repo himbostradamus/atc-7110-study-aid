@@ -1,0 +1,588 @@
+{
+  "publication_batch": "table-figure-activity-depth-07",
+  "activities": {
+    "3-9-10": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_07_3_9_10_cross_before_takeoff",
+          "difficulty": 3,
+          "source_kind": "figure",
+          "source_label": "FIG 3-9-21 and FIG 3-9-22",
+          "lookup_context": [
+            "Departure aircraft is taxiing to the assigned runway",
+            "The taxi route includes another runway before the departure runway",
+            "The runway geometry is the issue shown in the runway/taxiway proximity figures"
+          ],
+          "task": "Decide how the crossing affects takeoff clearance.",
+          "instruction": "Use the runway/taxiway proximity figures with the takeoff clearance rule.",
+          "question_text": "Before issuing takeoff clearance, what must normally be true about runways along the taxi route to the departure runway?",
+          "choices": [
+            {"text": "They must already have been crossed, unless the specific exception requiring crossing phraseology applies.", "is_correct": true},
+            {"text": "They may remain uncrossed as long as the aircraft is holding short of the departure runway.", "is_correct": false},
+            {"text": "They may be crossed after takeoff clearance without being mentioned.", "is_correct": false},
+            {"text": "They only matter if another aircraft is on final for the crossed runway.", "is_correct": false}
+          ],
+          "explanation": "The figures support the rule that runways along the taxi route to the departure runway are crossed before takeoff clearance, unless configuration/marking limitations require the crossed runway to be stated with the clearance.",
+          "publication_id": "table-figure-activity-depth-07:3-9-10:visual_interpretation:0"
+        }
+      ]
+    },
+    "3-11-1": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_07_3_11_1_hover_vs_air_taxi",
+          "difficulty": 3,
+          "source_kind": "table",
+          "source_label": "3-11-1 helicopter/powered-lift taxi options",
+          "lookup_context": [
+            "Helicopter or powered-lift aircraft must move above the surface",
+            "Controller is choosing between hover-taxi and air-taxi phraseology",
+            "The controlling distinction is speed/height above the surface"
+          ],
+          "task": "Classify the operation.",
+          "instruction": "Use the taxi options table implied by the paragraph.",
+          "question_text": "Which option matches a slow movement above the surface, normally below 20 knots and in ground effect?",
+          "choices": [
+            {"text": "Hover-taxi.", "is_correct": true},
+            {"text": "Air-taxi.", "is_correct": false},
+            {"text": "Ground taxi.", "is_correct": false},
+            {"text": "Simultaneous takeoff.", "is_correct": false}
+          ],
+          "explanation": "Hover-taxi is the slow movement above the surface, normally below 20 knots and in ground effect. Air-taxi is normally below 100 feet AGL and above 20 knots.",
+          "publication_id": "table-figure-activity-depth-07:3-11-1:table_lookup:0"
+        },
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_07_3_11_1_air_taxi_authorization",
+          "difficulty": 3,
+          "source_kind": "table",
+          "source_label": "3-11-1 helicopter/powered-lift taxi options",
+          "lookup_context": [
+            "Tower issues AIR-TAXI instructions",
+            "No different altitude is requested or instructed",
+            "Controller needs the operating expectation from the taxi options table"
+          ],
+          "task": "Apply the air-taxi expectation.",
+          "instruction": "Use the taxi options table implied by the paragraph.",
+          "question_text": "Unless otherwise requested or instructed, what does an air-taxi authorization normally imply?",
+          "choices": [
+            {"text": "The pilot is expected to remain below 100 feet AGL and is responsible for selecting a safe airspeed.", "is_correct": true},
+            {"text": "The aircraft must stay in ground effect below 20 knots.", "is_correct": false},
+            {"text": "The aircraft must remain on the paved taxiway surface.", "is_correct": false},
+            {"text": "The aircraft is cleared to climb to pattern altitude.", "is_correct": false}
+          ],
+          "explanation": "Air-taxi authorizes movement above the surface, normally below 100 feet AGL and above 20 knots unless otherwise requested or instructed. The pilot remains responsible for safe airspeed.",
+          "publication_id": "table-figure-activity-depth-07:3-11-1:table_lookup:1"
+        }
+      ]
+    },
+    "3-7-6": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_07_3_7_6_pofz_weather_trigger",
+          "difficulty": 3,
+          "source_kind": "figure",
+          "source_label": "FIG 3-7-4",
+          "lookup_context": [
+            "Aircraft is on vertically guided final",
+            "Aircraft is within 2 miles of the runway threshold",
+            "Official ceiling is below 300 feet or visibility is less than 3/4 SM"
+          ],
+          "task": "Decide whether POFZ protection applies.",
+          "instruction": "Use the POFZ figure and weather triggers.",
+          "question_text": "What does this figure-based condition require?",
+          "choices": [
+            {"text": "Keep the POFZ clear when the vertically guided final aircraft is within 2 miles and the weather trigger is met.", "is_correct": true},
+            {"text": "Apply the POFZ only after the aircraft crosses the threshold.", "is_correct": false},
+            {"text": "Ignore the POFZ if the aircraft is already cleared to land.", "is_correct": false},
+            {"text": "Apply the POFZ only to departing aircraft.", "is_correct": false}
+          ],
+          "explanation": "The POFZ restriction is triggered by an aircraft on vertically guided final within 2 miles when ceiling is below 300 feet or visibility is less than 3/4 SM.",
+          "publication_id": "table-figure-activity-depth-07:3-7-6:visual_interpretation:0"
+        }
+      ]
+    },
+    "3-8-3": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_07_3_8_3_same_direction_geometry",
+          "difficulty": 3,
+          "source_kind": "figure",
+          "source_label": "FIG 3-8-1",
+          "lookup_context": [
+            "Two aircraft will operate from runways in the same direction",
+            "Controller is evaluating whether the simultaneous same direction layout applies",
+            "The runway geometry is the key fact"
+          ],
+          "task": "Identify the correct use of the figure.",
+          "instruction": "Use the simultaneous same direction operation figure.",
+          "question_text": "What is the figure primarily helping the controller determine?",
+          "choices": [
+            {"text": "Whether the runway geometry supports simultaneous same direction operations under the applicable rule.", "is_correct": true},
+            {"text": "Whether light gun signals are required.", "is_correct": false},
+            {"text": "Whether an aircraft is eligible for air-taxi.", "is_correct": false},
+            {"text": "Whether wake turbulence categories can be ignored.", "is_correct": false}
+          ],
+          "explanation": "The same direction figure is a geometry aid for applying the simultaneous same direction runway operation rule.",
+          "publication_id": "table-figure-activity-depth-07:3-8-3:visual_interpretation:0"
+        }
+      ]
+    },
+    "3-8-4": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_07_3_8_4_opposite_direction_geometry",
+          "difficulty": 3,
+          "source_kind": "figure",
+          "source_label": "FIG 3-8-2",
+          "lookup_context": [
+            "Two aircraft will operate from runways in opposite directions",
+            "Controller is evaluating whether simultaneous opposite direction operation applies",
+            "The runway geometry is the key fact"
+          ],
+          "task": "Identify the correct use of the figure.",
+          "instruction": "Use the simultaneous opposite direction operation figure.",
+          "question_text": "What is the figure primarily helping the controller determine?",
+          "choices": [
+            {"text": "Whether the runway geometry supports simultaneous opposite direction operations under the applicable rule.", "is_correct": true},
+            {"text": "Whether beacon-code assignment is correct.", "is_correct": false},
+            {"text": "Whether runway edge lights should be set to step 3.", "is_correct": false},
+            {"text": "Whether aircraft identification may be abbreviated.", "is_correct": false}
+          ],
+          "explanation": "The opposite direction figure is a geometry aid for applying the simultaneous opposite direction runway operation rule.",
+          "publication_id": "table-figure-activity-depth-07:3-8-4:visual_interpretation:0"
+        }
+      ]
+    },
+    "1-1-6": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_07_1_1_6_change_2_effective",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 1-1-1",
+          "lookup_context": [
+            "Publication Schedule table",
+            "Row is Change 2 under JO 7110.65CC cycle",
+            "Controller is checking the effective publication date"
+          ],
+          "task": "Read the effective date from the table.",
+          "instruction": "Use the publication schedule table.",
+          "question_text": "What is the effective date for Change 2 in the JO 7110.65CC cycle?",
+          "choices": [
+            {"text": "11/25/27.", "is_correct": true},
+            {"text": "6/10/27.", "is_correct": false},
+            {"text": "5/11/28.", "is_correct": false},
+            {"text": "12/24/26.", "is_correct": false}
+          ],
+          "explanation": "TBL 1-1-1 lists Change 2 in the JO 7110.65CC cycle with cutoff 6/10/27 and effective date 11/25/27.",
+          "publication_id": "table-figure-activity-depth-07:1-1-6:table_lookup:0"
+        }
+      ]
+    },
+    "1-1-7": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_07_1_1_7_air_force_contact",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 1-1-2",
+          "lookup_context": [
+            "Military Distribution Contacts table",
+            "Facility is U.S. Air Force",
+            "Order or change has not arrived at least 30 days before effective date"
+          ],
+          "task": "Select the correct headquarters contact.",
+          "instruction": "Use the military distribution contacts table.",
+          "question_text": "Which headquarters contact applies for the U.S. Air Force?",
+          "choices": [
+            {"text": "HQ AFFSA.", "is_correct": true},
+            {"text": "USAASA.", "is_correct": false},
+            {"text": "CNO (N980A).", "is_correct": false},
+            {"text": "Service area office distribution officer.", "is_correct": false}
+          ],
+          "explanation": "TBL 1-1-2 lists HQ AFFSA as the U.S. Air Force military headquarters contact.",
+          "publication_id": "table-figure-activity-depth-07:1-1-7:table_lookup:0"
+        }
+      ]
+    },
+    "1-1-11": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_07_1_1_11_army_interface",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 1-1-3",
+          "lookup_context": [
+            "Military Operations Interface Offices table",
+            "Procedure deviation involves Department of the Army operations",
+            "Controller needs the appropriate interface office"
+          ],
+          "task": "Select the interface office.",
+          "instruction": "Use the military operations interface offices table.",
+          "question_text": "Which office is listed for Department of the Army interface?",
+          "choices": [
+            {"text": "Director, USAASA (MOAS-AS).", "is_correct": true},
+            {"text": "Chief of Naval Operations, N980A, NAATSEA.", "is_correct": false},
+            {"text": "HQ AFFSA.", "is_correct": false},
+            {"text": "FAA service area office distribution officer.", "is_correct": false}
+          ],
+          "explanation": "TBL 1-1-3 lists Director, USAASA (MOAS-AS), for Department of the Army interface.",
+          "publication_id": "table-figure-activity-depth-07:1-1-11:table_lookup:0"
+        }
+      ]
+    },
+    "1-2-1": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_07_1_2_1_magnetic_and_miles",
+          "difficulty": 2,
+          "source_kind": "figure",
+          "source_label": "FIG 1-2-1",
+          "lookup_context": [
+            "Controller is applying order-wide word meanings",
+            "The figure supports interpreting divergence and directional terms",
+            "Question concerns the default meaning of directions and miles"
+          ],
+          "task": "Apply the order-wide terminology rule.",
+          "instruction": "Use the word-meanings figure and terminology list.",
+          "question_text": "Which interpretation is correct unless the order specifically says otherwise?",
+          "choices": [
+            {"text": "Directions such as course, bearing, azimuth, heading, and wind direction are magnetic; miles are nautical except visibility uses statute miles.", "is_correct": true},
+            {"text": "All directions are true and all miles are statute miles.", "is_correct": false},
+            {"text": "Wind direction is true, but course and heading are magnetic.", "is_correct": false},
+            {"text": "Visibility and distance are both always nautical miles.", "is_correct": false}
+          ],
+          "explanation": "Paragraph 1-2-1 defines the default terminology: listed directional terms are magnetic unless specifically stated otherwise, and miles are nautical except visibility.",
+          "publication_id": "table-figure-activity-depth-07:1-2-1:visual_interpretation:0"
+        }
+      ]
+    },
+    "1-2-6": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_07_1_2_6_abbreviation_lookup",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 1-2-1",
+          "lookup_context": [
+            "FAA Order JO 7110.65 abbreviations table",
+            "Controller is reading a shorthand entry",
+            "Entry is APREQ"
+          ],
+          "task": "Resolve the abbreviation.",
+          "instruction": "Use the abbreviations table.",
+          "question_text": "What does APREQ mean in the table?",
+          "choices": [
+            {"text": "Approval Request.", "is_correct": true},
+            {"text": "Airport arrival rate.", "is_correct": false},
+            {"text": "ATC preferred route.", "is_correct": false},
+            {"text": "Adapted departure route.", "is_correct": false}
+          ],
+          "explanation": "TBL 1-2-1 lists APREQ as Approval Request.",
+          "publication_id": "table-figure-activity-depth-07:1-2-6:table_lookup:0"
+        }
+      ]
+    },
+    "2-3-1": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_07_2_3_1_standard_characters",
+          "difficulty": 2,
+          "source_kind": "figure",
+          "source_label": "FIG 2-3-1",
+          "lookup_context": [
+            "Flight progress strip entry must be hand printed",
+            "Controller is preventing misinterpretation",
+            "Standard hand-printed characters figure applies"
+          ],
+          "task": "Apply the strip-entry standard.",
+          "instruction": "Use the standard hand-printed characters figure.",
+          "question_text": "Why does the paragraph direct controllers to use standard hand-printed characters?",
+          "choices": [
+            {"text": "To prevent misinterpretation of current data and clearances posted on flight progress strips.", "is_correct": true},
+            {"text": "To make strip entries match computer keyboard fonts.", "is_correct": false},
+            {"text": "To replace the requirement to post current strip data.", "is_correct": false},
+            {"text": "To allow erased entries to remain readable.", "is_correct": false}
+          ],
+          "explanation": "FIG 2-3-1 supports the requirement to use standard hand-printed characters so strip data is not misinterpreted.",
+          "publication_id": "table-figure-activity-depth-07:2-3-1:visual_interpretation:0"
+        }
+      ]
+    },
+    "2-3-9": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_07_2_3_9_suffix_h",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 2-3-10",
+          "lookup_context": [
+            "Aircraft Equipment Suffixes table",
+            "Navigation capability is any",
+            "Transponder is failed"
+          ],
+          "task": "Select the suffix.",
+          "instruction": "Use the aircraft equipment suffixes table.",
+          "question_text": "Which equipment suffix applies?",
+          "choices": [
+            {"text": "/H.", "is_correct": true},
+            {"text": "/O.", "is_correct": false},
+            {"text": "/W.", "is_correct": false},
+            {"text": "/X.", "is_correct": false}
+          ],
+          "explanation": "TBL 2-3-10 assigns /H when navigation capability is any and the transponder has failed.",
+          "publication_id": "table-figure-activity-depth-07:2-3-9:table_lookup:0"
+        }
+      ]
+    },
+    "2-4-16": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_07_2_4_16_number_nine",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 2-4-1",
+          "lookup_context": [
+            "ICAO phonetics table",
+            "Controller is pronouncing an individual number",
+            "Character is 9"
+          ],
+          "task": "Select the ICAO pronunciation.",
+          "instruction": "Use the ICAO phonetics table.",
+          "question_text": "How is the number 9 pronounced?",
+          "choices": [
+            {"text": "NIN-ER.", "is_correct": true},
+            {"text": "NINE.", "is_correct": false},
+            {"text": "NIN-AH.", "is_correct": false},
+            {"text": "NIN-TEE.", "is_correct": false}
+          ],
+          "explanation": "TBL 2-4-1 gives the pronunciation of 9 as NIN-ER.",
+          "publication_id": "table-figure-activity-depth-07:2-4-16:table_lookup:0"
+        }
+      ]
+    },
+    "2-4-20": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_07_2_4_20_similar_ids",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 2-4-2",
+          "lookup_context": [
+            "Two aircraft have similar sounding identifications",
+            "Controller is replying on frequency",
+            "Aircraft identification table applies"
+          ],
+          "task": "Choose the identification practice.",
+          "instruction": "Use the aircraft identification table.",
+          "question_text": "How should the controller reply to aircraft with similar sounding identifications?",
+          "choices": [
+            {"text": "Use the full identification.", "is_correct": true},
+            {"text": "Use only the final three characters.", "is_correct": false},
+            {"text": "Use the aircraft type without the registration.", "is_correct": false},
+            {"text": "Use abbreviated identification until challenged.", "is_correct": false}
+          ],
+          "explanation": "The paragraph directs controllers to use full identification in reply to aircraft with similar sounding identifications.",
+          "publication_id": "table-figure-activity-depth-07:2-4-20:table_lookup:0"
+        }
+      ]
+    },
+    "3-2-3": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_07_3_2_3_flashing_red",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-2-1",
+          "lookup_context": [
+            "ATC light signals table",
+            "Signal is flashing red",
+            "Aircraft is in flight"
+          ],
+          "task": "Interpret the light signal.",
+          "instruction": "Use the ATC light signals table.",
+          "question_text": "What does flashing red mean to an aircraft in flight?",
+          "choices": [
+            {"text": "Airport unsafe, do not land.", "is_correct": true},
+            {"text": "Cleared to land.", "is_correct": false},
+            {"text": "Return for landing.", "is_correct": false},
+            {"text": "Give way to other aircraft and continue circling.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-2-1 lists flashing red to aircraft in flight as airport unsafe, do not land.",
+          "publication_id": "table-figure-activity-depth-07:3-2-3:table_lookup:0"
+        }
+      ]
+    },
+    "3-4-2": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_07_3_4_2_reil_step_2",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-4-1",
+          "lookup_context": [
+            "REIL three-step intensity table",
+            "Night operation",
+            "Visibility is 2 miles"
+          ],
+          "task": "Select the REIL intensity setting.",
+          "instruction": "Use the REIL intensity table.",
+          "question_text": "Which REIL setting applies at night with 2 miles visibility?",
+          "choices": [
+            {"text": "Setting 2.", "is_correct": true},
+            {"text": "Setting 3.", "is_correct": false},
+            {"text": "Setting 1.", "is_correct": false},
+            {"text": "Off unless requested.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-1 assigns REIL setting 2 at night for visibility from 1 to but not including 3 miles.",
+          "publication_id": "table-figure-activity-depth-07:3-4-2:table_lookup:0"
+        }
+      ]
+    },
+    "3-4-4": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_07_3_4_4_papi_night",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-4-4",
+          "lookup_context": [
+            "PAPI five-step intensity table",
+            "Remote intensity control is available",
+            "Operation is from sunset to sunrise"
+          ],
+          "task": "Select the PAPI intensity setting.",
+          "instruction": "Use the PAPI intensity table.",
+          "question_text": "Which PAPI step applies from sunset to sunrise?",
+          "choices": [
+            {"text": "Step 3.", "is_correct": true},
+            {"text": "Step 4.", "is_correct": false},
+            {"text": "Step 5.", "is_correct": false},
+            {"text": "Step 1.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-4 assigns PAPI step 3 from sunset to sunrise.",
+          "publication_id": "table-figure-activity-depth-07:3-4-4:table_lookup:0"
+        }
+      ]
+    },
+    "3-4-14": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "table_lookup",
+          "generation_source": "curated_table_figure_activity_depth_07_3_4_14_mirl_day_low_visibility",
+          "difficulty": 2,
+          "source_kind": "table",
+          "source_label": "TBL 3-4-10",
+          "lookup_context": [
+            "MIRL intensity table",
+            "Day operation",
+            "Visibility is less than 2 miles"
+          ],
+          "task": "Select the MIRL intensity setting.",
+          "instruction": "Use the MIRL intensity table.",
+          "question_text": "Which MIRL step applies during the day with visibility less than 2 miles?",
+          "choices": [
+            {"text": "Step 3.", "is_correct": true},
+            {"text": "Step 2.", "is_correct": false},
+            {"text": "Step 1.", "is_correct": false},
+            {"text": "Off unless requested.", "is_correct": false}
+          ],
+          "explanation": "TBL 3-4-10 assigns MIRL step 3 during the day when visibility is less than 2 miles.",
+          "publication_id": "table-figure-activity-depth-07:3-4-14:table_lookup:0"
+        }
+      ]
+    },
+    "3-10-12": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_07_3_10_12_ifr_cancel_initial",
+          "difficulty": 3,
+          "source_kind": "figure",
+          "source_label": "FIG 3-10-14",
+          "lookup_context": [
+            "Aircraft will conduct an overhead maneuver",
+            "Aircraft reaches the initial point depicted by the figure",
+            "Flight is on an IFR flight plan"
+          ],
+          "task": "Apply the overhead maneuver figure.",
+          "instruction": "Use the overhead maneuver figure.",
+          "question_text": "What happens to the IFR flight plan when the aircraft reaches initial?",
+          "choices": [
+            {"text": "The IFR flight plan is canceled.", "is_correct": true},
+            {"text": "The IFR flight plan remains active until touchdown.", "is_correct": false},
+            {"text": "The IFR flight plan is canceled only after the break.", "is_correct": false},
+            {"text": "The IFR flight plan remains active until the aircraft exits the runway.", "is_correct": false}
+          ],
+          "explanation": "For overhead maneuvers, the IFR flight plan is canceled when the aircraft reaches the initial point.",
+          "publication_id": "table-figure-activity-depth-07:3-10-12:visual_interpretation:0"
+        }
+      ]
+    },
+    "9-6-1": {
+      "append_items": true,
+      "items": [
+        {
+          "activity_type": "visual_interpretation",
+          "generation_source": "curated_table_figure_activity_depth_07_9_6_1_balloon_altitude_reliability",
+          "difficulty": 3,
+          "source_kind": "figure",
+          "source_label": "FIG 9-6-1",
+          "lookup_context": [
+            "Unmanned free balloon is within controlled airspace",
+            "The figure shows that balloon shape varies at different altitudes",
+            "Controller is considering whether to use vertical separation"
+          ],
+          "task": "Apply the balloon figure and separation caution.",
+          "instruction": "Use the free-balloon figure with the separation rule.",
+          "question_text": "When may vertical separation be used with an unmanned free balloon?",
+          "choices": [
+            {"text": "Only when accurate balloon altitude information is available.", "is_correct": true},
+            {"text": "Whenever the balloon's general direction is known.", "is_correct": false},
+            {"text": "Whenever the operator gave one hour advance notice of descent.", "is_correct": false},
+            {"text": "Whenever the payload is expected to descend by parachute.", "is_correct": false}
+          ],
+          "explanation": "The balloon figure reinforces that free balloons change shape and altitude profile; vertical separation is not used unless accurate balloon altitude information is available.",
+          "publication_id": "table-figure-activity-depth-07:9-6-1:visual_interpretation:0"
+        }
+      ]
+    }
+  }
+}
