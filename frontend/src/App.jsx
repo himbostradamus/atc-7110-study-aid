@@ -978,20 +978,20 @@ function FlashcardDeck({ cards, sectionLabel, onBack, initialOptions = {} }) {
               borderRadius: 10, padding: "13px 22px", cursor: "pointer",
               fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700,
               fontSize: 14, letterSpacing: ".07em", textTransform: "uppercase",
-            }}>Review again only</button>
+            }}>Redo weak cards</button>
           )}
           <button onClick={() => resetDeck(orderMode)} style={{
             background: "rgba(13,17,15,.92)", color: "#7aa7d9", border: "1px solid rgba(219,229,216,.13)",
             borderRadius: 10, padding: "13px 22px", cursor: "pointer",
             fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700,
             fontSize: 14, letterSpacing: ".07em", textTransform: "uppercase",
-          }}>Restart deck</button>
+          }}>Repeat full deck</button>
           <button onClick={onBack} style={{
             background: "#e0a30a", color: "#000", border: "none",
             borderRadius: 10, padding: "13px 28px", cursor: "pointer",
             fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700,
             fontSize: 14, letterSpacing: ".07em", textTransform: "uppercase",
-          }}>Back to map</button>
+          }}>Return to map</button>
         </div>
       </div>
     );
@@ -1882,7 +1882,7 @@ function sessionMetaForTarget(target = {}) {
   }
   if (target.type === "focus_list") {
     return {
-      title: "Focus List",
+      title: "Issue Areas",
       reason: "Material you manually marked for extra attention.",
       mode: "Manual Focus",
     };
@@ -2250,7 +2250,7 @@ function SessionResults({
           borderRadius: 10, color: "#000", cursor: "pointer",
           fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700,
           fontSize: 13, letterSpacing: ".06em", textTransform: "uppercase",
-        }}>Back to map</button>
+        }}>Return to map</button>
       </div>
     </div>
   );
@@ -2747,7 +2747,7 @@ export default function App() {
         onBack={() => setScreen(focusBackScreen)}
         onStudyList={() => handleStartLesson({
           type: "focus_list",
-          label: "Focus List",
+          label: "Issue Areas",
           para_ids: paragraphs.map((item) => item.para_id),
         }, "focus")}
         onStudyParagraph={(target) => handleStartLesson(target, "focus")}

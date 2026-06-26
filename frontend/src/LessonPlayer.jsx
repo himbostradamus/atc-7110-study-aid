@@ -1208,7 +1208,7 @@ export default function LessonPlayer({ session = [], sessionMeta, onBack, onComp
                     <div className="fb-answer-text">{feedback.answers.user || "No answer"}</div>
                   </div>
                   <div className="fb-answer correct">
-                    <div className="fb-answer-title">Expected</div>
+                    <div className="fb-answer-title">Rule answer</div>
                     <div className="fb-answer-text">{feedback.answers.correct}</div>
                   </div>
                 </div>
@@ -1232,7 +1232,7 @@ export default function LessonPlayer({ session = [], sessionMeta, onBack, onComp
                   className="btn btn-remediate"
                   onClick={handleRemediate}
                 >
-                  Practice this concept
+                  Transfer this concept
                 </button>
               )}
               <button
@@ -1242,7 +1242,7 @@ export default function LessonPlayer({ session = [], sessionMeta, onBack, onComp
                 {itemFlags[activity.id] ? "Item flagged" : "Flag item for review"}
               </button>
               <button className="btn btn-continue" onClick={handleContinue}>
-                {idx + 1 >= session.length ? "Finish lesson" : "Continue"}
+                {idx + 1 >= session.length ? "Finish and review" : "Next item"}
               </button>
             </div>
           </>

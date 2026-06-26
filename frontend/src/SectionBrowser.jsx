@@ -282,6 +282,9 @@ function ParagraphCard({ item, onStudy, onCards, onToggleFocus }) {
         lineHeight: 1.6,
       }}>
         {item.activityCount} activities · {item.questionCount} questions · {item.flashcardCount} cards
+        <span style={{ display: "block", marginTop: 3 }}>
+          Drill mixes activities and questions. Cards are recall-only.
+        </span>
       </div>
 
       <div className="section-browser-card-actions" style={{ display: "flex", gap: 8, marginTop: 12, flexWrap: "wrap" }}>
@@ -302,7 +305,7 @@ function ParagraphCard({ item, onStudy, onCards, onToggleFocus }) {
             textTransform: "uppercase",
           }}
         >
-          Drill Paragraph
+          Drill Rule
         </button>
         {item.flashcardCount > 0 && (
           <button
@@ -322,7 +325,7 @@ function ParagraphCard({ item, onStudy, onCards, onToggleFocus }) {
               textTransform: "uppercase",
             }}
           >
-            Cards
+            Recall Cards
           </button>
         )}
         <button
@@ -342,7 +345,7 @@ function ParagraphCard({ item, onStudy, onCards, onToggleFocus }) {
             textTransform: "uppercase",
           }}
         >
-          {item.isFocused ? "Saved" : "Save Focus"}
+          {item.isFocused ? "Issue Area Saved" : "Save Issue Area"}
         </button>
         {item.source_url && (
           <a
@@ -497,7 +500,7 @@ export default function SectionBrowser({
             {section?.label}
           </div>
           <div style={{ marginTop: 6, fontSize: 13, color: "#8c9c91", lineHeight: 1.6, maxWidth: 720 }}>
-            Drill a specific paragraph instead of pulling a mixed section session. This is the targeted path for issue areas you identify later.
+            Use this when you know where the problem is. Drill applies the rule with activities and questions; cards are for recall.
           </div>
         </div>
         <div className="section-browser-actions" style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "flex-end" }}>
@@ -529,7 +532,7 @@ export default function SectionBrowser({
                 textTransform: "uppercase",
               }}
             >
-              Open Focus List
+              Open Issue Areas
             </button>
           )}
           {totalCards > 0 && (
@@ -550,7 +553,7 @@ export default function SectionBrowser({
                 textTransform: "uppercase",
               }}
             >
-              Review Cards
+              Recall Cards
             </button>
           )}
           <button
@@ -570,7 +573,7 @@ export default function SectionBrowser({
               textTransform: "uppercase",
             }}
           >
-            Study Whole Section
+            Drill Whole Section
           </button>
         </div>
       </div>

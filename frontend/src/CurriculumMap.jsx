@@ -233,9 +233,9 @@ function SectionCard({ sec, sectionSignals, onStart, onFlashcards, onFocus }) {
           letterSpacing: ".07em",
           textTransform: "uppercase",
         }}>
-          <span style={{ color: MAP_THEME.muted }}>Drill = acts + qs</span>
-          <span>Cards = flashcards</span>
-          <span>Open = paragraph browser</span>
+          <span style={{ color: MAP_THEME.muted }}>Drill = activities + qs</span>
+          <span>Recall = flashcards</span>
+          <span>Target = paragraphs</span>
         </div>
       )}
 
@@ -305,8 +305,8 @@ function SectionCard({ sec, sectionSignals, onStart, onFlashcards, onFocus }) {
               border: `1px solid ${MAP_THEME.line2}`,
               color: MAP_THEME.faint,
             }}
-            title={`Review ${flashcardCount} flashcards from this section`}
-          >Cards</button>
+            title={`Review ${flashcardCount} recall cards from this section`}
+          >Recall</button>
         )}
         {hasContent && flashcardCount <= 0 && <div />}
         {hasContent && (
@@ -318,8 +318,8 @@ function SectionCard({ sec, sectionSignals, onStart, onFlashcards, onFocus }) {
               border: `1px solid ${MAP_THEME.line2}`,
               color: MAP_THEME.text,
             }}
-            title="Open this section browser to study or save specific paragraphs"
-          >Open</button>
+            title="Target specific paragraphs or save issue areas"
+          >Target</button>
         )}
       </div>
     </div>
@@ -1805,7 +1805,7 @@ function HeaderUtilities({
               onClick={() => { setOpen(false); onOpenFocus(); }}
               style={utilityMenuButtonStyle()}
             >
-              Focus List {stats?.focusCount ? `(${stats.focusCount})` : ""}
+              Issue Areas {stats?.focusCount ? `(${stats.focusCount})` : ""}
             </button>
           )}
           {onOpenReview && (

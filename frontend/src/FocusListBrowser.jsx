@@ -290,6 +290,9 @@ function FocusCard({ item, onStudy, onCards, onRemove }) {
         lineHeight: 1.6,
       }}>
         {item.activityCount} activities · {item.questionCount} questions · {item.flashcardCount} cards
+        <span style={{ display: "block", marginTop: 3 }}>
+          Drill applies this issue area. Cards rebuild recall.
+        </span>
       </div>
 
       <div className="focus-browser-card-actions" style={{ display: "flex", gap: 8, marginTop: 12, flexWrap: "wrap" }}>
@@ -310,7 +313,7 @@ function FocusCard({ item, onStudy, onCards, onRemove }) {
             textTransform: "uppercase",
           }}
         >
-          Drill Paragraph
+          Drill Rule
         </button>
         {item.flashcardCount > 0 && (
           <button
@@ -330,7 +333,7 @@ function FocusCard({ item, onStudy, onCards, onRemove }) {
               textTransform: "uppercase",
             }}
           >
-            Cards
+            Recall Cards
           </button>
         )}
         <button
@@ -350,7 +353,7 @@ function FocusCard({ item, onStudy, onCards, onRemove }) {
             textTransform: "uppercase",
           }}
         >
-          Remove
+          Remove Area
         </button>
         {item.source_url && (
           <a
@@ -505,10 +508,10 @@ export default function FocusListBrowser({
             letterSpacing: ".04em",
             color: "#e0a30a",
           }}>
-            Focus List
+            Issue Areas
           </div>
           <div style={{ marginTop: 6, fontSize: 13, color: "#8c9c91", lineHeight: 1.6, maxWidth: 720 }}>
-            Save paragraphs from any section, then come back here to drill only the problem areas you care about across the whole order.
+            Saved paragraphs are your manual repair list. Use it for weak spots you want to revisit independent of chapter order.
           </div>
         </div>
         <div className="focus-browser-actions" style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "flex-end" }}>
@@ -540,7 +543,7 @@ export default function FocusListBrowser({
                 textTransform: "uppercase",
               }}
             >
-              Clear List
+              Clear Areas
             </button>
           )}
           <button
@@ -561,7 +564,7 @@ export default function FocusListBrowser({
               textTransform: "uppercase",
             }}
           >
-            Study Saved List
+            Drill Issue Areas
           </button>
         </div>
       </div>
@@ -627,7 +630,7 @@ export default function FocusListBrowser({
         }}>
           {paragraphs.length} saved paragraph{paragraphs.length === 1 ? "" : "s"} currently published for learner-facing study.
           {" "}
-          {totalCards > 0 ? `${totalCards} flashcards are available across this list.` : "No flashcards are published for these saved paragraphs yet."}
+          {totalCards > 0 ? `${totalCards} recall cards are available across this list.` : "No recall cards are published for these saved paragraphs yet."}
         </div>
 
         {paragraphs.length === 0 ? (
@@ -641,7 +644,7 @@ export default function FocusListBrowser({
             fontSize: 13,
             lineHeight: 1.7,
           }}>
-            Nothing is saved yet. Use <strong style={{ color: "#e0a30a" }}>Save Focus</strong> on a paragraph inside any section browser to build your cross-section drill list.
+            Nothing is saved yet. Use <strong style={{ color: "#e0a30a" }}>Save Issue Area</strong> on a paragraph inside any section browser to build your cross-section repair list.
           </div>
         ) : (
           <div style={{ display: "grid", gap: 10 }}>
