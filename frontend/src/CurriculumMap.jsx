@@ -589,17 +589,17 @@ function PracticePanel({ queue = [], onStart }) {
       <div style={practiceHeaderStyle()}>
         <div>
           <div style={practiceKickerStyle(MAP_THEME.amber)}>
-            Recommended Practice
+            Build Coverage
           </div>
           <div style={{ marginTop: 3, color: MAP_THEME.muted, fontSize: 12 }}>
-            {queue.length} targeted paragraph{queue.length === 1 ? "" : "s"}
+            Continue through weak or unstudied paragraphs in 7110 order.
           </div>
         </div>
         <button
           onClick={onStart}
           style={practiceActionStyle(MAP_THEME.amber, true)}
         >
-          Practice
+          Continue
         </button>
       </div>
       <div style={{ display: "grid", gap: 6 }}>
@@ -646,17 +646,17 @@ function ConceptPanel({ queue = [], onStart }) {
       <div style={practiceHeaderStyle()}>
         <div>
           <div style={practiceKickerStyle(accent)}>
-            Missed Concepts
+            Transfer Weak Ideas
           </div>
           <div style={{ marginTop: 3, color: MAP_THEME.muted, fontSize: 12 }}>
-            Practice grouped by ideas you recently missed, not just by paragraph.
+            Re-test the same idea across contexts so it is not tied to one paragraph.
           </div>
         </div>
         <button
           onClick={() => onStart(queue.slice(0, 3).map((item) => item.id), 6)}
           style={practiceActionStyle(accent, true)}
         >
-          Review
+          Strengthen
         </button>
       </div>
       <div style={{ display: "grid", gap: 6 }}>
@@ -702,43 +702,43 @@ function PracticeModesPanel({ onStart }) {
   const modes = [
     {
       id: "diagnostic",
-      label: "Diagnostic",
-      detail: "A short mixed check to find weak ideas.",
+      label: "Find Gaps",
+      detail: "A short mixed check when you do not know what to study next.",
       color: "#7aa7d9",
       count: 10,
     },
     {
       id: "weak_areas",
-      label: "Weak Areas",
-      detail: "Adaptive practice from low crowns and low accuracy.",
+      label: "Repair Weak Areas",
+      detail: "Adaptive practice from low crowns and low recent accuracy.",
       color: "#f43f5e",
       count: 8,
     },
     {
       id: "tables_minima",
       label: "Tables & Minima",
-      detail: "Numeric rules, minima, and lookup practice.",
+      detail: "Lookup discipline for numeric rules, minima, and source tables.",
       color: MAP_THEME.amber,
       count: 8,
     },
     {
       id: "phraseology",
       label: "Phraseology",
-      detail: "Required wording and readback fidelity.",
+      detail: "Exact wording only where the order makes exact wording matter.",
       color: "#39c36f",
       count: 8,
     },
     {
       id: "scenarios",
       label: "Scenario Judgment",
-      detail: "Apply the rule in operational situations.",
+      detail: "Choose what to do when the facts change.",
       color: "#fb923c",
       count: 8,
     },
     {
       id: "visuals",
       label: "Figures & Visuals",
-      detail: "Geometry, diagrams, and visual interpretation.",
+      detail: "Practice extracting the rule from figures and diagrams.",
       color: "#818cf8",
       count: 6,
     },
@@ -747,13 +747,13 @@ function PracticeModesPanel({ onStart }) {
   return (
     <div style={practicePanelStyle(MAP_THEME.amber, { marginBottom: 0 })}>
       <div style={{ ...practiceKickerStyle(MAP_THEME.amber), marginBottom: 10 }}>
-        Practice Modes
+        Isolate A Skill
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 8 }}>
         {modes.map((mode) => (
           <button
             key={mode.id}
-            onClick={() => onStart(mode.id, mode.count)}
+            onClick={() => onStart(mode.id, mode.count, mode.label)}
             style={{
               textAlign: "left",
               background: MAP_THEME.panel2,
@@ -803,17 +803,17 @@ function MissedItemsPanel({ queue = [], onStart }) {
       <div style={practiceHeaderStyle()}>
         <div>
           <div style={practiceKickerStyle(accent)}>
-            Missed Items
+            Fix Recent Misses
           </div>
           <div style={{ marginTop: 3, color: MAP_THEME.muted, fontSize: 12 }}>
-            Retry exact activities you missed. Correct answers remove them from this queue.
+            Start here when available. Exact retries clear only after a correct answer.
           </div>
         </div>
         <button
           onClick={onStart}
           style={practiceActionStyle(accent, true)}
         >
-          Review
+          Fix
         </button>
       </div>
       <div style={{ display: "grid", gap: 6 }}>
@@ -853,10 +853,10 @@ function DueReviewPanel({ queue = [], onStart }) {
       <div style={practiceHeaderStyle()}>
         <div>
           <div style={practiceKickerStyle(accent)}>
-            Due Review
+            Refresh Memory
           </div>
           <div style={{ marginTop: 3, color: MAP_THEME.muted, fontSize: 12 }}>
-            Previously studied material scheduled for refresh by time or recent accuracy.
+            Keep older material alive before adding more new sections.
           </div>
         </div>
         <button
@@ -925,7 +925,7 @@ function NextActionPanel({ action, onStart, onDismiss }) {
             textTransform: "uppercase",
             marginBottom: 3,
           }}>
-            Suggested
+            Next Step
           </div>
           <div style={{
             fontFamily: "'Barlow Condensed',sans-serif",
@@ -1100,7 +1100,7 @@ function PracticeWorkspaceToggle({
           {open ? "Hide Practice Workspace" : "Show Practice Workspace"}
         </div>
         <div style={{ marginTop: 3, fontSize: 12, color: MAP_THEME.muted, lineHeight: 1.4 }}>
-          Misses, due review, concepts, and practice modes stay here when you want targeted drills.
+          The loop is: fix misses, refresh older material, transfer weak ideas, then build new coverage.
         </div>
       </div>
       <div style={{ display: "flex", alignItems: "center", gap: 7, flexWrap: "wrap", justifyContent: "flex-end" }}>
@@ -1254,7 +1254,7 @@ function PublicUseNotice() {
 function HomeTabs({ activeTab, onChange, practiceSignals = 0 }) {
   const tabs = [
     { id: "browse", label: "Browse 7110", detail: "Chapter navigation" },
-    { id: "practice", label: "Practice Workspace", detail: practiceSignals ? `${practiceSignals} active signals` : "Drills and queues" },
+    { id: "practice", label: "Practice Workspace", detail: practiceSignals ? `${practiceSignals} active signals` : "Guided study loop" },
     { id: "aircraft", label: "Aircraft Recognition", detail: "Type designators + runway separation" },
   ];
 

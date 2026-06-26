@@ -1723,7 +1723,7 @@ function suggestedModeForResults(results = []) {
   if (hasAny(["situation_action", "conditional_rule_check", "capability_check", "requirement_check"])) {
     return { id: "scenarios", label: "Scenario Judgment", count: 6 };
   }
-  return { id: "weak_areas", label: "Weak Areas", count: 6 };
+  return { id: "weak_areas", label: "Repair Weak Areas", count: 6 };
 }
 
 function humanizeActivityType(type) {
@@ -1741,10 +1741,10 @@ function resolveNextAction({
   if (mistakeQueue.length > 0) {
     return {
       type: "missed_items",
-      label: "Retry missed items",
-      detail: "Start with exact activities you recently missed. Correct answers clear them from the queue.",
+      label: "Fix recent misses",
+      detail: "Start by repairing exact errors before adding new material. Correct answers clear them from the queue.",
       reason: `${mistakeQueue.length} missed item${mistakeQueue.length === 1 ? "" : "s"} waiting`,
-      buttonLabel: "Review misses",
+      buttonLabel: "Fix misses",
       count: 6,
       color: "#f43f5e",
     };
@@ -1753,8 +1753,8 @@ function resolveNextAction({
   if (dueReviewQueue.length > 0) {
     return {
       type: "due_review",
-      label: "Refresh due material",
-      detail: "Review material that is aging out or showing weaker recent accuracy.",
+      label: "Refresh memory",
+      detail: "Stabilize material that is aging out or showing weaker recent accuracy before pushing ahead.",
       reason: `${dueReviewQueue.length} paragraph${dueReviewQueue.length === 1 ? "" : "s"} due`,
       buttonLabel: "Refresh",
       count: 8,
@@ -1767,10 +1767,10 @@ function resolveNextAction({
     const conceptNames = conceptQueue.slice(0, 2).map((item) => item.label).join(" and ");
     return {
       type: "concept_review",
-      label: "Drill weak concepts",
-      detail: `Practice grouped around ${conceptNames || "recently missed concepts"}, across sections where possible.`,
+      label: "Strengthen weak ideas",
+      detail: `Practice ${conceptNames || "recently missed concepts"} across sections so the idea transfers, not just the paragraph.`,
       reason: `${conceptQueue.length} weak concept${conceptQueue.length === 1 ? "" : "s"} detected`,
-      buttonLabel: "Drill concepts",
+      buttonLabel: "Strengthen",
       concept_ids: conceptIds,
       count: 6,
       color: "#39c36f",
@@ -1780,10 +1780,10 @@ function resolveNextAction({
   if (practiceQueue.length > 0) {
     return {
       type: "recommended",
-      label: "Continue targeted practice",
-      detail: "Work through low-crown and low-confidence paragraphs in 7110 order.",
+      label: "Build coverage",
+      detail: "Move forward through low-crown and low-confidence paragraphs in 7110 order.",
       reason: `${practiceQueue.length} targeted paragraph${practiceQueue.length === 1 ? "" : "s"} ready`,
-      buttonLabel: "Practice",
+      buttonLabel: "Continue",
       color: "#e0a30a",
     };
   }
@@ -1791,10 +1791,10 @@ function resolveNextAction({
   return {
     type: "practice_mode",
     mode_id: "diagnostic",
-    label: "Run a diagnostic",
-    detail: "Take a mixed check so the platform can identify what needs work next.",
+    label: "Find the next gap",
+    detail: "Take a short mixed check so the platform can decide what deserves attention next.",
     reason: "No active misses or due review",
-    buttonLabel: "Start diagnostic",
+    buttonLabel: "Find gaps",
     count: 10,
     color: "#7aa7d9",
   };
@@ -1812,14 +1812,14 @@ function buildStudyPlan({
     plan.push({
       key: "primary",
       label: nextAction.label,
-      detail: nextAction.reason,
+      detail: `Now: ${nextAction.reason}`,
       color: nextAction.color,
     });
   }
   if (mistakeQueue.length > 0 && nextAction?.type !== "missed_items") {
     plan.push({
       key: "missed",
-      label: "Clean up misses",
+      label: "Then fix misses",
       detail: `${mistakeQueue.length} exact retr${mistakeQueue.length === 1 ? "y" : "ies"}`,
       color: "#f43f5e",
     });
@@ -1827,7 +1827,7 @@ function buildStudyPlan({
   if (dueReviewQueue.length > 0 && nextAction?.type !== "due_review") {
     plan.push({
       key: "due",
-      label: "Refresh due review",
+      label: "Then refresh",
       detail: `${dueReviewQueue.length} paragraph${dueReviewQueue.length === 1 ? "" : "s"}`,
       color: "#7aa7d9",
     });
@@ -1835,7 +1835,7 @@ function buildStudyPlan({
   if (conceptQueue.length > 0 && nextAction?.type !== "concept_review") {
     plan.push({
       key: "concepts",
-      label: "Drill weak concepts",
+      label: "Then transfer ideas",
       detail: conceptQueue.slice(0, 2).map((item) => item.label).join(" / "),
       color: "#39c36f",
     });
@@ -1843,7 +1843,7 @@ function buildStudyPlan({
   if (practiceQueue.length > 0 && plan.length < 3) {
     plan.push({
       key: "targeted",
-      label: "Continue 7110-order practice",
+      label: "Then build coverage",
       detail: `${practiceQueue.length} targeted paragraph${practiceQueue.length === 1 ? "" : "s"}`,
       color: "#e0a30a",
     });
@@ -1854,30 +1854,30 @@ function buildStudyPlan({
 function sessionMetaForTarget(target = {}) {
   if (target.type === "missed_items") {
     return {
-      title: "Missed Item Review",
-      reason: "Retry exact activities you missed recently. Correct answers remove them from the missed queue.",
-      mode: "Remediation",
+      title: "Fix Recent Misses",
+      reason: "This pass is narrow on purpose: repair exact errors first, then move back to broader practice.",
+      mode: "Fix",
     };
   }
   if (target.type === "due_review") {
     return {
-      title: "Due Review",
-      reason: "Refresh material that is aging out or showing weaker recent accuracy.",
-      mode: "Spaced Review",
+      title: "Refresh Memory",
+      reason: "This pass protects older knowledge before you add more. Treat misses as a signal, not a final grade.",
+      mode: "Refresh",
     };
   }
   if (target.type === "concept_review") {
     return {
-      title: target.label || "Concept Drill",
-      reason: "Practice grouped by concept so the same operating idea is tested across different paragraphs.",
-      mode: "Concept Drill",
+      title: target.label || "Concept Transfer",
+      reason: "This pass tests the same operating idea in different contexts so it becomes portable.",
+      mode: "Transfer",
     };
   }
   if (target.type === "practice_mode") {
     return {
-      title: target.label || "Practice Mode",
-      reason: "Targeted activity selection for a specific skill family instead of a section-by-section pass.",
-      mode: "Skill Focus",
+      title: target.label || "Isolate A Skill",
+      reason: "This pass isolates one skill family so you can tell whether the problem is recall, lookup, phraseology, or judgment.",
+      mode: "Skill",
     };
   }
   if (target.type === "focus_list") {
@@ -1889,9 +1889,9 @@ function sessionMetaForTarget(target = {}) {
   }
   if (target.type === "recommended") {
     return {
-      title: "Recommended Practice",
-      reason: "Adaptive practice from low-crown, low-confidence, or unstudied material in 7110 order.",
-      mode: "Adaptive",
+      title: "Build Coverage",
+      reason: "This pass moves forward in 7110 order while still favoring weak, new, and under-practiced areas.",
+      mode: "Build",
     };
   }
   if (target.para_id) {
@@ -1910,7 +1910,7 @@ function sessionMetaForTarget(target = {}) {
   }
   return {
     title: "Lesson",
-    reason: "Answer each prompt by applying the rule, not merely recognizing wording.",
+    reason: "Answer each prompt by applying the rule. If you miss, the platform will route that idea back into practice.",
     mode: "Practice",
   };
 }
@@ -1932,6 +1932,20 @@ function SessionResults({
   const pct     = total ? Math.round(correct / total * 100) : 0;
   const suggestedMode = suggestedModeForResults(results);
   const missedItems = results.filter((result) => !result.correct);
+  const resultTitle = missedItems.length > 0
+    ? "Repair before moving on"
+    : missedConcepts.length > 0
+      ? "Transfer this idea next"
+      : pct >= 80
+        ? "Ready to build coverage"
+        : "Repeat once, then continue";
+  const nextStepText = missedItems.length > 0
+    ? "Best next move: fix the missed items while the context is still fresh."
+    : missedConcepts.length > 0
+      ? "Best next move: test the same idea in a few different contexts."
+      : pct >= 80
+        ? "Best next move: continue forward or refresh due material."
+        : "Best next move: repeat this set once before adding new material.";
   const typeStats = Object.values(results.reduce((acc, result) => {
     const key = result.activityType || "unknown";
     if (!acc[key]) {
@@ -1965,10 +1979,13 @@ function SessionResults({
           fontFamily: "'Barlow Condensed',sans-serif", fontSize: 26,
           fontWeight: 700, letterSpacing: ".05em", color: "#e0a30a",
         }}>
-          {pct >= 80 ? "Outstanding" : pct >= 60 ? "Good work" : "Keep studying"}
+          {resultTitle}
         </div>
         <div style={{ fontSize: 14, color: "#8c9c91", marginTop: 6 }}>
           {correct}/{total} correct · {pct}%
+        </div>
+        <div style={{ fontSize: 12, color: "#8c9c91", marginTop: 8, maxWidth: 420, lineHeight: 1.45 }}>
+          {nextStepText}
         </div>
       </div>
 
@@ -2190,7 +2207,7 @@ function SessionResults({
             borderRadius: 10, color: "#fff", cursor: "pointer",
             fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700,
             fontSize: 13, letterSpacing: ".06em", textTransform: "uppercase",
-          }}>Retry missed</button>
+          }}>Fix misses</button>
         )}
         {missedItems.length > 0 && onSaveMissedToFocus && (
           <button
@@ -2212,10 +2229,10 @@ function SessionResults({
             borderRadius: 10, color: "#000", cursor: "pointer",
             fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700,
             fontSize: 13, letterSpacing: ".06em", textTransform: "uppercase",
-          }}>Drill concepts</button>
+          }}>Strengthen ideas</button>
         )}
         {suggestedMode && (
-          <button onClick={() => onStartPracticeMode(suggestedMode.id, suggestedMode.count)} style={{
+          <button onClick={() => onStartPracticeMode(suggestedMode.id, suggestedMode.count, suggestedMode.label)} style={{
             flex: 1, height: 48, background: "rgba(17,22,20,.92)", border: "1px solid rgba(224,163,10,.4)",
             borderRadius: 10, color: "#e0a30a", cursor: "pointer",
             fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700,
@@ -2227,7 +2244,7 @@ function SessionResults({
           borderRadius: 10, color: "#e4ece2", cursor: "pointer",
           fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700,
           fontSize: 13, letterSpacing: ".06em", textTransform: "uppercase",
-        }}>Study again</button>
+        }}>Repeat this set</button>
         <button onClick={onHome} style={{
           flex: 1, height: 48, background: "#39c36f", border: "none",
           borderRadius: 10, color: "#000", cursor: "pointer",
@@ -2441,7 +2458,7 @@ export default function App() {
       }, "map");
       return;
     }
-    handleStartLesson({ type: "recommended", label: action.label || "Recommended Practice" }, "map");
+    handleStartLesson({ type: "recommended", label: action.label || "Build Coverage" }, "map");
   }
 
   // ── Start flashcards ──────────────────────────────────────────────────────
@@ -2657,7 +2674,7 @@ export default function App() {
         onHome={() => setScreen("map")}
         onReviewMissedItems={() => handleStartLesson({
           type: "missed_items",
-          label: "Missed Items",
+          label: "Fix Recent Misses",
           count: Math.min(6, Math.max(2, (sessionResults.results || []).filter((result) => !result.correct).length)),
         }, "map")}
         onSaveMissedToFocus={() => {
@@ -2681,15 +2698,15 @@ export default function App() {
           const missedCount = (sessionResults.results || []).filter((result) => !result.correct).length;
           handleStartLesson({
             type: "concept_review",
-            label: "Missed Concepts",
+            label: "Transfer Weak Ideas",
             concept_ids: conceptIds,
             count: Math.min(6, Math.max(2, missedCount * 2)),
           }, "map");
         }}
-        onStartPracticeMode={(modeId, count) => handleStartLesson({
+        onStartPracticeMode={(modeId, count, label) => handleStartLesson({
           type: "practice_mode",
           mode_id: modeId,
-          label: "Practice Mode",
+          label: label || "Isolate A Skill",
           count,
         }, "map")}
         onRepeat={() => {
@@ -2768,26 +2785,26 @@ export default function App() {
       viewState={mapViewState}
       onViewStateChange={updateMapViewState}
       onStartNextAction={handleStartNextAction}
-      onStartRecommended={() => handleStartLesson({ type: "recommended", label: "Recommended Practice" }, "map")}
+      onStartRecommended={() => handleStartLesson({ type: "recommended", label: "Build Coverage" }, "map")}
       onStartDueReview={() => handleStartLesson({
         type: "due_review",
-        label: "Due Review",
+        label: "Refresh Memory",
         count: 8,
       }, "map")}
       onStartMissedItems={() => handleStartLesson({
         type: "missed_items",
-        label: "Missed Items",
+        label: "Fix Recent Misses",
         count: 6,
       }, "map")}
-      onStartPracticeMode={(modeId, count) => handleStartLesson({
+      onStartPracticeMode={(modeId, count, label) => handleStartLesson({
         type: "practice_mode",
         mode_id: modeId,
-        label: "Practice Mode",
+        label: label || "Isolate A Skill",
         count,
       }, "map")}
       onStartConceptReview={(conceptIds, count = 6) => handleStartLesson({
         type: "concept_review",
-        label: "Missed Concepts",
+        label: "Transfer Weak Ideas",
         concept_ids: conceptIds,
         count,
       }, "map")}

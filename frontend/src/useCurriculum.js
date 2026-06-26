@@ -136,12 +136,12 @@ const REVIEW_ACTIVITY_REASONS = {
 };
 const PRACTICE_MODE_CONFIG = {
   diagnostic: {
-    label: "Diagnostic",
+    label: "Find Gaps",
     activityTypes: null,
     conceptIds: null,
   },
   weak_areas: {
-    label: "Weak Areas",
+    label: "Repair Weak Areas",
     activityTypes: null,
     conceptIds: null,
   },
